@@ -26,7 +26,15 @@ modded class LoginTimeBase extends UIScriptedMenu
 		m_btnLeave 			   = ButtonWidget.Cast(layoutRoot.FindAnyWidget("btnLeave"));
         ImageWidget Background = ImageWidget.Cast( layoutRoot.FindAnyWidget("BackgroundOverride"));
         Background.LoadImageFile(0, GetRandomBackground());  		
+		
 		return layoutRoot;
+	}
+	void SetTime(int time)
+	{
+		// NOTE: I recommend keeping this time set low. I usually set it to 5 seconds.
+		// Time is set in your globals.xml <var name="TimeLogin" type="0" value="5"/>
+		// Change the "text" to whatever you want. 
+		m_txtLabel.SetText("Get ready to play in " + time.ToString());
 	}
 };
 
