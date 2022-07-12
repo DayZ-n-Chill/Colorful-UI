@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{1B5158123537A539}Colorful-UI/gui/textures/loading_screens/Colorful.Loading.edds"
+ Author "corruscant"
+ ChangeDate 773336280
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Colorful.Loading.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

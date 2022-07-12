@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{E1589E8D732472A3}Colorful-UI/gui/textures/globals/Colorful.TealGradient.edds"
+ Author "corruscant"
+ ChangeDate -2138034984
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Colorful.TealGradient.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

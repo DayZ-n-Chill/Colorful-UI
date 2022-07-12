@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{CB818B84A5F601F7}Colorful-UI/gui/textures/loading_screens/Colorful-BG-8.edds"
+ Author "corruscant"
+ ChangeDate -1848873773
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Colorful-BG-8.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

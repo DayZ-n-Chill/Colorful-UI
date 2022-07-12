@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{A37E32289E048AC8}Colorful-UI/gui/textures/globals/Colorful.Logo.edds"
+ Author "corruscant"
+ ChangeDate -1434194732
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Colorful.Logo.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}
