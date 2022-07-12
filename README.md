@@ -15,11 +15,6 @@ A UI System Built for DayZ Server owners.  Includes a wide assortment of colors 
 - Simple Configuration
 - NO MOD DEPENDANCIES!
 
-## Map Compatiblity 
-- Chernarus
-- Livonia
-- Deer Isle 
-
 ## Coming Soon
 - Player Stats
 - Leaderboards
