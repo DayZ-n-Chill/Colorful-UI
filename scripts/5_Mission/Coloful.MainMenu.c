@@ -16,6 +16,7 @@ modded class MainMenu extends UIScriptedMenu
 		m_Youtube 					= layoutRoot.FindAnyWidget( "YoutubeBtn" );
 		m_Reddit 					= layoutRoot.FindAnyWidget( "RedditBtn" );
 		m_Facebook 					= layoutRoot.FindAnyWidget( "FacebookBtn" );
+
 		m_Play						= layoutRoot.FindAnyWidget( "play" );
 		m_ChooseServer				= layoutRoot.FindAnyWidget( "choose_server" );
 		m_CustomizeCharacter		= layoutRoot.FindAnyWidget( "customize_character" );
@@ -87,7 +88,26 @@ modded class MainMenu extends UIScriptedMenu
 		{
 			GetGame().OpenURL("https://facebook.com/#");
 			return false;
-		}		
+		}	
+		// NOTE: --------------------------------------------------------------------
+		// Want to add your own buttons. 
+		// Use this snippet as a template for creating buttons.  
+		//
+		// else if (button == MouseState.LEFT && w == m_YOURVARIABLENAME)
+		// {
+		// 	GetGame().OpenURL("https://yourlink/#");
+		// 	return false;
+		// }
+		// 
+		// Make sure the m_YOURVARIABLENAME is registered at the top of this document
+		// 
+		// You will also have to make the approporiuate addjustments to
+		// the colorful.mainmenu.layout file. like adding the actual button.
+		// Located: Colorful-UI/gui/layouts/new_ui/Colorful.main_menu.layout
+		//
+		// You will also need to reference the button in the layout. At the top of this file.
+		// m_YOURVARIABLENAME	= layoutRoot.FindAnyWidget( "YourBtn" ); 
+		// ---------------------------------------------------------------------------
 		return super.OnClick(w, x, y, button);
 	};
 
