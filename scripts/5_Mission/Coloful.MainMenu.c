@@ -100,6 +100,7 @@ modded class MainMenu extends UIScriptedMenu
 		// }
 		// 
 		// Make sure the m_YOURVARIABLENAME is registered at the top of this document
+		// EXAMPLE: private Widget m_YOURVARIABLENAME;
 		// 
 		// You will also have to make the approporiuate addjustments to
 		// the colorful.mainmenu.layout file. like adding the actual button.
