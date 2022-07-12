@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{042531BECC696FCF}Colorful-UI/gui/textures/main_menu/Colorful.Reddit.edds"
+ Author "corruscant"
+ ChangeDate -193729324
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Colorful.Reddit.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

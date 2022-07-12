@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{75EB8818F21F9948}Colorful-UI/gui/textures/main_menu/Colorful.InfectedKilled.edds"
+ Author "corruscant"
+ ChangeDate -395055916
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Colorful.InfectedKilled.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

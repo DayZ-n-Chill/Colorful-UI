@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{4E98404B3EE57BD9}Colorful-UI/gui/textures/main_menu/Colorful.Discord.edds"
+ Author "corruscant"
+ ChangeDate -462164780
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Colorful.Discord.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

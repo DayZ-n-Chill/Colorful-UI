@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{F74D2BABB67517C4}Colorful-UI/gui/textures/main_menu/Colorful.meta.edds"
+ Author "corruscant"
+ ChangeDate -327947052
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Colorful.meta.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

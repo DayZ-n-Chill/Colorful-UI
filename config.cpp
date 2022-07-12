@@ -6,6 +6,8 @@ class CfgPatches
 		weapons[] = {};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"DZ_Data"};
+		// NOTE: Use the example below to have the UI work on Deer Isle
+		// EXAMPLE: requiredAddons[] = {"DZ_Data", "JMC_DeerIsle_Scripts" };
 	};
 };
 
@@ -20,7 +22,7 @@ class CfgMods
 		credits = "DayZ n' Chill";
 		author = "DayZ n' Chill";
 		authorID = "76561197969255905";
-		version = "0.1";
+		version = "0.2";
 		extra = 0;
 		type = "mod";
 		dependencies[] = {"Game","Mission"};

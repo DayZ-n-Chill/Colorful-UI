@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{DE32C210B6524152}Colorful-UI/gui/textures/globals/Colorful.RedGradient.edds"
+ Author "corruscant"
+ ChangeDate -620221224
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Colorful.RedGradient.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}
