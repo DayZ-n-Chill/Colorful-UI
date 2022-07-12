@@ -55,7 +55,7 @@ modded class LoadingScreen
 		Class.CastTo(m_ModdedWarning, m_WidgetRoot.FindAnyWidget("ModdedWarning"));
 		m_ImageBackground = ImageWidget.Cast( m_WidgetRoot.FindAnyWidget("BackgroundOverride") );
 		m_ProgressLoading = ProgressBarWidget.Cast( m_WidgetRoot.FindAnyWidget("LoadingBar") );
-		m_ProgressLoading.SetColor(UIColor.Color());
+		m_ProgressLoading.SetColor(UIColor.Teal());
 		ProgressAsync.SetProgressData(m_ProgressLoading);
 		ProgressAsync.SetUserData(m_ImageBackground);
 		SetStatus(m_TextWidgetStatus.GetRandomHint());

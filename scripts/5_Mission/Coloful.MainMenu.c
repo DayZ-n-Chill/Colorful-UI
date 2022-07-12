@@ -1,5 +1,6 @@
 modded class MainMenu extends UIScriptedMenu
 {
+	// Register your variables
 	private Widget m_Discord;
 	private Widget m_Twitter;
 	private Widget m_Youtube;
@@ -8,15 +9,19 @@ modded class MainMenu extends UIScriptedMenu
 
 	override Widget Init()
 	{
+		// Load the layout file
 		layoutRoot					= GetGame().GetWorkspace().CreateWidgets( "Colorful-UI/gui/layouts/new_ui/colorful.main_menu.layout" );
 		Print("Colorful Main Menu Loaded!");	
-
+		
+		// Custom Buttons  
+		// NOTE: THe "NameBtn" is the name of the widget in the layout file.
 		m_Discord 					= layoutRoot.FindAnyWidget( "DiscordBtn" );
 		m_Twitter 					= layoutRoot.FindAnyWidget( "TwitterBtn" );
 		m_Youtube 					= layoutRoot.FindAnyWidget( "YoutubeBtn" );
 		m_Reddit 					= layoutRoot.FindAnyWidget( "RedditBtn" );
 		m_Facebook 					= layoutRoot.FindAnyWidget( "FacebookBtn" );
 
+		// Required Vanilla Code
 		m_Play						= layoutRoot.FindAnyWidget( "play" );
 		m_ChooseServer				= layoutRoot.FindAnyWidget( "choose_server" );
 		m_CustomizeCharacter		= layoutRoot.FindAnyWidget( "customize_character" );
@@ -117,9 +122,9 @@ modded class MainMenu extends UIScriptedMenu
 	{
 		if( !w )
 			return;	
-		int color_pnl = UIColor.Color();
+		int color_pnl = UIColor.Teal();
 		int color_lbl = ARGB(255, 255, 255, 255);
-		int color_img = UIColor.Color();		
+		int color_img = UIColor.Teal();		
 		ButtonSetColor(w, color_pnl);
 		ButtonSetTextColor(w, color_lbl);
 		ImagenSetColor(w, color_img);

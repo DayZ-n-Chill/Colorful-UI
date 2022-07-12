@@ -1,4 +1,7 @@
+// This Constants Page is meant to act as a config file for the UI. 
+// Make adustments as needed to this files to suit your servers needs.
 
+// RANDOM BACKGROUND IMAGES ---------------------------------------------
 string GetRandomBackground()
 {
 	const string images[] = {
@@ -24,6 +27,7 @@ string GetRandomBackground()
 	return images[bgIndex];
 }
 
+// RANDOM LOADSCREEN TIPS -------------------------------------------------
 string GetRandomHint()
 {
 	const string tips[] = {
@@ -52,7 +56,17 @@ string GetRandomHint()
 	return tips[tipIndex];
 }
 
+// COLOR PALETTES ----------------------------------------------------------
 class UIColor
 {
-	static int Color() { return ARGB(255, 55, 102, 102); } 
+	// R.O.Y.G.B.I.V
+	static int Red() { return ARGB(255, 55, 102, 102); };
+	static int Orange() { return ARGB(255, 55, 102, 102); };
+	static int Yellow() { return ARGB(255, 55, 102, 102); };
+	static int Green() { return ARGB(255, 55, 102, 102); };
+	static int Blue() { return ARGB(255, 55, 102, 102); };
+	static int Indigo() { return ARGB(255, 55, 102, 102); };
+	static int Violet() { return ARGB(255, 55, 102, 102); };
+	// Custom Colors
+	static int Teal() { return ARGB(255, 55, 102, 102); };
 }
