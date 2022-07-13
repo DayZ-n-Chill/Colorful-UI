@@ -21,7 +21,7 @@ modded class MainMenu extends UIScriptedMenu
 		m_Reddit 					= layoutRoot.FindAnyWidget( "RedditBtn" );
 		m_Facebook 					= layoutRoot.FindAnyWidget( "FacebookBtn" );
 
-		// Required Vanilla Code
+		// Vanilla Code
 		m_Play						= layoutRoot.FindAnyWidget( "play" );
 		m_ChooseServer				= layoutRoot.FindAnyWidget( "choose_server" );
 		m_CustomizeCharacter		= layoutRoot.FindAnyWidget( "customize_character" );
@@ -45,7 +45,8 @@ modded class MainMenu extends UIScriptedMenu
 		m_Stats						= new MainMenuStats( layoutRoot.FindAnyWidget( "character_stats_root" ) );
 		m_Mission					= MissionMainMenu.Cast( GetGame().GetMission() );
 		m_ScenePC					= m_Mission.GetIntroScenePC();
-		m_LastFocusedButton = 		m_Play;
+		
+		
 		
 		m_LastPlayedTooltip.Show(false);
 		if(m_ScenePC){m_ScenePC.ResetIntroCamera();}

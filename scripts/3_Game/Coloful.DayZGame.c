@@ -1,5 +1,8 @@
+
 modded class LoginQueueBase extends UIScriptedMenu
 {
+	ProgressBarWidget m_ProgressLoading;
+	protected TextWidget m_StatusText;
 	override Widget Init()
 	{		
 		layoutRoot 			   = GetGame().GetWorkspace().CreateWidgets("Colorful-UI/gui/layouts/Colorful.dialog_queue_position.layout");
@@ -8,24 +11,33 @@ modded class LoginQueueBase extends UIScriptedMenu
 		m_txtNote 			   = TextWidget.Cast(layoutRoot.FindAnyWidget("txtNote"));
 		m_btnLeave 			   = ButtonWidget.Cast(layoutRoot.FindAnyWidget("btnLeave"));
 		ImageWidget Background = ImageWidget.Cast( layoutRoot.FindAnyWidget("BackgroundOverride"));
-		m_txtNote.SetColor(colorScheme.PrimaryColor());
+		m_ProgressLoading      = ProgressBarWidget.Cast( layoutRoot.FindAnyWidget("LoadingBar") );
+
         Background.LoadImageFile(0, GetRandomBackground());  			
 		layoutRoot.FindAnyWidget("notification_root").Show(false);
-		m_txtNote.Show(false);
+		m_ProgressLoading.SetColor(colorScheme.PrimaryColor());
+		m_StatusText.SetColor(colorScheme.SecondaryColor());
 		return layoutRoot;
 	}
 };
 
 modded class LoginTimeBase extends UIScriptedMenu
 {
+	ProgressBarWidget m_ProgressLoading;
+	protected TextWidget m_TxtHdr;
+	
 	override Widget Init()
 	{
 		layoutRoot 			   = GetGame().GetWorkspace().CreateWidgets("Colorful-UI/gui/layouts/Colorful.dialog_login_time.layout");
 		// Print("Colorful Login Time Loaded!");	
-		m_txtDescription 	   = TextWidget.Cast(layoutRoot.FindAnyWidget("txtDescription"));
+		m_TxtHdr			   = TextWidget.Cast(layoutRoot.FindAnyWidget("TxtHdr"));
 		m_txtLabel 			   = TextWidget.Cast(layoutRoot.FindAnyWidget("txtLabel"));
+		m_txtDescription 	   = TextWidget.Cast(layoutRoot.FindAnyWidget("txtDescription"));
 		m_btnLeave 			   = ButtonWidget.Cast(layoutRoot.FindAnyWidget("btnLeave"));
         ImageWidget Background = ImageWidget.Cast( layoutRoot.FindAnyWidget("BackgroundOverride"));
+		m_ProgressLoading      = ProgressBarWidget.Cast( layoutRoot.FindAnyWidget("LoadingBar") );
+		m_ProgressLoading.SetColor(colorScheme.PrimaryColor());
+		m_TxtHdr.SetColor(colorScheme.SecondaryColor());
         Background.LoadImageFile(0, GetRandomBackground());  		
 		return layoutRoot;
 	}
@@ -36,18 +48,22 @@ modded class LoginTimeBase extends UIScriptedMenu
 		// Time is set in your globals.xml <var name="TimeLogin" type="0" value="5"/>
 		// Change the "text" below to whatever you want. 
 		m_txtLabel.SetText("Get ready to play in " + time.ToString());
-	    m_txtLabel.SetColor(colorScheme.PrimaryColor());
 	}
 };
 
 modded class LoadingScreen
 {	
 	protected ImageWidget m_Background; 
+	
+	protected TextWidget m_ProTip;
+
 	void LoadingScreen(DayZGame game)
 	{
 		m_DayZGame   = game;		
+		
 		m_WidgetRoot = game.GetLoadingWorkspace().CreateWidgets("Colorful-UI/gui/layouts/Colorful.loading.layout");
 		// Print("Colorful Loading Screen Loaded!");	
+		Class.CastTo(m_ProTip, m_WidgetRoot.FindAnyWidget("ProTip"));
 		Class.CastTo(m_ImageLogoMid, m_WidgetRoot.FindAnyWidget("ImageLogoMid"));
 		Class.CastTo(m_ImageLogoCorner, m_WidgetRoot.FindAnyWidget("ImageLogoCorner"));	
 		Class.CastTo(m_TextWidgetTitle, m_WidgetRoot.FindAnyWidget("TextWidget"));
@@ -57,7 +73,10 @@ modded class LoadingScreen
 		Class.CastTo(m_ModdedWarning, m_WidgetRoot.FindAnyWidget("ModdedWarning"));
 		m_ImageBackground = ImageWidget.Cast( m_WidgetRoot.FindAnyWidget("BackgroundOverride") );
 		m_ProgressLoading = ProgressBarWidget.Cast( m_WidgetRoot.FindAnyWidget("LoadingBar") );
+
 		m_ProgressLoading.SetColor(colorScheme.PrimaryColor());
+		m_ProTip.SetColor(colorScheme.SecondaryColor());
+		
 		ProgressAsync.SetProgressData(m_ProgressLoading);
 		ProgressAsync.SetUserData(m_ImageBackground);
 		SetStatus(m_TextWidgetStatus.GetRandomHint());

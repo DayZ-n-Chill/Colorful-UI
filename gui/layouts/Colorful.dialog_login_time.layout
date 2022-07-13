@@ -1,6 +1,6 @@
 WindowWidgetClass TextInputDialogRoot {
  clipchildren 0
- position 0 0
+ position 0.784 0
  size 1 1
  halign center_ref
  valign center_ref
@@ -10,91 +10,6 @@ WindowWidgetClass TextInputDialogRoot {
  vexactsize 0
  priority 1001
  {
-  WindowWidgetClass TextInputDialog {
-   visible 1
-   clipchildren 0
-   color 0.1176 0.1176 0.1176 0
-   position 0 0.05
-   size 0.9 0.18
-   halign center_ref
-   valign bottom_ref
-   hexactpos 0
-   vexactpos 0
-   hexactsize 0
-   vexactsize 0
-   priority 1
-   style Colorable
-   {
-    PanelWidgetClass SeparatorPanel {
-     visible 0
-     color 0.7569 0.0941 0.0941 0.7843
-     position 0 0.26
-     size 0.25 0.015
-     halign center_ref
-     hexactpos 0
-     vexactpos 0
-     hexactsize 0
-     vexactsize 0
-     scaled 1
-     priority 10
-     style rover_sim_colorable
-    }
-    MultilineTextWidgetClass txtDescription {
-     visible 0
-     color 1 1 1 1
-     position 0 0.295
-     size 0.25 0.46
-     halign center_ref
-     hexactpos 0
-     vexactpos 0
-     hexactsize 0
-     vexactsize 0
-     scaled 1
-     text "#dayz_game_loading"
-     font "gui/fonts/sdf_MetronLight24"
-     "exact text" 1
-     "exact text size" 22
-     "size to text h" 1
-     "size to text v" 1
-     "text halign" center
-     wrap 1
-     "condense whitespace" 1
-    }
-    ButtonWidgetClass btnLeave {
-     visible 0
-     color 1 0 0 1
-     size 150 42
-     halign right_ref
-     valign bottom_ref
-     hexactpos 0
-     vexactpos 0
-     hexactsize 1
-     vexactsize 1
-     userID 1
-     style EmptyHighlight
-     text "#STR_TextInputDialogRoot_ButtonLeave0"
-     text_proportion 0.5
-     font "gui/fonts/sdf_MetronBook24"
-     "disabled text color" 0.3412 0.3412 0.3412 1
-    }
-    TextWidgetClass txtLabel {
-     disabled 0
-     size 0.25 0.2
-     halign center_ref
-     valign bottom_ref
-     hexactpos 0
-     vexactpos 0
-     hexactsize 0
-     vexactsize 0
-     style Bold
-     text "placeholder text"
-     font "gui/fonts/etelkatextpro22"
-     "exact text" 0
-     "text halign" center
-     "text valign" center
-    }
-   }
-  }
   ImageWidgetClass Background {
    ignorepointer 1
    position 0 0
@@ -107,20 +22,6 @@ WindowWidgetClass TextInputDialogRoot {
    "src alpha" 1
    "no wrap" 1
    stretch 1
-   {
-    TextWidgetClass dbg_Layout_name {
-     visible 0
-     position 150 500
-     size 300 50
-     hexactpos 1
-     vexactpos 1
-     hexactsize 1
-     vexactsize 1
-     text "dialog_login_time.layout"
-     font "gui/fonts/sdf_MetronLight24"
-     "exact text" 1
-    }
-   }
   }
   ImageWidgetClass BackgroundOverride {
    visible 1
@@ -190,27 +91,9 @@ WindowWidgetClass TextInputDialogRoot {
    "src alpha" 1
    "no wrap" 1
    stretch 1
-   {
-    ImageWidgetClass LoadingImage {
-     ignorepointer 1
-     position 0.002 0.09
-     size 165 37
-     halign center_ref
-     valign bottom_ref
-     hexactpos 0
-     vexactpos 0
-     hexactsize 1
-     vexactsize 1
-     imageTexture "{1B5158123537A539}Colorful-UI/gui/textures/loading_screens/Colorful.Loading.edds"
-     mode blend
-     "src alpha" 1
-     "no wrap" 1
-     stretch 1
-    }
-   }
   }
   ImageWidgetClass ColorfulLogo {
-   visible 0
+   visible 1
    clipchildren 0
    inheritalpha 1
    position 0.05 0.05
@@ -229,25 +112,106 @@ WindowWidgetClass TextInputDialogRoot {
    filter 1
    nocache 0
   }
-  ImageWidgetClass DZNCLogo {
+  ImageWidgetClass LoadingImage {
    visible 1
-   clipchildren 0
-   inheritalpha 1
-   position 0.05 0.05
-   size 460 320
-   hexactpos 0
+   ignorepointer 1
+   position 8 0.11
+   size 165 37
+   halign center_ref
+   valign bottom_ref
+   hexactpos 1
    vexactpos 0
    hexactsize 1
    vexactsize 1
-   fixaspect outside
-   image0 ""
-   imageTexture "{A455F553CBC70347}Colorful-UI/gui/textures/globals/Colorful.Logo.edds"
+   imageTexture "{1B5158123537A539}Colorful-UI/gui/textures/loading_screens/Colorful.Loading.edds"
    mode blend
    "src alpha" 1
    "no wrap" 1
    stretch 1
-   filter 1
-   nocache 0
+  }
+  TextWidgetClass TxtHdr {
+   visible 1
+   color 0.2588 0.6863 0.3647 1
+   position 0 0.0703
+   size 1 0.03048
+   halign center_ref
+   valign bottom_ref
+   vexactpos 0
+   style Bold
+   text "Can you Survive?"
+   font "gui/fonts/Metron-BoldItalic22"
+   "exact text" 1
+   "size to text h" 1
+   "size to text v" 1
+   "text halign" center
+   "text valign" center
+  }
+  TextWidgetClass txtLabel {
+   disabled 0
+   position 0 0.05
+   size 0.25 0.2
+   halign center_ref
+   valign bottom_ref
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   style Bold
+   text "placeholder text"
+   font "gui/fonts/etelkatextpro22"
+   "exact text" 1
+   "size to text h" 1
+   "size to text v" 1
+   "text halign" center
+   "text valign" center
+  }
+  ButtonWidgetClass exit_button {
+   color 1 1 1 0
+   position 0.05 0.05
+   size 37 37
+   halign right_ref
+   hexactpos 0
+   vexactpos 0
+   hexactsize 1
+   vexactsize 1
+   fixaspect inside
+   style Empty
+   "no focus" 0
+   "next left" "settings_button"
+   "next right" "play"
+   "next up" "play"
+   "next down" "customize_character"
+   font "gui/fonts/sdf_MetronLight24"
+   switch normal
+   {
+    ImageWidgetClass exit_button_image {
+     ignorepointer 1
+     size 1 1
+     halign center_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 0
+     image0 "set:dayz_gui image:exit"
+     mode blend
+     "src alpha" 1
+    }
+   }
+  }
+  ProgressBarWidgetClass LoadingBar {
+   ignorepointer 1
+   color 0.8118 0.8118 0.8118 1
+   position 0 0
+   size 1 20
+   halign center_ref
+   valign bottom_ref
+   hexactpos 1
+   vexactpos 1
+   hexactsize 0
+   vexactsize 1
+   style Stamina
+   current 100
   }
   FrameWidgetClass "Hidden Stuff" {
    visible 0
@@ -476,6 +440,86 @@ WindowWidgetClass TextInputDialogRoot {
        }
       }
      }
+    }
+    WindowWidgetClass TextInputDialog {
+     visible 0
+     clipchildren 0
+     color 0.1176 0.1176 0.1176 0
+     position 0 0.05
+     size 1 0.2
+     halign center_ref
+     valign bottom_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     priority 1
+     style Colorable
+     {
+      PanelWidgetClass SeparatorPanel {
+       visible 0
+       color 0.7569 0.0941 0.0941 0.7843
+       position 0 0.26
+       size 0.25 0.015
+       halign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       scaled 1
+       priority 10
+       style rover_sim_colorable
+      }
+      MultilineTextWidgetClass txtDescription {
+       visible 0
+       color 1 1 1 1
+       position 0 0.295
+       size 0.25 0.46
+       halign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       scaled 1
+       text "#dayz_game_loading"
+       font "gui/fonts/sdf_MetronLight24"
+       "exact text" 1
+       "exact text size" 22
+       "size to text h" 1
+       "size to text v" 1
+       "text halign" center
+       wrap 1
+       "condense whitespace" 1
+      }
+     }
+    }
+    TextWidgetClass dbg_Layout_name {
+     visible 0
+     position 150 500
+     size 300 50
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     text "dialog_login_time.layout"
+     font "gui/fonts/sdf_MetronLight24"
+     "exact text" 1
+    }
+    ButtonWidgetClass "btnLeave.old" {
+     visible 0
+     color 1 0 0 1
+     size 150 42
+     halign right_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 1
+     vexactsize 1
+     userID 1
+     style Colorable
+     text "#STR_TextInputDialogRoot_ButtonLeave0"
+     text_proportion 0.5
+     font "gui/fonts/sdf_MetronBook24"
+     "disabled text color" 0.3412 0.3412 0.3412 1
     }
    }
   }

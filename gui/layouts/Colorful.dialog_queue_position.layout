@@ -10,122 +10,10 @@ PanelWidgetClass TextInputDialogRoot {
  vexactsize 0
  priority 1001
  {
-  WindowWidgetClass TextInputDialog {
-   visible 1
-   clipchildren 1
-   color 0.1176 0.1176 0.1176 0
-   position 0 0.05
-   size 0.9 0.18
-   halign center_ref
-   valign bottom_ref
-   hexactpos 0
-   vexactpos 0
-   hexactsize 0
-   vexactsize 0
-   priority 1
-   draggable 0
-   style Colorable
-   {
-    PanelWidgetClass SeparatorPanel {
-     visible 0
-     color 0.7569 0.0941 0.0941 0.7843
-     position 0 0.26
-     size 0.85 0.015
-     halign center_ref
-     hexactpos 0
-     vexactpos 0
-     hexactsize 0
-     vexactsize 0
-     scaled 1
-     priority 10
-     style rover_sim_colorable
-    }
-    ButtonWidgetClass btnLeave {
-     visible 1
-     color 1 0 0 1
-     size 150 39
-     valign bottom_ref
-     hexactpos 0
-     vexactpos 0
-     hexactsize 1
-     vexactsize 1
-     userID 1
-     style EmptyHighlight
-     text "#STR_TextInputDialogRoot_ButtonLeave0"
-     text_proportion 0.5
-     font "gui/fonts/sdf_MetronBook24"
-     "disabled text color" 0.3412 0.3412 0.3412 1
-    }
-    ButtonWidgetClass btnLeave0 {
-     visible 0
-     color 1 0 0 1
-     size 0.25 0.18
-     valign center_ref
-     hexactpos 0
-     vexactpos 0
-     hexactsize 0
-     vexactsize 0
-     userID 1
-     style EmptyHighlight
-     text "#STR_TextInputDialogRoot_ButtonLeave0"
-     text_proportion 0.5
-     font "gui/fonts/sdf_MetronBook24"
-     "disabled text color" 0.3412 0.3412 0.3412 1
-    }
-    FrameWidgetClass Grouped {
-     ignorepointer 1
-     position 24 0
-     size 235 43
-     halign center_ref
-     valign bottom_ref
-     hexactpos 1
-     vexactpos 1
-     hexactsize 1
-     vexactsize 1
-     {
-      MultilineTextWidgetClass txtPosition {
-       color 1 1 1 1
-       position -0 0
-       size 75 1
-       halign right_ref
-       valign center_ref
-       hexactpos 0
-       vexactpos 0
-       hexactsize 1
-       vexactsize 0
-       text "-1"
-       font "gui/fonts/etelkatextpro22"
-       "exact text" 1
-       "exact text size" 22
-       "size to text h" 0
-       "size to text v" 0
-       "text valign" center
-       wrap 1
-       "condense whitespace" 1
-      }
-      TextWidgetClass txtLabel {
-       disabled 0
-       size 160 1
-       valign center_ref
-       hexactpos 0
-       vexactpos 0
-       hexactsize 1
-       vexactsize 0
-       style Bold
-       text "#str_position_in_queue:"
-       font "gui/fonts/etelkatextpro22"
-       "exact text" 0
-       "text halign" center
-       "text valign" center
-      }
-     }
-    }
-   }
-  }
   ImageWidgetClass Background {
    clipchildren 0
    ignorepointer 1
-   position -1.14867 0
+   position 0 0
    size 1 1
    hexactpos 1
    vexactpos 1
@@ -200,7 +88,7 @@ PanelWidgetClass TextInputDialogRoot {
    hexactsize 0
    vexactsize 0
    scaled 1
-   imageTexture "{C74883DB3F98AB01}Colorful-UI/gui/textures/globals/Colorful.HorizShader.edds"
+   imageTexture "{A82F487401D497EF}Colorful-UI/gui/textures/globals/Colorful.HorizShaderTip.edds"
    mode blend
    "src alpha" 1
    "no wrap" 1
@@ -228,11 +116,11 @@ PanelWidgetClass TextInputDialogRoot {
   }
   ImageWidgetClass LoadingImage {
    ignorepointer 1
-   position 0.002 0.09
+   position 8 0.11
    size 165 37
    halign center_ref
    valign bottom_ref
-   hexactpos 0
+   hexactpos 1
    vexactpos 0
    hexactsize 1
    vexactsize 1
@@ -241,6 +129,157 @@ PanelWidgetClass TextInputDialogRoot {
    "src alpha" 1
    "no wrap" 1
    stretch 1
+  }
+  TextWidgetClass StatusText {
+   visible 1
+   color 0.2588 0.6863 0.3647 1
+   position 0 0.07
+   size 1 0.03
+   halign center_ref
+   valign bottom_ref
+   vexactpos 0
+   text "You will be able to join when someone leaves the server."
+   font "gui/fonts/Metron-BoldItalic22"
+   "exact text" 1
+   "size to text h" 1
+   "size to text v" 1
+   "text halign" center
+   "text valign" center
+  }
+  ButtonWidgetClass btnLeave {
+   visible 0
+   color 1 0 0 1
+   position 0.05 0.05
+   size 150 40
+   halign right_ref
+   hexactpos 0
+   vexactpos 0
+   hexactsize 1
+   vexactsize 1
+   userID 1
+   style Empty
+   text "X"
+   text_proportion 0.5
+   font "gui/fonts/sdf_MetronBook24"
+   "disabled text color" 0.3412 0.3412 0.3412 1
+  }
+  ButtonWidgetClass exit_button {
+   color 1 1 1 0
+   position 0.05 0.05
+   size 37 37
+   halign right_ref
+   hexactpos 0
+   vexactpos 0
+   hexactsize 1
+   vexactsize 1
+   fixaspect inside
+   style Empty
+   "no focus" 0
+   "next left" "settings_button"
+   "next right" "play"
+   "next up" "play"
+   "next down" "customize_character"
+   font "gui/fonts/sdf_MetronLight24"
+   switch normal
+   {
+    ImageWidgetClass exit_button_image {
+     ignorepointer 1
+     size 1 1
+     halign center_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 0
+     image0 "set:dayz_gui image:exit"
+     mode blend
+     "src alpha" 1
+    }
+   }
+  }
+  ProgressBarWidgetClass LoadingBar {
+   ignorepointer 1
+   color 0.8118 0.8118 0.8118 1
+   size 1 20
+   halign center_ref
+   valign bottom_ref
+   hexactpos 1
+   vexactpos 1
+   hexactsize 0
+   vexactsize 1
+   style Stamina
+   current 100
+  }
+  FrameWidgetClass QueueFrame {
+   ignorepointer 1
+   position 0 0.05
+   size 275 0.02
+   halign center_ref
+   valign bottom_ref
+   hexactpos 0
+   vexactpos 0
+   hexactsize 1
+   vexactsize 0
+   scaled 1
+   fixaspect inside
+   {
+    TextWidgetClass YouArePlayer {
+     disabled 0
+     size 1 1
+     valign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style Bold
+     text "You are player"
+     font "gui/fonts/etelkatextpro22"
+     "exact text" 1
+     "size to text h" 1
+     "size to text v" 1
+     "text halign" center
+     "text valign" center
+    }
+    MultilineTextWidgetClass txtPosition {
+     color 1 1 1 1
+     position 137 0
+     size 0.2 1
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 0
+     scaled 1
+     style None
+     text "123"
+     font "gui/fonts/etelkatextpro22"
+     "exact text" 1
+     "exact text size" 22
+     "size to text h" 1
+     "size to text v" 1
+     "text halign" center
+     "text valign" center
+     wrap 0
+    }
+    TextWidgetClass inQueue {
+     disabled 0
+     size 160 1
+     halign right_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 0
+     style Bold
+     text "in queue"
+     font "gui/fonts/etelkatextpro22"
+     "exact text" 1
+     "size to text h" 1
+     "size to text v" 1
+     "text halign" center
+     "text valign" center
+    }
+   }
   }
   FrameWidgetClass "Hidden Stuff" {
    visible 0
@@ -502,6 +541,38 @@ PanelWidgetClass TextInputDialogRoot {
      "text halign" center
      wrap 1
      "condense whitespace" 1
+    }
+    WindowWidgetClass TextInputDialog {
+     visible 0
+     clipchildren 1
+     color 0.1176 0.1176 0.1176 0
+     position 0 0
+     size 1 0.2
+     halign center_ref
+     valign bottom_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     priority 1
+     draggable 0
+     style Colorable
+     {
+      PanelWidgetClass SeparatorPanel {
+       visible 0
+       color 0.7569 0.0941 0.0941 0.7843
+       position 0 0.26
+       size 0.85 0.015
+       halign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       scaled 1
+       priority 10
+       style rover_sim_colorable
+      }
+     }
     }
    }
   }
