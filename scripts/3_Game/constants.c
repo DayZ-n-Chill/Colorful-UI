@@ -1,7 +1,7 @@
 // This Constants Page is meant to act as a config file for the UI. 
 // Make adustments as needed to this files to suit your servers needs.
 
-// RANDOM BACKGROUND IMAGES ---------------------------------------------
+// RANDOM BACKGROUND IMAGES -----------------------------------------------
 string GetRandomBackground()
 {
 	const string images[] = {
@@ -56,17 +56,31 @@ string GetRandomHint()
 	return tips[tipIndex];
 }
 
-// COLOR PALETTES ----------------------------------------------------------
+// COLOR PALETTES ---------------------------------------------------------
+// Use these colors to mix and match the theme of your choice.
+// You can add to it, remove colors from it.  Whatever you like.
 class UIColor
 {
+	// GreyScale
+	static int White() { return ARGB(255, 55, 102, 102); };
+	static int Grey() { return ARGB(255, 55, 102, 102); };
+	static int Black() { return ARGB(255, 55, 102, 102); };
 	// R.O.Y.G.B.I.V
-	static int Red() { return ARGB(255, 55, 102, 102); };
-	static int Orange() { return ARGB(255, 55, 102, 102); };
-	static int Yellow() { return ARGB(255, 55, 102, 102); };
-	static int Green() { return ARGB(255, 55, 102, 102); };
-	static int Blue() { return ARGB(255, 55, 102, 102); };
-	static int Indigo() { return ARGB(255, 55, 102, 102); };
-	static int Violet() { return ARGB(255, 55, 102, 102); };
+	static int Red() { return ARGB(255, 186, 15, 15); };
+	static int Orange() { return ARGB(255, 215, 153, 19); };
+	static int Yellow() { return ARGB(255, 204, 204, 66); };
+	static int Green() { return ARGB(255, 51, 204, 51); };
+	static int Blue() { return ARGB(255, 51, 102, 102); };
+	static int Indigo() { return ARGB(255, 102, 51, 204); };
+	static int Violet() { return ARGB(255, 204, 51, 204); };
 	// Custom Colors
 	static int Teal() { return ARGB(255, 55, 102, 102); };
+}
+
+// DEFINE YOUR THEME -------------------------------------------------------
+// You can the fucntions above to set the theme across the entire app.
+class colorScheme 
+{
+	static int PrimaryColor() { return UIColor.Teal(); };
+	static int TooltipColor() { return UIColor.Blue(); };
 }
