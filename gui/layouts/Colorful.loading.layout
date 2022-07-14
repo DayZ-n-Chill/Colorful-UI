@@ -61,12 +61,34 @@ FrameWidgetClass LoadingFrame {
    hexactsize 0
    vexactsize 0
    {
+    ImageWidgetClass Vignette {
+     visible 1
+     ignorepointer 0
+     color 0 0 0 0.7843
+     position 0 0
+     size 1 1
+     halign center_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 0
+     priority 1
+     imageTexture "{E6B3EF816E067499}Gui/textures/inventory_bgvignette.edds"
+     mode blend
+     "src alpha" 1
+     "no wrap" 1
+     stretch 1
+     filter 0
+     nocache 1
+    }
     ImageWidgetClass TealShader {
      visible 1
      ignorepointer 1
      keepsafezone 0
-     position 0 0
      size 1 1
+     halign center_ref
+     valign center_ref
      hexactpos 1
      vexactpos 1
      hexactsize 0
@@ -106,7 +128,7 @@ FrameWidgetClass LoadingFrame {
      hexactsize 0
      vexactsize 0
      scaled 1
-     imageTexture "{B7ABD168D55359BD}Colorful-UI/gui/textures/globals/Colorful.HorizShader.edds"
+     imageTexture "{A82F487401D497EF}Colorful-UI/gui/textures/globals/Colorful.HorizShaderTip.edds"
      mode blend
      "src alpha" 1
      "no wrap" 1
@@ -137,7 +159,7 @@ FrameWidgetClass LoadingFrame {
   }
   TextWidgetClass LoadingText {
    visible 1
-   position 5 0.11
+   position 5 0.12
    size 1.01042 0.05778
    halign center_ref
    valign bottom_ref

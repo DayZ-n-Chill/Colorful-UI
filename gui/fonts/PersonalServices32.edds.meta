@@ -1,10 +1,10 @@
 MetaFileClass {
- Name "{1132F6E048D1B3E7}Colorful-UI/gui/fonts/PersonalServices48.edds"
+ Name "{4734D084F9610554}Colorful-UI/gui/fonts/PersonalServices32.edds"
  Author "corruscant"
  ChangeDate 1043098862
  Configurations {
   TGAResourceClass PC {
-   SourceFile "PersonalServices48.tga"
+   SourceFile "PersonalServices32.tga"
   }
   TGAResourceClass XBOX_ONE : PC {
   }

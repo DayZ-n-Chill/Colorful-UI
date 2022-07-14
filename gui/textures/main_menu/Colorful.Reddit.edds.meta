@@ -1,7 +1,7 @@
 MetaFileClass {
- Name "{042531BECC696FCF}Colorful-UI/gui/textures/main_menu/Colorful.Reddit.edds"
+ Name "{267C53304DBD7C05}Colorful-UI/gui/textures/main_menu/Colorful.Reddit.edds"
  Author "corruscant"
- ChangeDate -193729324
+ ChangeDate 1737764078
  Configurations {
   PNGResourceClass PC {
    SourceFile "Colorful.Reddit.png"

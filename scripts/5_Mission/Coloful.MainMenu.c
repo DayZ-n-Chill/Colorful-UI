@@ -10,7 +10,7 @@ modded class MainMenu extends UIScriptedMenu
 	override Widget Init()
 	{
 		// Load the layout file
-		layoutRoot					= GetGame().GetWorkspace().CreateWidgets( "Colorful-UI/gui/layouts/new_ui/colorful.main_menu.layout" );
+		layoutRoot					= GetGame().GetWorkspace().CreateWidgets( "Colorful-UI/gui/layouts/new_ui/colorful.main_menu2.layout" );
 		// Print("Colorful Main Menu Loaded!");	
 		
 		// Custom Buttons  
@@ -123,7 +123,8 @@ modded class MainMenu extends UIScriptedMenu
 	{
 		if( !w )
 			return;	
-		int color_pnl = colorScheme.PrimaryColor();
+		// int color_pnl = colorScheme.PrimaryColor();		
+		int color_pnl = UIColor.Transparent();
 		int color_lbl = UIColor.White();
 		int color_img = colorScheme.PrimaryColor();		
 		ButtonSetColor(w, color_pnl);

@@ -44,55 +44,66 @@ PanelWidgetClass TextInputDialogRoot {
    "Transition width" 1
    Progress 0
   }
-  ImageWidgetClass TealShader {
-   visible 1
+  FrameWidgetClass Shaders {
    ignorepointer 1
-   keepsafezone 0
    position 0 0
    size 1 1
    hexactpos 1
    vexactpos 1
    hexactsize 0
    vexactsize 0
-   scaled 1
-   imageTexture "{E1589E8D732472A3}Colorful-UI/gui/textures/globals/Colorful.TealGradient.edds"
-   mode blend
-   "src alpha" 1
-   "no wrap" 1
-   stretch 1
-  }
-  ImageWidgetClass RedShader {
-   visible 0
-   ignorepointer 1
-   keepsafezone 0
-   position 0 0
-   size 1 1
-   hexactpos 1
-   vexactpos 1
-   hexactsize 0
-   vexactsize 0
-   scaled 1
-   imageTexture "{DE32C210B6524152}Colorful-UI/gui/textures/globals/Colorful.RedGradient.edds"
-   mode blend
-   "src alpha" 1
-   "no wrap" 1
-   stretch 1
-  }
-  ImageWidgetClass HorizShader {
-   ignorepointer 1
-   keepsafezone 0
-   position 0 0
-   size 1 1
-   hexactpos 1
-   vexactpos 1
-   hexactsize 0
-   vexactsize 0
-   scaled 1
-   imageTexture "{A82F487401D497EF}Colorful-UI/gui/textures/globals/Colorful.HorizShaderTip.edds"
-   mode blend
-   "src alpha" 1
-   "no wrap" 1
-   stretch 1
+   {
+    ImageWidgetClass TealShader {
+     visible 1
+     ignorepointer 1
+     keepsafezone 0
+     position 0 0
+     size 1 1
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 0
+     scaled 1
+     imageTexture "{E1589E8D732472A3}Colorful-UI/gui/textures/globals/Colorful.TealGradient.edds"
+     mode blend
+     "src alpha" 1
+     "no wrap" 1
+     stretch 1
+    }
+    ImageWidgetClass RedShader {
+     visible 0
+     ignorepointer 1
+     keepsafezone 0
+     position 0 0
+     size 1 1
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 0
+     scaled 1
+     imageTexture "{DE32C210B6524152}Colorful-UI/gui/textures/globals/Colorful.RedGradient.edds"
+     mode blend
+     "src alpha" 1
+     "no wrap" 1
+     stretch 1
+    }
+    ImageWidgetClass HorizShader {
+     ignorepointer 1
+     keepsafezone 0
+     position 0 0
+     size 1 1
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 0
+     scaled 1
+     imageTexture "{A82F487401D497EF}Colorful-UI/gui/textures/globals/Colorful.HorizShaderTip.edds"
+     mode blend
+     "src alpha" 1
+     "no wrap" 1
+     stretch 1
+    }
+   }
   }
   ImageWidgetClass ColorfulLogo {
    visible 1
@@ -147,22 +158,6 @@ PanelWidgetClass TextInputDialogRoot {
    font "gui/fonts/sdf_MetronBook24"
    "disabled text color" 0.3412 0.3412 0.3412 1
   }
-  TextWidgetClass LoadingText {
-   visible 1
-   position 5 0.11
-   size 1.01042 0.05778
-   halign center_ref
-   valign bottom_ref
-   hexactpos 1
-   vexactpos 0
-   text "Please wait ..."
-   font "Colorful-ui/gui/fonts/PersonalServices28"
-   "exact text" 1
-   "size to text h" 1
-   "size to text v" 1
-   "text halign" center
-   "text valign" center
-  }
   ButtonWidgetClass exit_button {
    color 1 1 1 0
    position 0.05 0.05
@@ -197,23 +192,26 @@ PanelWidgetClass TextInputDialogRoot {
     }
    }
   }
-  ProgressBarWidgetClass LoadingBar {
-   ignorepointer 1
-   color 0.8118 0.8118 0.8118 1
-   size 1 20
+  TextWidgetClass LoadingText {
+   visible 1
+   position 5 0.12
+   size 1.01042 0.05778
    halign center_ref
    valign bottom_ref
    hexactpos 1
-   vexactpos 1
-   hexactsize 0
-   vexactsize 1
-   style Stamina
-   current 100
+   vexactpos 0
+   text "Please wait ..."
+   font "Colorful-ui/gui/fonts/PersonalServices28"
+   "exact text" 1
+   "size to text h" 1
+   "size to text v" 1
+   "text halign" center
+   "text valign" center
   }
   FrameWidgetClass QueueFrame {
    ignorepointer 1
-   position 0 0.05
-   size 275 0.02
+   position 0.00039 0.05
+   size 227 0.02
    halign center_ref
    valign bottom_ref
    hexactpos 0
@@ -233,7 +231,7 @@ PanelWidgetClass TextInputDialogRoot {
      vexactsize 0
      style Bold
      text "You are player"
-     font "gui/fonts/etelkatextpro22"
+     font "Colorful-ui/gui/fonts/OpenSanV16"
      "exact text" 1
      "size to text h" 1
      "size to text v" 1
@@ -242,7 +240,7 @@ PanelWidgetClass TextInputDialogRoot {
     }
     MultilineTextWidgetClass txtPosition {
      color 1 1 1 1
-     position 137 0
+     position 114 0
      size 0.2 1
      valign center_ref
      hexactpos 1
@@ -252,7 +250,7 @@ PanelWidgetClass TextInputDialogRoot {
      scaled 1
      style None
      text "123"
-     font "gui/fonts/etelkatextpro22"
+     font "Colorful-ui/gui/fonts/OpenSanV16"
      "exact text" 1
      "exact text size" 22
      "size to text h" 1
@@ -272,7 +270,7 @@ PanelWidgetClass TextInputDialogRoot {
      vexactsize 0
      style Bold
      text "in queue"
-     font "gui/fonts/etelkatextpro22"
+     font "Colorful-ui/gui/fonts/OpenSanV16"
      "exact text" 1
      "size to text h" 1
      "size to text v" 1
@@ -280,6 +278,19 @@ PanelWidgetClass TextInputDialogRoot {
      "text valign" center
     }
    }
+  }
+  ProgressBarWidgetClass LoadingBar {
+   ignorepointer 1
+   color 0.8118 0.8118 0.8118 1
+   size 1 20
+   halign center_ref
+   valign bottom_ref
+   hexactpos 1
+   vexactpos 1
+   hexactsize 0
+   vexactsize 1
+   style Stamina
+   current 100
   }
   FrameWidgetClass "Hidden Stuff" {
    visible 0
