@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{378D42D3C53CA9C1}Colorful-UI/gui/fonts/PersonalServices14.edds"
+ Author "corruscant"
+ ChangeDate -244306706
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "PersonalServices14.tga"
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}

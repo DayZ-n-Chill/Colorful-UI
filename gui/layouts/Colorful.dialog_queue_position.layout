@@ -114,22 +114,6 @@ PanelWidgetClass TextInputDialogRoot {
    filter 1
    nocache 0
   }
-  ImageWidgetClass LoadingImage {
-   ignorepointer 1
-   position 8 0.11
-   size 165 37
-   halign center_ref
-   valign bottom_ref
-   hexactpos 1
-   vexactpos 0
-   hexactsize 1
-   vexactsize 1
-   imageTexture "{1B5158123537A539}Colorful-UI/gui/textures/loading_screens/Colorful.Loading.edds"
-   mode blend
-   "src alpha" 1
-   "no wrap" 1
-   stretch 1
-  }
   TextWidgetClass StatusText {
    visible 1
    color 0.2588 0.6863 0.3647 1
@@ -162,6 +146,22 @@ PanelWidgetClass TextInputDialogRoot {
    text_proportion 0.5
    font "gui/fonts/sdf_MetronBook24"
    "disabled text color" 0.3412 0.3412 0.3412 1
+  }
+  TextWidgetClass LoadingText {
+   visible 1
+   position 5 0.11
+   size 1.01042 0.05778
+   halign center_ref
+   valign bottom_ref
+   hexactpos 1
+   vexactpos 0
+   text "Please wait ..."
+   font "Colorful-ui/gui/fonts/PersonalServices28"
+   "exact text" 1
+   "size to text h" 1
+   "size to text v" 1
+   "text halign" center
+   "text valign" center
   }
   ButtonWidgetClass exit_button {
    color 1 1 1 0

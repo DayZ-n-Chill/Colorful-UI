@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{C16A4FE3B4DEA70E}Colorful-UI/gui/fonts/OpenSansV-Italic48.edds"
+ Author "corruscant"
+ ChangeDate 244477166
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "OpenSansV-Italic48.tga"
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}

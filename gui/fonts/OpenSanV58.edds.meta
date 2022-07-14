@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{8BF26E970E4A6EE5}Colorful-UI/gui/fonts/OpenSanV58.edds"
+ Author "corruscant"
+ ChangeDate 1082813678
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "OpenSanV58.tga"
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}

@@ -112,22 +112,21 @@ WindowWidgetClass TextInputDialogRoot {
    filter 1
    nocache 0
   }
-  ImageWidgetClass LoadingImage {
+  TextWidgetClass LoadingText {
    visible 1
-   ignorepointer 1
-   position 8 0.11
-   size 165 37
+   position 5 0.11
+   size 1.01042 0.05778
    halign center_ref
    valign bottom_ref
    hexactpos 1
    vexactpos 0
-   hexactsize 1
-   vexactsize 1
-   imageTexture "{1B5158123537A539}Colorful-UI/gui/textures/loading_screens/Colorful.Loading.edds"
-   mode blend
-   "src alpha" 1
-   "no wrap" 1
-   stretch 1
+   text "CONNECTING TO SERVER ..."
+   font "Colorful-ui/gui/fonts/PersonalServices28"
+   "exact text" 1
+   "size to text h" 1
+   "size to text v" 1
+   "text halign" center
+   "text valign" center
   }
   TextWidgetClass TxtHdr {
    visible 1
@@ -138,7 +137,7 @@ WindowWidgetClass TextInputDialogRoot {
    valign bottom_ref
    vexactpos 0
    style Bold
-   text "Can you Survive?"
+   text "Will you Survive?"
    font "gui/fonts/Metron-BoldItalic22"
    "exact text" 1
    "size to text h" 1
