@@ -698,7 +698,7 @@ FrameWidgetClass main_menu_root {
           PanelWidgetClass DiscordBtn_panel {
            ignorepointer 1
            color 0 0 0 0
-           size 221 39
+           size 293 39
            halign right_ref
            valign center_ref
            hexactpos 0
@@ -710,9 +710,8 @@ FrameWidgetClass main_menu_root {
             ImageWidgetClass DiscordBtn_label {
              clipchildren 0
              ignorepointer 1
-             position 0 0
-             size 300 39
-             halign center_ref
+             size 47 39
+             halign right_ref
              valign center_ref
              hexactpos 1
              vexactpos 1
@@ -724,6 +723,23 @@ FrameWidgetClass main_menu_root {
              "no wrap" 1
              stretch 1
              filter 0
+            }
+            TextWidgetClass DiscordBtn_label_Txt {
+             clipchildren 0
+             ignorepointer 1
+             position 60 0
+             size 1 1
+             halign right_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 0
+             text "Text"
+             "size to text h" 1
+             "size to text v" 0
+             "text halign" right
+             "text valign" center
             }
            }
           }
@@ -748,7 +764,7 @@ FrameWidgetClass main_menu_root {
           PanelWidgetClass TwitterBtn_panel {
            ignorepointer 1
            color 0 0 0 0
-           size 221 39
+           size 293 39
            halign right_ref
            valign center_ref
            hexactpos 0
@@ -760,9 +776,8 @@ FrameWidgetClass main_menu_root {
             ImageWidgetClass TwitterBtn_label {
              clipchildren 0
              ignorepointer 1
-             position 0 0
-             size 221 39
-             halign center_ref
+             size 47 39
+             halign right_ref
              valign center_ref
              hexactpos 1
              vexactpos 1
@@ -774,6 +789,24 @@ FrameWidgetClass main_menu_root {
              "no wrap" 1
              stretch 1
              filter 0
+            }
+            TextWidgetClass TwitterBtn_label_Text {
+             clipchildren 0
+             ignorepointer 1
+             position 60 0
+             size 1 1
+             halign right_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 0
+             text "Twitter"
+             "exact text" 1
+             "size to text h" 1
+             "size to text v" 0
+             "text halign" right
+             "text valign" center
             }
            }
           }
@@ -799,7 +832,7 @@ FrameWidgetClass main_menu_root {
           PanelWidgetClass RedditBtn_panel {
            ignorepointer 1
            color 0 0 0 0
-           size 221 39
+           size 293 39
            halign right_ref
            valign center_ref
            hexactpos 0
@@ -811,9 +844,8 @@ FrameWidgetClass main_menu_root {
             ImageWidgetClass RedditBtn_label {
              clipchildren 0
              ignorepointer 1
-             position 0 0
-             size 221 39
-             halign center_ref
+             size 47 39
+             halign right_ref
              valign center_ref
              hexactpos 1
              vexactpos 1
@@ -825,6 +857,24 @@ FrameWidgetClass main_menu_root {
              "no wrap" 1
              stretch 1
              filter 0
+            }
+            TextWidgetClass RedditBtn_label_Txt {
+             clipchildren 0
+             ignorepointer 1
+             position 60 0
+             size 1 1
+             halign right_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 0
+             text "Reddit"
+             "exact text" 1
+             "size to text h" 1
+             "size to text v" 0
+             "text halign" right
+             "text valign" center
             }
            }
           }
@@ -850,7 +900,7 @@ FrameWidgetClass main_menu_root {
           PanelWidgetClass YoutubeBtn_panel {
            ignorepointer 1
            color 0 0 0 0
-           size 221 39
+           size 293 39
            halign right_ref
            valign center_ref
            hexactpos 0
@@ -862,9 +912,8 @@ FrameWidgetClass main_menu_root {
             ImageWidgetClass YoutubeBtn_label {
              clipchildren 0
              ignorepointer 1
-             position 0 0
-             size 221 39
-             halign center_ref
+             size 47 39
+             halign right_ref
              valign center_ref
              hexactpos 1
              vexactpos 1
@@ -876,6 +925,23 @@ FrameWidgetClass main_menu_root {
              "no wrap" 1
              stretch 1
              filter 0
+            }
+            TextWidgetClass YoutubeBtn_label_Txt {
+             clipchildren 0
+             ignorepointer 1
+             position 60 0
+             size 1 1
+             halign right_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 0
+             text "YouTube"
+             "exact text" 1
+             "size to text h" 1
+             "text halign" right
+             "text valign" center
             }
            }
           }
@@ -901,7 +967,7 @@ FrameWidgetClass main_menu_root {
           PanelWidgetClass MetaBtn_panel {
            ignorepointer 1
            color 0 0 0 0
-           size 221 39
+           size 293 39
            halign right_ref
            valign center_ref
            hexactpos 0
@@ -913,9 +979,8 @@ FrameWidgetClass main_menu_root {
             ImageWidgetClass MetaBtn_label {
              clipchildren 0
              ignorepointer 1
-             position 0 0
-             size 221 39
-             halign center_ref
+             size 47 39
+             halign right_ref
              valign center_ref
              hexactpos 1
              vexactpos 1
@@ -928,6 +993,22 @@ FrameWidgetClass main_menu_root {
              stretch 1
              filter 0
             }
+            TextWidgetClass MetaBtn_label_Txt {
+             clipchildren 0
+             ignorepointer 1
+             position 60 0
+             size 1 1
+             halign right_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 0
+             text "Meta"
+             "size to text h" 1
+             "text halign" right
+             "text valign" center
+            }
            }
           }
          }
@@ -939,36 +1020,32 @@ FrameWidgetClass main_menu_root {
     FrameWidgetClass character_stats_root {
      visible 1
      ignorepointer 1
-     size 452 340
+     position 0 0
+     size 414.55798 359.306
      valign bottom_ref
      hexactpos 0
      vexactpos 0
      hexactsize 1
      vexactsize 1
      {
-      ImageWidgetClass character_stats_textImg {
+      TextWidgetClass character_stats_textImg {
        ignorepointer 1
        keepsafezone 0
-       position 0 0
        size 452 92
-       halign center_ref
        hexactpos 1
        vexactpos 1
        hexactsize 1
        vexactsize 1
-       imageTexture "{0DB8EF03305F76AA}Colorful-UI/gui/textures/main_menu/Colorful.Stats.edds"
-       mode blend
-       "src alpha" 1
-       "no wrap" 1
-       stretch 1
-       filter 0
+       text "SURIVOR STATS"
+       "size to text h" 1
+       "size to text v" 1
+       "text valign" center
       }
       GridSpacerWidgetClass character_stats_content {
        ignorepointer 1
        color 0 0 0 0
-       position 0 109
        size 1 230
-       halign center_ref
+       valign bottom_ref
        hexactpos 1
        vexactpos 1
        hexactsize 0
@@ -1134,21 +1211,6 @@ FrameWidgetClass main_menu_root {
            "text valign" center
           }
           TextWidgetClass DistanceTraveledValue {
-           ignorepointer 1
-           size 1 1
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           text "0"
-           "size to text h" 1
-           "size to text v" 0
-           "text halign" center
-           "text valign" center
-          }
-          TextWidgetClass DistanceTraveledValue0 {
            ignorepointer 1
            size 1 1
            halign right_ref

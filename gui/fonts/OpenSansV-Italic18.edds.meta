@@ -1,10 +1,10 @@
 MetaFileClass {
- Name "{E7D5FBD03933BD28}Colorful-UI/gui/fonts/OpenSansV-Italic14.edds"
+ Name "{DE85BF356EEFB387}Colorful-UI/gui/fonts/OpenSansV-Italic18.edds"
  Author "corruscant"
- ChangeDate 1951165678
+ ChangeDate 295464174
  Configurations {
   TGAResourceClass PC {
-   SourceFile "OpenSansV-Italic14.tga"
+   SourceFile "OpenSansV-Italic18.tga"
   }
   TGAResourceClass XBOX_ONE : PC {
   }

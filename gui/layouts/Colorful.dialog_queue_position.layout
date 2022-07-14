@@ -45,20 +45,47 @@ PanelWidgetClass TextInputDialogRoot {
    Progress 0
   }
   FrameWidgetClass Shaders {
-   ignorepointer 1
+   visible 1
+   clipchildren 0
+   inheritalpha 1
+   color 0 0 0 0
    position 0 0
    size 1 1
-   hexactpos 1
-   vexactpos 1
+   halign center_ref
+   valign center_ref
+   hexactpos 0
+   vexactpos 0
    hexactsize 0
    vexactsize 0
    {
-    ImageWidgetClass TealShader {
+    ImageWidgetClass Vignette {
+     visible 1
+     ignorepointer 0
+     color 0 0 0 0.7843
+     position 0 0
+     size 1 1
+     halign center_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 0
+     priority 1
+     imageTexture "{E6B3EF816E067499}Gui/textures/inventory_bgvignette.edds"
+     mode blend
+     "src alpha" 1
+     "no wrap" 1
+     stretch 1
+     filter 0
+     nocache 1
+    }
+    ImageWidgetClass TealShader0 {
      visible 1
      ignorepointer 1
      keepsafezone 0
-     position 0 0
      size 1 1
+     halign center_ref
+     valign center_ref
      hexactpos 1
      vexactpos 1
      hexactsize 0
@@ -68,9 +95,9 @@ PanelWidgetClass TextInputDialogRoot {
      mode blend
      "src alpha" 1
      "no wrap" 1
-     stretch 1
+     stretch 0
     }
-    ImageWidgetClass RedShader {
+    ImageWidgetClass RedShader0 {
      visible 0
      ignorepointer 1
      keepsafezone 0
@@ -81,13 +108,14 @@ PanelWidgetClass TextInputDialogRoot {
      hexactsize 0
      vexactsize 0
      scaled 1
-     imageTexture "{DE32C210B6524152}Colorful-UI/gui/textures/globals/Colorful.RedGradient.edds"
+     imageTexture "{D3608E48FE0531A4}Colorful-UI/gui/textures/globals/Colorful.RedGradient.edds"
      mode blend
      "src alpha" 1
      "no wrap" 1
      stretch 1
     }
-    ImageWidgetClass HorizShader {
+    ImageWidgetClass HorizShader0 {
+     visible 1
      ignorepointer 1
      keepsafezone 0
      position 0 0
@@ -102,180 +130,177 @@ PanelWidgetClass TextInputDialogRoot {
      "src alpha" 1
      "no wrap" 1
      stretch 1
+     filter 1
     }
    }
   }
-  ImageWidgetClass ColorfulLogo {
-   visible 1
-   clipchildren 0
-   inheritalpha 1
-   position 0.05 0.05
-   size 460 320
-   hexactpos 0
-   vexactpos 0
-   hexactsize 1
-   vexactsize 1
-   fixaspect outside
-   image0 ""
-   imageTexture "{5314D820E495219F}Colorful-UI/gui/textures/globals/Colorful.Logo.edds"
-   mode blend
-   "src alpha" 1
-   "no wrap" 1
-   stretch 1
-   filter 1
-   nocache 0
-  }
-  TextWidgetClass StatusText {
-   visible 1
-   color 0.2588 0.6863 0.3647 1
-   position 0 0.07
-   size 1 0.03
-   halign center_ref
-   valign bottom_ref
-   vexactpos 0
-   text "You will be able to join when someone leaves the server."
-   font "gui/fonts/Metron-BoldItalic22"
-   "exact text" 1
-   "size to text h" 1
-   "size to text v" 1
-   "text halign" center
-   "text valign" center
-  }
-  ButtonWidgetClass btnLeave {
-   visible 0
-   color 1 0 0 1
-   position 0.05 0.05
-   size 150 40
-   halign right_ref
-   hexactpos 0
-   vexactpos 0
-   hexactsize 1
-   vexactsize 1
-   userID 1
-   style Empty
-   text "X"
-   text_proportion 0.5
-   font "gui/fonts/sdf_MetronBook24"
-   "disabled text color" 0.3412 0.3412 0.3412 1
-  }
-  ButtonWidgetClass exit_button {
-   color 1 1 1 0
-   position 0.05 0.05
-   size 37 37
-   halign right_ref
-   hexactpos 0
-   vexactpos 0
-   hexactsize 1
-   vexactsize 1
-   fixaspect inside
-   style Empty
-   "no focus" 0
-   "next left" "settings_button"
-   "next right" "play"
-   "next up" "play"
-   "next down" "customize_character"
-   font "gui/fonts/sdf_MetronLight24"
-   switch normal
-   {
-    ImageWidgetClass exit_button_image {
-     ignorepointer 1
-     size 1 1
-     halign center_ref
-     valign center_ref
-     hexactpos 1
-     vexactpos 1
-     hexactsize 0
-     vexactsize 0
-     image0 "set:dayz_gui image:exit"
-     mode blend
-     "src alpha" 1
-    }
-   }
-  }
-  TextWidgetClass LoadingText {
-   visible 1
-   position 5 0.12
-   size 1.01042 0.05778
-   halign center_ref
-   valign bottom_ref
-   hexactpos 1
-   vexactpos 0
-   text "Please wait ..."
-   font "Colorful-ui/gui/fonts/PersonalServices28"
-   "exact text" 1
-   "size to text h" 1
-   "size to text v" 1
-   "text halign" center
-   "text valign" center
-  }
-  FrameWidgetClass QueueFrame {
+  FrameWidgetClass SafeZone {
    ignorepointer 1
-   position 0.00039 0.05
-   size 227 0.02
+   size 0.9 0.9
    halign center_ref
-   valign bottom_ref
+   valign center_ref
    hexactpos 0
    vexactpos 0
-   hexactsize 1
+   hexactsize 0
    vexactsize 0
-   scaled 1
-   fixaspect inside
    {
-    TextWidgetClass YouArePlayer {
-     disabled 0
-     size 1 1
-     valign center_ref
+    ImageWidgetClass ColorfulLogo {
+     visible 1
+     clipchildren 0
+     inheritalpha 1
+     size 460 320
      hexactpos 0
      vexactpos 0
-     hexactsize 0
-     vexactsize 0
-     style Bold
-     text "You are player"
-     font "Colorful-ui/gui/fonts/OpenSanV16"
-     "exact text" 1
-     "size to text h" 1
-     "size to text v" 1
-     "text halign" center
-     "text valign" center
+     hexactsize 1
+     vexactsize 1
+     fixaspect outside
+     image0 ""
+     imageTexture "{5314D820E495219F}Colorful-UI/gui/textures/globals/Colorful.Logo.edds"
+     mode blend
+     "src alpha" 1
+     "no wrap" 1
+     stretch 1
+     filter 1
+     nocache 0
     }
-    MultilineTextWidgetClass txtPosition {
-     color 1 1 1 1
-     position 114 0
-     size 0.2 1
-     valign center_ref
-     hexactpos 1
-     vexactpos 1
-     hexactsize 0
-     vexactsize 0
-     scaled 1
-     style None
-     text "123"
-     font "Colorful-ui/gui/fonts/OpenSanV16"
-     "exact text" 1
-     "exact text size" 22
-     "size to text h" 1
-     "size to text v" 1
-     "text halign" center
-     "text valign" center
-     wrap 0
-    }
-    TextWidgetClass inQueue {
-     disabled 0
-     size 160 1
+    ButtonWidgetClass btnLeave {
+     color 1 1 1 0
+     size 37 37
      halign right_ref
-     valign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 1
+     vexactsize 1
+     fixaspect inside
+     style Empty
+     "no focus" 0
+     "next left" "settings_button"
+     "next right" "play"
+     "next up" "play"
+     "next down" "customize_character"
+     font "gui/fonts/sdf_MetronLight24"
+     switch normal
+     {
+      ImageWidgetClass exit_button_image {
+       ignorepointer 1
+       size 1 1
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       image0 "set:dayz_gui image:exit"
+       mode blend
+       "src alpha" 1
+      }
+     }
+    }
+    TextWidgetClass StatusText {
+     visible 1
+     clipchildren 0
+     color 0.2588 0.6863 0.3647 1
+     position 0 0.024
+     size 1 0.03
+     halign center_ref
+     valign bottom_ref
+     vexactpos 0
+     text "You will be able to join when someone leaves the server."
+     font "Colorful-ui/gui/fonts/OpenSansV-Italic18"
+     "exact text" 1
+     "size to text h" 1
+     "size to text v" 1
+     "text halign" center
+     "text valign" center
+    }
+    TextWidgetClass LoadingText {
+     visible 1
+     position 0 0.08
+     size 0 0
+     halign center_ref
+     valign bottom_ref
      hexactpos 1
-     vexactpos 1
+     vexactpos 0
+     text "Please wait ..."
+     font "Colorful-ui/gui/fonts/PersonalServices24"
+     "exact text" 1
+     "size to text h" 1
+     "size to text v" 1
+     "text halign" center
+     "text valign" center
+    }
+    FrameWidgetClass QueueFrame {
+     clipchildren 0
+     ignorepointer 1
+     size 233 0.02
+     halign center_ref
+     valign bottom_ref
+     hexactpos 0
+     vexactpos 0
      hexactsize 1
      vexactsize 0
-     style Bold
-     text "in queue"
-     font "Colorful-ui/gui/fonts/OpenSanV16"
-     "exact text" 1
-     "size to text h" 1
-     "size to text v" 1
-     "text halign" center
-     "text valign" center
+     scaled 1
+     fixaspect inside
+     {
+      TextWidgetClass YouArePlayer {
+       disabled 0
+       clipchildren 0
+       size 1 1
+       valign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Bold
+       text "You are player"
+       font "Colorful-ui/gui/fonts/OpenSansV18"
+       "exact text" 1
+       "size to text h" 1
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+      }
+      MultilineTextWidgetClass txtPosition {
+       clipchildren 0
+       color 1 1 1 1
+       position 121 0
+       size 39 1
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 0
+       scaled 1
+       style None
+       text "123"
+       font "Colorful-ui/gui/fonts/OpenSansV18"
+       "exact text" 1
+       "exact text size" 22
+       "size to text h" 1
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+       wrap 0
+      }
+      TextWidgetClass inQueue {
+       disabled 0
+       size 160 1
+       halign right_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 0
+       style Bold
+       text "in queue"
+       font "Colorful-ui/gui/fonts/OpenSansV18"
+       "exact text" 1
+       "size to text h" 1
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+      }
+     }
     }
    }
   }
@@ -584,6 +609,23 @@ PanelWidgetClass TextInputDialogRoot {
        style rover_sim_colorable
       }
      }
+    }
+    ButtonWidgetClass "btnLeave," {
+     visible 0
+     color 1 0 0 1
+     position 0.05 0.05
+     size 150 40
+     halign right_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 1
+     vexactsize 1
+     userID 1
+     style Empty
+     text "X"
+     text_proportion 0.5
+     font "gui/fonts/sdf_MetronBook24"
+     "disabled text color" 0.3412 0.3412 0.3412 1
     }
    }
   }
