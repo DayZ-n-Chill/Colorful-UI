@@ -10,7 +10,7 @@ modded class MainMenu extends UIScriptedMenu
 	override Widget Init()
 	{
 		// Load the layout file
-		layoutRoot					= GetGame().GetWorkspace().CreateWidgets( "Colorful-UI/gui/layouts/new_ui/colorful.main_menu2.layout" );
+		layoutRoot					= GetGame().GetWorkspace().CreateWidgets( "Colorful-UI/gui/layouts/new_ui/colorful.main_menu.layout" );
 		// Print("Colorful Main Menu Loaded!");	
 		
 		// Custom Buttons  
