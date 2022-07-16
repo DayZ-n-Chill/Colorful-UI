@@ -5,7 +5,7 @@ class CfgPatches
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"DZ_Data"};
+		requiredAddons[] = {"DZ_Data", "JMC_DeerIsle_Scripts"};
 		// NOTE: Use the example below to have the UI work on Deer Isle
 		// EXAMPLE: requiredAddons[] = {"DZ_Data", "JMC_DeerIsle_Scripts" };
 	};
@@ -38,6 +38,13 @@ class CfgMods
 				value = "";
 				files[] = {"Colorful-UI/scripts/5_Mission"};
 			};
+		};
+	};
+	class CfgFontFamilies
+	{
+		class PersonalServiceB
+		{
+			fonts[] = {"Colorful-UI/gui/fonts/PersonalServices.fnt"};
 		};
 	};
 };

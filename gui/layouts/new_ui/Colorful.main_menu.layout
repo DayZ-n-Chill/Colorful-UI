@@ -1946,7 +1946,7 @@ FrameWidgetClass main_menu_root {
      }
     }
     PanelWidgetClass character {
-     visible 1
+     visible 0
      ignorepointer 0
      size 291 42
      hexactpos 1
