@@ -15,7 +15,7 @@ modded class RespawnDialogue extends UIScriptedMenu
 		if( !w )
 			return;
 		
-		ButtonSetColor(w, colorScheme.PrimaryColor());
-		ButtonSetTextColor(w, UIColor.White()); 
+		ButtonSetColor(w, UIColor.Transparent());
+		ButtonSetTextColor(w, colorScheme.PrimaryColor()); 
 	};
 };

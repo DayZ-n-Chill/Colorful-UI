@@ -6,13 +6,13 @@ modded class MainMenu extends UIScriptedMenu
 	private Widget m_Youtube;
 	private Widget m_Reddit;
 	private Widget m_Facebook;
+	private Widget m_CharacterBtn;
 
 	override Widget Init()
 	{
 		// Load the layout file
 		layoutRoot					= GetGame().GetWorkspace().CreateWidgets( "Colorful-UI/gui/layouts/new_ui/colorful.main_menu.layout" );
-		// Print("Colorful Main Menu Loaded!");	
-		
+
 		// Custom Buttons  
 		// NOTE: THe "NameBtn" is the name of the widget in the layout file.
 		m_Discord 					= layoutRoot.FindAnyWidget( "DiscordBtn" );
@@ -20,8 +20,9 @@ modded class MainMenu extends UIScriptedMenu
 		m_Youtube 					= layoutRoot.FindAnyWidget( "YoutubeBtn" );
 		m_Reddit 					= layoutRoot.FindAnyWidget( "RedditBtn" );
 		m_Facebook 					= layoutRoot.FindAnyWidget( "FacebookBtn" );
+		m_CharacterBtn 				= layoutRoot.FindAnyWidget( "CharacterBtn" );
 
-		// Vanilla Code
+		// Required Vanilla Code (Most are just hidden in the layout file.)
 		m_Play						= layoutRoot.FindAnyWidget( "play" );
 		m_ChooseServer				= layoutRoot.FindAnyWidget( "choose_server" );
 		m_CustomizeCharacter		= layoutRoot.FindAnyWidget( "customize_character" );
@@ -45,11 +46,7 @@ modded class MainMenu extends UIScriptedMenu
 		m_Stats						= new MainMenuStats( layoutRoot.FindAnyWidget( "character_stats_root" ) );
 		m_Mission					= MissionMainMenu.Cast( GetGame().GetMission() );
 		m_ScenePC					= m_Mission.GetIntroScenePC();
-		
-		
-		
-		m_LastPlayedTooltip.Show(false);
-		if(m_ScenePC){m_ScenePC.ResetIntroCamera();}
+
 		string version;
 		GetGame().GetVersion( version );
 		m_Version.SetText( "#main_menu_version" + " " + version );
@@ -58,7 +55,8 @@ modded class MainMenu extends UIScriptedMenu
 		Refresh();
 		LoadMods();
 		GetDayZGame().GetBacklit().MainMenu_OnShow();
-		g_Game.SetLoadState( DayZLoadState.MAIN_MENU_CONTROLLER_SELECT );	
+		g_Game.SetLoadState( DayZLoadState.MAIN_MENU_CONTROLLER_SELECT );
+
 		return layoutRoot;
 	}	
 
@@ -94,7 +92,14 @@ modded class MainMenu extends UIScriptedMenu
 		{
 			GetGame().OpenURL("https://facebook.com/#");
 			return false;
-		}	
+		}
+		// TODO: Find out why default btn only says "rename", and wont let me chant text. 
+		// For now just use a custom button. (Don't Remove till I find a fix)
+		else if ( w == m_CharacterBtn )
+		{
+			OpenMenuCustomizeCharacter();
+			return true;
+		}
 		// NOTE: --------------------------------------------------------------------
 		// Want to add your own buttons. 
 		// Use this snippet as a template for creating buttons.  
@@ -118,14 +123,49 @@ modded class MainMenu extends UIScriptedMenu
 		return super.OnClick(w, x, y, button);
 	};
 
-	// Coloring functions (Until WidgetStyles are useful)
+	// Coloring Functions 
+	// NOTE: Varient Styles -------------------------------------
+	// I have included a few variations of this code so you
+	// can easily comment/uncomment the code you want to use. 
+	//-----------------------------------------------------------
+	
+	//-----------------------------------------------------------
+	// Button with a solid background highlight.
+	//-----------------------------------------------------------
+	// Background is your colorScheme.PrimaryColor();
+	// Text is UIColor.White();
+	// Use the Colors in the constants.c to change them
+	// ----------------------------------------------------------
+	//
+	// void ColorHighlight( Widget w )
+	// {
+	// 	if( !w )
+	// 		return;	
+	// 	int color_pnl = colorScheme.PrimaryColor();
+	// 	int color_lbl = UIColor.White();
+	// 	int color_img = colorScheme.PrimaryColor();		
+	// 	// Button Highlights. 
+	// 	// The buttons in your layout must follow the structure within the layout files.
+	// 	// Just look in the colorful.Main_Menu.layout in Workbench. 
+	// 	ButtonSetColor(w, color_pnl);
+	// 	ButtonSetTextColor(w, color_lbl);
+	// 	// Top right icons
+	//  	// TODO: Add social icons to an imageset. 
+	// 	ImagenSetColor(w, color_img);
+	// }
+	
+	// ----------------------------------------
+	// Button with a text only highlight.
+	//-----------------------------------------
+	// Background is your UIColor.Transparent()
+	// Text is colorScheme.PrimaryColor();
+	// ----------------------------------------
 	void ColorHighlight( Widget w )
 	{
 		if( !w )
 			return;	
-		// int color_pnl = colorScheme.PrimaryColor();		
 		int color_pnl = UIColor.Transparent();
-		int color_lbl = UIColor.White();
+		int color_lbl = colorScheme.PrimaryColor();
 		int color_img = colorScheme.PrimaryColor();		
 		ButtonSetColor(w, color_pnl);
 		ButtonSetTextColor(w, color_lbl);

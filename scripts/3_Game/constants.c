@@ -57,14 +57,23 @@ string GetRandomHint()
 }
 
 // COLOR PALETTES ---------------------------------------------------------
-// Use these colors to mix and match the theme of your choice.
+// Use these coloring functions to mix and match the theme of your choice.
 // You can add to it, remove colors from it.  Whatever you like.
+
+// NOTE: ------------------------------------------------------------------
+// I used two fucntions because I wanted to be able to use colorin both
+// a global way and in possible uniuqe situations. 
+// There is probably a better way to do this, so suggestions are welcome. 
+// Please submit a pull request to the dev branch for suggestions.
+// https://github.com/DayZ-n-Chill/Colorful-UI/tree/dev
+// ------------------------------------------------------------------------
+
 class UIColor
 {
 	// GreyScale
-	static int White() { return ARGB(255, 55, 102, 102); };
-	static int Grey() { return ARGB(255, 55, 102, 102); };
-	static int Black() { return ARGB(255, 55, 102, 102); };
+	static int White() { return ARGB(255, 255, 255, 255); };
+	static int Grey() { return ARGB(255, 130, 130, 130); };
+	static int Black() { return ARGB(255, 0, 0, 0); };
 	static int Transparent() { return ARGB(1, 0, 0, 0); };
 	// R.O.Y.G.B.I.V
 	static int Red() { return ARGB(255, 173, 35, 35); };
@@ -74,15 +83,21 @@ class UIColor
 	static int Blue() { return ARGB(255, 51, 102, 102); };
 	static int Indigo() { return ARGB(255, 102, 51, 204); };
 	static int Violet() { return ARGB(255, 204, 51, 204); };
-	// Custom Colors
+	// Social Network Colors
+	static int discord() { return ARGB(255, 88, 101, 242); };
+	static int twitter() { return ARGB(255, 29, 161, 242); };
+	static int youtube() { return ARGB(255, 255, 0, 0); };
+	static int reddit() { return ARGB(255, 255, 69, 0); };
+	static int meta() { return ARGB(255, 24, 119, 242); };
+	// Custom Colors (Use to add your own branding colors)
 	static int Teal() { return ARGB(255, 0, 102, 102); };
+	static int DPGPurple() { return ARGB(255, 72, 27, 159); };
 }
 
 // DEFINE YOUR THEME -------------------------------------------------------
 // You can the fucntions above to set the theme across the entire app.
 class colorScheme 
 {
-	static int PrimaryColor() { return UIColor.Teal(); };
+	static int PrimaryColor() { return UIColor.DPGPurple(); };
 	static int SecondaryColor() { return UIColor.Red(); };
-	static int TertiartyColor() { return UIColor.Yellow(); };
 }
