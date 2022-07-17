@@ -95,9 +95,14 @@ class UIColor
 }
 
 // DEFINE YOUR THEME -------------------------------------------------------
-// You can the fucntions above to set the theme across the entire app.
+// You can use the fucntions above to set the theme across the entire app.
 class colorScheme 
 {
-	static int PrimaryColor() { return UIColor.DPGPurple(); };
-	static int SecondaryColor() { return UIColor.Red(); };
+	// This color should be Servers/Communities Brand Color
+	static int BrandColor() { return UIColor.DPGPurple(); };
+	// This color should be a complimentary color to your brand. 
+	static int AccentColor() { return UIColor.Red(); }; 
+	// Best to keep this as is, but do whatever, Experiment.
+	static int PrimaryText() { return UIColor.White(); }; 	
 }
+ 

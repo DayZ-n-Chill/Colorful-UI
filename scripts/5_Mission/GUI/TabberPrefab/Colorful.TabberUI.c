@@ -7,8 +7,8 @@ modded class TabberUI extends ScriptedWidgetEventHandler
 		{
 			Widget tab_title = TextWidget.Cast(tab_control.FindAnyWidget( tab_control.GetName() + "_Title" ));
 			
-			int color_title = colorScheme.PrimaryColor();
-			int color_backg = ARGB(255, 0, 0 ,0);
+			int color_title = colorScheme.BrandColor();
+			int color_backg = UIColor.Black();
 			
 			tab_title.SetColor( color_title );
 			tab_control.SetColor( color_backg );
@@ -27,8 +27,8 @@ modded class TabberUI extends ScriptedWidgetEventHandler
 		if( tab_control )
 		{			
 			Widget tab_title = TextWidget.Cast(tab_control.FindAnyWidget( tab_control.GetName() + "_Title" ));
-			tab_title.SetColor(colorScheme.PrimaryColor());
-			tab_control.SetColor(ARGB(255, 0, 0, 0));
+			tab_title.SetColor(colorScheme.BrandColor());
+			tab_control.SetColor(UIColor.Black());
 		}
 		
 		return false;

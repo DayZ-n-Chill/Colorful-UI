@@ -22,7 +22,6 @@ modded class LogoutMenu extends UIScriptedMenu
 		m_restartbtn		= ButtonWidget.Cast(layoutRoot.FindAnyWidget("restartbtn"));
 		m_optionsbtn        = ButtonWidget.Cast(layoutRoot.FindAnyWidget("optionsbtn"));
 
-
 		m_LogoutTimeText 	= TextWidget.Cast(layoutRoot.FindAnyWidget("txtLogoutTime"));
 		m_DescriptionText 	= TextWidget.Cast(layoutRoot.FindAnyWidget("txtDescription"));
 		m_bLogoutNow 		= ButtonWidget.Cast(layoutRoot.FindAnyWidget("bLogoutNow"));
@@ -102,7 +101,7 @@ modded class LogoutMenu extends UIScriptedMenu
 		if( !w )
 			return;
 		ButtonSetColor(w, UIColor.Transparent());
-		ButtonSetTextColor(w, colorScheme.PrimaryColor());
+		ButtonSetTextColor(w, colorScheme.BrandColor());
 	};
 
 	protected void ButtonSetColor( Widget w, int color )
@@ -133,6 +132,6 @@ modded class LogoutMenu extends UIScriptedMenu
 		if( !w )
 			return;		
 		ButtonSetColor(w, UIColor.Transparent());
-		ButtonSetTextColor(w, UIColor.White());
+		ButtonSetTextColor(w, colorScheme.PrimaryText() );
 	}	
 }
