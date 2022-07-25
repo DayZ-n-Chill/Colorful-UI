@@ -2,8 +2,8 @@ modded class KeybindingsMenu extends UIScriptedMenu
 {
 	override Widget Init()
 	{
-		// Input input = GetGame().GetInput();
-		layoutRoot			= GetGame().GetWorkspace().CreateWidgets( "gui/layouts/new_ui/options/pc/keybinding_menu.layout", null );
+		Input input = GetGame().GetInput();
+		layoutRoot			= GetGame().GetWorkspace().CreateWidgets( "Colorful-UI/gui/layouts/new_ui/options/pc/colorful.keybinding_menu.layout", null );
 		
 		m_Version			= TextWidget.Cast( layoutRoot.FindAnyWidget( "version" ) );
 		m_Apply				= ButtonWidget.Cast( layoutRoot.FindAnyWidget( "apply" ) );
@@ -36,358 +36,396 @@ modded class KeybindingsMenu extends UIScriptedMenu
 		// 	toolbar_b.LoadImageFile( 0, "set:playstation_buttons image:" + back );
 		// #endif
 		
-		// InitInputSortingMap();
-		// CreateTabs();
-		// CreateGroupContainer();
+		InitInputSortingMap();
+		CreateTabs();
+		CreateGroupContainer();
 		
-		// InitPresets( -1, layoutRoot.FindAnyWidget( "group_header" ), input );
-		// m_Tabber.m_OnTabSwitch.Insert(UpdateTabContent);
-		// m_Tabber.SelectTabControl( 0 );
-		// m_Tabber.SelectTabPanel( 0 );
-		// g_Game.SetKeyboardHandle( this );
-		// m_Tabber.RefreshTab(true);
+		InitPresets( -1, layoutRoot.FindAnyWidget( "group_header" ), input );
+		m_Tabber.m_OnTabSwitch.Insert(UpdateTabContent);
+		m_Tabber.SelectTabControl( 0 );
+		m_Tabber.SelectTabPanel( 0 );
+		g_Game.SetKeyboardHandle( this );
+		m_Tabber.RefreshTab(true);
 		
-		// ColorDisabled( m_Apply );
-		// m_Apply.SetFlags( WidgetFlags.IGNOREPOINTER );
-		// ColorDisabled( m_Undo );
-		// m_Undo.SetFlags( WidgetFlags.IGNOREPOINTER );
-		// ColorWhite( m_Defaults, null );
-		// m_Defaults.ClearFlags( WidgetFlags.IGNOREPOINTER );
+		ColorDisabled( m_Apply );
+		m_Apply.SetFlags( WidgetFlags.IGNOREPOINTER );
+		ColorDisabled( m_Undo );
+		m_Undo.SetFlags( WidgetFlags.IGNOREPOINTER );
+		ColorWhite( m_Defaults, null );
+		m_Defaults.ClearFlags( WidgetFlags.IGNOREPOINTER );
 		
 		return layoutRoot;
 	}
 	
-	// void CreateTabs()
-	// {
-	// 	int sort_count = InputUtils.GetInputActionSortingMap().Count();
-	// 	for (int i = 0; i < sort_count; i++)
-	// 	{
-	// 		if (InputUtils.GetInputActionSortingMap().GetElement(i) && InputUtils.GetInputActionSortingMap().GetElement(i).Count() > 0)
-	// 		{
-	// 			string group_name = GetUApi().SortingLocalization(InputUtils.GetInputActionSortingMap().GetKey(i));
-	// 			group_name = Widget.TranslateString("#" + group_name); //oof
-	// 			m_Tabber.AddTab( group_name );
-	// 		}
-	// 	}
+	void CreateTabs()
+	{
+		int sort_count = InputUtils.GetInputActionSortingMap().Count();
+		for (int i = 0; i < sort_count; i++)
+		{
+			if (InputUtils.GetInputActionSortingMap().GetElement(i) && InputUtils.GetInputActionSortingMap().GetElement(i).Count() > 0)
+			{
+				string group_name = GetUApi().SortingLocalization(InputUtils.GetInputActionSortingMap().GetKey(i));
+				group_name = Widget.TranslateString("#" + group_name); //oof
+				m_Tabber.AddTab( group_name );
+			}
+		}
 		
-	// 	if (InputUtils.GetUnsortedInputActions() && InputUtils.GetUnsortedInputActions().Count() > 0)
-	// 	{
-	// 		m_Tabber.AddTab( Widget.TranslateString("#layout_pc_keybinding_unsorted") );
-	// 	}
-	// 	m_Tabber.DisableTabs(true);
-	// }
+		if (InputUtils.GetUnsortedInputActions() && InputUtils.GetUnsortedInputActions().Count() > 0)
+		{
+			m_Tabber.AddTab( Widget.TranslateString("#layout_pc_keybinding_unsorted") );
+		}
+		m_Tabber.DisableTabs(true);
+	}
 	
-	// void CreateGroupContainer()
-	// {
-	// 	m_GroupsContainer = new KeybindingsContainer(-1,GetGame().GetInput(),layoutRoot.FindAnyWidget("TabContentsHolder"),this);
-	// }
+	void CreateGroupContainer()
+	{
+		m_GroupsContainer = new KeybindingsContainer(-1,GetGame().GetInput(),layoutRoot.FindAnyWidget("TabContentsHolder"),this);
+	}
 	
-	// void UpdateTabContent( int tab_index )
-	// {
-	// 	m_GroupsContainer.SwitchSubgroup(tab_index);
-	// }
+	void UpdateTabContent( int tab_index )
+	{
+		m_GroupsContainer.SwitchSubgroup(tab_index);
+	}
 	
-	// void ClearKeybind( int key_index )
-	// {
-	// 	ColorWhite( m_Apply, null );
-	// 	m_Apply.ClearFlags( WidgetFlags.IGNOREPOINTER );
-	// 	ColorWhite( m_Undo, null );
-	// 	m_Undo.ClearFlags( WidgetFlags.IGNOREPOINTER );
-	// }
+	void ClearKeybind( int key_index )
+	{
+		ColorWhite( m_Apply, null );
+		m_Apply.ClearFlags( WidgetFlags.IGNOREPOINTER );
+		ColorWhite( m_Undo, null );
+		m_Undo.ClearFlags( WidgetFlags.IGNOREPOINTER );
+	}
 	
-	// void ClearAlternativeKeybind( int key_index )
-	// {
-	// 	ColorWhite( m_Apply, null );
-	// 	m_Apply.ClearFlags( WidgetFlags.IGNOREPOINTER );
-	// 	ColorWhite( m_Undo, null );
-	// 	m_Undo.ClearFlags( WidgetFlags.IGNOREPOINTER );
-	// }
+	void ClearAlternativeKeybind( int key_index )
+	{
+		ColorWhite( m_Apply, null );
+		m_Apply.ClearFlags( WidgetFlags.IGNOREPOINTER );
+		ColorWhite( m_Undo, null );
+		m_Undo.ClearFlags( WidgetFlags.IGNOREPOINTER );
+	}
 	
-	// void StartEnteringKeybind( int key_index )
-	// {
-	// 	m_CurrentSettingAlternateKeyIndex	= -1;
-	// 	m_CurrentSettingKeyIndex			= key_index;
-	// }
+	void StartEnteringKeybind( int key_index )
+	{
+		m_CurrentSettingAlternateKeyIndex	= -1;
+		m_CurrentSettingKeyIndex			= key_index;
+	}
 	
-	// void CancelEnteringKeybind()
-	// {
-	// 	m_GroupsContainer.CancelEnteringKeybind();
-	// 	m_CurrentSettingKeyIndex = -1;
-	// }
+	void CancelEnteringKeybind()
+	{
+		m_GroupsContainer.CancelEnteringKeybind();
+		m_CurrentSettingKeyIndex = -1;
+	}
 	
-	// void StartEnteringAlternateKeybind( int key_index )
-	// {
-	// 	m_CurrentSettingKeyIndex			= -1;
-	// 	m_CurrentSettingAlternateKeyIndex	= key_index;
-	// }
+	void StartEnteringAlternateKeybind( int key_index )
+	{
+		m_CurrentSettingKeyIndex			= -1;
+		m_CurrentSettingAlternateKeyIndex	= key_index;
+	}
 	
-	// void CancelEnteringAlternateKeybind()
-	// {
-	// 	m_GroupsContainer.CancelEnteringAlternateKeybind();
-	// 	m_CurrentSettingAlternateKeyIndex = -1;
-	// }
+	void CancelEnteringAlternateKeybind()
+	{
+		m_GroupsContainer.CancelEnteringAlternateKeybind();
+		m_CurrentSettingAlternateKeyIndex = -1;
+	}
 	
-	// void ConfirmKeybindEntry( TIntArray new_keys )
-	// {
-	// 	m_CurrentSettingKeyIndex = -1;
-	// 	ColorWhite( m_Apply, null );
-	// 	m_Apply.ClearFlags( WidgetFlags.IGNOREPOINTER );
-	// 	ColorWhite( m_Undo, null );
-	// 	m_Undo.ClearFlags( WidgetFlags.IGNOREPOINTER );
-	// }
+	void ConfirmKeybindEntry( TIntArray new_keys )
+	{
+		m_CurrentSettingKeyIndex = -1;
+		ColorWhite( m_Apply, null );
+		m_Apply.ClearFlags( WidgetFlags.IGNOREPOINTER );
+		ColorWhite( m_Undo, null );
+		m_Undo.ClearFlags( WidgetFlags.IGNOREPOINTER );
+	}
 	
-	// void ConfirmAlternateKeybindEntry( TIntArray new_keys )
-	// {
-	// 	m_CurrentSettingAlternateKeyIndex = -1;
-	// 	ColorWhite( m_Apply, null );
-	// 	m_Apply.ClearFlags( WidgetFlags.IGNOREPOINTER );
-	// 	ColorWhite( m_Undo, null );
-	// 	m_Undo.ClearFlags( WidgetFlags.IGNOREPOINTER );
-	// }
+	void ConfirmAlternateKeybindEntry( TIntArray new_keys )
+	{
+		m_CurrentSettingAlternateKeyIndex = -1;
+		ColorWhite( m_Apply, null );
+		m_Apply.ClearFlags( WidgetFlags.IGNOREPOINTER );
+		ColorWhite( m_Undo, null );
+		m_Undo.ClearFlags( WidgetFlags.IGNOREPOINTER );
+	}
 	
-	// override void Update(float timeslice)
-	// {
-	// 	if( GetGame().GetInput().LocalPress("UAUIBack",false) )
-	// 	{
-	// 		Back();
-	// 	}
+	override void Update(float timeslice)
+	{
+		if( GetGame().GetInput().LocalPress("UAUIBack",false) )
+		{
+			Back();
+		}
 		
-	// 	if( m_GroupsContainer )
-	// 	{
-	// 		m_GroupsContainer.Update( timeslice );
-	// 	}
-	// }
+		if( m_GroupsContainer )
+		{
+			m_GroupsContainer.Update( timeslice );
+		}
+	}
 	
-	// override bool OnClick( Widget w, int x, int y, int button )
-	// {
-	// 	if( button == MouseState.LEFT )
-	// 	{
-	// 		if( w == m_Apply )
-	// 		{
-	// 			Apply();
-	// 			return true;
-	// 		}
-	// 		else if( w == m_Back )
-	// 		{
-	// 			Back();
-	// 			return true;
-	// 		}
-	// 		else if( w == m_Undo )
-	// 		{
-	// 			Reset();
-	// 			return true;
-	// 		}
-	// 		else if( w == m_Defaults )
-	// 		{
-	// 			SetToDefaults();
-	// 			return true;
-	// 		}
-	// 	}
-	// 	return false;
-	// }
+	override bool OnClick( Widget w, int x, int y, int button )
+	{
+		if( button == MouseState.LEFT )
+		{
+			if( w == m_Apply )
+			{
+				Apply();
+				return true;
+			}
+			else if( w == m_Back )
+			{
+				Back();
+				return true;
+			}
+			else if( w == m_Undo )
+			{
+				Reset();
+				return true;
+			}
+			else if( w == m_Defaults )
+			{
+				SetToDefaults();
+				return true;
+			}
+		}
+		return false;
+	}
 	
-	// void Apply()
-	// {
-	// 	ColorDisabled( m_Apply );
-	// 	m_Apply.SetFlags( WidgetFlags.IGNOREPOINTER );
-	// 	ColorDisabled( m_Undo );
-	// 	m_Undo.SetFlags( WidgetFlags.IGNOREPOINTER );
-	// 	ColorWhite( m_Defaults, null );
-	// 	m_Defaults.ClearFlags( WidgetFlags.IGNOREPOINTER );
+	void Apply()
+	{
+		ColorDisabled( m_Apply );
+		m_Apply.SetFlags( WidgetFlags.IGNOREPOINTER );
+		ColorDisabled( m_Undo );
+		m_Undo.SetFlags( WidgetFlags.IGNOREPOINTER );
+		ColorWhite( m_Defaults, null );
+		m_Defaults.ClearFlags( WidgetFlags.IGNOREPOINTER );
 		
-	// 	m_GroupsContainer.Apply();
+		m_GroupsContainer.Apply();
 		
-	// 	// save input configuration
-	// 	GetUApi().Export();
-	// }
+		// save input configuration
+		GetUApi().Export();
+	}
 	
-	// void Back()
-	// {
-	// 	if( m_CurrentSettingKeyIndex != -1 )
-	// 	{
-	// 		CancelEnteringKeybind();
-	// 		return;
-	// 	}
+	void Back()
+	{
+		if( m_CurrentSettingKeyIndex != -1 )
+		{
+			CancelEnteringKeybind();
+			return;
+		}
 		
-	// 	if( m_CurrentSettingAlternateKeyIndex != -1 )
-	// 	{
-	// 		CancelEnteringAlternateKeybind();
-	// 		return;
-	// 	}
+		if( m_CurrentSettingAlternateKeyIndex != -1 )
+		{
+			CancelEnteringAlternateKeybind();
+			return;
+		}
 		
-	// 	bool changed = m_GroupsContainer.IsChanged();
+		bool changed = m_GroupsContainer.IsChanged();
 
-	// 	if ( changed )
-	// 	{
-	// 		g_Game.GetUIManager().ShowDialog("#main_menu_configure", "#main_menu_configure_desc", MODAL_ID_BACK, DBT_YESNO, DBB_YES, DMT_QUESTION, this);
-	// 	}
-	// 	else
-	// 	{
-	// 		GetGame().GetUIManager().Back();
-	// 	}
-	// }
+		if ( changed )
+		{
+			g_Game.GetUIManager().ShowDialog("#main_menu_configure", "#main_menu_configure_desc", MODAL_ID_BACK, DBT_YESNO, DBB_YES, DMT_QUESTION, this);
+		}
+		else
+		{
+			GetGame().GetUIManager().Back();
+		}
+	}
 	
-	// //! Undoes the unsaved changes and reverts to previous state. Does not reset to defaults!
-	// void Reset()
-	// {
-	// 	ColorDisabled( m_Apply );
-	// 	m_Apply.SetFlags( WidgetFlags.IGNOREPOINTER );
-	// 	ColorDisabled( m_Undo );
-	// 	m_Undo.SetFlags( WidgetFlags.IGNOREPOINTER );
+	// ! Undoes the unsaved changes and reverts to previous state. Does not reset to defaults!
+	void Reset()
+	{
+		ColorDisabled( m_Apply );
+		m_Apply.SetFlags( WidgetFlags.IGNOREPOINTER );
+		ColorDisabled( m_Undo );
+		m_Undo.SetFlags( WidgetFlags.IGNOREPOINTER );
 		
-	// 	m_GroupsContainer.Reset();
-	// }
+		m_GroupsContainer.Reset();
+	}
 	
-	// void SetToDefaults()
-	// {
-	// 	g_Game.GetUIManager().ShowDialog("#menu_default_cap", "#menu_default_desc", MODAL_ID_DEFAULT, DBT_YESNO, DBB_YES, DMT_QUESTION, this);
-	// }
+	void SetToDefaults()
+	{
+		g_Game.GetUIManager().ShowDialog("#menu_default_cap", "#menu_default_desc", MODAL_ID_DEFAULT, DBT_YESNO, DBB_YES, DMT_QUESTION, this);
+	}
 	
-	// void PerformSetToDefaults()
-	// {
-	// 	ColorDisabled( m_Apply );
-	// 	m_Apply.SetFlags( WidgetFlags.IGNOREPOINTER );
-	// 	ColorDisabled( m_Undo );
-	// 	m_Undo.SetFlags( WidgetFlags.IGNOREPOINTER );
-	// 	ColorDisabled( m_Defaults );
-	// 	m_Defaults.SetFlags( WidgetFlags.IGNOREPOINTER );
+	void PerformSetToDefaults()
+	{
+		ColorDisabled( m_Apply );
+		m_Apply.SetFlags( WidgetFlags.IGNOREPOINTER );
+		ColorDisabled( m_Undo );
+		m_Undo.SetFlags( WidgetFlags.IGNOREPOINTER );
+		ColorDisabled( m_Defaults );
+		m_Defaults.SetFlags( WidgetFlags.IGNOREPOINTER );
 		
-	// 	GetUApi().Revert();
+		GetUApi().Revert();
 		
-	// 	GetGame().GetCallQueue(CALL_CATEGORY_GUI).Call(GetGame().GetMission().RefreshExcludes);
+		GetGame().GetCallQueue(CALL_CATEGORY_GUI).Call(GetGame().GetMission().RefreshExcludes);
 		
-	// 	m_GroupsContainer.Reset(true);
-	// }
+		m_GroupsContainer.Reset(true);
+	}
 	
-	// void DeferredDefaultsInit()
-	// {
-	// 	//GetGame().GetMission().RefreshExcludes();
-	// }
+	void DeferredDefaultsInit()
+	{
+		//GetGame().GetMission().RefreshExcludes();
+	}
 	
-	// override bool OnModalResult( Widget w, int x, int y, int code, int result )
-	// {
-	// 	if( code == MODAL_ID_BACK )
-	// 	{
-	// 		if( result == 2 )
-	// 		{
-	// 			Reset();
-	// 			GetGame().GetUIManager().Back();
-	// 		}
-	// 		return true;
-	// 	}
-	// 	else if (code == MODAL_ID_DEFAULT)
-	// 	{
-	// 		if( result == 2 )
-	// 		{
-	// 			PerformSetToDefaults();
-	// 		}
-	// 		return true;
-	// 	}
-	// 	else if (code == MODAL_ID_PRESET_CHANGE)
-	// 	{
-	// 		if( result == 2 )
-	// 		{
-	// 			Reset();
-	// 			m_PresetSelector.PerformSetOption(m_TargetPresetIndex);
-	// 		}
-	// 		return true;
-	// 	}
+	override bool OnModalResult( Widget w, int x, int y, int code, int result )
+	{
+		if( code == MODAL_ID_BACK )
+		{
+			if( result == 2 )
+			{
+				Reset();
+				GetGame().GetUIManager().Back();
+			}
+			return true;
+		}
+		else if (code == MODAL_ID_DEFAULT)
+		{
+			if( result == 2 )
+			{
+				PerformSetToDefaults();
+			}
+			return true;
+		}
+		else if (code == MODAL_ID_PRESET_CHANGE)
+		{
+			if( result == 2 )
+			{
+				Reset();
+				m_PresetSelector.PerformSetOption(m_TargetPresetIndex);
+			}
+			return true;
+		}
 		
-	// 	return false;
-	// }
+		return false;
+	}
 	
-	// override void Refresh()
-	// {
-	// 	string version;
-	// 	GetGame().GetVersion( version );
-	// 	#ifdef PLATFORM_CONSOLE
-	// 		version = "#main_menu_version" + " " + version + " (" + g_Game.GetDatabaseID() + ")";
-	// 	#else
-	// 		version = "#main_menu_version" + " " + version;
-	// 	#endif
-	// 	m_Version.SetText( version );
-	// }
+	override void Refresh()
+	{
+		string version;
+		GetGame().GetVersion( version );
+		#ifdef PLATFORM_CONSOLE
+			version = "#main_menu_version" + " " + version + " (" + g_Game.GetDatabaseID() + ")";
+		#else
+			version = "#main_menu_version" + " " + version;
+		#endif
+		m_Version.SetText( version );
+	}
 	
-	// override bool OnMouseEnter( Widget w, int x, int y )
-	// {
-	// 	if( w && IsFocusable( w ) )
-	// 	{
-	// 		ColorRed( w );
-	// 		return true;
-	// 	}
-	// 	return false;
-	// }
+
+
+
+	override bool OnMouseWheel(Widget w, int x, int y, int wheel)
+	{
+		return super.OnMouseWheel(w, x, y, wheel);
+	}
 	
-	// override bool OnMouseLeave( Widget w, Widget enterW, int x, int y )
-	// {
-	// 	if( w && IsFocusable( w ) )
-	// 	{
-	// 		if ( (w.GetFlags() & WidgetFlags.DISABLED) || (w.GetFlags() & WidgetFlags.IGNOREPOINTER) )
-	// 		{
-	// 			ColorDisabled(w);
-	// 		}
-	// 		else
-	// 		{
-	// 			ColorWhite( w, enterW );
-	// 		}
-	// 		return true;
-	// 	}
-	// 	return false;
-	// }
+	override bool OnFocus( Widget w, int x, int y )
+	{
+		if( w && IsFocusable( w ) )
+		{
+			ColorHighlight( w );
+			return true;
+		}
+		return false;
+	}
 	
-	// override bool OnMouseWheel(Widget w, int x, int y, int wheel)
-	// {
-	// 	return super.OnMouseWheel(w, x, y, wheel);
-	// }
+	override bool OnFocusLost( Widget w, int x, int y )
+	{
+		if( w && IsFocusable( w ) )
+		{
+			if ( (w.GetFlags() & WidgetFlags.DISABLED) || (w.GetFlags() & WidgetFlags.IGNOREPOINTER) )
+			{
+				ColorDisabled(w);
+			}
+			else
+			{
+				ColorWhite( w, null );
+			}
+			return true;
+		}
+		return false;
+	}
 	
-	// override bool OnFocus( Widget w, int x, int y )
-	// {
-	// 	if( w && IsFocusable( w ) )
-	// 	{
-	// 		ColorRed( w );
-	// 		return true;
-	// 	}
-	// 	return false;
-	// }
-	
-	// override bool OnFocusLost( Widget w, int x, int y )
-	// {
-	// 	if( w && IsFocusable( w ) )
-	// 	{
-	// 		if ( (w.GetFlags() & WidgetFlags.DISABLED) || (w.GetFlags() & WidgetFlags.IGNOREPOINTER) )
-	// 		{
-	// 			ColorDisabled(w);
-	// 		}
-	// 		else
-	// 		{
-	// 			ColorWhite( w, null );
-	// 		}
-	// 		return true;
-	// 	}
-	// 	return false;
-	// }
-	
-	// bool IsFocusable( Widget w )
-	// {
-	// 	if( w )
-	// 	{
-	// 		return ( w == m_Apply || w == m_Back || w == m_Undo || w == m_Defaults );
-	// 	}
-	// 	return false;
-	// }
-	
+	bool IsFocusable( Widget w )
+	{
+		if( w )
+		{
+			return ( w == m_Apply || w == m_Back || w == m_Undo || w == m_Defaults );
+		}
+		return false;
+	}
+
+
+
 	//Coloring functions (Until WidgetStyles are useful)
-	void ColorRed( Widget w )
+ 	override void ColorRed( Widget w )
 	{
 		SetFocus( w );
 		
 		ButtonWidget button = ButtonWidget.Cast( w );
 		if( button && button != m_Apply )
 		{
-			button.SetTextColor( ARGB( 255, 200, 0, 0 ) );
+			button.SetTextColor(colorScheme.BrandColor());
 		}
 	}
 	
+
+	override bool OnMouseEnter( Widget w, int x, int y )
+	{
+		ColorHighlight( w );
+		return true;
+	}
+	
+	override bool OnMouseLeave( Widget w, Widget enterW, int x, int y )
+	{
+		ColorNormal( w );
+		return true;
+	}
+	
+
+	protected void ButtonSetColor( Widget w, int color )
+	{
+		if( !w )
+			return;
+		
+		Widget panel = w.FindWidget( w.GetName() + "_panel" );
+		
+		if( panel )
+		{
+			panel.SetColor( color );
+		}
+	}
+
+	protected void ButtonSetTextColor( Widget w, int color )
+	{
+		if( !w )
+			return;
+
+		TextWidget label	= TextWidget.Cast(w.FindAnyWidget( w.GetName() + "_label" ) );
+				
+		if( label )
+		{
+			label.SetColor( color );
+		}
+	}
+	
+	protected void ColorHighlight( Widget w )
+	{
+		if( !w )
+			return;
+		
+		ButtonSetColor(w, UIColor.Transparent());
+		ButtonSetTextColor(w, colorScheme.BrandColor());
+	};
+
+	protected void ColorNormal( Widget w )
+	{
+		if( !w )
+			return;
+		
+		ButtonSetColor(w, UIColor.Transparent());
+		ButtonSetTextColor(w, UIColor.White());
+	}
+
+
+
 	void ColorWhite( Widget w, Widget enterW )
 	{
 		#ifdef PLATFORM_WINDOWS
@@ -482,4 +520,4 @@ modded class KeybindingsMenu extends UIScriptedMenu
 	void AddGroup( int index, Input input )
 	{
 	}
-}
+}		

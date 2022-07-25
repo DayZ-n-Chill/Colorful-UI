@@ -5,7 +5,7 @@ modded class OptionsMenu extends UIScriptedMenu
 	{
 		m_Options		= new GameOptions();
 		
-		layoutRoot		= GetGame().GetWorkspace().CreateWidgets("gui/layouts/new_ui/options/pc/options_menu.layout", null);
+		layoutRoot		= GetGame().GetWorkspace().CreateWidgets("Colorful-ui/gui/layouts/new_ui/options/pc/colorful.options_menu.layout", null);
 		
 		layoutRoot.FindAnyWidget("Tabber").GetScript(m_Tabber);
 		
@@ -32,12 +32,6 @@ modded class OptionsMenu extends UIScriptedMenu
 		SetFocus( layoutRoot );
 		ToggleFocus();
 			
-		// m_Tabber.m_OnTabSwitch.Insert(OnTabSwitch);
-		// m_Tabber.m_OnAttemptTabSwitch.Insert(OnAttemptTabSwitch);
-		
-
-		// GetGame().GetMission().GetOnInputPresetChanged().Insert(OnInputPresetChanged);
-		
 		OnChanged();
 		
 		return layoutRoot;
