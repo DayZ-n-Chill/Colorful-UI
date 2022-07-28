@@ -7,6 +7,8 @@ modded class MainMenu extends UIScriptedMenu
 	private Widget m_Reddit;
 	private Widget m_Facebook;
 	private Widget m_CharacterBtn;
+	private Widget m_Separator1
+	private Widget m_Separator2
 
 	override Widget Init()
 	{
@@ -21,6 +23,10 @@ modded class MainMenu extends UIScriptedMenu
 		m_Reddit 					= layoutRoot.FindAnyWidget( "RedditBtn" );
 		m_Facebook 					= layoutRoot.FindAnyWidget( "FacebookBtn" );
 		m_CharacterBtn 				= layoutRoot.FindAnyWidget( "CharacterBtn" );
+		// I need a way to do this globally.  I have tried a few things but it keeps being wierd. 
+		// I will update the separator colors method in the next version. 
+		m_Separator1				= layoutRoot.FindAnyWidget( "separator_1" );
+		m_Separator2				= layoutRoot.FindAnyWidget( "separator_2" );
 
 		// Required Vanilla Code (Most are just hidden in the layout file.)
 		m_Play						= layoutRoot.FindAnyWidget( "play" );
@@ -56,6 +62,8 @@ modded class MainMenu extends UIScriptedMenu
 		LoadMods();
 		GetDayZGame().GetBacklit().MainMenu_OnShow();
 		g_Game.SetLoadState( DayZLoadState.MAIN_MENU_CONTROLLER_SELECT );
+		m_Separator1.SetColor(colorScheme.BrandColor());
+		m_Separator2.SetColor(colorScheme.BrandColor());
 
 		return layoutRoot;
 	}	
@@ -132,8 +140,8 @@ modded class MainMenu extends UIScriptedMenu
 	//-----------------------------------------------------------
 	// Button with a solid background highlight.
 	//-----------------------------------------------------------
-	// Background is your colorScheme.PrimaryColor();
-	// Text is UIColor.White();
+	// Background is your colorScheme.BrandColor();
+	// Text is colorScheme.PrimaryText() ;
 	// Use the Colors in the constants.c to change them
 	// ----------------------------------------------------------
 	//
@@ -141,9 +149,9 @@ modded class MainMenu extends UIScriptedMenu
 	// {
 	// 	if( !w )
 	// 		return;	
-	// 	int color_pnl = colorScheme.PrimaryColor();
-	// 	int color_lbl = UIColor.White();
-	// 	int color_img = colorScheme.PrimaryColor();		
+	// 	int color_pnl = colorScheme.BrandColor();
+	// 	int color_lbl = colorScheme.PrimaryText() ;
+	// 	int color_img = colorScheme.BrandColor();		
 	// 	// Button Highlights. 
 	// 	// The buttons in your layout must follow the structure within the layout files.
 	// 	// Just look in the colorful.Main_Menu.layout in Workbench. 
@@ -158,17 +166,61 @@ modded class MainMenu extends UIScriptedMenu
 	// Button with a text only highlight.
 	//-----------------------------------------
 	// Background is your UIColor.Transparent()
-	// Text is colorScheme.PrimaryColor();
+	// Text is colorScheme.BrandColor();
 	// ----------------------------------------
 	void ColorHighlight( Widget w )
 	{
 		if( !w )
 			return;	
+			
 		int color_pnl = UIColor.Transparent();
-		int color_lbl = colorScheme.PrimaryColor();
-		int color_img = colorScheme.PrimaryColor();		
+		int color_lbl = colorScheme.BrandColor();
+		int color_img = colorScheme.BrandColor();	
+
+		ButtonSetColor(w, color_pnl);
+		ButtonSetTextColor(w, color_lbl);
+		ImagenSetColor(w, color_img);	
+	}
+
+	void ColorNormal( Widget w )
+	{
+		if( !w )
+			return;
+		
+		int color_pnl = UIColor.Transparent();
+		int color_lbl = UIColor.White();
+		int color_img = UIColor.White();
+		// int color_sep = colorScheme.BrandColor();
+
 		ButtonSetColor(w, color_pnl);
 		ButtonSetTextColor(w, color_lbl);
 		ImagenSetColor(w, color_img);
+		// SeparatorSetColor(w, color_sep);	
 	}
+
+
+	// void SeparatorSetColor( Widget w, int color )
+	// {
+	// 	if( !w )
+	// 		return;
+	// 	Widget panel = w.FindWidget( w.GetName() + "_separator" );
+	// 	if( panel )
+	// 	{
+	// 		panel.SetColor( color );
+	// 	}
+	// }
+
+	// void SeparatorColor( Widget w )
+	// {
+	// 	if( !w )
+	// 		return;	
+	// 	int color_separator = colorScheme.BrandColor();
+	// 	SeparatorSetColor(w, color_separator);	
+	// }
+
+	// void OnShow(Widget w)
+	// {
+	// 	ColorNormal( w );
+	// }
+
 }

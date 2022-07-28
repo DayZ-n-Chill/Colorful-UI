@@ -244,21 +244,6 @@ FrameWidgetClass main_menu_root {
        "next down" "customize_character"
        font "Colorful-UI/gui/fonts/PersonalServices24"
        switch normal
-       {
-        ImageWidgetClass settings_button_image {
-         ignorepointer 1
-         size 1 1
-         halign center_ref
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 0
-         vexactsize 0
-         image0 "set:dayz_gui image:settings"
-         mode blend
-         "src alpha" 1
-        }
-       }
       }
       ButtonWidgetClass exit_button {
        color 1 1 1 0
@@ -706,7 +691,7 @@ FrameWidgetClass main_menu_root {
        hexactsize 1
        vexactsize 1
       }
-      PanelWidgetClass actionItems_separator {
+      PanelWidgetClass separator_2 {
        visible 1
        ignorepointer 1
        color 0.7843 0 0 1
@@ -1182,8 +1167,8 @@ FrameWidgetClass main_menu_root {
        "size to text v" 1
        "text valign" center
       }
-      PanelWidgetClass SeparatorPanel {
-       color 0.7569 0.0941 0.0941 0.7843
+      PanelWidgetClass separator_1 {
+       color 0.7569 0.0941 0.0941 1
        position 0 75
        size 1 2
        halign center_ref
@@ -1193,7 +1178,8 @@ FrameWidgetClass main_menu_root {
        vexactsize 1
        scaled 1
        priority 10
-       style rover_sim_colorable
+       style DayZDefaultPanel
+       "no focus" 0
       }
       GridSpacerWidgetClass character_stats_content {
        ignorepointer 1
@@ -1449,6 +1435,21 @@ FrameWidgetClass main_menu_root {
    vexactsize 1
    style Stamina
    current 100
+   {
+    ImageWidgetClass settings_button_image {
+     ignorepointer 1
+     size 1 1
+     halign center_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 0
+     image0 "set:dayz_gui image:settings"
+     mode blend
+     "src alpha" 1
+    }
+   }
   }
   FrameWidgetClass "Hidden Stuff" {
    visible 0
@@ -1946,7 +1947,7 @@ FrameWidgetClass main_menu_root {
      }
     }
     PanelWidgetClass character {
-     visible 1
+     visible 0
      ignorepointer 0
      size 291 42
      hexactpos 1
