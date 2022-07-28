@@ -771,19 +771,120 @@ WindowWidgetClass WindowWidget {
         }
        }
       }
-      ImageWidgetClass dayz_logo {
+      ImageWidgetClass ColorfulLogo {
        visible 1
-       ignorepointer 1
-       size 444 208
-       hexactpos 1
-       vexactpos 1
+       clipchildren 0
+       inheritalpha 1
+       size 460 320
+       hexactpos 0
+       vexactpos 0
        hexactsize 1
        vexactsize 1
-       priority 2
-       image0 "set:dayz_gui image:DayZLogo"
-       mode additive
+       fixaspect outside
+       image0 ""
+       imageTexture "{5314D820E495219F}Colorful-UI/gui/textures/globals/Colorful.Logo.edds"
+       mode blend
        "src alpha" 1
-       stretch 0
+       "no wrap" 1
+       stretch 1
+       filter 1
+       nocache 0
+      }
+     }
+    }
+   }
+  }
+  FrameWidgetClass "Hidden Shtuff" {
+   visible 0
+   ignorepointer 1
+   position 10 10
+   size 48 48
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   {
+    GridSpacerWidgetClass menu_details_tooltip {
+     visible 0
+     clipchildren 1
+     ignorepointer 1
+     color 0.1961 0.1961 0.1961 0.5882
+     position 446.55399 -0.04
+     size 350 603.55298
+     halign center_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 0
+     hexactsize 1
+     vexactsize 1
+     priority 10
+     style DayZDefaultPanel
+     "no focus" 1
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     Columns 1
+     Rows 2
+     {
+      PanelWidgetClass menu_details_tooltip_header {
+       ignorepointer 1
+       color 0 0 0 1
+       size 0.08 36
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       style DayZDefaultPanel
+       {
+        TextWidgetClass menu_details_label {
+         clipchildren 0
+         ignorepointer 1
+         size 0.95 0.5
+         halign center_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         text "This is Sparta"
+         font "gui/fonts/sdf_MetronLight72"
+         text_proportion 0.9
+        }
+       }
+      }
+      GridSpacerWidgetClass menu_details_tooltip_body {
+       ignorepointer 1
+       position 0 0
+       size 0.9 0.571
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       Padding 0
+       Margin 15
+       "Size To Content V" 1
+       Columns 1
+       Rows 1
+       {
+        RichTextWidgetClass menu_details_tooltip_content {
+         clipchildren 0
+         ignorepointer 1
+         position 0 0
+         size 1 1
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 1
+         text "this is details"
+         font "gui/fonts/sdf_MetronLight24"
+         "exact text" 1
+         "exact text size" 16
+         "size to text h" 0
+         "size to text v" 1
+         wrap 1
+         "condense whitespace" 1
+        }
+       }
       }
      }
     }
@@ -1009,90 +1110,6 @@ WindowWidgetClass WindowWidget {
            "text valign" center
           }
          }
-        }
-       }
-      }
-     }
-    }
-    GridSpacerWidgetClass menu_details_tooltip {
-     visible 0
-     clipchildren 1
-     ignorepointer 1
-     color 0.1961 0.1961 0.1961 0.5882
-     position 446.55399 -0.04
-     size 350 603.55298
-     halign center_ref
-     valign center_ref
-     hexactpos 1
-     vexactpos 0
-     hexactsize 1
-     vexactsize 1
-     priority 10
-     style DayZDefaultPanel
-     "no focus" 1
-     Padding 0
-     Margin 0
-     "Size To Content V" 1
-     Columns 1
-     Rows 2
-     {
-      PanelWidgetClass menu_details_tooltip_header {
-       ignorepointer 1
-       color 0 0 0 1
-       size 0.08 36
-       hexactpos 1
-       vexactpos 1
-       hexactsize 0
-       vexactsize 1
-       style DayZDefaultPanel
-       {
-        TextWidgetClass menu_details_label {
-         clipchildren 0
-         ignorepointer 1
-         size 0.95 0.5
-         halign center_ref
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 0
-         vexactsize 0
-         text "This is Sparta"
-         font "gui/fonts/sdf_MetronLight72"
-         text_proportion 0.9
-        }
-       }
-      }
-      GridSpacerWidgetClass menu_details_tooltip_body {
-       ignorepointer 1
-       position 0 0
-       size 0.9 0.571
-       hexactpos 0
-       vexactpos 0
-       hexactsize 0
-       vexactsize 0
-       Padding 0
-       Margin 15
-       "Size To Content V" 1
-       Columns 1
-       Rows 1
-       {
-        RichTextWidgetClass menu_details_tooltip_content {
-         clipchildren 0
-         ignorepointer 1
-         position 0 0
-         size 1 1
-         hexactpos 1
-         vexactpos 1
-         hexactsize 0
-         vexactsize 1
-         text "this is details"
-         font "gui/fonts/sdf_MetronLight24"
-         "exact text" 1
-         "exact text size" 16
-         "size to text h" 0
-         "size to text v" 1
-         wrap 1
-         "condense whitespace" 1
         }
        }
       }
