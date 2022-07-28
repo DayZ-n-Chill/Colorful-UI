@@ -99,7 +99,7 @@ class UIColor
 class colorScheme 
 {
 	// This color should be Servers/Communities Brand Color
-	static int BrandColor() { return UIColor.DPGPurple(); };
+	static int BrandColor() { return UIColor.Teal(); };
 	// This color should be a complimentary color to your brand. 
 	static int AccentColor() { return UIColor.Red(); }; 
 	// Best to keep this as is, but do whatever, Experiment.

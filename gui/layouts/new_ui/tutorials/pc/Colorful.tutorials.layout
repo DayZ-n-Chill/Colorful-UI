@@ -1474,7 +1474,7 @@ FrameWidgetClass rootFrame {
              vexactsize 0
              priority 250
              text "#tutorial_title_healthSystem"
-             font "gui/fonts/sdf_MetronLight72"
+             font "Colorful-UI/gui/fonts/PersonalServices24"
              "italic text" 0
              "bold text" 0
              "exact text" 0
@@ -1534,7 +1534,7 @@ FrameWidgetClass rootFrame {
              vexactsize 0
              priority 250
              text "#tutorial_title_melee"
-             font "gui/fonts/sdf_MetronLight72"
+             font "Colorful-UI/gui/fonts/PersonalServices24"
              "italic text" 0
              "bold text" 0
              "exact text" 0
@@ -1594,7 +1594,7 @@ FrameWidgetClass rootFrame {
              vexactsize 0
              priority 250
              text "#tutorial_title_guns"
-             font "gui/fonts/sdf_MetronLight72"
+             font "Colorful-UI/gui/fonts/PersonalServices24"
              "italic text" 0
              "bold text" 0
              "exact text" 0
@@ -1654,7 +1654,7 @@ FrameWidgetClass rootFrame {
              vexactsize 0
              priority 250
              text "#tutorial_title_infected"
-             font "gui/fonts/sdf_MetronLight72"
+             font "Colorful-UI/gui/fonts/PersonalServices24"
              "italic text" 0
              "bold text" 0
              "exact text" 0
@@ -1714,7 +1714,7 @@ FrameWidgetClass rootFrame {
              vexactsize 0
              priority 250
              text "#tutorial_inventory7"
-             font "gui/fonts/sdf_MetronLight72"
+             font "Colorful-UI/gui/fonts/PersonalServices24"
              "italic text" 0
              "bold text" 0
              "exact text" 0
@@ -1774,7 +1774,7 @@ FrameWidgetClass rootFrame {
              vexactsize 0
              priority 250
              text "#tutorial_title_loot"
-             font "gui/fonts/sdf_MetronLight72"
+             font "Colorful-UI/gui/fonts/PersonalServices24"
              "italic text" 0
              "bold text" 0
              "exact text" 0

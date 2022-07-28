@@ -576,7 +576,7 @@ FrameWidgetClass settings_menu_root {
       }
      }
     }
-    PanelWidgetClass separator_red {
+    PanelWidgetClass colorful_separator {
      ignorepointer 1
      color 0.7843 0 0 1
      position 10 10

@@ -9,6 +9,96 @@ FrameWidgetClass character_creation_root {
  vexactsize 0
  priority 951
  {
+  FrameWidgetClass Shaders {
+   visible 1
+   clipchildren 0
+   inheritalpha 1
+   color 0 0 0 0
+   position 0 0
+   size 1 1
+   halign center_ref
+   valign center_ref
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   {
+    ImageWidgetClass Vignette {
+     visible 1
+     ignorepointer 0
+     color 0 0 0 0.7843
+     position 0 0
+     size 1 1
+     halign center_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 0
+     priority 1
+     imageTexture "{E6B3EF816E067499}Gui/textures/inventory_bgvignette.edds"
+     mode blend
+     "src alpha" 1
+     "no wrap" 1
+     stretch 1
+     filter 0
+     nocache 1
+    }
+    ImageWidgetClass TealShader {
+     visible 1
+     ignorepointer 1
+     keepsafezone 0
+     size 1 1
+     halign center_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 0
+     scaled 1
+     imageTexture "{E1589E8D732472A3}Colorful-UI/gui/textures/globals/Colorful.TealGradient.edds"
+     mode blend
+     "src alpha" 1
+     "no wrap" 1
+     stretch 0
+    }
+    ImageWidgetClass RedShader {
+     visible 0
+     ignorepointer 1
+     keepsafezone 0
+     position 0 0
+     size 1 1
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 0
+     scaled 1
+     imageTexture "{D3608E48FE0531A4}Colorful-UI/gui/textures/globals/Colorful.RedGradient.edds"
+     mode blend
+     "src alpha" 1
+     "no wrap" 1
+     stretch 1
+    }
+    ImageWidgetClass HorizShader {
+     visible 1
+     ignorepointer 1
+     keepsafezone 0
+     position 0 0
+     size 1 1
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 0
+     scaled 1
+     imageTexture "{A82F487401D497EF}Colorful-UI/gui/textures/globals/Colorful.HorizShaderTip.edds"
+     mode blend
+     "src alpha" 1
+     "no wrap" 1
+     stretch 1
+     filter 1
+    }
+   }
+  }
   GridSpacerWidgetClass character_root {
    visible 1
    ignorepointer 1
@@ -590,27 +680,6 @@ FrameWidgetClass character_creation_root {
     }
    }
   }
-  ImageWidgetClass vignette {
-   visible 1
-   ignorepointer 1
-   color 0 0 0 0.7843
-   position 0 0
-   size 1.6 0.9
-   halign center_ref
-   hexactpos 1
-   vexactpos 1
-   hexactsize 0
-   vexactsize 0
-   fixaspect outside
-   priority 1
-   imageTexture "{E6B3EF816E067499}Gui/textures/inventory_bgvignette.edds"
-   mode blend
-   "src alpha" 1
-   "no wrap" 1
-   stretch 1
-   filter 0
-   nocache 1
-  }
   WrapSpacerWidgetClass play_panel_root {
    visible 1
    ignorepointer 1
@@ -686,7 +755,6 @@ FrameWidgetClass character_creation_root {
        "next right" ""
        "next up" "back"
        "next down" "randomize_character"
-       font "Colorful-UI/gui/fonts/PersonalServices32"
        text_proportion 0.8
        font "gui/fonts/sdf_MetronLight72"
        switch normal
