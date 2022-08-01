@@ -1,5 +1,6 @@
 modded class ServerBrowserMenuNew extends UIScriptedMenu
 {
+	protected Widget m_Separator
 	override Widget Init()
 	{
 		layoutRoot = GetGame().GetWorkspace().CreateWidgets( "Colorful-UI/gui/layouts/new_ui/server_browser/pc/colorful.server_browser.layout" );
@@ -15,6 +16,8 @@ modded class ServerBrowserMenuNew extends UIScriptedMenu
 		m_PlayerName			= TextWidget.Cast( layoutRoot.FindAnyWidget( "character_name_text" ) );
 		m_Version				= TextWidget.Cast( layoutRoot.FindAnyWidget( "version" ) );
 		
+		m_Separator 				= layoutRoot.FindAnyWidget( "separator_red" );
+		m_Separator.SetColor(colorScheme.BrandColor());
 		Refresh();
 		
 		string version;

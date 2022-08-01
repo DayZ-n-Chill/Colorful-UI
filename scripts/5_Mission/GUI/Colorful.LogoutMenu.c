@@ -7,6 +7,7 @@ modded class LogoutMenu extends UIScriptedMenu
 	private Widget m_Youtube;
 	private Widget m_Reddit;
 	private Widget m_Facebook;
+	private Widget m_Separator
 
 	override Widget Init()
 	{
@@ -34,6 +35,10 @@ modded class LogoutMenu extends UIScriptedMenu
 			player.GetEmoteManager().CreateEmoteCBFromMenu(EmoteConstants.ID_EMOTE_LYINGDOWN);
 			player.GetEmoteManager().GetEmoteLauncher().SetForced(EmoteLauncher.FORCE_DIFFERENT);
 		}
+
+		m_Separator 				= layoutRoot.FindAnyWidget( "actionItems_separator" );
+		m_Separator.SetColor(colorScheme.BrandColor());
+
 		return layoutRoot;
 	}
 	

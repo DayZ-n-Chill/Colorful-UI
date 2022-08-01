@@ -226,6 +226,8 @@ FrameWidgetClass main_menu_root {
        }
       }
       ButtonWidgetClass settings_button {
+       visible 1
+       keepsafezone 1
        color 1 1 1 0
        position 0.25 0
        size 37 37
@@ -244,6 +246,21 @@ FrameWidgetClass main_menu_root {
        "next down" "customize_character"
        font "Colorful-UI/gui/fonts/PersonalServices24"
        switch normal
+       {
+        ImageWidgetClass settings_button_image {
+         ignorepointer 1
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         image0 "set:dayz_gui image:settings"
+         mode blend
+         "src alpha" 1
+        }
+       }
       }
       ButtonWidgetClass exit_button {
        color 1 1 1 0
@@ -1435,21 +1452,6 @@ FrameWidgetClass main_menu_root {
    vexactsize 1
    style Stamina
    current 100
-   {
-    ImageWidgetClass settings_button_image {
-     ignorepointer 1
-     size 1 1
-     halign center_ref
-     valign center_ref
-     hexactpos 1
-     vexactpos 1
-     hexactsize 0
-     vexactsize 0
-     image0 "set:dayz_gui image:settings"
-     mode blend
-     "src alpha" 1
-    }
-   }
   }
   FrameWidgetClass "Hidden Stuff" {
    visible 0

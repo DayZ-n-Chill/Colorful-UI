@@ -1,4 +1,4 @@
-class InviteMenu extends UIScriptedMenu
+modded class InviteMenu extends UIScriptedMenu
 {	
 	private TextWidget		m_LogoutTimetext;
 	private TextWidget		m_Info;

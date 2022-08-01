@@ -1,5 +1,6 @@
 modded class KeybindingsMenu extends UIScriptedMenu
 {
+	protected Widget m_Separator
 	override Widget Init()
 	{
 		Input input = GetGame().GetInput();
@@ -54,6 +55,9 @@ modded class KeybindingsMenu extends UIScriptedMenu
 		ColorWhite( m_Defaults, null );
 		m_Defaults.ClearFlags( WidgetFlags.IGNOREPOINTER );
 		
+		m_Separator 	= layoutRoot.FindAnyWidget( "separator_red" );
+		m_Separator.SetColor(colorScheme.BrandColor());
+
 		return layoutRoot;
 	}
 	

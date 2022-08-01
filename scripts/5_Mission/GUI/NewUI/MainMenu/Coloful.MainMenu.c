@@ -9,6 +9,8 @@ modded class MainMenu extends UIScriptedMenu
 	private Widget m_CharacterBtn;
 	private Widget m_Separator1
 	private Widget m_Separator2
+	private Widget m_SeparatorPanel
+	private Widget m_ProgressLoading
 
 	override Widget Init()
 	{
@@ -27,6 +29,8 @@ modded class MainMenu extends UIScriptedMenu
 		// I will update the separator colors method in the next version. 
 		m_Separator1				= layoutRoot.FindAnyWidget( "separator_1" );
 		m_Separator2				= layoutRoot.FindAnyWidget( "separator_2" );
+		m_SeparatorPanel			= layoutRoot.FindAnyWidget( "SeparatorPanel" );
+		
 
 		// Required Vanilla Code (Most are just hidden in the layout file.)
 		m_Play						= layoutRoot.FindAnyWidget( "play" );
@@ -64,7 +68,10 @@ modded class MainMenu extends UIScriptedMenu
 		g_Game.SetLoadState( DayZLoadState.MAIN_MENU_CONTROLLER_SELECT );
 		m_Separator1.SetColor(colorScheme.BrandColor());
 		m_Separator2.SetColor(colorScheme.BrandColor());
-
+		m_SeparatorPanel.SetColor(colorScheme.BrandColor());
+		// This progress bar is just used as trim. 
+		m_ProgressLoading      = ProgressBarWidget.Cast( layoutRoot.FindAnyWidget("LoadingBar") );
+		m_ProgressLoading.SetColor(colorScheme.BrandColor());
 		return layoutRoot;
 	}	
 
@@ -158,7 +165,7 @@ modded class MainMenu extends UIScriptedMenu
 	// 	ButtonSetColor(w, color_pnl);
 	// 	ButtonSetTextColor(w, color_lbl);
 	// 	// Top right icons
-	//  	// TODO: Add social icons to an imageset. 
+	//  // TODO: Add social icons to an imageset. 
 	// 	ImagenSetColor(w, color_img);
 	// }
 	
