@@ -1,10 +1,29 @@
-modded class KeybindingElement extends ScriptedWidgetEventHandler
+modded class KeybindingElementNew extends ScriptedWidgetEventHandler
 {
+	override bool OnMouseButtonUp( Widget w, int x, int y, int button )
+	{
+		if( w == m_PrimaryClear )
+		{
+			m_IsEdited				= true;
+			m_CustomBind			= new array<int>;
+			m_PrimaryBindButton.SetText( "" );
+			m_Container.ClearKeybind( m_ElementIndex );
+		}
+		if( w == m_AlternativeClear )
+		{
+			m_IsAlternateEdited		= true;
+			m_CustomAlternateBind	= new array<int>;
+			m_AlternativeBindButton.SetText( "" );
+			m_Container.ClearAlternativeKeybind( m_ElementIndex );
+		}
+		return false;
+	}
+	
 	override bool OnMouseEnter( Widget w, int x, int y )
 	{
 		if( w == m_PrimaryBindButton || w == m_PrimaryClear )
 		{
-			m_PrimaryBindButton.SetColor(colorScheme.BrandColor());
+			m_PrimaryBindButton.SetColor( colorScheme.BrandColor() );
 			m_PrimaryClear.Show( true );
 			m_PrimaryClear.Update();
 			m_AlternativeClear.Show( false );
@@ -12,7 +31,7 @@ modded class KeybindingElement extends ScriptedWidgetEventHandler
 		}
 		else if( w == m_AlternativeBindButton || w == m_AlternativeClear )
 		{
-			m_AlternativeBindButton.SetColor(colorScheme.BrandColor());
+			m_AlternativeBindButton.SetColor( colorScheme.BrandColor() );
 			m_PrimaryClear.Show( false );
 			m_AlternativeClear.Show( true );
 			m_AlternativeClear.Update();
@@ -20,8 +39,8 @@ modded class KeybindingElement extends ScriptedWidgetEventHandler
 		}
 		else
 		{
-			m_PrimaryBindButton.SetColor( UIColor.Transparent() );
-			m_AlternativeBindButton.SetColor( UIColor.Transparent() );
+			m_PrimaryBindButton.SetColor( ARGBF( 0, 0, 0, 0 ) );
+			m_AlternativeBindButton.SetColor( ARGBF( 1, 0, 0, 0 ) );
 			m_PrimaryClear.Show( false );
 			m_AlternativeClear.Show( false );
 		}
@@ -35,7 +54,7 @@ modded class KeybindingElement extends ScriptedWidgetEventHandler
 			if( enterW != m_PrimaryClear && enterW != m_PrimaryBindButton )
 			{
 				m_PrimaryClear.Show( false );
-				m_PrimaryBindButton.SetColor(  UIColor.Transparent() );
+				m_PrimaryBindButton.SetColor( ARGBF( 1, 0, 0, 0 ) );
 			}
 		}
 		if( w == m_AlternativeClear || w == m_AlternativeBindButton )
@@ -43,10 +62,9 @@ modded class KeybindingElement extends ScriptedWidgetEventHandler
 			if( enterW != m_AlternativeClear && enterW != m_AlternativeBindButton )
 			{
 				m_AlternativeClear.Show( false );
-				m_AlternativeBindButton.SetColor( UIColor.Transparent() );
+				m_AlternativeBindButton.SetColor( ARGBF( 1, 0, 0, 0 ) );
 			}
 		}
 		return false;
 	}
 }
-
