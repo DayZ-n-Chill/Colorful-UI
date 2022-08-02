@@ -209,7 +209,7 @@ modded class MainMenu extends UIScriptedMenu
 	// I guess the best way in the meantime is to create a new menu and have it styled as we need.
 	void Exit()
 	{
-		EnterScriptedMenu( MENU_COLORFUL );
+		EnterScriptedMenu( COLORFUL_EXIT );
 	}
 
 }

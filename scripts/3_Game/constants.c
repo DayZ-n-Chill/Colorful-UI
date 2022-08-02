@@ -108,4 +108,5 @@ class colorScheme
 }
  
 // Dialog Menus (No need to touch)
-const int MENU_COLORFUL 			= 393;
+const int COLORFUL_EXIT					= 666;
+// const int MENU_C.SetToDefaults 		= 667;

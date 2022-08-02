@@ -1,4 +1,4 @@
-class colorfulDialog extends UIScriptedMenu
+class colorfulExitDialog extends UIScriptedMenu
 {
 	protected Widget				m_Separator;
 	protected Widget		 		m_bYes;
@@ -9,7 +9,7 @@ class colorfulDialog extends UIScriptedMenu
 
 	override Widget Init()
 	{
-		layoutRoot = GetGame().GetWorkspace().CreateWidgets("Colorful-UI/gui/layouts/new_ui/Colorful.dialog.layout" );
+		layoutRoot = GetGame().GetWorkspace().CreateWidgets("Colorful-UI/gui/layouts/new_ui/dialogs/Colorful.dialog.layout" );
 		
 		m_Separator					= layoutRoot.FindAnyWidget( "SeparatorPanel" );
 		m_bYes						= layoutRoot.FindAnyWidget( "bYes" );

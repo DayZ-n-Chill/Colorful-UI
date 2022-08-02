@@ -26,8 +26,8 @@ modded class MissionBase
 		case MENU_OPTIONS:
 			menu = new OptionsMenu;
 			break;
-		case MENU_COLORFUL:
-			menu = new colorfulDialog;
+		case COLORFUL_EXIT:
+			menu = new colorfulExitDialog;
 			break;
 		case MENU_STARTUP:
 			menu = new StartupMenu;
