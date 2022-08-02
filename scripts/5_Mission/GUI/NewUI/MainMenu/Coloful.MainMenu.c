@@ -205,29 +205,11 @@ modded class MainMenu extends UIScriptedMenu
 		// SeparatorSetColor(w, color_sep);	
 	}
 
-
-	// void SeparatorSetColor( Widget w, int color )
-	// {
-	// 	if( !w )
-	// 		return;
-	// 	Widget panel = w.FindWidget( w.GetName() + "_separator" );
-	// 	if( panel )
-	// 	{
-	// 		panel.SetColor( color );
-	// 	}
-	// }
-
-	// void SeparatorColor( Widget w )
-	// {
-	// 	if( !w )
-	// 		return;	
-	// 	int color_separator = colorScheme.BrandColor();
-	// 	SeparatorSetColor(w, color_separator);	
-	// }
-
-	// void OnShow(Widget w)
-	// {
-	// 	ColorNormal( w );
-	// }
+	// I still have not fdound a way to globally edit the dialog system colors but I feel like I am close
+	// I guess the best way in the meantime is to create a new menu and have it styled as we need.
+	void Exit()
+	{
+		EnterScriptedMenu( MENU_COLORFUL );
+	}
 
 }

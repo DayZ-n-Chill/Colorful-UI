@@ -107,3 +107,5 @@ class colorScheme
 	static int PrimaryText() { return UIColor.White(); }; 	
 }
  
+// Dialog Menus (No need to touch)
+const int MENU_COLORFUL 			= 393;

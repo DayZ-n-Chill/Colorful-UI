@@ -725,7 +725,7 @@ FrameWidgetClass settings_menu_root {
    }
   }
   GridSpacerWidgetClass settings_details {
-   visible 1
+   visible 0
    clipchildren 1
    ignorepointer 1
    color 0 0 0 0.549
@@ -771,6 +771,7 @@ FrameWidgetClass settings_menu_root {
      }
     }
     GridSpacerWidgetClass settings_details_body {
+     visible 1
      ignorepointer 1
      position 0 0
      size 0.9 0.571
