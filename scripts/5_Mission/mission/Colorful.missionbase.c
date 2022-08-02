@@ -7,19 +7,19 @@ modded class MissionBase
 		switch (id)
 		{
 		case MENU_MAIN:
-#ifdef PLATFORM_CONSOLE			
-			menu = new MainMenuConsole;
-#else
-			menu = new MainMenu;
-#endif
-			break;
-		case MENU_INGAME:
-#ifdef PLATFORM_CONSOLE
-			menu = new InGameMenuXbox;
-#else
-			menu = new InGameMenu;
-#endif
-			break;
+		#ifdef PLATFORM_CONSOLE			
+					menu = new MainMenuConsole;
+		#else
+					menu = new MainMenu;
+		#endif
+					break;
+				case MENU_INGAME:
+		#ifdef PLATFORM_CONSOLE
+					menu = new InGameMenuXbox;
+		#else
+					menu = new InGameMenu;
+		#endif
+					break;
 		case MENU_CHARACTER:
 			menu = new CharacterCreationMenu;
 			break;

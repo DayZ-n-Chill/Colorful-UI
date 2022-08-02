@@ -105,47 +105,4 @@ modded class OptionSelectorBase extends ScriptedWidgetEventHandler
 		ButtonSetAlphaAnimConsole( null );
 		ButtonSetTextColorConsole(w, color_lbl);
 	}
-	
-	// void ButtonSetColorConsole( Widget w, int color )
-	// {
-	// 	w.SetColor( color );
-	// }
-	
-	// void ButtonSetAlphaAnimConsole( Widget w )
-	// {
-	// 	if( !w )
-	// 		return;
-		
-	// 	Widget panel = w.FindAnyWidget( w.GetName() + "_panel" );
-		
-	// 	if( panel )
-	// 	{
-	// 		//m_Root.SetWidgetAnimAlpha( panel );
-	// 	}
-	// }
-	
-	// void ButtonSetTextColorConsole( Widget w, int color )
-	// {
-	// 	if( !w )
-	// 		return;
-
-	// 	TextWidget label	= TextWidget.Cast(w.FindAnyWidget( w.GetName() + "_label" ) );
-	// 	TextWidget text		= TextWidget.Cast(w.FindAnyWidget( w.GetName() + "_text" ) );
-	// 	TextWidget text2	= TextWidget.Cast(w.FindAnyWidget( w.GetName() + "_text_1" ) );
-		
-	// 	if( label )
-	// 	{
-	// 		label.SetColor( color );
-	// 	}
-		
-	// 	if( text )
-	// 	{
-	// 		text.SetColor( color );
-	// 	}
-		
-	// 	if( text2 )
-	// 	{
-	// 		text2.SetColor( color );
-	// 	}
-	// }
 }
