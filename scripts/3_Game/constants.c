@@ -75,6 +75,7 @@ class UIColor
 	static int Grey() { return ARGB(255, 130, 130, 130); };
 	static int Black() { return ARGB(255, 0, 0, 0); };
 	static int Transparent() { return ARGB(1, 0, 0, 0); };
+	static int SemiTransparentWhite() { return ARGB(120, 255, 255, 255); };
 	// R.O.Y.G.B.I.V
 	static int Red() { return ARGB(255, 173, 35, 35); };
 	static int Orange() { return ARGB(255, 215, 153, 19); };
