@@ -62,27 +62,11 @@ FrameWidgetClass character_creation_root {
      "no wrap" 1
      stretch 0
     }
-    ImageWidgetClass RedShader {
-     visible 0
-     ignorepointer 1
-     keepsafezone 0
-     position 0 0
-     size 1 1
-     hexactpos 1
-     vexactpos 1
-     hexactsize 0
-     vexactsize 0
-     scaled 1
-     imageTexture "{D3608E48FE0531A4}Colorful-UI/gui/textures/globals/Colorful.RedGradient.edds"
-     mode blend
-     "src alpha" 1
-     "no wrap" 1
-     stretch 1
-    }
     ImageWidgetClass HorizShader {
      visible 1
      ignorepointer 1
      keepsafezone 0
+     color 1 1 1 0.7843
      position 0 0
      size 1 1
      hexactpos 1
@@ -680,6 +664,27 @@ FrameWidgetClass character_creation_root {
     }
    }
   }
+  ImageWidgetClass vignette {
+   visible 0
+   ignorepointer 1
+   color 0 0 0 0.7843
+   position 0 0
+   size 1.6 0.9
+   halign center_ref
+   hexactpos 1
+   vexactpos 1
+   hexactsize 0
+   vexactsize 0
+   fixaspect outside
+   priority 1
+   imageTexture "{E6B3EF816E067499}Gui/textures/inventory_bgvignette.edds"
+   mode blend
+   "src alpha" 1
+   "no wrap" 1
+   stretch 1
+   filter 0
+   nocache 1
+  }
   WrapSpacerWidgetClass play_panel_root {
    visible 1
    ignorepointer 1
@@ -755,8 +760,9 @@ FrameWidgetClass character_creation_root {
        "next right" ""
        "next up" "back"
        "next down" "randomize_character"
+       text "#layout_character_creation_apply"
        text_proportion 0.8
-       font "gui/fonts/sdf_MetronLight72"
+       font "Colorful-UI/gui/fonts/PersonalServices32"
        switch normal
       }
      }
@@ -979,7 +985,7 @@ FrameWidgetClass character_creation_root {
          hexactsize 1
          vexactsize 1
          text "#layout_character_creation_toolbar_select"
-         font "Colorful-UI/gui/fonts/PersonalServices24"
+         font "gui/fonts/sdf_MetronBook24"
          "exact text" 1
          "exact text size" 30
          "size to text h" 1
@@ -1040,7 +1046,7 @@ FrameWidgetClass character_creation_root {
          hexactsize 1
          vexactsize 1
          text "#layout_character_creation_toolbar_randomize"
-         font "Colorful-UI/gui/fonts/PersonalServices24"
+         font "gui/fonts/sdf_MetronBook24"
          "exact text" 1
          "exact text size" 30
          "size to text h" 1
@@ -1100,7 +1106,7 @@ FrameWidgetClass character_creation_root {
          hexactsize 1
          vexactsize 1
          text "#layout_character_creation_toolbar_new"
-         font "Colorful-UI/gui/fonts/PersonalServices24"
+         font "gui/fonts/sdf_MetronBook24"
          "exact text" 1
          "exact text size" 30
          "size to text h" 1
@@ -1158,7 +1164,7 @@ FrameWidgetClass character_creation_root {
          hexactsize 1
          vexactsize 1
          text "#layout_character_creation_toolbar_back"
-         font "Colorful-UI/gui/fonts/PersonalServices32"
+         font "gui/fonts/sdf_MetronBook24"
          "exact text" 1
          "exact text size" 30
          "size to text h" 1
@@ -1173,6 +1179,7 @@ FrameWidgetClass character_creation_root {
    }
   }
   WrapSpacerWidgetClass Licensing {
+   visible 1
    clipchildren 0
    ignorepointer 1
    position 100 0.062
