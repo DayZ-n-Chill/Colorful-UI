@@ -148,7 +148,7 @@ FrameWidgetClass DialogRoot {
      hexactsize 0
      vexactsize 0
      scaled 1
-     style rover_sim_colorable
+     style DayZDefaultPanel
      "no focus" 0
      {
       ButtonWidgetClass bYes {

@@ -201,7 +201,8 @@ modded class KeybindingsMenu extends UIScriptedMenu
 
 		if ( changed )
 		{
-			g_Game.GetUIManager().ShowDialog("#main_menu_configure", "#main_menu_configure_desc", MODAL_ID_BACK, DBT_YESNO, DBB_YES, DMT_QUESTION, this);
+			EnterScriptedMenu( COLORFUL_CONFIGURE );
+			//g_Game.GetUIManager().ShowDialog("#main_menu_configure", "#main_menu_configure_desc", MODAL_ID_BACK, DBT_YESNO, DBB_YES, DMT_QUESTION, this);
 		}
 		else
 		{
@@ -222,7 +223,8 @@ modded class KeybindingsMenu extends UIScriptedMenu
 	
 	void SetToDefaults()
 	{
-		g_Game.GetUIManager().ShowDialog("#menu_default_cap", "#menu_default_desc", MODAL_ID_DEFAULT, DBT_YESNO, DBB_YES, DMT_QUESTION, this);
+		EnterScriptedMenu( COLORFUL_DEFAULTS );
+		//g_Game.GetUIManager().ShowDialog("#menu_default_cap", "#menu_default_desc", MODAL_ID_DEFAULT, DBT_YESNO, DBB_YES, DMT_QUESTION, this);
 	}
 	
 	void PerformSetToDefaults()

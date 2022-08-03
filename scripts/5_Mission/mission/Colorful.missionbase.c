@@ -19,16 +19,27 @@ modded class MissionBase
 		#else
 					menu = new InGameMenu;
 		#endif
-					break;
+		break;
+
 		case MENU_CHARACTER:
 			menu = new CharacterCreationMenu;
 			break;
 		case MENU_OPTIONS:
 			menu = new OptionsMenu;
 			break;
+
 		case COLORFUL_EXIT:
 			menu = new colorfulExitDialog;
 			break;
+
+		case COLORFUL_CONFIGURE:
+			menu = new colorfulConfigureDialog;
+			break;
+
+		case COLORFUL_DEFAULTS:
+			menu = new colorfulDefaultDialog;
+			break;
+
 		case MENU_STARTUP:
 			menu = new StartupMenu;
 			break;

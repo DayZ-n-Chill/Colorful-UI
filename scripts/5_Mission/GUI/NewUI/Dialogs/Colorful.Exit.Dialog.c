@@ -9,7 +9,7 @@ class colorfulExitDialog extends UIScriptedMenu
 
 	override Widget Init()
 	{
-		layoutRoot = GetGame().GetWorkspace().CreateWidgets("Colorful-UI/gui/layouts/new_ui/dialogs/Colorful.dialog.layout" );
+		layoutRoot = GetGame().GetWorkspace().CreateWidgets("Colorful-UI/gui/layouts/new_ui/dialogs/Colorful.Exit.dialog.layout" );
 		
 		m_Separator					= layoutRoot.FindAnyWidget( "SeparatorPanel" );
 		m_bYes						= layoutRoot.FindAnyWidget( "bYes" );
