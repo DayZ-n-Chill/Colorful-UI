@@ -144,5 +144,23 @@ modded class OptionsMenu extends UIScriptedMenu
 			option_label.SetColor( colorScheme.PrimaryText() );
 		}
 	}
+
+	void Back()
+	{
+		if (!g_Game.GetUIManager().IsDialogVisible() && !g_Game.GetUIManager().IsModalVisible())
+		{
+			if (IsAnyTabChanged())
+			{
+				EnterScriptedMenu( COLORFUL_CONFIGURE );
+				//g_Game.GetUIManager().ShowDialog("#main_menu_configure", "#main_menu_configure_desc", 1337, DBT_YESNO, DBB_YES, DMT_QUESTION, this);
+			}
+			else
+			{
+				m_Options.Revert();
+				GetGame().EndOptionsVideo();
+				GetGame().GetUIManager().Back();
+			}
+		}
+	}
 	
 }
