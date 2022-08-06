@@ -6,9 +6,13 @@ class colorfulConfigureDialog extends UIScriptedMenu
 	protected Widget 				m_LastFocusedButton;
 	protected Widget 				m_Text;
 	protected Widget 				m_Caption;
+	protected ButtonWidget			m_Reset; //undo
+	protected ref GameOptions			m_Options;
 
 	override Widget Init()
 	{
+		m_Options		= new GameOptions();
+
 		layoutRoot = GetGame().GetWorkspace().CreateWidgets("Colorful-UI/gui/layouts/new_ui/dialogs/Colorful.Configure.dialog.layout" );
 		
 		m_Separator					= layoutRoot.FindAnyWidget( "SeparatorPanel" );
@@ -16,6 +20,7 @@ class colorfulConfigureDialog extends UIScriptedMenu
 		m_bNo						= layoutRoot.FindAnyWidget( "bNo" );
 		m_Text						= layoutRoot.FindAnyWidget( "Text" );
 		m_Caption					= layoutRoot.FindAnyWidget( "Caption" );
+		m_Reset						= ButtonWidget.Cast(layoutRoot.FindAnyWidget("reset"));
 		
 		m_Separator.SetColor( colorScheme.BrandColor() );
 		
@@ -30,7 +35,10 @@ class colorfulConfigureDialog extends UIScriptedMenu
 		{
 			if( w == m_bYes )
 			{
-				m_LastFocusedButton = m_bYes;
+				// TODO: For the sake of getting this out to the public
+				// We will make these warning diaolgs work only as back buttons. 
+				// As I dont want to rewrite all this at the moment. 
+				m_LastFocusedButton = m_Reset;
 				ResetCurrentTab();
 				return true;
 			}
@@ -42,6 +50,17 @@ class colorfulConfigureDialog extends UIScriptedMenu
 			}
 		}
 		return false;
+	}
+
+	void ResetCurrentTab()
+	{
+		if ( m_Options.IsChanged() )
+		{
+			m_Options.Revert();
+		}
+
+		// TODO:  Wrap up the actual buttons reset later. 
+
 	}
 	
 	override bool OnMouseEnter( Widget w, int x, int y )

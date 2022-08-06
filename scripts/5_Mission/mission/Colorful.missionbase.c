@@ -36,9 +36,9 @@ modded class MissionBase
 			menu = new colorfulConfigureDialog;
 			break;
 
-		case COLORFUL_DEFAULTS:
-			menu = new colorfulDefaultDialog;
-			break;
+		// case COLORFUL_DEFAULTS:
+		// 	menu = new colorfulDefaultDialog;
+		// 	break;
 
 		case MENU_STARTUP:
 			menu = new StartupMenu;

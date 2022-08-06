@@ -40,7 +40,6 @@ FrameWidgetClass DialogRoot {
    clipchildren 0
    inheritalpha 1
    color 0 0 0 0
-   position 0 0
    size 1 1
    halign center_ref
    valign center_ref
@@ -53,7 +52,6 @@ FrameWidgetClass DialogRoot {
      visible 1
      ignorepointer 0
      color 0 0 0 0.7843
-     position 0 0
      size 1 1
      halign center_ref
      valign center_ref
@@ -129,7 +127,8 @@ FrameWidgetClass DialogRoot {
   WindowWidgetClass DialogBox {
    ignorepointer 1
    color 0.1176 0.1176 0.1176 1
-   size 500 230
+   position 0.86817 -20.1385
+   size 500 189.72301
    halign center_ref
    valign center_ref
    hexactpos 1
@@ -140,7 +139,7 @@ FrameWidgetClass DialogRoot {
     PanelWidgetClass DialogBoxPanel {
      visible 1
      color 0.1176 0.1176 0.1176 1
-     position 0 -1.08357
+     position 0 -1.08356
      size 1 1
      halign center_ref
      valign center_ref
@@ -153,7 +152,7 @@ FrameWidgetClass DialogRoot {
      "no focus" 0
      {
       ButtonWidgetClass bYes {
-       visible 1
+       visible 0
        inheritalpha 0
        color 1 0 0 1
        position 35.9546 15.3
@@ -185,20 +184,53 @@ FrameWidgetClass DialogRoot {
         }
        }
       }
-      ButtonWidgetClass bNo {
-       visible 1
+      ButtonWidgetClass m_Reset {
+       visible 0
        inheritalpha 0
        color 1 0 0 1
-       position 33.4766 15.3
+       position 35.9546 15.3
        size 230 40
-       halign right_ref
        valign bottom_ref
        hexactpos 1
        vexactpos 1
        hexactsize 1
        vexactsize 1
        style EmptyHighlight
-       text "#message_dialog_no"
+       "no focus" 1
+       text "#message_dialog_yes"
+       text_proportion 0.5
+       font "Colorful-ui/gui/fonts/PersonalServices24"
+       {
+        ImageWidgetClass XboxHintYes0 {
+         visible 0
+         ignorepointer 1
+         size 21 21
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         image0 "set:ccgui_enforce image:XBoxA"
+         mode blend
+         "src alpha" 1
+         filter 0
+        }
+       }
+      }
+      ButtonWidgetClass bNo {
+       visible 1
+       inheritalpha 0
+       color 1 0 0 1
+       position 0 16
+       size 230 44
+       halign center_ref
+       valign bottom_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       style EmptyHighlight
+       text "BACK"
        text_proportion 0.5
        font "Colorful-ui/gui/fonts/PersonalServices24"
        {
@@ -285,14 +317,14 @@ FrameWidgetClass DialogRoot {
       RichTextWidgetClass Text {
        clipchildren 1
        color 1 1 1 1
-       position 0 72.5
        size 0.95 30
        halign center_ref
+       valign center_ref
        hexactpos 1
        vexactpos 1
        hexactsize 0
        vexactsize 1
-       text "#main_menu_configure_desc"
+       text " Please go back and apply them. "
        font "Colorful-ui/gui/fonts/PersonalServices24"
        "exact text" 1
        "exact text size" 22
@@ -312,7 +344,7 @@ FrameWidgetClass DialogRoot {
        hexactsize 0
        vexactsize 1
        style Bold
-       text "#main_menu_configure"
+       text "Unsaved Changes"
        font "Colorful-ui/gui/fonts/PersonalServices32"
        "text color" 1 1 1 1
        "exact text" 0
