@@ -3,6 +3,8 @@ modded class LoginQueueBase extends UIScriptedMenu
 {
 	ProgressBarWidget m_ProgressLoading;
 	protected TextWidget m_StatusText;
+	private	Widget m_shader
+
 	override Widget Init()
 	{		
 		layoutRoot 			   = GetGame().GetWorkspace().CreateWidgets("Colorful-UI/gui/layouts/Colorful.dialog_queue_position.layout");
@@ -12,7 +14,8 @@ modded class LoginQueueBase extends UIScriptedMenu
 		m_btnLeave 			   = ButtonWidget.Cast(layoutRoot.FindAnyWidget("btnLeave"));
 		ImageWidget Background = ImageWidget.Cast( layoutRoot.FindAnyWidget("BackgroundOverride"));
 		m_ProgressLoading      = ProgressBarWidget.Cast( layoutRoot.FindAnyWidget("LoadingBar") );
-
+		Class.CastTo(m_shader, layoutRoot.FindAnyWidget("Colorful_Shader"));
+		m_shader.SetColor(colorScheme.BrandColor());
         Background.LoadImageFile(0, GetRandomBackground());  			
 		layoutRoot.FindAnyWidget("notification_root").Show(false);
 		m_ProgressLoading.SetColor(colorScheme.BrandColor());
@@ -25,6 +28,7 @@ modded class LoginTimeBase extends UIScriptedMenu
 {
 	ProgressBarWidget m_ProgressLoading;
 	protected TextWidget m_TxtHdr;
+	private	Widget m_shader
 	
 	override Widget Init()
 	{
@@ -36,6 +40,8 @@ modded class LoginTimeBase extends UIScriptedMenu
 		m_btnLeave 			   = ButtonWidget.Cast(layoutRoot.FindAnyWidget("btnLeave"));
         ImageWidget Background = ImageWidget.Cast( layoutRoot.FindAnyWidget("BackgroundOverride"));
 		m_ProgressLoading      = ProgressBarWidget.Cast( layoutRoot.FindAnyWidget("LoadingBar") );
+		Class.CastTo(m_shader, layoutRoot.FindAnyWidget("Colorful_Shader"));
+		m_shader.SetColor(colorScheme.BrandColor());
 		m_ProgressLoading.SetColor(colorScheme.BrandColor());
 		m_TxtHdr.SetColor(colorScheme.AccentColor());
         Background.LoadImageFile(0, GetRandomBackground());  		
@@ -54,8 +60,8 @@ modded class LoginTimeBase extends UIScriptedMenu
 modded class LoadingScreen
 {	
 	protected ImageWidget m_Background; 
-	
 	protected TextWidget m_ProTip;
+	private	Widget m_shader
 
 	void LoadingScreen(DayZGame game)
 	{
@@ -64,6 +70,7 @@ modded class LoadingScreen
 		m_WidgetRoot = game.GetLoadingWorkspace().CreateWidgets("Colorful-UI/gui/layouts/Colorful.loading.layout");
 		// Print("Colorful Loading Screen Loaded!");	
 		Class.CastTo(m_ProTip, m_WidgetRoot.FindAnyWidget("ProTip"));
+		Class.CastTo(m_shader, m_WidgetRoot.FindAnyWidget("Colorful_Shader"));
 		Class.CastTo(m_ImageLogoMid, m_WidgetRoot.FindAnyWidget("ImageLogoMid"));
 		Class.CastTo(m_ImageLogoCorner, m_WidgetRoot.FindAnyWidget("ImageLogoCorner"));	
 		Class.CastTo(m_TextWidgetTitle, m_WidgetRoot.FindAnyWidget("TextWidget"));
@@ -76,7 +83,7 @@ modded class LoadingScreen
 
 		m_ProgressLoading.SetColor(colorScheme.BrandColor());
 		m_ProTip.SetColor(colorScheme.AccentColor());
-		
+		m_shader.SetColor(colorScheme.BrandColor());
 		ProgressAsync.SetProgressData(m_ProgressLoading);
 		ProgressAsync.SetUserData(m_ImageBackground);
 		SetStatus(m_TextWidgetStatus.GetRandomHint());

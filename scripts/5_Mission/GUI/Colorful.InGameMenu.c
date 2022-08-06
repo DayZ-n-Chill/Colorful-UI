@@ -1,6 +1,7 @@
 modded class InGameMenu extends UIScriptedMenu
 {
 	private Widget m_Separator
+	private	Widget m_shader
 	override Widget Init()
 	{
 		layoutRoot = GetGame().GetWorkspace().CreateWidgets("Colorful-UI/gui/layouts/colorful.day_z_ingamemenu.layout");
@@ -23,6 +24,8 @@ modded class InGameMenu extends UIScriptedMenu
 		m_CopyInfoButton 			= layoutRoot.FindAnyWidget( "copy_button" );
 		
 		HudShow( false );
+		Class.CastTo(m_shader, layoutRoot.FindAnyWidget("Colorful_Shader"));
+		m_shader.SetColor(colorScheme.BrandColor());
 		m_Separator 				= layoutRoot.FindAnyWidget( "actionItems_separator" );
 		m_Separator.SetColor(colorScheme.BrandColor());
 		return layoutRoot;

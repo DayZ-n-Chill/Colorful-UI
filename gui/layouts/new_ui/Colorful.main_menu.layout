@@ -64,7 +64,7 @@ FrameWidgetClass main_menu_root {
      filter 0
      nocache 1
     }
-    ImageWidgetClass TealShader {
+    ImageWidgetClass Colorful_Shader {
      visible 1
      ignorepointer 1
      keepsafezone 0
@@ -75,24 +75,7 @@ FrameWidgetClass main_menu_root {
      hexactsize 0
      vexactsize 0
      scaled 1
-     imageTexture "{E1589E8D732472A3}Colorful-UI/gui/textures/globals/Colorful.TealGradient.edds"
-     mode blend
-     "src alpha" 1
-     "no wrap" 1
-     stretch 1
-    }
-    ImageWidgetClass RedShader {
-     visible 0
-     ignorepointer 1
-     keepsafezone 0
-     position 0 0
-     size 1 1
-     hexactpos 1
-     vexactpos 1
-     hexactsize 0
-     vexactsize 0
-     scaled 1
-     imageTexture "{DE32C210B6524152}Colorful-UI/gui/textures/globals/Colorful.RedGradient.edds"
+     imageTexture "{4BFC093013F74D19}Colorful-UI/gui/textures/globals/UI.Colorful.Shader.edds"
      mode blend
      "src alpha" 1
      "no wrap" 1

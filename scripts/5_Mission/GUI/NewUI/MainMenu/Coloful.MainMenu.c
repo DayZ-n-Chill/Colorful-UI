@@ -11,7 +11,7 @@ modded class MainMenu extends UIScriptedMenu
 	private Widget m_Separator2
 	private Widget m_SeparatorPanel
 	private Widget m_ProgressLoading
-
+	private	Widget m_shader
 	override Widget Init()
 	{
 		// Load the layout file
@@ -65,6 +65,8 @@ modded class MainMenu extends UIScriptedMenu
 		Refresh();
 		LoadMods();
 		GetDayZGame().GetBacklit().MainMenu_OnShow();
+		Class.CastTo(m_shader, layoutRoot.FindAnyWidget("Colorful_Shader"));
+		m_shader.SetColor(colorScheme.BrandColor());
 		g_Game.SetLoadState( DayZLoadState.MAIN_MENU_CONTROLLER_SELECT );
 		m_Separator1.SetColor(colorScheme.BrandColor());
 		m_Separator2.SetColor(colorScheme.BrandColor());

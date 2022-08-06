@@ -7,7 +7,8 @@ class colorfulConfigureDialog extends UIScriptedMenu
 	protected Widget 				m_Text;
 	protected Widget 				m_Caption;
 	protected ButtonWidget			m_Reset; //undo
-	protected ref GameOptions			m_Options;
+	protected ref GameOptions		m_Options;
+	private	Widget m_shader
 
 	override Widget Init()
 	{
@@ -24,6 +25,8 @@ class colorfulConfigureDialog extends UIScriptedMenu
 		
 		m_Separator.SetColor( colorScheme.BrandColor() );
 		
+		Class.CastTo(m_shader, layoutRoot.FindAnyWidget("Colorful_Shader"));
+		m_shader.SetColor(colorScheme.BrandColor());
 		m_LastFocusedButton = 		m_bYes;
 		
 		return layoutRoot;

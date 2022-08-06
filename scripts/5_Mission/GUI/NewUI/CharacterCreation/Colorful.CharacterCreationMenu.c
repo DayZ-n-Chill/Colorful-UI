@@ -1,6 +1,6 @@
 modded class CharacterCreationMenu extends UIScriptedMenu
 {
-
+	private	Widget m_shader
 	override Widget Init()
 	{
 
@@ -18,6 +18,9 @@ modded class CharacterCreationMenu extends UIScriptedMenu
 		m_CharacterHeaderText 				= TextWidget.Cast(layoutRoot.FindAnyWidget( "char_header_text" ));
 		m_PlayedCharacterInfo 				= layoutRoot.FindAnyWidget( "played_char_info" );
 		
+		Class.CastTo(m_shader, layoutRoot.FindAnyWidget("Colorful_Shader"));
+		m_shader.SetColor(colorScheme.BrandColor());
+
 		string version;
 		GetGame().GetVersion( version );
 		#ifdef PLATFORM_CONSOLE

@@ -1,5 +1,6 @@
 modded class TutorialsMenu extends UIScriptedMenu
 {
+	private	Widget m_shader
 	override Widget Init()
 	{
 		layoutRoot	= GetGame().GetWorkspace().CreateWidgets("Colorful-UI/gui/layouts/new_ui/tutorials/pc/colorful.tutorials.layout");
@@ -19,6 +20,9 @@ modded class TutorialsMenu extends UIScriptedMenu
 		
 		PPERequesterBank.GetRequester(PPERequester_TutorialMenu).Start(new Param1<float>(0.6));
 		DrawConnectingLines(0);
+
+		Class.CastTo(m_shader, layoutRoot.FindAnyWidget("Colorful_Shader"));
+		m_shader.SetColor(colorScheme.BrandColor());
 
 		return layoutRoot;
 	}

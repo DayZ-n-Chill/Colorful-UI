@@ -1,6 +1,7 @@
 modded class KeybindingsMenu extends UIScriptedMenu
 {
 	protected Widget m_Separator
+	private	Widget m_shader
 	override Widget Init()
 	{
 		Input input = GetGame().GetInput();
@@ -14,6 +15,8 @@ modded class KeybindingsMenu extends UIScriptedMenu
 		
 		layoutRoot.FindAnyWidget( "Tabber" ).GetScript( m_Tabber );
 		
+		Class.CastTo(m_shader, layoutRoot.FindAnyWidget("Colorful_Shader"));
+		m_shader.SetColor(colorScheme.BrandColor());
 
 		InitInputSortingMap();
 		CreateTabs();

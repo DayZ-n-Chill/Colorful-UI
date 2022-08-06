@@ -1,6 +1,7 @@
 modded class OptionsMenu extends UIScriptedMenu
 {
 	private Widget m_Separator
+	private	Widget m_shader
 
 		
 	override Widget Init()
@@ -35,6 +36,8 @@ modded class OptionsMenu extends UIScriptedMenu
 		ToggleFocus();
 			
 		OnChanged();
+		Class.CastTo(m_shader, layoutRoot.FindAnyWidget("Colorful_Shader"));
+		m_shader.SetColor(colorScheme.BrandColor());
 
 		m_Separator 	= layoutRoot.FindAnyWidget( "colorful_separator" );
 		m_Separator.SetColor(colorScheme.BrandColor());

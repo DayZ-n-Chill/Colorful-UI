@@ -1,6 +1,7 @@
 modded class RespawnDialogue extends UIScriptedMenu
 {
 	private Widget m_Separator
+	private	Widget m_shader
 	override Widget Init()
 	{
 		layoutRoot 					= GetGame().GetWorkspace().CreateWidgets("colorful-ui/gui/layouts/colorful.day_z_respawn_dialogue.layout");
@@ -10,6 +11,8 @@ modded class RespawnDialogue extends UIScriptedMenu
 		
 		m_Separator 				= layoutRoot.FindAnyWidget( "actionItems_separator" );
 		m_Separator.SetColor(colorScheme.BrandColor());
+		Class.CastTo(m_shader, layoutRoot.FindAnyWidget("Colorful_Shader"));
+		m_shader.SetColor(colorScheme.BrandColor());
 		return layoutRoot;
 	};
 	

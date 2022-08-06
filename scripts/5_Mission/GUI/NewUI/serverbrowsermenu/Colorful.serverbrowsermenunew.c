@@ -1,6 +1,7 @@
 modded class ServerBrowserMenuNew extends UIScriptedMenu
 {
 	protected Widget m_Separator
+	private	Widget m_shader
 	override Widget Init()
 	{
 		layoutRoot = GetGame().GetWorkspace().CreateWidgets( "Colorful-UI/gui/layouts/new_ui/server_browser/pc/colorful.server_browser.layout" );
@@ -20,6 +21,9 @@ modded class ServerBrowserMenuNew extends UIScriptedMenu
 		m_Separator.SetColor(colorScheme.BrandColor());
 		Refresh();
 		
+		Class.CastTo(m_shader, layoutRoot.FindAnyWidget("Colorful_Shader"));
+		m_shader.SetColor(colorScheme.BrandColor());
+
 		string version;
 		GetGame().GetVersion( version );
 

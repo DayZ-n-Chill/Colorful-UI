@@ -6,6 +6,7 @@ class colorfulExitDialog extends UIScriptedMenu
 	protected Widget 				m_LastFocusedButton;
 	protected Widget 				m_Text;
 	protected Widget 				m_Caption;
+	private	Widget m_shader
 
 	override Widget Init()
 	{
@@ -18,6 +19,8 @@ class colorfulExitDialog extends UIScriptedMenu
 		m_Caption					= layoutRoot.FindAnyWidget( "Caption" );
 		
 		m_Separator.SetColor( colorScheme.BrandColor() );
+		Class.CastTo(m_shader, layoutRoot.FindAnyWidget("Colorful_Shader"));
+		m_shader.SetColor(colorScheme.BrandColor());
 		
 		m_LastFocusedButton = 		m_bYes;
 		

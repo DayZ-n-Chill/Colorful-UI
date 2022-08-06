@@ -4,6 +4,7 @@ modded class InviteMenu extends UIScriptedMenu
 	private TextWidget		m_Info;
 	private int m_iTime;
     private Widget m_Separator1
+	private	Widget m_shader
 
 	override Widget Init()
 	{
@@ -13,6 +14,9 @@ modded class InviteMenu extends UIScriptedMenu
 		m_Info = TextWidget.Cast( layoutRoot.FindAnyWidget("txtInfo") );
 		m_LogoutTimetext.SetText(m_iTime.ToString());
 		
+		Class.CastTo(m_shader, layoutRoot.FindAnyWidget("Colorful_Shader"));
+		m_shader.SetColor(colorScheme.BrandColor());
+
 		layoutRoot.FindAnyWidget("toolbar_bg").Show(true);
 		RichTextWidget toolbar_b = RichTextWidget.Cast(layoutRoot.FindAnyWidget("BackIcon"));
 		toolbar_b.SetText(InputUtils.GetRichtextButtonIconFromInputAction("UAUIBack", "", EUAINPUT_DEVICE_CONTROLLER, InputUtils.ICON_SCALE_TOOLBAR));

@@ -8,6 +8,7 @@ modded class LogoutMenu extends UIScriptedMenu
 	private Widget m_Reddit;
 	private Widget m_Facebook;
 	private Widget m_Separator
+	private	Widget m_shader
 
 	override Widget Init()
 	{
@@ -38,6 +39,8 @@ modded class LogoutMenu extends UIScriptedMenu
 
 		m_Separator 				= layoutRoot.FindAnyWidget( "actionItems_separator" );
 		m_Separator.SetColor(colorScheme.BrandColor());
+		Class.CastTo(m_shader, layoutRoot.FindAnyWidget("Colorful_Shader"));
+		m_shader.SetColor(colorScheme.BrandColor());
 
 		return layoutRoot;
 	}
