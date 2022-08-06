@@ -185,32 +185,32 @@ class colorfulConfigureDialog extends UIScriptedMenu
 	}
 
 	//resets it all
-	void Reset()
-	{
-		m_Options.Revert();
-		m_GameTab.Revert();
-		m_SoundsTab.Revert();
-		m_ControlsTab.Revert();
-		#ifndef PLATFORM_XBOX
-		m_VideoTab.Revert();
-		#endif
+	// void Reset()
+	// {
+	// 	m_Options.Revert();
+	// 	m_GameTab.Revert();
+	// 	m_SoundsTab.Revert();
+	// 	m_ControlsTab.Revert();
+	// 	#ifndef PLATFORM_XBOX
+	// 	m_VideoTab.Revert();
+	// 	#endif
 		
-		if ( m_Options.IsChanged() )
-			m_Options.Revert();
+	// 	if ( m_Options.IsChanged() )
+	// 		m_Options.Revert();
 		
-		if (GetGame().GetInput().IsEnabledMouseAndKeyboard())
-		{
-			m_Apply.SetFlags( WidgetFlags.IGNOREPOINTER );
-			ColorDisable( m_Apply );
-			m_Reset.SetFlags( WidgetFlags.IGNOREPOINTER );
-			ColorDisable( m_Reset );
-		}
-		else
-		{
-			layoutRoot.FindAnyWidget( "Apply" ).Show( false );
-			layoutRoot.FindAnyWidget( "Reset" ).Show( false );
-		}
+	// 	if (GetGame().GetInput().IsEnabledMouseAndKeyboard())
+	// 	{
+	// 		m_Apply.SetFlags( WidgetFlags.IGNOREPOINTER );
+	// 		ColorDisable( m_Apply );
+	// 		m_Reset.SetFlags( WidgetFlags.IGNOREPOINTER );
+	// 		ColorDisable( m_Reset );
+	// 	}
+	// 	else
+	// 	{
+	// 		layoutRoot.FindAnyWidget( "Apply" ).Show( false );
+	// 		layoutRoot.FindAnyWidget( "Reset" ).Show( false );
+	// 	}
 		
-		m_CanApplyOrReset = false;
-	}
+	// 	m_CanApplyOrReset = false;
+	// }
 };
