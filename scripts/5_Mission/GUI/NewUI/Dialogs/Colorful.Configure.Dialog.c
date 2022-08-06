@@ -37,7 +37,8 @@ class colorfulConfigureDialog extends UIScriptedMenu
 			{
 				// TODO: For the sake of getting this out to the public
 				// We will make these warning diaolgs work only as back buttons. 
-				// As I dont want to rewrite all this at the moment. 
+				// As I dont want to fix all this at the moment. 
+				// Will do it in optimization stages after 1.0
 				m_LastFocusedButton = m_Reset;
 				ResetCurrentTab();
 				return true;
@@ -181,5 +182,35 @@ class colorfulConfigureDialog extends UIScriptedMenu
 		{
 			text2.SetColor( color );
 		}
+	}
+
+	//resets it all
+	void Reset()
+	{
+		m_Options.Revert();
+		m_GameTab.Revert();
+		m_SoundsTab.Revert();
+		m_ControlsTab.Revert();
+		#ifndef PLATFORM_XBOX
+		m_VideoTab.Revert();
+		#endif
+		
+		if ( m_Options.IsChanged() )
+			m_Options.Revert();
+		
+		if (GetGame().GetInput().IsEnabledMouseAndKeyboard())
+		{
+			m_Apply.SetFlags( WidgetFlags.IGNOREPOINTER );
+			ColorDisable( m_Apply );
+			m_Reset.SetFlags( WidgetFlags.IGNOREPOINTER );
+			ColorDisable( m_Reset );
+		}
+		else
+		{
+			layoutRoot.FindAnyWidget( "Apply" ).Show( false );
+			layoutRoot.FindAnyWidget( "Reset" ).Show( false );
+		}
+		
+		m_CanApplyOrReset = false;
 	}
 };
