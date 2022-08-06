@@ -37,10 +37,10 @@ modded class OptionsMenu extends UIScriptedMenu
 			
 		OnChanged();
 		Class.CastTo(m_shader, layoutRoot.FindAnyWidget("Colorful_Shader"));
-		m_shader.SetColor(colorScheme.BrandColor());
+		m_shader.SetColor(colorScheme.ShaderColor());
 
 		m_Separator 	= layoutRoot.FindAnyWidget( "colorful_separator" );
-		m_Separator.SetColor(colorScheme.BrandColor());
+		m_Separator.SetColor(colorScheme.SeparatorColor());
 		
 		return layoutRoot;
 	}

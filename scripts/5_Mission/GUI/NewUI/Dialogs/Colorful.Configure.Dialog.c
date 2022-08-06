@@ -23,10 +23,10 @@ class colorfulConfigureDialog extends UIScriptedMenu
 		m_Caption					= layoutRoot.FindAnyWidget( "Caption" );
 		m_Reset						= ButtonWidget.Cast(layoutRoot.FindAnyWidget("reset"));
 		
-		m_Separator.SetColor( colorScheme.BrandColor() );
+		m_Separator.SetColor( colorScheme.SeparatorColor() );
 		
 		Class.CastTo(m_shader, layoutRoot.FindAnyWidget("Colorful_Shader"));
-		m_shader.SetColor(colorScheme.BrandColor());
+		m_shader.SetColor(colorScheme.ShaderColor());
 		m_LastFocusedButton = 		m_bYes;
 		
 		return layoutRoot;

@@ -6,6 +6,8 @@ modded class MainMenu extends UIScriptedMenu
 	private Widget m_Youtube;
 	private Widget m_Reddit;
 	private Widget m_Facebook;
+	private Widget m_Website;
+	private Widget m_PriorityQueue
 	private Widget m_CharacterBtn;
 	private Widget m_Separator1
 	private Widget m_Separator2
@@ -24,14 +26,13 @@ modded class MainMenu extends UIScriptedMenu
 		m_Youtube 					= layoutRoot.FindAnyWidget( "YoutubeBtn" );
 		m_Reddit 					= layoutRoot.FindAnyWidget( "RedditBtn" );
 		m_Facebook 					= layoutRoot.FindAnyWidget( "FacebookBtn" );
+		m_Website					= layoutRoot.FindAnyWidget( "WebsiteBtn" );
+		m_PriorityQueue				= layoutRoot.FindAnyWidget( "QueueBtn" );
 		m_CharacterBtn 				= layoutRoot.FindAnyWidget( "CharacterBtn" );
-		// I need a way to do this globally.  I have tried a few things but it keeps being wierd. 
-		// I will update the separator colors method in the next version. 
 		m_Separator1				= layoutRoot.FindAnyWidget( "separator_1" );
 		m_Separator2				= layoutRoot.FindAnyWidget( "separator_2" );
 		m_SeparatorPanel			= layoutRoot.FindAnyWidget( "SeparatorPanel" );
 		
-
 		// Required Vanilla Code (Most are just hidden in the layout file.)
 		m_Play						= layoutRoot.FindAnyWidget( "play" );
 		m_ChooseServer				= layoutRoot.FindAnyWidget( "choose_server" );
@@ -66,14 +67,14 @@ modded class MainMenu extends UIScriptedMenu
 		LoadMods();
 		GetDayZGame().GetBacklit().MainMenu_OnShow();
 		Class.CastTo(m_shader, layoutRoot.FindAnyWidget("Colorful_Shader"));
-		m_shader.SetColor(colorScheme.BrandColor());
+		m_shader.SetColor(colorScheme.ShaderColor());
 		g_Game.SetLoadState( DayZLoadState.MAIN_MENU_CONTROLLER_SELECT );
-		m_Separator1.SetColor(colorScheme.BrandColor());
-		m_Separator2.SetColor(colorScheme.BrandColor());
-		m_SeparatorPanel.SetColor(colorScheme.BrandColor());
+		m_Separator1.SetColor(colorScheme.SeparatorColor());
+		m_Separator2.SetColor(colorScheme.SeparatorColor());
+		m_SeparatorPanel.SetColor(colorScheme.SeparatorColor());
 		// This progress bar is just used as trim. 
 		m_ProgressLoading      = ProgressBarWidget.Cast( layoutRoot.FindAnyWidget("LoadingBar") );
-		m_ProgressLoading.SetColor(colorScheme.BrandColor());
+		m_ProgressLoading.SetColor(colorScheme.MainMenuTrim());
 		return layoutRoot;
 	}	
 
@@ -87,27 +88,37 @@ modded class MainMenu extends UIScriptedMenu
 		// ------------------------------------------------------------------
 		if (button == MouseState.LEFT && w == m_Discord)
 		{
-			GetGame().OpenURL("https://discord.gg/#");
+			GetGame().OpenURL("https://discord.gg/dayznchill");
 			return true;
 		}
 		else if (button == MouseState.LEFT && w == m_Twitter)
 		{
-			GetGame().OpenURL("https://twitter.com/#");
+			GetGame().OpenURL("https://twitter.com/dayznhcill");
 			return false;
 		}
 		else if (button == MouseState.LEFT && w == m_Reddit)
 		{
-			GetGame().OpenURL("https://reddit.com/#");
+			GetGame().OpenURL("https://reddit.com/dayznhcill");
 			return false;
 		}
 		else if (button == MouseState.LEFT && w == m_Youtube)
 		{
-			GetGame().OpenURL("https://youtube.com/#");
+			GetGame().OpenURL("https://youtube.com/dayznchill");
 			return false;
 		}	
 		else if (button == MouseState.LEFT && w == m_Facebook)
 		{
-			GetGame().OpenURL("https://facebook.com/#");
+			GetGame().OpenURL("https://facebook.com/dayznchill");
+			return false;
+		}
+		else if (button == MouseState.LEFT && w == m_Website)
+		{
+			GetGame().OpenURL("https://dayznhill.com.com/");
+			return false;
+		}
+		else if (button == MouseState.LEFT && w == m_PriorityQueue)
+		{
+			GetGame().OpenURL("https://dayznhill.com.com/");
 			return false;
 		}
 		// TODO: Find out why default btn only says "rename", and wont let me chant text. 
@@ -199,15 +210,127 @@ modded class MainMenu extends UIScriptedMenu
 		int color_pnl = UIColor.Transparent();
 		int color_lbl = UIColor.White();
 		int color_img = UIColor.White();
-		// int color_sep = colorScheme.BrandColor();
 
 		ButtonSetColor(w, color_pnl);
 		ButtonSetTextColor(w, color_lbl);
 		ImagenSetColor(w, color_img);
-		// SeparatorSetColor(w, color_sep);	
+	
 	}
 
-	// I still have not fdound a way to globally edit the dialog system colors but I feel like I am close
+	void TwitterHighlight( Widget w )
+	{
+		if( !w )
+			return;	
+			
+		int color_pnl = UIColor.Transparent();
+		int color_lbl = UIColor.twitter();
+		int color_img = UIColor.twitter();	
+
+		ButtonSetColor(w, color_pnl);
+		ButtonSetTextColor(w, color_lbl);
+		ImagenSetColor(w, color_img);	
+	}
+
+	void DiscordHighlight( Widget w )
+	{
+		if( !w )
+			return;	
+			
+		int color_pnl = UIColor.Transparent();
+		int color_lbl = UIColor.discord();
+		int color_img = UIColor.discord();	
+
+		ButtonSetColor(w, color_pnl);
+		ButtonSetTextColor(w, color_lbl);
+		ImagenSetColor(w, color_img);	
+	}
+
+	void YoutubeHighlight( Widget w )
+	{
+		if( !w )
+			return;	
+			
+		int color_pnl = UIColor.Transparent();
+		int color_lbl = UIColor.youtube();
+		int color_img = UIColor.youtube();	
+
+		ButtonSetColor(w, color_pnl);
+		ButtonSetTextColor(w, color_lbl);
+		ImagenSetColor(w, color_img);	
+	}
+
+	void RedditHighlight( Widget w )
+	{
+		if( !w )
+			return;	
+			
+		int color_pnl = UIColor.Transparent();
+		int color_lbl = UIColor.reddit();
+		int color_img = UIColor.reddit();	
+
+		ButtonSetColor(w, color_pnl);
+		ButtonSetTextColor(w, color_lbl);
+		ImagenSetColor(w, color_img);	
+	}
+
+	void MetaHighlight( Widget w )
+	{
+		if( !w )
+			return;	
+			
+		int color_pnl = UIColor.Transparent();
+		int color_lbl = UIColor.meta();
+		int color_img = UIColor.meta();	
+
+		ButtonSetColor(w, color_pnl);
+		ButtonSetTextColor(w, color_lbl);
+		ImagenSetColor(w, color_img);	
+	}
+	
+	override bool OnMouseEnter( Widget w, int x, int y )
+	{
+		
+		if( w == m_Twitter )
+		{
+			TwitterHighlight( w );
+			return true;
+		}
+
+		if( w == m_Facebook )
+		{
+			MetaHighlight( w );
+			return true;
+		}
+
+		if( w == m_Discord )
+		{
+			DiscordHighlight( w );
+			return true;
+		}
+
+		if( w == m_Youtube )
+		{
+			YoutubeHighlight( w );
+			return true;
+		}
+
+		if( w == m_Reddit )
+		{
+			RedditHighlight( w );
+			return true;
+		}
+
+		
+		if( IsFocusable( w ) )
+		{
+			ColorHighlight( w );
+			return true;
+		}
+		return false;
+	}
+
+
+	// I still have not found a good way to globally edit the generated dialog system colors but I feel like I am close
 	// I guess the best way in the meantime is to create a new menu and have it styled as we need.
 	void Exit()
 	{

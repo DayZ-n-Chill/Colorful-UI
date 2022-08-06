@@ -2,6 +2,12 @@ modded class InGameMenu extends UIScriptedMenu
 {
 	private Widget m_Separator
 	private	Widget m_shader
+	private Widget m_Discord;
+	private Widget m_Twitter;
+	private Widget m_Youtube;
+	private Widget m_Reddit;
+	private Widget m_Facebook;
+
 	override Widget Init()
 	{
 		layoutRoot = GetGame().GetWorkspace().CreateWidgets("Colorful-UI/gui/layouts/colorful.day_z_ingamemenu.layout");
@@ -22,15 +28,51 @@ modded class InGameMenu extends UIScriptedMenu
 		m_FavoriteImage 			= layoutRoot.FindAnyWidget( "favorite_image" );
 		m_UnfavoriteImage 			= layoutRoot.FindAnyWidget( "unfavorite_image" );
 		m_CopyInfoButton 			= layoutRoot.FindAnyWidget( "copy_button" );
-		
+		m_Separator 				= layoutRoot.FindAnyWidget( "actionItems_separator" );
+		m_Discord 					= layoutRoot.FindAnyWidget( "DiscordBtn" );
+		m_Twitter 					= layoutRoot.FindAnyWidget( "TwitterBtn" );
+		m_Youtube 					= layoutRoot.FindAnyWidget( "YoutubeBtn" );
+		m_Reddit 					= layoutRoot.FindAnyWidget( "RedditBtn" );
+		m_Facebook 					= layoutRoot.FindAnyWidget( "FacebookBtn" );
+
 		HudShow( false );
 		Class.CastTo(m_shader, layoutRoot.FindAnyWidget("Colorful_Shader"));
-		m_shader.SetColor(colorScheme.BrandColor());
-		m_Separator 				= layoutRoot.FindAnyWidget( "actionItems_separator" );
-		m_Separator.SetColor(colorScheme.BrandColor());
+		m_shader.SetColor(colorScheme.ShaderColor());
+		m_Separator.SetColor(colorScheme.SeparatorColor());
 		return layoutRoot;
 	}
-	
+
+	override bool OnClick(Widget w, int x, int y, int button)
+	{
+		
+		if (button == MouseState.LEFT && w == m_Discord)
+		{
+			GetGame().OpenURL("https://discord.gg/#");
+			return true;
+		}
+		else if (button == MouseState.LEFT && w == m_Twitter)
+		{
+			GetGame().OpenURL("https://twitter.com/#");
+			return false;
+		}
+		else if (button == MouseState.LEFT && w == m_Reddit)
+		{
+			GetGame().OpenURL("https://reddit.com/#");
+			return false;
+		}
+		else if (button == MouseState.LEFT && w == m_Youtube)
+		{
+			GetGame().OpenURL("https://youtube.com/#");
+			return false;
+		}	
+		else if (button == MouseState.LEFT && w == m_Facebook)
+		{
+			GetGame().OpenURL("https://facebook.com/#");
+			return false;
+		}
+		return true;
+	}
+
 	// If you want to change the way the buttons work.  
 	// Visit the Colorful.MainMenu.c file. It has notes.
 	protected void ColorHighlight( Widget w )
@@ -40,6 +82,117 @@ modded class InGameMenu extends UIScriptedMenu
 		
 		ButtonSetColor(w, UIColor.Transparent());
 		ButtonSetTextColor(w, colorScheme.BrandColor()); 
+		
 	};
 
+	protected void ColorNormal( Widget w )
+	{
+		if( !w )
+			return;
+		
+		ButtonSetColor(w, UIColor.Transparent());
+		ButtonSetTextColor(w, UIColor.White());
+	}
+
+	protected void TwitterHighlight( Widget w )
+	{
+		if( !w )
+			return;	
+			
+		int color_pnl = UIColor.Transparent();
+		int color_lbl = UIColor.twitter();
+		int color_img = UIColor.twitter();	
+
+		ButtonSetColor(w, color_pnl);
+		ButtonSetTextColor(w, color_lbl);
+	}
+
+	protected void DiscordHighlight( Widget w )
+	{
+		if( !w )
+			return;	
+			
+		int color_pnl = UIColor.Transparent();
+		int color_lbl = UIColor.discord();
+		int color_img = UIColor.discord();	
+
+		ButtonSetColor(w, color_pnl);
+		ButtonSetTextColor(w, color_lbl);
+	}
+
+	protected void YoutubeHighlight( Widget w )
+	{
+		if( !w )
+			return;	
+			
+		int color_pnl = UIColor.Transparent();
+		int color_lbl = UIColor.youtube();
+		int color_img = UIColor.youtube();	
+
+		ButtonSetColor(w, color_pnl);
+		ButtonSetTextColor(w, color_lbl);
+	}
+
+	protected void RedditHighlight( Widget w )
+	{
+		if( !w )
+			return;	
+			
+		int color_pnl = UIColor.Transparent();
+		int color_lbl = UIColor.reddit();
+		int color_img = UIColor.reddit();	
+
+		ButtonSetColor(w, color_pnl);
+		ButtonSetTextColor(w, color_lbl);
+	}
+
+	protected void MetaHighlight( Widget w )
+	{
+		if( !w )
+			return;	
+			
+		int color_pnl = UIColor.Transparent();
+		int color_lbl = UIColor.meta();
+		int color_img = UIColor.meta();	
+
+		ButtonSetColor(w, color_pnl);
+		ButtonSetTextColor(w, color_lbl);
+	}
+
+	override bool OnMouseEnter( Widget w, int x, int y )
+	{
+		
+		if( w == m_Twitter )
+		{
+			TwitterHighlight( w );
+			return true;
+		}
+
+		if( w == m_Facebook )
+		{
+			MetaHighlight( w );
+			return true;
+		}
+
+		if( w == m_Discord )
+		{
+			DiscordHighlight( w );
+			return true;
+		}
+
+		if( w == m_Youtube )
+		{
+			YoutubeHighlight( w );
+			return true;
+		}
+
+		if( w == m_Reddit )
+		{
+			RedditHighlight( w );
+			return true;
+		}
+
+		ColorHighlight( w );
+		return true;
+	}
 }

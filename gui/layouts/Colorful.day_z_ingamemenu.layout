@@ -876,7 +876,7 @@ FrameWidgetClass InGameMenuRoot {
          }
         }
         ButtonWidgetClass MetaBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref

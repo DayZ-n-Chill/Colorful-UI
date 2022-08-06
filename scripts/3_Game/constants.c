@@ -23,7 +23,9 @@ string GetRandomBackground()
 		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-16.edds",
 		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-17.edds"
 	};
-	int bgIndex = Math.RandomInt(0,16);
+	Math.Randomize(-1);
+	int bgIndex = Math.RandomInt(0, 100) % 16;
+	// int bgIndex = Math.RandomInt(0,16);
 	return images[bgIndex];
 }
 
@@ -52,7 +54,9 @@ string GetRandomHint()
 		"This is Tip 19.  You can change me in the constants.c file",
 		"This is Tip 20.  You can change me in the constants.c file",
 	};
-	int tipIndex = Math.RandomInt(0,19);
+	Math.Randomize(-1);
+	int tipIndex = Math.RandomInt(0, 100) % 19;
+	// int tipIndex = Math.RandomInt(0,19);
 	return tips[tipIndex];
 }
 
@@ -84,7 +88,7 @@ class UIColor
 	static int Blue() { return ARGB(255, 51, 102, 102); };
 	static int Indigo() { return ARGB(255, 102, 51, 204); };
 	static int Violet() { return ARGB(255, 204, 51, 204); };
-	// Social Network Colors
+	// Social Network Colors 
 	static int discord() { return ARGB(255, 88, 101, 242); };
 	static int twitter() { return ARGB(255, 29, 161, 242); };
 	static int youtube() { return ARGB(255, 255, 0, 0); };
@@ -99,12 +103,24 @@ class UIColor
 // You can use the fucntions above to set the theme across the entire app.
 class colorScheme 
 {
+	// Quick Styling --------------------------------------
 	// This color should be Servers/Communities Brand Color
-	static int BrandColor() { return UIColor.Green(); };
+	static int BrandColor() { return UIColor.Teal(); };
 	// This color should be a complimentary color to your brand. 
-	static int AccentColor() { return UIColor.Red(); }; 
-	// Best to keep this as is, but do whatever, Experiment.
+	static int AccentColor() { return UIColor.Red(); }
+
+	// Advanced Styling --------------------------------------
+	// You can get more Ganular with the colors by editing the syltes below
+	// Get wild and create your own color functions and use them throughout the mod.
+	// Best to Primary Text as white, but do whatever, Experiment.
 	static int PrimaryText() { return UIColor.White(); }; 	
+	static int SecondaryText() { return AccentColor(); };
+	static int ShaderColor() { return BrandColor(); };
+	static int SeparatorColor() { return BrandColor(); };
+	static int LoadingbarColor() { return AccentColor(); };
+	static int MainMenuTrim() { return BrandColor(); };
+	static int ButtonHoverColor() { return BrandColor(); };	
+	static int OptionInputColors() { return BrandColor(); };
 }
  
 // Dialog Menus (No need to touch)

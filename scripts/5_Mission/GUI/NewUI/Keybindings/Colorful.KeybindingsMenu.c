@@ -16,7 +16,7 @@ modded class KeybindingsMenu extends UIScriptedMenu
 		layoutRoot.FindAnyWidget( "Tabber" ).GetScript( m_Tabber );
 		
 		Class.CastTo(m_shader, layoutRoot.FindAnyWidget("Colorful_Shader"));
-		m_shader.SetColor(colorScheme.BrandColor());
+		m_shader.SetColor(colorScheme.ShaderColor());
 
 		InitInputSortingMap();
 		CreateTabs();
@@ -37,7 +37,7 @@ modded class KeybindingsMenu extends UIScriptedMenu
 		m_Defaults.ClearFlags( WidgetFlags.IGNOREPOINTER );
 		
 		m_Separator 	= layoutRoot.FindAnyWidget( "separator_red" );
-		m_Separator.SetColor(colorScheme.BrandColor());
+		m_Separator.SetColor(colorScheme.SeparatorColor());
 
 		return layoutRoot;
 	}

@@ -15,10 +15,10 @@ modded class LoginQueueBase extends UIScriptedMenu
 		ImageWidget Background = ImageWidget.Cast( layoutRoot.FindAnyWidget("BackgroundOverride"));
 		m_ProgressLoading      = ProgressBarWidget.Cast( layoutRoot.FindAnyWidget("LoadingBar") );
 		Class.CastTo(m_shader, layoutRoot.FindAnyWidget("Colorful_Shader"));
-		m_shader.SetColor(colorScheme.BrandColor());
+		m_shader.SetColor(colorScheme.ShaderColor());
         Background.LoadImageFile(0, GetRandomBackground());  			
 		layoutRoot.FindAnyWidget("notification_root").Show(false);
-		m_ProgressLoading.SetColor(colorScheme.BrandColor());
+		m_ProgressLoading.SetColor(colorScheme.LoadingbarColor());
 		m_StatusText.SetColor(colorScheme.AccentColor());
 		return layoutRoot;
 	}
@@ -41,8 +41,8 @@ modded class LoginTimeBase extends UIScriptedMenu
         ImageWidget Background = ImageWidget.Cast( layoutRoot.FindAnyWidget("BackgroundOverride"));
 		m_ProgressLoading      = ProgressBarWidget.Cast( layoutRoot.FindAnyWidget("LoadingBar") );
 		Class.CastTo(m_shader, layoutRoot.FindAnyWidget("Colorful_Shader"));
-		m_shader.SetColor(colorScheme.BrandColor());
-		m_ProgressLoading.SetColor(colorScheme.BrandColor());
+		m_shader.SetColor(colorScheme.ShaderColor());
+		m_ProgressLoading.SetColor(colorScheme.LoadingbarColor());
 		m_TxtHdr.SetColor(colorScheme.AccentColor());
         Background.LoadImageFile(0, GetRandomBackground());  		
 		return layoutRoot;
@@ -81,9 +81,9 @@ modded class LoadingScreen
 		m_ImageBackground = ImageWidget.Cast( m_WidgetRoot.FindAnyWidget("BackgroundOverride") );
 		m_ProgressLoading = ProgressBarWidget.Cast( m_WidgetRoot.FindAnyWidget("LoadingBar") );
 
-		m_ProgressLoading.SetColor(colorScheme.BrandColor());
+		m_ProgressLoading.SetColor(colorScheme.LoadingbarColor());
 		m_ProTip.SetColor(colorScheme.AccentColor());
-		m_shader.SetColor(colorScheme.BrandColor());
+		m_shader.SetColor(colorScheme.ShaderColor());
 		ProgressAsync.SetProgressData(m_ProgressLoading);
 		ProgressAsync.SetUserData(m_ImageBackground);
 		SetStatus(m_TextWidgetStatus.GetRandomHint());

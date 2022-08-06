@@ -22,7 +22,7 @@ modded class TutorialsMenu extends UIScriptedMenu
 		DrawConnectingLines(0);
 
 		Class.CastTo(m_shader, layoutRoot.FindAnyWidget("Colorful_Shader"));
-		m_shader.SetColor(colorScheme.BrandColor());
+		m_shader.SetColor(colorScheme.ShaderColor());
 
 		return layoutRoot;
 	}

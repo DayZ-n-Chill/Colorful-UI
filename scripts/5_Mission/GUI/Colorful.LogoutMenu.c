@@ -38,9 +38,9 @@ modded class LogoutMenu extends UIScriptedMenu
 		}
 
 		m_Separator 				= layoutRoot.FindAnyWidget( "actionItems_separator" );
-		m_Separator.SetColor(colorScheme.BrandColor());
+		m_Separator.SetColor(colorScheme.SeparatorColor());
 		Class.CastTo(m_shader, layoutRoot.FindAnyWidget("Colorful_Shader"));
-		m_shader.SetColor(colorScheme.BrandColor());
+		m_shader.SetColor(colorScheme.ShaderColor());
 
 		return layoutRoot;
 	}

@@ -19,7 +19,7 @@ modded class CharacterCreationMenu extends UIScriptedMenu
 		m_PlayedCharacterInfo 				= layoutRoot.FindAnyWidget( "played_char_info" );
 		
 		Class.CastTo(m_shader, layoutRoot.FindAnyWidget("Colorful_Shader"));
-		m_shader.SetColor(colorScheme.BrandColor());
+		m_shader.SetColor(colorScheme.ShaderColor());
 
 		string version;
 		GetGame().GetVersion( version );

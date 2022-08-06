@@ -18,9 +18,9 @@ class colorfulExitDialog extends UIScriptedMenu
 		m_Text						= layoutRoot.FindAnyWidget( "Text" );
 		m_Caption					= layoutRoot.FindAnyWidget( "Caption" );
 		
-		m_Separator.SetColor( colorScheme.BrandColor() );
+		m_Separator.SetColor( colorScheme.SeparatorColor() );
 		Class.CastTo(m_shader, layoutRoot.FindAnyWidget("Colorful_Shader"));
-		m_shader.SetColor(colorScheme.BrandColor());
+		m_shader.SetColor(colorScheme.ShaderColor());
 		
 		m_LastFocusedButton = 		m_bYes;
 		

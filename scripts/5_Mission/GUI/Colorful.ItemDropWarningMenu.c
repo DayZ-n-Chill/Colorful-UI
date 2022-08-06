@@ -14,9 +14,9 @@ modded class WarningMenuBase extends UIScriptedMenu
 				w.SetText(text);
 		}
         m_Separator1 = layoutRoot.FindAnyWidget( "SeparatorPanel" );
-        m_Separator1.SetColor(colorScheme.BrandColor());
+        m_Separator1.SetColor(colorScheme.SeparatorColor());
 		Class.CastTo(m_shader, layoutRoot.FindAnyWidget("Colorful_Shader"));
-		m_shader.SetColor(colorScheme.BrandColor());
+		m_shader.SetColor(colorScheme.ShaderColor());
         
 		return layoutRoot;
 	}

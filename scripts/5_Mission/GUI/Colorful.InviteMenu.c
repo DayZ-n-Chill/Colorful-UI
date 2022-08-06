@@ -15,7 +15,7 @@ modded class InviteMenu extends UIScriptedMenu
 		m_LogoutTimetext.SetText(m_iTime.ToString());
 		
 		Class.CastTo(m_shader, layoutRoot.FindAnyWidget("Colorful_Shader"));
-		m_shader.SetColor(colorScheme.BrandColor());
+		m_shader.SetColor(colorScheme.ShaderColor());
 
 		layoutRoot.FindAnyWidget("toolbar_bg").Show(true);
 		RichTextWidget toolbar_b = RichTextWidget.Cast(layoutRoot.FindAnyWidget("BackIcon"));
@@ -31,7 +31,7 @@ modded class InviteMenu extends UIScriptedMenu
 		
 		GetGame().GetCallQueue( CALL_CATEGORY_SYSTEM ).CallLater( UpdateTime, 1000, true );
         m_Separator1 = layoutRoot.FindAnyWidget( "SeparatorPanel" );
-        m_Separator1.SetColor(colorScheme.BrandColor());
+        m_Separator1.SetColor(colorScheme.SeparatorColor());
 		return layoutRoot;
 	}
 	

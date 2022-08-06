@@ -18,11 +18,11 @@ modded class ServerBrowserMenuNew extends UIScriptedMenu
 		m_Version				= TextWidget.Cast( layoutRoot.FindAnyWidget( "version" ) );
 		
 		m_Separator 				= layoutRoot.FindAnyWidget( "separator_red" );
-		m_Separator.SetColor(colorScheme.BrandColor());
+		m_Separator.SetColor(colorScheme.SeparatorColor());
 		Refresh();
 		
 		Class.CastTo(m_shader, layoutRoot.FindAnyWidget("Colorful_Shader"));
-		m_shader.SetColor(colorScheme.BrandColor());
+		m_shader.SetColor(colorScheme.ShaderColor());
 
 		string version;
 		GetGame().GetVersion( version );
