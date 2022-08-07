@@ -527,6 +527,7 @@ FrameWidgetClass main_menu_root {
          }
         }
         ButtonWidgetClass ServerInfoBtn {
+         visible 0
          color 0 0 0 0
          position 0 0
          size 293 42
@@ -544,6 +545,7 @@ FrameWidgetClass main_menu_root {
          "next down" "play_video"
          {
           PanelWidgetClass ServerInfoBtn_panel {
+           visible 1
            ignorepointer 1
            color 0 0 0 0
            size 1 1
@@ -556,6 +558,7 @@ FrameWidgetClass main_menu_root {
            style DayZDefaultPanel
            {
             TextWidgetClass ServerInfoBtn_label {
+             visible 1
              clipchildren 0
              ignorepointer 1
              position 8 0

@@ -44,33 +44,58 @@ modded class InGameMenu extends UIScriptedMenu
 
 	override bool OnClick(Widget w, int x, int y, int button)
 	{
-		
-		if (button == MouseState.LEFT && w == m_Discord)
+		if ( w == m_ContinueButton )
 		{
-			GetGame().OpenURL("https://discord.gg/#");
+			OnClick_Continue();
+			return true;
+		}
+		else if ( w == m_RestartButton )
+		{
+			OnClick_Restart();
+			return true;
+		}
+		else if ( w == m_RespawnButton )
+		{
+			OnClick_Respawn();
+			return true;
+		}
+		else if ( w == m_OptionsButton )
+		{
+			OnClick_Options();
+			return true;
+		}
+		else if ( w == m_ExitButton )
+		{
+			OnClick_Exit();
+			return true;
+		}
+		else if (button == MouseState.LEFT && w == m_Discord)
+		{
+			GetGame().OpenURL("https://discord.gg/dayznchill");
 			return true;
 		}
 		else if (button == MouseState.LEFT && w == m_Twitter)
 		{
-			GetGame().OpenURL("https://twitter.com/#");
+			GetGame().OpenURL("https://twitter.com/dayznchill");
 			return false;
 		}
 		else if (button == MouseState.LEFT && w == m_Reddit)
 		{
-			GetGame().OpenURL("https://reddit.com/#");
+			GetGame().OpenURL("https://reddit.com/dayznchill");
 			return false;
 		}
 		else if (button == MouseState.LEFT && w == m_Youtube)
 		{
-			GetGame().OpenURL("https://youtube.com/#");
+			GetGame().OpenURL("https://youtube.com/dayznchill");
 			return false;
 		}	
 		else if (button == MouseState.LEFT && w == m_Facebook)
 		{
-			GetGame().OpenURL("https://facebook.com/#");
+			GetGame().OpenURL("https://facebook.com/dayznchill");
 			return false;
 		}
-		return true;
+
+		return false;
 	}
 
 	// If you want to change the way the buttons work.  

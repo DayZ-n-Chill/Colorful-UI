@@ -28,6 +28,7 @@ WindowWidgetClass WindowWidget {
      visible 1
      ignorepointer 1
      keepsafezone 1
+     position 0 0
      size 300 618.29999
      halign right_ref
      valign bottom_ref
@@ -60,11 +61,11 @@ WindowWidgetClass WindowWidget {
          visible 1
          ignorepointer 0
          color 0 0 0 0
-         size 0.95 35
+         size 293 42
          halign center_ref
          hexactpos 1
          vexactpos 1
-         hexactsize 0
+         hexactsize 1
          vexactsize 1
          userID 101
          style Default
@@ -109,11 +110,11 @@ WindowWidgetClass WindowWidget {
          visible 1
          ignorepointer 0
          color 0 0 0 0
-         size 1 35
+         size 293 42
          halign center_ref
          hexactpos 1
          vexactpos 1
-         hexactsize 0
+         hexactsize 1
          vexactsize 1
          userID 102
          style Default
@@ -133,7 +134,7 @@ WindowWidgetClass WindowWidget {
           }
           TextWidgetClass respawn_button_random_label {
            ignorepointer 1
-           size 0.95 1
+           size 1 1
            halign center_ref
            valign center_ref
            hexactpos 1
@@ -152,11 +153,11 @@ WindowWidgetClass WindowWidget {
          visible 1
          color 0 0 0 0
          position 0 0
-         size 0.95 35
+         size 293 42
          halign center_ref
          hexactpos 0
          vexactpos 0
-         hexactsize 0
+         hexactsize 1
          vexactsize 1
          userID 2
          style Default

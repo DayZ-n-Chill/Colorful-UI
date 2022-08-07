@@ -93,12 +93,12 @@ modded class MainMenu extends UIScriptedMenu
 		}
 		else if (button == MouseState.LEFT && w == m_Twitter)
 		{
-			GetGame().OpenURL("https://twitter.com/dayznhcill");
+			GetGame().OpenURL("https://twitter.com/dayznchill");
 			return false;
 		}
 		else if (button == MouseState.LEFT && w == m_Reddit)
 		{
-			GetGame().OpenURL("https://reddit.com/dayznhcill");
+			GetGame().OpenURL("https://reddit.com/dayznchill");
 			return false;
 		}
 		else if (button == MouseState.LEFT && w == m_Youtube)
@@ -113,12 +113,12 @@ modded class MainMenu extends UIScriptedMenu
 		}
 		else if (button == MouseState.LEFT && w == m_Website)
 		{
-			GetGame().OpenURL("https://dayznhill.com.com/");
+			GetGame().OpenURL("https://dayznchill.com.com/");
 			return false;
 		}
 		else if (button == MouseState.LEFT && w == m_PriorityQueue)
 		{
-			GetGame().OpenURL("https://dayznhill.com.com/");
+			GetGame().OpenURL("https://dayznchill.com.com/");
 			return false;
 		}
 		// TODO: Find out why default btn only says "rename", and wont let me chant text. 
