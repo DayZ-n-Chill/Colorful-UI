@@ -35,7 +35,7 @@ string GetRandomHint()
 		"Death makes you die.",
 		"Broomsticks give you enough resources to make a fire place and cooking stand.",
 		"Keep your car running smoothby using min 4 water bottles to fill the radioator.",
-		"You can crafrt a bone knife with one bone if you use rocks or boulders to craft it.",
+		"You can crafrt a bone knife with one bone if you use rocks or boulders tro craft it.",
 		"Try to blend in with your enviornment. Do not wear bright colors",
 		"If someone is harrassing you contact a server admin immediately",
 		"Non aggro infected will detect you in 2 seconds when sneaking up on them. Stealth kill them quick",
