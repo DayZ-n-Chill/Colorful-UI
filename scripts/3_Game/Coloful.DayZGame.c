@@ -19,7 +19,7 @@ modded class LoginQueueBase extends UIScriptedMenu
         Background.LoadImageFile(0, GetRandomBackground());  			
 		layoutRoot.FindAnyWidget("notification_root").Show(false);
 		m_ProgressLoading.SetColor(colorScheme.LoadingbarColor());
-		m_StatusText.SetColor(colorScheme.AccentColor());
+		m_StatusText.SetColor(colorScheme.SecondaryText());
 		return layoutRoot;
 	}
 };
@@ -43,7 +43,7 @@ modded class LoginTimeBase extends UIScriptedMenu
 		Class.CastTo(m_shader, layoutRoot.FindAnyWidget("Colorful_Shader"));
 		m_shader.SetColor(colorScheme.ShaderColor());
 		m_ProgressLoading.SetColor(colorScheme.LoadingbarColor());
-		m_TxtHdr.SetColor(colorScheme.AccentColor());
+		m_TxtHdr.SetColor(colorScheme.SecondaryText());
         Background.LoadImageFile(0, GetRandomBackground());  		
 		return layoutRoot;
 	}
@@ -82,7 +82,7 @@ modded class LoadingScreen
 		m_ProgressLoading = ProgressBarWidget.Cast( m_WidgetRoot.FindAnyWidget("LoadingBar") );
 
 		m_ProgressLoading.SetColor(colorScheme.LoadingbarColor());
-		m_ProTip.SetColor(colorScheme.AccentColor());
+		m_ProTip.SetColor(colorScheme.SecondaryText());
 		m_shader.SetColor(colorScheme.ShaderColor());
 		ProgressAsync.SetProgressData(m_ProgressLoading);
 		ProgressAsync.SetUserData(m_ImageBackground);
