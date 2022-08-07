@@ -34,7 +34,7 @@ modded class TutorialsMenu extends UIScriptedMenu
 			return;
 
 		int color_pnl = UIColor.Transparent();
-		int color_lbl = colorScheme.BrandColor();
+		int color_lbl = colorScheme.ButtonHoverColor();
 		int color_img = UIColor.Transparent();
 			
 		ButtonSetColor(w, color_pnl);

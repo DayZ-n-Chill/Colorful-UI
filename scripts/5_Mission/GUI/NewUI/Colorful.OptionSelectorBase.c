@@ -72,7 +72,7 @@ modded class OptionSelectorBase extends ScriptedWidgetEventHandler
 		if( !w )
 			return;
 		
-		int color_pnl = colorScheme.BrandColor();
+		int color_pnl = colorScheme.ButtonHoverColor();
 		int color_lbl = UIColor.White();
 		
 		ButtonSetColorConsole(w, color_pnl);

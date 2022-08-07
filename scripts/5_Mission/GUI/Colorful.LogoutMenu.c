@@ -109,7 +109,7 @@ modded class LogoutMenu extends UIScriptedMenu
 		if( !w )
 			return;
 		ButtonSetColor(w, UIColor.Transparent());
-		ButtonSetTextColor(w, colorScheme.BrandColor());
+		ButtonSetTextColor(w, colorScheme.ButtonHoverColor());
 	};
 
 	protected void ButtonSetColor( Widget w, int color )

@@ -23,9 +23,7 @@ string GetRandomBackground()
 		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-16.edds",
 		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-17.edds"
 	};
-	Math.Randomize(-1);
-	int bgIndex = Math.RandomInt(0, 100) % 16;
-	// int bgIndex = Math.RandomInt(0,16);
+	int bgIndex = Math.RandomInt(0,16);
 	return images[bgIndex];
 }
 
@@ -52,11 +50,9 @@ string GetRandomHint()
 		"This is Tip 17.  You can change me in the constants.c file",
 		"This is Tip 18.  You can change me in the constants.c file",
 		"This is Tip 19.  You can change me in the constants.c file",
-		"This is Tip 20.  You can change me in the constants.c file",
+		"This is Tip 20.  You can change me in the constants.c file"
 	};
-	Math.Randomize(-1);
-	int tipIndex = Math.RandomInt(0, 100) % 19;
-	// int tipIndex = Math.RandomInt(0,19);
+	int tipIndex = Math.RandomInt(0,19);
 	return tips[tipIndex];
 }
 
@@ -119,7 +115,7 @@ class colorScheme
 	static int SeparatorColor() { return BrandColor(); };
 	static int LoadingbarColor() { return BrandColor(); };
 	static int MainMenuTrim() { return BrandColor(); };
-	static int ButtonHoverColor() { return BrandColor(); };	
+	static int ButtonHoverColor() { return UIColor.Yellow(); };	
 	static int OptionInputColors() { return BrandColor(); };
 }
  

@@ -42,7 +42,7 @@ modded class ServerBrowserMenuNew extends UIScriptedMenu
 			return;
 		
 		int color_pnl = UIColor.Black();
-		int color_lbl = colorScheme.BrandColor();
+		int color_lbl = colorScheme.ButtonHoverColor();
 		
 		ButtonSetColor(w, color_pnl);
 		ButtonSetTextColor(w, color_lbl);

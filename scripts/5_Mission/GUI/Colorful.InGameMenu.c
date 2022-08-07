@@ -106,7 +106,7 @@ modded class InGameMenu extends UIScriptedMenu
 			return;
 		
 		ButtonSetColor(w, UIColor.Transparent());
-		ButtonSetTextColor(w, colorScheme.BrandColor()); 
+		ButtonSetTextColor(w, colorScheme.ButtonHoverColor()); 
 		
 	};
 

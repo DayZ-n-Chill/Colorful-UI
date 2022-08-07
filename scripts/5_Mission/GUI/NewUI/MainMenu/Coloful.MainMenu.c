@@ -14,6 +14,7 @@ modded class MainMenu extends UIScriptedMenu
 	private Widget m_SeparatorPanel
 	private Widget m_ProgressLoading
 	private	Widget m_shader
+	
 	override Widget Init()
 	{
 		// Load the layout file
@@ -186,7 +187,7 @@ modded class MainMenu extends UIScriptedMenu
 	// Button with a text only highlight.
 	//-----------------------------------------
 	// Background is your UIColor.Transparent()
-	// Text is colorScheme.BrandColor();
+	// Text is sss
 	// ----------------------------------------
 	void ColorHighlight( Widget w )
 	{
@@ -194,8 +195,8 @@ modded class MainMenu extends UIScriptedMenu
 			return;	
 			
 		int color_pnl = UIColor.Transparent();
-		int color_lbl = colorScheme.BrandColor();
-		int color_img = colorScheme.BrandColor();	
+		int color_lbl = colorScheme.ButtonHoverColor();
+		int color_img = colorScheme.ButtonHoverColor();	
 
 		ButtonSetColor(w, color_pnl);
 		ButtonSetTextColor(w, color_lbl);
