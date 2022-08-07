@@ -117,7 +117,7 @@ class colorScheme
 	static int SecondaryText() { return AccentColor(); };
 	static int ShaderColor() { return BrandColor(); };
 	static int SeparatorColor() { return BrandColor(); };
-	static int LoadingbarColor() { return AccentColor(); };
+	static int LoadingbarColor() { return BrandColor(); };
 	static int MainMenuTrim() { return BrandColor(); };
 	static int ButtonHoverColor() { return BrandColor(); };	
 	static int OptionInputColors() { return BrandColor(); };
