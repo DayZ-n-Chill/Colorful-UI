@@ -188,7 +188,7 @@ WindowWidgetClass WindowWidget {
            vexactsize 0
            scaled 1
            text "#menu_cancel"
-           font "Colorful-UI/gui/fonts/PersonalServices32"
+           font "Colorful-UI/gui/fonts/PersonalServices24"
            "exact text" 0
            "size to text h" 0
            "size to text v" 0
