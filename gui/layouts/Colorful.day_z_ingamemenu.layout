@@ -958,7 +958,7 @@ FrameWidgetClass InGameMenuRoot {
      vexactsize 1
      fixaspect outside
      image0 ""
-     imageTexture "{5314D820E495219F}Colorful-UI/gui/textures/globals/Colorful.Logo.edds"
+     imageTexture "{E5B43A7EBF12175B}Colorful-UI/gui/textures/globals/DZNC.Logo.edds"
      mode blend
      "src alpha" 1
      "no wrap" 1
