@@ -97,7 +97,7 @@ class UIColor
 	static int meta()                 { return ARGB(255, 24, 119, 242); };
 	
 	// Custom Colors (Use to add your own branding colors)
-	static int Teal()                 { return ARGB(255, 0, 102, 102); };
+	static int Teal()                 { return ARGB(255, 11, 102, 102); };
 	static int DPGPurple()            { return ARGB(255, 72, 27, 159); };
 }
 
@@ -116,16 +116,16 @@ class colorScheme
 	// Get wild and create your own color functions and use them throughout the mod.
 	// Best to Primary Text as white, but do whatever, Experiment.
 	static int PrimaryText()        { return UIColor.White(); }; 	
-	static int SecondaryText()      { return AccentColor(); };
+	static int SecondaryText()      { return BrandColor(); };
 	static int ShaderColor()        { return BrandColor(); };
-	static int SeparatorColor()     { return BrandColor(); };
-	static int LoadingbarColor()    { return BrandColor(); };
-	static int MainMenuTrim()       { return BrandColor(); };
+	static int SeparatorColor()     { return AccentColor(); };
+	static int LoadingbarColor()    { return AccentColor(); };
+	static int MainMenuTrim()       { return AccentColor(); };
 	static int ButtonHoverColor()   { return BrandColor(); };	
 	static int TabHoverColor()      { return BrandColor(); };	
-	static int OptionInputColors()  { return BrandColor(); };
+	static int OptionInputColors()  { return BrandColor();  };
 	static int OptionCaretColors()  { return BrandColor(); };
-	static int OptionSliderColors() { return BrandColor(); };
+	static int OptionSliderColors() { return AccentColor(); };
 }
  
 // Dialog Menus (No need to touch)
