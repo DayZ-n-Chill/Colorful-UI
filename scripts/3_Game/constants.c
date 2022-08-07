@@ -109,14 +109,17 @@ class colorScheme
 	// You can get more Ganular with the colors by editing the syltes below
 	// Get wild and create your own color functions and use them throughout the mod.
 	// Best to Primary Text as white, but do whatever, Experiment.
-	static int PrimaryText() { return UIColor.White(); }; 	
-	static int SecondaryText() { return AccentColor(); };
-	static int ShaderColor() { return BrandColor(); };
-	static int SeparatorColor() { return BrandColor(); };
-	static int LoadingbarColor() { return BrandColor(); };
-	static int MainMenuTrim() { return BrandColor(); };
-	static int ButtonHoverColor() { return UIColor.Yellow(); };	
-	static int OptionInputColors() { return BrandColor(); };
+	static int PrimaryText()        { return UIColor.White(); }; 	
+	static int SecondaryText()      { return AccentColor(); };
+	static int ShaderColor()        { return BrandColor(); };
+	static int SeparatorColor()     { return BrandColor(); };
+	static int LoadingbarColor()    { return BrandColor(); };
+	static int MainMenuTrim()       { return BrandColor(); };
+	static int ButtonHoverColor()   { return BrandColor(); };	
+	static int TabHoverColor()      { return BrandColor(); };	
+	static int OptionInputColors()  { return BrandColor(); };
+	static int OptionCaretColors()  { return BrandColor(); };
+	static int OptionSliderColors() { return BrandColor(); };
 }
  
 // Dialog Menus (No need to touch)

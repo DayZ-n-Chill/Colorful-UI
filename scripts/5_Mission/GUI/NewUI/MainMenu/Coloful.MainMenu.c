@@ -89,7 +89,7 @@ modded class MainMenu extends UIScriptedMenu
 		// ------------------------------------------------------------------
 		if (button == MouseState.LEFT && w == m_Discord)
 		{
-			GetGame().OpenURL("https://discord.gg/dayznchill");
+			GetGame().OpenURL("http://discord.gg/dayznchill");
 			return true;
 		}
 		else if (button == MouseState.LEFT && w == m_Twitter)
@@ -114,12 +114,12 @@ modded class MainMenu extends UIScriptedMenu
 		}
 		else if (button == MouseState.LEFT && w == m_Website)
 		{
-			GetGame().OpenURL("https://dayznchill.com.com/");
+			GetGame().OpenURL("https://dayznchill.com");
 			return false;
 		}
 		else if (button == MouseState.LEFT && w == m_PriorityQueue)
 		{
-			GetGame().OpenURL("https://dayznchill.com.com/");
+			GetGame().OpenURL("https://dayznchill.com");
 			return false;
 		}
 		// TODO: Find out why default btn only says "rename", and wont let me chant text. 
@@ -132,7 +132,7 @@ modded class MainMenu extends UIScriptedMenu
 		// NOTE: --------------------------------------------------------------------
 		// Want to add your own buttons. 
 		// Use this snippet as a template for creating buttons.  
-		//
+		// 
 		// else if (button == MouseState.LEFT && w == m_YOURVARIABLENAME)
 		// {
 		// 	GetGame().OpenURL("https://yourlink/#");
@@ -209,8 +209,8 @@ modded class MainMenu extends UIScriptedMenu
 			return;
 		
 		int color_pnl = UIColor.Transparent();
-		int color_lbl = UIColor.White();
-		int color_img = UIColor.White();
+		int color_lbl = colorScheme.PrimaryText();
+		int color_img = colorScheme.PrimaryText();
 
 		ButtonSetColor(w, color_pnl);
 		ButtonSetTextColor(w, color_lbl);

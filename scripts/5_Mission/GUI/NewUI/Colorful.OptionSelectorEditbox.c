@@ -8,7 +8,7 @@ modded class OptionSelectorEditbox extends OptionSelectorBase
 		if ( m_EditBox )
 		{
 			SetFocus( m_EditBox );
-			m_EditBox.SetColor( colorScheme.BrandColor() );
+			m_EditBox.SetColor( colorScheme.OptionInputColors() );
 		}
 		
 		super.ColorHighlight( w );

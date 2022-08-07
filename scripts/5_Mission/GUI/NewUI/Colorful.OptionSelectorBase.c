@@ -6,7 +6,7 @@ modded class OptionSelectorBase extends ScriptedWidgetEventHandler
 		if( !w )
 			return;
 				
-		ButtonSetColor(w, colorScheme.BrandColor());
+		ButtonSetColor(w, colorScheme.ButtonHoverColor());
 	}
 	
 	void ColorNormal( Widget w )
@@ -14,8 +14,8 @@ modded class OptionSelectorBase extends ScriptedWidgetEventHandler
 		if( !w )
 			return;
 		
-		int color_pnl = UIColor.White();
-		int color_lbl = UIColor.White();
+		int color_pnl = colorScheme.PrimaryText();
+		int color_lbl = colorScheme.PrimaryText();
 		
 		ButtonSetColor(w, color_pnl);
 		
@@ -39,7 +39,7 @@ modded class OptionSelectorBase extends ScriptedWidgetEventHandler
 			return;
 		
 		int color_pnl = UIColor.Transparent();
-		int color_lbl = UIColor.White();
+		int color_lbl = colorScheme.PrimaryText();
 		
 		ButtonSetColor(w, color_pnl);
 		
@@ -73,7 +73,7 @@ modded class OptionSelectorBase extends ScriptedWidgetEventHandler
 			return;
 		
 		int color_pnl = colorScheme.ButtonHoverColor();
-		int color_lbl = UIColor.White();
+		int color_lbl = colorScheme.PrimaryText();
 		
 		ButtonSetColorConsole(w, color_pnl);
 		ButtonSetAlphaAnimConsole( null );
@@ -86,7 +86,7 @@ modded class OptionSelectorBase extends ScriptedWidgetEventHandler
 			return;
 		
 		int color_pnl = UIColor.Transparent();
-		int color_lbl = UIColor.White();
+		int color_lbl = colorScheme.PrimaryText();
 		
 		ButtonSetColorConsole(w, color_pnl);
 		ButtonSetAlphaAnimConsole( null );

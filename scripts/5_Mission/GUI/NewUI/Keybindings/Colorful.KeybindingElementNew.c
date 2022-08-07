@@ -23,7 +23,7 @@ modded class KeybindingElementNew extends ScriptedWidgetEventHandler
 	{
 		if( w == m_PrimaryBindButton || w == m_PrimaryClear )
 		{
-			m_PrimaryBindButton.SetColor( colorScheme.BrandColor() );
+			m_PrimaryBindButton.SetColor( colorScheme.ButtonHoverColor() );
 			m_PrimaryClear.Show( true );
 			m_PrimaryClear.Update();
 			m_AlternativeClear.Show( false );
@@ -31,7 +31,7 @@ modded class KeybindingElementNew extends ScriptedWidgetEventHandler
 		}
 		else if( w == m_AlternativeBindButton || w == m_AlternativeClear )
 		{
-			m_AlternativeBindButton.SetColor( colorScheme.BrandColor() );
+			m_AlternativeBindButton.SetColor( colorScheme.ButtonHoverColor() );
 			m_PrimaryClear.Show( false );
 			m_AlternativeClear.Show( true );
 			m_AlternativeClear.Update();

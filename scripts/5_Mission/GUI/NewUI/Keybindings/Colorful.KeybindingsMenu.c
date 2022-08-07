@@ -349,7 +349,7 @@ modded class KeybindingsMenu extends UIScriptedMenu
 		ButtonWidget button = ButtonWidget.Cast( w );
 		if( button && button != m_Apply )
 		{
-			button.SetTextColor(colorScheme.BrandColor());
+			button.SetTextColor(colorScheme.OptionInputColors());
 		}
 	}
 	
@@ -399,7 +399,7 @@ modded class KeybindingsMenu extends UIScriptedMenu
 			return;
 		
 		ButtonSetColor(w, UIColor.Transparent());
-		ButtonSetTextColor(w, colorScheme.BrandColor());
+		ButtonSetTextColor(w, colorScheme.OptionInputColors());
 	};
 
 	protected void ColorNormal( Widget w )
@@ -408,7 +408,7 @@ modded class KeybindingsMenu extends UIScriptedMenu
 			return;
 		
 		ButtonSetColor(w, UIColor.Transparent());
-		ButtonSetTextColor(w, UIColor.White());
+		ButtonSetTextColor(w, colorScheme.PrimaryText());
 	}
 
 

@@ -114,7 +114,7 @@ class colorfulExitDialog extends UIScriptedMenu
 		if( !w )
 			return;
 
-		w.SetColor( colorScheme.BrandColor() );
+		w.SetColor( colorScheme.ButtonHoverColor() );
 	}
 
 	void ColorNormal( Widget w )

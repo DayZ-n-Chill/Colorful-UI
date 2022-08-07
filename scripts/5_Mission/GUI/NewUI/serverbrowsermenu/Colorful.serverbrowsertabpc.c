@@ -64,7 +64,7 @@ modded class ServerBrowserTabPc extends ServerBrowserTab
 		}
 		
 		root = TextWidget.Cast( m_Root.FindAnyWidget( r_name ) );
-		root.SetColor(colorScheme.BrandColor());
+		root.SetColor(colorScheme.ButtonHoverColor());
 		
 		m_Root.FindAnyWidget( w_name ).Show( true );
 		m_Root.FindAnyWidget( w_name + "_asc" ).Show( !m_SortOrder );

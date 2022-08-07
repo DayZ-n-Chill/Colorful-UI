@@ -21,7 +21,7 @@ modded class OptionSelectorSliderSetup extends OptionSelectorBase
 		
 		if ( m_Slider )
 		{
-			m_Slider.SetColor( colorScheme.BrandColor()  );
+			m_Slider.SetColor( colorScheme.OptionSliderColors()  );
 		}
 		super.ColorNormal( w );
 	}
@@ -34,7 +34,7 @@ modded class OptionSelectorSliderSetup extends OptionSelectorBase
 			m_ParentClass.OnFocus( m_Root.GetParent(), -1, m_SelectorType );
 			#ifdef PLATFORM_WINDOWS
 			m_ParentClass.OnMouseEnter( m_Root.GetParent().GetParent(), x, y );
-			m_Slider.SetColor(colorScheme.BrandColor());
+			m_Slider.SetColor(colorScheme.OptionSliderColors());
 			#endif
 		}
 		

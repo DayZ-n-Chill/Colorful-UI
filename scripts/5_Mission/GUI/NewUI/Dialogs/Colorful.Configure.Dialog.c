@@ -134,7 +134,7 @@ class colorfulConfigureDialog extends UIScriptedMenu
 		if( !w )
 			return;
 
-		w.SetColor( colorScheme.BrandColor() );
+		w.SetColor( colorScheme.ButtonHoverColor() );
 	}
 
 	void ColorNormal( Widget w )
@@ -143,7 +143,7 @@ class colorfulConfigureDialog extends UIScriptedMenu
 			return;
 
 		int color_pnl = UIColor.Transparent();
-		int color_lbl = UIColor.White();
+		int color_lbl = colorScheme.PrimaryText();
 
 		ButtonSetColor(w, color_pnl);
 		ButtonSetTextColor(w, color_lbl);

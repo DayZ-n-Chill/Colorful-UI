@@ -11,7 +11,7 @@ modded class ServerBrowserEntry extends ScriptedWidgetEventHandler
 			
 			m_ServerData.m_IsSelected = true;
 			m_Selected = true;
-			m_ServerName.SetColor(colorScheme.BrandColor());
+			m_ServerName.SetColor(colorScheme.ButtonHoverColor());
 		}
 	}
 	
@@ -58,7 +58,7 @@ modded class ServerBrowserEntry extends ScriptedWidgetEventHandler
 		{
 			m_Root.SetColor( ARGB( 100, 0, 0, 0) );
 			m_Root.SetAlpha( 1 );
-			m_ServerName.SetColor(colorScheme.BrandColor());
+			m_ServerName.SetColor(colorScheme.ButtonHoverColor());
 		}
 	}
 	

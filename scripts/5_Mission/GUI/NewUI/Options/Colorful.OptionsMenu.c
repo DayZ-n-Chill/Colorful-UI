@@ -51,10 +51,10 @@ modded class OptionsMenu extends UIScriptedMenu
 		if ( w.IsInherited( ButtonWidget ) )
 		{
 			ButtonWidget button = ButtonWidget.Cast( w );
-			button.SetTextColor( colorScheme.BrandColor() );
+			button.SetTextColor( colorScheme.ButtonHoverColor() );
 		}
 		
-		w.SetColor( ARGB( 255, 0, 0, 0) );
+		w.SetColor( UIColor.Black() );
 		
 		TextWidget text1	= TextWidget.Cast(w.FindAnyWidget( w.GetName() + "_text" ) );
 		TextWidget text2	= TextWidget.Cast(w.FindAnyWidget( w.GetName() + "_label" ) );
@@ -65,33 +65,33 @@ modded class OptionsMenu extends UIScriptedMenu
 		
 		if ( text1 )
 		{
-			text1.SetColor(colorScheme.BrandColor() );
+			text1.SetColor(colorScheme.ButtonHoverColor() );
 		}
 		
 		if ( text2 )
 		{
-			text2.SetColor(colorScheme.BrandColor() );
+			text2.SetColor(colorScheme.ButtonHoverColor() );
 		}
 		
 		if ( text3 )
 		{
-			text3.SetColor(colorScheme.BrandColor() );
+			text3.SetColor(colorScheme.ButtonHoverColor() );
 			w.SetAlpha(1);
 		}
 		
 		if ( image )
 		{
-			image.SetColor( colorScheme.BrandColor() );
+			image.SetColor( colorScheme.ButtonHoverColor() );
 		}
 		
 		if ( option )
 		{
-			option.SetColor(colorScheme.BrandColor() );
+			option.SetColor(colorScheme.ButtonHoverColor() );
 		}
 		
 		if ( option_label )
 		{
-			option_label.SetColor(colorScheme.BrandColor() );
+			option_label.SetColor(colorScheme.ButtonHoverColor() );
 		}
 	}
 	

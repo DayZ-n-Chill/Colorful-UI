@@ -85,7 +85,7 @@ modded class CharacterCreationMenu extends UIScriptedMenu
 		CheckNewOptions();
 		
 		Widget m_separator = layoutRoot.FindAnyWidget("separator_red");
-		m_separator.SetColor( colorScheme.BrandColor() );
+		m_separator.SetColor( colorScheme.SeparatorColor() );
 		
 		return layoutRoot;
 	}
@@ -96,10 +96,10 @@ modded class CharacterCreationMenu extends UIScriptedMenu
 		if( w.IsInherited( ButtonWidget ) )
 		{
 			ButtonWidget button = ButtonWidget.Cast( w );
-			button.SetTextColor( colorScheme.BrandColor()  );
+			button.SetTextColor( colorScheme.ButtonHoverColor()  );
 		}
 		
-		w.SetColor( ARGB( 255, 0, 0, 0) );
+		w.SetColor( UIColor.Black() );
 		
 		TextWidget text1	= TextWidget.Cast(w.FindAnyWidget( w.GetName() + "_text" ) );
 		TextWidget text2	= TextWidget.Cast(w.FindAnyWidget( w.GetName() + "_label" ) );
@@ -110,34 +110,34 @@ modded class CharacterCreationMenu extends UIScriptedMenu
 		
 		if( text1 )
 		{
-			text1.SetColor( colorScheme.BrandColor() );
+			text1.SetColor( colorScheme.ButtonHoverColor() );
 		}
 		
 		if( text2 )
 		{
-			text2.SetColor( colorScheme.BrandColor() );
+			text2.SetColor( colorScheme.ButtonHoverColor() );
 		}
 		
 		if( text3 )
 		{
-			text3.SetColor( colorScheme.BrandColor() );
+			text3.SetColor( colorScheme.ButtonHoverColor() );
 			w.SetAlpha(1);
 		}
 		
 		if( image )
 		{
-			image.SetColor( colorScheme.BrandColor() );
+			image.SetColor( colorScheme.ButtonHoverColor() );
 		}
 		
 		if ( option )
 		{
-			option.SetColor( colorScheme.BrandColor() );
+			option.SetColor( colorScheme.ButtonHoverColor() );
 		}
 		
 		#ifndef PLATFORM_CONSOLE
 		if ( option_label )
 		{
-			option_label.SetColor( colorScheme.BrandColor() );
+			option_label.SetColor( colorScheme.ButtonHoverColor() );
 		}
 		#endif
 	}
@@ -147,7 +147,7 @@ modded class CharacterCreationMenu extends UIScriptedMenu
 		if( w.IsInherited( ButtonWidget ) )
 		{
 			ButtonWidget button = ButtonWidget.Cast( w );
-			button.SetTextColor( UIColor.White() );
+			button.SetTextColor( colorScheme.PrimaryText() );
 		}
 		
 		TextWidget text1	= TextWidget.Cast(w.FindAnyWidget( w.GetName() + "_text" ) );
@@ -159,34 +159,34 @@ modded class CharacterCreationMenu extends UIScriptedMenu
 		
 		if( text1 )
 		{
-			text1.SetColor( UIColor.White() );
+			text1.SetColor( colorScheme.PrimaryText() );
 		}
 		
 		if( text2 )
 		{
-			text2.SetColor( UIColor.White() );
+			text2.SetColor( colorScheme.PrimaryText() );
 		}
 		
 		if( text3 )
 		{
-			text3.SetColor( UIColor.White() );
+			text3.SetColor( colorScheme.PrimaryText() );
 			w.SetAlpha(0);
 		}
 		
 		if( image )
 		{
-			image.SetColor( UIColor.White() );
+			image.SetColor( colorScheme.PrimaryText() );
 		}
 		
 		if ( option )
 		{
-			option.SetColor( UIColor.White() );
+			option.SetColor( colorScheme.PrimaryText() );
 		}
 		
 		#ifndef PLATFORM_CONSOLE
 		if ( option_label )
 		{
-			option_label.SetColor( UIColor.White() );
+			option_label.SetColor( colorScheme.PrimaryText() );
 		}
 		#endif
 	}
