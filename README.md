@@ -4,19 +4,20 @@ A UI System Built for DayZ Server owners.  Includes a wide assortment of colors 
 ## Features
 - Fully Responsive Design (UHD & Ultrawide Supported)
 - Loading Screen with Random BG Images, & Tips
-- Death Screen with Random BG Images, & Death Quotes
 - Main Menu with Static BG Image and Custom Music.
 - Moddified layout on all Default Layouts. 
 - Easily Editiably Layout Files with Prefab Elements.
-- Customizable Stamina Colors
-- Customizable Status Icon Colors
 - Custom Quickslot Bars
-- Server Panel
-- Multiple Prefab, & Custom Theme Colors.
 - Simple Configuration
+- Customize EVERY ELEMENT INDIVIDUALLY!
 - NO MOD DEPENDANCIES!
 
 ## Coming Soon
+- Server Panel
+- Multiple Prefab, & Custom Theme Colors.
+- Customizable Stamina Colors
+- Customizable Status Icon Colors
+- Death Screen with Random BG Images, & Death Quotes
 - MultiLanguage
 - Player Stats
 - Leaderboards
