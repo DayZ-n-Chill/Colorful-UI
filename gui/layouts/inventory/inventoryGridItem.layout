@@ -1,4 +1,5 @@
 PanelWidgetClass GridCell {
+ visible 1
  clipchildren 1
  inheritalpha 0
  ignorepointer 0
@@ -20,6 +21,7 @@ PanelWidgetClass GridCell {
    vexactsize 0
    {
     PanelWidgetClass GridItem {
+     visible 1
      clipchildren 0
      inheritalpha 0
      color 0 0 0 1
