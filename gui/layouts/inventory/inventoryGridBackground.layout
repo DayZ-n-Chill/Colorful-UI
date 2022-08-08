@@ -1,5 +1,5 @@
 PanelWidgetClass GridBck {
- visible 0
+ visible 1
  clipchildren 0
  inheritalpha 0
  ignorepointer 0
@@ -81,6 +81,7 @@ PanelWidgetClass GridBck {
    style rover_sim_colorable
    {
     ImageWidgetClass LabelCCOutline {
+     visible 0
      ignorepointer 1
      color 0.4235 0.4235 0.3843 1
      position 0 0
