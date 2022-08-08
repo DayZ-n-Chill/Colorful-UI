@@ -97,8 +97,11 @@ class UIColor
 	static int meta()                 { return ARGB(255, 24, 119, 242); };
 	
 	// Custom Colors (Use to add your own branding colors)
+	static int DZNCRed()   			  { return ARGB(255, 106, 0, 0); };
+	static int BrightTeal()           { return ARGB(255, 15, 177, 177); };
 	static int Teal()                 { return ARGB(255, 11, 102, 102); };
-	static int DPGPurple()            { return ARGB(255, 72, 27, 159); };
+	static int Serria()           	  { return ARGB(255, 250, 125, 33); };
+
 }
 
 // DEFINE YOUR THEME -------------------------------------------------------
@@ -107,24 +110,24 @@ class colorScheme
 {
 	// Quick Styling --------------------------------------
 	// This color should be Servers/Communities Brand Color
-	static int BrandColor()   { return UIColor.Teal(); };
+	static int BrandColor()   { return UIColor.DZNCRed(); };
 	// This color should be a complimentary color to your brand. 
-	static int AccentColor()  { return UIColor.Red(); }
+	static int AccentColor()  { return UIColor.Teal(); }
 
 	// Advanced Styling --------------------------------------
 	// You can get more Ganular with the colors by editing the syltes below
 	// Get wild and create your own color functions and use them throughout the mod.
 	// Best to Primary Text as white, but do whatever, Experiment.
 	static int PrimaryText()        { return UIColor.White(); }; 	
-	static int SecondaryText()      { return BrandColor(); };
-	static int ShaderColor()        { return BrandColor(); };
-	static int SeparatorColor()     { return AccentColor(); };
-	static int LoadingbarColor()    { return AccentColor(); };
+	static int SecondaryText()      { return AccentColor(); };
+	static int ShaderColor()        { return AccentColor(); };
+	static int SeparatorColor()     { return BrandColor(); };
+	static int LoadingbarColor()    { return BrandColor(); };
 	static int MainMenuTrim()       { return AccentColor(); };
-	static int ButtonHoverColor()   { return BrandColor(); };	
-	static int TabHoverColor()      { return BrandColor(); };	
-	static int OptionInputColors()  { return BrandColor();  };
-	static int OptionCaretColors()  { return BrandColor(); };
+	static int ButtonHoverColor()   { return AccentColor(); };	
+	static int TabHoverColor()      { return AccentColor(); };	
+	static int OptionInputColors()  { return AccentColor(); };
+	static int OptionCaretColors()  { return AccentColor(); };
 	static int OptionSliderColors() { return AccentColor(); };
 }
  
