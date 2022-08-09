@@ -131,14 +131,14 @@ PanelWidgetClass TextInputDialogRoot {
      visible 1
      clipchildren 0
      inheritalpha 1
-     size 460 320
+     size 460 460
      hexactpos 0
      vexactpos 0
      hexactsize 1
      vexactsize 1
      fixaspect outside
      image0 ""
-     imageTexture "{5314D820E495219F}Colorful-UI/gui/textures/globals/Colorful.Logo.edds"
+     imageTexture "{AFC75BEAD7235F2B}Colorful-UI/gui/textures/globals/DPG_Logo.edds"
      mode blend
      "src alpha" 1
      "no wrap" 1

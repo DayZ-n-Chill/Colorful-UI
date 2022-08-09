@@ -94,7 +94,7 @@ modded class MainMenu extends UIScriptedMenu
 		}
 		else if (button == MouseState.LEFT && w == m_Twitter)
 		{
-			GetGame().OpenURL("https://twitter.com/dayznchill");
+			GetGame().OpenURL("https://twitter.com/OfficialDeadPix");
 			return false;
 		}
 		else if (button == MouseState.LEFT && w == m_Reddit)
@@ -104,7 +104,7 @@ modded class MainMenu extends UIScriptedMenu
 		}
 		else if (button == MouseState.LEFT && w == m_Youtube)
 		{
-			GetGame().OpenURL("https://youtube.com/dayznchill");
+			GetGame().OpenURL("https://youtube.com/channel/UCFGlPpCYsYXmaRFCxidq8gQ ");
 			return false;
 		}	
 		else if (button == MouseState.LEFT && w == m_Facebook)

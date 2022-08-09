@@ -5,26 +5,15 @@
 string GetRandomBackground()
 {
 	const string images[] = {
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-1.edds", 
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-2.edds",
-        "Colorful-UI/gui/textures/loading_screens/Colorful-BG-3.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-4.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-5.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-6.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-7.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-8.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-9.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-10.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-11.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-12.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-13.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-14.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-15.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-16.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-17.edds"
+		"Colorful-UI/gui/textures/loading_screens/Loading_1.edds", 
+		"Colorful-UI/gui/textures/loading_screens/Loading_2.edds",
+        "Colorful-UI/gui/textures/loading_screens/Loading_3.edds",
+		"Colorful-UI/gui/textures/loading_screens/Loading_4.edds",
+		"Colorful-UI/gui/textures/loading_screens/Loading_6.edds",
+		"Colorful-UI/gui/textures/loading_screens/Loading_7.edds"
 	};
 	Math.Randomize(-1);
-	int bgIndex = Math.RandomInt(0, 100) % 17;
+	int bgIndex = Math.RandomInt(0, 100) % 6;
 	return images[bgIndex];
 }
 
@@ -81,7 +70,7 @@ class UIColor
 	static int SemiTransparentWhite() { return ARGB(120, 255, 255, 255); };
 	
 	// R.O.Y.G.B.I.V
-	static int Red()    			  { return ARGB(255, 173, 35, 35); };
+	static int Red()    			  { return ARGB(255, 207, 54, 54); };
 	static int Orange() 			  { return ARGB(255, 215, 153, 19); };
 	static int Yellow() 			  { return ARGB(255, 204, 204, 66); };
 	static int Green()  			  { return ARGB(255, 51, 204, 51); };
@@ -107,7 +96,7 @@ class colorScheme
 {
 	// Quick Styling --------------------------------------
 	// This color should be Servers/Communities Brand Color
-	static int BrandColor()   { return UIColor.Teal(); };
+	static int BrandColor()   { return UIColor.DPGPurple(); };
 	// This color should be a complimentary color to your brand. 
 	static int AccentColor()  { return UIColor.Red(); }
 
@@ -121,11 +110,11 @@ class colorScheme
 	static int SeparatorColor()     { return BrandColor(); };
 	static int LoadingbarColor()    { return BrandColor(); };
 	static int MainMenuTrim()       { return BrandColor(); };
-	static int ButtonHoverColor()   { return BrandColor(); };	
-	static int TabHoverColor()      { return BrandColor(); };	
+	static int ButtonHoverColor()   { return AccentColor(); };	
+	static int TabHoverColor()      { return AccentColor(); };	
 	static int OptionInputColors()  { return BrandColor(); };
 	static int OptionCaretColors()  { return BrandColor(); };
-	static int OptionSliderColors() { return BrandColor(); };
+	static int OptionSliderColors() { return AccentColor(); };
 }
  
 // Dialog Menus (No need to touch)
