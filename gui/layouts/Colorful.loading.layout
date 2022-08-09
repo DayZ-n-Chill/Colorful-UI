@@ -21,7 +21,7 @@ FrameWidgetClass LoadingFrame {
    vexactsize 0
    fixaspect outside
    image0 ""
-   imageTexture "{A5D8917F066B3FDC}Colorful-UI/gui/textures/loading_screens/Colorful-BG-12.edds"
+   imageTexture "{A565090435B41D7D}Colorful-UI/gui/textures/loading_screens/Loading_1.edds"
    mode opaque
    "src alpha" 0
    stretch 1
@@ -40,7 +40,7 @@ FrameWidgetClass LoadingFrame {
    vexactsize 0
    fixaspect outside
    image0 ""
-   imageTexture "{A5D8917F066B3FDC}Colorful-UI/gui/textures/loading_screens/Colorful-BG-12.edds"
+   imageTexture "{A565090435B41D7D}Colorful-UI/gui/textures/loading_screens/Loading_1.edds"
    mode opaque
    "src alpha" 0
    stretch 1
