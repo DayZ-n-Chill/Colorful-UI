@@ -54,7 +54,6 @@ string GetRandomHint()
 // Please submit a pull request to the dev branch for suggestions.
 // https://github.com/DayZ-n-Chill/Colorful-UI/tree/dev
 
-
 // COLOR PALETTES ---------------------------------------------------------
 // Use these coloring functions to mix and match the theme of your choice.
 // You can add to it, remove colors from it.  Whatever you like.
