@@ -24,6 +24,8 @@ string GetRandomBackground()
 		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-17.edds"
 	};
 	Math.Randomize(-1);
+	// NOTE: THe number at the end of the next line is how many image you are cycling through. 
+	// Change this number to the amount ofg images you have above.
 	int bgIndex = Math.RandomInt(0, 100) % 17;
 	return images[bgIndex];
 }
@@ -35,7 +37,7 @@ string GetRandomHint()
 		"Death makes you die.",
 		"Broomsticks give you enough resources to make a fire place and cooking stand.",
 		"Keep your car running smoothby using min 4 water bottles to fill the radioator.",
-		"You can crafrt a bone knife with one bone if you use rocks or boulders tro craft it.",
+		"You can craft a bone knife with one bone if you use rocks or boulders tro craft it.",
 		"Try to blend in with your enviornment. Do not wear bright colors",
 		"If someone is harrassing you contact a server admin immediately",
 		"Non aggro infected will detect you in 2 seconds when sneaking up on them. Stealth kill them quick",
@@ -44,7 +46,7 @@ string GetRandomHint()
 		"Baking food provides the most nutritional value when cooking.",
 		"The flare gun can not kill anything in the game but yourself.",
 		"Armor Peircing rounds do not do extra damage, they just reduce the durability of armor faster.",
-		"Going unconsiousl in water will kill you in 20 seconds.",
+		"Going unconsious in water will kill you in 20 seconds.",
 		"Having full white stats, or taking multivitamins will allow you to eat raw meat, drink from dirty water sources, and consume with bloody hands.",
 		"Apart from the Famas, all sawed off weapons have twice the ammount of recoil",
 		"Any weapon with a suppressor cannot be heard after 150 meters.",
@@ -112,7 +114,7 @@ class colorScheme
 	// This color should be Servers/Communities Brand Color
 	static int BrandColor()   { return UIColor.DZNCRed(); };
 	// This color should be a complimentary color to your brand. 
-	static int AccentColor()  { return UIColor.Teal(); }
+	static int AccentColor()  { return UIColor.Teal(); };
 
 	// Advanced Styling --------------------------------------
 	// You can get more Ganular with the colors by editing the syltes below
