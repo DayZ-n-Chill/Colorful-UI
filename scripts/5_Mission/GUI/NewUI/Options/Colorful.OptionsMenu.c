@@ -3,6 +3,7 @@ modded class OptionsMenu extends UIScriptedMenu
 	private Widget m_Separator
 	private	Widget m_shader
 
+
 		
 	override Widget Init()
 	{

@@ -7,11 +7,13 @@ modded class InGameMenu extends UIScriptedMenu
 	private Widget m_Youtube;
 	private Widget m_Reddit;
 	private Widget m_Facebook;
+	private Widget m_Website;
 
 	override Widget Init()
 	{
 		layoutRoot = GetGame().GetWorkspace().CreateWidgets("Colorful-UI/gui/layouts/colorful.day_z_ingamemenu.layout");
-				
+		
+		m_Website					= layoutRoot.FindAnyWidget( "WebsiteBtn" );				
 		m_ContinueButton			= layoutRoot.FindAnyWidget( "continuebtn" );
 		m_ExitButton				= layoutRoot.FindAnyWidget( "exitbtn" );
 		m_RestartButton				= layoutRoot.FindAnyWidget( "restartbtn" );
@@ -71,7 +73,7 @@ modded class InGameMenu extends UIScriptedMenu
 		}
 		else if (button == MouseState.LEFT && w == m_Discord)
 		{
-			GetGame().OpenURL("https://discord.gg/dayznchill");
+			GetGame().OpenURL("https://discord.gg/y8cYYsXrWd");
 			return true;
 		}
 		else if (button == MouseState.LEFT && w == m_Twitter)
@@ -92,6 +94,11 @@ modded class InGameMenu extends UIScriptedMenu
 		else if (button == MouseState.LEFT && w == m_Facebook)
 		{
 			GetGame().OpenURL("https://facebook.com/dayznchill");
+			return false;
+		}
+		else if (button == MouseState.LEFT && w == m_Website)
+		{
+			GetGame().OpenURL("https://StalkerZ.net");
 			return false;
 		}
 

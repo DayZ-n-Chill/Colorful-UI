@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{E5D2D383D301F2D1}Colorful-UI/gui/textures/loading_screens/StalkerZ_BG_4.edds"
+ Author "corruscant"
+ ChangeDate -210408168
+ Configurations {
+  JPGResourceClass PC {
+   SourceFile "StalkerZ_BG_4.jpg"
+  }
+  JPGResourceClass XBOX_ONE : PC {
+  }
+  JPGResourceClass PS4 : PC {
+  }
+  JPGResourceClass LINUX : PC {
+  }
+ }
+}

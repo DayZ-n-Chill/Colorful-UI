@@ -244,6 +244,58 @@ WindowWidgetClass WindowWidget {
        Columns 1
        Rows 5
        {
+        ButtonWidgetClass WebsiteBtn {
+         color 0 0 0 0
+         position 0 0
+         size 293 42
+         halign right_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         style Empty
+         "no focus" 0
+         "next left" "news_main"
+         "next right" "news_main"
+         "next up" "choose_server"
+         "next down" "play_video"
+         {
+          PanelWidgetClass WebsiteBtn_panel {
+           ignorepointer 1
+           color 0 0 0 0
+           size 1 1
+           halign right_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style DayZDefaultPanel
+           {
+            TextWidgetClass WebsiteBtn_label {
+             clipchildren 0
+             ignorepointer 1
+             position 8 -0.02646
+             size 1 1
+             halign right_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             text "StalkerZ.net"
+             font "Colorful-UI/gui/fonts/PersonalServices24"
+             "exact text" 1
+             "size to text h" 1
+             "size to text v" 0
+             "text halign" right
+             "text valign" center
+            }
+           }
+          }
+         }
+        }
         ButtonWidgetClass DiscordBtn {
          color 0 0 0 0
          size 293 39
@@ -275,6 +327,7 @@ WindowWidgetClass WindowWidget {
             ImageWidgetClass DiscordBtn_img {
              clipchildren 0
              ignorepointer 1
+             position 0 2
              size 47 39
              halign right_ref
              valign center_ref
@@ -313,6 +366,7 @@ WindowWidgetClass WindowWidget {
          }
         }
         ButtonWidgetClass TwitterBtn {
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -381,7 +435,7 @@ WindowWidgetClass WindowWidget {
          }
         }
         ButtonWidgetClass RedditBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -450,7 +504,7 @@ WindowWidgetClass WindowWidget {
          }
         }
         ButtonWidgetClass YoutubeBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -518,7 +572,7 @@ WindowWidgetClass WindowWidget {
          }
         }
         ButtonWidgetClass FacebookBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -649,6 +703,25 @@ WindowWidgetClass WindowWidget {
              "text halign" right
              "text valign" center
             }
+            ImageWidgetClass ColorfulLogo0 {
+             visible 1
+             clipchildren 0
+             inheritalpha 1
+             size 460 425
+             hexactpos 0
+             vexactpos 0
+             hexactsize 1
+             vexactsize 1
+             fixaspect outside
+             image0 ""
+             imageTexture "{21DA72C6325555B4}Colorful-UI/gui/textures/globals/Colorful.UI_StalkerZLogo.edds"
+             mode blend
+             "src alpha" 1
+             "no wrap" 1
+             stretch 1
+             filter 1
+             nocache 0
+            }
            }
           }
          }
@@ -661,14 +734,14 @@ WindowWidgetClass WindowWidget {
      visible 1
      clipchildren 0
      inheritalpha 1
-     size 460 320
+     size 460 425
      hexactpos 0
      vexactpos 0
      hexactsize 1
      vexactsize 1
      fixaspect outside
      image0 ""
-     imageTexture "{5314D820E495219F}Colorful-UI/gui/textures/globals/Colorful.Logo.edds"
+     imageTexture "{21DA72C6325555B4}Colorful-UI/gui/textures/globals/Colorful.UI_StalkerZLogo.edds"
      mode blend
      "src alpha" 1
      "no wrap" 1
