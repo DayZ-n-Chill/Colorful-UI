@@ -40,7 +40,7 @@ FrameWidgetClass LoadingFrame {
    vexactsize 0
    fixaspect outside
    image0 ""
-   imageTexture "{A5D8917F066B3FDC}Colorful-UI/gui/textures/loading_screens/Colorful-BG-12.edds"
+   imageTexture "{61C1F79E62961C46}Colorful-UI/gui/textures/loading_screens/Colorful-BG-4.edds"
    mode opaque
    "src alpha" 0
    stretch 1
@@ -120,6 +120,282 @@ FrameWidgetClass LoadingFrame {
     }
    }
   }
+  ProgressBarWidgetClass LoadingBar {
+   ignorepointer 1
+   color 0.8118 0.8118 0.8118 1
+   size 1 20
+   halign center_ref
+   valign bottom_ref
+   hexactpos 1
+   vexactpos 1
+   hexactsize 0
+   vexactsize 1
+   style Stamina
+   current 45
+  }
+  FrameWidgetClass "Hidden Stuff" {
+   visible 0
+   ignorepointer 1
+   position 0 0
+   size 48 48
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   {
+    PanelWidgetClass notification_root {
+     visible 0
+     clipchildren 1
+     ignorepointer 1
+     color 0 0 0 0.9294
+     position 0 0
+     size 900 15
+     halign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 1
+     vexactsize 1
+     scaled 1
+     userID 100
+     scriptclass "NoticeSpacer"
+     style DayZDefaultPanel
+     "no focus" 1
+     {
+      RichTextWidgetClass notification_part_1_text {
+       visible 0
+       clipchildren 1
+       ignorepointer 1
+       position 0 0
+       size 673 100
+       halign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 1
+       vexactsize 1
+       scriptclass ""
+       text "#dayz_game_exp_disclaimer_part1"
+       font "gui/fonts/sdf_MetronLight24"
+       "text offset" 18 0
+       "exact text" 1
+       "exact text size" 24
+       "size to text h" 1
+       "size to text v" 1
+       "text valign" center
+       wrap 1
+       "condense whitespace" 1
+       "strip newlines" 1
+       "content offset" 2
+      }
+      RichTextWidgetClass notification_part_2_text {
+       visible 0
+       ignorepointer 1
+       position 0 0
+       size 673 100
+       halign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 1
+       vexactsize 1
+       scaled 1
+       scriptclass ""
+       text "#dayz_game_exp_disclaimer_part2"
+       font "gui/fonts/sdf_MetronLight24"
+       "text offset" 18 0
+       "exact text" 1
+       "exact text size" 24
+       "size to text h" 1
+       "size to text v" 1
+       "text valign" center
+       wrap 1
+       "condense whitespace" 1
+       "strip newlines" 1
+       "content offset" 2
+      }
+      RichTextWidgetClass notification_part_3_text {
+       visible 0
+       ignorepointer 1
+       keepsafezone 0
+       position 0 0
+       size 673 100
+       halign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 1
+       vexactsize 1
+       scaled 1
+       scriptclass ""
+       text "#dayz_game_exp_disclaimer_part3"
+       font "gui/fonts/sdf_MetronLight24"
+       "text offset" 18 0
+       "exact text" 1
+       "exact text size" 24
+       "size to text h" 1
+       "size to text v" 1
+       "text valign" center
+       wrap 1
+       "condense whitespace" 1
+       "strip newlines" 1
+       "content offset" 2
+      }
+      RichTextWidgetClass notification_part_4_text {
+       visible 0
+       ignorepointer 1
+       position 0 0
+       size 673 100
+       halign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 1
+       vexactsize 1
+       text "#dayz_game_exp_disclaimer_part4"
+       font "gui/fonts/sdf_MetronLight24"
+       "text offset" 18 0
+       "exact text" 1
+       "exact text size" 24
+       "size to text h" 1
+       "size to text v" 1
+       "text valign" center
+       wrap 1
+       "condense whitespace" 1
+       "strip newlines" 1
+       "content offset" 2
+      }
+     }
+     {
+      ScriptParamsClass {
+       AlignChilds 1
+      }
+     }
+    }
+    TextWidgetClass dbg_Layout_name {
+     visible 0
+     position 150 500
+     size 300 50
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     text "loading.layout"
+     font "gui/fonts/sdf_MetronLight24"
+     "exact text" 1
+    }
+    MultilineTextWidgetClass ModdedWarning {
+     visible 0
+     inheritalpha 1
+     position 100 286
+     size 444 30
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     fixaspect outside
+     text "#str_modded_version_warning0"
+     font "gui/fonts/sdf_MetronLight24"
+     "exact text" 1
+     "size to text h" 1
+     "size to text v" 1
+     wrap 1
+    }
+    ImageWidgetClass ImageLoadingIcon {
+     visible 0
+     inheritalpha 0
+     ignorepointer 0
+     keepsafezone 0
+     position 80 80
+     size 64 64
+     halign right_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     scaled 1
+     scriptclass ""
+     image0 "set:dayz_gui image:icon_refresh"
+     mode additive
+     "src alpha" 1
+     "no wrap" 0
+     filter 1
+     nocache 0
+    }
+    ImageWidgetClass ImageLogoMid {
+     visible 0
+     inheritalpha 1
+     position 100 78
+     size 444 208
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     fixaspect outside
+     image0 "set:dayz_gui image:DayZLogo"
+     mode blend
+     "src alpha" 1
+     "no wrap" 1
+     stretch 1
+     filter 1
+     nocache 0
+    }
+    ImageWidgetClass ImageLogoCorner {
+     visible 0
+     inheritalpha 1
+     position 111.26399 86.864
+     size 414 386
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     fixaspect outside
+     image0 ""
+     imageTexture "{F4149B85A4538BED}EDEN_UI/gui/textures/globals/DayZEden.edds"
+     mode blend
+     "src alpha" 1
+     "no wrap" 1
+     stretch 1
+     filter 1
+     nocache 0
+    }
+    TextWidgetClass ProgressText {
+     visible 0
+     clipchildren 0
+     ignorepointer 1
+     position 0 200
+     size 100 30
+     halign center_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     text "100%"
+     font "Colorful-UI/gui/fonts/PersonalService22"
+     "text halign" center
+    }
+    TextWidgetClass TextWidget {
+     visible 0
+     position 0 0.05
+     size 0.7438 0.06
+     halign center_ref
+     valign bottom_ref
+     text "#layout_loading_loadingtext"
+     "exact text" 1
+     "text halign" center
+     "text valign" center
+    }
+    PanelWidgetClass BottomPanel {
+     ignorepointer 1
+     color 0 0 0 1
+     position 0 0
+     size 1 25
+     halign center_ref
+     valign bottom_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 1
+     style rover_sim_colorable
+    }
+   }
+  }
   FrameWidgetClass SafeZone {
    ignorepointer 1
    position 0 0
@@ -142,7 +418,7 @@ FrameWidgetClass LoadingFrame {
      vexactsize 1
      fixaspect outside
      image0 ""
-     imageTexture "{5314D820E495219F}Colorful-UI/gui/textures/globals/Colorful.Logo.edds"
+     imageTexture "{99E85394A41C3659}Colorful-UI/gui/textures/globals/Colorful.UI_AdamXLogo.edds"
      mode blend
      "src alpha" 1
      "no wrap" 1
@@ -624,282 +900,6 @@ FrameWidgetClass LoadingFrame {
        }
       }
      }
-    }
-   }
-  }
-  ProgressBarWidgetClass LoadingBar {
-   ignorepointer 1
-   color 0.8118 0.8118 0.8118 1
-   size 1 20
-   halign center_ref
-   valign bottom_ref
-   hexactpos 1
-   vexactpos 1
-   hexactsize 0
-   vexactsize 1
-   style Stamina
-   current 45
-  }
-  FrameWidgetClass "Hidden Stuff" {
-   visible 0
-   ignorepointer 1
-   position 0 0
-   size 48 48
-   hexactpos 1
-   vexactpos 1
-   hexactsize 1
-   vexactsize 1
-   {
-    PanelWidgetClass notification_root {
-     visible 0
-     clipchildren 1
-     ignorepointer 1
-     color 0 0 0 0.9294
-     position 0 0
-     size 900 15
-     halign center_ref
-     hexactpos 0
-     vexactpos 0
-     hexactsize 1
-     vexactsize 1
-     scaled 1
-     userID 100
-     scriptclass "NoticeSpacer"
-     style DayZDefaultPanel
-     "no focus" 1
-     {
-      RichTextWidgetClass notification_part_1_text {
-       visible 0
-       clipchildren 1
-       ignorepointer 1
-       position 0 0
-       size 673 100
-       halign center_ref
-       hexactpos 0
-       vexactpos 0
-       hexactsize 1
-       vexactsize 1
-       scriptclass ""
-       text "#dayz_game_exp_disclaimer_part1"
-       font "gui/fonts/sdf_MetronLight24"
-       "text offset" 18 0
-       "exact text" 1
-       "exact text size" 24
-       "size to text h" 1
-       "size to text v" 1
-       "text valign" center
-       wrap 1
-       "condense whitespace" 1
-       "strip newlines" 1
-       "content offset" 2
-      }
-      RichTextWidgetClass notification_part_2_text {
-       visible 0
-       ignorepointer 1
-       position 0 0
-       size 673 100
-       halign center_ref
-       hexactpos 0
-       vexactpos 0
-       hexactsize 1
-       vexactsize 1
-       scaled 1
-       scriptclass ""
-       text "#dayz_game_exp_disclaimer_part2"
-       font "gui/fonts/sdf_MetronLight24"
-       "text offset" 18 0
-       "exact text" 1
-       "exact text size" 24
-       "size to text h" 1
-       "size to text v" 1
-       "text valign" center
-       wrap 1
-       "condense whitespace" 1
-       "strip newlines" 1
-       "content offset" 2
-      }
-      RichTextWidgetClass notification_part_3_text {
-       visible 0
-       ignorepointer 1
-       keepsafezone 0
-       position 0 0
-       size 673 100
-       halign center_ref
-       hexactpos 0
-       vexactpos 0
-       hexactsize 1
-       vexactsize 1
-       scaled 1
-       scriptclass ""
-       text "#dayz_game_exp_disclaimer_part3"
-       font "gui/fonts/sdf_MetronLight24"
-       "text offset" 18 0
-       "exact text" 1
-       "exact text size" 24
-       "size to text h" 1
-       "size to text v" 1
-       "text valign" center
-       wrap 1
-       "condense whitespace" 1
-       "strip newlines" 1
-       "content offset" 2
-      }
-      RichTextWidgetClass notification_part_4_text {
-       visible 0
-       ignorepointer 1
-       position 0 0
-       size 673 100
-       halign center_ref
-       hexactpos 0
-       vexactpos 0
-       hexactsize 1
-       vexactsize 1
-       text "#dayz_game_exp_disclaimer_part4"
-       font "gui/fonts/sdf_MetronLight24"
-       "text offset" 18 0
-       "exact text" 1
-       "exact text size" 24
-       "size to text h" 1
-       "size to text v" 1
-       "text valign" center
-       wrap 1
-       "condense whitespace" 1
-       "strip newlines" 1
-       "content offset" 2
-      }
-     }
-     {
-      ScriptParamsClass {
-       AlignChilds 1
-      }
-     }
-    }
-    TextWidgetClass dbg_Layout_name {
-     visible 0
-     position 150 500
-     size 300 50
-     hexactpos 1
-     vexactpos 1
-     hexactsize 1
-     vexactsize 1
-     text "loading.layout"
-     font "gui/fonts/sdf_MetronLight24"
-     "exact text" 1
-    }
-    MultilineTextWidgetClass ModdedWarning {
-     visible 0
-     inheritalpha 1
-     position 100 286
-     size 444 30
-     hexactpos 1
-     vexactpos 1
-     hexactsize 1
-     vexactsize 1
-     fixaspect outside
-     text "#str_modded_version_warning0"
-     font "gui/fonts/sdf_MetronLight24"
-     "exact text" 1
-     "size to text h" 1
-     "size to text v" 1
-     wrap 1
-    }
-    ImageWidgetClass ImageLoadingIcon {
-     visible 0
-     inheritalpha 0
-     ignorepointer 0
-     keepsafezone 0
-     position 80 80
-     size 64 64
-     halign right_ref
-     hexactpos 1
-     vexactpos 1
-     hexactsize 1
-     vexactsize 1
-     scaled 1
-     scriptclass ""
-     image0 "set:dayz_gui image:icon_refresh"
-     mode additive
-     "src alpha" 1
-     "no wrap" 0
-     filter 1
-     nocache 0
-    }
-    ImageWidgetClass ImageLogoMid {
-     visible 0
-     inheritalpha 1
-     position 100 78
-     size 444 208
-     hexactpos 1
-     vexactpos 1
-     hexactsize 1
-     vexactsize 1
-     fixaspect outside
-     image0 "set:dayz_gui image:DayZLogo"
-     mode blend
-     "src alpha" 1
-     "no wrap" 1
-     stretch 1
-     filter 1
-     nocache 0
-    }
-    ImageWidgetClass ImageLogoCorner {
-     visible 0
-     inheritalpha 1
-     position 111.26399 86.864
-     size 414 386
-     hexactpos 1
-     vexactpos 1
-     hexactsize 1
-     vexactsize 1
-     fixaspect outside
-     image0 ""
-     imageTexture "{F4149B85A4538BED}EDEN_UI/gui/textures/globals/DayZEden.edds"
-     mode blend
-     "src alpha" 1
-     "no wrap" 1
-     stretch 1
-     filter 1
-     nocache 0
-    }
-    TextWidgetClass ProgressText {
-     visible 0
-     clipchildren 0
-     ignorepointer 1
-     position 0 200
-     size 100 30
-     halign center_ref
-     valign center_ref
-     hexactpos 1
-     vexactpos 1
-     hexactsize 1
-     vexactsize 1
-     text "100%"
-     font "Colorful-UI/gui/fonts/PersonalService22"
-     "text halign" center
-    }
-    TextWidgetClass TextWidget {
-     visible 0
-     position 0 0.05
-     size 0.7438 0.06
-     halign center_ref
-     valign bottom_ref
-     text "#layout_loading_loadingtext"
-     "exact text" 1
-     "text halign" center
-     "text valign" center
-    }
-    PanelWidgetClass BottomPanel {
-     ignorepointer 1
-     color 0 0 0 1
-     position 0 0
-     size 1 25
-     halign center_ref
-     valign bottom_ref
-     hexactpos 0
-     vexactpos 0
-     hexactsize 0
-     vexactsize 1
-     style rover_sim_colorable
     }
    }
   }

@@ -24,7 +24,7 @@ FrameWidgetClass main_menu_root {
    scaled 1
    fixaspect outside
    image0 ""
-   imageTexture "{BCDEF8AF12180544}Colorful-UI/gui/textures/loading_screens/Colorful-BG-11.edds"
+   imageTexture "{2819E2811050682C}Colorful-UI/gui/textures/loading_screens/Colorful-BG-3.edds"
    mode opaque
    "src alpha" 1
    "no wrap" 1
@@ -102,7 +102,7 @@ FrameWidgetClass main_menu_root {
   }
   FrameWidgetClass SafeZone {
    ignorepointer 1
-   position 0 0.90984
+   position 0 0.91
    size 0.9 0.9
    halign center_ref
    valign center_ref
@@ -122,7 +122,7 @@ FrameWidgetClass main_menu_root {
      vexactsize 1
      fixaspect outside
      image0 ""
-     imageTexture "{5314D820E495219F}Colorful-UI/gui/textures/globals/Colorful.Logo.edds"
+     imageTexture "{99E85394A41C3659}Colorful-UI/gui/textures/globals/Colorful.UI_AdamXLogo.edds"
      mode blend
      "src alpha" 1
      "no wrap" 1
@@ -581,6 +581,7 @@ FrameWidgetClass main_menu_root {
          }
         }
         ButtonWidgetClass QueueBtn {
+         visible 0
          color 0 0 0 0
          position 0 0
          size 293 42
@@ -632,6 +633,7 @@ FrameWidgetClass main_menu_root {
          }
         }
         ButtonWidgetClass WebsiteBtn {
+         visible 0
          color 0 0 0 0
          position 0 0
          size 293 42
@@ -761,6 +763,7 @@ FrameWidgetClass main_menu_root {
             ImageWidgetClass DiscordBtn_img {
              clipchildren 0
              ignorepointer 1
+             position 0 2
              size 47 39
              halign right_ref
              valign center_ref
@@ -799,6 +802,7 @@ FrameWidgetClass main_menu_root {
          }
         }
         ButtonWidgetClass TwitterBtn {
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -867,7 +871,7 @@ FrameWidgetClass main_menu_root {
          }
         }
         ButtonWidgetClass RedditBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -936,7 +940,7 @@ FrameWidgetClass main_menu_root {
          }
         }
         ButtonWidgetClass YoutubeBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -1004,7 +1008,7 @@ FrameWidgetClass main_menu_root {
          }
         }
         ButtonWidgetClass FacebookBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
