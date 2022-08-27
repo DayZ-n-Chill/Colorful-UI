@@ -89,9 +89,9 @@ class UIColor
 	
 	// Custom Colors (Use to add your own branding colors)
 	// Custom Colors (Use to add your own branding colors)
-	static int AdamX_L_Orange()         { return ARGB(255, 214, 137, 53); };
-	static int AdamX_D_Orange()         { return ARGB(255, 151, 45, 3); };
-	static int AdamX_B_Orange()         { return ARGB(255, 255, 168, 0); };
+	static int Light_Orange()         { return ARGB(255, 255, 185, 34); };
+	static int Dark_Orange()          { return ARGB(255, 255, 25, 0); };
+	static int Bright_Orange()        { return ARGB(255, 255, 153, 50); };
 }
 
 // DEFINE YOUR THEME -------------------------------------------------------
@@ -109,16 +109,16 @@ class colorScheme
 	// Get wild and create your own color functions and use them throughout the mod.
 	// Best to Primary Text as white, but do whatever, Experiment.
 	static int PrimaryText()        { return UIColor.White(); }; 	
-	static int SecondaryText()      { return AccentColor(); };
-	static int ShaderColor()        { return BrandColor(); };
-	static int SeparatorColor()     { return BrandColor(); };
-	static int LoadingbarColor()    { return BrandColor(); };
-	static int MainMenuTrim()       { return BrandColor(); };
-	static int ButtonHoverColor()   { return BrandColor(); };	
-	static int TabHoverColor()      { return BrandColor(); };	
-	static int OptionInputColors()  { return BrandColor(); };
-	static int OptionCaretColors()  { return BrandColor(); };
-	static int OptionSliderColors() { return BrandColor(); };
+	static int SecondaryText()      { return UIColor.Light_Orange(); };
+	static int ShaderColor()        { return UIColor.Bright_Orange(); };
+	static int SeparatorColor()     { return UIColor.Dark_Orange(); };
+	static int LoadingbarColor()    { return UIColor.Dark_Orange(); };
+	static int MainMenuTrim()       { return UIColor.Dark_Orange(); };
+	static int ButtonHoverColor()   { return UIColor.Light_Orange(); };	
+	static int TabHoverColor()      { return UIColor.Light_Orange(); };	
+	static int OptionInputColors()  { return UIColor.Bright_Orange(); };
+	static int OptionCaretColors()  { return UIColor.Bright_Orange(); };
+	static int OptionSliderColors() { return UIColor.Bright_Orange(); };
 }
  
 // Dialog Menus (No need to touch)
