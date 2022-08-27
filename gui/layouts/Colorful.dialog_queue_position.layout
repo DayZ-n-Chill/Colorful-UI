@@ -37,7 +37,7 @@ PanelWidgetClass TextInputDialogRoot {
    vexactsize 0
    fixaspect outside
    image0 ""
-   imageTexture "{A5D8917F066B3FDC}Colorful-UI/gui/textures/loading_screens/Colorful-BG-12.edds"
+   imageTexture "{511B1DCD13CBEAFA}Colorful-UI/gui/textures/loading_screens/Loading_Screen_1.edds"
    mode opaque
    "src alpha" 0
    stretch 1

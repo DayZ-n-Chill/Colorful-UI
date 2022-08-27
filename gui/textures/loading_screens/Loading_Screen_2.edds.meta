@@ -1,10 +1,10 @@
 MetaFileClass {
- Name "{51D0D6E70BB657A8}Colorful-UI/gui/textures/loading_screens/Colorful-BG-13.edds"
+ Name "{0FF3348EAC4664F5}Colorful-UI/gui/textures/loading_screens/Loading_Screen_2.edds"
  Author "corruscant"
- ChangeDate -1647547181
+ ChangeDate 1739975962
  Configurations {
   PNGResourceClass PC {
-   SourceFile "Colorful-BG-13.png"
+   SourceFile "Loading_Screen_2.png"
   }
   PNGResourceClass XBOX_ONE : PC {
   }
