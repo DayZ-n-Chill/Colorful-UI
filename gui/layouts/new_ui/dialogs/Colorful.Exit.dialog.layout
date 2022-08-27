@@ -27,7 +27,7 @@ FrameWidgetClass DialogRoot {
    scaled 1
    fixaspect outside
    image0 ""
-   imageTexture "{BCDEF8AF12180544}Colorful-UI/gui/textures/loading_screens/Colorful-BG-11.edds"
+   imageTexture "{0FF3348EAC4664F5}Colorful-UI/gui/textures/loading_screens/Loading_Screen_2.edds"
    mode opaque
    "src alpha" 1
    "no wrap" 1

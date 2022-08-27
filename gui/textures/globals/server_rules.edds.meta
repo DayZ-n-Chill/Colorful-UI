@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{D5FD202DEF340893}Colorful-UI/gui/textures/globals/server_rules.edds"
+ Author "corruscant"
+ ChangeDate 441462043
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "server_rules.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

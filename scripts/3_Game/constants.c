@@ -90,8 +90,10 @@ class UIColor
 	// Custom Colors (Use to add your own branding colors)
 	// Custom Colors (Use to add your own branding colors)
 	static int Light_Orange()         { return ARGB(255, 255, 185, 34); };
-	static int Dark_Orange()          { return ARGB(255, 255, 25, 0); };
-	static int Bright_Orange()        { return ARGB(255, 255, 153, 50); };
+	static int Orange_Red()             { return ARGB(255, 200, 50, 20); };
+	static int Dark_Orange()          { return ARGB(255, 160, 114, 20); };
+	static int Bright_Orange()        { return ARGB(255, 255, 153, 51); };
+	static int Muddy_Orange()        { return ARGB(255, 205, 153, 51); };
 }
 
 // DEFINE YOUR THEME -------------------------------------------------------
@@ -100,20 +102,20 @@ class colorScheme
 {
 	// Quick Styling --------------------------------------
 	// This color should be Servers/Communities Brand Color
-	static int BrandColor()   { return UIColor.Teal(); };
+	static int BrandColor()   { return UIColor.Light_Orange(); };
 	// This color should be a complimentary color to your brand. 
-	static int AccentColor()  { return UIColor.Red(); }
+	static int AccentColor()  { return UIColor.Bright_Orange(); }
 
 	// Advanced Styling --------------------------------------
 	// You can get more Ganular with the colors by editing the syltes below
 	// Get wild and create your own color functions and use them throughout the mod.
 	// Best to Primary Text as white, but do whatever, Experiment.
 	static int PrimaryText()        { return UIColor.White(); }; 	
-	static int SecondaryText()      { return UIColor.Light_Orange(); };
-	static int ShaderColor()        { return UIColor.Bright_Orange(); };
-	static int SeparatorColor()     { return UIColor.Dark_Orange(); };
-	static int LoadingbarColor()    { return UIColor.Dark_Orange(); };
-	static int MainMenuTrim()       { return UIColor.Dark_Orange(); };
+	static int SecondaryText()      { return UIColor.Bright_Orange(); };
+	static int ShaderColor()        { return UIColor.Muddy_Orange(); };
+	static int SeparatorColor()     { return UIColor.Orange_Red(); };
+	static int LoadingbarColor()    { return UIColor.Orange_Red(); };
+	static int MainMenuTrim()       { return UIColor.Orange_Red(); };
 	static int ButtonHoverColor()   { return UIColor.Light_Orange(); };	
 	static int TabHoverColor()      { return UIColor.Light_Orange(); };	
 	static int OptionInputColors()  { return UIColor.Bright_Orange(); };

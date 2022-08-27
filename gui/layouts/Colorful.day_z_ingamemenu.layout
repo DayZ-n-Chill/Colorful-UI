@@ -603,6 +603,7 @@ FrameWidgetClass InGameMenuRoot {
          }
         }
         ButtonWidgetClass TwitterBtn {
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -671,7 +672,7 @@ FrameWidgetClass InGameMenuRoot {
          }
         }
         ButtonWidgetClass RedditBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -740,7 +741,7 @@ FrameWidgetClass InGameMenuRoot {
          }
         }
         ButtonWidgetClass YoutubeBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -808,7 +809,7 @@ FrameWidgetClass InGameMenuRoot {
          }
         }
         ButtonWidgetClass FacebookBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -893,6 +894,7 @@ FrameWidgetClass InGameMenuRoot {
          "next down" "play_video"
          {
           PanelWidgetClass MetaBtn_panel {
+           visible 0
            ignorepointer 1
            color 0 0 0 0
            size 293 39
@@ -905,6 +907,7 @@ FrameWidgetClass InGameMenuRoot {
            style DayZDefaultPanel
            {
             ImageWidgetClass MetaBtn_img {
+             visible 0
              clipchildren 0
              ignorepointer 1
              size 47 39
@@ -922,6 +925,7 @@ FrameWidgetClass InGameMenuRoot {
              filter 0
             }
             TextWidgetClass MetaBtn_label {
+             visible 0
              clipchildren 0
              ignorepointer 1
              position 60 0
@@ -947,18 +951,18 @@ FrameWidgetClass InGameMenuRoot {
       }
      }
     }
-    ImageWidgetClass ColorfulLogo {
+    ImageWidgetClass ColorfulLogo0 {
      visible 1
      clipchildren 0
      inheritalpha 1
-     size 460 320
+     size 460 425
      hexactpos 0
      vexactpos 0
      hexactsize 1
      vexactsize 1
      fixaspect outside
      image0 ""
-     imageTexture "{5314D820E495219F}Colorful-UI/gui/textures/globals/Colorful.Logo.edds"
+     imageTexture "{B10EF3103D708D22}Colorful-UI/gui/textures/globals/Colorful.UI_GamerCoreLogo.edds"
      mode blend
      "src alpha" 1
      "no wrap" 1
