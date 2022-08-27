@@ -88,8 +88,10 @@ class UIColor
 	static int meta()                 { return ARGB(255, 24, 119, 242); };
 	
 	// Custom Colors (Use to add your own branding colors)
-	static int Teal()                 { return ARGB(255, 0, 102, 102); };
-	static int DPGPurple()            { return ARGB(255, 72, 27, 159); };
+	// Custom Colors (Use to add your own branding colors)
+	static int AdamX_L_Orange()         { return ARGB(255, 214, 137, 53); };
+	static int AdamX_D_Orange()         { return ARGB(255, 151, 45, 3); };
+	static int AdamX_B_Orange()         { return ARGB(255, 255, 168, 0); };
 }
 
 // DEFINE YOUR THEME -------------------------------------------------------
