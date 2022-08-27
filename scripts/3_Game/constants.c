@@ -10,11 +10,10 @@ string GetRandomBackground()
         "Colorful-UI/gui/textures/loading_screens/StalkerZ_BG_3.edds",
 		"Colorful-UI/gui/textures/loading_screens/StalkerZ_BG_4.edds",
 		"Colorful-UI/gui/textures/loading_screens/StalkerZ_BG_5.edds",
-		"Colorful-UI/gui/textures/loading_screens/StalkerZ_BG_6.edds",
 		"Colorful-UI/gui/textures/loading_screens/StalkerZ_BG_7.edds"
 	};
 	Math.Randomize(-1);
-	int bgIndex = Math.RandomInt(0, 100) % 7;
+	int bgIndex = Math.RandomInt(0, 100) % 6;
 	return images[bgIndex];
 }
 
