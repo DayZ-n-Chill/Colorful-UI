@@ -89,7 +89,7 @@ modded class MainMenu extends UIScriptedMenu
 		// ------------------------------------------------------------------
 		if (button == MouseState.LEFT && w == m_Discord)
 		{
-			GetGame().OpenURL("http://discord.gg/dayznchill");
+			GetGame().OpenURL("http://discord.gg/saltnpepper");
 			return true;
 		}
 		else if (button == MouseState.LEFT && w == m_Twitter)

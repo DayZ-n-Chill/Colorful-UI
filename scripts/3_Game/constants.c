@@ -32,29 +32,14 @@ string GetRandomBackground()
 string GetRandomHint()
 {
 	const string tips[] = {
-		"Death makes you die.",
-		"Broomsticks give you enough resources to make a fire place and cooking stand.",
-		"Keep your car running smoothby using min 4 water bottles to fill the radioator.",
-		"You can crafrt a bone knife with one bone if you use rocks or boulders tro craft it.",
-		"Try to blend in with your enviornment. Do not wear bright colors",
-		"If someone is harrassing you contact a server admin immediately",
-		"Non aggro infected will detect you in 2 seconds when sneaking up on them. Stealth kill them quick",
-		"Craft foot wraps to dampen the sound of your movement.",
-		"Breaking down ghillie parts you find is a faster way to get all the parts you need to make a full one.",
-		"Baking food provides the most nutritional value when cooking.",
-		"The flare gun can not kill anything in the game but yourself.",
-		"Armor Peircing rounds do not do extra damage, they just reduce the durability of armor faster.",
-		"Going unconsiousl in water will kill you in 20 seconds.",
-		"Having full white stats, or taking multivitamins will allow you to eat raw meat, drink from dirty water sources, and consume with bloody hands.",
-		"Apart from the Famas, all sawed off weapons have twice the ammount of recoil",
-		"Any weapon with a suppressor cannot be heard after 150 meters.",
-		"If you log into a dynamic gas zone you will be teleported out of the area.",
-		"If you are K.O. by a gunman you will always wake up facing the opposite the direction from where you were shot. ",
-		"Spike helemt only spawns at the Castle south of Sitnik on the red trail.",
-		"Remebering Paulie.  Loc. 11930 x 13157 - R.I.P"
+		"South island is full PVP and the North island is PVE"
+		"KOTH only spawns at Gadir Airfield"
+		"Create a ticket via discord for in-game help"
+		"To sell a vehicle it needs to placed in the garage system at trader"
+		"Raid times are 5:00PM TO 11:59PM AEST every FRI,SAT & SUN"
 	};
 	Math.Randomize(-1);
-	int tipIndex = Math.RandomInt(0, 100) % 20;
+	int tipIndex = Math.RandomInt(0, 100) % 5;
 	return tips[tipIndex];
 }
 
@@ -97,8 +82,8 @@ class UIColor
 	static int meta()                 { return ARGB(255, 24, 119, 242); };
 	
 	// Custom Colors (Use to add your own branding colors)
-	static int Teal()                 { return ARGB(255, 0, 102, 102); };
-	static int DPGPurple()            { return ARGB(255, 72, 27, 159); };
+	static int SNPRed()               { return ARGB(255, 153, 0, 50); };
+	static int SNPPurple()            { return ARGB(255, 102, 102, 153); };
 }
 
 // DEFINE YOUR THEME -------------------------------------------------------
@@ -107,9 +92,9 @@ class colorScheme
 {
 	// Quick Styling --------------------------------------
 	// This color should be Servers/Communities Brand Color
-	static int BrandColor()   { return UIColor.Teal(); };
+	static int BrandColor()   { return UIColor.SNPPurple(); };
 	// This color should be a complimentary color to your brand. 
-	static int AccentColor()  { return UIColor.Red(); }
+	static int AccentColor()  { return UIColor.SNPRed(); }
 
 	// Advanced Styling --------------------------------------
 	// You can get more Ganular with the colors by editing the syltes below
@@ -121,11 +106,11 @@ class colorScheme
 	static int SeparatorColor()     { return BrandColor(); };
 	static int LoadingbarColor()    { return BrandColor(); };
 	static int MainMenuTrim()       { return BrandColor(); };
-	static int ButtonHoverColor()   { return BrandColor(); };	
-	static int TabHoverColor()      { return BrandColor(); };	
-	static int OptionInputColors()  { return BrandColor(); };
-	static int OptionCaretColors()  { return BrandColor(); };
-	static int OptionSliderColors() { return BrandColor(); };
+	static int ButtonHoverColor()   { return AccentColor(); };	
+	static int TabHoverColor()      { return AccentColor(); };	
+	static int OptionInputColors()  { return AccentColor(); };
+	static int OptionCaretColors()  { return AccentColor(); };
+	static int OptionSliderColors() { return AccentColor(); };
 }
  
 // Dialog Menus (No need to touch)
