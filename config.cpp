@@ -19,7 +19,7 @@ class CfgMods
 		hideName = 1;
 		hidePicture = 1;
 		name = "DayZ n' Chill's Colorful UI";
-		credits = "DayZ n' Chill";
+		credits = "DayZ n' Chill, Combat Log code provided by server owner.";
 		author = "DayZ n' Chill";
 		authorID = "76561197969255905";
 		version = "0.2";
@@ -32,6 +32,11 @@ class CfgMods
 			{
 				value = "";
 				files[] = {"Colorful-UI/scripts/3_Game"};
+			};
+			class worldScriptModule
+			{
+				value = "";
+				files[] = {"Colorful-UI/scripts/4_World"};
 			};
 			class missionScriptModule
 			{
