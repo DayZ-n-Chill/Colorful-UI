@@ -1,0 +1,195 @@
+FrameWidgetClass rootFrame {
+ color 1 1 1 0
+ position 90.38271 -7.69175
+ size 1 1
+ hexactpos 1
+ vexactpos 1
+ hexactsize 0
+ vexactsize 0
+ {
+  PanelWidgetClass StatsFrame {
+   ignorepointer 1
+   color 1 1 1 0
+   position 831.17297 268.60699
+   size 253.252 35.0524
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   {
+    GridSpacerWidgetClass StatHeaders {
+     ignorepointer 1
+     size 1 29.1584
+     halign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     "Ignore invisible" 0
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     content_halign center
+     content_valign center
+     Columns 4
+     Rows 1
+     {
+      TextWidgetClass StatHdrThirst {
+       visible 1
+       clipchildren 0
+       ignorepointer 1
+       position 1072.90002 840.11499
+       size 1 20
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       text "Thirst"
+       font "gui/fonts/MetronBook-Bold16"
+       "exact text" 0
+       "size to text h" 1
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+      }
+      TextWidgetClass StatHdrHunger {
+       ignorepointer 1
+       position 1072.90002 840.11499
+       size 1 20
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       text "Hunger"
+       font "gui/fonts/MetronBook-Bold16"
+       "exact text" 0
+       "size to text h" 1
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+      }
+      TextWidgetClass StatHdrHealth {
+       ignorepointer 1
+       position 1072.90002 840.11499
+       size 1 20
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       text "Health"
+       font "gui/fonts/MetronBook-Bold16"
+       "exact text" 0
+       "size to text h" 1
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+      }
+      TextWidgetClass StatHdrBlood {
+       visible 1
+       ignorepointer 1
+       position 1072.90002 840.11499
+       size 1 20
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       text "Blood"
+       font "gui/fonts/MetronBook-Bold16"
+       "exact text" 0
+       "size to text h" 1
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+      }
+     }
+    }
+    GridSpacerWidgetClass StatsValues {
+     ignorepointer 1
+     size 1 30.3665
+     halign center_ref
+     valign bottom_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     "Ignore invisible" 0
+     Padding 0
+     Margin 0
+     "Size To Content V" 1
+     content_halign center
+     content_valign center
+     Columns 4
+     Rows 1
+     {
+      TextWidgetClass StatValueBlood {
+       visible 1
+       ignorepointer 1
+       position 1072.90002 840.11499
+       size 250.71599 30
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "100"
+       font "gui/fonts/MetronBook14"
+       "exact text" 1
+       "size to text h" 1
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+      }
+      TextWidgetClass StatValueHealth {
+       ignorepointer 1
+       position 1072.90002 840.11499
+       size 250.71599 30
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "100"
+       font "gui/fonts/MetronBook14"
+       "exact text" 1
+       "size to text h" 1
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+      }
+      TextWidgetClass StatValueHunger {
+       ignorepointer 1
+       position 1072.90002 840.11499
+       size 250.71599 30
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "100"
+       font "gui/fonts/MetronBook14"
+       "exact text" 1
+       "size to text h" 1
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+      }
+      TextWidgetClass StatValueThirst {
+       visible 1
+       ignorepointer 1
+       position 1072.90002 839.698
+       size 250.71599 30.4166
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "100"
+       font "gui/fonts/MetronBook14"
+       "exact text" 1
+       "size to text h" 1
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+      }
+     }
+    }
+   }
+  }
+ }
+}
