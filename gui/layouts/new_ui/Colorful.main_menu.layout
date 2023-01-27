@@ -12,7 +12,7 @@ FrameWidgetClass main_menu_root {
  priority 951
  {
   ImageWidgetClass ImageBackground {
-   visible 1
+   visible 0
    position 0 0
    size 0.16 0.09
    halign center_ref
