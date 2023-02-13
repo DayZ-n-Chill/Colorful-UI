@@ -28,6 +28,28 @@ string GetRandomBackground()
 	return images[bgIndex];
 }
 
+/*
+ * Quick Set URL's for loading menu
+ */
+class MenuURLS {
+	// Link for Discord
+	static string urlDiscord  = "https://discord.gg/dayznchill";
+	// Link for Facebook
+	static string urlFacebook = "https://facebook.com/dayznchill";
+	// Link for Twitter
+	static string urlTwitter  = "https://twitter.com/dayznchill";
+	// Link for Reddit
+	static string urlReddit   = "https://reddit.com/dayznchill";
+	// Link for Youtube
+	static string urlYoutube  = "https://youtube.com/dayznchill";
+	// Link to Website
+	static string urlWebsite  = "https://dayznchill.com"; 
+	// Link for Prio Q
+	static string urlPriorityQ   = "#";
+	// Can be used anything else
+	static string urlCustom   = "#";
+}
+
 // RANDOM LOADSCREEN TIPS -------------------------------------------------
 string GetRandomHint()
 {
