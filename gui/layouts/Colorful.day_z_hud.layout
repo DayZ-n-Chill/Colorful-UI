@@ -3724,8 +3724,25 @@ FrameWidgetClass HudFrameWidget {
              Columns 4
              Rows 1
              {
-              TextWidgetClass StatValueBlood {
+			  TextWidgetClass StatValueThirst {
                visible 1
+               ignorepointer 1
+               position 1072.90002 839.698
+               size 250.71599 30.4166
+               hexactpos 1
+               vexactpos 1
+               hexactsize 1
+               vexactsize 1
+               style Normal
+               text "100"
+               font "gui/fonts/MetronBook-Bold14"
+               "exact text" 1
+               "size to text h" 1
+               "size to text v" 1
+               "text halign" center
+               "text valign" center
+              }
+              TextWidgetClass StatValueHunger {
                ignorepointer 1
                position 1072.90002 840.11499
                size 250.71599 30
@@ -3759,28 +3776,11 @@ FrameWidgetClass HudFrameWidget {
                "text halign" center
                "text valign" center
               }
-              TextWidgetClass StatValueHunger {
+              TextWidgetClass StatValueBlood {
+               visible 1
                ignorepointer 1
                position 1072.90002 840.11499
                size 250.71599 30
-               hexactpos 1
-               vexactpos 1
-               hexactsize 1
-               vexactsize 1
-               style Normal
-               text "100"
-               font "gui/fonts/MetronBook-Bold14"
-               "exact text" 1
-               "size to text h" 1
-               "size to text v" 1
-               "text halign" center
-               "text valign" center
-              }
-              TextWidgetClass StatValueThirst {
-               visible 1
-               ignorepointer 1
-               position 1072.90002 839.698
-               size 250.71599 30.4166
                hexactpos 1
                vexactpos 1
                hexactsize 1
