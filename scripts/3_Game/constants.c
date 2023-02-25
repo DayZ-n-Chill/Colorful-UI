@@ -80,6 +80,28 @@ string GetRandomHint()
 	return tips[tipIndex];
 }
 
+// RANDOM DEATHSCREEN QUOTES -------------------------------------------------
+string GetRandomDeathHint()
+{
+	const string deathtips[] = {
+		"Death may be the greatest of all human blessings, because we don't have to put up with that woke shit.",
+		"Our dead are never dead to us, until we have forgotten them.",
+		"DIED, from not forwarding that text message to 10 people.",
+		"Depression: I had a lot of friends on that Death Star..",
+		"Life and Death are a seamless continuum.",
+		"Your death will not be over quickly.",
+		"He's Dead Jim!",
+		"Brace Yourself, Death Quotes are coming.. - Boromir",
+		"You were suppoed to kill them, not be killed, Now you're dead.",
+		"The leading cause of death among fashion models is falling through street grates.",
+		"The trouble with quotes about death is that 99.9% of them are made by people who are still alive.",
+		"Life is hard. Then you die. Then they throw dirt in your face. Then the worms eat you. Be grateful if it happens in that order.",
+		"Remebering Paulie.  Loc. 11930 x 13157 - R.I.P"
+	};
+	Math.Randomize(-1);
+	int tipIndex = Math.RandomInt(0, 100) % 13;
+	return deathtips[tipIndex];
+}
 
 // NOTE: ------------------------------------------------------------------
 // I used two fucntions because I wanted to be able to use colorin both
