@@ -1,6 +1,6 @@
 modded class ServerBrowserEntry extends ScriptedWidgetEventHandler
 {
-	void Select( bool notify = true )
+	override void Select( bool notify = true )
 	{
 		if( !m_Selected )
 		{
@@ -15,7 +15,7 @@ modded class ServerBrowserEntry extends ScriptedWidgetEventHandler
 		}
 	}
 	
-	void Deselect()
+	override void Deselect()
 	{
 		if( m_Selected )
 		{
@@ -35,7 +35,7 @@ modded class ServerBrowserEntry extends ScriptedWidgetEventHandler
 	}
 	
 	//Coloring functions (Until WidgetStyles are useful)
-	void Darken( Widget w, int x, int y )
+	override void Darken( Widget w, int x, int y )
 	{
 		if( m_Selected )
 			return;
@@ -49,7 +49,7 @@ modded class ServerBrowserEntry extends ScriptedWidgetEventHandler
 	}
 	
 	//Coloring functions (Until WidgetStyles are useful)
-	void Preview( Widget w, int x, int y )
+	override void Preview( Widget w, int x, int y )
 	{		
 		if( m_Selected )
 			return;
@@ -62,7 +62,7 @@ modded class ServerBrowserEntry extends ScriptedWidgetEventHandler
 		}
 	}
 	
-	void Lighten( Widget w, Widget enterW, int x, int y )
+	override void Lighten( Widget w, Widget enterW, int x, int y )
 	{
 		if( GetFocus() == w || m_Selected )
 		{

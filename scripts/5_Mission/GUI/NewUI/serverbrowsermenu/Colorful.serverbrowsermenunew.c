@@ -36,7 +36,7 @@ modded class ServerBrowserMenuNew extends UIScriptedMenu
 		return layoutRoot;
 	}
 
-	void ColorHighlight( Widget w )
+	override void ColorHighlight( Widget w )
 	{
 		if( !w )
 			return;

@@ -34,7 +34,7 @@ modded class TabberUI extends ScriptedWidgetEventHandler
 		return false;
 	}
 
-	int AddTab( string name )
+	override int AddTab( string name )
 	{
 		int new_index = m_Tabs.Count();
 		Widget tab = GetGame().GetWorkspace().CreateWidgets( "gui/layouts/new_ui/tabber_prefab/tab.layout", m_Root );

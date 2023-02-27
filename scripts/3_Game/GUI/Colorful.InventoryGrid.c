@@ -9,7 +9,7 @@ modded class InventoryGrid extends ScriptedWidgetEventHandler
 	static int ITEM_COLOR_DRAG				= 0x0A000000;
 
 	//--------------------------------------------------------------------------
-	void GenerateQuickBarBackgroundTiles(int count)
+	override void GenerateQuickBarBackgroundTiles(int count)
 	{
 		for (int i = 0; i < count; i++)
 		{
@@ -23,7 +23,7 @@ modded class InventoryGrid extends ScriptedWidgetEventHandler
 	}
 		
 	//--------------------------------------------------------------------------
-	void AddItem(InventoryItem item, vector data, vector rotation)
+	override void AddItem(InventoryItem item, vector data, vector rotation)
 	{
 		m_Items.Set(item, data);			
 				

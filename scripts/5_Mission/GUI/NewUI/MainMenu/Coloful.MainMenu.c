@@ -189,7 +189,7 @@ modded class MainMenu extends UIScriptedMenu
 	// Background is your UIColor.Transparent()
 	// Text is sss
 	// ----------------------------------------
-	void ColorHighlight( Widget w )
+	override void ColorHighlight( Widget w )
 	{
 		if( !w )
 			return;	
@@ -203,7 +203,7 @@ modded class MainMenu extends UIScriptedMenu
 		ImagenSetColor(w, color_img);	
 	}
 
-	void ColorNormal( Widget w )
+	override void ColorNormal( Widget w )
 	{
 		if( !w )
 			return;
@@ -330,10 +330,9 @@ modded class MainMenu extends UIScriptedMenu
 		return false;
 	}
 
-
 	// I still have not found a good way to globally edit the generated dialog system colors but I feel like I am close
 	// I guess the best way in the meantime is to create a new menu and have it styled as we need.
-	void Exit()
+	override void Exit()
 	{
 		EnterScriptedMenu( COLORFUL_EXIT );
 	}
