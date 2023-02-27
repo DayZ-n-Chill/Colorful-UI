@@ -59,7 +59,7 @@ modded class RespawnDialogue extends UIScriptedMenu
 		return false;
 	}
 
-	protected void ColorHighlight( Widget w )
+	override void ColorHighlight( Widget w )
 	{
 		if( !w )
 			return;
@@ -69,7 +69,7 @@ modded class RespawnDialogue extends UIScriptedMenu
 		
 	};
 
-	protected void ColorNormal( Widget w )
+	override void ColorNormal( Widget w )
 	{
 		if( !w )
 			return;
