@@ -71,27 +71,27 @@ modded class InGameMenu extends UIScriptedMenu
 		}
 		else if (button == MouseState.LEFT && w == m_Discord)
 		{
-			GetGame().OpenURL("https://discord.gg/dayznchill");
+			GetGame().OpenURL(MenuURLS.urlDiscord);
 			return true;
 		}
 		else if (button == MouseState.LEFT && w == m_Twitter)
 		{
-			GetGame().OpenURL("https://twitter.com/dayznchill");
+			GetGame().OpenURL(MenuURLS.urlTwitter);
 			return false;
 		}
 		else if (button == MouseState.LEFT && w == m_Reddit)
 		{
-			GetGame().OpenURL("https://reddit.com/dayznchill");
+			GetGame().OpenURL(MenuURLS.urlReddit);
 			return false;
 		}
 		else if (button == MouseState.LEFT && w == m_Youtube)
 		{
-			GetGame().OpenURL("https://youtube.com/dayznchill");
+			GetGame().OpenURL(MenuURLS.urlYoutube);
 			return false;
 		}	
 		else if (button == MouseState.LEFT && w == m_Facebook)
 		{
-			GetGame().OpenURL("https://facebook.com/dayznchill");
+			GetGame().OpenURL(MenuURLS.urlFacebook);
 			return false;
 		}
 
