@@ -1,6 +1,6 @@
 modded class ServerBrowserTab extends ScriptedWidgetEventHandler
 {
-	void ColorHighlight( Widget w )
+	override void ColorHighlight( Widget w )
 	{
 		if( w.IsInherited( ButtonWidget ) )
 		{

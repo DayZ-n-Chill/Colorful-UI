@@ -2,22 +2,27 @@ modded class MissionBase
 {	
 	override UIScriptedMenu CreateScriptedMenu(int id)
 	{
+		// Copied over from Expasion so that thier map works with this UI
+		// Dabs if you know a better way that makes these not conflict let me know please. 
+		auto trace = EXTrace.Start(ExpansionTracing.CHAT, this, "" + id);
+		// end expansion copy
+
 		UIScriptedMenu menu = NULL;
 
 		switch (id)
 		{
 		case MENU_MAIN:
 		#ifdef PLATFORM_CONSOLE			
-					menu = new MainMenuConsole;
+				menu = new MainMenuConsole;
 		#else
-					menu = new MainMenu;
+				menu = new MainMenu;
 		#endif
-					break;
+				break;
 				case MENU_INGAME:
 		#ifdef PLATFORM_CONSOLE
-					menu = new InGameMenuXbox;
+				menu = new InGameMenuXbox;
 		#else
-					menu = new InGameMenu;
+				menu = new InGameMenu;
 		#endif
 		break;
 
@@ -73,9 +78,18 @@ modded class MissionBase
 		case MENU_NOTE:
 			menu = new NoteMenu;
 			break;
+		// Copied over from Expasion so that thier map works with this UI
+		// Dabs if you know a better way that makes these not conflict let me know please. 
 		case MENU_MAP:
-			menu = new MapMenu;
+			if (GetExpansionSettings().GetMap().UseMapOnMapItem)
+				menu = new ExpansionMapMenu;
+			else
+				menu = new MapMenu;
 			break;
+		case MENU_EXPANSION_MAP:
+			menu = new ExpansionMapMenu;
+			break;
+		// end expansion copy
 		case MENU_BOOK:
 			menu = new BookMenu;
 			break;
@@ -146,7 +160,13 @@ modded class MissionBase
 		{
 			menu.SetID(id);
 		}
-
+		// Copied over from Expasion so that thier map works with this UI
+		// Dabs if you know a better way that makes these not conflict let me know please. 
+		else
+		{
+			menu = super.CreateScriptedMenu(id);
+		}
+		// end expansion copy
 		return menu;
 	}
 };

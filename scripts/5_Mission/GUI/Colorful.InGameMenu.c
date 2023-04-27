@@ -100,7 +100,7 @@ modded class InGameMenu extends UIScriptedMenu
 
 	// If you want to change the way the buttons work.  
 	// Visit the Colorful.MainMenu.c file. It has notes.
-	protected void ColorHighlight( Widget w )
+	override void ColorHighlight( Widget w )
 	{
 		if( !w )
 			return;
@@ -110,7 +110,7 @@ modded class InGameMenu extends UIScriptedMenu
 		
 	};
 
-	protected void ColorNormal( Widget w )
+	override void ColorNormal( Widget w )
 	{
 		if( !w )
 			return;

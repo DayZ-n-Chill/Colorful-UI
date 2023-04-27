@@ -42,7 +42,7 @@ modded class KeybindingsMenu extends UIScriptedMenu
 		return layoutRoot;
 	}
 	
-	void CreateTabs()
+	override void CreateTabs()
 	{
 		int sort_count = InputUtils.GetInputActionSortingMap().Count();
 		for (int i = 0; i < sort_count; i++)
@@ -62,17 +62,17 @@ modded class KeybindingsMenu extends UIScriptedMenu
 		m_Tabber.DisableTabs(true);
 	}
 	
-	void CreateGroupContainer()
+	override void CreateGroupContainer()
 	{
 		m_GroupsContainer = new KeybindingsContainer(-1,GetGame().GetInput(),layoutRoot.FindAnyWidget("TabContentsHolder"),this);
 	}
 	
-	void UpdateTabContent( int tab_index )
+	override void UpdateTabContent( int tab_index )
 	{
 		m_GroupsContainer.SwitchSubgroup(tab_index);
 	}
 	
-	void ClearKeybind( int key_index )
+	override void ClearKeybind( int key_index )
 	{
 		ColorWhite( m_Apply, null );
 		m_Apply.ClearFlags( WidgetFlags.IGNOREPOINTER );
@@ -80,7 +80,7 @@ modded class KeybindingsMenu extends UIScriptedMenu
 		m_Undo.ClearFlags( WidgetFlags.IGNOREPOINTER );
 	}
 	
-	void ClearAlternativeKeybind( int key_index )
+	override void ClearAlternativeKeybind( int key_index )
 	{
 		ColorWhite( m_Apply, null );
 		m_Apply.ClearFlags( WidgetFlags.IGNOREPOINTER );
@@ -88,31 +88,31 @@ modded class KeybindingsMenu extends UIScriptedMenu
 		m_Undo.ClearFlags( WidgetFlags.IGNOREPOINTER );
 	}
 	
-	void StartEnteringKeybind( int key_index )
+	override void StartEnteringKeybind( int key_index )
 	{
 		m_CurrentSettingAlternateKeyIndex	= -1;
 		m_CurrentSettingKeyIndex			= key_index;
 	}
 	
-	void CancelEnteringKeybind()
+	override void CancelEnteringKeybind()
 	{
 		m_GroupsContainer.CancelEnteringKeybind();
 		m_CurrentSettingKeyIndex = -1;
 	}
 	
-	void StartEnteringAlternateKeybind( int key_index )
+	override void StartEnteringAlternateKeybind( int key_index )
 	{
 		m_CurrentSettingKeyIndex			= -1;
 		m_CurrentSettingAlternateKeyIndex	= key_index;
 	}
 	
-	void CancelEnteringAlternateKeybind()
+	override void CancelEnteringAlternateKeybind()
 	{
 		m_GroupsContainer.CancelEnteringAlternateKeybind();
 		m_CurrentSettingAlternateKeyIndex = -1;
 	}
 	
-	void ConfirmKeybindEntry( TIntArray new_keys )
+	override void ConfirmKeybindEntry( TIntArray new_keys )
 	{
 		m_CurrentSettingKeyIndex = -1;
 		ColorWhite( m_Apply, null );
@@ -121,7 +121,7 @@ modded class KeybindingsMenu extends UIScriptedMenu
 		m_Undo.ClearFlags( WidgetFlags.IGNOREPOINTER );
 	}
 	
-	void ConfirmAlternateKeybindEntry( TIntArray new_keys )
+	override void ConfirmAlternateKeybindEntry( TIntArray new_keys )
 	{
 		m_CurrentSettingAlternateKeyIndex = -1;
 		ColorWhite( m_Apply, null );
@@ -171,7 +171,7 @@ modded class KeybindingsMenu extends UIScriptedMenu
 		return false;
 	}
 	
-	void Apply()
+	override void Apply()
 	{
 		ColorDisabled( m_Apply );
 		m_Apply.SetFlags( WidgetFlags.IGNOREPOINTER );
@@ -186,7 +186,7 @@ modded class KeybindingsMenu extends UIScriptedMenu
 		GetUApi().Export();
 	}
 	
-	void Back()
+	override void Back()
 	{
 		if( m_CurrentSettingKeyIndex != -1 )
 		{
@@ -214,7 +214,7 @@ modded class KeybindingsMenu extends UIScriptedMenu
 	}
 	
 	// ! Undoes the unsaved changes and reverts to previous state. Does not reset to defaults!
-	void Reset()
+	override void Reset()
 	{
 		ColorDisabled( m_Apply );
 		m_Apply.SetFlags( WidgetFlags.IGNOREPOINTER );
@@ -224,13 +224,13 @@ modded class KeybindingsMenu extends UIScriptedMenu
 		m_GroupsContainer.Reset();
 	}
 	
-	void SetToDefaults()
+	override void SetToDefaults()
 	{
 		EnterScriptedMenu( COLORFUL_DEFAULTS );
 		//g_Game.GetUIManager().ShowDialog("#menu_default_cap", "#menu_default_desc", MODAL_ID_DEFAULT, DBT_YESNO, DBB_YES, DMT_QUESTION, this);
 	}
 	
-	void PerformSetToDefaults()
+	override void PerformSetToDefaults()
 	{
 		ColorDisabled( m_Apply );
 		m_Apply.SetFlags( WidgetFlags.IGNOREPOINTER );
@@ -246,7 +246,7 @@ modded class KeybindingsMenu extends UIScriptedMenu
 		m_GroupsContainer.Reset(true);
 	}
 	
-	void DeferredDefaultsInit()
+	override void DeferredDefaultsInit()
 	{
 		//GetGame().GetMission().RefreshExcludes();
 	}
@@ -296,8 +296,6 @@ modded class KeybindingsMenu extends UIScriptedMenu
 	}
 	
 
-
-
 	override bool OnMouseWheel(Widget w, int x, int y, int wheel)
 	{
 		return super.OnMouseWheel(w, x, y, wheel);
@@ -330,7 +328,7 @@ modded class KeybindingsMenu extends UIScriptedMenu
 		return false;
 	}
 	
-	bool IsFocusable( Widget w )
+	override bool IsFocusable( Widget w )
 	{
 		if( w )
 		{
@@ -338,7 +336,6 @@ modded class KeybindingsMenu extends UIScriptedMenu
 		}
 		return false;
 	}
-
 
 
 	//Coloring functions (Until WidgetStyles are useful)
@@ -413,7 +410,7 @@ modded class KeybindingsMenu extends UIScriptedMenu
 
 
 
-	void ColorWhite( Widget w, Widget enterW )
+	override void ColorWhite( Widget w, Widget enterW )
 	{
 		#ifdef PLATFORM_WINDOWS
 		SetFocus( null );
@@ -433,7 +430,7 @@ modded class KeybindingsMenu extends UIScriptedMenu
 		}
 	}
 	
-	void ColorDisabled( Widget w )
+	override void ColorDisabled( Widget w )
 	{
 		#ifdef PLATFORM_WINDOWS
 		SetFocus( null );
@@ -446,12 +443,12 @@ modded class KeybindingsMenu extends UIScriptedMenu
 		}
 	}
 	
-	protected void InitInputSortingMap()
+	override void InitInputSortingMap()
 	{
 		InputUtils.InitInputMetadata();
 	}
 	
-	void InitPresets( int index, Widget parent, Input input )
+	override void InitPresets( int index, Widget parent, Input input )
 	{
 		Widget kb_root = parent.FindAnyWidget( "keyboard_dropown" );
 		if (kb_root)
@@ -475,7 +472,7 @@ modded class KeybindingsMenu extends UIScriptedMenu
 		m_PresetSelector.m_OptionChanged.Insert( OnSelectKBPreset );
 	}
 	
-	void OnAttemptSelectPreset( int index )
+	override void OnAttemptSelectPreset( int index )
 	{
 		bool changed = m_GroupsContainer.IsChanged() && m_OriginalPresetIndex != index;
 		m_TargetPresetIndex = index;
@@ -488,7 +485,7 @@ modded class KeybindingsMenu extends UIScriptedMenu
 		m_PresetSelector.SetCanSwitch(!changed);
 	}
 	
-	void OnSelectKBPreset( int index )
+	override void OnSelectKBPreset( int index )
 	{
 		m_OriginalPresetIndex = index;
 		m_GroupsContainer.OnSelectKBPreset(index);
@@ -496,15 +493,15 @@ modded class KeybindingsMenu extends UIScriptedMenu
 		GetGame().GetInput().GetProfileName( index, profile_text );
 	}
 	
-//////////////////////////////////////////////////
-// 				OBSOLETE METHODS 				//
-//////////////////////////////////////////////////
-	KeybindingsContainer GetCurrentTab()
+	//////////////////////////////////////////////////
+	// 				OBSOLETE METHODS 				//
+	//////////////////////////////////////////////////
+	override KeybindingsContainer GetCurrentTab()
 	{
 		return m_GroupsContainer;
 	}
 	
-	void AddGroup( int index, Input input )
+	override void AddGroup( int index, Input input )
 	{
 	}
 }		

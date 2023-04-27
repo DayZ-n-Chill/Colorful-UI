@@ -1,4 +1,9 @@
 
+// Use Expansion Variables and disable them. 
+const bool UseCustomLoadingPictures = false;
+const bool UseCustomLoadingMessages = false;
+const bool UseCustomLogo 	        = false;
+
 modded class LoginQueueBase extends UIScriptedMenu
 {
 	ProgressBarWidget m_ProgressLoading;
@@ -48,7 +53,7 @@ modded class LoginTimeBase extends UIScriptedMenu
 		return layoutRoot;
 	}
 	
-	void SetTime(int time)
+	override void SetTime(int time)
 	{
 		// NOTE: I recommend keeping this time set low. I usually set it to 5 seconds.
 		// Time is set in your globals.xml <var name="TimeLogin" type="0" value="5"/>
@@ -87,9 +92,26 @@ modded class LoadingScreen
 		ProgressAsync.SetProgressData(m_ProgressLoading);
 		ProgressAsync.SetUserData(m_ImageBackground);
 		SetStatus(m_TextWidgetStatus.GetRandomHint());
+
+		if ( UseCustomLoadingPictures )
+		{
+			// JsonFileLoader< ref array< ref ExpansionLoadingScreenBackground > >.JsonLoadFile( LOADING_SCREENS_PATH, m_Backgrounds );
+		}
+
+		if ( UseCustomLoadingMessages )
+		{
+			// JsonFileLoader< ref array< ref ExpansionLoadingScreenMessageData > >.JsonLoadFile( LOADING_MESSAGES_PATH, m_MessageJson );
+		}
+		
+		if ( UseCustomLogo )
+		{
+			// m_ImageLogoMid.LoadImageFile( 0, LOADING_SCREEN_LOGO );
+			// m_ImageLogoCorner.LoadImageFile( 0, LOADING_SCREEN_LOGO );
+		}
+
 	}	
 
-	void Show()
+	override void Show()
 	{
 		Widget lIcon = m_Background;
 		ImageWidget m_Background = ImageWidget.Cast( m_WidgetRoot.FindAnyWidget("BackgroundOverride"));		

@@ -91,7 +91,7 @@ modded class CharacterCreationMenu extends UIScriptedMenu
 	}
 	
 	//Coloring functions (Until WidgetStyles are useful)
-	void ColorHighlight( Widget w )
+	override void ColorHighlight( Widget w )
 	{
 		if( w.IsInherited( ButtonWidget ) )
 		{
@@ -142,7 +142,7 @@ modded class CharacterCreationMenu extends UIScriptedMenu
 		#endif
 	}
 	
-	void ColorNormal( Widget w )
+	override void ColorNormal( Widget w )
 	{
 		if( w.IsInherited( ButtonWidget ) )
 		{
@@ -191,7 +191,7 @@ modded class CharacterCreationMenu extends UIScriptedMenu
 		#endif
 	}
 	
-	void ColorDisable( Widget w )
+	override void ColorDisable( Widget w )
 	{
 		#ifndef PLATFORM_CONSOLE
 		SetFocus( null );
