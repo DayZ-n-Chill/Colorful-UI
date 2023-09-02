@@ -15,7 +15,6 @@ modded class ServerBrowserMenuNew extends UIScriptedMenu
 		m_Back					= layoutRoot.FindAnyWidget( "back_button" );
 		m_CustomizeCharacter	= layoutRoot.FindAnyWidget( "customize_character" );
 		m_PlayerName			= TextWidget.Cast( layoutRoot.FindAnyWidget( "character_name_text" ) );
-		m_Version				= TextWidget.Cast( layoutRoot.FindAnyWidget( "version" ) );
 		
 		m_Separator 				= layoutRoot.FindAnyWidget( "separator_red" );
 		m_Separator.SetColor(colorScheme.SeparatorColor());
@@ -23,9 +22,6 @@ modded class ServerBrowserMenuNew extends UIScriptedMenu
 		
 		Class.CastTo(m_shader, layoutRoot.FindAnyWidget("Colorful_Shader"));
 		m_shader.SetColor(colorScheme.ShaderColor());
-
-		string version;
-		GetGame().GetVersion( version );
 
 		OnlineServices.m_ServersAsyncInvoker.Insert( OnLoadServersAsync );
 		OnlineServices.m_ServerModLoadAsyncInvoker.Insert( OnLoadServerModsAsync );
