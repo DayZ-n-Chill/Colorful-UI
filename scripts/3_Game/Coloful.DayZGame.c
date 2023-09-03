@@ -48,11 +48,40 @@ modded class LoginTimeBase extends UIScriptedMenu
 		return layoutRoot;
 	}
 	
+	// override void SetTime(int time)
+	// {
+	// 	// NOTE: I recommend keeping this time set low. I usually set it to 5 seconds.
+	// 	// Time is set in your globals.xml <var name="TimeLogin" type="0" value="5"/>
+	// 	// Change the "text" below to whatever you want. 
+	// 	m_txtLabel.SetText("Get ready to play in " + time.ToString());
+	// }
+
+
 	override void SetTime(int time)
 	{
-		// NOTE: I recommend keeping this time set low. I usually set it to 5 seconds.
-		// Time is set in your globals.xml <var name="TimeLogin" type="0" value="5"/>
-		// Change the "text" below to whatever you want. 
+		string text = "";
+		TimeConversions.ConvertSecondsToFullTime(time, m_FullTime);
+		if (!m_IsRespawn)
+			text = "#menu_loading_in_";
+		else
+			text = "#dayz_game_spawning_in_";
+		
+		if (m_FullTime.m_Days > 0)
+			text += "dhms";
+		else if (m_FullTime.m_Hours > 0)
+			text += "hms";
+		else if (m_FullTime.m_Minutes > 0)
+			text += "ms";
+		else
+			text += "s";
+		
+		text = Widget.TranslateString(text);
+		text = string.Format(text, m_FullTime.m_Seconds, m_FullTime.m_Minutes, m_FullTime.m_Hours, m_FullTime.m_Days);
+		m_txtLabel.SetText(text);
+		
+		if (m_IsRespawn && time <= 1)
+			GetGame().SetLoginTimerFinished();
+
 		m_txtLabel.SetText("Get ready to play in " + time.ToString());
 	}
 };
