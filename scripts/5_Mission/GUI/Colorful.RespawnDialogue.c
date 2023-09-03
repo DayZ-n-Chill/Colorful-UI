@@ -10,7 +10,7 @@ modded class RespawnDialogue extends UIScriptedMenu
 
 	override Widget Init()
 	{
-		layoutRoot 					= GetGame().GetWorkspace().CreateWidgets("colorful-ui/gui/layouts/colorful.2.day_z_respawn_dialogue.layout");
+		layoutRoot 					= GetGame().GetWorkspace().CreateWidgets("colorful-ui/gui/layouts/Colorful.2.day_z_respawn_dialogue.layout");
 		m_DetailsRoot 				= layoutRoot.FindAnyWidget( "menu_details_tooltip" );
 		m_DetailsLabel				= TextWidget.Cast( m_DetailsRoot.FindAnyWidget( "menu_details_label" ) );
 		m_DetailsText				= RichTextWidget.Cast( m_DetailsRoot.FindAnyWidget( "menu_details_tooltip_content" ) );
@@ -30,29 +30,29 @@ modded class RespawnDialogue extends UIScriptedMenu
 	
 	override bool OnClick(Widget w, int x, int y, int button)
 	{
-		 if (button == MouseState.LEFT && w == m_Discord)
+		if (button == MouseState.LEFT && w == m_Discord)
 		{
-			GetGame().OpenURL("https://discord.gg/dayznchill");
+			GetGame().OpenURL(MenuURLS.urlDiscord);
 			return true;
 		}
 		else if (button == MouseState.LEFT && w == m_Twitter)
 		{
-			GetGame().OpenURL("https://twitter.com/dayznchill");
+			GetGame().OpenURL(MenuURLS.urlTwitter);
 			return false;
 		}
 		else if (button == MouseState.LEFT && w == m_Reddit)
 		{
-			GetGame().OpenURL("https://reddit.com/dayznchill");
+			GetGame().OpenURL(MenuURLS.urlReddit);
 			return false;
 		}
 		else if (button == MouseState.LEFT && w == m_Youtube)
 		{
-			GetGame().OpenURL("https://youtube.com/dayznchill");
+			GetGame().OpenURL(MenuURLS.urlYoutube);
 			return false;
 		}	
 		else if (button == MouseState.LEFT && w == m_Facebook)
 		{
-			GetGame().OpenURL("https://facebook.com/dayznchill");
+			GetGame().OpenURL(MenuURLS.urlFacebook);
 			return false;
 		}
 		super.OnClick(w, x, y, button);

@@ -82,44 +82,44 @@ modded class MainMenu extends UIScriptedMenu
 	override bool OnClick(Widget w, int x, int y, int button)
 	{
 		// NOTE: ------------------------------------------------------------
-		// Just drop in your URL to the desired social media outlet
+		// Just drop in your URL to the desired social media outlet in the constants file
 		// If you dont want to use one.  Just leave the code as is
 		// You can Hide the buttons in the Colorful.main_menu.layout file
 		// Located: Colorful-UI/gui/layouts/new_ui/Colorful.main_menu.layout
 		// ------------------------------------------------------------------
 		if (button == MouseState.LEFT && w == m_Discord)
 		{
-			GetGame().OpenURL("http://discord.gg/dayznchill");
+			GetGame().OpenURL(MenuURLS.urlDiscord);
 			return true;
 		}
 		else if (button == MouseState.LEFT && w == m_Twitter)
 		{
-			GetGame().OpenURL("https://twitter.com/dayznchill");
+			GetGame().OpenURL(MenuURLS.urlTwitter);
 			return false;
 		}
 		else if (button == MouseState.LEFT && w == m_Reddit)
 		{
-			GetGame().OpenURL("https://reddit.com/dayznchill");
+			GetGame().OpenURL(MenuURLS.urlReddit);
 			return false;
 		}
 		else if (button == MouseState.LEFT && w == m_Youtube)
 		{
-			GetGame().OpenURL("https://youtube.com/dayznchill");
+			GetGame().OpenURL(MenuURLS.urlYoutube);
 			return false;
 		}	
 		else if (button == MouseState.LEFT && w == m_Facebook)
 		{
-			GetGame().OpenURL("https://facebook.com/dayznchill");
+			GetGame().OpenURL(MenuURLS.urlFacebook);
 			return false;
 		}
 		else if (button == MouseState.LEFT && w == m_Website)
 		{
-			GetGame().OpenURL("https://dayznchill.com");
+			GetGame().OpenURL(MenuURLS.urlWebsite);
 			return false;
 		}
 		else if (button == MouseState.LEFT && w == m_PriorityQueue)
 		{
-			GetGame().OpenURL("https://dayznchill.com");
+			GetGame().OpenURL(MenuURLS.urlPriorityQ);
 			return false;
 		}
 		// TODO: Find out why default btn only says "rename", and wont let me chant text. 
