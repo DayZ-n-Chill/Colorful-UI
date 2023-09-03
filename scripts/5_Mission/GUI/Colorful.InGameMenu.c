@@ -73,27 +73,27 @@ modded class InGameMenu extends UIScriptedMenu
 		}
 		else if (button == MouseState.LEFT && w == m_Discord)
 		{
-			GetGame().OpenURL("https://discord.gg/y8cYYsXrWd");
+			GetGame().OpenURL(MenuURLS.urlDiscord);
 			return true;
 		}
 		else if (button == MouseState.LEFT && w == m_Twitter)
 		{
-			GetGame().OpenURL("https://twitter.com/dayznchill");
+			GetGame().OpenURL(MenuURLS.urlTwitter);
 			return false;
 		}
 		else if (button == MouseState.LEFT && w == m_Reddit)
 		{
-			GetGame().OpenURL("https://reddit.com/dayznchill");
+			GetGame().OpenURL(MenuURLS.urlReddit);
 			return false;
 		}
 		else if (button == MouseState.LEFT && w == m_Youtube)
 		{
-			GetGame().OpenURL("https://youtube.com/dayznchill");
+			GetGame().OpenURL(MenuURLS.urlYoutube);
 			return false;
 		}	
 		else if (button == MouseState.LEFT && w == m_Facebook)
 		{
-			GetGame().OpenURL("https://facebook.com/dayznchill");
+			GetGame().OpenURL(MenuURLS.urlFacebook);
 			return false;
 		}
 		else if (button == MouseState.LEFT && w == m_Website)
@@ -107,7 +107,7 @@ modded class InGameMenu extends UIScriptedMenu
 
 	// If you want to change the way the buttons work.  
 	// Visit the Colorful.MainMenu.c file. It has notes.
-	protected void ColorHighlight( Widget w )
+	override void ColorHighlight( Widget w )
 	{
 		if( !w )
 			return;
@@ -117,7 +117,7 @@ modded class InGameMenu extends UIScriptedMenu
 		
 	};
 
-	protected void ColorNormal( Widget w )
+	override void ColorNormal( Widget w )
 	{
 		if( !w )
 			return;

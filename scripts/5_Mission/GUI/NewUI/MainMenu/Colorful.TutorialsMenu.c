@@ -28,7 +28,7 @@ modded class TutorialsMenu extends UIScriptedMenu
 	}
 		
 	//Coloring functions (Until WidgetStyles are useful)
-	void ColorHighlight( Widget w )
+	override void ColorHighlight( Widget w )
 	{
 		if( !w )
 			return;
@@ -42,14 +42,14 @@ modded class TutorialsMenu extends UIScriptedMenu
 		ImagenSetColor(w, color_img);
 	}
 	
-	void ColorNormal( Widget w )
+	override void ColorNormal( Widget w )
 	{
 		if( !w )
 			return;
 		
 		int color_pnl = UIColor.Transparent();
-		int color_lbl = colorScheme.PrimaryText() 
-		int color_img = colorScheme.PrimaryText() 
+		int color_lbl = colorScheme.PrimaryText(); 
+		int color_img = colorScheme.PrimaryText(); 
 		
 		ButtonSetColor(w, color_pnl);
 		ButtonSetTextColor(w, color_lbl);

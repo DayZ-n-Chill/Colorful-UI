@@ -1,7 +1,7 @@
 modded class OptionSelectorBase extends ScriptedWidgetEventHandler
 {	
 	
-	void ColorHighlight( Widget w )
+	override void ColorHighlight( Widget w )
 	{
 		if( !w )
 			return;
@@ -9,7 +9,7 @@ modded class OptionSelectorBase extends ScriptedWidgetEventHandler
 		ButtonSetColor(w, colorScheme.ButtonHoverColor());
 	}
 	
-	void ColorNormal( Widget w )
+	override void ColorNormal( Widget w )
 	{
 		if( !w )
 			return;
@@ -33,7 +33,7 @@ modded class OptionSelectorBase extends ScriptedWidgetEventHandler
 		}
 	}
 	
-	void ColorDisabled( Widget w )
+	override void ColorDisabled( Widget w )
 	{
 		if( !w )
 			return;
@@ -57,7 +57,7 @@ modded class OptionSelectorBase extends ScriptedWidgetEventHandler
 		}		
 	}
 	
-	void ButtonSetColor( Widget w, int color )
+	override void ButtonSetColor( Widget w, int color )
 	{
 		Widget option = w.FindAnyWidget( w.GetName() + "_image" );
 		
@@ -67,7 +67,7 @@ modded class OptionSelectorBase extends ScriptedWidgetEventHandler
 		}
 	}
 	
-	void ColorHighlightConsole( Widget w )
+	override void ColorHighlightConsole( Widget w )
 	{
 		if( !w )
 			return;
@@ -80,7 +80,7 @@ modded class OptionSelectorBase extends ScriptedWidgetEventHandler
 		ButtonSetTextColorConsole(w, color_lbl);
 	}
 	
-	void ColorNormalConsole( Widget w )
+	override void ColorNormalConsole( Widget w )
 	{
 		if( !w )
 			return;
@@ -93,7 +93,7 @@ modded class OptionSelectorBase extends ScriptedWidgetEventHandler
 		ButtonSetTextColorConsole(w, color_lbl);
 	}
 	
-	void ColorDisabledConsole( Widget w )
+	override void ColorDisabledConsole( Widget w )
 	{
 		if( !w )
 			return;

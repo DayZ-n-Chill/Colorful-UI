@@ -82,44 +82,44 @@ modded class MainMenu extends UIScriptedMenu
 	override bool OnClick(Widget w, int x, int y, int button)
 	{
 		// NOTE: ------------------------------------------------------------
-		// Just drop in your URL to the desired social media outlet
+		// Just drop in your URL to the desired social media outlet in the constants file
 		// If you dont want to use one.  Just leave the code as is
 		// You can Hide the buttons in the Colorful.main_menu.layout file
 		// Located: Colorful-UI/gui/layouts/new_ui/Colorful.main_menu.layout
 		// ------------------------------------------------------------------
 		if (button == MouseState.LEFT && w == m_Discord)
 		{
-			GetGame().OpenURL("https://discord.gg/y8cYYsXrWd");
+			GetGame().OpenURL(MenuURLS.urlDiscord);
 			return true;
 		}
 		else if (button == MouseState.LEFT && w == m_Twitter)
 		{
-			GetGame().OpenURL("https://twitter.com/dayznchill");
+			GetGame().OpenURL(MenuURLS.urlTwitter);
 			return false;
 		}
 		else if (button == MouseState.LEFT && w == m_Reddit)
 		{
-			GetGame().OpenURL("https://reddit.com/dayznchill");
+			GetGame().OpenURL(MenuURLS.urlReddit);
 			return false;
 		}
 		else if (button == MouseState.LEFT && w == m_Youtube)
 		{
-			GetGame().OpenURL("https://youtube.com/dayznchill");
+			GetGame().OpenURL(MenuURLS.urlYoutube);
 			return false;
 		}	
 		else if (button == MouseState.LEFT && w == m_Facebook)
 		{
-			GetGame().OpenURL("https://facebook.com/dayznchill");
+			GetGame().OpenURL(MenuURLS.urlFacebook);
 			return false;
 		}
 		else if (button == MouseState.LEFT && w == m_Website)
 		{
-			GetGame().OpenURL("https://StalkerZ.net");
+			GetGame().OpenURL(MenuURLS.urlWebsite);
 			return false;
 		}
 		else if (button == MouseState.LEFT && w == m_PriorityQueue)
 		{
-			GetGame().OpenURL("https://StalkerZ.net/priorityQueue");
+			GetGame().OpenURL(MenuURLS.urlPriorityQ);
 			return false;
 		}
 		// TODO: Find out why default btn only says "rename", and wont let me chant text. 
@@ -189,7 +189,7 @@ modded class MainMenu extends UIScriptedMenu
 	// Background is your UIColor.Transparent()
 	// Text is sss
 	// ----------------------------------------
-	void ColorHighlight( Widget w )
+	override void ColorHighlight( Widget w )
 	{
 		if( !w )
 			return;	
@@ -203,7 +203,7 @@ modded class MainMenu extends UIScriptedMenu
 		ImagenSetColor(w, color_img);	
 	}
 
-	void ColorNormal( Widget w )
+	override void ColorNormal( Widget w )
 	{
 		if( !w )
 			return;
@@ -330,10 +330,9 @@ modded class MainMenu extends UIScriptedMenu
 		return false;
 	}
 
-
 	// I still have not found a good way to globally edit the generated dialog system colors but I feel like I am close
 	// I guess the best way in the meantime is to create a new menu and have it styled as we need.
-	void Exit()
+	override void Exit()
 	{
 		EnterScriptedMenu( COLORFUL_EXIT );
 	}
