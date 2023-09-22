@@ -36,3 +36,7 @@ All layouts and designs are 100% unique, and created by me.
 
 STOP PAYING FOR DAYZ MODS!!!
 Paid Mods Destroy the community. 
+
+## YOU CANNOT MONETIZE THIS MOD.  PERIOD.  
+
+
