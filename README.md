@@ -34,9 +34,6 @@ All the code I used I took from the Vanilla DayZ files, and modified them proper
 
 All layouts and designs are 100% unique, and created by me. 
 
-STOP PAYING FOR DAYZ MODS!!!
-Paid Mods Destroy the community. 
-
 ## YOU CANNOT MONETIZE THIS MOD.  PERIOD.  
 They are free to all who want them.  
 If you want me to customize them for you I charge 45$.
