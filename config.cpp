@@ -5,9 +5,19 @@ class CfgPatches
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"DZ_Data"};
-		// NOTE: Use the example below to have the UI work on Deer Isle
-		// EXAMPLE: requiredAddons[] = {"DZ_Data", "JMC_DeerIsle_Scripts" };
+		requiredAddons[] = {"DZ_Data","DZ_Scripts"};
+	};
+};
+
+class CfgAddons
+{
+	class PreloadBanks{};
+	class PreloadAddons
+	{
+		class DayZ
+		{
+			list[] = {"DZ_Data","DZ_Scripts","DZ_UI","DZ_UIFonts", "COLORFUL_HUD"};
+		};
 	};
 };
 
