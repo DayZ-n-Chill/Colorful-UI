@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{9BB5911F39BBA8F2}Colorful-UI/gui/textures/loading_screens/8TK-LS.edds"
+ Author "sdf-1"
+ ChangeDate -1485590701
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "8TK-LS.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

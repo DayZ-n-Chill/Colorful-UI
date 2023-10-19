@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{47AAA2171928D68F}Colorful-UI/gui/textures/main_menu/8TK-LS4.edds"
+ Author "sdf-1"
+ ChangeDate -1114394797
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "8TK-LS4.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}
