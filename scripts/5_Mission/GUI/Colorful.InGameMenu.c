@@ -71,12 +71,12 @@ modded class InGameMenu extends UIScriptedMenu
 		}
 		else if (button == MouseState.LEFT && w == m_Discord)
 		{
-			GetGame().OpenURL(MenuURLS.urlDiscord);
+			GetGame().OpenURL("https://discord.gg/8FNFpaVcFu");
 			return true;
 		}
 		else if (button == MouseState.LEFT && w == m_Twitter)
 		{
-			GetGame().OpenURL(MenuURLS.urlTwitter);
+			GetGame().OpenURL("https://twitter.com/OfficialDeadPix");
 			return false;
 		}
 		else if (button == MouseState.LEFT && w == m_Reddit)
@@ -86,7 +86,7 @@ modded class InGameMenu extends UIScriptedMenu
 		}
 		else if (button == MouseState.LEFT && w == m_Youtube)
 		{
-			GetGame().OpenURL(MenuURLS.urlYoutube);
+			GetGame().OpenURL("https://youtube.com/channel/UCFGlPpCYsYXmaRFCxidq8gQ ");
 			return false;
 		}	
 		else if (button == MouseState.LEFT && w == m_Facebook)

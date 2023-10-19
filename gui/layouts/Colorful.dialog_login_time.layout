@@ -18,6 +18,7 @@ WindowWidgetClass TextInputDialogRoot {
    vexactpos 1
    hexactsize 0
    vexactsize 0
+   imageTexture "{ECBD1C1B47726917}Colorful-UI/gui/textures/loading_screens/Loading_6.edds"
    mode blend
    "src alpha" 1
    "no wrap" 1
@@ -35,7 +36,7 @@ WindowWidgetClass TextInputDialogRoot {
    vexactsize 0
    fixaspect outside
    image0 ""
-   imageTexture "{A5D8917F066B3FDC}Colorful-UI/gui/textures/loading_screens/Colorful-BG-12.edds"
+   imageTexture "{A565090435B41D7D}Colorful-UI/gui/textures/loading_screens/Loading_1.edds"
    mode opaque
    "src alpha" 0
    stretch 1
@@ -130,14 +131,14 @@ WindowWidgetClass TextInputDialogRoot {
      visible 1
      clipchildren 0
      inheritalpha 1
-     size 460 320
+     size 460 460
      hexactpos 0
      vexactpos 0
      hexactsize 1
      vexactsize 1
      fixaspect outside
      image0 ""
-     imageTexture "{5314D820E495219F}Colorful-UI/gui/textures/globals/Colorful.Logo.edds"
+     imageTexture "{AFC75BEAD7235F2B}Colorful-UI/gui/textures/globals/DPG_Logo.edds"
      mode blend
      "src alpha" 1
      "no wrap" 1

@@ -24,7 +24,7 @@ FrameWidgetClass main_menu_root {
    scaled 1
    fixaspect outside
    image0 ""
-   imageTexture "{BCDEF8AF12180544}Colorful-UI/gui/textures/loading_screens/Colorful-BG-11.edds"
+   imageTexture "{A565090435B41D7D}Colorful-UI/gui/textures/loading_screens/Loading_1.edds"
    mode opaque
    "src alpha" 1
    "no wrap" 1
@@ -115,14 +115,14 @@ FrameWidgetClass main_menu_root {
      visible 1
      clipchildren 0
      inheritalpha 1
-     size 460 320
+     size 460 460
      hexactpos 0
      vexactpos 0
      hexactsize 1
      vexactsize 1
      fixaspect outside
      image0 ""
-     imageTexture "{5314D820E495219F}Colorful-UI/gui/textures/globals/Colorful.Logo.edds"
+     imageTexture "{AFC75BEAD7235F2B}Colorful-UI/gui/textures/globals/DPG_Logo.edds"
      mode blend
      "src alpha" 1
      "no wrap" 1
@@ -581,6 +581,7 @@ FrameWidgetClass main_menu_root {
          }
         }
         ButtonWidgetClass QueueBtn {
+         visible 0
          color 0 0 0 0
          position 0 0
          size 293 42
@@ -598,6 +599,7 @@ FrameWidgetClass main_menu_root {
          "next down" "play_video"
          {
           PanelWidgetClass QueueBtn_panel {
+           visible 1
            ignorepointer 1
            color 0 0 0 0
            size 1 1
@@ -632,6 +634,7 @@ FrameWidgetClass main_menu_root {
          }
         }
         ButtonWidgetClass WebsiteBtn {
+         visible 0
          color 0 0 0 0
          position 0 0
          size 293 42
@@ -867,7 +870,7 @@ FrameWidgetClass main_menu_root {
          }
         }
         ButtonWidgetClass RedditBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -1004,7 +1007,7 @@ FrameWidgetClass main_menu_root {
          }
         }
         ButtonWidgetClass FacebookBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref

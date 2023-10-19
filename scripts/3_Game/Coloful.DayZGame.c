@@ -1,4 +1,3 @@
-
 modded class LoginQueueBase extends UIScriptedMenu
 {
 	ProgressBarWidget m_ProgressLoading;
