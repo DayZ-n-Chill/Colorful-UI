@@ -29,7 +29,7 @@ class CfgMods
 		hideName = 1;
 		hidePicture = 1;
 		name = "DayZ n' Chill's Colorful UI";
-		credits = "DayZ n' Chill";
+		credits = "DayZ n' Chill: This one is for redzone but seems to be missing shit. hmm";
 		author = "DayZ n' Chill";
 		authorID = "76561197969255905";
 		version = "0.2";
