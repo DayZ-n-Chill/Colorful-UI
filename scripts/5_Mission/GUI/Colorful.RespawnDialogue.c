@@ -32,7 +32,7 @@ modded class RespawnDialogue extends UIScriptedMenu
 	{
 		if (button == MouseState.LEFT && w == m_Discord)
 		{
-			GetGame().OpenURL(MenuURLS.urlDiscord);
+			GetGame().OpenURL("discord.gg/sSxnUpSyb7");
 			return true;
 		}
 		else if (button == MouseState.LEFT && w == m_Twitter)

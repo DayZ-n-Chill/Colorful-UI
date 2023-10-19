@@ -8,23 +8,10 @@ string GetRandomBackground()
 		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-1.edds", 
 		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-2.edds",
         "Colorful-UI/gui/textures/loading_screens/Colorful-BG-3.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-4.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-5.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-6.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-7.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-8.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-9.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-10.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-11.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-12.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-13.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-14.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-15.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-16.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-17.edds"
+		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-4.edds"
 	};
 	Math.Randomize(-1);
-	int bgIndex = Math.RandomInt(0, 100) % 17;
+	int bgIndex = Math.RandomInt(0, 100) % 4;
 	return images[bgIndex];
 }
 
@@ -122,8 +109,9 @@ class UIColor
 	static int meta()                 { return ARGB(255, 24, 119, 242); };
 	
 	// Custom Colors (Use to add your own branding colors)
-	static int Teal()                 { return ARGB(255, 0, 102, 102); };
-	static int DPGPurple()            { return ARGB(255, 72, 27, 159); };
+	static int AdamX_L_Orange()         { return ARGB(255, 214, 137, 53); };
+	static int AdamX_D_Orange()         { return ARGB(255, 151, 45, 3); };
+	static int AdamX_B_Orange()         { return ARGB(255, 255, 168, 0); };
 }
 
 // DEFINE YOUR THEME -------------------------------------------------------
@@ -132,25 +120,25 @@ class colorScheme
 {
 	// Quick Styling --------------------------------------
 	// This color should be Servers/Communities Brand Color
-	static int BrandColor()   { return UIColor.Teal(); };
+	static int BrandColor()   { return UIColor.AdamX_L_Orange(); };
 	// This color should be a complimentary color to your brand. 
-	static int AccentColor()  { return UIColor.Red(); }
+	static int AccentColor()  { return UIColor.AdamX_D_Orange(); }
 
 	// Advanced Styling --------------------------------------
 	// You can get more Ganular with the colors by editing the syltes below
 	// Get wild and create your own color functions and use them throughout the mod.
 	// Best to Primary Text as white, but do whatever, Experiment.
 	static int PrimaryText()        { return UIColor.White(); }; 	
-	static int SecondaryText()      { return AccentColor(); };
-	static int ShaderColor()        { return BrandColor(); };
-	static int SeparatorColor()     { return BrandColor(); };
-	static int LoadingbarColor()    { return BrandColor(); };
-	static int MainMenuTrim()       { return BrandColor(); };
-	static int ButtonHoverColor()   { return BrandColor(); };	
-	static int TabHoverColor()      { return BrandColor(); };	
-	static int OptionInputColors()  { return BrandColor(); };
-	static int OptionCaretColors()  { return BrandColor(); };
-	static int OptionSliderColors() { return BrandColor(); };
+	static int SecondaryText()      { return UIColor.AdamX_L_Orange(); };
+	static int ShaderColor()        { return UIColor.AdamX_B_Orange(); };
+	static int SeparatorColor()     { return UIColor.AdamX_D_Orange(); };
+	static int LoadingbarColor()    { return UIColor.AdamX_D_Orange(); };
+	static int MainMenuTrim()       { return UIColor.AdamX_D_Orange(); };
+	static int ButtonHoverColor()   { return UIColor.AdamX_L_Orange(); };	
+	static int TabHoverColor()      { return UIColor.AdamX_L_Orange(); };	
+	static int OptionInputColors()  { return UIColor.AdamX_B_Orange(); };
+	static int OptionCaretColors()  { return UIColor.AdamX_B_Orange(); };
+	static int OptionSliderColors() { return UIColor.AdamX_B_Orange(); };
 }
  
 // Dialog Menus (No need to touch)
