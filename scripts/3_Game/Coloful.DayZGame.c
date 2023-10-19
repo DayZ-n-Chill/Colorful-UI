@@ -47,15 +47,6 @@ modded class LoginTimeBase extends UIScriptedMenu
         Background.LoadImageFile(0, GetRandomBackground());  		
 		return layoutRoot;
 	}
-	
-	// override void SetTime(int time)
-	// {
-	// 	// NOTE: I recommend keeping this time set low. I usually set it to 5 seconds.
-	// 	// Time is set in your globals.xml <var name="TimeLogin" type="0" value="5"/>
-	// 	// Change the "text" below to whatever you want. 
-	// 	m_txtLabel.SetText("Get ready to play in " + time.ToString());
-	// }
-
 
 	override void SetTime(int time)
 	{
@@ -119,11 +110,6 @@ modded class LoadingScreen
 		ProgressAsync.SetProgressData(m_ProgressLoading);
 		ProgressAsync.SetUserData(m_ImageBackground);
 		SetStatus(m_TextWidgetStatus.GetRandomHint());
-
-		m_logoRotator = new Rotator();
-        m_logoRotator.speed = 0.05;  // set your desired speed
-        m_logoRotator.OnWidgetScriptInit(m_ColorfulLogo);
-
 	}	
 
 	override void Show()

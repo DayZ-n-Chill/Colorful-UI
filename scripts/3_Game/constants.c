@@ -14,8 +14,8 @@ string GetRandomBackground()
 		"Colorful-UI/gui/textures/loading_screens/TheLab-LS7.edds",
 		"Colorful-UI/gui/textures/loading_screens/TheLab-LS8.edds"
 	};
-	Math.Randomize(-1);
-	int bgIndex = Math.RandomInt(0, 100) % 8;
+	const int IMAGES_COUNT = 8;
+	int bgIndex = Math.RandomInt(0, IMAGES_COUNT - 1);
 	return images[bgIndex];
 }
 
@@ -27,17 +27,17 @@ string GetRandomBackground()
  */
 class MenuURLS {
 	// Link for Discord
-	static string urlDiscord  = "https://discord.gg/dayznchill";
+	static string urlDiscord  = "https://discord.gg/dayzthelab";
 	// Link for Facebook
-	static string urlFacebook = "https://facebook.com/dayznchill";
+	static string urlFacebook = "#";
 	// Link for Twitter
-	static string urlTwitter  = "https://twitter.com/dayznchill";
+	static string urlTwitter  = "#";
 	// Link for Reddit
-	static string urlReddit   = "https://reddit.com/dayznchill";
+	static string urlReddit   = "#";
 	// Link for Youtube
-	static string urlYoutube  = "https://youtube.com/dayznchill";
+	static string urlYoutube  = "#";
 	// Link to Website
-	static string urlWebsite  = "https://dayznchill.com"; 
+	static string urlWebsite  = "#"; 
 	// Link for Prio Q
 	static string urlPriorityQ   = "#";
 	// Can be used anything else
