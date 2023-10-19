@@ -1,10 +1,10 @@
 MetaFileClass {
- Name "{F2D1CF61F22A0F58}Colorful-UI/gui/textures/loading_screens/Colorful-BG-4.edds"
+ Name "{D5FD202DEF340893}Colorful-UI/gui/textures/globals/server_rules.edds"
  Author "corruscant"
- ChangeDate -1379111725
+ ChangeDate 441462043
  Configurations {
   PNGResourceClass PC {
-   SourceFile "Colorful-BG-4.png"
+   SourceFile "server_rules.png"
   }
   PNGResourceClass XBOX_ONE : PC {
   }

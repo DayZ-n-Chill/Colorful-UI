@@ -21,7 +21,7 @@ FrameWidgetClass LoadingFrame {
    vexactsize 0
    fixaspect outside
    image0 ""
-   imageTexture "{A5D8917F066B3FDC}Colorful-UI/gui/textures/loading_screens/Colorful-BG-12.edds"
+   imageTexture "{0FF3348EAC4664F5}Colorful-UI/gui/textures/loading_screens/Loading_Screen_2.edds"
    mode opaque
    "src alpha" 0
    stretch 1
@@ -39,13 +39,8 @@ FrameWidgetClass LoadingFrame {
    hexactsize 0
    vexactsize 0
    fixaspect outside
-   image0 ""
-   imageTexture "{A5D8917F066B3FDC}Colorful-UI/gui/textures/loading_screens/Colorful-BG-12.edds"
-   mode opaque
-   "src alpha" 0
+   imageTexture "{0FF3348EAC4664F5}Colorful-UI/gui/textures/loading_screens/Loading_Screen_2.edds"
    stretch 1
-   "Transition width" 1
-   Progress 0
   }
   FrameWidgetClass Shaders {
    visible 1
@@ -131,18 +126,36 @@ FrameWidgetClass LoadingFrame {
    hexactsize 0
    vexactsize 0
    {
+    ImageWidgetClass Rules {
+     visible 0
+     ignorepointer 1
+     position -0.00003 -54.6877
+     size 500 600
+     halign right_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     scaled 1
+     imageTexture "{D5FD202DEF340893}Colorful-UI/gui/textures/globals/server_rules.edds"
+     mode blend
+     "src alpha" 1
+     "no wrap" 1
+     stretch 1
+    }
     ImageWidgetClass ColorfulLogo {
      visible 1
      clipchildren 0
      inheritalpha 1
-     size 460 320
+     size 460 425
      hexactpos 0
      vexactpos 0
      hexactsize 1
      vexactsize 1
      fixaspect outside
      image0 ""
-     imageTexture "{5314D820E495219F}Colorful-UI/gui/textures/globals/Colorful.Logo.edds"
+     imageTexture "{B10EF3103D708D22}Colorful-UI/gui/textures/globals/Colorful.UI_GamerCoreLogo.edds"
      mode blend
      "src alpha" 1
      "no wrap" 1
