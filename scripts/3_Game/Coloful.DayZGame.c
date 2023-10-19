@@ -88,6 +88,8 @@ modded class LoginTimeBase extends UIScriptedMenu
 
 modded class LoadingScreen
 {	
+	protected ImageWidget m_ColorfulLogo;
+	protected ref Rotator m_logoRotator;
 	protected ImageWidget m_Background; 
 	protected TextWidget m_ProTip;
 	private	Widget m_shader
@@ -98,6 +100,7 @@ modded class LoadingScreen
 		
 		m_WidgetRoot = game.GetLoadingWorkspace().CreateWidgets("Colorful-UI/gui/layouts/Colorful.loading.layout");
 		// Print("Colorful Loading Screen Loaded!");	
+		Class.CastTo(m_ColorfulLogo, m_WidgetRoot.FindAnyWidget("ColorfulLogo"));
 		Class.CastTo(m_ProTip, m_WidgetRoot.FindAnyWidget("ProTip"));
 		Class.CastTo(m_shader, m_WidgetRoot.FindAnyWidget("Colorful_Shader"));
 		Class.CastTo(m_ImageLogoMid, m_WidgetRoot.FindAnyWidget("ImageLogoMid"));
@@ -116,6 +119,11 @@ modded class LoadingScreen
 		ProgressAsync.SetProgressData(m_ProgressLoading);
 		ProgressAsync.SetUserData(m_ImageBackground);
 		SetStatus(m_TextWidgetStatus.GetRandomHint());
+
+		m_logoRotator = new Rotator();
+        m_logoRotator.speed = 0.05;  // set your desired speed
+        m_logoRotator.OnWidgetScriptInit(m_ColorfulLogo);
+
 	}	
 
 	override void Show()
@@ -124,4 +132,5 @@ modded class LoadingScreen
 		ImageWidget m_Background = ImageWidget.Cast( m_WidgetRoot.FindAnyWidget("BackgroundOverride"));		
 		m_Background.LoadImageFile(0, GetRandomBackground()); 
 	}
+
 };

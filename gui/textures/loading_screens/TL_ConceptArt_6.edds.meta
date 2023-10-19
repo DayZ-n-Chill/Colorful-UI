@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{118A352CD596A459}Colorful-UI/gui/textures/loading_screens/TL_ConceptArt_6.edds"
+ Author "sdf-1"
+ ChangeDate 1495035730
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "TL_ConceptArt_6.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

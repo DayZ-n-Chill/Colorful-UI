@@ -5,26 +5,17 @@
 string GetRandomBackground()
 {
 	const string images[] = {
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-1.edds", 
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-2.edds",
-        "Colorful-UI/gui/textures/loading_screens/Colorful-BG-3.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-4.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-5.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-6.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-7.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-8.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-9.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-10.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-11.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-12.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-13.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-14.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-15.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-16.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-17.edds"
+		"Colorful-UI/gui/textures/loading_screens/TheLab-LS1.edds", 
+		"Colorful-UI/gui/textures/loading_screens/TheLab-LS2.edds",
+        "Colorful-UI/gui/textures/loading_screens/TheLab-LS3.edds",
+		"Colorful-UI/gui/textures/loading_screens/TheLab-LS4.edds",
+		"Colorful-UI/gui/textures/loading_screens/TheLab-LS5.edds",
+		"Colorful-UI/gui/textures/loading_screens/TheLab-LS6.edds",
+		"Colorful-UI/gui/textures/loading_screens/TheLab-LS7.edds",
+		"Colorful-UI/gui/textures/loading_screens/TheLab-LS8.edds"
 	};
 	Math.Randomize(-1);
-	int bgIndex = Math.RandomInt(0, 100) % 17;
+	int bgIndex = Math.RandomInt(0, 100) % 8;
 	return images[bgIndex];
 }
 
@@ -132,7 +123,7 @@ class colorScheme
 {
 	// Quick Styling --------------------------------------
 	// This color should be Servers/Communities Brand Color
-	static int BrandColor()   { return UIColor.Teal(); };
+	static int BrandColor()   { return ARGB(255, 17, 146, 211); };
 	// This color should be a complimentary color to your brand. 
 	static int AccentColor()  { return UIColor.Red(); }
 

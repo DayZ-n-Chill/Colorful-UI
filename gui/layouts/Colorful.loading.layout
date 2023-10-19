@@ -40,7 +40,7 @@ FrameWidgetClass LoadingFrame {
    vexactsize 0
    fixaspect outside
    image0 ""
-   imageTexture "{A5D8917F066B3FDC}Colorful-UI/gui/textures/loading_screens/Colorful-BG-12.edds"
+   imageTexture "{DADD85D033C8074F}Colorful-UI/gui/textures/loading_screens/TheLab-LS1.edds"
    mode opaque
    "src alpha" 0
    stretch 1
@@ -136,6 +136,7 @@ FrameWidgetClass LoadingFrame {
      clipchildren 0
      inheritalpha 1
      size 460 320
+     halign center_ref
      hexactpos 0
      vexactpos 0
      hexactsize 1
@@ -151,7 +152,7 @@ FrameWidgetClass LoadingFrame {
      nocache 0
     }
     TextWidgetClass LoadingText {
-     visible 1
+     visible 0
      position 0 0.08
      size 0 0
      halign center_ref
@@ -167,7 +168,7 @@ FrameWidgetClass LoadingFrame {
      "text valign" center
     }
     TextWidgetClass ProTip {
-     visible 1
+     visible 0
      color 0.2588 0.6863 0.3647 1
      position 0 0.024
      size 1 0.03
@@ -622,6 +623,35 @@ FrameWidgetClass LoadingFrame {
          }
         }
        }
+      }
+     }
+    }
+    ButtonWidgetClass ButtonWidget0 {
+     color 0 0.2549 0.3804 1
+     position -0.00002 0.00003
+     size 194.584 55.5655
+     halign right_ref
+     valign bottom_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     style Colorable
+     {
+      TextWidgetClass TextWidget0 {
+       ignorepointer 1
+       size 142.569 48
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "Get VIP"
+       font "gui/fonts/MetronBook-Bold28"
+       "exact text" 1
+       "size to text h" 1
+       "size to text v" 1
       }
      }
     }
