@@ -28,7 +28,7 @@ class CfgMods
 		dir = "Colorful-UI";
 		hideName = 1;
 		hidePicture = 1;
-		name = "DayZ n' Chill's Colorful UI";
+		name = "DayZ n' Chill's Colorful UI: 8TK DayZ";
 		credits = "DayZ n' Chill";
 		author = "DayZ n' Chill";
 		authorID = "76561197969255905";
