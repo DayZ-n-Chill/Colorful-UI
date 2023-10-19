@@ -609,6 +609,7 @@ WindowWidgetClass LogoutDialogRoot {
          }
         }
         ButtonWidgetClass TwitterBtn {
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -677,7 +678,7 @@ WindowWidgetClass LogoutDialogRoot {
          }
         }
         ButtonWidgetClass RedditBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -746,7 +747,7 @@ WindowWidgetClass LogoutDialogRoot {
          }
         }
         ButtonWidgetClass YoutubeBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -814,7 +815,7 @@ WindowWidgetClass LogoutDialogRoot {
          }
         }
         ButtonWidgetClass FacebookBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -882,7 +883,7 @@ WindowWidgetClass LogoutDialogRoot {
          }
         }
         ButtonWidgetClass MetaBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -953,18 +954,18 @@ WindowWidgetClass LogoutDialogRoot {
       }
      }
     }
-    ImageWidgetClass ColorfulLogo {
+    ImageWidgetClass ColorfulLogo0 {
      visible 1
      clipchildren 0
      inheritalpha 1
-     size 460 320
+     size 460 465
      hexactpos 0
      vexactpos 0
      hexactsize 1
      vexactsize 1
      fixaspect outside
      image0 ""
-     imageTexture "{5314D820E495219F}Colorful-UI/gui/textures/globals/Colorful.Logo.edds"
+     imageTexture "{732D049E47E57980}Colorful-UI/gui/textures/globals/SNP_Logo.edds"
      mode blend
      "src alpha" 1
      "no wrap" 1

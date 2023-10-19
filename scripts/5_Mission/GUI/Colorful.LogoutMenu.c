@@ -53,7 +53,7 @@ modded class LogoutMenu extends UIScriptedMenu
 
 		if (button == MouseState.LEFT && w == m_Discord)
 		{
-			GetGame().OpenURL(MenuURLS.urlDiscord);
+			GetGame().OpenURL("https://discord.gg/saltnpepper");
 			return true;
 		}
 		else if (button == MouseState.LEFT && w == m_Twitter)
