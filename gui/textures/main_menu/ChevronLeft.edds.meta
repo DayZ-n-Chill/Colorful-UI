@@ -1,10 +1,10 @@
 MetaFileClass {
- Name "{57DD1B88497A88B8}Colorful-UI/gui/textures/inventory/NumberSqr.edds"
- Author "corruscant"
- ChangeDate 1323494662
+ Name "{57EFA83B83C84239}Colorful-UI/gui/textures/main_menu/ChevronLeft.edds"
+ Author "sdf-1"
+ ChangeDate 649981778
  Configurations {
   PNGResourceClass PC {
-   SourceFile "NumberSqr.png"
+   SourceFile "ChevronLeft.png"
   }
   PNGResourceClass XBOX_ONE : PC {
   }

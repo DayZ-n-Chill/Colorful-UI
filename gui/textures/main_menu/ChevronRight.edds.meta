@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{580C79E17F0BD132}Colorful-UI/gui/textures/main_menu/ChevronRight.edds"
+ Author "sdf-1"
+ ChangeDate 448655186
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "ChevronRight.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

@@ -47,15 +47,6 @@ modded class LoginTimeBase extends UIScriptedMenu
         Background.LoadImageFile(0, GetRandomBackground());  		
 		return layoutRoot;
 	}
-	
-	// override void SetTime(int time)
-	// {
-	// 	// NOTE: I recommend keeping this time set low. I usually set it to 5 seconds.
-	// 	// Time is set in your globals.xml <var name="TimeLogin" type="0" value="5"/>
-	// 	// Change the "text" below to whatever you want. 
-	// 	m_txtLabel.SetText("Get ready to play in " + time.ToString());
-	// }
-
 
 	override void SetTime(int time)
 	{
@@ -88,6 +79,8 @@ modded class LoginTimeBase extends UIScriptedMenu
 
 modded class LoadingScreen
 {	
+	protected ImageWidget m_ColorfulLogo;
+	protected ref Rotator m_logoRotator;
 	protected ImageWidget m_Background; 
 	protected TextWidget m_ProTip;
 	private	Widget m_shader
@@ -98,6 +91,7 @@ modded class LoadingScreen
 		
 		m_WidgetRoot = game.GetLoadingWorkspace().CreateWidgets("Colorful-UI/gui/layouts/Colorful.loading.layout");
 		// Print("Colorful Loading Screen Loaded!");	
+		Class.CastTo(m_ColorfulLogo, m_WidgetRoot.FindAnyWidget("ColorfulLogo"));
 		Class.CastTo(m_ProTip, m_WidgetRoot.FindAnyWidget("ProTip"));
 		Class.CastTo(m_shader, m_WidgetRoot.FindAnyWidget("Colorful_Shader"));
 		Class.CastTo(m_ImageLogoMid, m_WidgetRoot.FindAnyWidget("ImageLogoMid"));
@@ -124,4 +118,5 @@ modded class LoadingScreen
 		ImageWidget m_Background = ImageWidget.Cast( m_WidgetRoot.FindAnyWidget("BackgroundOverride"));		
 		m_Background.LoadImageFile(0, GetRandomBackground()); 
 	}
+
 };

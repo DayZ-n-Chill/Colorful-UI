@@ -1,10 +1,10 @@
 MetaFileClass {
- Name "{B3D26E8DF48ED737}Colorful-UI/gui/textures/inventory/IS-No_Item.edds"
- Author "corruscant"
- ChangeDate 1256385798
+ Name "{8435AC938C458940}Colorful-UI/gui/textures/loading_screens/TheLab-LS2.edds"
+ Author "sdf-1"
+ ChangeDate 756838226
  Configurations {
   PNGResourceClass PC {
-   SourceFile "IS-No_Item.png"
+   SourceFile "TheLab-LS2.png"
   }
   PNGResourceClass XBOX_ONE : PC {
   }

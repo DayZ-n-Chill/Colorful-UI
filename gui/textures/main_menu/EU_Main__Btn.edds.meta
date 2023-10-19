@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{B953E2E8E895815F}Colorful-UI/gui/textures/main_menu/EU_Main__Btn.edds"
+ Author "sdf-1"
+ ChangeDate 215871314
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "EU_Main__Btn.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

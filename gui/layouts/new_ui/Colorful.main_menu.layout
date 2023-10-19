@@ -14,7 +14,7 @@ FrameWidgetClass main_menu_root {
   ImageWidgetClass ImageBackground {
    visible 1
    position 0 0
-   size 0.16 0.09
+   size 0.18 0.09
    halign center_ref
    valign center_ref
    hexactpos 0
@@ -24,7 +24,7 @@ FrameWidgetClass main_menu_root {
    scaled 1
    fixaspect outside
    image0 ""
-   imageTexture "{BCDEF8AF12180544}Colorful-UI/gui/textures/loading_screens/Colorful-BG-11.edds"
+   imageTexture "{DADD85D033C8074F}Colorful-UI/gui/textures/loading_screens/TheLab-LS1.edds"
    mode opaque
    "src alpha" 1
    "no wrap" 1
@@ -75,14 +75,14 @@ FrameWidgetClass main_menu_root {
      hexactsize 0
      vexactsize 0
      scaled 1
-     imageTexture "{4BFC093013F74D19}Colorful-UI/gui/textures/globals/UI.Colorful.Shader.edds"
+     imageTexture "{A78E9ED74CB35BD1}Colorful-UI/gui/textures/globals/Colorful.Shading.edds"
      mode blend
      "src alpha" 1
      "no wrap" 1
      stretch 1
     }
     ImageWidgetClass HorizShader {
-     visible 1
+     visible 0
      ignorepointer 1
      keepsafezone 0
      position 0 0
@@ -115,14 +115,15 @@ FrameWidgetClass main_menu_root {
      visible 1
      clipchildren 0
      inheritalpha 1
-     size 460 320
+     size 650 406
+     halign center_ref
      hexactpos 0
      vexactpos 0
      hexactsize 1
      vexactsize 1
      fixaspect outside
      image0 ""
-     imageTexture "{5314D820E495219F}Colorful-UI/gui/textures/globals/Colorful.Logo.edds"
+     imageTexture "{E3064361AB8CBF10}Colorful-UI/gui/textures/globals/TheLab.Logo.edds"
      mode blend
      "src alpha" 1
      "no wrap" 1
@@ -160,6 +161,7 @@ FrameWidgetClass main_menu_root {
        switch normal
        {
         ImageWidgetClass tutorial_button_image {
+         visible 0
          ignorepointer 1
          size 1 1
          halign center_ref
@@ -194,6 +196,7 @@ FrameWidgetClass main_menu_root {
        switch normal
        {
         ImageWidgetClass message_button_image {
+         visible 0
          ignorepointer 1
          size 1 1
          halign center_ref
@@ -285,8 +288,9 @@ FrameWidgetClass main_menu_root {
      visible 1
      ignorepointer 1
      keepsafezone 1
+     position 0 0.00302
      size 300 618.29999
-     halign right_ref
+     halign center_ref
      valign bottom_ref
      hexactpos 0
      vexactpos 0
@@ -332,9 +336,8 @@ FrameWidgetClass main_menu_root {
           PanelWidgetClass play_panel {
            ignorepointer 1
            color 0 0 0 0
-           position 0 0
            size 1 1
-           halign right_ref
+           halign center_ref
            valign center_ref
            hexactpos 0
            vexactpos 0
@@ -345,9 +348,8 @@ FrameWidgetClass main_menu_root {
             TextWidgetClass play_label {
              clipchildren 0
              ignorepointer 1
-             position 8 0
              size 1 1
-             halign right_ref
+             halign center_ref
              valign center_ref
              hexactpos 1
              vexactpos 0
@@ -367,7 +369,7 @@ FrameWidgetClass main_menu_root {
          }
         }
         ButtonWidgetClass CharacterBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          position 0 0
          size 293 42
@@ -385,10 +387,11 @@ FrameWidgetClass main_menu_root {
          "next down" "play_video"
          {
           PanelWidgetClass CharacterBtn_panel {
+           visible 0
            ignorepointer 1
            color 0 0 0 0
            size 1 1
-           halign right_ref
+           halign center_ref
            valign center_ref
            hexactpos 0
            vexactpos 0
@@ -397,12 +400,11 @@ FrameWidgetClass main_menu_root {
            style DayZDefaultPanel
            {
             TextWidgetClass CharacterBtn_label {
-             visible 1
+             visible 0
              clipchildren 0
              ignorepointer 1
-             position 8 0
              size 1 1
-             halign right_ref
+             halign center_ref
              valign center_ref
              hexactpos 1
              vexactpos 0
@@ -477,7 +479,7 @@ FrameWidgetClass main_menu_root {
          }
         }
         ButtonWidgetClass choose_server {
-         visible 1
+         visible 0
          color 0 0 0 1
          size 293 42
          halign right_ref
@@ -581,6 +583,7 @@ FrameWidgetClass main_menu_root {
          }
         }
         ButtonWidgetClass QueueBtn {
+         visible 0
          color 0 0 0 0
          position 0 0
          size 293 42
@@ -632,6 +635,7 @@ FrameWidgetClass main_menu_root {
          }
         }
         ButtonWidgetClass WebsiteBtn {
+         visible 0
          color 0 0 0 0
          position 0 0
          size 293 42
@@ -686,6 +690,7 @@ FrameWidgetClass main_menu_root {
        }
       }
       FrameWidgetClass Spacer {
+       visible 1
        ignorepointer 1
        position 174.92999 0.3113
        size 48 10
@@ -695,7 +700,7 @@ FrameWidgetClass main_menu_root {
        vexactsize 1
       }
       PanelWidgetClass separator_2 {
-       visible 1
+       visible 0
        ignorepointer 1
        color 0.7843 0 0 1
        size 293 2
@@ -716,6 +721,7 @@ FrameWidgetClass main_menu_root {
        vexactsize 1
       }
       GridSpacerWidgetClass Socials {
+       visible 1
        ignorepointer 1
        position 0 0
        size 0 0
@@ -731,6 +737,7 @@ FrameWidgetClass main_menu_root {
        Rows 5
        {
         ButtonWidgetClass DiscordBtn {
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -799,6 +806,7 @@ FrameWidgetClass main_menu_root {
          }
         }
         ButtonWidgetClass TwitterBtn {
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -867,7 +875,7 @@ FrameWidgetClass main_menu_root {
          }
         }
         ButtonWidgetClass RedditBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -936,7 +944,7 @@ FrameWidgetClass main_menu_root {
          }
         }
         ButtonWidgetClass YoutubeBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -1004,7 +1012,7 @@ FrameWidgetClass main_menu_root {
          }
         }
         ButtonWidgetClass FacebookBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -1139,12 +1147,83 @@ FrameWidgetClass main_menu_root {
           }
          }
         }
+        PanelWidgetClass DiscordBtn_panel0 {
+         ignorepointer 1
+         color 0 0 0 0
+         size 293 39
+         halign right_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 1
+         vexactsize 1
+         style DayZDefaultPanel
+         {
+          ImageWidgetClass DiscordBtn_img0 {
+           visible 0
+           clipchildren 0
+           ignorepointer 1
+           size 47 39
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           imageTexture "{4E98404B3EE57BD9}Colorful-UI/gui/textures/main_menu/Colorful.Discord.edds"
+           mode blend
+           "src alpha" 1
+           "no wrap" 1
+           stretch 1
+           filter 0
+          }
+          TextWidgetClass DiscordBtn_label0 {
+           visible 1
+           clipchildren 0
+           ignorepointer 1
+           position 67.0561 1.45203
+           size 1 1
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           text "10/20"
+           font "Colorful-UI/gui/fonts/PersonalServices24"
+           "exact text" 1
+           "size to text h" 1
+           "size to text v" 0
+           "text halign" right
+           "text valign" center
+          }
+          TextWidgetClass DiscordBtn_label1 {
+           clipchildren 0
+           ignorepointer 1
+           color 0.3725 0.749 0.4667 1
+           position 40.836 0
+           size 1 1
+           halign center_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           text "48"
+           font "Colorful-UI/gui/fonts/PersonalServices24"
+           "exact text" 1
+           "size to text h" 1
+           "size to text v" 0
+           "text halign" right
+           "text valign" center
+          }
+         }
+        }
        }
       }
      }
     }
     FrameWidgetClass character_stats_root {
-     visible 1
+     visible 0
      ignorepointer 1
      position 0 0
      size 415 305
@@ -1419,6 +1498,156 @@ FrameWidgetClass main_menu_root {
            "text valign" center
           }
          }
+        }
+       }
+      }
+     }
+    }
+    FrameWidgetClass settings_panel_Left {
+     visible 1
+     ignorepointer 1
+     size 260 40
+     hexactpos 0
+     vexactpos 0
+     hexactsize 1
+     vexactsize 1
+     priority 3
+     {
+      ButtonWidgetClass tutorial_button0 {
+       visible 1
+       color 1 1 1 0
+       position 0.75 0
+       size 37 37
+       halign right_ref
+       valign center_ref
+       hexactpos 0
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       style Empty
+       "no focus" 1
+       "next up" "play"
+       "next down" "customize_character"
+       font "Colorful-UI/gui/fonts/PersonalServices24"
+       switch normal
+       {
+        ImageWidgetClass tutorial_button_image0 {
+         ignorepointer 1
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         image0 "set:dayz_gui image:tutorials"
+         mode blend
+         "src alpha" 1
+        }
+       }
+      }
+      ButtonWidgetClass message_button0 {
+       visible 1
+       color 1 1 1 0
+       position 0.5 0
+       size 45 33
+       halign right_ref
+       valign center_ref
+       hexactpos 0
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       fixaspect inside
+       style Empty
+       "no focus" 1
+       "next up" "play"
+       "next down" "customize_character"
+       font "Colorful-UI/gui/fonts/PersonalServices24"
+       switch normal
+       {
+        ImageWidgetClass message_button_image0 {
+         ignorepointer 1
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         image0 "set:dayz_gui image:credits"
+         mode blend
+         "src alpha" 1
+        }
+       }
+      }
+      ButtonWidgetClass settings_button0 {
+       visible 1
+       keepsafezone 1
+       color 1 1 1 0
+       position 0.25 0
+       size 37 37
+       halign right_ref
+       valign center_ref
+       hexactpos 0
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       fixaspect inside
+       style Empty
+       "no focus" 0
+       "next left" "news_main"
+       "next right" "exit_button"
+       "next up" "play"
+       "next down" "customize_character"
+       font "Colorful-UI/gui/fonts/PersonalServices24"
+       switch normal
+       {
+        ImageWidgetClass settings_button_image0 {
+         ignorepointer 1
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         image0 "set:dayz_gui image:settings"
+         mode blend
+         "src alpha" 1
+        }
+       }
+      }
+      ButtonWidgetClass exit_button0 {
+       color 1 1 1 0
+       size 37 37
+       halign right_ref
+       valign center_ref
+       hexactpos 0
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       fixaspect inside
+       style Empty
+       "no focus" 0
+       "next left" "settings_button"
+       "next right" "play"
+       "next up" "play"
+       "next down" "customize_character"
+       font "Colorful-UI/gui/fonts/PersonalServices24"
+       switch normal
+       {
+        ImageWidgetClass exit_button_image0 {
+         ignorepointer 1
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         image0 "set:dayz_gui image:exit"
+         mode blend
+         "src alpha" 1
         }
        }
       }

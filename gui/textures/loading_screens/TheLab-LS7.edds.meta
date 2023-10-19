@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{670DD7574CD31B51}Colorful-UI/gui/textures/loading_screens/TheLab-LS7.edds"
+ Author "sdf-1"
+ ChangeDate 1897688914
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "TheLab-LS7.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}
