@@ -115,6 +115,7 @@ class UIColor
 	// Custom Colors (Use to add your own branding colors)
 	static int Teal()                 { return ARGB(255, 0, 102, 102); };
 	static int DPGPurple()            { return ARGB(255, 72, 27, 159); };
+	static int TLBlue()           	  { return ARGB(255, 17, 146, 211);};
 }
 
 // DEFINE YOUR THEME -------------------------------------------------------
@@ -123,7 +124,7 @@ class colorScheme
 {
 	// Quick Styling --------------------------------------
 	// This color should be Servers/Communities Brand Color
-	static int BrandColor()   { return ARGB(255, 17, 146, 211); };
+	static int BrandColor()   { return UIColor.TLBlue()};
 	// This color should be a complimentary color to your brand. 
 	static int AccentColor()  { return UIColor.Red(); }
 
