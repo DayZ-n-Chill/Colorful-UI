@@ -5,26 +5,15 @@
 string GetRandomBackground()
 {
 	const string images[] = {
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-1.edds", 
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-2.edds",
-        "Colorful-UI/gui/textures/loading_screens/Colorful-BG-3.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-4.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-5.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-6.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-7.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-8.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-9.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-10.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-11.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-12.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-13.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-14.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-15.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-16.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-17.edds"
+		"Colorful-UI/gui/textures/loading_screens/StalkerZ_BG_1.edds", 
+		"Colorful-UI/gui/textures/loading_screens/StalkerZ_BG_2.edds",
+        "Colorful-UI/gui/textures/loading_screens/StalkerZ_BG_3.edds",
+		"Colorful-UI/gui/textures/loading_screens/StalkerZ_BG_4.edds",
+		"Colorful-UI/gui/textures/loading_screens/StalkerZ_BG_5.edds",
+		"Colorful-UI/gui/textures/loading_screens/StalkerZ_BG_7.edds"
 	};
 	Math.Randomize(-1);
-	int bgIndex = Math.RandomInt(0, 100) % 17;
+	int bgIndex = Math.RandomInt(0, 100) % 6;
 	return images[bgIndex];
 }
 
@@ -36,17 +25,17 @@ string GetRandomBackground()
  */
 class MenuURLS {
 	// Link for Discord
-	static string urlDiscord  = "https://discord.gg/dayznchill";
+	static string urlDiscord  = "https://discord.gg/y8cYYsXrWd";
 	// Link for Facebook
-	static string urlFacebook = "https://facebook.com/dayznchill";
+	static string urlFacebook = "#";
 	// Link for Twitter
-	static string urlTwitter  = "https://twitter.com/dayznchill";
+	static string urlTwitter  = "#";
 	// Link for Reddit
-	static string urlReddit   = "https://reddit.com/dayznchill";
+	static string urlReddit   = "#";
 	// Link for Youtube
-	static string urlYoutube  = "https://youtube.com/dayznchill";
+	static string urlYoutube  = "#";
 	// Link to Website
-	static string urlWebsite  = "https://dayznchill.com"; 
+	static string urlWebsite  = "https://stalkerz.net"; 
 	// Link for Prio Q
 	static string urlPriorityQ   = "#";
 	// Can be used anything else
@@ -57,26 +46,37 @@ class MenuURLS {
 string GetRandomHint()
 {
 	const string tips[] = {
-		"Death makes you die.",
-		"Broomsticks give you enough resources to make a fire place and cooking stand.",
-		"Keep your car running smoothby using min 4 water bottles to fill the radiator.",
-		"You can craft a bone knife with one bone if you use rocks or boulders to craft it.",
-		"Try to blend in with your enviornment. Do not wear bright colors",
-		"If someone is harrassing you contact a server admin immediately",
-		"Non aggro infected will detect you in 2 seconds when sneaking up on them. Stealth kill them quick",
-		"Craft foot wraps to dampen the sound of your movement.",
-		"Breaking down ghillie parts you find is a faster way to get all the parts you need to make a full one.",
-		"Baking food provides the most nutritional value when cooking.",
-		"The flare gun can not kill anything in the game but yourself.",
-		"Armor Piercing rounds do not do extra damage, they just reduce the durability of armor faster.",
-		"Going unconsious in water will kill you in 20 seconds.",
-		"Having full white stats, or taking multivitamins will allow you to eat raw meat, drink from dirty water sources, and consume with bloody hands.",
-		"Apart from the Famas, all sawed off weapons have twice the ammount of recoil",
-		"Any weapon with a suppressor cannot be heard after 150 meters.",
-		"If you log into a dynamic gas zone you will be teleported out of the area.",
-		"If you are K.O. by a gunman you will always wake up facing the opposite the direction from where you were shot. ",
-		"Spike helmet only spawns at the Castle south of Sitnik on the red trail.",
-		"Remebering Paulie.  Loc. 11930 x 13157 - R.I.P"
+		"Always record your gameplay. Staff will ask for evidence regarding rule breaks/compensation.",
+		"Make sure to never break character.",
+		"You can directly give items to people (Default key:'H') You can rebind this in the settings.",
+		"When driving a vehicle, press 'H' to clear the road!",
+		"There are only two certainties in life, death and taxes.",
+		"If the enemy is in range, so are you.",
+		"Try to look unimportant, they may be low on ammo.",
+		"Teamwork is essential, it gives them someone else to shoot at.",
+		"If your attack is going well, you have walked into an ambush.",
+		"All five second grenade fuses are three seconds.",
+		"When driving a vehicle, press 'V' for a better view.",
+		"Press 'F5' to surrender, this will save your life.",
+		"Consider investing in boots, the Zone is a rough place to traverse.",
+		"Screaming 'I have a bomb!' might help you, it might not.",
+		"Hold 'B' to grab a bolt (make sure your hands are empty).",
+		"Double-barreled shotguns can be used to fire both barrels simultaneously.",
+		"If you want to move with minimal noise, press 'C' (default) to crouch or hold 'Ctrl' (default) to walk.",
+		"Most weapons have several firing modes. To switch between firing modes, press 'X' (default).",
+		"To turn your head torch on or off, hold 'L' (default) briefly.",
+		"To quick save, press 'F5'. Press 'F9' to quick load the last quick save.",
+		"If someone aims their weapon at you, refrain from pressing 'F4'.",
+		"You may NEVER loot your own body after death.",
+		"Reporting rule breaks is the only way to help the community remove troublemakers.",
+		"Make friends, adventuring solo can be deadly.",
+		"Try to find shelter during an Emission.",
+		"Exploiting game mechanics will get you in trouble",
+		"Have an unexplained 'hickey'? Just say a Bloodsucker did it",
+		"Make sure your character name is assigned on the launcher, it's REQUIRED",
+		"[Insert pro tip here]",
+		"Keep your feet dry! The last thing you want is trenchfoot.",
+		"Tough time never last, only tough people last"
 	};
 	Math.Randomize(-1);
 	int tipIndex = Math.RandomInt(0, 100) % 20;
@@ -122,8 +122,10 @@ class UIColor
 	static int meta()                 { return ARGB(255, 24, 119, 242); };
 	
 	// Custom Colors (Use to add your own branding colors)
-	static int Teal()                 { return ARGB(255, 0, 102, 102); };
-	static int DPGPurple()            { return ARGB(255, 72, 27, 159); };
+	static int StalkerZ_Yellow()      { return ARGB(255, 190, 160, 40); };
+	static int StalkerZ_Orange()      { return ARGB(255, 165, 85, 0); };
+	static int StalkerZ_Yellow_2()    { return ARGB(255, 204, 153, 0); };
+	static int StalkerZ_Red()         { return ARGB(255, 105, 0, 0); };
 }
 
 // DEFINE YOUR THEME -------------------------------------------------------
@@ -132,25 +134,25 @@ class colorScheme
 {
 	// Quick Styling --------------------------------------
 	// This color should be Servers/Communities Brand Color
-	static int BrandColor()   { return UIColor.Teal(); };
+	static int BrandColor()   { return UIColor.StalkerZ_Red(); };
 	// This color should be a complimentary color to your brand. 
-	static int AccentColor()  { return UIColor.Red(); }
+	static int AccentColor()  { return UIColor.StalkerZ_Yellow(); };
 
 	// Advanced Styling --------------------------------------
 	// You can get more Ganular with the colors by editing the syltes below
 	// Get wild and create your own color functions and use them throughout the mod.
 	// Best to Primary Text as white, but do whatever, Experiment.
 	static int PrimaryText()        { return UIColor.White(); }; 	
-	static int SecondaryText()      { return AccentColor(); };
-	static int ShaderColor()        { return BrandColor(); };
-	static int SeparatorColor()     { return BrandColor(); };
-	static int LoadingbarColor()    { return BrandColor(); };
+	static int SecondaryText()      { return UIColor.StalkerZ_Orange(); };
+	static int ShaderColor()        { return UIColor.StalkerZ_Orange(); };
+	static int SeparatorColor()     { return UIColor.StalkerZ_Orange(); };
+	static int LoadingbarColor()    { return UIColor.StalkerZ_Yellow_2(); };
 	static int MainMenuTrim()       { return BrandColor(); };
-	static int ButtonHoverColor()   { return BrandColor(); };	
-	static int TabHoverColor()      { return BrandColor(); };	
-	static int OptionInputColors()  { return BrandColor(); };
-	static int OptionCaretColors()  { return BrandColor(); };
-	static int OptionSliderColors() { return BrandColor(); };
+	static int ButtonHoverColor()   { return UIColor.StalkerZ_Yellow_2(); };	
+	static int TabHoverColor()      { return UIColor.StalkerZ_Yellow_2(); };	
+	static int OptionInputColors()  { return UIColor.StalkerZ_Orange(); };
+	static int OptionCaretColors()  { return UIColor.StalkerZ_Orange(); };
+	static int OptionSliderColors() { return UIColor.StalkerZ_Orange(); };
 }
  
 // Dialog Menus (No need to touch)

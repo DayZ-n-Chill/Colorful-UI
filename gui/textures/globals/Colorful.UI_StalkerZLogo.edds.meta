@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{21DA72C6325555B4}Colorful-UI/gui/textures/globals/Colorful.UI_StalkerZLogo.edds"
+ Author "corruscant"
+ ChangeDate -510300904
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Colorful.UI_StalkerZLogo.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}
