@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{D0892C89C96518E4}Colorful-UI/gui/textures/globals/8TKLogo_Transparent_wText.edds"
+ Author "sdf-1"
+ ChangeDate 947662675
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "8TKLogo_Transparent_wText.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

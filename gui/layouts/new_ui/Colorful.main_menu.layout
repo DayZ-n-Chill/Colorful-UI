@@ -24,7 +24,7 @@ FrameWidgetClass main_menu_root {
    scaled 1
    fixaspect outside
    image0 ""
-   imageTexture "{BCDEF8AF12180544}Colorful-UI/gui/textures/loading_screens/Colorful-BG-11.edds"
+   imageTexture "{5158D4F641FB30E3}Colorful-UI/gui/textures/loading_screens/8TK-LS5.edds"
    mode opaque
    "src alpha" 1
    "no wrap" 1
@@ -111,25 +111,6 @@ FrameWidgetClass main_menu_root {
    hexactsize 0
    vexactsize 0
    {
-    ImageWidgetClass ColorfulLogo {
-     visible 1
-     clipchildren 0
-     inheritalpha 1
-     size 460 320
-     hexactpos 0
-     vexactpos 0
-     hexactsize 1
-     vexactsize 1
-     fixaspect outside
-     image0 ""
-     imageTexture "{5314D820E495219F}Colorful-UI/gui/textures/globals/Colorful.Logo.edds"
-     mode blend
-     "src alpha" 1
-     "no wrap" 1
-     stretch 1
-     filter 1
-     nocache 0
-    }
     FrameWidgetClass settings_panel_root {
      visible 1
      ignorepointer 1
@@ -1423,6 +1404,25 @@ FrameWidgetClass main_menu_root {
        }
       }
      }
+    }
+    ImageWidgetClass ColorfulLogo {
+     visible 1
+     clipchildren 0
+     inheritalpha 1
+     size 520 360
+     hexactpos 0
+     vexactpos 0
+     hexactsize 1
+     vexactsize 1
+     fixaspect outside
+     image0 ""
+     imageTexture "{D0892C89C96518E4}Colorful-UI/gui/textures/globals/8TKLogo_Transparent_wText.edds"
+     mode blend
+     "src alpha" 1
+     "no wrap" 1
+     stretch 1
+     filter 1
+     nocache 0
     }
    }
   }
