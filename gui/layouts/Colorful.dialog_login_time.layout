@@ -57,7 +57,7 @@ WindowWidgetClass TextInputDialogRoot {
    vexactsize 0
    {
     ImageWidgetClass Vignette {
-     visible 1
+     visible 0
      ignorepointer 0
      color 0 0 0 0.7843
      position 0 0
@@ -130,7 +130,7 @@ WindowWidgetClass TextInputDialogRoot {
      visible 1
      clipchildren 0
      inheritalpha 1
-     size 520 360
+     size 540 360
      hexactpos 0
      vexactpos 0
      hexactsize 1

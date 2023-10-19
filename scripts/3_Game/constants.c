@@ -5,26 +5,14 @@
 string GetRandomBackground()
 {
 	const string images[] = {
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-1.edds", 
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-2.edds",
-        "Colorful-UI/gui/textures/loading_screens/Colorful-BG-3.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-4.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-5.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-6.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-7.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-8.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-9.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-10.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-11.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-12.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-13.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-14.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-15.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-16.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-17.edds"
+		"Colorful-UI/gui/textures/loading_screens/8TK-LS1.edds", 
+		"Colorful-UI/gui/textures/loading_screens/8TK-LS2.edds",
+        "Colorful-UI/gui/textures/loading_screens/8TK-LS3.edds",
+		"Colorful-UI/gui/textures/loading_screens/8TK-LS4.edds",
+		"Colorful-UI/gui/textures/loading_screens/8TK-LS5.edds"
 	};
 	Math.Randomize(-1);
-	int bgIndex = Math.RandomInt(0, 100) % 17;
+	int bgIndex = Math.RandomInt(0, 100) % 5;
 	return images[bgIndex];
 }
 
@@ -36,17 +24,17 @@ string GetRandomBackground()
  */
 class MenuURLS {
 	// Link for Discord
-	static string urlDiscord  = "https://discord.gg/dayznchill";
+	static string urlDiscord  = "https://discord.gg/VbW8wQKhaX";
 	// Link for Facebook
-	static string urlFacebook = "https://facebook.com/dayznchill";
+	static string urlFacebook = "https://discord.gg/VbW8wQKhaX";
 	// Link for Twitter
-	static string urlTwitter  = "https://twitter.com/dayznchill";
+	static string urlTwitter  = "#";
 	// Link for Reddit
-	static string urlReddit   = "https://reddit.com/dayznchill";
+	static string urlReddit   = "#";
 	// Link for Youtube
-	static string urlYoutube  = "https://youtube.com/dayznchill";
+	static string urlYoutube  = "https://www.youtube.com/channel/UCB5pPEBoPbzq37sot4ZMifg";
 	// Link to Website
-	static string urlWebsite  = "https://dayznchill.com"; 
+	static string urlWebsite  = "#"; 
 	// Link for Prio Q
 	static string urlPriorityQ   = "#";
 	// Can be used anything else
@@ -132,7 +120,7 @@ class colorScheme
 {
 	// Quick Styling --------------------------------------
 	// This color should be Servers/Communities Brand Color
-	static int BrandColor()   { return UIColor.Teal(); };
+	static int BrandColor()   { return UIColor.Orange(); };
 	// This color should be a complimentary color to your brand. 
 	static int AccentColor()  { return UIColor.Red(); }
 
@@ -141,12 +129,12 @@ class colorScheme
 	// Get wild and create your own color functions and use them throughout the mod.
 	// Best to Primary Text as white, but do whatever, Experiment.
 	static int PrimaryText()        { return UIColor.White(); }; 	
-	static int SecondaryText()      { return AccentColor(); };
-	static int ShaderColor()        { return BrandColor(); };
+	static int SecondaryText()      { return BrandColor(); };
+	static int ShaderColor()        { return AccentColor();};
 	static int SeparatorColor()     { return BrandColor(); };
-	static int LoadingbarColor()    { return BrandColor(); };
-	static int MainMenuTrim()       { return BrandColor(); };
-	static int ButtonHoverColor()   { return BrandColor(); };	
+	static int LoadingbarColor()    { return AccentColor(); };
+	static int MainMenuTrim()       { return AccentColor(); };
+	static int ButtonHoverColor()   { return AccentColor(); };	
 	static int TabHoverColor()      { return BrandColor(); };	
 	static int OptionInputColors()  { return BrandColor(); };
 	static int OptionCaretColors()  { return BrandColor(); };

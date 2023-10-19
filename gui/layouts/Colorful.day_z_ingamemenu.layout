@@ -20,7 +20,7 @@ FrameWidgetClass InGameMenuRoot {
    vexactsize 0
    {
     ImageWidgetClass Vignette {
-     visible 1
+     visible 0
      ignorepointer 0
      color 0 0 0 0.7843
      position 0 0
@@ -603,6 +603,7 @@ FrameWidgetClass InGameMenuRoot {
          }
         }
         ButtonWidgetClass TwitterBtn {
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -619,6 +620,7 @@ FrameWidgetClass InGameMenuRoot {
          "next down" "play_video"
          {
           PanelWidgetClass TwitterBtn_panel {
+           visible 0
            ignorepointer 1
            color 0 0 0 0
            size 293 39
@@ -631,6 +633,7 @@ FrameWidgetClass InGameMenuRoot {
            style DayZDefaultPanel
            {
             ImageWidgetClass TwitterBtn_img {
+             visible 0
              clipchildren 0
              ignorepointer 1
              size 47 39
@@ -648,6 +651,7 @@ FrameWidgetClass InGameMenuRoot {
              filter 0
             }
             TextWidgetClass TwitterBtn_label {
+             visible 0
              clipchildren 0
              ignorepointer 1
              position 60 0
@@ -671,7 +675,7 @@ FrameWidgetClass InGameMenuRoot {
          }
         }
         ButtonWidgetClass RedditBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -837,6 +841,7 @@ FrameWidgetClass InGameMenuRoot {
            style DayZDefaultPanel
            {
             ImageWidgetClass FacebookBtn_img {
+             visible 0
              clipchildren 0
              ignorepointer 1
              size 47 39
@@ -864,12 +869,30 @@ FrameWidgetClass InGameMenuRoot {
              vexactpos 1
              hexactsize 0
              vexactsize 0
-             text "Facebook"
+             text "Donations"
              font "Colorful-UI/gui/fonts/PersonalServices24"
              "exact text" 1
              "size to text h" 1
              "text halign" right
              "text valign" center
+            }
+            ImageWidgetClass FacebookBtn_img0 {
+             clipchildren 0
+             ignorepointer 1
+             position 9 0
+             size 32 32
+             halign right_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             imageTexture "{4B41C0885C13297B}Colorful-UI/gui/textures/globals/donate.edds"
+             mode blend
+             "src alpha" 1
+             "no wrap" 1
+             stretch 1
+             filter 0
             }
            }
           }
@@ -951,7 +974,7 @@ FrameWidgetClass InGameMenuRoot {
      visible 1
      clipchildren 0
      inheritalpha 1
-     size 520 360
+     size 540 360
      hexactpos 0
      vexactpos 0
      hexactsize 1

@@ -1,10 +1,10 @@
 MetaFileClass {
- Name "{A492D9D3D9BE449E}Colorful-UI/gui/textures/main_menu/8TK-LS1.edds"
+ Name "{4B41C0885C13297B}Colorful-UI/gui/textures/globals/donate.edds"
  Author "sdf-1"
- ChangeDate 941911891
+ ChangeDate 1453616979
  Configurations {
   PNGResourceClass PC {
-   SourceFile "8TK-LS1.png"
+   SourceFile "donate.png"
   }
   PNGResourceClass XBOX_ONE : PC {
   }

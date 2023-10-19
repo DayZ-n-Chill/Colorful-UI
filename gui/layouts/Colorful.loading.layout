@@ -40,7 +40,7 @@ FrameWidgetClass LoadingFrame {
    vexactsize 0
    fixaspect outside
    image0 ""
-   imageTexture "{A5D8917F066B3FDC}Colorful-UI/gui/textures/loading_screens/Colorful-BG-12.edds"
+   imageTexture "{5158D4F641FB30E3}Colorful-UI/gui/textures/loading_screens/8TK-LS5.edds"
    mode opaque
    "src alpha" 0
    stretch 1
@@ -62,7 +62,7 @@ FrameWidgetClass LoadingFrame {
    vexactsize 0
    {
     ImageWidgetClass Vignette {
-     visible 1
+     visible 0
      ignorepointer 0
      color 0 0 0 0.7843
      position 0 0
@@ -135,7 +135,7 @@ FrameWidgetClass LoadingFrame {
      visible 1
      clipchildren 0
      inheritalpha 1
-     size 520 360
+     size 540 360
      hexactpos 0
      vexactpos 0
      hexactsize 1

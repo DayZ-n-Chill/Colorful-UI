@@ -39,7 +39,7 @@ WindowWidgetClass WindowWidget {
      vexactsize 0
      {
       ImageWidgetClass Vignette {
-       visible 1
+       visible 0
        ignorepointer 0
        color 0 0 0 0.7843
        position 0 0
@@ -410,6 +410,7 @@ WindowWidgetClass WindowWidget {
            }
           }
           ButtonWidgetClass TwitterBtn {
+           visible 0
            color 0 0 0 0
            size 293 39
            halign right_ref
@@ -478,7 +479,7 @@ WindowWidgetClass WindowWidget {
            }
           }
           ButtonWidgetClass RedditBtn {
-           visible 1
+           visible 0
            color 0 0 0 0
            size 293 39
            halign right_ref
@@ -534,7 +535,7 @@ WindowWidgetClass WindowWidget {
                vexactpos 1
                hexactsize 0
                vexactsize 0
-               text "Reddit"
+               text "Donate"
                font "Colorful-UI/gui/fonts/PersonalServices24"
                "exact text" 1
                "size to text h" 1
@@ -646,14 +647,15 @@ WindowWidgetClass WindowWidget {
               ImageWidgetClass FacebookBtn_img {
                clipchildren 0
                ignorepointer 1
-               size 47 39
+               position 9 0
+               size 32 32
                halign right_ref
                valign center_ref
                hexactpos 1
                vexactpos 1
                hexactsize 1
                vexactsize 1
-               imageTexture "{25DB8D90C00B0710}Colorful-UI/gui/textures/main_menu/Colorful.Facebook.edds"
+               imageTexture "{4B41C0885C13297B}Colorful-UI/gui/textures/globals/donate.edds"
                mode blend
                "src alpha" 1
                "no wrap" 1
@@ -671,7 +673,7 @@ WindowWidgetClass WindowWidget {
                vexactpos 1
                hexactsize 0
                vexactsize 0
-               text "Facebook"
+               text "Donations"
                font "Colorful-UI/gui/fonts/PersonalServices24"
                "exact text" 1
                "size to text h" 1
@@ -683,7 +685,7 @@ WindowWidgetClass WindowWidget {
            }
           }
           ButtonWidgetClass MetaBtn {
-           visible 1
+           visible 0
            color 0 0 0 0
            size 293 39
            halign right_ref
@@ -758,7 +760,7 @@ WindowWidgetClass WindowWidget {
        visible 1
        clipchildren 0
        inheritalpha 1
-       size 520 360
+       size 540 360
        hexactpos 0
        vexactpos 0
        hexactsize 1
