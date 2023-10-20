@@ -14,12 +14,18 @@ modded class MainMenu extends UIScriptedMenu
 	private Widget m_SeparatorPanel
 	private Widget m_ProgressLoading
 	private	Widget m_shader
+	TextWidget m_ServerPingWidget;
 	
 	override Widget Init()
 	{
 		// Load the layout file
 		layoutRoot					= GetGame().GetWorkspace().CreateWidgets( "Colorful-UI/gui/layouts/new_ui/colorful.main_menu.layout" );
+		m_ServerPingWidget = TextWidget.Cast(layoutRoot.FindAnyWidget("server_ping"));
 
+		// Initialize the BiosLobbyService
+        m_BiosService = new BiosLobbyService();
+        
+		
 		// Custom Buttons  
 		// NOTE: THe "NameBtn" is the name of the widget in the layout file.
 		m_Discord 					= layoutRoot.FindAnyWidget( "DiscordBtn" );
@@ -63,6 +69,9 @@ modded class MainMenu extends UIScriptedMenu
 		GetGame().GetVersion( version );
 		m_Version.SetText( "#main_menu_version" + " " + version );
 		GetGame().GetUIManager().ScreenFadeOut(0);
+
+		DisplayPlayerPing();
+
 		SetFocus( null );
 		Refresh();
 		LoadMods();

@@ -124,7 +124,7 @@ class colorScheme
 {
 	// Quick Styling --------------------------------------
 	// This color should be Servers/Communities Brand Color
-	static int BrandColor()   { return UIColor.TLBlue()};
+	static int BrandColor()   { return UIColor.TLBlue();};
 	// This color should be a complimentary color to your brand. 
 	static int AccentColor()  { return UIColor.Red(); }
 

@@ -100,9 +100,21 @@ FrameWidgetClass main_menu_root {
     }
    }
   }
+  ProgressBarWidgetClass LoadingBar {
+   ignorepointer 1
+   color 0.8118 0.8118 0.8118 1
+   size 1 8
+   halign center_ref
+   valign bottom_ref
+   hexactpos 1
+   vexactpos 1
+   hexactsize 0
+   vexactsize 1
+   style Stamina
+   current 100
+  }
   FrameWidgetClass SafeZone {
    ignorepointer 1
-   position 0 0.90984
    size 0.9 0.9
    halign center_ref
    valign center_ref
@@ -161,7 +173,7 @@ FrameWidgetClass main_menu_root {
        switch normal
        {
         ImageWidgetClass tutorial_button_image {
-         visible 0
+         visible 1
          ignorepointer 1
          size 1 1
          halign center_ref
@@ -196,7 +208,7 @@ FrameWidgetClass main_menu_root {
        switch normal
        {
         ImageWidgetClass message_button_image {
-         visible 0
+         visible 1
          ignorepointer 1
          size 1 1
          halign center_ref
@@ -1653,20 +1665,57 @@ FrameWidgetClass main_menu_root {
       }
      }
     }
+    ButtonWidgetClass LeftSelect {
+     position 785.35498 847.047
+     size 48 48
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     {
+      ImageWidgetClass ChevronLeft {
+       ignorepointer 1
+       size 24 32
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       imageTexture "{57EFA83B83C84239}Colorful-UI/gui/textures/main_menu/ChevronLeft.edds"
+       mode blend
+       "src alpha" 1
+       "no wrap" 1
+       stretch 1
+      }
+     }
+    }
+    ButtonWidgetClass RightSelect {
+     position 1164.54004 849.80096
+     size 48 48
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     {
+      ImageWidgetClass ChevronRight {
+       ignorepointer 1
+       size 24 32
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       imageTexture "{580C79E17F0BD132}Colorful-UI/gui/textures/main_menu/ChevronRight.edds"
+       mode blend
+       "src alpha" 1
+       "no wrap" 1
+       stretch 1
+      }
+     }
+    }
    }
-  }
-  ProgressBarWidgetClass LoadingBar {
-   ignorepointer 1
-   color 0.8118 0.8118 0.8118 1
-   size 1 8
-   halign center_ref
-   valign bottom_ref
-   hexactpos 1
-   vexactpos 1
-   hexactsize 0
-   vexactsize 1
-   style Stamina
-   current 100
   }
   FrameWidgetClass "Hidden Stuff" {
    visible 0

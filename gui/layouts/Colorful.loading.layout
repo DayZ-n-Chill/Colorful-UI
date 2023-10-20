@@ -628,7 +628,7 @@ FrameWidgetClass LoadingFrame {
     ButtonWidgetClass ButtonWidget0 {
      color 0 0.2549 0.3804 1
      position -0.00002 0.00003
-     size 150 50
+     size 150 39
      halign right_ref
      valign bottom_ref
      hexactpos 1
@@ -647,7 +647,7 @@ FrameWidgetClass LoadingFrame {
        hexactsize 1
        vexactsize 1
        text "Get VIP"
-       font "gui/fonts/MetronBook-Bold28"
+       font "gui/fonts/etelkatextpro22"
        "exact text" 1
        "size to text h" 1
        "size to text v" 1
