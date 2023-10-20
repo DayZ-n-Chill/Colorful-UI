@@ -198,16 +198,6 @@ WindowWidgetClass TextInputDialogRoot {
      "text halign" center
      "text valign" center
     }
-    ButtonWidgetClass ButtonWidget0 {
-     color 0.2588 0.6863 0.3647 1
-     position 1603.71997 619.06897
-     size 416.49298 129.88701
-     hexactpos 1
-     vexactpos 1
-     hexactsize 1
-     vexactsize 1
-     style Colorable
-    }
    }
   }
   ProgressBarWidgetClass LoadingBar {
