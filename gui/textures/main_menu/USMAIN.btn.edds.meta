@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{DF016B42CD99789C}Colorful-UI/gui/textures/main_menu/USMAIN.btn.edds"
+ Author "sdf-1"
+ ChangeDate -1991020715
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "USMAIN.btn.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}
