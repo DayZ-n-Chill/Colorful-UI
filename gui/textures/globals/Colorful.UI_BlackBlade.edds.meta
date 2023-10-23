@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{8C51646093ACE932}Colorful-UI/gui/textures/globals/Colorful.UI_BlackBlade.edds"
+ Author "sdf-1"
+ ChangeDate -721146025
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Colorful.UI_BlackBlade.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

@@ -131,25 +131,6 @@ FrameWidgetClass LoadingFrame {
    hexactsize 0
    vexactsize 0
    {
-    ImageWidgetClass ColorfulLogo {
-     visible 1
-     clipchildren 0
-     inheritalpha 1
-     size 540 360
-     hexactpos 0
-     vexactpos 0
-     hexactsize 1
-     vexactsize 1
-     fixaspect outside
-     image0 ""
-     imageTexture "{D0892C89C96518E4}Colorful-UI/gui/textures/globals/8TKLogo_Transparent_wText.edds"
-     mode blend
-     "src alpha" 1
-     "no wrap" 1
-     stretch 1
-     filter 1
-     nocache 0
-    }
     TextWidgetClass LoadingText {
      visible 1
      position 0 0.08
@@ -624,6 +605,25 @@ FrameWidgetClass LoadingFrame {
        }
       }
      }
+    }
+    ImageWidgetClass ColorfulLogo {
+     visible 1
+     clipchildren 0
+     inheritalpha 1
+     size 667 318
+     hexactpos 0
+     vexactpos 0
+     hexactsize 1
+     vexactsize 1
+     fixaspect outside
+     image0 ""
+     imageTexture "{8C51646093ACE932}Colorful-UI/gui/textures/globals/Colorful.UI_BlackBlade.edds"
+     mode blend
+     "src alpha" 1
+     "no wrap" 1
+     stretch 1
+     filter 1
+     nocache 0
     }
    }
   }
