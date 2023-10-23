@@ -1,10 +1,10 @@
 MetaFileClass {
- Name "{C2B40069059366F3}Colorful-UI/gui/fonts/Roboto14.edds"
- Author "corruscant"
- ChangeDate 1716808942
+ Name "{C99FE44022092B52}Colorful-UI/gui/fonts/Russian24.tga"
+ Author "sdf-1"
+ ChangeDate 1103490902
  Configurations {
   TGAResourceClass PC {
-   SourceFile "Roboto14.tga"
+   SourceFile "Russian24.tga"
   }
   TGAResourceClass XBOX_ONE : PC {
   }

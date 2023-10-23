@@ -156,7 +156,7 @@ FrameWidgetClass main_menu_root {
        "no focus" 1
        "next up" "play"
        "next down" "customize_character"
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/SnowStorm24"
        switch normal
        {
         ImageWidgetClass tutorial_button_image {
@@ -355,7 +355,7 @@ FrameWidgetClass main_menu_root {
              vexactsize 0
              scaled 1
              text "PLAY"
-             font "Colorful-UI/gui/fonts/PersonalServices32"
+             font "gui/fonts/Russian24"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -409,7 +409,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 0
              vexactsize 0
              text "Character"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "gui/fonts/MetronBlack28"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -515,7 +515,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 0
              vexactsize 0
              text "Server Browser"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "gui/fonts/MetronBlack28"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -621,7 +621,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 0
              vexactsize 0
              text "Priority Queue"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "gui/fonts/MetronBlack28"
              "exact text" 1
              "size to text h" 1
              "text halign" right
@@ -672,7 +672,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 0
              vexactsize 0
              text "Website"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "gui/fonts/MetronBlack28"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0

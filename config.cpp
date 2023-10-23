@@ -5,7 +5,8 @@ class CfgPatches
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"DZ_Data","DZ_Scripts","JMC_DeerIsle_Scripts"};
+		requiredAddons[] = {"DZ_Data","DZ_Scripts"};
+		// ,"JMC_DeerIsle_Scripts"
 	};
 };
 
@@ -68,6 +69,10 @@ class CfgMods
 		class Roboto
 		{
 			fonts[] = {"Colorful-UI/gui/fonts/Roboto-Regular.fnt"};
+		};
+		class SnowStorm
+		{
+			fonts[] = {"Colorful-UI\\gui\\fonts\\Snowstorm24.fnt"};
 		};
 	};
 };
