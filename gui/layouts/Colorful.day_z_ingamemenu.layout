@@ -161,7 +161,7 @@ FrameWidgetClass InGameMenuRoot {
              vexactpos 0
              hexactsize 0
              vexactsize 0
-             text "Exit"
+             text "#main_menu_exit"
              font "Colorful-UI/gui/fonts/MIL28"
              "exact text" 1
              "size to text h" 1
@@ -213,7 +213,7 @@ FrameWidgetClass InGameMenuRoot {
              vexactpos 0
              hexactsize 0
              vexactsize 0
-             text "Restart"
+             text "#main_menu_restart"
              font "Colorful-UI/gui/fonts/MIL28"
              "exact text" 1
              "size to text h" 1
@@ -264,7 +264,7 @@ FrameWidgetClass InGameMenuRoot {
              vexactpos 0
              hexactsize 0
              vexactsize 0
-             text "Options"
+             text "#layout_xbox_ingame_menu_options"
              font "Colorful-UI/gui/fonts/MIL28"
              "exact text" 1
              "size to text h" 1
@@ -316,7 +316,7 @@ FrameWidgetClass InGameMenuRoot {
              vexactpos 0
              hexactsize 0
              vexactsize 0
-             text "Continue"
+             text "#main_menu_continue"
              font "Colorful-UI/gui/fonts/MIL28"
              "exact text" 1
              "size to text h" 1
@@ -475,7 +475,7 @@ FrameWidgetClass InGameMenuRoot {
              vexactpos 0
              hexactsize 0
              vexactsize 0
-             text "Respawn"
+             text "#main_menu_respawn"
              font "Colorful-UI/gui/fonts/MIL28"
              "exact text" 1
              "size to text h" 1

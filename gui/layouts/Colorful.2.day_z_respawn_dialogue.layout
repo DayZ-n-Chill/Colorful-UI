@@ -381,7 +381,7 @@ WindowWidgetClass WindowWidget {
          }
         }
         ButtonWidgetClass RedditBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -398,6 +398,7 @@ WindowWidgetClass WindowWidget {
          "next down" "play_video"
          {
           PanelWidgetClass RedditBtn_panel {
+           visible 0
            ignorepointer 1
            color 0 0 0 0
            size 293 39
@@ -410,6 +411,7 @@ WindowWidgetClass WindowWidget {
            style DayZDefaultPanel
            {
             ImageWidgetClass RedditBtn_img {
+             visible 0
              clipchildren 0
              ignorepointer 1
              size 47 39
@@ -427,6 +429,7 @@ WindowWidgetClass WindowWidget {
              filter 0
             }
             TextWidgetClass RedditBtn_label {
+             visible 0
              clipchildren 0
              ignorepointer 1
              position 60 0
@@ -450,7 +453,7 @@ WindowWidgetClass WindowWidget {
          }
         }
         ButtonWidgetClass YoutubeBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -467,6 +470,7 @@ WindowWidgetClass WindowWidget {
          "next down" "play_video"
          {
           PanelWidgetClass YoutubeBtn_panel {
+           visible 0
            ignorepointer 1
            color 0 0 0 0
            size 293 39
@@ -479,6 +483,7 @@ WindowWidgetClass WindowWidget {
            style DayZDefaultPanel
            {
             ImageWidgetClass YoutubeBtn_img {
+             visible 0
              clipchildren 0
              ignorepointer 1
              size 47 39
@@ -496,6 +501,7 @@ WindowWidgetClass WindowWidget {
              filter 0
             }
             TextWidgetClass YoutubeBtn_label {
+             visible 0
              clipchildren 0
              ignorepointer 1
              position 60 0
@@ -518,7 +524,7 @@ WindowWidgetClass WindowWidget {
          }
         }
         ButtonWidgetClass FacebookBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref

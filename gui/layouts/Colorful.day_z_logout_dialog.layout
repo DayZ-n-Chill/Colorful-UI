@@ -168,7 +168,7 @@ WindowWidgetClass LogoutDialogRoot {
              vexactpos 0
              hexactsize 0
              vexactsize 0
-             text "Exit"
+             text "#main_menu_exit"
              font "Colorful-UI/gui/fonts/MIL28"
              "exact text" 1
              "size to text h" 1
@@ -219,7 +219,7 @@ WindowWidgetClass LogoutDialogRoot {
              vexactpos 0
              hexactsize 0
              vexactsize 0
-             text "Cancel"
+             text "#cancel"
              font "Colorful-UI/gui/fonts/MIL28"
              "exact text" 1
              "size to text h" 1

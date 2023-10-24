@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{FEA85362E68C9053}Colorful-UI/gui/textures/globals/3938067.edds"
+ Author "sdf-1"
+ ChangeDate -1287786665
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "3938067.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

@@ -179,7 +179,7 @@ WindowWidgetClass WindowWidget {
                vexactpos 0
                hexactsize 0
                vexactsize 0
-               text "Random Respawn"
+               text "#main_menu_respawn_random"
                font "Colorful-UI/gui/fonts/MIL28"
                "exact text" 1
                "size to text h" 1
@@ -230,7 +230,7 @@ WindowWidgetClass WindowWidget {
                vexactpos 0
                hexactsize 0
                vexactsize 0
-               text "Custom Respawn"
+               text "#main_menu_respawn_custom"
                font "Colorful-UI/gui/fonts/MIL28"
                "exact text" 1
                "size to text h" 1
@@ -282,7 +282,7 @@ WindowWidgetClass WindowWidget {
                vexactpos 0
                hexactsize 0
                vexactsize 0
-               text "Cancel"
+               text "#cancel"
                font "Colorful-UI/gui/fonts/MIL28"
                "exact text" 1
                "size to text h" 1
