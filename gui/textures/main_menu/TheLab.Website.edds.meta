@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{A20B2CEE6925E784}Colorful-UI/gui/textures/main_menu/TheLab.Website.edds"
+ Author "sdf-1"
+ ChangeDate -2045005992
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "TheLab.Website.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

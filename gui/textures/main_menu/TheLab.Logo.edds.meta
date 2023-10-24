@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{CDA1F98795FFCE85}Colorful-UI/gui/textures/main_menu/TheLab.Logo.edds"
+ Author "sdf-1"
+ ChangeDate -770461864
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "TheLab.Logo.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

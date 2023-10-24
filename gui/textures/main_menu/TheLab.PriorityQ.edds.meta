@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{316F38FCC2DF1E71}Colorful-UI/gui/textures/main_menu/TheLab.PriorityQ.edds"
+ Author "sdf-1"
+ ChangeDate -565989544
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "TheLab.PriorityQ.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}
