@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{7D41DDD542E0C786}MIL20.edds"
+ Author "sdf-1"
+ ChangeDate -1415745705
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "MIL20.tga"
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}

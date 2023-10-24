@@ -169,7 +169,7 @@ WindowWidgetClass LogoutDialogRoot {
              hexactsize 0
              vexactsize 0
              text "Exit"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/MIL28"
              "exact text" 1
              "size to text h" 1
              "text halign" right
@@ -220,7 +220,7 @@ WindowWidgetClass LogoutDialogRoot {
              hexactsize 0
              vexactsize 0
              text "Cancel"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/MIL28"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -267,7 +267,7 @@ WindowWidgetClass LogoutDialogRoot {
              hexactsize 0
              vexactsize 0
              text "time to log"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/MIL28"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -321,7 +321,7 @@ WindowWidgetClass LogoutDialogRoot {
              hexactsize 0
              vexactsize 0
              text "Respawn"
-             font "Colorful-UI/gui/fonts/PersonalServices32"
+             font "Colorful-UI/gui/fonts/MIL32"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -374,7 +374,7 @@ WindowWidgetClass LogoutDialogRoot {
              hexactsize 0
              vexactsize 0
              text "Random Respawn"
-             font "Colorful-UI/gui/fonts/PersonalServices32"
+             font "Colorful-UI/gui/fonts/MIL32"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -445,7 +445,7 @@ WindowWidgetClass LogoutDialogRoot {
              hexactsize 0
              vexactsize 0
              text "Exit Now"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/MIL28"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -485,7 +485,7 @@ WindowWidgetClass LogoutDialogRoot {
            hexactsize 0
            vexactsize 0
            text "Cancel"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
+           font "Colorful-UI/gui/fonts/MIL28"
            "exact text" 1
            "size to text h" 1
            "text halign" right
@@ -597,7 +597,7 @@ WindowWidgetClass LogoutDialogRoot {
              hexactsize 0
              vexactsize 0
              text "Discord"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/MIL28"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -665,7 +665,7 @@ WindowWidgetClass LogoutDialogRoot {
              hexactsize 0
              vexactsize 0
              text "Twitter"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/MIL28"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -734,7 +734,7 @@ WindowWidgetClass LogoutDialogRoot {
              hexactsize 0
              vexactsize 0
              text "Reddit"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/MIL28"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -803,7 +803,7 @@ WindowWidgetClass LogoutDialogRoot {
              hexactsize 0
              vexactsize 0
              text "YouTube"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/MIL28"
              "exact text" 1
              "size to text h" 1
              "text halign" right
@@ -871,7 +871,7 @@ WindowWidgetClass LogoutDialogRoot {
              hexactsize 0
              vexactsize 0
              text "Facebook"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/MIL28"
              "exact text" 1
              "size to text h" 1
              "text halign" right
@@ -939,7 +939,7 @@ WindowWidgetClass LogoutDialogRoot {
              hexactsize 0
              vexactsize 0
              text "Meta"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/MIL28"
              "exact text" 1
              "size to text h" 1
              "text halign" right
@@ -957,14 +957,14 @@ WindowWidgetClass LogoutDialogRoot {
      visible 1
      clipchildren 0
      inheritalpha 1
-     size 460 320
+     size 690 167
      hexactpos 0
      vexactpos 0
      hexactsize 1
      vexactsize 1
      fixaspect outside
      image0 ""
-     imageTexture "{5314D820E495219F}Colorful-UI/gui/textures/globals/Colorful.Logo.edds"
+     imageTexture "{D49C58936306B576}Colorful-UI/gui/textures/globals/Colorful.UI_Sunrize.Logo.edds"
      mode blend
      "src alpha" 1
      "no wrap" 1

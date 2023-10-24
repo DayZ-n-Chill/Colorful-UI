@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{9E54E294AB0574B1}Colorful-UI/gui/textures/loading_screens/sunrize-ls1.edds"
+ Author "sdf-1"
+ ChangeDate 1004384087
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "sunrize-ls1.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

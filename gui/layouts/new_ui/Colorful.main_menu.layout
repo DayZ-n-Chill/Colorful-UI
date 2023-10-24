@@ -115,14 +115,14 @@ FrameWidgetClass main_menu_root {
      visible 1
      clipchildren 0
      inheritalpha 1
-     size 460 320
+     size 690 167
      hexactpos 0
      vexactpos 0
      hexactsize 1
      vexactsize 1
      fixaspect outside
      image0 ""
-     imageTexture "{5314D820E495219F}Colorful-UI/gui/textures/globals/Colorful.Logo.edds"
+     imageTexture "{D49C58936306B576}Colorful-UI/gui/textures/globals/Colorful.UI_Sunrize.Logo.edds"
      mode blend
      "src alpha" 1
      "no wrap" 1
@@ -190,7 +190,7 @@ FrameWidgetClass main_menu_root {
        "no focus" 1
        "next up" "play"
        "next down" "customize_character"
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/MIL28"
        switch normal
        {
         ImageWidgetClass message_button_image {
@@ -227,7 +227,7 @@ FrameWidgetClass main_menu_root {
        "next right" "exit_button"
        "next up" "play"
        "next down" "customize_character"
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/MIL28"
        switch normal
        {
         ImageWidgetClass settings_button_image {
@@ -261,7 +261,7 @@ FrameWidgetClass main_menu_root {
        "next right" "play"
        "next up" "play"
        "next down" "customize_character"
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/MIL28"
        switch normal
        {
         ImageWidgetClass exit_button_image {
@@ -355,7 +355,7 @@ FrameWidgetClass main_menu_root {
              vexactsize 0
              scaled 1
              text "PLAY"
-             font "gui/fonts/Russian24"
+             font "gui/fonts/MIL28"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -465,7 +465,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 0
              vexactsize 0
              text "Character"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/MIL28"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -570,7 +570,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 0
              vexactsize 0
              text "Server Information"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/MIL28"
              "exact text" 1
              "size to text h" 1
              "text halign" right
@@ -787,7 +787,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 0
              vexactsize 0
              text "Discord"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/MIL28"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -855,7 +855,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 0
              vexactsize 0
              text "Twitter"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/MIL28"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -924,7 +924,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 0
              vexactsize 0
              text "Reddit"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/MIL28"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -993,7 +993,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 0
              vexactsize 0
              text "YouTube"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/MIL28"
              "exact text" 1
              "size to text h" 1
              "text halign" right
@@ -1061,7 +1061,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 0
              vexactsize 0
              text "Facebook"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/MIL28"
              "exact text" 1
              "size to text h" 1
              "text halign" right
@@ -1129,7 +1129,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 0
              vexactsize 0
              text "Meta"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/MIL28"
              "exact text" 1
              "size to text h" 1
              "text halign" right
@@ -1164,7 +1164,7 @@ FrameWidgetClass main_menu_root {
        hexactsize 1
        vexactsize 1
        text "SURIVOR STATS"
-       font "Colorful-UI/gui/fonts/PersonalServices48"
+       font "Colorful-UI/gui/fonts/MIL32"
        "exact text" 1
        "size to text h" 1
        "size to text v" 1
@@ -1221,7 +1221,7 @@ FrameWidgetClass main_menu_root {
            vexactsize 1
            scaled 1
            text "Players Killed"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
+           font "Colorful-UI/gui/fonts/MIL28"
            "exact text" 1
            "size to text h" 1
            "text valign" center
@@ -1263,7 +1263,7 @@ FrameWidgetClass main_menu_root {
            hexactsize 0
            vexactsize 0
            text "Infected Killed"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
+           font "Colorful-UI/gui/fonts/MIL28"
            "exact text" 1
            "size to text h" 1
            "text valign" center
@@ -1309,7 +1309,7 @@ FrameWidgetClass main_menu_root {
            hexactsize 1
            vexactsize 1
            text "Time Alive"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
+           font "Colorful-UI/gui/fonts/MIL28"
            "exact text" 1
            "size to text h" 1
            "text valign" center
@@ -1353,7 +1353,7 @@ FrameWidgetClass main_menu_root {
            hexactsize 0
            vexactsize 0
            text "Distance Traveled"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
+           font "Colorful-UI/gui/fonts/MIL28"
            "exact text" 1
            "size to text h" 1
            "size to text v" 0
@@ -1396,7 +1396,7 @@ FrameWidgetClass main_menu_root {
            hexactsize 1
            vexactsize 1
            text "Longest Player Hit"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
+           font "Colorful-UI/gui/fonts/MIL28"
            "exact text" 1
            "size to text h" 1
            "text valign" center
@@ -1956,7 +1956,7 @@ FrameWidgetClass main_menu_root {
        priority 1
        style Empty
        "no focus" 0
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/MIL28"
        {
         ImageWidgetClass prev_character_image {
          inheritalpha 0
@@ -1989,7 +1989,7 @@ FrameWidgetClass main_menu_root {
        priority 1
        style Empty
        "no focus" 0
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/MIL28"
        {
         ImageWidgetClass next_character_image {
          ignorepointer 1
@@ -2017,7 +2017,7 @@ FrameWidgetClass main_menu_root {
        vexactpos 1
        hexactsize 0
        vexactsize 1
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/MIL28"
        "exact text" 1
        "size to text h" 1
        "size to text v" 1

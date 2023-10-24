@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{D49C58936306B576}Colorful-UI/gui/textures/globals/Colorful.UI_Sunrize.Logo.edds"
+ Author "sdf-1"
+ ChangeDate -1907495081
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Colorful.UI_Sunrize.Logo.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

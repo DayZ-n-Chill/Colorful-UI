@@ -106,9 +106,9 @@ class UIColor
 	static int SemiTransparentWhite() { return ARGB(120, 255, 255, 255); };
 	
 	// R.O.Y.G.B.I.V
-	static int Red()    			  { return ARGB(255, 173, 35, 35); };
+	static int Red()    			  { return ARGB(255, 178, 40, 3); };
 	static int Orange() 			  { return ARGB(255, 215, 153, 19); };
-	static int Yellow() 			  { return ARGB(255, 204, 204, 66); };
+	static int Yellow() 			  { return ARGB(255, 253, 190, 53); };
 	static int Green()  			  { return ARGB(255, 51, 204, 51); };
 	static int Blue()   			  { return ARGB(255, 51, 102, 102); };
 	static int Indigo() 			  { return ARGB(255, 102, 51, 204); };
@@ -132,7 +132,7 @@ class colorScheme
 {
 	// Quick Styling --------------------------------------
 	// This color should be Servers/Communities Brand Color
-	static int BrandColor()   { return UIColor.Teal(); };
+	static int BrandColor()   { return UIColor.Yellow(); };
 	// This color should be a complimentary color to your brand. 
 	static int AccentColor()  { return UIColor.Red(); }
 
@@ -142,7 +142,7 @@ class colorScheme
 	// Best to Primary Text as white, but do whatever, Experiment.
 	static int PrimaryText()        { return UIColor.White(); }; 	
 	static int SecondaryText()      { return AccentColor(); };
-	static int ShaderColor()        { return BrandColor(); };
+	static int ShaderColor()        { return AccentColor(); };
 	static int SeparatorColor()     { return BrandColor(); };
 	static int LoadingbarColor()    { return BrandColor(); };
 	static int MainMenuTrim()       { return BrandColor(); };
