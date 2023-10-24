@@ -162,7 +162,7 @@ FrameWidgetClass InGameMenuRoot {
              hexactsize 0
              vexactsize 0
              text "Exit"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/Ethnocentric20"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -214,7 +214,7 @@ FrameWidgetClass InGameMenuRoot {
              hexactsize 0
              vexactsize 0
              text "Restart"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/Ethnocentric20"
              "exact text" 1
              "size to text h" 1
              "text halign" right
@@ -265,7 +265,7 @@ FrameWidgetClass InGameMenuRoot {
              hexactsize 0
              vexactsize 0
              text "Options"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/Ethnocentric20"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -317,7 +317,7 @@ FrameWidgetClass InGameMenuRoot {
              hexactsize 0
              vexactsize 0
              text "Continue"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/Ethnocentric20"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -371,7 +371,7 @@ FrameWidgetClass InGameMenuRoot {
              hexactsize 0
              vexactsize 0
              text "Custom Respawn "
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/Ethnocentric20"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -424,7 +424,7 @@ FrameWidgetClass InGameMenuRoot {
              hexactsize 0
              vexactsize 0
              text "Random Respawn"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/Ethnocentric20"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -476,7 +476,7 @@ FrameWidgetClass InGameMenuRoot {
              hexactsize 0
              vexactsize 0
              text "Respawn"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/Ethnocentric20"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -591,7 +591,7 @@ FrameWidgetClass InGameMenuRoot {
              hexactsize 0
              vexactsize 0
              text "Discord"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/Ethnocentric20"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -603,6 +603,7 @@ FrameWidgetClass InGameMenuRoot {
          }
         }
         ButtonWidgetClass TwitterBtn {
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -619,6 +620,7 @@ FrameWidgetClass InGameMenuRoot {
          "next down" "play_video"
          {
           PanelWidgetClass TwitterBtn_panel {
+           visible 0
            ignorepointer 1
            color 0 0 0 0
            size 293 39
@@ -659,7 +661,7 @@ FrameWidgetClass InGameMenuRoot {
              hexactsize 0
              vexactsize 0
              text "Twitter"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/Ethnocentric20"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -671,7 +673,7 @@ FrameWidgetClass InGameMenuRoot {
          }
         }
         ButtonWidgetClass RedditBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -728,7 +730,7 @@ FrameWidgetClass InGameMenuRoot {
              hexactsize 0
              vexactsize 0
              text "Reddit"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/Ethnocentric20"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -797,7 +799,7 @@ FrameWidgetClass InGameMenuRoot {
              hexactsize 0
              vexactsize 0
              text "YouTube"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/Ethnocentric20"
              "exact text" 1
              "size to text h" 1
              "text halign" right
@@ -808,7 +810,7 @@ FrameWidgetClass InGameMenuRoot {
          }
         }
         ButtonWidgetClass FacebookBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -825,6 +827,7 @@ FrameWidgetClass InGameMenuRoot {
          "next down" "play_video"
          {
           PanelWidgetClass FacebookBtn_panel {
+           visible 0
            ignorepointer 1
            color 0 0 0 0
            size 293 39
@@ -865,7 +868,7 @@ FrameWidgetClass InGameMenuRoot {
              hexactsize 0
              vexactsize 0
              text "Facebook"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/Ethnocentric20"
              "exact text" 1
              "size to text h" 1
              "text halign" right
@@ -933,7 +936,7 @@ FrameWidgetClass InGameMenuRoot {
              hexactsize 0
              vexactsize 0
              text "Meta"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/Ethnocentric20"
              "exact text" 1
              "size to text h" 1
              "text halign" right

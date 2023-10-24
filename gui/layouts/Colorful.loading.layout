@@ -150,48 +150,16 @@ FrameWidgetClass LoadingFrame {
      filter 1
      nocache 0
     }
-    TextWidgetClass LoadingText {
-     visible 1
-     position 0 0.08
-     size 0 0
-     halign center_ref
-     valign bottom_ref
-     hexactpos 1
-     vexactpos 0
-     text "LOADING GAME..."
-     font "Colorful-ui/gui/fonts/PersonalServices24"
-     "exact text" 1
-     "size to text h" 1
-     "size to text v" 1
-     "text halign" center
-     "text valign" center
-    }
-    TextWidgetClass ProTip {
-     visible 1
-     color 0.2588 0.6863 0.3647 1
-     position 0 0.024
-     size 1 0.03
-     halign center_ref
-     valign bottom_ref
-     hexactpos 0
-     vexactpos 0
-     style Bold
-     text "Pro Tip:"
-     font "Colorful-ui/gui/fonts/OpenSansV-Italic18"
-     "exact text" 1
-     "size to text h" 1
-     "size to text v" 1
-     "text halign" center
-     "text valign" center
-    }
     TextWidgetClass StatusText {
      visible 1
+     disabled 0
+     keepsafezone 1
      size 1 0.03
      halign center_ref
      valign bottom_ref
      vexactpos 0
      text "Your tips text will go here"
-     font "Colorful-ui/gui/fonts/OpenSansV18"
+     font "Colorful-UI/gui/fonts/SquareFont20"
      "exact text" 1
      "size to text h" 1
      "size to text v" 1
@@ -271,7 +239,7 @@ FrameWidgetClass LoadingFrame {
            hexactsize 0
            vexactsize 0
            text "Discord"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
+           font "Colorful-UI/gui/fonts/Ethnocentric20"
            "exact text" 1
            "size to text h" 1
            "size to text v" 0
@@ -339,7 +307,7 @@ FrameWidgetClass LoadingFrame {
            hexactsize 0
            vexactsize 0
            text "Twitter"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
+           font "Colorful-UI/gui/fonts/Ethnocentric20"
            "exact text" 1
            "size to text h" 1
            "size to text v" 0
@@ -408,7 +376,7 @@ FrameWidgetClass LoadingFrame {
            hexactsize 0
            vexactsize 0
            text "Reddit"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
+           font "Colorful-UI/gui/fonts/Ethnocentric20"
            "exact text" 1
            "size to text h" 1
            "size to text v" 0
@@ -477,7 +445,7 @@ FrameWidgetClass LoadingFrame {
            hexactsize 0
            vexactsize 0
            text "YouTube"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
+           font "Colorful-UI/gui/fonts/Ethnocentric20"
            "exact text" 1
            "size to text h" 1
            "text halign" right
@@ -545,7 +513,7 @@ FrameWidgetClass LoadingFrame {
            hexactsize 0
            vexactsize 0
            text "Facebook"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
+           font "Colorful-UI/gui/fonts/Ethnocentric20"
            "exact text" 1
            "size to text h" 1
            "text halign" right
@@ -613,7 +581,7 @@ FrameWidgetClass LoadingFrame {
            hexactsize 0
            vexactsize 0
            text "Meta"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
+           font "Colorful-UI/gui/fonts/Ethnocentric20"
            "exact text" 1
            "size to text h" 1
            "text halign" right
@@ -646,8 +614,8 @@ FrameWidgetClass LoadingFrame {
        vexactpos 1
        hexactsize 1
        vexactsize 1
-       text "Get VIP"
-       font "gui/fonts/etelkatextpro22"
+       text "Skip the wait!"
+       font "Colorful-UI/gui/fonts/SquareFont16"
        "exact text" 1
        "size to text h" 1
        "size to text v" 1
@@ -864,25 +832,6 @@ FrameWidgetClass LoadingFrame {
      vexactsize 1
      fixaspect outside
      image0 "set:dayz_gui image:DayZLogo"
-     mode blend
-     "src alpha" 1
-     "no wrap" 1
-     stretch 1
-     filter 1
-     nocache 0
-    }
-    ImageWidgetClass ImageLogoCorner {
-     visible 0
-     inheritalpha 1
-     position 111.26399 86.864
-     size 414 386
-     hexactpos 1
-     vexactpos 1
-     hexactsize 1
-     vexactsize 1
-     fixaspect outside
-     image0 ""
-     imageTexture "{F4149B85A4538BED}EDEN_UI/gui/textures/globals/DayZEden.edds"
      mode blend
      "src alpha" 1
      "no wrap" 1

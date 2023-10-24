@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{93F76D9760A5BEB8}ethnocentric26.edds"
+ Author "sdf-1"
+ ChangeDate -1715130537
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "ethnocentric26.tga"
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}

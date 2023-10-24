@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{2514396C0232F93E}SquareFont16.edds"
+ Author "sdf-1"
+ ChangeDate -375050409
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "SquareFont16.tga"
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}

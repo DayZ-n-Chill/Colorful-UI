@@ -186,7 +186,7 @@ FrameWidgetClass ServerBrowserRoot {
              vexactsize 0
              priority 250
              text "#STR_ServerBrowserRoot_Tabber_TabControls_TabBar_Tab_Control_Container_Tab_Control_0_Tab_Control_0_Title0"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/Ethnocentric20"
              "text halign" center
              "text valign" center
             }
@@ -243,7 +243,7 @@ FrameWidgetClass ServerBrowserRoot {
              vexactsize 0
              priority 250
              text "#STR_ServerBrowserRoot_Tabber_TabControls_TabBar_Tab_Control_Container_Tab_Control_1_Tab_Control_1_Title0"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/Ethnocentric20"
              "text halign" center
              "text valign" center
             }
@@ -300,7 +300,7 @@ FrameWidgetClass ServerBrowserRoot {
              vexactsize 0
              priority 250
              text "#STR_ServerBrowserRoot_Tabber_TabControls_TabBar_Tab_Control_Container_Tab_Control_2_Tab_Control_2_Title0"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/Ethnocentric20"
              "text halign" center
              "text valign" center
             }
@@ -430,7 +430,7 @@ FrameWidgetClass ServerBrowserRoot {
    priority 1
    style Normal
    text "#STR_ServerBrowserRoot_ServerBrowserTextWidget0"
-   font "Colorful-UI/gui/fonts/PersonalServices32"
+   font "Colorful-UI/gui/fonts/Ethnocentric20"
    "text color" 0.8157 0.1255 0.7843 1
    "exact text" 0
    "size to text h" 0
@@ -514,7 +514,7 @@ FrameWidgetClass ServerBrowserRoot {
            hexactsize 0
            vexactsize 0
            text "#main_menu_play"
-           font "Colorful-UI/gui/fonts/PersonalServices32"
+           font "Colorful-UI/gui/fonts/Ethnocentric20"
            "text halign" center
            "text valign" center
           }
@@ -599,7 +599,7 @@ FrameWidgetClass ServerBrowserRoot {
            hexactsize 0
            vexactsize 1
            text "#STR_ServerBrowserRoot_play_panel_root_top_back_button0"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
+           font "Colorful-UI/gui/fonts/Ethnocentric20"
            "exact text" 1
            "size to text h" 1
            "text halign" center

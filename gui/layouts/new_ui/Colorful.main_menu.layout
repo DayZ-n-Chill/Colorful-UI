@@ -170,7 +170,7 @@ FrameWidgetClass main_menu_root {
        "no focus" 1
        "next up" "play"
        "next down" "customize_character"
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/Ethnocentric20"
        switch normal
        {
         ImageWidgetClass tutorial_button_image {
@@ -205,7 +205,7 @@ FrameWidgetClass main_menu_root {
        "no focus" 1
        "next up" "play"
        "next down" "customize_character"
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/Ethnocentric20"
        switch normal
        {
         ImageWidgetClass message_button_image {
@@ -243,7 +243,7 @@ FrameWidgetClass main_menu_root {
        "next right" "exit_button"
        "next up" "play"
        "next down" "customize_character"
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/Ethnocentric20"
        switch normal
        {
         ImageWidgetClass settings_button_image {
@@ -277,7 +277,7 @@ FrameWidgetClass main_menu_root {
        "next right" "play"
        "next up" "play"
        "next down" "customize_character"
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/Ethnocentric20"
        switch normal
        {
         ImageWidgetClass exit_button_image {
@@ -384,7 +384,7 @@ FrameWidgetClass main_menu_root {
            vexactsize 0
            scaled 1
            text "PLAY"
-           font "Colorful-UI/gui/fonts/PersonalServices32"
+           font "Colorful-UI/gui/fonts/Ethnocentric20"
            "exact text" 1
            "size to text h" 1
            "size to text v" 0
