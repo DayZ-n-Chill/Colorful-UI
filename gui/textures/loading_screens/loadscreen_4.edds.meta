@@ -1,10 +1,10 @@
 MetaFileClass {
- Name "{51496907148AA9C5}Colorful-UI/gui/textures/inventory/IS-In_use.edds"
- Author "corruscant"
- ChangeDate 1222831366
+ Name "{F7807F43C4828B46}Colorful-UI/gui/textures/loading_screens/loadscreen_4.edds"
+ Author "sdf-1"
+ ChangeDate -898617512
  Configurations {
   PNGResourceClass PC {
-   SourceFile "IS-In_use.png"
+   SourceFile "loadscreen_4.png"
   }
   PNGResourceClass XBOX_ONE : PC {
   }
