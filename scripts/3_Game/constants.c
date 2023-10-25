@@ -35,11 +35,11 @@ class MenuURLS {
 	// Link for Reddit
 	static string urlReddit   = "#";
 	// Link for Youtube
-	static string urlYoutube  = "#";
+	static string urlYoutube  = "https://www.youtube.com/@Nezar";
 	// Link to Website
-	static string urlWebsite  = "#"; 
+	static string urlWebsite  = "https://discord.gg/dayzthelab"; 
 	// Link for Prio Q
-	static string urlPriorityQ   = "#";
+	static string urlPriorityQ   = "https://discord.gg/dayzthelab";
 	// Can be used anything else
 	static string urlCustom   = "#";
 }
