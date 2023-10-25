@@ -85,7 +85,7 @@ modded class MainMenu extends UIScriptedMenu
 		m_SeparatorPanel.SetColor(colorScheme.SeparatorColor());
 		m_ProgressLoading      = ProgressBarWidget.Cast( layoutRoot.FindAnyWidget("LoadingBar") );
 		m_ProgressLoading.SetColor(colorScheme.MainMenuTrim());	
-		m_Background.LoadImageFile(0, "Colorful-UI/gui/textures/loading_screens/TheLab-LS1.edds")  
+		// m_Background.LoadImageFile(0, "Colorful-UI/gui/textures/loading_screens/TheLab-LS1.edds")  
 		AnimatePress2StartFade();
 		return layoutRoot;
 	}	
@@ -118,7 +118,7 @@ modded class MainMenu extends UIScriptedMenu
 	    {
 	        m_USMAIN.Show(false);
 	        m_EUMAIN.Show(true);
-			m_Background.LoadImageFile(0, US_Background);
+			m_Background.LoadImageFile(0, EU_Background);
 	        isSelectedUSMAIN = false;
 	        isSelectedEUMAIN = true;
 	    }
@@ -126,7 +126,7 @@ modded class MainMenu extends UIScriptedMenu
 	    {
 	        m_EUMAIN.Show(false);
 	        m_AUMAIN.Show(true);
-			m_Background.LoadImageFile(0, EU_Background);
+			m_Background.LoadImageFile(0, AU_Background);
 	        isSelectedEUMAIN = false;
 	        isSelectedAUMAIN = true;
 	    }
@@ -134,7 +134,7 @@ modded class MainMenu extends UIScriptedMenu
 	    {
 	        m_AUMAIN.Show(false);
 	        m_USMAIN.Show(true);
-			m_Background.LoadImageFile(0, AU_Background);
+			m_Background.LoadImageFile(0, US_Background);
 	        isSelectedAUMAIN = false;
 	        isSelectedUSMAIN = true;
 	    }
@@ -146,7 +146,7 @@ modded class MainMenu extends UIScriptedMenu
 	    {
 	        m_AUMAIN.Show(false);
 	        m_EUMAIN.Show(true);
-			m_Background.LoadImageFile(0, AU_Background);
+			m_Background.LoadImageFile(0, EU_Background);
 	        isSelectedAUMAIN = false;
 	        isSelectedEUMAIN = true;
 	    }
@@ -154,7 +154,7 @@ modded class MainMenu extends UIScriptedMenu
 	    {
 	        m_EUMAIN.Show(false);
 	        m_USMAIN.Show(true);
-			m_Background.LoadImageFile(0, EU_Background);
+			m_Background.LoadImageFile(0, US_Background);
 	        isSelectedEUMAIN = false;
 	        isSelectedUSMAIN = true;
 	    }
@@ -162,7 +162,7 @@ modded class MainMenu extends UIScriptedMenu
 	    {
 	        m_USMAIN.Show(false);
 	        m_AUMAIN.Show(true);
-			m_Background.LoadImageFile(0, US_Background);
+			m_Background.LoadImageFile(0, AU_Background);
 	        isSelectedUSMAIN = false;
 	        isSelectedAUMAIN = true;
 	    }
@@ -185,16 +185,6 @@ modded class MainMenu extends UIScriptedMenu
 			GetGame().OpenURL(MenuURLS.urlDiscord);
 			return true;
 		}
-		// else if (w == m_LeftSelect)
-        // {
-        //     SwitchServerLeft();
-        //     return true;
-        // }
-        // else if (w == m_RightSelect)
-        // {
-        //     SwitchServerRight();
-        //     return true;
-        // }
 		else if (button == MouseState.LEFT && w == m_Twitter)
 		{
 			GetGame().OpenURL(MenuURLS.urlTwitter);
@@ -387,8 +377,6 @@ modded class MainMenu extends UIScriptedMenu
 		return false;
 	}
 
-	// I still have not found a good way to globally edit the generated dialog system colors but I feel like I am close
-	// I guess the best way in the meantime is to create a new menu and have it styled as we need.
 	override void Exit()
 	{
 		EnterScriptedMenu( COLORFUL_EXIT );
