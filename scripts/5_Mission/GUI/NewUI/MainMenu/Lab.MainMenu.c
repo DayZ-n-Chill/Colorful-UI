@@ -21,7 +21,6 @@ modded class MainMenu extends UIScriptedMenu
 	private string EU_Background = "Colorful-UI/gui/textures/loading_screens/TheLab-LS2.edds";
 	private string AU_Background = "Colorful-UI/gui/textures/loading_screens/TheLab-LS3.edds";
 
-
 	private ButtonWidget m_LeftSelect;
 	private ButtonWidget m_RightSelect;
 	private ImageWidget m_ChevronLeft;
@@ -29,7 +28,6 @@ modded class MainMenu extends UIScriptedMenu
 	bool isSelectedUSMAIN = true; 
 	bool isSelectedEUMAIN = false; 
 	bool isSelectedAUMAIN = false; 
-
 
 	private	Widget m_USMAIN;
 	private	Widget m_EUMAIN;
@@ -83,7 +81,7 @@ modded class MainMenu extends UIScriptedMenu
 		m_Separator1.SetColor(colorScheme.SeparatorColor());
 		m_Separator2.SetColor(colorScheme.SeparatorColor());
 		m_SeparatorPanel.SetColor(colorScheme.SeparatorColor());
-		m_ProgressLoading      = ProgressBarWidget.Cast( layoutRoot.FindAnyWidget("LoadingBar") );
+		m_ProgressLoading  = ProgressBarWidget.Cast( layoutRoot.FindAnyWidget("LoadingBar") );
 		m_ProgressLoading.SetColor(colorScheme.MainMenuTrim());	
 		AnimatePress2StartFade();
 		return layoutRoot;
@@ -178,6 +176,21 @@ modded class MainMenu extends UIScriptedMenu
 			SwitchServerRight()
     	    return true;
     	}
+		if (button == MouseState.LEFT && w == m_USMAIN)
+		{
+			g_Game.ConnectFromServerBrowser( "172.111.51.43", 2302, "" );
+			return true;
+		}
+		if (button == MouseState.LEFT && w == m_EUMAIN)
+		{
+			g_Game.ConnectFromServerBrowser( "172.111.51.43", 2302, "" );
+			return true;
+		}
+		if (button == MouseState.LEFT && w == m_AUMAIN)
+		{
+			g_Game.ConnectFromServerBrowser( "172.111.51.43", 2302, "" );
+			return true;
+		}
 		if (button == MouseState.LEFT && w == m_Discord)
 		{
 			GetGame().OpenURL(MenuURLS.urlDiscord);
