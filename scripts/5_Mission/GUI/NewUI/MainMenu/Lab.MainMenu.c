@@ -85,20 +85,19 @@ modded class MainMenu extends UIScriptedMenu
 		m_SeparatorPanel.SetColor(colorScheme.SeparatorColor());
 		m_ProgressLoading      = ProgressBarWidget.Cast( layoutRoot.FindAnyWidget("LoadingBar") );
 		m_ProgressLoading.SetColor(colorScheme.MainMenuTrim());	
-		// m_Background.LoadImageFile(0, "Colorful-UI/gui/textures/loading_screens/TheLab-LS1.edds")  
 		AnimatePress2StartFade();
 		return layoutRoot;
 	}	
 
 	void AnimatePress2StartFade() {
     if (m_FadingOut) {
-        m_Alpha -= 0.05; // Adjust this value for faster or slower fades
+        m_Alpha -= 0.05; 
         if (m_Alpha <= 0) {
             m_Alpha = 0;
             m_FadingOut = false;
         }
     } else {
-        m_Alpha += 0.05; // Adjust this value for faster or slower fades
+        m_Alpha += 0.05; 
         if (m_Alpha >= 1) {
             m_Alpha = 1;
             m_FadingOut = true;
@@ -107,8 +106,7 @@ modded class MainMenu extends UIScriptedMenu
 
     m_Press2Start.SetAlpha(m_Alpha);
 
-    // Schedule the next update
-    GetGame().GetCallQueue(CALL_CATEGORY_GUI).CallLater(this.AnimatePress2StartFade, 50, false); // Adjust the value 50 for faster or slower fades
+    GetGame().GetCallQueue(CALL_CATEGORY_GUI).CallLater(this.AnimatePress2StartFade, 50, false);
 	}
 
 
