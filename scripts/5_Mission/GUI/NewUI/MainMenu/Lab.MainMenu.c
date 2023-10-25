@@ -7,15 +7,34 @@ modded class MainMenu extends UIScriptedMenu
 	private Widget m_Reddit;
 	private Widget m_Facebook;
 	private Widget m_Website;
-	private Widget m_PriorityQueue
+	private Widget m_PriorityQueue;
 	private Widget m_CharacterBtn;
-	private Widget m_Separator1
-	private Widget m_Separator2
-	private Widget m_SeparatorPanel
-	private Widget m_ProgressLoading
-	private	Widget m_shader
-	TextWidget m_ServerPingWidget;
+	private Widget m_Separator1;
+	private Widget m_Separator2;
+	private Widget m_SeparatorPanel;
+	private Widget m_ProgressLoading;
+	private	Widget m_shader;
+	private Widget m_ImageBackground;
+	private ImageWidget m_Background;
 
+
+	private ButtonWidget m_LeftSelect;
+	private ButtonWidget m_RightSelect;
+	private ImageWidget m_ChevronLeft;
+	private ImageWidget m_ChevronRight;
+	bool isSelectedUSMAIN = true; 
+	bool isSelectedEUMAIN = false; 
+	bool isSelectedAUMAIN = false; 
+
+
+	private	Widget m_USMAIN;
+	private	Widget m_EUMAIN;
+	private	Widget m_AUMAIN;
+
+	private Widget m_Press2Start;
+	float m_Alpha = 1.0;
+	bool m_FadingOut = true;
+	
 	ButtonWidget connectButton;
 	
 	override Widget Init()
@@ -23,6 +42,18 @@ modded class MainMenu extends UIScriptedMenu
 		layoutRoot					= GetGame().GetWorkspace().CreateWidgets( "Colorful-UI/gui/layouts/new_ui/colorful.main_menu.layout" );
 
 		m_Play						= layoutRoot.FindAnyWidget( "connectButton" );
+		m_Discord					= layoutRoot.FindAnyWidget( "Discord_button" );
+		m_Website					= layoutRoot.FindAnyWidget( "Website_Button" );
+		
+		m_Press2Start 				= layoutRoot.FindAnyWidget( "Press2Start" );
+		m_LeftSelect				= layoutRoot.FindAnyWidget( "LeftSelect" );
+		m_Background 				= ImageWidget.Cast(layoutRoot.FindAnyWidget("ImageBackground"));
+
+		m_RightSelect				= layoutRoot.FindAnyWidget( "RightSelect" );
+		m_USMAIN					= layoutRoot.FindAnyWidget( "USMain" );
+		m_EUMAIN					= layoutRoot.FindAnyWidget( "EUMain" );
+		m_AUMAIN					= layoutRoot.FindAnyWidget( "AUMain" );
+		
 		m_CustomizeCharacter		= layoutRoot.FindAnyWidget( "customize_character" );
 		m_PlayVideo					= layoutRoot.FindAnyWidget( "play_video" );
 		m_Tutorials					= layoutRoot.FindAnyWidget( "tutorials" );
@@ -49,19 +80,115 @@ modded class MainMenu extends UIScriptedMenu
 		m_Separator2.SetColor(colorScheme.SeparatorColor());
 		m_SeparatorPanel.SetColor(colorScheme.SeparatorColor());
 		m_ProgressLoading      = ProgressBarWidget.Cast( layoutRoot.FindAnyWidget("LoadingBar") );
-		m_ProgressLoading.SetColor(colorScheme.MainMenuTrim());
+		m_ProgressLoading.SetColor(colorScheme.MainMenuTrim());	
+		m_Background.LoadImageFile(0, "Colorful-UI\gui\textures\loading_screens\TheLab-LS6.png")  
+		AnimatePress2StartFade();
 		return layoutRoot;
 	}	
 
+	void AnimatePress2StartFade() {
+    if (m_FadingOut) {
+        m_Alpha -= 0.05; // Adjust this value for faster or slower fades
+        if (m_Alpha <= 0) {
+            m_Alpha = 0;
+            m_FadingOut = false;
+        }
+    } else {
+        m_Alpha += 0.05; // Adjust this value for faster or slower fades
+        if (m_Alpha >= 1) {
+            m_Alpha = 1;
+            m_FadingOut = true;
+        }
+    }
+
+    m_Press2Start.SetAlpha(m_Alpha);
+
+    // Schedule the next update
+    GetGame().GetCallQueue(CALL_CATEGORY_GUI).CallLater(this.AnimatePress2StartFade, 50, false); // Adjust the value 50 for faster or slower fades
+	}
+
+
+	void SwitchServerRight()
+	{
+	    if (isSelectedUSMAIN)
+	    {
+	        m_USMAIN.Show(false);
+	        m_EUMAIN.Show(true);
+	        isSelectedUSMAIN = false;
+	        isSelectedEUMAIN = true;
+	    }
+	    else if (isSelectedEUMAIN)
+	    {
+	        m_EUMAIN.Show(false);
+	        m_AUMAIN.Show(true);
+	        isSelectedEUMAIN = false;
+	        isSelectedAUMAIN = true;
+	    }
+	    else if (isSelectedAUMAIN)
+	    {
+	        m_AUMAIN.Show(false);
+	        m_USMAIN.Show(true);
+	        isSelectedAUMAIN = false;
+	        isSelectedUSMAIN = true;
+	    }
+	}
+
+	void SwitchServerLeft()
+	{
+	    if (isSelectedAUMAIN)
+	    {
+	        m_AUMAIN.Show(false);
+	        m_EUMAIN.Show(true);
+	        isSelectedAUMAIN = false;
+	        isSelectedEUMAIN = true;
+	    }
+	    else if (isSelectedEUMAIN)
+	    {
+	        m_EUMAIN.Show(false);
+	        m_USMAIN.Show(true);
+	        isSelectedEUMAIN = false;
+	        isSelectedUSMAIN = true;
+	    }
+	    else if (isSelectedUSMAIN)
+	    {
+	        m_USMAIN.Show(false);
+	        m_AUMAIN.Show(true);
+	        isSelectedUSMAIN = false;
+	        isSelectedAUMAIN = true;
+	    }
+	}
 
 	override bool OnClick(Widget w, int x, int y, int button)
 	{
-
+	    if (w == m_LeftSelect && button == MouseState.LEFT)
+    	{
+    	    // If you want to change the image of the Background:
+    	    m_Background.LoadImageFile(0, GetRandomBackground());
+			SwitchServerLeft()
+    	    return true;
+    	}
+		if (w == m_RightSelect && button == MouseState.LEFT)
+    	{
+    	    // If you want to change the image of the Background:
+    	    m_Background.LoadImageFile(0, GetRandomBackground());
+			SwitchServerRight()
+    	    return true;
+    	}
 		if (button == MouseState.LEFT && w == m_Discord)
 		{
 			GetGame().OpenURL(MenuURLS.urlDiscord);
 			return true;
 		}
+		else if (w == m_LeftSelect)
+        {
+            SwitchServerLeft();
+            return true;
+        }
+        else if (w == m_RightSelect)
+        {
+            SwitchServerRight();
+            return true;
+        }
 		else if (button == MouseState.LEFT && w == m_Twitter)
 		{
 			GetGame().OpenURL(MenuURLS.urlTwitter);
@@ -203,7 +330,18 @@ modded class MainMenu extends UIScriptedMenu
 	
 	override bool OnMouseEnter( Widget w, int x, int y )
 	{
-		
+		if (w == m_LeftSelect)
+    	{
+    	    ColorHighlight(w);
+    	    return true;
+    	}
+
+    	if (w == m_RightSelect)
+    	{
+    	    ColorHighlight(w);
+    	    return true;
+    	}
+
 		if( w == m_Twitter )
 		{
 			TwitterHighlight( w );
@@ -242,6 +380,7 @@ modded class MainMenu extends UIScriptedMenu
 		}
 		return false;
 	}
+
 
 	// I still have not found a good way to globally edit the generated dialog system colors but I feel like I am close
 	// I guess the best way in the meantime is to create a new menu and have it styled as we need.

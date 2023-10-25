@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{5D65CB72518D566D}Colorful-UI/gui/textures/animations/Skeleton-1.edds"
+ Author "sdf-1"
+ ChangeDate 1647079256
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Skeleton-1.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

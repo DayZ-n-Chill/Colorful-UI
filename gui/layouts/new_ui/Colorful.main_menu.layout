@@ -115,7 +115,6 @@ FrameWidgetClass main_menu_root {
   }
   FrameWidgetClass SafeZone {
    ignorepointer 1
-   position 0 0
    size 0.9 0.9
    halign center_ref
    valign center_ref
@@ -143,6 +142,176 @@ FrameWidgetClass main_menu_root {
      stretch 1
      filter 1
      nocache 0
+    }
+    GridSpacerWidgetClass OtherLinks {
+     visible 1
+     ignorepointer 1
+     size 261 36
+     hexactpos 0
+     vexactpos 0
+     hexactsize 1
+     vexactsize 1
+     priority 3
+     Padding 15
+     Margin 0
+     "Size To Content H" 1
+     "Size To Content V" 1
+     Columns 4
+     Rows 1
+     {
+      ButtonWidgetClass settings_button {
+       visible 1
+       keepsafezone 1
+       color 1 1 1 0
+       position 0.25 0
+       size 32 32
+       halign right_ref
+       valign center_ref
+       hexactpos 0
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       fixaspect inside
+       style Empty
+       "no focus" 0
+       "next left" "news_main"
+       "next right" "exit_button"
+       "next up" "play"
+       "next down" "customize_character"
+       font "Colorful-UI/gui/fonts/Ethnocentric20"
+       switch normal
+       {
+        ImageWidgetClass settings_button_image {
+         ignorepointer 1
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         image0 ""
+         imageTexture "{E4A8A5710740B6C7}Colorful-UI/gui/textures/main_menu/TheLab.Settings.edds"
+         mode blend
+         "src alpha" 1
+         "no wrap" 1
+         stretch 1
+        }
+       }
+      }
+      ButtonWidgetClass customize_character {
+       visible 1
+       color 1 1 1 0
+       position 0.75 0
+       size 32 32
+       halign right_ref
+       valign center_ref
+       hexactpos 0
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       style Empty
+       "no focus" 1
+       "next up" "play"
+       "next down" "customize_character"
+       font "Colorful-UI/gui/fonts/Ethnocentric20"
+       switch normal
+       {
+        ImageWidgetClass customize_character_image {
+         visible 1
+         ignorepointer 1
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         image0 ""
+         imageTexture "{6E949AD2FD7EC22C}Colorful-UI/gui/textures/main_menu/TheLab.Character.edds"
+         mode blend
+         "src alpha" 1
+         "no wrap" 1
+         stretch 1
+        }
+       }
+      }
+      ButtonWidgetClass Website_Button {
+       visible 1
+       color 1 1 1 0
+       position 0.5 0
+       size 32 32
+       halign right_ref
+       valign center_ref
+       hexactpos 0
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       fixaspect inside
+       style Empty
+       "no focus" 1
+       "next up" "play"
+       "next down" "customize_character"
+       font "Colorful-UI/gui/fonts/Ethnocentric20"
+       switch normal
+       {
+        ImageWidgetClass Website_Button_image {
+         visible 1
+         ignorepointer 1
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         image0 ""
+         imageTexture "{A20B2CEE6925E784}Colorful-UI/gui/textures/main_menu/TheLab.Website.edds"
+         mode blend
+         "src alpha" 1
+         "no wrap" 1
+         stretch 1
+        }
+       }
+      }
+      ButtonWidgetClass Discord_button {
+       color 1 1 1 0
+       size 32 32
+       halign right_ref
+       valign center_ref
+       hexactpos 0
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       fixaspect inside
+       style Empty
+       "no focus" 0
+       "next left" "settings_button"
+       "next right" "play"
+       "next up" "play"
+       "next down" "customize_character"
+       font "Colorful-UI/gui/fonts/Ethnocentric20"
+       switch normal
+       {
+        ImageWidgetClass Discord_button_image {
+         ignorepointer 1
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         image0 ""
+         imageTexture "{F0B108AC82AE6882}Colorful-UI/gui/textures/main_menu/TheLab.Discord.edds"
+         mode blend
+         "src alpha" 1
+         "no wrap" 1
+         stretch 1
+        }
+       }
+      }
+     }
     }
     GridSpacerWidgetClass settings_panel_root {
      visible 1
@@ -205,7 +374,7 @@ FrameWidgetClass main_menu_root {
       }
       ButtonWidgetClass exit_button {
        color 1 1 1 0
-       size 26 26
+       size 32 32
        halign right_ref
        valign center_ref
        hexactpos 0
@@ -252,22 +421,25 @@ FrameWidgetClass main_menu_root {
      vexactpos 1
      hexactsize 1
      vexactsize 1
-     Padding 25
+     Padding 15
      "Size To Content H" 1
      "Size To Content V" 1
+     content_halign center
+     content_valign center
      Rows 1
      {
       ButtonWidgetClass LeftSelect {
-       position 490.55099 558.58301
        size 48 48
+       valign center_ref
        hexactpos 1
        vexactpos 1
        hexactsize 1
        vexactsize 1
+       style Empty
        {
         ImageWidgetClass ChevronLeft {
          ignorepointer 1
-         size 24 32
+         size 24 38
          halign center_ref
          valign center_ref
          hexactpos 1
@@ -282,10 +454,10 @@ FrameWidgetClass main_menu_root {
         }
        }
       }
-      ButtonWidgetClass connectButton {
+      ButtonWidgetClass USMain {
        color 0 0 0 0
        position 0 0
-       size 293 49
+       size 293 60
        halign right_ref
        valign center_ref
        hexactpos 1
@@ -316,42 +488,98 @@ FrameWidgetClass main_menu_root {
          "no wrap" 1
          stretch 1
          filter 0
-         {
-          TextWidgetClass play_label {
-           visible 0
-           clipchildren 0
-           ignorepointer 1
-           size 1 1
-           halign center_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 0
-           hexactsize 0
-           vexactsize 0
-           scaled 1
-           text "PLAY"
-           font "Colorful-UI/gui/fonts/Ethnocentric20"
-           "exact text" 1
-           "size to text h" 1
-           "size to text v" 0
-           "text halign" right
-           "text valign" center
-          }
-         }
         }
        }
       }
-      ButtonWidgetClass RightSelect {
-       position 869.73602 561.33704
-       size 48 48
+      ButtonWidgetClass EUMain {
+       visible 0
+       color 0 0 0 0
+       position 0 0
+       size 293 60
+       halign right_ref
+       valign center_ref
        hexactpos 1
        vexactpos 1
        hexactsize 1
        vexactsize 1
+       style Default
+       "no focus" 0
+       "next left" "news_main"
+       "next right" "news_main"
+       "next up" "choose_server"
+       "next down" "play_video"
+       text_halign right
+       {
+        ImageWidgetClass play_panel0 {
+         ignorepointer 1
+         position 0 0
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         imageTexture "{E057D29962461297}Colorful-UI/gui/textures/main_menu/EUMAIN.btm.edds"
+         mode blend
+         "src alpha" 1
+         "no wrap" 1
+         stretch 1
+         filter 0
+        }
+       }
+      }
+      ButtonWidgetClass AUMain {
+       visible 0
+       color 0 0 0 0
+       position 0 0
+       size 293 60
+       halign right_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       style Default
+       "no focus" 0
+       "next left" "news_main"
+       "next right" "news_main"
+       "next up" "choose_server"
+       "next down" "play_video"
+       text_halign right
+       {
+        ImageWidgetClass play_panel1 {
+         ignorepointer 1
+         position 0 0
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         imageTexture "{3A73FD1EF2E5ADC7}Colorful-UI/gui/textures/main_menu/AUMAIN.btn.edds"
+         mode blend
+         "src alpha" 1
+         "no wrap" 1
+         stretch 1
+         filter 0
+        }
+       }
+      }
+      ButtonWidgetClass RightSelect {
+       size 48 48
+       halign right_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       style Empty
        {
         ImageWidgetClass ChevronRight {
          ignorepointer 1
-         size 24 32
+         size 24 38
          halign center_ref
          valign center_ref
          hexactpos 1
@@ -372,7 +600,7 @@ FrameWidgetClass main_menu_root {
      clipchildren 1
      ignorepointer 1
      color 0.5059 0.8118 0.8118 1
-     position 0 80
+     position 0 90
      size 178.97 48
      halign center_ref
      valign bottom_ref
@@ -381,161 +609,113 @@ FrameWidgetClass main_menu_root {
      hexactsize 1
      vexactsize 1
      style Normal
-     text "Press to Start"
+     text "PRESS TO PLAY"
      font "gui/fonts/MetronBook-Bold22"
      "exact text" 1
      "size to text h" 1
      "size to text v" 1
+     "text halign" center
+     "text valign" center
     }
-    FrameWidgetClass settings_panel_root0 {
-     visible 1
+    FrameWidgetClass TestAnimationRoot {
+     visible 0
      ignorepointer 1
-     size 260 40
-     hexactpos 0
-     vexactpos 0
+     position 200 -12.8
+     size 512 512
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
      hexactsize 1
      vexactsize 1
-     priority 3
      {
-      ButtonWidgetClass tutorial_button0 {
-       visible 1
-       color 1 1 1 0
-       position 0.75 0
-       size 37 37
-       halign right_ref
+      ImageWidgetClass TestAmnim1 {
+       ignorepointer 1
+       color 0.749 0.3725 0.3725 1
+       position 0 0
+       size 1 1
+       halign center_ref
        valign center_ref
-       hexactpos 0
+       hexactpos 1
        vexactpos 1
-       hexactsize 1
-       vexactsize 1
-       style Empty
-       "no focus" 1
-       "next up" "play"
-       "next down" "customize_character"
-       font "Colorful-UI/gui/fonts/Ethnocentric20"
-       switch normal
-       {
-        ImageWidgetClass tutorial_button_image0 {
-         visible 1
-         ignorepointer 1
-         size 1 1
-         halign center_ref
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 0
-         vexactsize 0
-         image0 "set:dayz_gui image:tutorials"
-         mode blend
-         "src alpha" 1
-        }
-       }
+       hexactsize 0
+       vexactsize 0
+       imageTexture "{5D65CB72518D566D}Colorful-UI/gui/textures/animations/Skeleton-1.edds"
+       mode blend
+       "src alpha" 1
+       "no wrap" 1
+       stretch 1
       }
-      ButtonWidgetClass message_button0 {
+      ImageWidgetClass TestAmnim2 {
        visible 1
-       color 1 1 1 0
-       position 0.5 0
-       size 45 33
-       halign right_ref
+       ignorepointer 1
+       color 0.8118 0.7373 0.5059 1
+       position 0 0
+       size 1 1
+       halign center_ref
        valign center_ref
-       hexactpos 0
+       hexactpos 1
        vexactpos 1
-       hexactsize 1
-       vexactsize 1
-       fixaspect inside
-       style Empty
-       "no focus" 1
-       "next up" "play"
-       "next down" "customize_character"
-       font "Colorful-UI/gui/fonts/Ethnocentric20"
-       switch normal
-       {
-        ImageWidgetClass message_button_image0 {
-         visible 1
-         ignorepointer 1
-         size 1 1
-         halign center_ref
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 0
-         vexactsize 0
-         image0 "set:dayz_gui image:credits"
-         mode blend
-         "src alpha" 1
-        }
-       }
+       hexactsize 0
+       vexactsize 0
+       imageTexture "{038DE231EE00D862}Colorful-UI/gui/textures/animations/Skeleton-2.edds"
+       mode blend
+       "src alpha" 1
+       "no wrap" 1
+       stretch 1
       }
-      ButtonWidgetClass settings_button0 {
+      ImageWidgetClass TestAmnim3 {
        visible 1
-       keepsafezone 1
-       color 1 1 1 0
-       position 0.25 0
-       size 37 37
-       halign right_ref
+       ignorepointer 1
+       color 0.7647 0.8745 0.6549 1
+       position 0 0
+       size 1 1
+       halign center_ref
        valign center_ref
-       hexactpos 0
+       hexactpos 1
        vexactpos 1
-       hexactsize 1
-       vexactsize 1
-       fixaspect inside
-       style Empty
-       "no focus" 0
-       "next left" "news_main"
-       "next right" "exit_button"
-       "next up" "play"
-       "next down" "customize_character"
-       font "Colorful-UI/gui/fonts/Ethnocentric20"
-       switch normal
-       {
-        ImageWidgetClass settings_button_image0 {
-         ignorepointer 1
-         size 1 1
-         halign center_ref
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 0
-         vexactsize 0
-         image0 "set:dayz_gui image:settings"
-         mode blend
-         "src alpha" 1
-        }
-       }
+       hexactsize 0
+       vexactsize 0
+       imageTexture "{F785A5A9E3DDB016}Colorful-UI/gui/textures/animations/Skeleton-3.edds"
+       mode blend
+       "src alpha" 1
+       "no wrap" 1
+       stretch 1
       }
-      ButtonWidgetClass exit_button0 {
-       color 1 1 1 0
-       size 37 37
-       halign right_ref
+      ImageWidgetClass TestAmnim4 {
+       visible 1
+       ignorepointer 1
+       color 0.6549 0.8745 0.8745 1
+       position 0 0
+       size 1 1
+       halign center_ref
        valign center_ref
-       hexactpos 0
+       hexactpos 1
        vexactpos 1
-       hexactsize 1
-       vexactsize 1
-       fixaspect inside
-       style Empty
-       "no focus" 0
-       "next left" "settings_button"
-       "next right" "play"
-       "next up" "play"
-       "next down" "customize_character"
-       font "Colorful-UI/gui/fonts/Ethnocentric20"
-       switch normal
-       {
-        ImageWidgetClass exit_button_image0 {
-         ignorepointer 1
-         size 1 1
-         halign center_ref
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 0
-         vexactsize 0
-         image0 "set:dayz_gui image:exit"
-         mode blend
-         "src alpha" 1
-        }
-       }
+       hexactsize 0
+       vexactsize 0
+       imageTexture "{BE5DB0B6911BC47C}Colorful-UI/gui/textures/animations/Skeleton-4.edds"
+       mode blend
+       "src alpha" 1
+       "no wrap" 1
+       stretch 1
+      }
+      ImageWidgetClass TestAmnim5 {
+       visible 1
+       ignorepointer 1
+       color 0.7647 0.6549 0.8745 1
+       position 0 0
+       size 1 1
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       imageTexture "{4A55F72E9CC6AC08}Colorful-UI/gui/textures/animations/Skeleton-5.edds"
+       mode blend
+       "src alpha" 1
+       "no wrap" 1
+       stretch 1
       }
      }
     }
