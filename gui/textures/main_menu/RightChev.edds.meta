@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{DE603F3FC8B56150}Colorful-UI/gui/textures/main_menu/RightChev.edds"
+ Author "sdf-1"
+ ChangeDate -1938559140
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "RightChev.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

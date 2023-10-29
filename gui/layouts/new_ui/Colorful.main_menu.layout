@@ -44,7 +44,7 @@ FrameWidgetClass main_menu_root {
    vexactsize 0
    {
     ImageWidgetClass Vignette {
-     visible 1
+     visible 0
      ignorepointer 0
      color 0 0 0 0.7843
      position 0 0
@@ -115,6 +115,7 @@ FrameWidgetClass main_menu_root {
   }
   FrameWidgetClass SafeZone {
    ignorepointer 1
+   position 0 0
    size 0.9 0.9
    halign center_ref
    valign center_ref
@@ -203,7 +204,7 @@ FrameWidgetClass main_menu_root {
        visible 1
        color 1 1 1 0
        position 0.75 0
-       size 32 32
+       size 36 32
        halign right_ref
        valign center_ref
        hexactpos 0
@@ -240,7 +241,7 @@ FrameWidgetClass main_menu_root {
        visible 1
        color 1 1 1 0
        position 0.5 0
-       size 32 32
+       size 33 32
        halign right_ref
        valign center_ref
        hexactpos 0
@@ -276,7 +277,7 @@ FrameWidgetClass main_menu_root {
       }
       ButtonWidgetClass Discord_button {
        color 1 1 1 0
-       size 32 32
+       size 38 32
        halign right_ref
        valign center_ref
        hexactpos 0
@@ -337,7 +338,7 @@ FrameWidgetClass main_menu_root {
        keepsafezone 1
        color 1 1 1 0
        position 0.25 0
-       size 180 36
+       size 138 42
        halign right_ref
        valign center_ref
        hexactpos 0
@@ -365,9 +366,10 @@ FrameWidgetClass main_menu_root {
          hexactsize 0
          vexactsize 0
          image0 ""
-         imageTexture "{316F38FCC2DF1E71}Colorful-UI/gui/textures/main_menu/TheLab.PriorityQ.edds"
+         imageTexture "{7C5C3EB621A854F6}Colorful-UI/gui/textures/main_menu/Store.Btn.edds"
          mode blend
          "src alpha" 1
+         "no wrap" 1
          stretch 1
         }
        }
@@ -411,54 +413,22 @@ FrameWidgetClass main_menu_root {
       }
      }
     }
-    GridSpacerWidgetClass ServerSelect {
+    FrameWidgetClass ServerSelect {
      ignorepointer 1
-     position 0 120
-     size 385 110
+     position 0 54
+     size 350 120
      halign center_ref
      valign bottom_ref
      hexactpos 1
      vexactpos 1
      hexactsize 1
      vexactsize 1
-     Padding 15
-     "Size To Content H" 1
-     "Size To Content V" 1
-     content_halign center
-     content_valign center
-     Rows 1
      {
-      ButtonWidgetClass LeftSelect {
-       size 48 48
-       valign center_ref
-       hexactpos 1
-       vexactpos 1
-       hexactsize 1
-       vexactsize 1
-       style Empty
-       {
-        ImageWidgetClass ChevronLeft {
-         ignorepointer 1
-         size 24 38
-         halign center_ref
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         imageTexture "{57EFA83B83C84239}Colorful-UI/gui/textures/main_menu/ChevronLeft.edds"
-         mode blend
-         "src alpha" 1
-         "no wrap" 1
-         stretch 1
-        }
-       }
-      }
-      ButtonWidgetClass USMain {
+      ButtonWidgetClass USMainActive {
+       visible 1
        color 0 0 0 0
-       position 0 0
-       size 293 60
-       halign right_ref
+       size 315 120
+       halign center_ref
        valign center_ref
        hexactpos 1
        vexactpos 1
@@ -474,7 +444,6 @@ FrameWidgetClass main_menu_root {
        {
         ImageWidgetClass play_panel {
          ignorepointer 1
-         position 0 0
          size 1 1
          halign center_ref
          valign center_ref
@@ -482,7 +451,7 @@ FrameWidgetClass main_menu_root {
          vexactpos 0
          hexactsize 0
          vexactsize 0
-         imageTexture "{DF016B42CD99789C}Colorful-UI/gui/textures/main_menu/USMAIN.btn.edds"
+         imageTexture "{92146B134F03ADDF}Colorful-UI/gui/textures/main_menu/USMain.Btn.Active.edds"
          mode blend
          "src alpha" 1
          "no wrap" 1
@@ -491,12 +460,11 @@ FrameWidgetClass main_menu_root {
         }
        }
       }
-      ButtonWidgetClass EUMain {
+      ButtonWidgetClass EUMainActive {
        visible 0
        color 0 0 0 0
-       position 0 0
-       size 293 60
-       halign right_ref
+       size 315 120
+       halign center_ref
        valign center_ref
        hexactpos 1
        vexactpos 1
@@ -512,7 +480,6 @@ FrameWidgetClass main_menu_root {
        {
         ImageWidgetClass play_panel0 {
          ignorepointer 1
-         position 0 0
          size 1 1
          halign center_ref
          valign center_ref
@@ -520,7 +487,7 @@ FrameWidgetClass main_menu_root {
          vexactpos 0
          hexactsize 0
          vexactsize 0
-         imageTexture "{E057D29962461297}Colorful-UI/gui/textures/main_menu/EUMAIN.btm.edds"
+         imageTexture "{F9F06F7254FF2ECA}Colorful-UI/gui/textures/main_menu/EUMain.Btn.Active.edds"
          mode blend
          "src alpha" 1
          "no wrap" 1
@@ -529,12 +496,11 @@ FrameWidgetClass main_menu_root {
         }
        }
       }
-      ButtonWidgetClass AUMain {
+      ButtonWidgetClass AUMainActive {
        visible 0
        color 0 0 0 0
-       position 0 0
-       size 293 60
-       halign right_ref
+       size 315 120
+       halign center_ref
        valign center_ref
        hexactpos 1
        vexactpos 1
@@ -549,6 +515,7 @@ FrameWidgetClass main_menu_root {
        text_halign right
        {
         ImageWidgetClass play_panel1 {
+         visible 1
          ignorepointer 1
          position 0 0
          size 1 1
@@ -558,7 +525,7 @@ FrameWidgetClass main_menu_root {
          vexactpos 0
          hexactsize 0
          vexactsize 0
-         imageTexture "{3A73FD1EF2E5ADC7}Colorful-UI/gui/textures/main_menu/AUMAIN.btn.edds"
+         imageTexture "{F9F06F7254FF2ECA}Colorful-UI/gui/textures/main_menu/EUMain.Btn.Active.edds"
          mode blend
          "src alpha" 1
          "no wrap" 1
@@ -567,10 +534,148 @@ FrameWidgetClass main_menu_root {
         }
        }
       }
+      ButtonWidgetClass USMainDisabled {
+       visible 0
+       color 0 0 0 0
+       size 315 120
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       style Default
+       "no focus" 0
+       "next left" "news_main"
+       "next right" "news_main"
+       "next up" "choose_server"
+       "next down" "play_video"
+       text_halign right
+       {
+        ImageWidgetClass play_panel2 {
+         ignorepointer 1
+         position 0 0
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         imageTexture "{6DCEDEB0A770BA73}Colorful-UI/gui/textures/main_menu/USMain.Btn.Disabled.edds"
+         mode blend
+         "src alpha" 1
+         "no wrap" 1
+         stretch 1
+         filter 0
+        }
+       }
+      }
+      ButtonWidgetClass EUMainDisabled {
+       visible 0
+       color 0 0 0 0
+       size 315 120
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       style Default
+       "no focus" 0
+       "next left" "news_main"
+       "next right" "news_main"
+       "next up" "choose_server"
+       "next down" "play_video"
+       text_halign right
+       {
+        ImageWidgetClass play_panel3 {
+         ignorepointer 1
+         position 0 0
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         imageTexture "{D510C9279840880A}Colorful-UI/gui/textures/main_menu/EUMain.Btn.Disabled.edds"
+         mode blend
+         "src alpha" 1
+         "no wrap" 1
+         stretch 1
+         filter 0
+        }
+       }
+      }
+      ButtonWidgetClass AUMainDisabled {
+       visible 0
+       color 0 0 0 0
+       size 315 120
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       style Default
+       "no focus" 0
+       "next left" "news_main"
+       "next right" "news_main"
+       "next up" "choose_server"
+       "next down" "play_video"
+       text_halign right
+       {
+        ImageWidgetClass play_panel4 {
+         visible 1
+         ignorepointer 1
+         position 0 0
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         imageTexture "{586109D0BFA686AF}Colorful-UI/gui/textures/main_menu/AUMain.Btn.Disabled.edds"
+         mode blend
+         "src alpha" 1
+         "no wrap" 1
+         stretch 1
+         filter 0
+        }
+       }
+      }
+      ButtonWidgetClass LeftSelect {
+       position 0 17
+       size 48 48
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       style Empty
+       {
+        ImageWidgetClass ChevronLeft {
+         ignorepointer 1
+         size 50 50
+         halign center_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         imageTexture "{AAA7FE5FE0B8EA56}Colorful-UI/gui/textures/main_menu/LeftChev.edds"
+         mode blend
+         "src alpha" 1
+         "no wrap" 1
+         stretch 1
+        }
+       }
+      }
       ButtonWidgetClass RightSelect {
+       position 0 17
        size 48 48
        halign right_ref
-       valign center_ref
        hexactpos 1
        vexactpos 1
        hexactsize 1
@@ -579,14 +684,14 @@ FrameWidgetClass main_menu_root {
        {
         ImageWidgetClass ChevronRight {
          ignorepointer 1
-         size 24 38
+         size 50 50
          halign center_ref
          valign center_ref
          hexactpos 1
          vexactpos 1
          hexactsize 1
          vexactsize 1
-         imageTexture "{580C79E17F0BD132}Colorful-UI/gui/textures/main_menu/ChevronRight.edds"
+         imageTexture "{DE603F3FC8B56150}Colorful-UI/gui/textures/main_menu/RightChev.edds"
          mode blend
          "src alpha" 1
          "no wrap" 1
@@ -597,10 +702,11 @@ FrameWidgetClass main_menu_root {
      }
     }
     TextWidgetClass Press2Start {
+     visible 1
      clipchildren 1
      ignorepointer 1
      color 0.5059 0.8118 0.8118 1
-     position 0 90
+     position 0 69
      size 178.97 48
      halign center_ref
      valign bottom_ref
@@ -616,6 +722,60 @@ FrameWidgetClass main_menu_root {
      "size to text v" 1
      "text halign" center
      "text valign" center
+    }
+    TextWidgetClass "Coming Soon" {
+     visible 0
+     clipchildren 1
+     ignorepointer 1
+     color 0.7647 0.6549 0.8745 1
+     position 0 69
+     size 178.97 48
+     halign center_ref
+     valign bottom_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     style Normal
+     text "COMING SOON"
+     font "gui/fonts/MetronBook-Bold22"
+     "exact text" 1
+     "size to text h" 1
+     "size to text v" 1
+     "text halign" center
+     "text valign" center
+    }
+    ImageWidgetClass ServerOffline {
+     visible 1
+     ignorepointer 1
+     size 120 36
+     halign center_ref
+     valign bottom_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     imageTexture "{5AC8FB04A94F95EB}Colorful-UI/gui/textures/main_menu/Offline.edds"
+     mode blend
+     "src alpha" 1
+     "no wrap" 1
+     stretch 1
+    }
+    ImageWidgetClass ServerOnline {
+     visible 1
+     ignorepointer 1
+     size 120 36
+     halign center_ref
+     valign bottom_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     imageTexture "{ECF991BCFC12C0E6}Colorful-UI/gui/textures/main_menu/Online.edds"
+     mode blend
+     "src alpha" 1
+     "no wrap" 1
+     stretch 1
     }
     FrameWidgetClass TestAnimationRoot {
      visible 0

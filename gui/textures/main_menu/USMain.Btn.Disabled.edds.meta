@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{6DCEDEB0A770BA73}Colorful-UI/gui/textures/main_menu/USMain.Btn.Disabled.edds"
+ Author "sdf-1"
+ ChangeDate -1538003108
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "USMain.Btn.Disabled.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

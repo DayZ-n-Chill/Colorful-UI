@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{ECF991BCFC12C0E6}Colorful-UI/gui/textures/main_menu/Online.edds"
+ Author "sdf-1"
+ ChangeDate -229380260
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Online.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

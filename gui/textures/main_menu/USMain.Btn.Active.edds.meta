@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{92146B134F03ADDF}Colorful-UI/gui/textures/main_menu/USMain.Btn.Active.edds"
+ Author "sdf-1"
+ ChangeDate -213651620
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "USMain.Btn.Active.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

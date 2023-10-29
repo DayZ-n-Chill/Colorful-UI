@@ -609,6 +609,7 @@ WindowWidgetClass LogoutDialogRoot {
          }
         }
         ButtonWidgetClass TwitterBtn {
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -677,7 +678,7 @@ WindowWidgetClass LogoutDialogRoot {
          }
         }
         ButtonWidgetClass RedditBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -814,7 +815,7 @@ WindowWidgetClass LogoutDialogRoot {
          }
         }
         ButtonWidgetClass FacebookBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -831,6 +832,7 @@ WindowWidgetClass LogoutDialogRoot {
          "next down" "play_video"
          {
           PanelWidgetClass FacebookBtn_panel {
+           visible 0
            ignorepointer 1
            color 0 0 0 0
            size 293 39
@@ -882,7 +884,7 @@ WindowWidgetClass LogoutDialogRoot {
          }
         }
         ButtonWidgetClass MetaBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -899,6 +901,7 @@ WindowWidgetClass LogoutDialogRoot {
          "next down" "play_video"
          {
           PanelWidgetClass MetaBtn_panel {
+           visible 0
            ignorepointer 1
            color 0 0 0 0
            size 293 39

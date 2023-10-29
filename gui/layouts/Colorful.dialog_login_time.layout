@@ -1,4 +1,4 @@
-WindowWidgetClass TextInputDialogRoot {
+WindowWidgetClass TextInputDialog_root {
  clipchildren 0
  position 0.784 0
  size 1 1
@@ -26,7 +26,7 @@ WindowWidgetClass TextInputDialogRoot {
   ImageWidgetClass BackgroundOverride {
    visible 1
    position 0 0
-   size 0.16 0.09
+   size 0.18 0.09
    halign center_ref
    valign center_ref
    hexactpos 0
@@ -198,13 +198,117 @@ WindowWidgetClass TextInputDialogRoot {
      "text halign" center
      "text valign" center
     }
+    FrameWidgetClass TestAnimationRoot {
+     visible 0
+     ignorepointer 1
+     position 0 50
+     size 100 100
+     halign center_ref
+     valign bottom_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     {
+      ImageWidgetClass TestAmnim1 {
+       visible 0
+       ignorepointer 1
+       color 0.749 0.3725 0.3725 1
+       position 0 0
+       size 1 1
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       imageTexture "{5D65CB72518D566D}Colorful-UI/gui/textures/animations/Skeleton-1.edds"
+       mode blend
+       "src alpha" 1
+       "no wrap" 1
+       stretch 1
+      }
+      ImageWidgetClass TestAmnim2 {
+       visible 0
+       ignorepointer 1
+       color 0.7647 0.8745 0.6549 1
+       position 0 0
+       size 1 1
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       imageTexture "{F785A5A9E3DDB016}Colorful-UI/gui/textures/animations/Skeleton-3.edds"
+       mode blend
+       "src alpha" 1
+       "no wrap" 1
+       stretch 1
+      }
+      ImageWidgetClass TestAmnim3 {
+       visible 0
+       ignorepointer 1
+       color 0.6549 0.8745 0.8745 1
+       position 0 0
+       size 1 1
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       imageTexture "{BE5DB0B6911BC47C}Colorful-UI/gui/textures/animations/Skeleton-4.edds"
+       mode blend
+       "src alpha" 1
+       "no wrap" 1
+       stretch 1
+      }
+      ImageWidgetClass TestAmnim4 {
+       visible 0
+       ignorepointer 1
+       color 0.8118 0.7373 0.5059 1
+       position 0 0
+       size 1 1
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       imageTexture "{038DE231EE00D862}Colorful-UI/gui/textures/animations/Skeleton-2.edds"
+       mode blend
+       "src alpha" 1
+       "no wrap" 1
+       stretch 1
+      }
+      ImageWidgetClass TestAmnim5 {
+       visible 0
+       ignorepointer 1
+       color 0.7647 0.6549 0.8745 1
+       position 0 0
+       size 1 1
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       imageTexture "{4A55F72E9CC6AC08}Colorful-UI/gui/textures/animations/Skeleton-5.edds"
+       mode blend
+       "src alpha" 1
+       "no wrap" 1
+       stretch 1
+      }
+     }
+    }
    }
   }
   ProgressBarWidgetClass LoadingBar {
    ignorepointer 1
    color 0.8118 0.8118 0.8118 1
    position 0 0
-   size 1 20
+   size 1 8
    halign center_ref
    valign bottom_ref
    hexactpos 1

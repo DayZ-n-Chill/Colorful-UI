@@ -16,10 +16,17 @@ modded class MainMenu extends UIScriptedMenu
 	private	Widget m_shader;
 	private Widget m_ImageBackground;
 	private ImageWidget m_Background;
+	private Widget m_ServerOffline;
+	private Widget m_ComingSoon
+	private Widget m_ServerOnline;
 
 	private string US_Background = "Colorful-UI/gui/textures/loading_screens/TheLab-LS1.edds";
 	private string EU_Background = "Colorful-UI/gui/textures/loading_screens/TheLab-LS2.edds";
 	private string AU_Background = "Colorful-UI/gui/textures/loading_screens/TheLab-LS3.edds";
+
+	private bool m_FadingInBackground = false;
+	private float m_Alpha = 1.0; 
+
 
 	private ButtonWidget m_LeftSelect;
 	private ButtonWidget m_RightSelect;
@@ -32,10 +39,13 @@ modded class MainMenu extends UIScriptedMenu
 	private	Widget m_USMAIN;
 	private	Widget m_EUMAIN;
 	private	Widget m_AUMAIN;
+	private	Widget m_USMAINDIS;
+	private	Widget m_EUMAINDIS;
+	private	Widget m_AUMAINDIS;
 
 	private Widget m_Press2Start;
-	float m_Alpha = 1.0;
 	bool m_FadingOut = true;
+	bool m_FadingIn = true;
 	
 	ButtonWidget connectButton;
 	
@@ -48,13 +58,20 @@ modded class MainMenu extends UIScriptedMenu
 		m_Website					= layoutRoot.FindAnyWidget( "Website_Button" );
 		
 		m_Press2Start 				= layoutRoot.FindAnyWidget( "Press2Start" );
+		m_ComingSoon 				= layoutRoot.FindAnyWidget( "Coming Soon" );
 		m_LeftSelect				= layoutRoot.FindAnyWidget( "LeftSelect" );
 		m_Background 				= ImageWidget.Cast(layoutRoot.FindAnyWidget("ImageBackground"));
 
 		m_RightSelect				= layoutRoot.FindAnyWidget( "RightSelect" );
-		m_USMAIN					= layoutRoot.FindAnyWidget( "USMain" );
-		m_EUMAIN					= layoutRoot.FindAnyWidget( "EUMain" );
-		m_AUMAIN					= layoutRoot.FindAnyWidget( "AUMain" );
+		m_USMAIN					= layoutRoot.FindAnyWidget( "USMainActive" );
+		m_EUMAIN					= layoutRoot.FindAnyWidget( "EUMainActive" );
+		m_AUMAIN					= layoutRoot.FindAnyWidget( "AUMainActive" );
+		m_USMAINDIS					= layoutRoot.FindAnyWidget( "USMainDisabled" );
+		m_EUMAINDIS					= layoutRoot.FindAnyWidget( "EUMainDisabled" );
+		m_AUMAINDIS					= layoutRoot.FindAnyWidget( "AUMainDisabled" );
+
+		m_ServerOffline				= layoutRoot.FindAnyWidget( "ServerOffline" );
+		m_ServerOnline				= layoutRoot.FindAnyWidget( "ServerOnline" );
 		
 		m_CustomizeCharacter		= layoutRoot.FindAnyWidget( "customize_character" );
 		m_PlayVideo					= layoutRoot.FindAnyWidget( "play_video" );
@@ -103,34 +120,46 @@ modded class MainMenu extends UIScriptedMenu
     }
 
     m_Press2Start.SetAlpha(m_Alpha);
-
+	m_ComingSoon.SetAlpha(m_Alpha);
+	
     GetGame().GetCallQueue(CALL_CATEGORY_GUI).CallLater(this.AnimatePress2StartFade, 50, false);
 	}
-
 
 	void SwitchServerRight()
 	{
 	    if (isSelectedUSMAIN)
 	    {
 	        m_USMAIN.Show(false);
-	        m_EUMAIN.Show(true);
+	        m_EUMAINDIS.Show(true);
+			// FadeIn(EU_Background);
 			m_Background.LoadImageFile(0, EU_Background);
+			m_ComingSoon.Show(true);
+			m_Press2Start.Show(false);
+			m_ServerOnline.Show(false);
 	        isSelectedUSMAIN = false;
 	        isSelectedEUMAIN = true;
 	    }
 	    else if (isSelectedEUMAIN)
 	    {
-	        m_EUMAIN.Show(false);
-	        m_AUMAIN.Show(true);
+	        m_EUMAINDIS.Show(false);
+	        m_AUMAINDIS.Show(true);
+			// FadeIn(AU_Background);
 			m_Background.LoadImageFile(0, AU_Background);
+			m_ComingSoon.Show(true);
+			m_Press2Start.Show(false);
+			m_ServerOnline.Show(false);
 	        isSelectedEUMAIN = false;
 	        isSelectedAUMAIN = true;
 	    }
 	    else if (isSelectedAUMAIN)
 	    {
-	        m_AUMAIN.Show(false);
+	        m_AUMAINDIS.Show(false);
 	        m_USMAIN.Show(true);
+			// FadeIn(US_Background);
 			m_Background.LoadImageFile(0, US_Background);
+			m_ComingSoon.Show(false);
+			m_Press2Start.Show(true);
+			m_ServerOnline.Show(true);
 	        isSelectedAUMAIN = false;
 	        isSelectedUSMAIN = true;
 	    }
@@ -140,25 +169,37 @@ modded class MainMenu extends UIScriptedMenu
 	{
 	    if (isSelectedAUMAIN)
 	    {
-	        m_AUMAIN.Show(false);
-	        m_EUMAIN.Show(true);
+	        m_AUMAINDIS.Show(false);
+	        m_EUMAINDIS.Show(true);
+			
 			m_Background.LoadImageFile(0, EU_Background);
+			m_ComingSoon.Show(true);
+			m_Press2Start.Show(false);
+			m_ServerOnline.Show(false);
 	        isSelectedAUMAIN = false;
 	        isSelectedEUMAIN = true;
 	    }
 	    else if (isSelectedEUMAIN)
 	    {
-	        m_EUMAIN.Show(false);
+	        m_EUMAINDIS.Show(false);
 	        m_USMAIN.Show(true);
+			
 			m_Background.LoadImageFile(0, US_Background);
+			m_ComingSoon.Show(false);
+			m_Press2Start.Show(true);
+			m_ServerOnline.Show(true);
 	        isSelectedEUMAIN = false;
 	        isSelectedUSMAIN = true;
 	    }
 	    else if (isSelectedUSMAIN)
 	    {
 	        m_USMAIN.Show(false);
-	        m_AUMAIN.Show(true);
+	        m_AUMAINDIS.Show(true);
+			
 			m_Background.LoadImageFile(0, AU_Background);
+			m_ComingSoon.Show(true);
+			m_Press2Start.Show(false);
+			m_ServerOnline.Show(false);
 	        isSelectedUSMAIN = false;
 	        isSelectedAUMAIN = true;
 	    }
@@ -183,12 +224,12 @@ modded class MainMenu extends UIScriptedMenu
 		}
 		if (button == MouseState.LEFT && w == m_EUMAIN)
 		{
-			g_Game.ConnectFromServerBrowser( "172.111.51.43", 2302, "" );
+			// g_Game.ConnectFromServerBrowser( "172.111.51.43", 2302, "" );
 			return true;
 		}
 		if (button == MouseState.LEFT && w == m_AUMAIN)
 		{
-			g_Game.ConnectFromServerBrowser( "172.111.51.43", 2302, "" );
+			// g_Game.ConnectFromServerBrowser( "172.111.51.43", 2302, "" );
 			return true;
 		}
 		if (button == MouseState.LEFT && w == m_Discord)
@@ -226,7 +267,6 @@ modded class MainMenu extends UIScriptedMenu
 			GetGame().OpenURL(MenuURLS.urlPriorityQ);
 			return false;
 		}
-
 
 		else if ( w == m_CharacterBtn )
 		{

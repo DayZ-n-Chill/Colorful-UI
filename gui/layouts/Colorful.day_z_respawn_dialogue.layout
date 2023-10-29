@@ -410,6 +410,7 @@ WindowWidgetClass WindowWidget {
            }
           }
           ButtonWidgetClass TwitterBtn {
+           visible 0
            color 0 0 0 0
            size 293 39
            halign right_ref
@@ -478,7 +479,7 @@ WindowWidgetClass WindowWidget {
            }
           }
           ButtonWidgetClass RedditBtn {
-           visible 1
+           visible 0
            color 0 0 0 0
            size 293 39
            halign right_ref
@@ -495,6 +496,7 @@ WindowWidgetClass WindowWidget {
            "next down" "play_video"
            {
             PanelWidgetClass RedditBtn_panel {
+             visible 0
              ignorepointer 1
              color 0 0 0 0
              size 293 39
@@ -615,7 +617,7 @@ WindowWidgetClass WindowWidget {
            }
           }
           ButtonWidgetClass FacebookBtn {
-           visible 1
+           visible 0
            color 0 0 0 0
            size 293 39
            halign right_ref
@@ -632,6 +634,7 @@ WindowWidgetClass WindowWidget {
            "next down" "play_video"
            {
             PanelWidgetClass FacebookBtn_panel {
+             visible 0
              ignorepointer 1
              color 0 0 0 0
              size 293 39
@@ -683,7 +686,7 @@ WindowWidgetClass WindowWidget {
            }
           }
           ButtonWidgetClass MetaBtn {
-           visible 1
+           visible 0
            color 0 0 0 0
            size 293 39
            halign right_ref
@@ -702,6 +705,7 @@ WindowWidgetClass WindowWidget {
             PanelWidgetClass MetaBtn_panel {
              ignorepointer 1
              color 0 0 0 0
+             position -0.00445 0
              size 293 39
              halign right_ref
              valign center_ref

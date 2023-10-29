@@ -17,7 +17,7 @@ FrameWidgetClass DialogRoot {
   ImageWidgetClass ImageBackground {
    visible 1
    position 0 0
-   size 0.16 0.09
+   size 0.18 0.09
    halign center_ref
    valign center_ref
    hexactpos 0
@@ -27,7 +27,7 @@ FrameWidgetClass DialogRoot {
    scaled 1
    fixaspect outside
    image0 ""
-   imageTexture "{BCDEF8AF12180544}Colorful-UI/gui/textures/loading_screens/Colorful-BG-11.edds"
+   imageTexture "{DADD85D033C8074F}Colorful-UI/gui/textures/loading_screens/TheLab-LS1.edds"
    mode opaque
    "src alpha" 1
    "no wrap" 1
@@ -51,7 +51,7 @@ FrameWidgetClass DialogRoot {
    vexactsize 0
    {
     ImageWidgetClass Vignette {
-     visible 1
+     visible 0
      ignorepointer 0
      color 0 0 0 0.7843
      position 0 0
@@ -90,7 +90,7 @@ FrameWidgetClass DialogRoot {
      stretch 0
     }
     ImageWidgetClass HorizShader {
-     visible 1
+     visible 0
      ignorepointer 1
      keepsafezone 0
      position 0 0

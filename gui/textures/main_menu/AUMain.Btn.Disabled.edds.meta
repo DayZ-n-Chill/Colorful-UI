@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{586109D0BFA686AF}Colorful-UI/gui/textures/main_menu/AUMain.Btn.Disabled.edds"
+ Author "sdf-1"
+ ChangeDate -1168904356
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "AUMain.Btn.Disabled.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}
