@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{CE2270361AB80E33}Colorful-UI/gui/textures/inGame_menu/TheLab.IngameMenuShade.edds"
+ Author "sdf-1"
+ ChangeDate 1281109854
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "TheLab.IngameMenuShade.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

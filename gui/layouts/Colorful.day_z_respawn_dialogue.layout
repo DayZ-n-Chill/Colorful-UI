@@ -762,7 +762,7 @@ WindowWidgetClass WindowWidget {
        visible 1
        clipchildren 0
        inheritalpha 1
-       size 640 406
+       size 460 283
        hexactpos 0
        vexactpos 0
        hexactsize 1
