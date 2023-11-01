@@ -7,11 +7,14 @@ modded class InGameMenu extends UIScriptedMenu
 	private Widget m_Youtube;
 	private Widget m_Reddit;
 	private Widget m_Facebook;
+	private TextWidget m_PlayerNameText;
 
 	override Widget Init()
 	{
 		layoutRoot = GetGame().GetWorkspace().CreateWidgets("Colorful-UI/gui/layouts/colorful.day_z_ingamemenu.layout");
-				
+		
+		m_PlayerNameText            = TextWidget.Cast(layoutRoot.FindAnyWidget("PlayerNameText"));				
+		
 		m_ContinueButton			= layoutRoot.FindAnyWidget( "continuebtn" );
 		m_ExitButton				= layoutRoot.FindAnyWidget( "exitbtn" );
 		m_RestartButton				= layoutRoot.FindAnyWidget( "restartbtn" );
@@ -40,6 +43,14 @@ modded class InGameMenu extends UIScriptedMenu
 		m_shader.SetColor(colorScheme.ShaderColor());
 		m_Separator.SetColor(colorScheme.SeparatorColor());
 		return layoutRoot;
+	}
+
+	void UpdatePlayerName() {
+	    PlayerBase player = PlayerBase.Cast(GetGame().GetPlayer());
+	    if (player) {
+	        string playerName = player.GetIdentity().GetName();
+	        m_PlayerNameText.SetText(playerName);
+	    }
 	}
 
 	override bool OnClick(Widget w, int x, int y, int button)
@@ -220,4 +231,10 @@ modded class InGameMenu extends UIScriptedMenu
 		ColorHighlight( w );
 		return true;
 	}
+	
+	override void OnShow() {
+	    super.OnShow();
+	    UpdatePlayerName();
+	}
+
 }
