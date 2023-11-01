@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{3F5A3181EE53D67E}Colorful-UI/gui/textures/inGame_menu/SideShade.edds"
+ Author "sdf-1"
+ ChangeDate -1372262561
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "SideShade.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

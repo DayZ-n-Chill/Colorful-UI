@@ -275,7 +275,7 @@ FrameWidgetClass DialogRoot {
        hexactsize 0
        vexactsize 1
        text "#menu_default_desc"
-       font "Colorful-ui/gui/fonts/Ethnocentric20"
+       font "Colorful-ui/gui/fonts/SquareFont20"
        "exact text" 0
        "exact text size" 22
        "size to text h" 1
