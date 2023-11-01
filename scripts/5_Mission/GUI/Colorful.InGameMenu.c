@@ -13,7 +13,8 @@ modded class InGameMenu extends UIScriptedMenu
 	{
 		layoutRoot = GetGame().GetWorkspace().CreateWidgets("Colorful-UI/gui/layouts/colorful.day_z_ingamemenu.layout");
 		
-		m_PlayerNameText            = TextWidget.Cast(layoutRoot.FindAnyWidget("PlayerNameText"));				
+		m_PlayerNameText            = TextWidget.Cast(layoutRoot.FindAnyWidget("PlayerNameText"));
+		m_KillCountText 			= TextWidget.Cast(layoutRoot.FindAnyWidget("KillCountText"));				
 		
 		m_ContinueButton			= layoutRoot.FindAnyWidget( "continuebtn" );
 		m_ExitButton				= layoutRoot.FindAnyWidget( "exitbtn" );
