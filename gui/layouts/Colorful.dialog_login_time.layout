@@ -77,7 +77,7 @@ WindowWidgetClass TextInputDialog_root {
      filter 0
      nocache 1
     }
-    ImageWidgetClass Colorful_Shader {
+    ImageWidgetClass Colorful_Shader0 {
      visible 1
      ignorepointer 1
      keepsafezone 0

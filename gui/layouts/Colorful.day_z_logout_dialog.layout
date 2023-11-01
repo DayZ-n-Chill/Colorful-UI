@@ -29,7 +29,7 @@ WindowWidgetClass LogoutDialogRoot {
    vexactsize 0
    {
     ImageWidgetClass Vignette {
-     visible 1
+     visible 0
      ignorepointer 0
      color 0 0 0 0.7843
      position 0 0
@@ -50,7 +50,7 @@ WindowWidgetClass LogoutDialogRoot {
      nocache 1
     }
     ImageWidgetClass Colorful_Shader {
-     visible 1
+     visible 0
      ignorepointer 1
      keepsafezone 0
      size 1 1
@@ -68,7 +68,7 @@ WindowWidgetClass LogoutDialogRoot {
      stretch 0
     }
     ImageWidgetClass HorizShader {
-     visible 1
+     visible 0
      ignorepointer 1
      keepsafezone 0
      position 0 0
@@ -84,6 +84,25 @@ WindowWidgetClass LogoutDialogRoot {
      "no wrap" 1
      stretch 1
      filter 1
+    }
+    ImageWidgetClass Colorful_Shader0 {
+     visible 1
+     ignorepointer 1
+     keepsafezone 0
+     position 0 0
+     size 1 1
+     halign center_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 0
+     scaled 1
+     imageTexture "{A78E9ED74CB35BD1}Colorful-UI/gui/textures/globals/Colorful.Shading.edds"
+     mode blend
+     "src alpha" 1
+     "no wrap" 1
+     stretch 0
     }
    }
   }

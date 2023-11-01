@@ -72,7 +72,7 @@ FrameWidgetClass DialogRoot {
      nocache 1
     }
     ImageWidgetClass Colorful_Shader {
-     visible 1
+     visible 0
      ignorepointer 1
      keepsafezone 0
      size 1 1
@@ -106,6 +106,25 @@ FrameWidgetClass DialogRoot {
      "no wrap" 1
      stretch 1
      filter 1
+    }
+    ImageWidgetClass Colorful_Shader0 {
+     visible 1
+     ignorepointer 1
+     keepsafezone 0
+     position 0 0
+     size 1 1
+     halign center_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 0
+     scaled 1
+     imageTexture "{A78E9ED74CB35BD1}Colorful-UI/gui/textures/globals/Colorful.Shading.edds"
+     mode blend
+     "src alpha" 1
+     "no wrap" 1
+     stretch 0
     }
    }
   }
