@@ -28,7 +28,7 @@ class CfgMods
 		dir = "Colorful-UI";
 		hideName = 1;
 		hidePicture = 1;
-		name = "DayZ n' Chill's Colorful UI";
+		name = "Colorful UI - The Lab's Edition.  (This code is copyright and only for the Lab Servers.  DMCA will occur if found on your servers.)";
 		credits = "DayZ n' Chill";
 		author = "DayZ n' Chill";
 		authorID = "76561197969255905";
