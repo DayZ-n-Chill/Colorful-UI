@@ -26,7 +26,7 @@ WindowWidgetClass WindowWidget {
    vexactsize 0
    {
     ImageWidgetClass Vignette {
-     visible 1
+     visible 0
      ignorepointer 0
      color 0 0 0 0.7843
      position 0 0
@@ -47,7 +47,7 @@ WindowWidgetClass WindowWidget {
      nocache 1
     }
     ImageWidgetClass Colorful_Shader {
-     visible 1
+     visible 0
      ignorepointer 1
      keepsafezone 0
      size 1 1
@@ -65,7 +65,7 @@ WindowWidgetClass WindowWidget {
      stretch 0
     }
     ImageWidgetClass HorizShader {
-     visible 1
+     visible 0
      ignorepointer 1
      keepsafezone 0
      position 0 0
@@ -111,7 +111,7 @@ WindowWidgetClass WindowWidget {
      vexactsize 1
      style Normal
      text "#menu_warning"
-     font "Colorful-UI/gui/fonts/PersonalServices32"
+     font "Colorful-UI/gui/fonts/PrimaryLab24"
      "text color" 1 1 1 1
      "italic text" 0
      "bold text" 1
@@ -129,7 +129,7 @@ WindowWidgetClass WindowWidget {
      vexactpos 1
      hexactsize 1
      vexactsize 1
-     font "Colorful-UI/gui/fonts/PersonalServices24"
+     font "Colorful-UI/gui/fonts/SecondaryLab38"
      "exact text" 1
      "size to text h" 0
      "size to text v" 0
@@ -149,7 +149,7 @@ WindowWidgetClass WindowWidget {
      style MainMenu
      text "#early_access_alpha_understand"
      text_proportion 0.75
-     font "Colorful-UI/gui/fonts/PersonalServices24"
+     font "Colorful-UI/gui/fonts/PrimaryLab24"
     }
     PanelWidgetClass SeparatorPanel {
      color 0.7569 0.0941 0.0941 1

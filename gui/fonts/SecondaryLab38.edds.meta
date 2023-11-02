@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{12435B2B90807F7C}SecondaryLab38.edds"
+ Author "sdf-1"
+ ChangeDate -1759137951
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "SecondaryLab38.tga"
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}

@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{A244329142CA0A75}PrimaryLab26.edds"
+ Author "sdf-1"
+ ChangeDate -283791519
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "PrimaryLab26.tga"
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}

@@ -14,7 +14,7 @@ FrameWidgetClass main_menu_root {
   ImageWidgetClass ImageBackground {
    visible 1
    position 0 0
-   size 0.16 0.09
+   size 0.18 0.09
    halign center_ref
    valign center_ref
    hexactpos 0
@@ -24,7 +24,7 @@ FrameWidgetClass main_menu_root {
    scaled 1
    fixaspect outside
    image0 ""
-   imageTexture "{BCDEF8AF12180544}Colorful-UI/gui/textures/loading_screens/Colorful-BG-11.edds"
+   imageTexture "{35EECDC167D4D2AA}Colorful-UI/gui/textures/loading_screens/LabLoadScreen_1.edds"
    mode opaque
    "src alpha" 1
    "no wrap" 1
@@ -44,7 +44,7 @@ FrameWidgetClass main_menu_root {
    vexactsize 0
    {
     ImageWidgetClass Vignette {
-     visible 1
+     visible 0
      ignorepointer 0
      color 0 0 0 0.7843
      position 0 0
@@ -65,7 +65,7 @@ FrameWidgetClass main_menu_root {
      nocache 1
     }
     ImageWidgetClass Colorful_Shader {
-     visible 1
+     visible 0
      ignorepointer 1
      keepsafezone 0
      position 0 0
@@ -82,7 +82,7 @@ FrameWidgetClass main_menu_root {
      stretch 1
     }
     ImageWidgetClass HorizShader {
-     visible 1
+     visible 0
      ignorepointer 1
      keepsafezone 0
      position 0 0
@@ -115,14 +115,15 @@ FrameWidgetClass main_menu_root {
      visible 1
      clipchildren 0
      inheritalpha 1
-     size 460 320
+     size 650 400
+     halign center_ref
      hexactpos 0
      vexactpos 0
      hexactsize 1
      vexactsize 1
      fixaspect outside
      image0 ""
-     imageTexture "{5314D820E495219F}Colorful-UI/gui/textures/globals/Colorful.Logo.edds"
+     imageTexture "{BB70E7AC4118E41B}Colorful-UI/gui/textures/globals/Logo.Large.edds"
      mode blend
      "src alpha" 1
      "no wrap" 1
@@ -156,7 +157,7 @@ FrameWidgetClass main_menu_root {
        "no focus" 1
        "next up" "play"
        "next down" "customize_character"
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/PrimaryLab24"
        switch normal
        {
         ImageWidgetClass tutorial_button_image {
@@ -190,7 +191,7 @@ FrameWidgetClass main_menu_root {
        "no focus" 1
        "next up" "play"
        "next down" "customize_character"
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/PrimaryLab24"
        switch normal
        {
         ImageWidgetClass message_button_image {
@@ -227,7 +228,7 @@ FrameWidgetClass main_menu_root {
        "next right" "exit_button"
        "next up" "play"
        "next down" "customize_character"
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/PrimaryLab24"
        switch normal
        {
         ImageWidgetClass settings_button_image {
@@ -261,7 +262,7 @@ FrameWidgetClass main_menu_root {
        "next right" "play"
        "next up" "play"
        "next down" "customize_character"
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/PrimaryLab24"
        switch normal
        {
         ImageWidgetClass exit_button_image {
@@ -356,325 +357,6 @@ FrameWidgetClass main_menu_root {
              scaled 1
              text "PLAY"
              font "Colorful-UI/gui/fonts/PersonalServices32"
-             "exact text" 1
-             "size to text h" 1
-             "size to text v" 0
-             "text halign" right
-             "text valign" center
-            }
-           }
-          }
-         }
-        }
-        ButtonWidgetClass CharacterBtn {
-         visible 1
-         color 0 0 0 0
-         position 0 0
-         size 293 42
-         halign right_ref
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         style Empty
-         "no focus" 0
-         "next left" "news_main"
-         "next right" "news_main"
-         "next up" "choose_server"
-         "next down" "play_video"
-         {
-          PanelWidgetClass CharacterBtn_panel {
-           ignorepointer 1
-           color 0 0 0 0
-           size 1 1
-           halign right_ref
-           valign center_ref
-           hexactpos 0
-           vexactpos 0
-           hexactsize 0
-           vexactsize 0
-           style DayZDefaultPanel
-           {
-            TextWidgetClass CharacterBtn_label {
-             visible 1
-             clipchildren 0
-             ignorepointer 1
-             position 8 0
-             size 1 1
-             halign right_ref
-             valign center_ref
-             hexactpos 1
-             vexactpos 0
-             hexactsize 0
-             vexactsize 0
-             text "Character"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
-             "exact text" 1
-             "size to text h" 1
-             "size to text v" 0
-             "text halign" right
-             "text valign" center
-            }
-           }
-          }
-         }
-        }
-        ButtonWidgetClass customize_character {
-         visible 0
-         color 0 0 0 1
-         position 0 0
-         size 293 49
-         halign center_ref
-         valign bottom_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         style Empty
-         "no focus" 0
-         "next left" ""
-         "next right" ""
-         "next up" "tutorials"
-         "next down" "choose_server"
-         {
-          PanelWidgetClass customize_character_panel {
-           visible 1
-           clipchildren 0
-           ignorepointer 1
-           color 0 0 0 0
-           position 8 0
-           size 1 1
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 0
-           hexactsize 0
-           vexactsize 0
-           style DayZDefaultPanel
-           "no focus" 1
-           {
-            TextWidgetClass customize_character_label {
-             clipchildren 0
-             ignorepointer 1
-             size 1 1
-             halign right_ref
-             valign center_ref
-             hexactpos 0
-             vexactpos 0
-             hexactsize 0
-             vexactsize 0
-             text "Character"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
-             "exact text" 1
-             "size to text h" 1
-             "size to text v" 0
-             "text halign" center
-             "text valign" center
-            }
-           }
-          }
-         }
-        }
-        ButtonWidgetClass choose_server {
-         visible 1
-         color 0 0 0 1
-         size 293 42
-         halign right_ref
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         style Empty
-         "no focus" 0
-         "next left" ""
-         "next right" ""
-         "next up" "customize_character"
-         "next down" "play"
-         {
-          PanelWidgetClass choose_server_panel {
-           ignorepointer 1
-           color 0 0 0 0
-           position 0 0
-           size 1 1
-           hexactpos 0
-           vexactpos 0
-           hexactsize 0
-           vexactsize 0
-           style DayZDefaultPanel
-           {
-            TextWidgetClass choose_server_label {
-             ignorepointer 1
-             position 8 0
-             size 1 1
-             halign right_ref
-             valign center_ref
-             hexactpos 1
-             vexactpos 0
-             hexactsize 0
-             vexactsize 0
-             text "Server Browser"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
-             "exact text" 1
-             "size to text h" 1
-             "size to text v" 0
-             "text halign" right
-             "text valign" center
-            }
-           }
-          }
-         }
-        }
-        ButtonWidgetClass ServerInfoBtn {
-         visible 0
-         color 0 0 0 0
-         position 0 0
-         size 293 42
-         halign right_ref
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         style Empty
-         "no focus" 0
-         "next left" "news_main"
-         "next right" "news_main"
-         "next up" "choose_server"
-         "next down" "play_video"
-         {
-          PanelWidgetClass ServerInfoBtn_panel {
-           visible 1
-           ignorepointer 1
-           color 0 0 0 0
-           size 1 1
-           halign right_ref
-           valign center_ref
-           hexactpos 0
-           vexactpos 0
-           hexactsize 0
-           vexactsize 0
-           style DayZDefaultPanel
-           {
-            TextWidgetClass ServerInfoBtn_label {
-             visible 1
-             clipchildren 0
-             ignorepointer 1
-             position 8 0
-             size 1 1
-             halign right_ref
-             valign center_ref
-             hexactpos 1
-             vexactpos 0
-             hexactsize 0
-             vexactsize 0
-             text "Server Information"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
-             "exact text" 1
-             "size to text h" 1
-             "text halign" right
-             "text valign" center
-            }
-           }
-          }
-         }
-        }
-        ButtonWidgetClass QueueBtn {
-         visible 0
-         color 0 0 0 0
-         position 0 0
-         size 293 42
-         halign right_ref
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         style Empty
-         "no focus" 0
-         "next left" "news_main"
-         "next right" "news_main"
-         "next up" "choose_server"
-         "next down" "play_video"
-         {
-          PanelWidgetClass QueueBtn_panel {
-           ignorepointer 1
-           color 0 0 0 0
-           size 1 1
-           halign right_ref
-           valign center_ref
-           hexactpos 0
-           vexactpos 0
-           hexactsize 0
-           vexactsize 0
-           style DayZDefaultPanel
-           {
-            TextWidgetClass QueueBtn_label {
-             clipchildren 0
-             ignorepointer 1
-             position 8 0
-             size 1 1
-             halign right_ref
-             valign center_ref
-             hexactpos 1
-             vexactpos 0
-             hexactsize 0
-             vexactsize 0
-             text "Priority Queue"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
-             "exact text" 1
-             "size to text h" 1
-             "text halign" right
-             "text valign" center
-            }
-           }
-          }
-         }
-        }
-        ButtonWidgetClass WebsiteBtn {
-         visible 0
-         color 0 0 0 0
-         position 0 0
-         size 293 42
-         halign right_ref
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         style Empty
-         "no focus" 0
-         "next left" "news_main"
-         "next right" "news_main"
-         "next up" "choose_server"
-         "next down" "play_video"
-         {
-          PanelWidgetClass WebsiteBtn_panel {
-           ignorepointer 1
-           color 0 0 0 0
-           size 1 1
-           halign right_ref
-           valign center_ref
-           hexactpos 0
-           vexactpos 0
-           hexactsize 0
-           vexactsize 0
-           style DayZDefaultPanel
-           {
-            TextWidgetClass WebsiteBtn_label {
-             clipchildren 0
-             ignorepointer 1
-             position 8 0
-             size 1 1
-             halign right_ref
-             valign center_ref
-             hexactpos 1
-             vexactpos 0
-             hexactsize 0
-             vexactsize 0
-             text "Website"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -789,7 +471,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 0
              vexactsize 0
              text "Discord"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/PrimaryLab24"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -858,7 +540,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 0
              vexactsize 0
              text "YouTube"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/PrimaryLab24"
              "exact text" 1
              "size to text h" 1
              "text halign" right
@@ -872,293 +554,12 @@ FrameWidgetClass main_menu_root {
       }
      }
     }
-    FrameWidgetClass character_stats_root {
-     visible 0
-     ignorepointer 1
-     position 0 0
-     size 415 305
-     valign bottom_ref
-     hexactpos 0
-     vexactpos 0
-     hexactsize 1
-     vexactsize 1
-     {
-      TextWidgetClass character_stats_textImg {
-       ignorepointer 1
-       keepsafezone 0
-       size 31.2238 79.24
-       halign center_ref
-       hexactpos 1
-       vexactpos 1
-       hexactsize 1
-       vexactsize 1
-       text "SURIVOR STATS"
-       font "Colorful-UI/gui/fonts/PersonalServices48"
-       "exact text" 1
-       "size to text h" 1
-       "size to text v" 1
-       "text valign" center
-      }
-      PanelWidgetClass separator_1 {
-       color 0.7569 0.0941 0.0941 1
-       position 0 75
-       size 1 2
-       halign center_ref
-       hexactpos 1
-       vexactpos 1
-       hexactsize 0
-       vexactsize 1
-       scaled 1
-       priority 10
-       style DayZDefaultPanel
-       "no focus" 0
-      }
-      GridSpacerWidgetClass character_stats_content {
-       ignorepointer 1
-       color 0 0 0 0
-       size 1 230
-       halign center_ref
-       valign bottom_ref
-       hexactpos 1
-       vexactpos 1
-       hexactsize 0
-       vexactsize 1
-       style DayZDefaultPanelSides
-       Padding 4
-       Margin 6
-       Columns 1
-       Rows 5
-       {
-        FrameWidgetClass PlayersKilled {
-         ignorepointer 1
-         position 0 0
-         size 48 24
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         {
-          TextWidgetClass PlayersKilledLabel {
-           visible 1
-           ignorepointer 1
-           position 0 0
-           size 301 40
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 1
-           vexactsize 1
-           scaled 1
-           text "Players Killed"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
-           "exact text" 1
-           "size to text h" 1
-           "text valign" center
-          }
-          TextWidgetClass PlayersKilledValue {
-           ignorepointer 1
-           size 1 1
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           text "0"
-           font "Colorful-UI/gui/fonts/OpenSansV24"
-           "exact text" 1
-           "size to text h" 1
-           "size to text v" 0
-           "text halign" center
-           "text valign" center
-          }
-         }
-        }
-        FrameWidgetClass InfectedKilled {
-         ignorepointer 1
-         position 0 0
-         size 48 24
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         {
-          TextWidgetClass InfectedKilledLabel {
-           ignorepointer 1
-           size 1 1
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           text "Infected Killed"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
-           "exact text" 1
-           "size to text h" 1
-           "text valign" center
-          }
-          TextWidgetClass InfectedKilledValue {
-           ignorepointer 1
-           size 1 1
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           text "0"
-           font "Colorful-UI/gui/fonts/OpenSansV24"
-           "exact text" 1
-           "size to text h" 1
-           "size to text v" 0
-           "text halign" center
-           "text valign" center
-          }
-         }
-        }
-        FrameWidgetClass TimeSurvived {
-         clipchildren 0
-         ignorepointer 1
-         position 0 0
-         size 443 48
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         {
-          TextWidgetClass TimeSurvivedLabel {
-           clipchildren 0
-           inheritalpha 0
-           ignorepointer 1
-           position 0 0
-           size 301 40
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 1
-           vexactsize 1
-           text "Time Alive"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
-           "exact text" 1
-           "size to text h" 1
-           "text valign" center
-          }
-          TextWidgetClass TimeSurvivedValue {
-           ignorepointer 1
-           size 1 1
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           text "0"
-           font "Colorful-UI/gui/fonts/OpenSansV24"
-           "exact text" 1
-           "size to text h" 1
-           "size to text v" 0
-           "text halign" center
-           "text valign" center
-          }
-         }
-        }
-        FrameWidgetClass DistanceTraveled {
-         ignorepointer 1
-         position 0 0
-         size 48 24
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         {
-          TextWidgetClass DistanceTraveledLabel {
-           clipchildren 0
-           ignorepointer 1
-           position 0 0
-           size 1.0486 1
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           text "Distance Traveled"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
-           "exact text" 1
-           "size to text h" 1
-           "size to text v" 0
-           "text valign" center
-          }
-          TextWidgetClass DistanceTraveledValue {
-           ignorepointer 1
-           size 1 1
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           text "0"
-           font "Colorful-UI/gui/fonts/OpenSansV24"
-           "exact text" 1
-           "size to text h" 1
-           "size to text v" 0
-           "text halign" center
-           "text valign" center
-          }
-         }
-        }
-        FrameWidgetClass LongRangeShot {
-         ignorepointer 1
-         position 0 0
-         size 48 24
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         {
-          TextWidgetClass LongRangeShotLabel {
-           ignorepointer 1
-           size 301 40
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 1
-           vexactsize 1
-           text "Longest Player Hit"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
-           "exact text" 1
-           "size to text h" 1
-           "text valign" center
-          }
-          TextWidgetClass LongRangeShotValue {
-           ignorepointer 1
-           size 1 1
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           text "0"
-           font "Colorful-UI/gui/fonts/OpenSansV24"
-           "exact text" 1
-           "size to text h" 1
-           "size to text v" 0
-           "text halign" center
-           "text valign" center
-          }
-         }
-        }
-       }
-      }
-     }
-    }
    }
   }
   ProgressBarWidgetClass LoadingBar {
    ignorepointer 1
    color 0.8118 0.8118 0.8118 1
-   size 1 8
+   size 1 12
    halign center_ref
    valign bottom_ref
    hexactpos 1
@@ -1685,7 +1086,7 @@ FrameWidgetClass main_menu_root {
        priority 1
        style Empty
        "no focus" 0
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/PrimaryLab24"
        {
         ImageWidgetClass prev_character_image {
          inheritalpha 0
@@ -1718,7 +1119,7 @@ FrameWidgetClass main_menu_root {
        priority 1
        style Empty
        "no focus" 0
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/PrimaryLab24"
        {
         ImageWidgetClass next_character_image {
          ignorepointer 1
@@ -1746,12 +1147,615 @@ FrameWidgetClass main_menu_root {
        vexactpos 1
        hexactsize 0
        vexactsize 1
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/PrimaryLab24"
        "exact text" 1
        "size to text h" 1
        "size to text v" 1
        "text halign" center
        "text valign" center
+      }
+     }
+    }
+    FrameWidgetClass character_stats_root {
+     visible 0
+     ignorepointer 1
+     position 0 0
+     size 415 305
+     valign bottom_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 1
+     vexactsize 1
+     {
+      TextWidgetClass character_stats_textImg {
+       ignorepointer 1
+       keepsafezone 0
+       size 31.2238 79.24
+       halign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "SURIVOR STATS"
+       font "Colorful-UI/gui/fonts/PersonalServices48"
+       "exact text" 1
+       "size to text h" 1
+       "size to text v" 1
+       "text valign" center
+      }
+      PanelWidgetClass separator_1 {
+       color 0.7569 0.0941 0.0941 1
+       position 0 75
+       size 1 2
+       halign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       scaled 1
+       priority 10
+       style DayZDefaultPanel
+       "no focus" 0
+      }
+      GridSpacerWidgetClass character_stats_content {
+       ignorepointer 1
+       color 0 0 0 0
+       size 1 230
+       halign center_ref
+       valign bottom_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       style DayZDefaultPanelSides
+       Padding 4
+       Margin 6
+       Columns 1
+       Rows 5
+       {
+        FrameWidgetClass PlayersKilled {
+         ignorepointer 1
+         position 0 0
+         size 48 24
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         {
+          TextWidgetClass PlayersKilledLabel {
+           visible 1
+           ignorepointer 1
+           position 0 0
+           size 301 40
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           scaled 1
+           text "Players Killed"
+           font "Colorful-UI/gui/fonts/PrimaryLab24"
+           "exact text" 1
+           "size to text h" 1
+           "text valign" center
+          }
+          TextWidgetClass PlayersKilledValue {
+           ignorepointer 1
+           size 1 1
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "Colorful-UI/gui/fonts/OpenSansV24"
+           "exact text" 1
+           "size to text h" 1
+           "size to text v" 0
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+        FrameWidgetClass InfectedKilled {
+         ignorepointer 1
+         position 0 0
+         size 48 24
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         {
+          TextWidgetClass InfectedKilledLabel {
+           ignorepointer 1
+           size 1 1
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           text "Infected Killed"
+           font "Colorful-UI/gui/fonts/PrimaryLab24"
+           "exact text" 1
+           "size to text h" 1
+           "text valign" center
+          }
+          TextWidgetClass InfectedKilledValue {
+           ignorepointer 1
+           size 1 1
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "Colorful-UI/gui/fonts/OpenSansV24"
+           "exact text" 1
+           "size to text h" 1
+           "size to text v" 0
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+        FrameWidgetClass TimeSurvived {
+         clipchildren 0
+         ignorepointer 1
+         position 0 0
+         size 443 48
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         {
+          TextWidgetClass TimeSurvivedLabel {
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 1
+           position 0 0
+           size 301 40
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           text "Time Alive"
+           font "Colorful-UI/gui/fonts/PrimaryLab24"
+           "exact text" 1
+           "size to text h" 1
+           "text valign" center
+          }
+          TextWidgetClass TimeSurvivedValue {
+           ignorepointer 1
+           size 1 1
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "Colorful-UI/gui/fonts/OpenSansV24"
+           "exact text" 1
+           "size to text h" 1
+           "size to text v" 0
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+        FrameWidgetClass DistanceTraveled {
+         ignorepointer 1
+         position 0 0
+         size 48 24
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         {
+          TextWidgetClass DistanceTraveledLabel {
+           clipchildren 0
+           ignorepointer 1
+           position 0 0
+           size 1.0486 1
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           text "Distance Traveled"
+           font "Colorful-UI/gui/fonts/PrimaryLab24"
+           "exact text" 1
+           "size to text h" 1
+           "size to text v" 0
+           "text valign" center
+          }
+          TextWidgetClass DistanceTraveledValue {
+           ignorepointer 1
+           size 1 1
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "Colorful-UI/gui/fonts/OpenSansV24"
+           "exact text" 1
+           "size to text h" 1
+           "size to text v" 0
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+        FrameWidgetClass LongRangeShot {
+         ignorepointer 1
+         position 0 0
+         size 48 24
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         {
+          TextWidgetClass LongRangeShotLabel {
+           ignorepointer 1
+           size 301 40
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           text "Longest Player Hit"
+           font "Colorful-UI/gui/fonts/PrimaryLab24"
+           "exact text" 1
+           "size to text h" 1
+           "text valign" center
+          }
+          TextWidgetClass LongRangeShotValue {
+           ignorepointer 1
+           size 1 1
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "Colorful-UI/gui/fonts/OpenSansV24"
+           "exact text" 1
+           "size to text h" 1
+           "size to text v" 0
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+    ButtonWidgetClass CharacterBtn {
+     visible 0
+     color 0 0 0 0
+     position 0 0
+     size 293 42
+     halign right_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     style Empty
+     "no focus" 0
+     "next left" "news_main"
+     "next right" "news_main"
+     "next up" "choose_server"
+     "next down" "play_video"
+     {
+      PanelWidgetClass CharacterBtn_panel {
+       visible 0
+       ignorepointer 1
+       color 0 0 0 0
+       size 1 1
+       halign right_ref
+       valign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style DayZDefaultPanel
+       {
+        TextWidgetClass CharacterBtn_label {
+         visible 0
+         clipchildren 0
+         ignorepointer 1
+         position 8 0
+         size 1 1
+         halign right_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "Character"
+         font "Colorful-UI/gui/fonts/PrimaryLab24"
+         "exact text" 1
+         "size to text h" 1
+         "size to text v" 0
+         "text halign" right
+         "text valign" center
+        }
+       }
+      }
+     }
+    }
+    ButtonWidgetClass customize_character {
+     visible 0
+     color 0 0 0 1
+     position 0 0
+     size 293 49
+     halign center_ref
+     valign bottom_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     style Empty
+     "no focus" 0
+     "next left" ""
+     "next right" ""
+     "next up" "tutorials"
+     "next down" "choose_server"
+     {
+      PanelWidgetClass customize_character_panel {
+       visible 1
+       clipchildren 0
+       ignorepointer 1
+       color 0 0 0 0
+       position 8 0
+       size 1 1
+       halign right_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style DayZDefaultPanel
+       "no focus" 1
+       {
+        TextWidgetClass customize_character_label {
+         clipchildren 0
+         ignorepointer 1
+         size 1 1
+         halign right_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "Character"
+         font "Colorful-UI/gui/fonts/PrimaryLab24"
+         "exact text" 1
+         "size to text h" 1
+         "size to text v" 0
+         "text halign" center
+         "text valign" center
+        }
+       }
+      }
+     }
+    }
+    ButtonWidgetClass choose_server {
+     visible 0
+     color 0 0 0 1
+     size 293 42
+     halign right_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     style Empty
+     "no focus" 0
+     "next left" ""
+     "next right" ""
+     "next up" "customize_character"
+     "next down" "play"
+     {
+      PanelWidgetClass choose_server_panel {
+       visible 0
+       ignorepointer 1
+       color 0 0 0 0
+       position 0 0
+       size 1 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style DayZDefaultPanel
+       {
+        TextWidgetClass choose_server_label {
+         visible 0
+         ignorepointer 1
+         position 8 0
+         size 1 1
+         halign right_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "Server Browser"
+         font "Colorful-UI/gui/fonts/PrimaryLab24"
+         "exact text" 1
+         "size to text h" 1
+         "size to text v" 0
+         "text halign" right
+         "text valign" center
+        }
+       }
+      }
+     }
+    }
+    ButtonWidgetClass ServerInfoBtn {
+     visible 0
+     color 0 0 0 0
+     position 0 0
+     size 293 42
+     halign right_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     style Empty
+     "no focus" 0
+     "next left" "news_main"
+     "next right" "news_main"
+     "next up" "choose_server"
+     "next down" "play_video"
+     {
+      PanelWidgetClass ServerInfoBtn_panel {
+       visible 1
+       ignorepointer 1
+       color 0 0 0 0
+       size 1 1
+       halign right_ref
+       valign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style DayZDefaultPanel
+       {
+        TextWidgetClass ServerInfoBtn_label {
+         visible 1
+         clipchildren 0
+         ignorepointer 1
+         position 8 0
+         size 1 1
+         halign right_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "Server Information"
+         font "Colorful-UI/gui/fonts/PrimaryLab24"
+         "exact text" 1
+         "size to text h" 1
+         "text halign" right
+         "text valign" center
+        }
+       }
+      }
+     }
+    }
+    ButtonWidgetClass QueueBtn {
+     visible 0
+     color 0 0 0 0
+     position 0 0
+     size 293 42
+     halign right_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     style Empty
+     "no focus" 0
+     "next left" "news_main"
+     "next right" "news_main"
+     "next up" "choose_server"
+     "next down" "play_video"
+     {
+      PanelWidgetClass QueueBtn_panel {
+       ignorepointer 1
+       color 0 0 0 0
+       size 1 1
+       halign right_ref
+       valign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style DayZDefaultPanel
+       {
+        TextWidgetClass QueueBtn_label {
+         clipchildren 0
+         ignorepointer 1
+         position 8 0
+         size 1 1
+         halign right_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "Priority Queue"
+         font "Colorful-UI/gui/fonts/PrimaryLab24"
+         "exact text" 1
+         "size to text h" 1
+         "text halign" right
+         "text valign" center
+        }
+       }
+      }
+     }
+    }
+    ButtonWidgetClass WebsiteBtn {
+     visible 0
+     color 0 0 0 0
+     position 0 0
+     size 293 42
+     halign right_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     style Empty
+     "no focus" 0
+     "next left" "news_main"
+     "next right" "news_main"
+     "next up" "choose_server"
+     "next down" "play_video"
+     {
+      PanelWidgetClass WebsiteBtn_panel {
+       ignorepointer 1
+       color 0 0 0 0
+       size 1 1
+       halign right_ref
+       valign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style DayZDefaultPanel
+       {
+        TextWidgetClass WebsiteBtn_label {
+         clipchildren 0
+         ignorepointer 1
+         position 8 0
+         size 1 1
+         halign right_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "Website"
+         font "Colorful-UI/gui/fonts/PrimaryLab24"
+         "exact text" 1
+         "size to text h" 1
+         "size to text v" 0
+         "text halign" right
+         "text valign" center
+        }
+       }
       }
      }
     }

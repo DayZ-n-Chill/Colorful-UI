@@ -7,7 +7,7 @@ modded class LoginQueueBase extends UIScriptedMenu
 
 	override Widget Init()
 	{		
-		layoutRoot 			   = GetGame().GetWorkspace().CreateWidgets("Colorful-UI/gui/layouts/Colorful.dialog_queue_position.layout");
+		layoutRoot 			   = GetGame().GetWorkspace().CreateWidgets("Colorful-UI/gui/layouts/lab.dialog_queue_position.layout");
 		// Print("Colorful Login Queue Loaded!");	
 		m_txtPosition		   = TextWidget.Cast(layoutRoot.FindAnyWidget("txtPosition"));
 		m_txtNote 			   = TextWidget.Cast(layoutRoot.FindAnyWidget("txtNote"));
@@ -32,7 +32,7 @@ modded class LoginTimeBase extends UIScriptedMenu
 	
 	override Widget Init()
 	{
-		layoutRoot 			   = GetGame().GetWorkspace().CreateWidgets("Colorful-UI/gui/layouts/Colorful.dialog_login_time.layout");
+		layoutRoot 			   = GetGame().GetWorkspace().CreateWidgets("Colorful-UI/gui/layouts/lab.dialog_login_time.layout");
 		// Print("Colorful Login Time Loaded!");	
 		m_TxtHdr			   = TextWidget.Cast(layoutRoot.FindAnyWidget("TxtHdr"));
 		m_txtLabel 			   = TextWidget.Cast(layoutRoot.FindAnyWidget("txtLabel"));
@@ -96,7 +96,7 @@ modded class LoadingScreen
 	{
 		m_DayZGame   = game;		
 		
-		m_WidgetRoot = game.GetLoadingWorkspace().CreateWidgets("Colorful-UI/gui/layouts/Colorful.loading.layout");
+		m_WidgetRoot = game.GetLoadingWorkspace().CreateWidgets("Colorful-UI/gui/layouts/lab.loading.layout");
 		// Print("Colorful Loading Screen Loaded!");	
 		Class.CastTo(m_ProTip, m_WidgetRoot.FindAnyWidget("ProTip"));
 		Class.CastTo(m_shader, m_WidgetRoot.FindAnyWidget("Colorful_Shader"));
