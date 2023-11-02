@@ -4,7 +4,7 @@ modded class CharacterCreationMenu extends UIScriptedMenu
 	override Widget Init()
 	{
 
-		layoutRoot = GetGame().GetWorkspace().CreateWidgets( "Colorful-UI/gui/layouts/new_ui/character_creation/pc/Colorful.character_creation.layout" );
+		layoutRoot = GetGame().GetWorkspace().CreateWidgets( "Colorful-UI/gui/layouts/new_ui/character_creation/pc/lab.character_creation.layout" );
 
 		m_CharacterRotationFrame			= layoutRoot.FindAnyWidget( "character_rotation_frame" );
 		m_Apply								= layoutRoot.FindAnyWidget( "apply" );

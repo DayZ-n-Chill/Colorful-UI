@@ -5,7 +5,7 @@ modded class WarningMenuBase extends UIScriptedMenu
 
 	override Widget Init()
 	{
-		layoutRoot = GetGame().GetWorkspace().CreateWidgets("Colorful_UI/gui/layouts/Colorful.day_z_dropped_items.layout");
+		layoutRoot = GetGame().GetWorkspace().CreateWidgets("Colorful_UI/gui/layouts/lab.day_z_dropped_items.layout");
 		string text = GetText();
 		if(text)
 		{

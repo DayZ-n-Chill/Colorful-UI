@@ -12,7 +12,7 @@ modded class LogoutMenu extends UIScriptedMenu
 
 	override Widget Init()
 	{
-		layoutRoot = GetGame().GetWorkspace().CreateWidgets("Colorful-ui/gui/layouts/colorful.day_z_logout_dialog.layout");
+		layoutRoot = GetGame().GetWorkspace().CreateWidgets("Colorful-ui/gui/layouts/lab.day_z_logout_dialog.layout");
 	
 		// Custom Buttons  
 		// NOTE: THe "NameBtn" is the name of the widget in the layout file.

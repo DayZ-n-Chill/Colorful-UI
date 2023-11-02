@@ -1,4 +1,4 @@
-class colorfulConfigureDialog extends UIScriptedMenu
+class colorfulExitDialog extends UIScriptedMenu
 {
 	protected Widget				m_Separator;
 	protected Widget		 		m_bYes;
@@ -6,27 +6,22 @@ class colorfulConfigureDialog extends UIScriptedMenu
 	protected Widget 				m_LastFocusedButton;
 	protected Widget 				m_Text;
 	protected Widget 				m_Caption;
-	protected ButtonWidget			m_Reset; //undo
-	protected ref GameOptions		m_Options;
 	private	Widget m_shader
 
 	override Widget Init()
 	{
-		m_Options		= new GameOptions();
-
-		layoutRoot = GetGame().GetWorkspace().CreateWidgets("Colorful-UI/gui/layouts/new_ui/dialogs/Colorful.Configure.dialog.layout" );
+		layoutRoot = GetGame().GetWorkspace().CreateWidgets("Colorful-UI/gui/layouts/new_ui/dialogs/lab.Exit.dialog.layout" );
 		
 		m_Separator					= layoutRoot.FindAnyWidget( "SeparatorPanel" );
 		m_bYes						= layoutRoot.FindAnyWidget( "bYes" );
 		m_bNo						= layoutRoot.FindAnyWidget( "bNo" );
 		m_Text						= layoutRoot.FindAnyWidget( "Text" );
 		m_Caption					= layoutRoot.FindAnyWidget( "Caption" );
-		m_Reset						= ButtonWidget.Cast(layoutRoot.FindAnyWidget("reset"));
 		
 		m_Separator.SetColor( colorScheme.SeparatorColor() );
-		
 		Class.CastTo(m_shader, layoutRoot.FindAnyWidget("Colorful_Shader"));
 		m_shader.SetColor(colorScheme.ShaderColor());
+		
 		m_LastFocusedButton = 		m_bYes;
 		
 		return layoutRoot;
@@ -38,12 +33,8 @@ class colorfulConfigureDialog extends UIScriptedMenu
 		{
 			if( w == m_bYes )
 			{
-				// TODO: For the sake of getting this out to the public
-				// We will make these warning diaolgs work only as back buttons. 
-				// As I dont want to fix all this at the moment. 
-				// Will do it in optimization stages after 1.0
-				m_LastFocusedButton = m_Reset;
-				ResetCurrentTab();
+				m_LastFocusedButton = m_bYes;
+				Exit();
 				return true;
 			}
 			else if ( w == m_bNo )
@@ -54,17 +45,6 @@ class colorfulConfigureDialog extends UIScriptedMenu
 			}
 		}
 		return false;
-	}
-
-	void ResetCurrentTab()
-	{
-		if ( m_Options.IsChanged() )
-		{
-			m_Options.Revert();
-		}
-
-		// TODO:  Wrap up the actual buttons reset later. 
-
 	}
 	
 	override bool OnMouseEnter( Widget w, int x, int y )
@@ -143,7 +123,7 @@ class colorfulConfigureDialog extends UIScriptedMenu
 			return;
 
 		int color_pnl = UIColor.Transparent();
-		int color_lbl = colorScheme.PrimaryText();
+		int color_lbl = UIColor.White();
 
 		ButtonSetColor(w, color_pnl);
 		ButtonSetTextColor(w, color_lbl);
@@ -186,34 +166,4 @@ class colorfulConfigureDialog extends UIScriptedMenu
 			text2.SetColor( color );
 		}
 	}
-
-	//resets it all
-	// void Reset()
-	// {
-	// 	m_Options.Revert();
-	// 	m_GameTab.Revert();
-	// 	m_SoundsTab.Revert();
-	// 	m_ControlsTab.Revert();
-	// 	#ifndef PLATFORM_XBOX
-	// 	m_VideoTab.Revert();
-	// 	#endif
-		
-	// 	if ( m_Options.IsChanged() )
-	// 		m_Options.Revert();
-		
-	// 	if (GetGame().GetInput().IsEnabledMouseAndKeyboard())
-	// 	{
-	// 		m_Apply.SetFlags( WidgetFlags.IGNOREPOINTER );
-	// 		ColorDisable( m_Apply );
-	// 		m_Reset.SetFlags( WidgetFlags.IGNOREPOINTER );
-	// 		ColorDisable( m_Reset );
-	// 	}
-	// 	else
-	// 	{
-	// 		layoutRoot.FindAnyWidget( "Apply" ).Show( false );
-	// 		layoutRoot.FindAnyWidget( "Reset" ).Show( false );
-	// 	}
-		
-	// 	m_CanApplyOrReset = false;
-	// }
 };

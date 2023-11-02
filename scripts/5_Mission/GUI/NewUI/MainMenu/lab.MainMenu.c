@@ -18,7 +18,7 @@ modded class MainMenu extends UIScriptedMenu
 	override Widget Init()
 	{
 		// Load the layout file
-		layoutRoot					= GetGame().GetWorkspace().CreateWidgets( "Colorful-UI/gui/layouts/new_ui/colorful.main_menu.layout" );
+		layoutRoot					= GetGame().GetWorkspace().CreateWidgets( "Colorful-UI/gui/layouts/new_ui/lab.main_menu.layout" );
 
 		// Custom Buttons  
 		// NOTE: THe "NameBtn" is the name of the widget in the layout file.
