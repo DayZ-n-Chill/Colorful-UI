@@ -75,7 +75,7 @@ FrameWidgetClass main_menu_root {
      hexactsize 0
      vexactsize 0
      scaled 1
-     imageTexture "{4BFC093013F74D19}Colorful-UI/gui/textures/globals/UI.Colorful.Shader.edds"
+     imageTexture "{A78E9ED74CB35BD1}Colorful-UI/gui/textures/globals/Colorful.Shading.edds"
      mode blend
      "src alpha" 1
      "no wrap" 1
@@ -100,9 +100,23 @@ FrameWidgetClass main_menu_root {
     }
    }
   }
-  FrameWidgetClass SafeZone {
+  ProgressBarWidgetClass LoadingBar {
    ignorepointer 1
-   position 0 0.90984
+   color 0.8118 0.8118 0.8118 1
+   size 1 8
+   halign center_ref
+   valign bottom_ref
+   hexactpos 1
+   vexactpos 1
+   hexactsize 0
+   vexactsize 1
+   style Stamina
+   current 100
+  }
+  FrameWidgetClass SafeZone {
+   visible 1
+   ignorepointer 1
+   position 0 0
    size 0.9 0.9
    halign center_ref
    valign center_ref
@@ -131,90 +145,28 @@ FrameWidgetClass main_menu_root {
      filter 1
      nocache 0
     }
-    FrameWidgetClass settings_panel_root {
+    GridSpacerWidgetClass OtherLinks {
      visible 1
      ignorepointer 1
-     size 260 40
-     halign right_ref
+     size 261 36
      hexactpos 0
      vexactpos 0
      hexactsize 1
      vexactsize 1
      priority 3
+     Padding 15
+     Margin 0
+     "Size To Content H" 1
+     "Size To Content V" 1
+     Columns 4
+     Rows 1
      {
-      ButtonWidgetClass tutorial_button {
-       visible 1
-       color 1 1 1 0
-       position 0.75 0
-       size 37 37
-       halign right_ref
-       valign center_ref
-       hexactpos 0
-       vexactpos 1
-       hexactsize 1
-       vexactsize 1
-       style Empty
-       "no focus" 1
-       "next up" "play"
-       "next down" "customize_character"
-       font "Colorful-UI/gui/fonts/PrimaryLab24"
-       switch normal
-       {
-        ImageWidgetClass tutorial_button_image {
-         ignorepointer 1
-         size 1 1
-         halign center_ref
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 0
-         vexactsize 0
-         image0 "set:dayz_gui image:tutorials"
-         mode blend
-         "src alpha" 1
-        }
-       }
-      }
-      ButtonWidgetClass message_button {
-       visible 1
-       color 1 1 1 0
-       position 0.5 0
-       size 45 33
-       halign right_ref
-       valign center_ref
-       hexactpos 0
-       vexactpos 1
-       hexactsize 1
-       vexactsize 1
-       fixaspect inside
-       style Empty
-       "no focus" 1
-       "next up" "play"
-       "next down" "customize_character"
-       font "Colorful-UI/gui/fonts/PrimaryLab24"
-       switch normal
-       {
-        ImageWidgetClass message_button_image {
-         ignorepointer 1
-         size 1 1
-         halign center_ref
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 0
-         vexactsize 0
-         image0 "set:dayz_gui image:credits"
-         mode blend
-         "src alpha" 1
-        }
-       }
-      }
       ButtonWidgetClass settings_button {
        visible 1
        keepsafezone 1
        color 1 1 1 0
        position 0.25 0
-       size 37 37
+       size 24 24
        halign right_ref
        valign center_ref
        hexactpos 0
@@ -228,7 +180,7 @@ FrameWidgetClass main_menu_root {
        "next right" "exit_button"
        "next up" "play"
        "next down" "customize_character"
-       font "Colorful-UI/gui/fonts/PrimaryLab24"
+       font "Colorful-UI/gui/fonts/Ethnocentric20"
        switch normal
        {
         ImageWidgetClass settings_button_image {
@@ -240,15 +192,93 @@ FrameWidgetClass main_menu_root {
          vexactpos 1
          hexactsize 0
          vexactsize 0
-         image0 "set:dayz_gui image:settings"
+         image0 ""
+         imageTexture "{02A70B3C0187FE2F}Colorful-UI/gui/textures/globals/Icon.Settings.edds"
          mode blend
          "src alpha" 1
+         "no wrap" 1
+         stretch 1
         }
        }
       }
-      ButtonWidgetClass exit_button {
+      ButtonWidgetClass customize_character {
+       visible 1
        color 1 1 1 0
-       size 37 37
+       position 0.75 0
+       size 30 24
+       halign right_ref
+       valign center_ref
+       hexactpos 0
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       style Empty
+       "no focus" 1
+       "next up" "play"
+       "next down" "customize_character"
+       font "Colorful-UI/gui/fonts/Ethnocentric20"
+       switch normal
+       {
+        ImageWidgetClass customize_character_image {
+         visible 1
+         ignorepointer 1
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         image0 ""
+         imageTexture "{4D6D646CD13DF5E9}Colorful-UI/gui/textures/globals/Icon.Character.edds"
+         mode blend
+         "src alpha" 1
+         "no wrap" 1
+         stretch 1
+        }
+       }
+      }
+      ButtonWidgetClass Website_Button {
+       visible 1
+       color 1 1 1 0
+       position 0.5 0
+       size 24 24
+       halign right_ref
+       valign center_ref
+       hexactpos 0
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       fixaspect inside
+       style Empty
+       "no focus" 1
+       "next up" "play"
+       "next down" "customize_character"
+       font "Colorful-UI/gui/fonts/Ethnocentric20"
+       switch normal
+       {
+        ImageWidgetClass Website_Button_image {
+         visible 1
+         ignorepointer 1
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         image0 ""
+         imageTexture "{4D11E2DEFD7D44FC}Colorful-UI/gui/textures/globals/Icon.Website.edds"
+         mode blend
+         "src alpha" 1
+         "no wrap" 1
+         stretch 1
+        }
+       }
+      }
+      ButtonWidgetClass Discord_button {
+       color 1 1 1 0
+       size 30 24
        halign right_ref
        valign center_ref
        hexactpos 0
@@ -262,7 +292,106 @@ FrameWidgetClass main_menu_root {
        "next right" "play"
        "next up" "play"
        "next down" "customize_character"
-       font "Colorful-UI/gui/fonts/PrimaryLab24"
+       font "Colorful-UI/gui/fonts/Ethnocentric20"
+       switch normal
+       {
+        ImageWidgetClass Discord_button_image {
+         ignorepointer 1
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         image0 ""
+         imageTexture "{1FABC69C16F6CBFA}Colorful-UI/gui/textures/globals/Icon.Discord.edds"
+         mode blend
+         "src alpha" 1
+         "no wrap" 1
+         stretch 1
+        }
+       }
+      }
+     }
+    }
+    GridSpacerWidgetClass settings_panel_root {
+     visible 1
+     ignorepointer 1
+     size 260 40
+     halign right_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 1
+     vexactsize 1
+     priority 3
+     Padding 15
+     Margin 0
+     "Size To Content H" 1
+     "Size To Content V" 1
+     content_halign center
+     content_valign center
+     Columns 2
+     Rows 1
+     {
+      ButtonWidgetClass PrioQ_button {
+       visible 1
+       keepsafezone 1
+       color 1 1 1 0
+       position 0.25 0
+       size 138 42
+       halign right_ref
+       valign center_ref
+       hexactpos 0
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       fixaspect inside
+       style Empty
+       "no focus" 0
+       "next left" "news_main"
+       "next right" "exit_button"
+       "next up" "play"
+       "next down" "customize_character"
+       font "Colorful-UI/gui/fonts/Ethnocentric20"
+       switch normal
+       {
+        ImageWidgetClass PrioQ_button_image {
+         clipchildren 0
+         ignorepointer 1
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         image0 ""
+         imageTexture "{7C5C3EB621A854F6}Colorful-UI/gui/textures/main_menu/Store.Btn.edds"
+         mode blend
+         "src alpha" 1
+         "no wrap" 1
+         stretch 1
+        }
+       }
+      }
+      ButtonWidgetClass exit_button {
+       color 1 1 1 0
+       size 24 24
+       halign right_ref
+       valign center_ref
+       hexactpos 0
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       fixaspect inside
+       style Empty
+       "no focus" 0
+       "next left" "settings_button"
+       "next right" "play"
+       "next up" "play"
+       "next down" "customize_character"
+       font "Colorful-UI/gui/fonts/Ethnocentric20"
        switch normal
        {
         ImageWidgetClass exit_button_image {
@@ -274,1490 +403,381 @@ FrameWidgetClass main_menu_root {
          vexactpos 1
          hexactsize 0
          vexactsize 0
-         image0 "set:dayz_gui image:exit"
+         image0 ""
+         imageTexture "{B3900CC7DCE306D7}Colorful-UI/gui/textures/globals/Icon.Logout.edds"
          mode blend
          "src alpha" 1
+         "no wrap" 1
+         stretch 1
         }
        }
       }
      }
     }
-    GridSpacerWidgetClass ActionItems {
-     visible 1
+    FrameWidgetClass ServerSelect {
      ignorepointer 1
-     keepsafezone 1
-     size 300 618.29999
-     halign right_ref
+     position 0 54
+     size 350 120
+     halign center_ref
      valign bottom_ref
-     hexactpos 0
-     vexactpos 0
+     hexactpos 1
+     vexactpos 1
      hexactsize 1
      vexactsize 1
-     "Size To Content V" 1
-     Columns 1
      {
-      GridSpacerWidgetClass "Btn Area" {
-       ignorepointer 1
-       position 0 0
-       size 0 0
-       halign right_ref
-       valign bottom_ref
-       hexactpos 0
-       vexactpos 0
-       hexactsize 0
-       vexactsize 0
-       "Size To Content H" 1
-       "Size To Content V" 1
-       content_halign right
-       Columns 1
-       Rows 5
-       {
-        ButtonWidgetClass play {
-         color 0 0 0 0
-         position 0 0
-         size 293 49
-         halign right_ref
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         style Empty
-         "no focus" 0
-         "next left" "news_main"
-         "next right" "news_main"
-         "next up" "choose_server"
-         "next down" "play_video"
-         text_halign right
-         {
-          PanelWidgetClass play_panel {
-           ignorepointer 1
-           color 0 0 0 0
-           position 0 0
-           size 1 1
-           halign right_ref
-           valign center_ref
-           hexactpos 0
-           vexactpos 0
-           hexactsize 0
-           vexactsize 0
-           style DayZDefaultPanel
-           {
-            TextWidgetClass play_label {
-             clipchildren 0
-             ignorepointer 1
-             position 8 0
-             size 1 1
-             halign right_ref
-             valign center_ref
-             hexactpos 1
-             vexactpos 0
-             hexactsize 0
-             vexactsize 0
-             scaled 1
-             text "PLAY"
-             font "Colorful-UI/gui/fonts/PersonalServices32"
-             "exact text" 1
-             "size to text h" 1
-             "size to text v" 0
-             "text halign" right
-             "text valign" center
-            }
-           }
-          }
-         }
-        }
-       }
-      }
-      FrameWidgetClass Spacer {
-       ignorepointer 1
-       position 174.92999 0.3113
-       size 48 10
-       hexactpos 1
-       vexactpos 1
-       hexactsize 1
-       vexactsize 1
-      }
-      PanelWidgetClass separator_2 {
+      ButtonWidgetClass USMainActive {
        visible 1
-       ignorepointer 1
-       color 0.7843 0 0 1
-       size 293 2
+       color 0 0 0 0
+       size 312 131
+       halign center_ref
        valign center_ref
        hexactpos 1
        vexactpos 1
        hexactsize 1
        vexactsize 1
-       style rover_sim_colorable
-      }
-      FrameWidgetClass Spacer {
-       ignorepointer 1
-       position 174.92999 0.3113
-       size 48 9
-       hexactpos 1
-       vexactpos 1
-       hexactsize 1
-       vexactsize 1
-      }
-      GridSpacerWidgetClass Socials {
-       ignorepointer 1
-       position 0 0
-       size 0 0
-       halign right_ref
-       valign bottom_ref
-       hexactpos 0
-       vexactpos 0
-       hexactsize 1
-       vexactsize 1
-       "Size To Content H" 1
-       "Size To Content V" 1
-       Columns 1
-       Rows 5
-       {
-        ButtonWidgetClass DiscordBtn {
-         color 0 0 0 0
-         size 293 39
-         halign right_ref
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         style Empty
-         "no focus" 0
-         "next left" "news_main"
-         "next right" "news_main"
-         "next up" "choose_server"
-         "next down" "play_video"
-         {
-          PanelWidgetClass DiscordBtn_panel {
-           ignorepointer 1
-           color 0 0 0 0
-           size 293 39
-           halign right_ref
-           valign center_ref
-           hexactpos 0
-           vexactpos 0
-           hexactsize 1
-           vexactsize 1
-           style DayZDefaultPanel
-           {
-            ImageWidgetClass DiscordBtn_img {
-             clipchildren 0
-             ignorepointer 1
-             size 47 39
-             halign right_ref
-             valign center_ref
-             hexactpos 1
-             vexactpos 1
-             hexactsize 1
-             vexactsize 1
-             imageTexture "{4E98404B3EE57BD9}Colorful-UI/gui/textures/main_menu/Colorful.Discord.edds"
-             mode blend
-             "src alpha" 1
-             "no wrap" 1
-             stretch 1
-             filter 0
-            }
-            TextWidgetClass DiscordBtn_label {
-             clipchildren 0
-             ignorepointer 1
-             position 60 0
-             size 1 1
-             halign right_ref
-             valign center_ref
-             hexactpos 1
-             vexactpos 1
-             hexactsize 0
-             vexactsize 0
-             text "Discord"
-             font "Colorful-UI/gui/fonts/PrimaryLab24"
-             "exact text" 1
-             "size to text h" 1
-             "size to text v" 0
-             "text halign" right
-             "text valign" center
-            }
-           }
-          }
-         }
-        }
-        ButtonWidgetClass YoutubeBtn {
-         visible 1
-         color 0 0 0 0
-         size 293 39
-         halign right_ref
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         style Empty
-         "no focus" 0
-         "next left" "news_main"
-         "next right" "news_main"
-         "next up" "choose_server"
-         "next down" "play_video"
-         {
-          PanelWidgetClass YoutubeBtn_panel {
-           ignorepointer 1
-           color 0 0 0 0
-           size 293 39
-           halign right_ref
-           valign center_ref
-           hexactpos 0
-           vexactpos 0
-           hexactsize 1
-           vexactsize 1
-           style DayZDefaultPanel
-           {
-            ImageWidgetClass YoutubeBtn_img {
-             clipchildren 0
-             ignorepointer 1
-             size 47 39
-             halign right_ref
-             valign center_ref
-             hexactpos 1
-             vexactpos 1
-             hexactsize 1
-             vexactsize 1
-             imageTexture "{FDBC9A6B3BB8B821}Colorful-UI/gui/textures/main_menu/Colorful.Youtube.edds"
-             mode blend
-             "src alpha" 1
-             "no wrap" 1
-             stretch 1
-             filter 0
-            }
-            TextWidgetClass YoutubeBtn_label {
-             clipchildren 0
-             ignorepointer 1
-             position 60 0
-             size 1 1
-             halign right_ref
-             valign center_ref
-             hexactpos 1
-             vexactpos 1
-             hexactsize 0
-             vexactsize 0
-             text "YouTube"
-             font "Colorful-UI/gui/fonts/PrimaryLab24"
-             "exact text" 1
-             "size to text h" 1
-             "text halign" right
-             "text valign" center
-            }
-           }
-          }
-         }
-        }
-       }
-      }
-     }
-    }
-   }
-  }
-  ProgressBarWidgetClass LoadingBar {
-   ignorepointer 1
-   color 0.8118 0.8118 0.8118 1
-   size 1 12
-   halign center_ref
-   valign bottom_ref
-   hexactpos 1
-   vexactpos 1
-   hexactsize 0
-   vexactsize 1
-   style Stamina
-   current 100
-  }
-  FrameWidgetClass "Hidden Stuff" {
-   visible 0
-   ignorepointer 1
-   size 1 1
-   halign center_ref
-   valign center_ref
-   hexactpos 1
-   vexactpos 1
-   hexactsize 0
-   vexactsize 0
-   {
-    FrameWidgetClass character_rotation_frame {
-     visible 0
-     size 0.3 1
-     halign center_ref
-     valign center_ref
-     hexactpos 1
-     vexactpos 1
-     hexactsize 0
-     vexactsize 0
-     priority 2
-    }
-    FrameWidgetClass ModsDetailed {
-     visible 0
-     clipchildren 0
-     ignorepointer 1
-     position 100 340
-     size 540 620
-     hexactpos 1
-     vexactpos 1
-     hexactsize 1
-     vexactsize 1
-     priority 5
-    }
-    PanelWidgetClass character_name_xbox_background {
-     visible 0
-     color 0 0 0 0.549
-     position 100 80
-     size 400 38
-     halign right_ref
-     hexactpos 1
-     vexactpos 1
-     hexactsize 1
-     vexactsize 1
-     priority 5
-     style rover_sim_colorable
-     {
-      TextWidgetClass character_name_xbox {
-       visible 0
-       inheritalpha 0
-       ignorepointer 1
-       position 0 0
-       size 1 1
-       halign right_ref
-       hexactpos 1
-       vexactpos 1
-       hexactsize 0
-       vexactsize 0
-       priority 3
-       text "#STR_main_menu_root_character_name_xbox_background_character_name_xbox0"
-       font "gui/fonts/sdf_MetronLight24"
-       "exact text" 0
-       text_proportion 0.55
-       "text halign" center
-       "text valign" center
-      }
-     }
-    }
-    MultilineTextWidgetClass ModdedWarning {
-     visible 0
-     inheritalpha 1
-     position 93.3703 376.60602
-     size 540 30
-     hexactpos 1
-     vexactpos 1
-     hexactsize 1
-     vexactsize 1
-     fixaspect outside
-     priority 5
-     text "#str_modded_version_warning0"
-     font "gui/fonts/sdf_MetronLight24"
-     "exact text" 1
-     "exact text size" 20
-     "size to text h" 1
-     "size to text v" 1
-     wrap 1
-    }
-    WrapSpacerWidgetClass ModsSimple {
-     visible 0
-     clipchildren 0
-     ignorepointer 1
-     position 99.9999 0.05
-     size 730 56
-     halign right_ref
-     valign bottom_ref
-     hexactpos 1
-     vexactpos 0
-     hexactsize 1
-     vexactsize 1
-     priority 5
-     style Empty
-     Padding 0
-     Margin 0
-     "Size To Content H" 1
-     content_halign right
-     content_valign bottom
-    }
-    PanelWidgetClass last_server_info {
-     visible 0
-     ignorepointer 0
-     color 0.0078 0.0078 0.0078 0.0392
-     position 500 130
-     size 350 90
-     halign right_ref
-     valign bottom_ref
-     hexactpos 1
-     vexactpos 1
-     hexactsize 1
-     vexactsize 1
-     priority 3
-     style DayZDefaultPanel
-     "no focus" 1
-     {
-      PanelWidgetClass PanelWidget0 {
-       visible 0
-       inheritalpha 1
-       ignorepointer 0
-       position 0 0
-       size 1 20
-       hexactpos 1
-       vexactpos 1
-       hexactsize 0
-       vexactsize 1
-       {
-        TextWidgetClass last_server_info_label {
-         visible 0
-         clipchildren 1
-         inheritalpha 1
-         size 1 0.8
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 0
-         vexactsize 0
-         text "#layout_main_menu_last_server"
-         font "gui/fonts/sdf_MetronLight24"
-         "text offset" 5 0
-         "exact text" 0
-         "exact text size" 16
-         "size to text h" 0
-         "size to text v" 1
-         "text valign" center
-        }
-       }
-      }
-      PanelWidgetClass PanelWidget1 {
-       visible 0
-       inheritalpha 1
-       ignorepointer 0
-       position 0 44
-       size 1 20
-       hexactpos 1
-       vexactpos 1
-       hexactsize 0
-       vexactsize 1
-       {
-        TextWidgetClass last_server_info_ip {
-         visible 0
-         clipchildren 1
-         inheritalpha 1
-         position 0 0
-         size 1 0.8
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 0
-         vexactsize 0
-         font "gui/fonts/sdf_MetronLight24"
-         "text offset" 10 0
-         "exact text" 0
-         "exact text size" 22
-         "size to text h" 0
-         "size to text v" 1
-         "text valign" center
-        }
-       }
-      }
-      PanelWidgetClass PanelWidget2 {
-       visible 0
-       inheritalpha 1
-       ignorepointer 0
-       position 0 66
-       size 1 20
-       hexactpos 1
-       vexactpos 1
-       hexactsize 0
-       vexactsize 1
-       {
-        TextWidgetClass last_server_info_port {
-         visible 0
-         clipchildren 1
-         inheritalpha 1
-         position 0 0
-         size 1 0.8
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 0
-         vexactsize 0
-         font "gui/fonts/sdf_MetronLight24"
-         "text offset" 10 0
-         "exact text" 0
-         "exact text size" 22
-         "size to text h" 0
-         "size to text v" 1
-         "text valign" center
-        }
-       }
-      }
-      PanelWidgetClass PanelWidget3 {
-       visible 0
-       inheritalpha 1
-       ignorepointer 0
-       position 0 22
-       size 1 20
-       hexactpos 1
-       vexactpos 1
-       hexactsize 0
-       vexactsize 1
-       {
-        TextWidgetClass last_server_info_name {
-         visible 0
-         clipchildren 1
-         inheritalpha 1
-         position 0 0
-         size 1 0.8
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 0
-         vexactsize 0
-         text "#players_name"
-         font "gui/fonts/sdf_MetronLight24"
-         "text offset" 10 0
-         "exact text" 0
-         "exact text size" 22
-         "size to text h" 0
-         "size to text v" 1
-         "text valign" center
-        }
-       }
-      }
-     }
-    }
-    WrapSpacerWidgetClass play_panel_root {
-     visible 0
-     ignorepointer 1
-     position 1060.95007 436.07901
-     size 445.76001 400
-     halign right_ref
-     valign bottom_ref
-     hexactpos 1
-     vexactpos 1
-     hexactsize 1
-     vexactsize 1
-     priority 3
-     Padding 0
-     Margin 0
-     content_halign center
-     content_valign bottom
-     {
-      WrapSpacerWidgetClass bottom {
-       visible 1
-       color 0 0 0 0.549
-       position 0 0
-       size 1 90
-       halign center_ref
-       valign bottom_ref
-       hexactpos 1
-       vexactpos 1
-       hexactsize 0
-       vexactsize 1
-       style DayZDefaultPanel
+       style Default
        "no focus" 0
        "next left" "news_main"
        "next right" "news_main"
-       "next up" ""
-       "next down" "exit_button"
-       Padding 0
-       Margin 0
-       "Size To Content H" 1
-       "Size To Content V" 1
-      }
-      WrapSpacerWidgetClass top {
-       ignorepointer 1
-       color 0 0 0 0.549
-       size 1 48
-       hexactpos 1
-       vexactpos 1
-       hexactsize 0
-       vexactsize 1
-       style DayZDefaultPanelSides
-       "no focus" 1
-       Padding 0
-       Margin 0
-       "Size To Content V" 1
+       "next up" "choose_server"
+       "next down" "play_video"
+       text_halign right
        {
-        ButtonWidgetClass play_video {
-         visible 0
-         color 0.0392 0.0392 0.0392 1
-         position 0 0
-         size 1 38
-         halign center_ref
-         valign bottom_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 0
-         vexactsize 1
-         style DayZDefaultButtonTop
-         "no focus" 0
-         "next left" "news_main"
-         "next right" "news_main"
-         "next up" "play"
-         "next down" "tutorials"
-         text_proportion 0.55
-         font "gui/fonts/sdf_MetronLight24"
-         switch normal
-         {
-          PanelWidgetClass play_video_panel {
-           ignorepointer 1
-           color 0 0 0 0
-           position 0 0
-           size 1 1
-           hexactpos 0
-           vexactpos 0
-           hexactsize 0
-           vexactsize 0
-           style rover_sim_colorable
-           {
-            TextWidgetClass play_video_label {
-             ignorepointer 1
-             size 1 0.55
-             halign center_ref
-             valign center_ref
-             hexactpos 0
-             vexactpos 0
-             hexactsize 0
-             vexactsize 0
-             text "#menu_introductionVideo"
-             font "gui/fonts/sdf_MetronLight30"
-             "text halign" center
-             "text valign" center
-            }
-           }
-          }
-         }
-        }
-        ButtonWidgetClass tutorials {
-         visible 0
-         color 0.0392 0.0392 0.0392 1
-         position 0 0
-         size 1 38
-         halign center_ref
-         valign bottom_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 0
-         vexactsize 1
-         style DayZDefaultButtonSides
-         "no focus" 0
-         "next left" "news_main"
-         "next right" "news_main"
-         "next up" "play_video"
-         "next down" "customize_character"
-         text_proportion 0.55
-         font "gui/fonts/sdf_MetronLight24"
-         switch normal
-         {
-          PanelWidgetClass tutorials_panel {
-           ignorepointer 1
-           color 0 0 0 0
-           position 0 0
-           size 1 1
-           hexactpos 0
-           vexactpos 0
-           hexactsize 0
-           vexactsize 0
-           style rover_sim_colorable
-           {
-            TextWidgetClass tutorials_label {
-             ignorepointer 1
-             size 1 0.55
-             halign center_ref
-             valign center_ref
-             hexactpos 0
-             vexactpos 0
-             hexactsize 0
-             vexactsize 0
-             text "#menu_tutorials"
-             font "gui/fonts/sdf_MetronLight30"
-             "text halign" center
-             "text valign" center
-            }
-           }
-          }
-         }
-        }
-        FrameWidgetClass separator_down {
-         visible 1
-         ignorepointer 1
-         position 10 10
-         size 1 7
-         hexactpos 1
-         vexactpos 1
-         hexactsize 0
-         vexactsize 1
-        }
-       }
-      }
-      PanelWidgetClass play_panel_separator {
-       ignorepointer 1
-       color 0.7843 0 0 1
-       position 10 10
-       size 1 2
-       hexactpos 1
-       vexactpos 1
-       hexactsize 0
-       vexactsize 1
-       style rover_sim_colorable
-      }
-     }
-    }
-    WrapSpacerWidgetClass Licensing {
-     visible 0
-     clipchildren 0
-     keepsafezone 1
-     position 107 0.06
-     size 1051 0.025
-     valign bottom_ref
-     hexactpos 1
-     vexactpos 0
-     hexactsize 1
-     vexactsize 0
-     priority 5
-     Padding 8
-     Margin 0
-     content_valign center
-     {
-      TextWidgetClass version {
-       visible 1
-       clipchildren 0
-       ignorepointer 1
-       position 0 0
-       size 1 0.5
-       hexactpos 1
-       vexactpos 1
-       hexactsize 0
-       vexactsize 0
-       priority 2
-       text "#main_menu_version"
-       font "gui/fonts/sdf_MetronLight24"
-       "exact text" 0
-       "text valign" center
-      }
-      TextWidgetClass copyright {
-       visible 1
-       clipchildren 0
-       size 1 0.5
-       hexactpos 1
-       vexactpos 1
-       hexactsize 0
-       vexactsize 0
-       priority 2
-       text "#copyright_disclamer"
-       font "gui/fonts/sdf_MetronLight24"
-       "exact text" 0
-       "text valign" center
-      }
-      TextWidgetClass madeby {
-       visible 1
-       clipchildren 0
-       color 1 1 1 0.4588
-       size 1 0.5
-       hexactpos 1
-       vexactpos 1
-       hexactsize 0
-       vexactsize 0
-       priority 2
-       text "UX/UI Mod by: DayZ n' Chill"
-       font "gui/fonts/sdf_MetronLight24"
-       "exact text" 0
-       "text valign" center
-      }
-     }
-    }
-    PanelWidgetClass character {
-     visible 0
-     ignorepointer 0
-     size 291 42
-     hexactpos 1
-     vexactpos 1
-     hexactsize 1
-     vexactsize 1
-     style blank
-     {
-      ButtonWidgetClass prev_character {
-       visible 1
-       color 1 1 1 0
-       size 38 38
-       hexactpos 1
-       vexactpos 1
-       hexactsize 1
-       vexactsize 1
-       fixaspect fixwidth
-       priority 1
-       style Empty
-       "no focus" 0
-       font "Colorful-UI/gui/fonts/PrimaryLab24"
-       {
-        ImageWidgetClass prev_character_image {
-         inheritalpha 0
-         ignorepointer 1
-         size 0.85 1
-         halign center_ref
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 0
-         vexactsize 0
-         image0 "set:dayz_gui image:arrow_left"
-         mode blend
-         "src alpha" 1
-         "no wrap" 1
-         stretch 1
-        }
-       }
-      }
-      ButtonWidgetClass next_character {
-       visible 1
-       color 1 1 1 0
-       size 38 38
-       halign right_ref
-       hexactpos 1
-       vexactpos 1
-       hexactsize 1
-       vexactsize 1
-       fixaspect fixwidth
-       priority 1
-       style Empty
-       "no focus" 0
-       font "Colorful-UI/gui/fonts/PrimaryLab24"
-       {
-        ImageWidgetClass next_character_image {
-         ignorepointer 1
-         size 0.85 1
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 0
-         vexactsize 0
-         image0 "set:dayz_gui image:arrow_right"
-         mode blend
-         "src alpha" 1
-         "no wrap" 1
-         stretch 1
-        }
-       }
-      }
-      TextWidgetClass character_name_text {
-       clipchildren 1
-       inheritalpha 1
-       ignorepointer 1
-       size 0.75 42
-       halign center_ref
-       hexactpos 1
-       vexactpos 1
-       hexactsize 0
-       vexactsize 1
-       font "Colorful-UI/gui/fonts/PrimaryLab24"
-       "exact text" 1
-       "size to text h" 1
-       "size to text v" 1
-       "text halign" center
-       "text valign" center
-      }
-     }
-    }
-    FrameWidgetClass character_stats_root {
-     visible 0
-     ignorepointer 1
-     position 0 0
-     size 415 305
-     valign bottom_ref
-     hexactpos 0
-     vexactpos 0
-     hexactsize 1
-     vexactsize 1
-     {
-      TextWidgetClass character_stats_textImg {
-       ignorepointer 1
-       keepsafezone 0
-       size 31.2238 79.24
-       halign center_ref
-       hexactpos 1
-       vexactpos 1
-       hexactsize 1
-       vexactsize 1
-       text "SURIVOR STATS"
-       font "Colorful-UI/gui/fonts/PersonalServices48"
-       "exact text" 1
-       "size to text h" 1
-       "size to text v" 1
-       "text valign" center
-      }
-      PanelWidgetClass separator_1 {
-       color 0.7569 0.0941 0.0941 1
-       position 0 75
-       size 1 2
-       halign center_ref
-       hexactpos 1
-       vexactpos 1
-       hexactsize 0
-       vexactsize 1
-       scaled 1
-       priority 10
-       style DayZDefaultPanel
-       "no focus" 0
-      }
-      GridSpacerWidgetClass character_stats_content {
-       ignorepointer 1
-       color 0 0 0 0
-       size 1 230
-       halign center_ref
-       valign bottom_ref
-       hexactpos 1
-       vexactpos 1
-       hexactsize 0
-       vexactsize 1
-       style DayZDefaultPanelSides
-       Padding 4
-       Margin 6
-       Columns 1
-       Rows 5
-       {
-        FrameWidgetClass PlayersKilled {
-         ignorepointer 1
-         position 0 0
-         size 48 24
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         {
-          TextWidgetClass PlayersKilledLabel {
-           visible 1
-           ignorepointer 1
-           position 0 0
-           size 301 40
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 1
-           vexactsize 1
-           scaled 1
-           text "Players Killed"
-           font "Colorful-UI/gui/fonts/PrimaryLab24"
-           "exact text" 1
-           "size to text h" 1
-           "text valign" center
-          }
-          TextWidgetClass PlayersKilledValue {
-           ignorepointer 1
-           size 1 1
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           text "0"
-           font "Colorful-UI/gui/fonts/OpenSansV24"
-           "exact text" 1
-           "size to text h" 1
-           "size to text v" 0
-           "text halign" center
-           "text valign" center
-          }
-         }
-        }
-        FrameWidgetClass InfectedKilled {
-         ignorepointer 1
-         position 0 0
-         size 48 24
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         {
-          TextWidgetClass InfectedKilledLabel {
-           ignorepointer 1
-           size 1 1
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           text "Infected Killed"
-           font "Colorful-UI/gui/fonts/PrimaryLab24"
-           "exact text" 1
-           "size to text h" 1
-           "text valign" center
-          }
-          TextWidgetClass InfectedKilledValue {
-           ignorepointer 1
-           size 1 1
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           text "0"
-           font "Colorful-UI/gui/fonts/OpenSansV24"
-           "exact text" 1
-           "size to text h" 1
-           "size to text v" 0
-           "text halign" center
-           "text valign" center
-          }
-         }
-        }
-        FrameWidgetClass TimeSurvived {
-         clipchildren 0
-         ignorepointer 1
-         position 0 0
-         size 443 48
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         {
-          TextWidgetClass TimeSurvivedLabel {
-           clipchildren 0
-           inheritalpha 0
-           ignorepointer 1
-           position 0 0
-           size 301 40
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 1
-           vexactsize 1
-           text "Time Alive"
-           font "Colorful-UI/gui/fonts/PrimaryLab24"
-           "exact text" 1
-           "size to text h" 1
-           "text valign" center
-          }
-          TextWidgetClass TimeSurvivedValue {
-           ignorepointer 1
-           size 1 1
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           text "0"
-           font "Colorful-UI/gui/fonts/OpenSansV24"
-           "exact text" 1
-           "size to text h" 1
-           "size to text v" 0
-           "text halign" center
-           "text valign" center
-          }
-         }
-        }
-        FrameWidgetClass DistanceTraveled {
-         ignorepointer 1
-         position 0 0
-         size 48 24
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         {
-          TextWidgetClass DistanceTraveledLabel {
-           clipchildren 0
-           ignorepointer 1
-           position 0 0
-           size 1.0486 1
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           text "Distance Traveled"
-           font "Colorful-UI/gui/fonts/PrimaryLab24"
-           "exact text" 1
-           "size to text h" 1
-           "size to text v" 0
-           "text valign" center
-          }
-          TextWidgetClass DistanceTraveledValue {
-           ignorepointer 1
-           size 1 1
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           text "0"
-           font "Colorful-UI/gui/fonts/OpenSansV24"
-           "exact text" 1
-           "size to text h" 1
-           "size to text v" 0
-           "text halign" center
-           "text valign" center
-          }
-         }
-        }
-        FrameWidgetClass LongRangeShot {
-         ignorepointer 1
-         position 0 0
-         size 48 24
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         {
-          TextWidgetClass LongRangeShotLabel {
-           ignorepointer 1
-           size 301 40
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 1
-           vexactsize 1
-           text "Longest Player Hit"
-           font "Colorful-UI/gui/fonts/PrimaryLab24"
-           "exact text" 1
-           "size to text h" 1
-           "text valign" center
-          }
-          TextWidgetClass LongRangeShotValue {
-           ignorepointer 1
-           size 1 1
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           text "0"
-           font "Colorful-UI/gui/fonts/OpenSansV24"
-           "exact text" 1
-           "size to text h" 1
-           "size to text v" 0
-           "text halign" center
-           "text valign" center
-          }
-         }
-        }
-       }
-      }
-     }
-    }
-    ButtonWidgetClass CharacterBtn {
-     visible 0
-     color 0 0 0 0
-     position 0 0
-     size 293 42
-     halign right_ref
-     valign center_ref
-     hexactpos 1
-     vexactpos 1
-     hexactsize 1
-     vexactsize 1
-     style Empty
-     "no focus" 0
-     "next left" "news_main"
-     "next right" "news_main"
-     "next up" "choose_server"
-     "next down" "play_video"
-     {
-      PanelWidgetClass CharacterBtn_panel {
-       visible 0
-       ignorepointer 1
-       color 0 0 0 0
-       size 1 1
-       halign right_ref
-       valign center_ref
-       hexactpos 0
-       vexactpos 0
-       hexactsize 0
-       vexactsize 0
-       style DayZDefaultPanel
-       {
-        TextWidgetClass CharacterBtn_label {
-         visible 0
-         clipchildren 0
-         ignorepointer 1
-         position 8 0
-         size 1 1
-         halign right_ref
-         valign center_ref
-         hexactpos 1
-         vexactpos 0
-         hexactsize 0
-         vexactsize 0
-         text "Character"
-         font "Colorful-UI/gui/fonts/PrimaryLab24"
-         "exact text" 1
-         "size to text h" 1
-         "size to text v" 0
-         "text halign" right
-         "text valign" center
-        }
-       }
-      }
-     }
-    }
-    ButtonWidgetClass customize_character {
-     visible 0
-     color 0 0 0 1
-     position 0 0
-     size 293 49
-     halign center_ref
-     valign bottom_ref
-     hexactpos 1
-     vexactpos 1
-     hexactsize 1
-     vexactsize 1
-     style Empty
-     "no focus" 0
-     "next left" ""
-     "next right" ""
-     "next up" "tutorials"
-     "next down" "choose_server"
-     {
-      PanelWidgetClass customize_character_panel {
-       visible 1
-       clipchildren 0
-       ignorepointer 1
-       color 0 0 0 0
-       position 8 0
-       size 1 1
-       halign right_ref
-       valign center_ref
-       hexactpos 1
-       vexactpos 0
-       hexactsize 0
-       vexactsize 0
-       style DayZDefaultPanel
-       "no focus" 1
-       {
-        TextWidgetClass customize_character_label {
-         clipchildren 0
+        ImageWidgetClass play_panel {
          ignorepointer 1
          size 1 1
-         halign right_ref
+         halign center_ref
          valign center_ref
          hexactpos 0
          vexactpos 0
          hexactsize 0
          vexactsize 0
-         text "Character"
-         font "Colorful-UI/gui/fonts/PrimaryLab24"
-         "exact text" 1
-         "size to text h" 1
-         "size to text v" 0
-         "text halign" center
-         "text valign" center
+         imageTexture "{D6F18F97F5D1264C}Colorful-UI/gui/textures/main_menu/US.Active.edds"
+         mode blend
+         "src alpha" 1
+         "no wrap" 1
+         stretch 1
+         filter 0
         }
        }
       }
-     }
-    }
-    ButtonWidgetClass choose_server {
-     visible 0
-     color 0 0 0 1
-     size 293 42
-     halign right_ref
-     valign center_ref
-     hexactpos 1
-     vexactpos 1
-     hexactsize 1
-     vexactsize 1
-     style Empty
-     "no focus" 0
-     "next left" ""
-     "next right" ""
-     "next up" "customize_character"
-     "next down" "play"
-     {
-      PanelWidgetClass choose_server_panel {
+      ButtonWidgetClass EUMainActive {
        visible 0
-       ignorepointer 1
        color 0 0 0 0
-       position 0 0
-       size 1 1
-       hexactpos 0
-       vexactpos 0
-       hexactsize 0
-       vexactsize 0
-       style DayZDefaultPanel
+       size 315 120
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       style Default
+       "no focus" 0
+       "next left" "news_main"
+       "next right" "news_main"
+       "next up" "choose_server"
+       "next down" "play_video"
+       text_halign right
        {
-        TextWidgetClass choose_server_label {
-         visible 0
+        ImageWidgetClass play_panel0 {
          ignorepointer 1
-         position 8 0
          size 1 1
-         halign right_ref
+         halign center_ref
          valign center_ref
-         hexactpos 1
+         hexactpos 0
          vexactpos 0
          hexactsize 0
          vexactsize 0
-         text "Server Browser"
-         font "Colorful-UI/gui/fonts/PrimaryLab24"
-         "exact text" 1
-         "size to text h" 1
-         "size to text v" 0
-         "text halign" right
-         "text valign" center
+         imageTexture "{F9F06F7254FF2ECA}Colorful-UI/gui/textures/main_menu/EUMain.Btn.Active.edds"
+         mode blend
+         "src alpha" 1
+         "no wrap" 1
+         stretch 1
+         filter 0
         }
        }
       }
-     }
-    }
-    ButtonWidgetClass ServerInfoBtn {
-     visible 0
-     color 0 0 0 0
-     position 0 0
-     size 293 42
-     halign right_ref
-     valign center_ref
-     hexactpos 1
-     vexactpos 1
-     hexactsize 1
-     vexactsize 1
-     style Empty
-     "no focus" 0
-     "next left" "news_main"
-     "next right" "news_main"
-     "next up" "choose_server"
-     "next down" "play_video"
-     {
-      PanelWidgetClass ServerInfoBtn_panel {
-       visible 1
-       ignorepointer 1
+      ButtonWidgetClass AUMainActive {
+       visible 0
        color 0 0 0 0
-       size 1 1
-       halign right_ref
+       size 315 120
+       halign center_ref
        valign center_ref
-       hexactpos 0
-       vexactpos 0
-       hexactsize 0
-       vexactsize 0
-       style DayZDefaultPanel
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       style Default
+       "no focus" 0
+       "next left" "news_main"
+       "next right" "news_main"
+       "next up" "choose_server"
+       "next down" "play_video"
+       text_halign right
        {
-        TextWidgetClass ServerInfoBtn_label {
+        ImageWidgetClass play_panel1 {
          visible 1
-         clipchildren 0
          ignorepointer 1
-         position 8 0
+         position 0 0
          size 1 1
-         halign right_ref
+         halign center_ref
          valign center_ref
-         hexactpos 1
+         hexactpos 0
          vexactpos 0
          hexactsize 0
          vexactsize 0
-         text "Server Information"
-         font "Colorful-UI/gui/fonts/PrimaryLab24"
-         "exact text" 1
-         "size to text h" 1
-         "text halign" right
-         "text valign" center
+         imageTexture "{F9F06F7254FF2ECA}Colorful-UI/gui/textures/main_menu/EUMain.Btn.Active.edds"
+         mode blend
+         "src alpha" 1
+         "no wrap" 1
+         stretch 1
+         filter 0
+        }
+       }
+      }
+      ButtonWidgetClass USMainDisabled {
+       visible 0
+       color 0 0 0 0
+       size 315 120
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       style Default
+       "no focus" 0
+       "next left" "news_main"
+       "next right" "news_main"
+       "next up" "choose_server"
+       "next down" "play_video"
+       text_halign right
+       {
+        ImageWidgetClass play_panel2 {
+         ignorepointer 1
+         position 0 0
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         imageTexture "{6DCEDEB0A770BA73}Colorful-UI/gui/textures/main_menu/USMain.Btn.Disabled.edds"
+         mode blend
+         "src alpha" 1
+         "no wrap" 1
+         stretch 1
+         filter 0
+        }
+       }
+      }
+      ButtonWidgetClass EUMainDisabled {
+       visible 0
+       color 0 0 0 0
+       size 315 120
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       style Default
+       "no focus" 0
+       "next left" "news_main"
+       "next right" "news_main"
+       "next up" "choose_server"
+       "next down" "play_video"
+       text_halign right
+       {
+        ImageWidgetClass play_panel3 {
+         ignorepointer 1
+         position 0 0
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         imageTexture "{D510C9279840880A}Colorful-UI/gui/textures/main_menu/EUMain.Btn.Disabled.edds"
+         mode blend
+         "src alpha" 1
+         "no wrap" 1
+         stretch 1
+         filter 0
+        }
+       }
+      }
+      ButtonWidgetClass AUMainDisabled {
+       visible 0
+       color 0 0 0 0
+       size 315 120
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       style Default
+       "no focus" 0
+       "next left" "news_main"
+       "next right" "news_main"
+       "next up" "choose_server"
+       "next down" "play_video"
+       text_halign right
+       {
+        ImageWidgetClass play_panel4 {
+         visible 1
+         ignorepointer 1
+         position 0 0
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         imageTexture "{586109D0BFA686AF}Colorful-UI/gui/textures/main_menu/AUMain.Btn.Disabled.edds"
+         mode blend
+         "src alpha" 1
+         "no wrap" 1
+         stretch 1
+         filter 0
+        }
+       }
+      }
+      ButtonWidgetClass LeftSelect {
+       position 0 12
+       size 50 60
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       style Empty
+       {
+        ImageWidgetClass ChevronLeft {
+         ignorepointer 1
+         size 50 60
+         halign center_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         imageTexture "{405A4980DB86661E}Colorful-UI/gui/textures/main_menu/Chevron.Left.edds"
+         mode blend
+         "src alpha" 1
+         "no wrap" 1
+         stretch 1
+        }
+       }
+      }
+      ButtonWidgetClass RightSelect {
+       position 0 12
+       size 50 60
+       halign right_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       style Empty
+       {
+        ImageWidgetClass ChevronRight {
+         ignorepointer 1
+         size 50 60
+         halign center_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         imageTexture "{05F2FE3F55B2C4B7}Colorful-UI/gui/textures/main_menu/Chevron.Right.edds"
+         mode blend
+         "src alpha" 1
+         "no wrap" 1
+         stretch 1
         }
        }
       }
      }
     }
-    ButtonWidgetClass QueueBtn {
-     visible 0
-     color 0 0 0 0
-     position 0 0
-     size 293 42
-     halign right_ref
-     valign center_ref
+    TextWidgetClass Press2Start {
+     visible 1
+     clipchildren 1
+     ignorepointer 1
+     color 0.5059 0.8118 0.8118 1
+     position 0 69
+     size 178.97 48
+     halign center_ref
+     valign bottom_ref
      hexactpos 1
      vexactpos 1
      hexactsize 1
      vexactsize 1
-     style Empty
-     "no focus" 0
-     "next left" "news_main"
-     "next right" "news_main"
-     "next up" "choose_server"
-     "next down" "play_video"
-     {
-      PanelWidgetClass QueueBtn_panel {
-       ignorepointer 1
-       color 0 0 0 0
-       size 1 1
-       halign right_ref
-       valign center_ref
-       hexactpos 0
-       vexactpos 0
-       hexactsize 0
-       vexactsize 0
-       style DayZDefaultPanel
-       {
-        TextWidgetClass QueueBtn_label {
-         clipchildren 0
-         ignorepointer 1
-         position 8 0
-         size 1 1
-         halign right_ref
-         valign center_ref
-         hexactpos 1
-         vexactpos 0
-         hexactsize 0
-         vexactsize 0
-         text "Priority Queue"
-         font "Colorful-UI/gui/fonts/PrimaryLab24"
-         "exact text" 1
-         "size to text h" 1
-         "text halign" right
-         "text valign" center
-        }
-       }
-      }
-     }
+     style Normal
+     text "PRESS TO PLAY"
+     font "gui/fonts/MetronBook-Bold22"
+     "exact text" 1
+     "size to text h" 1
+     "size to text v" 1
+     "text halign" center
+     "text valign" center
     }
-    ButtonWidgetClass WebsiteBtn {
+    TextWidgetClass "Coming Soon" {
      visible 0
-     color 0 0 0 0
-     position 0 0
-     size 293 42
-     halign right_ref
-     valign center_ref
+     clipchildren 1
+     ignorepointer 1
+     color 0.7647 0.6549 0.8745 1
+     position 0 69
+     size 178.97 48
+     halign center_ref
+     valign bottom_ref
      hexactpos 1
      vexactpos 1
      hexactsize 1
      vexactsize 1
-     style Empty
-     "no focus" 0
-     "next left" "news_main"
-     "next right" "news_main"
-     "next up" "choose_server"
-     "next down" "play_video"
-     {
-      PanelWidgetClass WebsiteBtn_panel {
-       ignorepointer 1
-       color 0 0 0 0
-       size 1 1
-       halign right_ref
-       valign center_ref
-       hexactpos 0
-       vexactpos 0
-       hexactsize 0
-       vexactsize 0
-       style DayZDefaultPanel
-       {
-        TextWidgetClass WebsiteBtn_label {
-         clipchildren 0
-         ignorepointer 1
-         position 8 0
-         size 1 1
-         halign right_ref
-         valign center_ref
-         hexactpos 1
-         vexactpos 0
-         hexactsize 0
-         vexactsize 0
-         text "Website"
-         font "Colorful-UI/gui/fonts/PrimaryLab24"
-         "exact text" 1
-         "size to text h" 1
-         "size to text v" 0
-         "text halign" right
-         "text valign" center
-        }
-       }
-      }
-     }
+     style Normal
+     text "COMING SOON"
+     font "gui/fonts/MetronBook-Bold22"
+     "exact text" 1
+     "size to text h" 1
+     "size to text v" 1
+     "text halign" center
+     "text valign" center
+    }
+    ImageWidgetClass ServerOffline {
+     visible 1
+     ignorepointer 1
+     size 119 36
+     halign center_ref
+     valign bottom_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     imageTexture "{8302015B41E40BCC}Colorful-UI/gui/textures/main_menu/Badge.Offline.edds"
+     mode blend
+     "src alpha" 1
+     "no wrap" 1
+     stretch 1
+    }
+    ImageWidgetClass ServerOnline {
+     visible 1
+     ignorepointer 1
+     position 0 0
+     size 119 36
+     halign center_ref
+     valign bottom_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     imageTexture "{CA20F312CE863EF2}Colorful-UI/gui/textures/main_menu/Badge.Online.edds"
+     mode blend
+     "src alpha" 1
+     "no wrap" 1
+     stretch 1
     }
    }
   }
