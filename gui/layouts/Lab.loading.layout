@@ -23,6 +23,7 @@ FrameWidgetClass LoadingFrame {
    mode opaque
    "src alpha" 0
    stretch 1
+   filter 0
    "Transition width" 1
    Progress 0
   }
@@ -41,6 +42,7 @@ FrameWidgetClass LoadingFrame {
    mode opaque
    "src alpha" 0
    stretch 1
+   filter 0
    "Transition width" 1
    Progress 0
   }
@@ -59,6 +61,7 @@ FrameWidgetClass LoadingFrame {
    vexactsize 0
    {
     ImageWidgetClass LabShader {
+     visible 1
      ignorepointer 1
      position 0 0
      size 1 1
@@ -354,43 +357,6 @@ FrameWidgetClass LoadingFrame {
      mode additive
      "src alpha" 1
      "no wrap" 0
-     filter 1
-     nocache 0
-    }
-    ImageWidgetClass ImageLogoMid {
-     visible 0
-     inheritalpha 1
-     position 100 78
-     size 444 208
-     hexactpos 1
-     vexactpos 1
-     hexactsize 1
-     vexactsize 1
-     fixaspect outside
-     image0 "set:dayz_gui image:DayZLogo"
-     mode blend
-     "src alpha" 1
-     "no wrap" 1
-     stretch 1
-     filter 1
-     nocache 0
-    }
-    ImageWidgetClass ImageLogoCorner {
-     visible 0
-     inheritalpha 1
-     position 111.26399 86.864
-     size 414 386
-     hexactpos 1
-     vexactpos 1
-     hexactsize 1
-     vexactsize 1
-     fixaspect outside
-     image0 ""
-     imageTexture "{F4149B85A4538BED}EDEN_UI/gui/textures/globals/DayZEden.edds"
-     mode blend
-     "src alpha" 1
-     "no wrap" 1
-     stretch 1
      filter 1
      nocache 0
     }

@@ -24,6 +24,7 @@ PanelWidgetClass TextInputDialogRoot {
    "src alpha" 1
    "no wrap" 1
    stretch 1
+   filter 0
   }
   ImageWidgetClass BackgroundOverride {
    visible 1
@@ -41,6 +42,7 @@ PanelWidgetClass TextInputDialogRoot {
    mode opaque
    "src alpha" 0
    stretch 1
+   filter 0
    "Transition width" 1
    Progress 0
   }
