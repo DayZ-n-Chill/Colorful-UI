@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{4D11E2DEFD7D44FC}Colorful-UI/gui/textures/globals/Icon.Website.edds"
+ Author "sdf-1"
+ ChangeDate 817213281
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Icon.Website.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

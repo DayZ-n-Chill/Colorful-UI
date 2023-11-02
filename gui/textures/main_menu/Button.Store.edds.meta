@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{84AAE21518C4DC63}Colorful-UI/gui/textures/main_menu/Button.Store.edds"
+ Author "sdf-1"
+ ChangeDate 682471265
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Button.Store.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

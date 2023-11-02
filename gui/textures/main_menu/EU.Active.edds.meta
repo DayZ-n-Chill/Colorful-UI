@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{44851759857F7334}Colorful-UI/gui/textures/main_menu/EU.Active.edds"
+ Author "sdf-1"
+ ChangeDate 1252896609
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "EU.Active.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}
