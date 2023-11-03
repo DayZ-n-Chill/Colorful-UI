@@ -126,7 +126,7 @@ class colorScheme
 	// This color should be Servers/Communities Brand Color
 	static int BrandColor()   { return UIColor.TLBlue();};
 	// This color should be a complimentary color to your brand. 
-	static int AccentColor()  { return UIColor.Red(); }
+	static int AccentColor()  { return ARGB(255, 255, 204, 102);};
 
 	// Advanced Styling --------------------------------------
 	// You can get more Ganular with the colors by editing the syltes below

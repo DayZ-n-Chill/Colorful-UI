@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{1D561390FEF61F84}Colorful-UI/gui/textures/globals/Icon.Blub.edds"
+ Author "sdf-1"
+ ChangeDate 590098275
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Icon.Blub.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

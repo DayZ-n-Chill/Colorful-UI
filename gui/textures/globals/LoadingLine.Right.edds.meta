@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{F6FF98B08C37E82D}Colorful-UI/gui/textures/globals/LoadingLine.Right.edds"
+ Author "sdf-1"
+ ChangeDate 388771683
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "LoadingLine.Right.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

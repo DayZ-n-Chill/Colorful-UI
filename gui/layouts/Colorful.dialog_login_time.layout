@@ -156,42 +156,6 @@ WindowWidgetClass TextInputDialog_root {
      hexactpos 1
      vexactpos 0
      text "CONNECTING TO SERVER ..."
-     font "Colorful-ui/gui/fonts/Ethnocentric20"
-     "exact text" 1
-     "size to text h" 1
-     "size to text v" 1
-     "text halign" center
-     "text valign" center
-    }
-    TextWidgetClass TxtHdr {
-     visible 1
-     clipchildren 0
-     color 0.2588 0.6863 0.3647 1
-     position 0 0.024
-     size 1 0.03048
-     halign center_ref
-     valign bottom_ref
-     vexactpos 0
-     style Bold
-     text "Will you Survive?"
-     font "Colorful-ui/gui/fonts/Ethnocentric20"
-     "exact text" 1
-     "size to text h" 1
-     "size to text v" 1
-     "text halign" center
-     "text valign" center
-    }
-    TextWidgetClass txtLabel {
-     disabled 0
-     size 0.25 0.2
-     halign center_ref
-     valign bottom_ref
-     hexactpos 0
-     vexactpos 0
-     hexactsize 0
-     vexactsize 0
-     style Bold
-     text "placeholder text"
      font "Colorful-ui/gui/fonts/SquareFont20"
      "exact text" 1
      "size to text h" 1
@@ -199,11 +163,11 @@ WindowWidgetClass TextInputDialog_root {
      "text halign" center
      "text valign" center
     }
-    FrameWidgetClass TestAnimationRoot {
-     visible 0
+    FrameWidgetClass "Loading Prompt" {
+     visible 1
+     clipchildren 0
      ignorepointer 1
-     position 0 50
-     size 100 100
+     size 700 132
      halign center_ref
      valign bottom_ref
      hexactpos 1
@@ -211,95 +175,126 @@ WindowWidgetClass TextInputDialog_root {
      hexactsize 1
      vexactsize 1
      {
-      ImageWidgetClass TestAmnim1 {
-       visible 0
-       ignorepointer 1
-       color 0.749 0.3725 0.3725 1
+      ImageWidgetClass "Header Icon" {
+       visible 1
+       clipchildren 0
        position 0 0
-       size 1 1
+       size 23 23
        halign center_ref
-       valign center_ref
        hexactpos 1
        vexactpos 1
-       hexactsize 0
-       vexactsize 0
-       imageTexture "{5D65CB72518D566D}Colorful-UI/gui/textures/animations/Skeleton-1.edds"
+       hexactsize 1
+       vexactsize 1
+       imageTexture "{294430067BE07945}Colorful-UI/gui/textures/globals/Icon.Ready.edds"
        mode blend
        "src alpha" 1
        "no wrap" 1
-       stretch 1
+       stretch 0
+       filter 0
       }
-      ImageWidgetClass TestAmnim2 {
-       visible 0
+      GridSpacerWidgetClass "Header Title" {
        ignorepointer 1
-       color 0.7647 0.8745 0.6549 1
-       position 0 0
-       size 1 1
+       position 0 30
+       size 500 27.29
        halign center_ref
-       valign center_ref
        hexactpos 1
        vexactpos 1
-       hexactsize 0
-       vexactsize 0
-       imageTexture "{F785A5A9E3DDB016}Colorful-UI/gui/textures/animations/Skeleton-3.edds"
-       mode blend
-       "src alpha" 1
-       "no wrap" 1
-       stretch 1
+       hexactsize 1
+       vexactsize 1
+       Padding 15
+       Margin 0
+       "Size To Content H" 1
+       "Size To Content V" 1
+       content_halign center
+       content_valign center
+       Rows 1
+       {
+        ImageWidgetClass "Left Line" {
+         ignorepointer 1
+         position -73 0
+         size 280 2
+         halign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         imageTexture "{03B450C67D4FB148}Colorful-UI/gui/textures/globals/LoadingLine.Left.edds"
+         mode blend
+         "src alpha" 1
+         "no wrap" 1
+         stretch 1
+         filter 1
+        }
+        TextWidgetClass "In Queue" {
+         visible 1
+         clipchildren 0
+         color 1 0.8 0.4 1
+         position 0 0
+         size 1 1
+         halign right_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         text "ENTERING THE LAB"
+         font "Colorful-ui/gui/fonts/SquareFont20"
+         "exact text" 1
+         "size to text h" 1
+         "size to text v" 1
+         "text halign" center
+         "text valign" center
+        }
+        ImageWidgetClass "Right Line" {
+         ignorepointer 1
+         position -73 0
+         size 280 2
+         halign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         imageTexture "{F6FF98B08C37E82D}Colorful-UI/gui/textures/globals/LoadingLine.Right.edds"
+         mode blend
+         "src alpha" 1
+         "no wrap" 1
+         stretch 1
+         filter 1
+        }
+       }
       }
-      ImageWidgetClass TestAmnim3 {
-       visible 0
-       ignorepointer 1
-       color 0.6549 0.8745 0.8745 1
-       position 0 0
-       size 1 1
+      TextWidgetClass "Loading Status" {
+       visible 1
+       clipchildren 0
+       color 0.7137 0.9529 0.7373 1
+       size 1 0.03
        halign center_ref
-       valign center_ref
+       valign bottom_ref
        hexactpos 1
        vexactpos 1
-       hexactsize 0
-       vexactsize 0
-       imageTexture "{BE5DB0B6911BC47C}Colorful-UI/gui/textures/animations/Skeleton-4.edds"
-       mode blend
-       "src alpha" 1
-       "no wrap" 1
-       stretch 1
+       text "connecting to the server"
+       font "Colorful-ui/gui/fonts/SquareFont16"
+       "exact text" 1
+       "size to text h" 1
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
       }
-      ImageWidgetClass TestAmnim4 {
-       visible 0
-       ignorepointer 1
-       color 0.8118 0.7373 0.5059 1
-       position 0 0
-       size 1 1
+      TextWidgetClass txtLabel {
+       disabled 0
+       position 0 60
+       size 0.25 0.2
        halign center_ref
-       valign center_ref
        hexactpos 1
        vexactpos 1
        hexactsize 0
        vexactsize 0
-       imageTexture "{038DE231EE00D862}Colorful-UI/gui/textures/animations/Skeleton-2.edds"
-       mode blend
-       "src alpha" 1
-       "no wrap" 1
-       stretch 1
-      }
-      ImageWidgetClass TestAmnim5 {
-       visible 0
-       ignorepointer 1
-       color 0.7647 0.6549 0.8745 1
-       position 0 0
-       size 1 1
-       halign center_ref
-       valign center_ref
-       hexactpos 1
-       vexactpos 1
-       hexactsize 0
-       vexactsize 0
-       imageTexture "{4A55F72E9CC6AC08}Colorful-UI/gui/textures/animations/Skeleton-5.edds"
-       mode blend
-       "src alpha" 1
-       "no wrap" 1
-       stretch 1
+       style Bold
+       text "placeholder text"
+       font "Colorful-ui/gui/fonts/SquareFont26"
+       "exact text" 1
+       "size to text h" 1
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
       }
      }
     }

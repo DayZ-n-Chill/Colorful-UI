@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{B7DF3A71DB3F45A0}Colorful-UI/gui/textures/globals/Icon.Clock.edds"
+ Author "sdf-1"
+ ChangeDate 1864642403
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Icon.Clock.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}
