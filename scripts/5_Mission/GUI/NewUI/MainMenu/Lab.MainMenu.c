@@ -20,9 +20,9 @@ modded class MainMenu extends UIScriptedMenu
 	private Widget m_ComingSoon
 	private Widget m_ServerOnline;
 
-	private string US_Background = "Colorful-UI/gui/textures/loading_screens/TheLab-LS1.edds";
-	private string EU_Background = "Colorful-UI/gui/textures/loading_screens/TheLab-LS2.edds";
-	private string AU_Background = "Colorful-UI/gui/textures/loading_screens/TheLab-LS3.edds";
+	private string US_Background = "Colorful-UI/gui/textures/loading_screens/LabLoadScreen_1.edds";
+	private string EU_Background = "Colorful-UI/gui/textures/loading_screens/LabLoadScreen_2.edds";
+	private string AU_Background = "Colorful-UI/gui/textures/loading_screens/LabLoadScreen_3.edds";
 
 	private bool m_FadingInBackground = false;
 	private float m_Alpha = 1.0; 

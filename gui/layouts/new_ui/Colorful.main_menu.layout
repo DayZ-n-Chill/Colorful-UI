@@ -24,7 +24,7 @@ FrameWidgetClass main_menu_root {
    scaled 1
    fixaspect outside
    image0 ""
-   imageTexture "{DADD85D033C8074F}Colorful-UI/gui/textures/loading_screens/TheLab-LS1.edds"
+   imageTexture "{35EECDC167D4D2AA}Colorful-UI/gui/textures/loading_screens/LabLoadScreen_1.edds"
    mode opaque
    "src alpha" 1
    "no wrap" 1
@@ -75,7 +75,7 @@ FrameWidgetClass main_menu_root {
      hexactsize 0
      vexactsize 0
      scaled 1
-     imageTexture "{A78E9ED74CB35BD1}Colorful-UI/gui/textures/globals/Colorful.Shading.edds"
+     imageTexture "{942C453B0EBBFCF8}Colorful-UI/gui/textures/globals/LoadingShader.edds"
      mode blend
      "src alpha" 1
      "no wrap" 1
@@ -128,7 +128,7 @@ FrameWidgetClass main_menu_root {
      visible 1
      clipchildren 0
      inheritalpha 1
-     size 650 406
+     size 650 400
      halign center_ref
      hexactpos 0
      vexactpos 0
@@ -136,7 +136,7 @@ FrameWidgetClass main_menu_root {
      vexactsize 1
      fixaspect outside
      image0 ""
-     imageTexture "{E3064361AB8CBF10}Colorful-UI/gui/textures/globals/TheLab.Logo.edds"
+     imageTexture "{BB70E7AC4118E41B}Colorful-UI/gui/textures/globals/Logo.Large.edds"
      mode blend
      "src alpha" 1
      "no wrap" 1
@@ -762,7 +762,7 @@ FrameWidgetClass main_menu_root {
      stretch 1
     }
     ImageWidgetClass ServerOnline {
-     visible 1
+     visible 0
      ignorepointer 1
      size 120 36
      halign center_ref
@@ -771,7 +771,7 @@ FrameWidgetClass main_menu_root {
      vexactpos 1
      hexactsize 1
      vexactsize 1
-     imageTexture "{ECF991BCFC12C0E6}Colorful-UI/gui/textures/main_menu/Online.edds"
+     imageTexture "{CA20F312CE863EF2}Colorful-UI/gui/textures/main_menu/Badge.Online.edds"
      mode blend
      "src alpha" 1
      "no wrap" 1
