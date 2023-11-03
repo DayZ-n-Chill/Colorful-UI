@@ -55,7 +55,7 @@ PanelWidgetClass rootFrame {
        vexactsize 1
        style Bold
        text "#layout_dialog_title"
-       font "Colorful-UI/gui/fonts/PersonalServices32"
+       font "Colorful-UI/gui/fonts/PrimaryLab20"
        "text color" 1 1 1 1
        "exact text" 0
        "text halign" center
@@ -88,7 +88,7 @@ PanelWidgetClass rootFrame {
        vexactsize 1
        style Default
        "highlight row" 1
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/PrimaryLab20"
       }
       TextWidgetClass KeybindEntry {
        visible 0
@@ -102,7 +102,7 @@ PanelWidgetClass rootFrame {
        hexactsize 1
        vexactsize 1
        style Normal
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/PrimaryLab20"
        "exact text" 1
        "exact text size" 30
        "text halign" center
@@ -138,7 +138,7 @@ PanelWidgetClass rootFrame {
          style EmptyHighlight
          text "#dialog_confirm"
          text_proportion 0.5
-         font "Colorful-UI/gui/fonts/PersonalServices24"
+         font "Colorful-UI/gui/fonts/PrimaryLab20"
         }
         ButtonWidgetClass Add {
          visible 0
@@ -154,7 +154,7 @@ PanelWidgetClass rootFrame {
          style EmptyHighlight
          text "#dialog_add"
          text_proportion 0.5
-         font "Colorful-UI/gui/fonts/PersonalServices24"
+         font "Colorful-UI/gui/fonts/PrimaryLab20"
         }
         ButtonWidgetClass Delete {
          visible 0
@@ -170,7 +170,7 @@ PanelWidgetClass rootFrame {
          style EmptyHighlight
          text "#dialog_change"
          text_proportion 0.45
-         font "Colorful-UI/gui/fonts/PersonalServices24"
+         font "Colorful-UI/gui/fonts/PrimaryLab20"
         }
         ButtonWidgetClass Cancel {
          visible 1
@@ -186,7 +186,7 @@ PanelWidgetClass rootFrame {
          style EmptyHighlight
          text "#dialog_cancel"
          text_proportion 0.45
-         font "Colorful-UI/gui/fonts/PersonalServices24"
+         font "Colorful-UI/gui/fonts/PrimaryLab20"
         }
        }
       }
