@@ -5,14 +5,14 @@
 string GetRandomBackground()
 {
 	const string images[] = {
-		"Colorful-UI/gui/textures/loading_screens/TheLab-LS1.edds", 
-		"Colorful-UI/gui/textures/loading_screens/TheLab-LS2.edds",
-        "Colorful-UI/gui/textures/loading_screens/TheLab-LS3.edds",
-		"Colorful-UI/gui/textures/loading_screens/TheLab-LS4.edds",
-		"Colorful-UI/gui/textures/loading_screens/TheLab-LS5.edds",
-		"Colorful-UI/gui/textures/loading_screens/TheLab-LS6.edds",
-		"Colorful-UI/gui/textures/loading_screens/TheLab-LS7.edds",
-		"Colorful-UI/gui/textures/loading_screens/TheLab-LS8.edds"
+		"Colorful-UI/gui/textures/loading_screens/LabLoadScreen_1.edds", 
+		"Colorful-UI/gui/textures/loading_screens/LabLoadScreen_2.edds",
+        "Colorful-UI/gui/textures/loading_screens/LabLoadScreen_3.edds",
+		"Colorful-UI/gui/textures/loading_screens/LabLoadScreen_4.edds",
+		"Colorful-UI/gui/textures/loading_screens/LabLoadScreen_5.edds",
+		"Colorful-UI/gui/textures/loading_screens/LabLoadScreen_6.edds",
+		"Colorful-UI/gui/textures/loading_screens/LabLoadScreen_7.edds",
+		"Colorful-UI/gui/textures/loading_screens/LabLoadScreen_8.edds"
 	};
 	const int IMAGES_COUNT = 8;
 	int bgIndex = Math.RandomInt(0, IMAGES_COUNT - 1);

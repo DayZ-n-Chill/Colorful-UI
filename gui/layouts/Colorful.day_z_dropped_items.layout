@@ -26,7 +26,7 @@ WindowWidgetClass WindowWidget {
    vexactsize 0
    {
     ImageWidgetClass Vignette {
-     visible 0
+     visible 1
      ignorepointer 0
      color 0 0 0 0.7843
      position 0 0
@@ -83,7 +83,7 @@ WindowWidgetClass WindowWidget {
      filter 1
     }
     ImageWidgetClass Colorful_Shader0 {
-     visible 1
+     visible 0
      ignorepointer 1
      keepsafezone 0
      position 0 0

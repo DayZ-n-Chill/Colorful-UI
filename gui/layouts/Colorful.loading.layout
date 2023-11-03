@@ -21,7 +21,7 @@ FrameWidgetClass LoadingFrame_root {
    vexactsize 0
    fixaspect outside
    image0 ""
-   imageTexture "{A5D8917F066B3FDC}Colorful-UI/gui/textures/loading_screens/Colorful-BG-12.edds"
+   imageTexture "{35EECDC167D4D2AA}Colorful-UI/gui/textures/loading_screens/LabLoadScreen_1.edds"
    mode opaque
    "src alpha" 0
    stretch 1
@@ -40,7 +40,7 @@ FrameWidgetClass LoadingFrame_root {
    vexactsize 0
    fixaspect outside
    image0 ""
-   imageTexture "{DADD85D033C8074F}Colorful-UI/gui/textures/loading_screens/TheLab-LS1.edds"
+   imageTexture "{35EECDC167D4D2AA}Colorful-UI/gui/textures/loading_screens/LabLoadScreen_1.edds"
    mode opaque
    "src alpha" 0
    stretch 1
@@ -149,11 +149,11 @@ FrameWidgetClass LoadingFrame_root {
      hexactsize 0
      vexactsize 0
      scaled 1
-     imageTexture "{A78E9ED74CB35BD1}Colorful-UI/gui/textures/globals/Colorful.Shading.edds"
+     imageTexture "{942C453B0EBBFCF8}Colorful-UI/gui/textures/globals/LoadingShader.edds"
      mode blend
      "src alpha" 1
      "no wrap" 1
-     stretch 0
+     stretch 1
     }
    }
   }
@@ -172,7 +172,7 @@ FrameWidgetClass LoadingFrame_root {
      visible 1
      clipchildren 0
      inheritalpha 1
-     size 640 406
+     size 650 400
      halign center_ref
      hexactpos 0
      vexactpos 0
@@ -180,7 +180,7 @@ FrameWidgetClass LoadingFrame_root {
      vexactsize 1
      fixaspect outside
      image0 ""
-     imageTexture "{E3064361AB8CBF10}Colorful-UI/gui/textures/globals/TheLab.Logo.edds"
+     imageTexture "{BB70E7AC4118E41B}Colorful-UI/gui/textures/globals/Logo.Large.edds"
      mode blend
      "src alpha" 1
      "no wrap" 1
@@ -192,10 +192,12 @@ FrameWidgetClass LoadingFrame_root {
      visible 1
      disabled 0
      keepsafezone 1
+     position 0 40
      size 1 0.03
      halign center_ref
      valign bottom_ref
-     vexactpos 0
+     hexactpos 1
+     vexactpos 1
      text "Your tips text will go here"
      font "Colorful-UI/gui/fonts/SquareFont20"
      "exact text" 1
@@ -204,462 +206,40 @@ FrameWidgetClass LoadingFrame_root {
      "text halign" center
      "text valign" center
     }
-    GridSpacerWidgetClass Socials {
-     visible 0
-     ignorepointer 1
-     position 0 0
-     size 0 0
-     halign right_ref
-     valign bottom_ref
-     hexactpos 0
-     vexactpos 0
-     hexactsize 1
-     vexactsize 1
-     "Size To Content H" 1
-     "Size To Content V" 1
-     Columns 1
-     Rows 5
-     {
-      ButtonWidgetClass DiscordBtn {
-       color 0 0 0 0
-       size 293 39
-       halign right_ref
-       valign center_ref
-       hexactpos 1
-       vexactpos 1
-       hexactsize 1
-       vexactsize 1
-       style Empty
-       "no focus" 0
-       "next left" "news_main"
-       "next right" "news_main"
-       "next up" "choose_server"
-       "next down" "play_video"
-       {
-        PanelWidgetClass DiscordBtn_panel {
-         ignorepointer 1
-         color 0 0 0 0
-         size 293 39
-         halign right_ref
-         valign center_ref
-         hexactpos 0
-         vexactpos 0
-         hexactsize 1
-         vexactsize 1
-         style DayZDefaultPanel
-         {
-          ImageWidgetClass DiscordBtn_img {
-           clipchildren 0
-           ignorepointer 1
-           size 47 39
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 1
-           vexactsize 1
-           imageTexture "{4E98404B3EE57BD9}Colorful-UI/gui/textures/main_menu/Colorful.Discord.edds"
-           mode blend
-           "src alpha" 1
-           "no wrap" 1
-           stretch 1
-           filter 0
-          }
-          TextWidgetClass DiscordBtn_label {
-           clipchildren 0
-           ignorepointer 1
-           position 60 0
-           size 1 1
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           text "Discord"
-           font "Colorful-UI/gui/fonts/Ethnocentric20"
-           "exact text" 1
-           "size to text h" 1
-           "size to text v" 0
-           "text halign" right
-           "text valign" center
-          }
-         }
-        }
-       }
-      }
-      ButtonWidgetClass TwitterBtn {
-       color 0 0 0 0
-       size 293 39
-       halign right_ref
-       valign center_ref
-       hexactpos 1
-       vexactpos 1
-       hexactsize 1
-       vexactsize 1
-       style Empty
-       "no focus" 0
-       "next left" "news_main"
-       "next right" "news_main"
-       "next up" "choose_server"
-       "next down" "play_video"
-       {
-        PanelWidgetClass TwitterBtn_panel {
-         ignorepointer 1
-         color 0 0 0 0
-         size 293 39
-         halign right_ref
-         valign center_ref
-         hexactpos 0
-         vexactpos 0
-         hexactsize 1
-         vexactsize 1
-         style DayZDefaultPanel
-         {
-          ImageWidgetClass TwitterBtn_img {
-           clipchildren 0
-           ignorepointer 1
-           size 47 39
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 1
-           vexactsize 1
-           imageTexture "{56507986E3807A3B}Colorful-UI/gui/textures/main_menu/Colorful.Twitter.edds"
-           mode blend
-           "src alpha" 1
-           "no wrap" 1
-           stretch 1
-           filter 0
-          }
-          TextWidgetClass TwitterBtn_label {
-           clipchildren 0
-           ignorepointer 1
-           position 60 0
-           size 1 1
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           text "Twitter"
-           font "Colorful-UI/gui/fonts/Ethnocentric20"
-           "exact text" 1
-           "size to text h" 1
-           "size to text v" 0
-           "text halign" right
-           "text valign" center
-          }
-         }
-        }
-       }
-      }
-      ButtonWidgetClass RedditBtn {
-       visible 1
-       color 0 0 0 0
-       size 293 39
-       halign right_ref
-       valign center_ref
-       hexactpos 1
-       vexactpos 1
-       hexactsize 1
-       vexactsize 1
-       style Empty
-       "no focus" 0
-       "next left" "news_main"
-       "next right" "news_main"
-       "next up" "choose_server"
-       "next down" "play_video"
-       {
-        PanelWidgetClass RedditBtn_panel {
-         ignorepointer 1
-         color 0 0 0 0
-         size 293 39
-         halign right_ref
-         valign center_ref
-         hexactpos 0
-         vexactpos 0
-         hexactsize 1
-         vexactsize 1
-         style DayZDefaultPanel
-         {
-          ImageWidgetClass RedditBtn_img {
-           clipchildren 0
-           ignorepointer 1
-           size 47 39
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 1
-           vexactsize 1
-           imageTexture "{042531BECC696FCF}Colorful-UI/gui/textures/main_menu/Colorful.Reddit.edds"
-           mode blend
-           "src alpha" 1
-           "no wrap" 1
-           stretch 1
-           filter 0
-          }
-          TextWidgetClass RedditBtn_label {
-           clipchildren 0
-           ignorepointer 1
-           position 60 0
-           size 1 1
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           text "Reddit"
-           font "Colorful-UI/gui/fonts/Ethnocentric20"
-           "exact text" 1
-           "size to text h" 1
-           "size to text v" 0
-           "text halign" right
-           "text valign" center
-          }
-         }
-        }
-       }
-      }
-      ButtonWidgetClass YoutubeBtn {
-       visible 1
-       color 0 0 0 0
-       size 293 39
-       halign right_ref
-       valign center_ref
-       hexactpos 1
-       vexactpos 1
-       hexactsize 1
-       vexactsize 1
-       style Empty
-       "no focus" 0
-       "next left" "news_main"
-       "next right" "news_main"
-       "next up" "choose_server"
-       "next down" "play_video"
-       {
-        PanelWidgetClass YoutubeBtn_panel {
-         ignorepointer 1
-         color 0 0 0 0
-         size 293 39
-         halign right_ref
-         valign center_ref
-         hexactpos 0
-         vexactpos 0
-         hexactsize 1
-         vexactsize 1
-         style DayZDefaultPanel
-         {
-          ImageWidgetClass YoutubeBtn_img {
-           clipchildren 0
-           ignorepointer 1
-           size 47 39
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 1
-           vexactsize 1
-           imageTexture "{FDBC9A6B3BB8B821}Colorful-UI/gui/textures/main_menu/Colorful.Youtube.edds"
-           mode blend
-           "src alpha" 1
-           "no wrap" 1
-           stretch 1
-           filter 0
-          }
-          TextWidgetClass YoutubeBtn_label {
-           clipchildren 0
-           ignorepointer 1
-           position 60 0
-           size 1 1
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           text "YouTube"
-           font "Colorful-UI/gui/fonts/Ethnocentric20"
-           "exact text" 1
-           "size to text h" 1
-           "text halign" right
-           "text valign" center
-          }
-         }
-        }
-       }
-      }
-      ButtonWidgetClass FacebookBtn {
-       visible 1
-       color 0 0 0 0
-       size 293 39
-       halign right_ref
-       valign center_ref
-       hexactpos 1
-       vexactpos 1
-       hexactsize 1
-       vexactsize 1
-       style Empty
-       "no focus" 0
-       "next left" "news_main"
-       "next right" "news_main"
-       "next up" "choose_server"
-       "next down" "play_video"
-       {
-        PanelWidgetClass FacebookBtn_panel {
-         ignorepointer 1
-         color 0 0 0 0
-         size 293 39
-         halign right_ref
-         valign center_ref
-         hexactpos 0
-         vexactpos 0
-         hexactsize 1
-         vexactsize 1
-         style DayZDefaultPanel
-         {
-          ImageWidgetClass FacebookBtn_img {
-           clipchildren 0
-           ignorepointer 1
-           size 47 39
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 1
-           vexactsize 1
-           imageTexture "{25DB8D90C00B0710}Colorful-UI/gui/textures/main_menu/Colorful.Facebook.edds"
-           mode blend
-           "src alpha" 1
-           "no wrap" 1
-           stretch 1
-           filter 0
-          }
-          TextWidgetClass FacebookBtn_label {
-           clipchildren 0
-           ignorepointer 1
-           position 60 0
-           size 1 1
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           text "Facebook"
-           font "Colorful-UI/gui/fonts/Ethnocentric20"
-           "exact text" 1
-           "size to text h" 1
-           "text halign" right
-           "text valign" center
-          }
-         }
-        }
-       }
-      }
-      ButtonWidgetClass MetaBtn {
-       visible 1
-       color 0 0 0 0
-       size 293 39
-       halign right_ref
-       valign center_ref
-       hexactpos 1
-       vexactpos 1
-       hexactsize 1
-       vexactsize 1
-       style Empty
-       "no focus" 0
-       "next left" "news_main"
-       "next right" "news_main"
-       "next up" "choose_server"
-       "next down" "play_video"
-       {
-        PanelWidgetClass MetaBtn_panel {
-         ignorepointer 1
-         color 0 0 0 0
-         size 293 39
-         halign right_ref
-         valign center_ref
-         hexactpos 0
-         vexactpos 0
-         hexactsize 1
-         vexactsize 1
-         style DayZDefaultPanel
-         {
-          ImageWidgetClass MetaBtn_img {
-           clipchildren 0
-           ignorepointer 1
-           size 47 39
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 1
-           vexactsize 1
-           imageTexture "{F74D2BABB67517C4}Colorful-UI/gui/textures/main_menu/Colorful.meta.edds"
-           mode blend
-           "src alpha" 1
-           "no wrap" 1
-           stretch 1
-           filter 0
-          }
-          TextWidgetClass MetaBtn_label {
-           clipchildren 0
-           ignorepointer 1
-           position 60 0
-           size 1 1
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           text "Meta"
-           font "Colorful-UI/gui/fonts/Ethnocentric20"
-           "exact text" 1
-           "size to text h" 1
-           "text halign" right
-           "text valign" center
-          }
-         }
-        }
-       }
-      }
-     }
-    }
-    ButtonWidgetClass ButtonWidget0 {
-     visible 0
-     color 0 0.2549 0.3804 1
-     position -0.00002 0.00003
-     size 150 39
-     halign right_ref
+    TextWidgetClass StatusText0 {
+     visible 1
+     clipchildren 0
+     color 0.7137 0.9529 0.7373 1
+     size 1 0.03
+     halign center_ref
      valign bottom_ref
      hexactpos 1
      vexactpos 1
-     hexactsize 1
-     vexactsize 1
-     style Colorable
-     {
-      TextWidgetClass TextWidget0 {
-       ignorepointer 1
-       size 142.569 48
-       halign center_ref
-       valign center_ref
-       hexactpos 1
-       vexactpos 1
-       hexactsize 1
-       vexactsize 1
-       text "Skip the wait!"
-       font "Colorful-UI/gui/fonts/SquareFont16"
-       "exact text" 1
-       "size to text h" 1
-       "size to text v" 1
-      }
-     }
+     text "The Game is Loading ..."
+     font "Colorful-ui/gui/fonts/Ethnocentric16"
+     "exact text" 1
+     "size to text h" 1
+     "size to text v" 1
+     "text halign" center
+     "text valign" center
+    }
+    TextWidgetClass StatusText1 {
+     visible 1
+     clipchildren 0
+     color 0.2588 0.6863 0.3647 1
+     position 0 65
+     size 1 0.03
+     halign center_ref
+     valign bottom_ref
+     hexactpos 1
+     vexactpos 1
+     text "Pro Tip:"
+     font "Colorful-ui/gui/fonts/Ethnocentric16"
+     "exact text" 1
+     "size to text h" 1
+     "size to text v" 1
+     "text halign" center
+     "text valign" center
     }
    }
   }

@@ -27,7 +27,7 @@ FrameWidgetClass DialogRoot {
    scaled 1
    fixaspect outside
    image0 ""
-   imageTexture "{DADD85D033C8074F}Colorful-UI/gui/textures/loading_screens/TheLab-LS1.edds"
+   imageTexture "{35EECDC167D4D2AA}Colorful-UI/gui/textures/loading_screens/LabLoadScreen_1.edds"
    mode opaque
    "src alpha" 1
    "no wrap" 1
@@ -108,7 +108,7 @@ FrameWidgetClass DialogRoot {
      filter 1
     }
     ImageWidgetClass Colorful_Shader0 {
-     visible 1
+     visible 0
      ignorepointer 1
      keepsafezone 0
      position 0 0

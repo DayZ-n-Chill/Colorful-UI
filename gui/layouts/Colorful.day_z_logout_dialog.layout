@@ -29,10 +29,10 @@ WindowWidgetClass LogoutDialogRoot {
    vexactsize 0
    {
     ImageWidgetClass Vignette {
-     visible 0
+     visible 1
      ignorepointer 0
      color 0 0 0 0.7843
-     position 0 0
+     position -1.21409 -2.42818
      size 1 1
      halign center_ref
      valign center_ref
@@ -86,7 +86,7 @@ WindowWidgetClass LogoutDialogRoot {
      filter 1
     }
     ImageWidgetClass Colorful_Shader0 {
-     visible 1
+     visible 0
      ignorepointer 1
      keepsafezone 0
      position 0 0
@@ -979,14 +979,14 @@ WindowWidgetClass LogoutDialogRoot {
      visible 1
      clipchildren 0
      inheritalpha 1
-     size 640 406
+     size 650 400
      hexactpos 0
      vexactpos 0
      hexactsize 1
      vexactsize 1
      fixaspect outside
      image0 ""
-     imageTexture "{E3064361AB8CBF10}Colorful-UI/gui/textures/globals/TheLab.Logo.edds"
+     imageTexture "{BB70E7AC4118E41B}Colorful-UI/gui/textures/globals/Logo.Large.edds"
      mode blend
      "src alpha" 1
      "no wrap" 1

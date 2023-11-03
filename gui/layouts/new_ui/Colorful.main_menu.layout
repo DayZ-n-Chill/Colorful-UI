@@ -64,7 +64,7 @@ FrameWidgetClass main_menu_root {
      filter 0
      nocache 1
     }
-    ImageWidgetClass Colorful_Shader {
+    ImageWidgetClass Lab_Shader {
      visible 1
      ignorepointer 1
      keepsafezone 0
@@ -165,7 +165,7 @@ FrameWidgetClass main_menu_root {
        keepsafezone 1
        color 1 1 1 0
        position 0.25 0
-       size 32 32
+       size 24 24
        halign right_ref
        valign center_ref
        hexactpos 0
@@ -192,7 +192,7 @@ FrameWidgetClass main_menu_root {
          hexactsize 0
          vexactsize 0
          image0 ""
-         imageTexture "{E4A8A5710740B6C7}Colorful-UI/gui/textures/main_menu/TheLab.Settings.edds"
+         imageTexture "{02A70B3C0187FE2F}Colorful-UI/gui/textures/globals/Icon.Settings.edds"
          mode blend
          "src alpha" 1
          "no wrap" 1
@@ -204,7 +204,7 @@ FrameWidgetClass main_menu_root {
        visible 1
        color 1 1 1 0
        position 0.75 0
-       size 36 32
+       size 30 24
        halign right_ref
        valign center_ref
        hexactpos 0
@@ -229,7 +229,7 @@ FrameWidgetClass main_menu_root {
          hexactsize 0
          vexactsize 0
          image0 ""
-         imageTexture "{6E949AD2FD7EC22C}Colorful-UI/gui/textures/main_menu/TheLab.Character.edds"
+         imageTexture "{4D6D646CD13DF5E9}Colorful-UI/gui/textures/globals/Icon.Character.edds"
          mode blend
          "src alpha" 1
          "no wrap" 1
@@ -241,7 +241,7 @@ FrameWidgetClass main_menu_root {
        visible 1
        color 1 1 1 0
        position 0.5 0
-       size 33 32
+       size 24 24
        halign right_ref
        valign center_ref
        hexactpos 0
@@ -267,7 +267,7 @@ FrameWidgetClass main_menu_root {
          hexactsize 0
          vexactsize 0
          image0 ""
-         imageTexture "{A20B2CEE6925E784}Colorful-UI/gui/textures/main_menu/TheLab.Website.edds"
+         imageTexture "{4D11E2DEFD7D44FC}Colorful-UI/gui/textures/globals/Icon.Website.edds"
          mode blend
          "src alpha" 1
          "no wrap" 1
@@ -277,7 +277,7 @@ FrameWidgetClass main_menu_root {
       }
       ButtonWidgetClass Discord_button {
        color 1 1 1 0
-       size 38 32
+       size 30 24
        halign right_ref
        valign center_ref
        hexactpos 0
@@ -304,7 +304,7 @@ FrameWidgetClass main_menu_root {
          hexactsize 0
          vexactsize 0
          image0 ""
-         imageTexture "{F0B108AC82AE6882}Colorful-UI/gui/textures/main_menu/TheLab.Discord.edds"
+         imageTexture "{1FABC69C16F6CBFA}Colorful-UI/gui/textures/globals/Icon.Discord.edds"
          mode blend
          "src alpha" 1
          "no wrap" 1
@@ -366,7 +366,7 @@ FrameWidgetClass main_menu_root {
          hexactsize 0
          vexactsize 0
          image0 ""
-         imageTexture "{7C5C3EB621A854F6}Colorful-UI/gui/textures/main_menu/Store.Btn.edds"
+         imageTexture "{84AAE21518C4DC63}Colorful-UI/gui/textures/main_menu/Button.Store.edds"
          mode blend
          "src alpha" 1
          "no wrap" 1
@@ -376,7 +376,7 @@ FrameWidgetClass main_menu_root {
       }
       ButtonWidgetClass exit_button {
        color 1 1 1 0
-       size 32 32
+       size 24 24
        halign right_ref
        valign center_ref
        hexactpos 0
@@ -403,7 +403,7 @@ FrameWidgetClass main_menu_root {
          hexactsize 0
          vexactsize 0
          image0 ""
-         imageTexture "{3F9602D46FB097F4}Colorful-UI/gui/textures/main_menu/TheLab.LogOout.edds"
+         imageTexture "{B3900CC7DCE306D7}Colorful-UI/gui/textures/globals/Icon.Logout.edds"
          mode blend
          "src alpha" 1
          "no wrap" 1
@@ -443,6 +443,7 @@ FrameWidgetClass main_menu_root {
        text_halign right
        {
         ImageWidgetClass play_panel {
+         visible 1
          ignorepointer 1
          size 1 1
          halign center_ref
@@ -451,7 +452,7 @@ FrameWidgetClass main_menu_root {
          vexactpos 0
          hexactsize 0
          vexactsize 0
-         imageTexture "{92146B134F03ADDF}Colorful-UI/gui/textures/main_menu/USMain.Btn.Active.edds"
+         imageTexture "{D6F18F97F5D1264C}Colorful-UI/gui/textures/main_menu/US.Active.edds"
          mode blend
          "src alpha" 1
          "no wrap" 1
@@ -487,7 +488,7 @@ FrameWidgetClass main_menu_root {
          vexactpos 0
          hexactsize 0
          vexactsize 0
-         imageTexture "{F9F06F7254FF2ECA}Colorful-UI/gui/textures/main_menu/EUMain.Btn.Active.edds"
+         imageTexture "{44851759857F7334}Colorful-UI/gui/textures/main_menu/EU.Active.edds"
          mode blend
          "src alpha" 1
          "no wrap" 1
@@ -525,7 +526,7 @@ FrameWidgetClass main_menu_root {
          vexactpos 0
          hexactsize 0
          vexactsize 0
-         imageTexture "{F9F06F7254FF2ECA}Colorful-UI/gui/textures/main_menu/EUMain.Btn.Active.edds"
+         imageTexture "{E13098CCD0AB04A0}Colorful-UI/gui/textures/main_menu/AU.Active.edds"
          mode blend
          "src alpha" 1
          "no wrap" 1
@@ -562,7 +563,7 @@ FrameWidgetClass main_menu_root {
          vexactpos 0
          hexactsize 0
          vexactsize 0
-         imageTexture "{6DCEDEB0A770BA73}Colorful-UI/gui/textures/main_menu/USMain.Btn.Disabled.edds"
+         imageTexture "{03BE1A0104F66494}Colorful-UI/gui/textures/main_menu/US.Disabled.edds"
          mode blend
          "src alpha" 1
          "no wrap" 1
@@ -599,7 +600,7 @@ FrameWidgetClass main_menu_root {
          vexactpos 0
          hexactsize 0
          vexactsize 0
-         imageTexture "{D510C9279840880A}Colorful-UI/gui/textures/main_menu/EUMain.Btn.Disabled.edds"
+         imageTexture "{E9A1901034577CF6}Colorful-UI/gui/textures/main_menu/EU.Disabled.edds"
          mode blend
          "src alpha" 1
          "no wrap" 1
@@ -637,7 +638,7 @@ FrameWidgetClass main_menu_root {
          vexactpos 0
          hexactsize 0
          vexactsize 0
-         imageTexture "{586109D0BFA686AF}Colorful-UI/gui/textures/main_menu/AUMain.Btn.Disabled.edds"
+         imageTexture "{9A6ED7BA6916BBE4}Colorful-UI/gui/textures/main_menu/AU.Disabled.edds"
          mode blend
          "src alpha" 1
          "no wrap" 1
@@ -648,7 +649,7 @@ FrameWidgetClass main_menu_root {
       }
       ButtonWidgetClass LeftSelect {
        position 0 17
-       size 48 48
+       size 50 60
        hexactpos 1
        vexactpos 1
        hexactsize 1
@@ -657,14 +658,14 @@ FrameWidgetClass main_menu_root {
        {
         ImageWidgetClass ChevronLeft {
          ignorepointer 1
-         size 50 50
+         size 50 60
          halign center_ref
          valign center_ref
          hexactpos 1
          vexactpos 1
          hexactsize 1
          vexactsize 1
-         imageTexture "{AAA7FE5FE0B8EA56}Colorful-UI/gui/textures/main_menu/LeftChev.edds"
+         imageTexture "{405A4980DB86661E}Colorful-UI/gui/textures/main_menu/Chevron.Left.edds"
          mode blend
          "src alpha" 1
          "no wrap" 1
@@ -674,7 +675,7 @@ FrameWidgetClass main_menu_root {
       }
       ButtonWidgetClass RightSelect {
        position 0 17
-       size 48 48
+       size 50 60
        halign right_ref
        hexactpos 1
        vexactpos 1
@@ -684,14 +685,14 @@ FrameWidgetClass main_menu_root {
        {
         ImageWidgetClass ChevronRight {
          ignorepointer 1
-         size 50 50
+         size 50 60
          halign center_ref
          valign center_ref
          hexactpos 1
          vexactpos 1
          hexactsize 1
          vexactsize 1
-         imageTexture "{DE603F3FC8B56150}Colorful-UI/gui/textures/main_menu/RightChev.edds"
+         imageTexture "{05F2FE3F55B2C4B7}Colorful-UI/gui/textures/main_menu/Chevron.Right.edds"
          mode blend
          "src alpha" 1
          "no wrap" 1
@@ -755,7 +756,7 @@ FrameWidgetClass main_menu_root {
      vexactpos 1
      hexactsize 1
      vexactsize 1
-     imageTexture "{5AC8FB04A94F95EB}Colorful-UI/gui/textures/main_menu/Offline.edds"
+     imageTexture "{8302015B41E40BCC}Colorful-UI/gui/textures/main_menu/Badge.Offline.edds"
      mode blend
      "src alpha" 1
      "no wrap" 1

@@ -105,7 +105,7 @@ FrameWidgetClass DialogRoot {
      filter 1
     }
     ImageWidgetClass Colorful_Shader0 {
-     visible 1
+     visible 0
      ignorepointer 1
      keepsafezone 0
      position 0 0
