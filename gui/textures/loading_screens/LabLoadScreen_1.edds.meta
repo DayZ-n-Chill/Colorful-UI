@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{35EECDC167D4D2AA}Colorful-UI/gui/textures/loading_screens/LabLoadScreen_1.edds"
+ Author "sdf-1"
+ ChangeDate 311799649
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "LabLoadScreen_1.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

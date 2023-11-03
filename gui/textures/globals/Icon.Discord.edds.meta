@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{1FABC69C16F6CBFA}Colorful-UI/gui/textures/globals/Icon.Discord.edds"
+ Author "sdf-1"
+ ChangeDate 1186312033
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Icon.Discord.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{B3900CC7DCE306D7}Colorful-UI/gui/textures/globals/Icon.Logout.edds"
+ Author "sdf-1"
+ ChangeDate 448114529
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Icon.Logout.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

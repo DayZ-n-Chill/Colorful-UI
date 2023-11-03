@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{CA20F312CE863EF2}Colorful-UI/gui/textures/main_menu/Badge.Online.edds"
+ Author "sdf-1"
+ ChangeDate 514699105
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Badge.Online.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

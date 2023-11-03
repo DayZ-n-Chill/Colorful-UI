@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{03BE1A0104F66494}Colorful-UI/gui/textures/main_menu/US.Disabled.edds"
+ Author "sdf-1"
+ ChangeDate 1789243233
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "US.Disabled.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

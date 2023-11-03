@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{405A4980DB86661E}Colorful-UI/gui/textures/main_menu/Chevron.Left.edds"
+ Author "sdf-1"
+ ChangeDate 883797857
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Chevron.Left.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

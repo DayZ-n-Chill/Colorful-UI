@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{942C453B0EBBFCF8}Colorful-UI/gui/textures/globals/LoadingShader.edds"
+ Author "sdf-1"
+ ChangeDate -1541017759
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "LoadingShader.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

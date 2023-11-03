@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{ED4526C29DBC14D9}Colorful-UI/gui/textures/main_menu/Colorful.Youtube.edds"
+ Author "corruscant"
+ ChangeDate 1838427374
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Colorful.Youtube.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

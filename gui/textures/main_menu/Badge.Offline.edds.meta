@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{8302015B41E40BCC}Colorful-UI/gui/textures/main_menu/Badge.Offline.edds"
+ Author "sdf-1"
+ ChangeDate 313372513
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Badge.Offline.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

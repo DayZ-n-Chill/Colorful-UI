@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{4D6D646CD13DF5E9}Colorful-UI/gui/textures/globals/Icon.Character.edds"
+ Author "sdf-1"
+ ChangeDate 1018539873
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Icon.Character.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}
