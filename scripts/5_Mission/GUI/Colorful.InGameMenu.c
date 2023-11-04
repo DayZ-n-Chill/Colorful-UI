@@ -8,6 +8,8 @@ modded class InGameMenu extends UIScriptedMenu
 	private Widget m_Reddit;
 	private Widget m_Facebook;
 	private Widget m_KillCountText
+	private Widget DeathScreen;
+	private Widget DeathScreenMsg;
 	private TextWidget m_PlayerNameText;
 
 	override Widget Init()

@@ -1,5 +1,6 @@
 // This Constants Page is meant to act as a config file for the UI. 
 // Make adustments as needed to this files to suit your servers needs.
+static bool m_ShowDeathScreen = false;
 
 // RANDOM BACKGROUND IMAGES -----------------------------------------------
 string GetRandomBackground()
