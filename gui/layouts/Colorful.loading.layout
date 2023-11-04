@@ -242,7 +242,7 @@ FrameWidgetClass LoadingFrame_root {
        hexactpos 1
        vexactpos 1
        text "Your tips text will go here"
-       font "Colorful-UI/gui/fonts/SquareFont26"
+       font "Colorful-UI/gui/fonts/SquareFont24"
        "exact text" 1
        "size to text h" 1
        "size to text v" 1

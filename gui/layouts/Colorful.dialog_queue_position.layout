@@ -314,7 +314,7 @@ PanelWidgetClass TextInputDialog_root {
          vexactsize 0
          style Bold
          text "You are player"
-         font "Colorful-ui/gui/fonts/SquareFont26"
+         font "Colorful-ui/gui/fonts/SquareFont24"
          "exact text" 1
          "size to text h" 1
          "size to text v" 1
@@ -334,7 +334,7 @@ PanelWidgetClass TextInputDialog_root {
          scaled 1
          style None
          text "123"
-         font "Colorful-ui/gui/fonts/SquareFont26"
+         font "Colorful-ui/gui/fonts/SquareFont24"
          "exact text" 1
          "exact text size" 22
          "size to text h" 1
@@ -355,7 +355,7 @@ PanelWidgetClass TextInputDialog_root {
          vexactsize 0
          style Bold
          text "in queue"
-         font "Colorful-ui/gui/fonts/SquareFont26"
+         font "Colorful-ui/gui/fonts/SquareFont24"
          "exact text" 1
          "size to text h" 1
          "size to text v" 1

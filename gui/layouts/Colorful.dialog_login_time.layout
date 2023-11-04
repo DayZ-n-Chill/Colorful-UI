@@ -289,7 +289,7 @@ WindowWidgetClass TextInputDialog_root {
        vexactsize 0
        style Bold
        text "placeholder text"
-       font "Colorful-ui/gui/fonts/SquareFont26"
+       font "Colorful-ui/gui/fonts/SquareFont24"
        "exact text" 1
        "size to text h" 1
        "size to text v" 1
