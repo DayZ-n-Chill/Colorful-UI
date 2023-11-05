@@ -34,7 +34,7 @@ WrapSpacerWidgetClass closable_header_root {
    mode opaque
    "src alpha" 0
    "no wrap" 0
-   stretch 0
+   stretch 1
    {
     FrameWidgetClass LeftSpacer {
      ignorepointer 1
@@ -74,6 +74,7 @@ WrapSpacerWidgetClass closable_header_root {
          {
           ImageWidgetClass LTArrow {
            ignorepointer 1
+           color 0.8 0.8 0.8 1
            size 0.3 0.24
            halign center_ref
            hexactpos 1
@@ -103,6 +104,7 @@ WrapSpacerWidgetClass closable_header_root {
          {
           ImageWidgetClass RTArrow {
            ignorepointer 1
+           color 0.8 0.8 0.8 1
            size 0.3 0.24
            halign center_ref
            valign bottom_ref
@@ -139,8 +141,8 @@ WrapSpacerWidgetClass closable_header_root {
     RichTextWidgetClass TextWidget0 {
      clipchildren 0
      ignorepointer 1
-     position 50 -2
-     size 0.9 46
+     position 32 -2
+     size 0.9 36
      halign center_ref
      valign center_ref
      hexactpos 1
@@ -149,8 +151,8 @@ WrapSpacerWidgetClass closable_header_root {
      vexactsize 1
      style DayZNormal
      text "CLOSABLE HEADER"
-     font "Colorful-UI/gui/fonts/SquareFont24"
-     "exact text" 1
+     font "Colorful-UI/gui/fonts/SquareFont22"
+     "exact text" 0
      "exact text size" 24
      "size to text h" 0
      "size to text v" 1

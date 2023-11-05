@@ -255,9 +255,8 @@ FrameWidgetClass inventory_root {
     }
     FrameWidgetClass SpecializationPanelPanel {
      ignorepointer 1
-     position 0 32
      size 292 32
-     valign bottom_ref
+     halign right_ref
      hexactpos 1
      vexactpos 1
      hexactsize 1

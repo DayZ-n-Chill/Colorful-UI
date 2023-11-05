@@ -2,7 +2,7 @@ ImageWidgetClass height_wrapper {
  clipchildren 0
  ignorepointer 1
  color 0 0 0 0.3529
- size 1 70
+ size 1 60
  halign center_ref
  hexactpos 1
  vexactpos 1
@@ -72,8 +72,8 @@ ImageWidgetClass height_wrapper {
   }
   TextWidgetClass TextWidget0 {
    ignorepointer 1
-   position 25 0
-   size 1 0.6
+   position 0 0
+   size 1 0.7
    halign center_ref
    valign center_ref
    hexactpos 1
@@ -83,9 +83,10 @@ ImageWidgetClass height_wrapper {
    style Normal
    text "#layout_collapsible_header"
    font "Colorful-UI/gui/fonts/SquareFont28"
+   "text offset" 25 0
    "bold text" 1
    "text sharpness" 0.5
-   "exact text" 0
+   "exact text" 1
    "exact text size" 24
    "size to text h" 0
    "size to text v" 0

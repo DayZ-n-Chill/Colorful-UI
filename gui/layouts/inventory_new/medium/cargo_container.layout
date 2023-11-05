@@ -27,7 +27,7 @@ FrameWidgetClass grid_container_root {
    Rows 2
    {
     WrapSpacerWidgetClass grid_container_header_spacer {
-     visible 0
+     visible 1
      ignorepointer 1
      size 1 52
      halign center_ref
@@ -54,9 +54,11 @@ FrameWidgetClass grid_container_root {
        vexactsize 1
        draggable 1
        scriptclass ""
-       image0 "set:dayz_gui image:inv_header_1"
-       mode blend
+       image0 ""
+       imageTexture "{1EBDEB3BCB073C08}Colorful-UI/gui/textures/Inventory/Inv.Hdr.Background.edds"
+       mode opaque
        "src alpha" 1
+       stretch 1
        {
         RichTextWidgetClass TextWidget0 {
          ignorepointer 1

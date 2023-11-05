@@ -8,7 +8,7 @@ modded class WidgetLayoutName extends WidgetLayoutName
 	const string InventoryWide					= "Colorful-UI/gui/layouts/inventory_new/wide/day_z_inventory_new.layout";
 	#endif
 	
-	const string HandsPreview					= "Colorful-UI/gui/layouts/inventory_new/hands_preview.layout";
+	const string HandsPreview					= "gui/layouts/inventory_new/hands_preview.layout";
 	
 	const string InventorySlotsContainerNarrow	= "gui/layouts/inventory_new/narrow/inventory_slots_container.layout";
 	const string InventorySlotsContainerMedium	= "gui/layouts/inventory_new/medium/inventory_slots_container.layout";
