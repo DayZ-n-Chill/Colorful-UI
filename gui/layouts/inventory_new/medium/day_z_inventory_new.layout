@@ -458,5 +458,24 @@ FrameWidgetClass inventory_root {
     }
    }
   }
+  ImageWidgetClass Lab_Shader {
+   visible 1
+   ignorepointer 1
+   keepsafezone 0
+   position 0 0
+   size 1 1
+   halign center_ref
+   valign center_ref
+   hexactpos 1
+   vexactpos 1
+   hexactsize 0
+   vexactsize 0
+   scaled 1
+   imageTexture "{942C453B0EBBFCF8}Colorful-UI/gui/textures/globals/LoadingShader.edds"
+   mode blend
+   "src alpha" 1
+   "no wrap" 1
+   stretch 1
+  }
  }
 }
