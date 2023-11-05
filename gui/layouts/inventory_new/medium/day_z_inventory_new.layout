@@ -62,7 +62,7 @@ FrameWidgetClass inventory_root {
          "no focus" 1
         }
         PanelWidgetClass LeftBackground {
-         visible 1
+         visible 0
          clipchildren 0
          ignorepointer 0
          color 0 0 0 0.098
@@ -92,7 +92,7 @@ FrameWidgetClass inventory_root {
          style blank
         }
         PanelWidgetClass RightBackground {
-         visible 1
+         visible 0
          clipchildren 0
          ignorepointer 0
          color 0 0 0 0.098
