@@ -1,8 +1,8 @@
 ImageWidgetClass height_wrapper {
  clipchildren 0
  ignorepointer 1
- color 0.6863 0.2588 0.2588 1
- size 1 48
+ color 0 0 0 0.3529
+ size 1 70
  halign center_ref
  hexactpos 1
  vexactpos 1
@@ -10,11 +10,12 @@ ImageWidgetClass height_wrapper {
  vexactsize 1
  scaled 1
  fixaspect inside
- image0 "set:dayz_gui image:inv_header_2"
- mode blend
- "src alpha" 1
- "no wrap" 1
- stretch 1
+ image0 ""
+ imageTexture "{1EBDEB3BCB073C08}Colorful-UI/gui/textures/Inventory/Inv.Hdr.Background.edds"
+ mode opaque
+ "src alpha" 0
+ "no wrap" 0
+ stretch 0
  {
   PanelWidgetClass collapse_button {
    visible 0
@@ -71,8 +72,7 @@ ImageWidgetClass height_wrapper {
   }
   TextWidgetClass TextWidget0 {
    ignorepointer 1
-   color 0 0 0 1
-   position 0 0
+   position 25 0
    size 1 0.6
    halign center_ref
    valign center_ref
@@ -82,15 +82,27 @@ ImageWidgetClass height_wrapper {
    vexactsize 0
    style Normal
    text "#layout_collapsible_header"
-   font "gui/fonts/sdf_MetronBook72"
+   font "Colorful-UI/gui/fonts/SquareFont28"
    "bold text" 1
    "text sharpness" 0.5
-   "exact text" 1
+   "exact text" 0
    "exact text size" 24
    "size to text h" 0
    "size to text v" 0
-   "text halign" center
    "text valign" center
+  }
+  ImageWidgetClass Border {
+   ignorepointer 1
+   size 1 5
+   halign center_ref
+   valign bottom_ref
+   hexactpos 1
+   vexactpos 1
+   hexactsize 0
+   vexactsize 1
+   imageTexture "{C439858A6B95BCA0}Colorful-UI/gui/textures/Inventory/Inv.Hdr.Border.edds"
+   "no wrap" 1
+   stretch 1
   }
   PanelWidgetClass Dropzone {
    ignorepointer 1

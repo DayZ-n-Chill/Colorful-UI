@@ -1,7 +1,7 @@
 PanelWidgetClass hands_preview_root {
  clipchildren 0
  ignorepointer 1
- color 0.3137 0.3137 0.3137 0.651
+ color 0 0 0 1
  size 1 180
  hexactpos 1
  vexactpos 1

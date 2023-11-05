@@ -439,9 +439,10 @@ FrameWidgetClass rootFrame {
        vexactsize 0
        priority 1
        draggable 0
-       image0 "set:dayz_gui image:inv_header_3"
-       mode blend
-       "src alpha" 1
+       image0 ""
+       imageTexture "{1EBDEB3BCB073C08}Colorful-UI/gui/textures/Inventory/Inv.Hdr.Background.edds"
+       mode opaque
+       "src alpha" 0
        "no wrap" 1
        stretch 1
        {

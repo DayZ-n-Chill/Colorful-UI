@@ -20,9 +20,8 @@ WrapSpacerWidgetClass closable_header_root {
   ImageWidgetClass PanelWidget {
    clipchildren 1
    ignorepointer 1
-   color 0.1569 0.6235 0.2745 1
    position 0 0
-   size 1 48
+   size 1 55
    halign center_ref
    hexactpos 1
    vexactpos 1
@@ -30,11 +29,12 @@ WrapSpacerWidgetClass closable_header_root {
    vexactsize 1
    priority 8
    scriptclass ""
-   image0 "set:dayz_gui image:inv_header_1"
-   mode blend
-   "src alpha" 1
-   "no wrap" 1
-   stretch 1
+   image0 ""
+   imageTexture "{1EBDEB3BCB073C08}Colorful-UI/gui/textures/Inventory/Inv.Hdr.Background.edds"
+   mode opaque
+   "src alpha" 0
+   "no wrap" 0
+   stretch 0
    {
     FrameWidgetClass LeftSpacer {
      ignorepointer 1
@@ -139,7 +139,7 @@ WrapSpacerWidgetClass closable_header_root {
     RichTextWidgetClass TextWidget0 {
      clipchildren 0
      ignorepointer 1
-     position 0 0
+     position 50 -2
      size 0.9 46
      halign center_ref
      valign center_ref
@@ -149,12 +149,11 @@ WrapSpacerWidgetClass closable_header_root {
      vexactsize 1
      style DayZNormal
      text "CLOSABLE HEADER"
-     font "gui/fonts/sdf_MetronLight24"
+     font "Colorful-UI/gui/fonts/SquareFont24"
      "exact text" 1
-     "exact text size" 20
+     "exact text size" 24
      "size to text h" 0
      "size to text v" 1
-     "text halign" center
      "text valign" center
      wrap 1
     }

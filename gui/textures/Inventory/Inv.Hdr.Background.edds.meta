@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{1EBDEB3BCB073C08}Colorful-UI/gui/textures/Inventory/Inv.Hdr.Background.edds"
+ Author "sdf-1"
+ ChangeDate -959418523
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Inv.Hdr.Background.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

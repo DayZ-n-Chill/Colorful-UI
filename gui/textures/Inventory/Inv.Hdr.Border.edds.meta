@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{C439858A6B95BCA0}Colorful-UI/gui/textures/Inventory/Inv.Hdr.Border.edds"
+ Author "sdf-1"
+ ChangeDate -1529843867
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Inv.Hdr.Border.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

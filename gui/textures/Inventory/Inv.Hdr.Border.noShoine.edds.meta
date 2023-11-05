@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{6F3466697C060C89}Colorful-UI/gui/textures/Inventory/Inv.Hdr.Border.noShoine.edds"
+ Author "sdf-1"
+ ChangeDate -791646363
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Inv.Hdr.Border.noShoine.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}
