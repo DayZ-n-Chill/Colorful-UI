@@ -19,10 +19,6 @@ modded class WidgetLayoutName
 	const string CargoContainerRowMedium		= "gui/layouts/inventory_new/medium/cargo_container_row.layout";
 	const string CargoContainerRowWide			= "gui/layouts/inventory_new/wide/cargo_container_row.layout";
 		
-	const string IconNarrow						= "gui/layouts/inventory_new/narrow/icon.layout";
-	const string IconMedium						= "gui/layouts/inventory_new/medium/icon.layout";
-	const string IconWide						= "gui/layouts/inventory_new/wide/icon.layout";
-		
 	const string LeftAreaNarrow					= "gui/layouts/inventory_new/narrow/left_area.layout";
 	const string LeftAreaMedium					= "gui/layouts/inventory_new/medium/left_area.layout";
 	const string LeftAreaWide					= "gui/layouts/inventory_new/wide/left_area.layout";
