@@ -115,7 +115,7 @@ modded class LoadingScreen
 		m_shader.SetColor(colorScheme.ShaderColor());
 		ProgressAsync.SetProgressData(m_ProgressLoading);
 		ProgressAsync.SetUserData(m_ImageBackground);
-		SetStatus(m_TextWidgetStatus.GetRandomHint());
+
 	}	
 
 	override void Show()
