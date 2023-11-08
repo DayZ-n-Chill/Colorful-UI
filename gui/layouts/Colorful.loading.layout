@@ -235,6 +235,7 @@ FrameWidgetClass LoadingFrame_root {
        visible 1
        clipchildren 0
        ignorepointer 1
+       position 0 -10
        size 1 65.96609
        halign center_ref
        valign bottom_ref
