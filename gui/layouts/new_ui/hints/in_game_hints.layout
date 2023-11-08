@@ -193,7 +193,7 @@ GridSpacerWidgetClass rootFrame {
      "stretch mode" stretch_w_h
     }
     RichTextWidgetClass HintDescLabel {
-     visible 1
+     visible 0
      clipchildren 0
      ignorepointer 1
      size 1 0

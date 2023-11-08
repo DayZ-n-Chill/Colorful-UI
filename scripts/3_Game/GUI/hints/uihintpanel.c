@@ -10,7 +10,7 @@ modded class UiHintPanelLoading extends UiHintPanel
 {
 	override void Init(DayZGame game)
 	{
-		m_RootPath = "ColorfulUI/gui/layouts/new_ui/hints/in_game_hints_load.layout";
+		m_RootPath = "Colorful-UI/gui/layouts/new_ui/hints/in_game_hints_load.layout";
 		super.Init(game);
 	}
 }

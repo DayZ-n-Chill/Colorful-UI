@@ -21,8 +21,8 @@ WindowWidgetClass TextInputDialog_root {
    imageTexture "{35EECDC167D4D2AA}Colorful-UI/gui/textures/loading_screens/LabLoadScreen_1.edds"
    mode blend
    "src alpha" 1
-   "no wrap" 1
-   stretch 1
+   "clamp mode" clamp
+   "stretch mode" stretch_w_h
   }
   ImageWidgetClass BackgroundOverride {
    visible 1
@@ -39,7 +39,7 @@ WindowWidgetClass TextInputDialog_root {
    imageTexture "{35EECDC167D4D2AA}Colorful-UI/gui/textures/loading_screens/LabLoadScreen_1.edds"
    mode opaque
    "src alpha" 0
-   stretch 1
+   "stretch mode" stretch_w_h
    "Transition width" 1
    Progress 0
   }
@@ -73,8 +73,8 @@ WindowWidgetClass TextInputDialog_root {
      imageTexture "{E6B3EF816E067499}Gui/textures/inventory_bgvignette.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
      filter 0
      nocache 1
     }
@@ -93,8 +93,8 @@ WindowWidgetClass TextInputDialog_root {
      imageTexture "{942C453B0EBBFCF8}Colorful-UI/gui/textures/globals/LoadingShader.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
     }
     ImageWidgetClass HorizShader {
      visible 0
@@ -110,8 +110,8 @@ WindowWidgetClass TextInputDialog_root {
      imageTexture "{A82F487401D497EF}Colorful-UI/gui/textures/globals/Colorful.HorizShaderTip.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
      filter 1
     }
    }
@@ -142,8 +142,8 @@ WindowWidgetClass TextInputDialog_root {
      imageTexture "{BB70E7AC4118E41B}Colorful-UI/gui/textures/globals/Logo.Large.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
      filter 1
      nocache 0
     }
@@ -188,8 +188,7 @@ WindowWidgetClass TextInputDialog_root {
        imageTexture "{294430067BE07945}Colorful-UI/gui/textures/globals/Icon.Ready.edds"
        mode blend
        "src alpha" 1
-       "no wrap" 1
-       stretch 0
+       "clamp mode" clamp
        filter 0
       }
       GridSpacerWidgetClass "Header Title" {
@@ -221,8 +220,8 @@ WindowWidgetClass TextInputDialog_root {
          imageTexture "{03B450C67D4FB148}Colorful-UI/gui/textures/globals/LoadingLine.Left.edds"
          mode blend
          "src alpha" 1
-         "no wrap" 1
-         stretch 1
+         "clamp mode" clamp
+         "stretch mode" stretch_w_h
          filter 1
         }
         TextWidgetClass "In Queue" {
@@ -255,8 +254,8 @@ WindowWidgetClass TextInputDialog_root {
          imageTexture "{F6FF98B08C37E82D}Colorful-UI/gui/textures/globals/LoadingLine.Right.edds"
          mode blend
          "src alpha" 1
-         "no wrap" 1
-         stretch 1
+         "clamp mode" clamp
+         "stretch mode" stretch_w_h
          filter 1
         }
        }
@@ -289,8 +288,7 @@ WindowWidgetClass TextInputDialog_root {
        vexactsize 0
        style Bold
        text "placeholder text"
-       font "Colorful-ui/gui/fonts/SquareFont24"
-       "exact text" 1
+       "exact text" 0
        "size to text h" 1
        "size to text v" 1
        "text halign" center
