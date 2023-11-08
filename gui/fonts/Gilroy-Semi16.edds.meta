@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{FD7893F8E65F3D87}Gilroy-Semi16.edds"
+ Author "sdf-1"
+ ChangeDate 173207400
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "Gilroy-Semi16.tga"
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}

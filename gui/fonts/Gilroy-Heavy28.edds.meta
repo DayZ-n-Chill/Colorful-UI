@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{B1D2A97653818617}Gilroy-Heavy28.edds"
+ Author "sdf-1"
+ ChangeDate -1848463512
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "Gilroy-Heavy28.tga"
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}

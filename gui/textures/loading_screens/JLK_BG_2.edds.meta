@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{7EC42C71182A4486}Colorful-UI/gui/textures/loading_screens/JLK_BG_2.edds"
+ Author "sdf-1"
+ ChangeDate -1455231128
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "JLK_BG_2.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

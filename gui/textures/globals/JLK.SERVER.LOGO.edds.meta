@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{C76821854E4562C1}Colorful-UI/gui/textures/globals/JLK.SERVER.LOGO.edds"
+ Author "sdf-1"
+ ChangeDate 1262153576
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "JLK.SERVER.LOGO.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

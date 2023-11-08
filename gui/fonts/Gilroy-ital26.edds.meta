@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{B9D481C57B66FB5B}Gilroy-ital26.edds"
+ Author "sdf-1"
+ ChangeDate -1325207704
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "Gilroy-ital26.tga"
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}

@@ -9,18 +9,6 @@ class CfgPatches
 	};
 };
 
-class CfgAddons
-{
-	class PreloadBanks{};
-	class PreloadAddons
-	{
-		class DayZ
-		{
-			list[] = {"DZ_Data","DZ_Scripts","DZ_UI","DZ_UIFonts", "COLORFUL_HUD"};
-		};
-	};
-};
-
 class CfgMods
 {
 	class COLORFUL_UI
@@ -29,7 +17,8 @@ class CfgMods
 		hideName = 1;
 		hidePicture = 1;
 		name = "DayZ n' Chill's Colorful UI";
-		credits = "DayZ n' Chill, Combat Log code provided by server owner.";
+		client = "JLK";
+		credits = "DayZ n' Chill, Combat Log code provided by client.";
 		author = "DayZ n' Chill";
 		authorID = "76561197969255905";
 		version = "0.2";

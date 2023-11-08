@@ -5,15 +5,16 @@
 string GetRandomBackground()
 {
 	const string images[] = {
-		"Colorful-UI/gui/textures/loading_screens/StalkerZ_BG_1.edds", 
-		"Colorful-UI/gui/textures/loading_screens/StalkerZ_BG_2.edds",
-        "Colorful-UI/gui/textures/loading_screens/StalkerZ_BG_3.edds",
-		"Colorful-UI/gui/textures/loading_screens/StalkerZ_BG_4.edds",
-		"Colorful-UI/gui/textures/loading_screens/StalkerZ_BG_5.edds",
-		"Colorful-UI/gui/textures/loading_screens/StalkerZ_BG_7.edds"
+		"Colorful-UI/gui/textures/loading_screens/JLK_BG_1.edds", 
+		"Colorful-UI/gui/textures/loading_screens/JLK_BG_2.edds",
+        "Colorful-UI/gui/textures/loading_screens/JLK_BG_3.edds",
+		"Colorful-UI/gui/textures/loading_screens/JLK_BG_4.edds",
+		"Colorful-UI/gui/textures/loading_screens/JLK_BG_5.edds",
+		"Colorful-UI/gui/textures/loading_screens/JLK_BG_7.edds",
+		"Colorful-UI/gui/textures/loading_screens/JLK_BG_8.edds"
 	};
 	Math.Randomize(-1);
-	int bgIndex = Math.RandomInt(0, 100) % 6;
+	int bgIndex = Math.RandomInt(0, 100) % 8;
 	return images[bgIndex];
 }
 
@@ -122,10 +123,10 @@ class UIColor
 	static int meta()                 { return ARGB(255, 24, 119, 242); };
 	
 	// Custom Colors (Use to add your own branding colors)
-	static int StalkerZ_Yellow()      { return ARGB(255, 190, 160, 40); };
-	static int StalkerZ_Orange()      { return ARGB(255, 165, 85, 0); };
-	static int StalkerZ_Yellow_2()    { return ARGB(255, 204, 153, 0); };
-	static int StalkerZ_Red()         { return ARGB(255, 105, 0, 0); };
+	static int JLK_Yellow()      { return ARGB(255, 190, 160, 40); };
+	static int JLK_Orange()      { return ARGB(255, 165, 85, 0); };
+	static int JLK_Yellow_2()    { return ARGB(255, 204, 153, 0); };
+	static int JLK_Red()         { return ARGB(255, 105, 0, 0); };
 }
 
 // DEFINE YOUR THEME -------------------------------------------------------
@@ -134,25 +135,25 @@ class colorScheme
 {
 	// Quick Styling --------------------------------------
 	// This color should be Servers/Communities Brand Color
-	static int BrandColor()   { return UIColor.StalkerZ_Red(); };
+	static int BrandColor()   { return UIColor.JLK_Red(); };
 	// This color should be a complimentary color to your brand. 
-	static int AccentColor()  { return UIColor.StalkerZ_Yellow(); };
+	static int AccentColor()  { return UIColor.JLK_Yellow(); };
 
 	// Advanced Styling --------------------------------------
 	// You can get more Ganular with the colors by editing the syltes below
 	// Get wild and create your own color functions and use them throughout the mod.
 	// Best to Primary Text as white, but do whatever, Experiment.
 	static int PrimaryText()        { return UIColor.White(); }; 	
-	static int SecondaryText()      { return UIColor.StalkerZ_Orange(); };
-	static int ShaderColor()        { return UIColor.StalkerZ_Orange(); };
-	static int SeparatorColor()     { return UIColor.StalkerZ_Orange(); };
-	static int LoadingbarColor()    { return UIColor.StalkerZ_Yellow_2(); };
+	static int SecondaryText()      { return UIColor.JLK_Orange(); };
+	static int ShaderColor()        { return UIColor.JLK_Orange(); };
+	static int SeparatorColor()     { return UIColor.JLK_Orange(); };
+	static int LoadingbarColor()    { return UIColor.JLK_Yellow_2(); };
 	static int MainMenuTrim()       { return BrandColor(); };
-	static int ButtonHoverColor()   { return UIColor.StalkerZ_Yellow_2(); };	
-	static int TabHoverColor()      { return UIColor.StalkerZ_Yellow_2(); };	
-	static int OptionInputColors()  { return UIColor.StalkerZ_Orange(); };
-	static int OptionCaretColors()  { return UIColor.StalkerZ_Orange(); };
-	static int OptionSliderColors() { return UIColor.StalkerZ_Orange(); };
+	static int ButtonHoverColor()   { return UIColor.JLK_Yellow_2(); };	
+	static int TabHoverColor()      { return UIColor.JLK_Yellow_2(); };	
+	static int OptionInputColors()  { return UIColor.JLK_Orange(); };
+	static int OptionCaretColors()  { return UIColor.JLK_Orange(); };
+	static int OptionSliderColors() { return UIColor.JLK_Orange(); };
 }
  
 // Dialog Menus (No need to touch)

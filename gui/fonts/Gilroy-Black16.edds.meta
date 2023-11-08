@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{C2E2E5570304AC5C}Gilroy-Black16.edds"
+ Author "sdf-1"
+ ChangeDate -1379225752
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "Gilroy-Black16.tga"
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}
