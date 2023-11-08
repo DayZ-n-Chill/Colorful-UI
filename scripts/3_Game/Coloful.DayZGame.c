@@ -47,15 +47,6 @@ modded class LoginTimeBase extends UIScriptedMenu
         Background.LoadImageFile(0, GetRandomBackground());  		
 		return layoutRoot;
 	}
-	
-	// override void SetTime(int time)
-	// {
-	// 	// NOTE: I recommend keeping this time set low. I usually set it to 5 seconds.
-	// 	// Time is set in your globals.xml <var name="TimeLogin" type="0" value="5"/>
-	// 	// Change the "text" below to whatever you want. 
-	// 	m_txtLabel.SetText("Get ready to play in " + time.ToString());
-	// }
-
 
 	override void SetTime(int time)
 	{
@@ -115,7 +106,9 @@ modded class LoadingScreen
 		m_shader.SetColor(colorScheme.ShaderColor());
 		ProgressAsync.SetProgressData(m_ProgressLoading);
 		ProgressAsync.SetUserData(m_ImageBackground);
-
+		// We can use our own Text for now. 
+		// I will impliment the way they do it in vanilla in Ver 2. 
+		m_TextWidgetStatus.SetText(GetRandomHint());
 	}	
 
 	override void Show()
