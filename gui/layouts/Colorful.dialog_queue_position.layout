@@ -169,7 +169,7 @@ PanelWidgetClass TextInputDialogRoot {
      valign bottom_ref
      vexactpos 0
      text "You will be able to join when someone leaves the server."
-     font "Colorful-ui/gui/fonts/OpenSansV-Italic18"
+     font "Colorful-ui/gui/fonts/Gilroy-Ital18"
      "exact text" 1
      "size to text h" 1
      "size to text v" 1
@@ -184,8 +184,8 @@ PanelWidgetClass TextInputDialogRoot {
      valign bottom_ref
      hexactpos 1
      vexactpos 0
-     text "Please wait ..."
-     font "Colorful-ui/gui/fonts/PersonalServices24"
+     text "PLEASE WAIT ..."
+     font "Colorful-ui/gui/fonts/Gilroy-Black28"
      "exact text" 1
      "size to text h" 1
      "size to text v" 1
@@ -216,7 +216,7 @@ PanelWidgetClass TextInputDialogRoot {
        vexactsize 0
        style Bold
        text "You are player"
-       font "Colorful-ui/gui/fonts/OpenSansV18"
+       font "Colorful-ui/gui/fonts/Gilroy-Semi18"
        "exact text" 1
        "size to text h" 1
        "size to text v" 1
@@ -236,7 +236,7 @@ PanelWidgetClass TextInputDialogRoot {
        scaled 1
        style None
        text "123"
-       font "Colorful-ui/gui/fonts/OpenSansV18"
+       font "Colorful-ui/gui/fonts/Gilroy-Semi18"
        "exact text" 1
        "exact text size" 22
        "size to text h" 1
@@ -256,7 +256,7 @@ PanelWidgetClass TextInputDialogRoot {
        vexactsize 0
        style Bold
        text "in queue"
-       font "Colorful-ui/gui/fonts/OpenSansV18"
+       font "Colorful-ui/gui/fonts/Gilroy-Semi18"
        "exact text" 1
        "size to text h" 1
        "size to text v" 1

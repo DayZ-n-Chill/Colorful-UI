@@ -121,7 +121,7 @@ FrameWidgetClass character_creation_root {
        vexactsize 0
        style Normal
        text "#layout_character_creation_character"
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/Gilroy-Black22"
        "exact text" 1
        "size to text h" 0
        "size to text v" 1
@@ -717,7 +717,7 @@ FrameWidgetClass character_creation_root {
        "next down" "randomize_character"
        text "#layout_character_creation_save"
        text_proportion 0.8
-       font "Colorful-UI/gui/fonts/PersonalServices32"
+       font "Colorful-UI/gui/fonts/Gilroy-Black28"
        switch normal
       }
       ButtonWidgetClass apply {
@@ -739,7 +739,7 @@ FrameWidgetClass character_creation_root {
        "next down" "randomize_character"
        text "#layout_character_creation_apply"
        text_proportion 0.8
-       font "Colorful-UI/gui/fonts/PersonalServices32"
+       font "Colorful-UI/gui/fonts/Gilroy-Black28"
        switch normal
       }
      }
@@ -798,7 +798,7 @@ FrameWidgetClass character_creation_root {
        "next down" "apply"
        text "#layout_character_creation_back"
        text_proportion 0.55
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/Gilroy-Black22"
        switch normal
       }
       ButtonWidgetClass randomize_character {
@@ -819,7 +819,7 @@ FrameWidgetClass character_creation_root {
        "next down" "back"
        text "#layout_character_creation_randomize"
        text_proportion 0.55
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/Gilroy-Black22"
        switch normal
       }
       PanelWidgetClass character {
@@ -871,7 +871,7 @@ FrameWidgetClass character_creation_root {
    priority 1
    style Normal
    text "#layout_character_creation_character_creation"
-   font "Colorful-UI/gui/fonts/PersonalServices32"
+   font "Colorful-UI/gui/fonts/Gilroy-Black28"
    "text color" 0.8157 0.1255 0.7843 1
    "exact text" 0
    "size to text h" 0

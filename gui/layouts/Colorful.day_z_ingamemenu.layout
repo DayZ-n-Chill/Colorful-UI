@@ -161,7 +161,7 @@ FrameWidgetClass InGameMenuRoot {
              hexactsize 0
              vexactsize 0
              text "Exit"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/Gilroy-Black22"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -213,7 +213,7 @@ FrameWidgetClass InGameMenuRoot {
              hexactsize 0
              vexactsize 0
              text "Restart"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/Gilroy-Black22"
              "exact text" 1
              "size to text h" 1
              "text halign" right
@@ -264,7 +264,7 @@ FrameWidgetClass InGameMenuRoot {
              hexactsize 0
              vexactsize 0
              text "Options"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/Gilroy-Black22"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -316,7 +316,7 @@ FrameWidgetClass InGameMenuRoot {
              hexactsize 0
              vexactsize 0
              text "Continue"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/Gilroy-Black22"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -370,7 +370,7 @@ FrameWidgetClass InGameMenuRoot {
              hexactsize 0
              vexactsize 0
              text "Custom Respawn "
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/Gilroy-Black22"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -423,7 +423,7 @@ FrameWidgetClass InGameMenuRoot {
              hexactsize 0
              vexactsize 0
              text "Random Respawn"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/Gilroy-Black22"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -475,7 +475,7 @@ FrameWidgetClass InGameMenuRoot {
              hexactsize 0
              vexactsize 0
              text "Respawn"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/Gilroy-Black22"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -573,8 +573,8 @@ FrameWidgetClass InGameMenuRoot {
              vexactpos 0
              hexactsize 0
              vexactsize 0
-             text "dayzloaded.gg"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             text "DayzLoaded.gg"
+             font "Colorful-UI/gui/fonts/Gilroy-Black22"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -643,7 +643,7 @@ FrameWidgetClass InGameMenuRoot {
              hexactsize 0
              vexactsize 0
              text "Discord"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/Gilroy-Black22"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -712,7 +712,7 @@ FrameWidgetClass InGameMenuRoot {
              hexactsize 0
              vexactsize 0
              text "Twitter"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/Gilroy-Black22"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -781,7 +781,7 @@ FrameWidgetClass InGameMenuRoot {
              hexactsize 0
              vexactsize 0
              text "Reddit"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/Gilroy-Black22"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -850,7 +850,7 @@ FrameWidgetClass InGameMenuRoot {
              hexactsize 0
              vexactsize 0
              text "YouTube"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/Gilroy-Black22"
              "exact text" 1
              "size to text h" 1
              "text halign" right
@@ -918,7 +918,7 @@ FrameWidgetClass InGameMenuRoot {
              hexactsize 0
              vexactsize 0
              text "Facebook"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/Gilroy-Black22"
              "exact text" 1
              "size to text h" 1
              "text halign" right
@@ -986,7 +986,7 @@ FrameWidgetClass InGameMenuRoot {
              hexactsize 0
              vexactsize 0
              text "Meta"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/Gilroy-Black22"
              "exact text" 1
              "size to text h" 1
              "text halign" right
