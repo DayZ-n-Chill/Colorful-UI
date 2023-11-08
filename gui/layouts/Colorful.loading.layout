@@ -24,7 +24,7 @@ FrameWidgetClass LoadingFrame {
    imageTexture "{A5D8917F066B3FDC}Colorful-UI/gui/textures/loading_screens/Colorful-BG-12.edds"
    mode opaque
    "src alpha" 0
-   stretch 1
+   "stretch mode" stretch_w_h
    "Transition width" 1
    Progress 0
   }
@@ -43,7 +43,7 @@ FrameWidgetClass LoadingFrame {
    imageTexture "{A5D8917F066B3FDC}Colorful-UI/gui/textures/loading_screens/Colorful-BG-12.edds"
    mode opaque
    "src alpha" 0
-   stretch 1
+   "stretch mode" stretch_w_h
    "Transition width" 1
    Progress 0
   }
@@ -77,8 +77,8 @@ FrameWidgetClass LoadingFrame {
      imageTexture "{E6B3EF816E067499}Gui/textures/inventory_bgvignette.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
      filter 0
      nocache 1
     }
@@ -97,8 +97,7 @@ FrameWidgetClass LoadingFrame {
      imageTexture "{4BFC093013F74D19}Colorful-UI/gui/textures/globals/UI.Colorful.Shader.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 0
+     "clamp mode" clamp
     }
     ImageWidgetClass HorizShader {
      visible 1
@@ -114,8 +113,8 @@ FrameWidgetClass LoadingFrame {
      imageTexture "{A82F487401D497EF}Colorful-UI/gui/textures/globals/Colorful.HorizShaderTip.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
      filter 1
     }
    }
@@ -145,8 +144,8 @@ FrameWidgetClass LoadingFrame {
      imageTexture "{5314D820E495219F}Colorful-UI/gui/textures/globals/Colorful.Logo.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
      filter 1
      nocache 0
     }
@@ -184,7 +183,7 @@ FrameWidgetClass LoadingFrame {
      "text halign" center
      "text valign" center
     }
-    TextWidgetClass StatusText {
+    TextWidgetClass hint_frame {
      visible 1
      size 1 0.03
      halign center_ref
@@ -255,8 +254,8 @@ FrameWidgetClass LoadingFrame {
            imageTexture "{4E98404B3EE57BD9}Colorful-UI/gui/textures/main_menu/Colorful.Discord.edds"
            mode blend
            "src alpha" 1
-           "no wrap" 1
-           stretch 1
+           "clamp mode" clamp
+           "stretch mode" stretch_w_h
            filter 0
           }
           TextWidgetClass DiscordBtn_label {
@@ -323,8 +322,8 @@ FrameWidgetClass LoadingFrame {
            imageTexture "{56507986E3807A3B}Colorful-UI/gui/textures/main_menu/Colorful.Twitter.edds"
            mode blend
            "src alpha" 1
-           "no wrap" 1
-           stretch 1
+           "clamp mode" clamp
+           "stretch mode" stretch_w_h
            filter 0
           }
           TextWidgetClass TwitterBtn_label {
@@ -392,8 +391,8 @@ FrameWidgetClass LoadingFrame {
            imageTexture "{042531BECC696FCF}Colorful-UI/gui/textures/main_menu/Colorful.Reddit.edds"
            mode blend
            "src alpha" 1
-           "no wrap" 1
-           stretch 1
+           "clamp mode" clamp
+           "stretch mode" stretch_w_h
            filter 0
           }
           TextWidgetClass RedditBtn_label {
@@ -461,8 +460,8 @@ FrameWidgetClass LoadingFrame {
            imageTexture "{FDBC9A6B3BB8B821}Colorful-UI/gui/textures/main_menu/Colorful.Youtube.edds"
            mode blend
            "src alpha" 1
-           "no wrap" 1
-           stretch 1
+           "clamp mode" clamp
+           "stretch mode" stretch_w_h
            filter 0
           }
           TextWidgetClass YoutubeBtn_label {
@@ -529,8 +528,8 @@ FrameWidgetClass LoadingFrame {
            imageTexture "{25DB8D90C00B0710}Colorful-UI/gui/textures/main_menu/Colorful.Facebook.edds"
            mode blend
            "src alpha" 1
-           "no wrap" 1
-           stretch 1
+           "clamp mode" clamp
+           "stretch mode" stretch_w_h
            filter 0
           }
           TextWidgetClass FacebookBtn_label {
@@ -597,8 +596,8 @@ FrameWidgetClass LoadingFrame {
            imageTexture "{F74D2BABB67517C4}Colorful-UI/gui/textures/main_menu/Colorful.meta.edds"
            mode blend
            "src alpha" 1
-           "no wrap" 1
-           stretch 1
+           "clamp mode" clamp
+           "stretch mode" stretch_w_h
            filter 0
           }
           TextWidgetClass MetaBtn_label {
@@ -820,7 +819,6 @@ FrameWidgetClass LoadingFrame {
      image0 "set:dayz_gui image:icon_refresh"
      mode additive
      "src alpha" 1
-     "no wrap" 0
      filter 1
      nocache 0
     }
@@ -837,8 +835,8 @@ FrameWidgetClass LoadingFrame {
      image0 "set:dayz_gui image:DayZLogo"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
      filter 1
      nocache 0
     }
@@ -856,8 +854,8 @@ FrameWidgetClass LoadingFrame {
      imageTexture "{F4149B85A4538BED}EDEN_UI/gui/textures/globals/DayZEden.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
      filter 1
      nocache 0
     }

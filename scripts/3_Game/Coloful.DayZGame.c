@@ -115,8 +115,19 @@ modded class LoadingScreen
 		m_shader.SetColor(colorScheme.ShaderColor());
 		ProgressAsync.SetProgressData(m_ProgressLoading);
 		ProgressAsync.SetUserData(m_ImageBackground);
-		SetStatus(m_TextWidgetStatus.GetRandomHint());
+		// SetStatus(m_TextWidgetStatus.GetRandomHint());
 	}	
+
+	override void ShowEx(DayZGame game)
+	{
+		if (!m_HintPanel)
+		{
+			m_HintPanel					= new UiHintPanelLoading(m_WidgetRoot.FindAnyWidget("hint_frame"));
+			m_HintPanel.Init(game);
+		}
+
+		Show();
+	}
 
 	override void Show()
 	{
