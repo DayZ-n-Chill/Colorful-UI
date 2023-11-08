@@ -79,8 +79,8 @@ GridSpacerWidgetClass rootFrame {
            image0 "set:dayz_gui image:arrow_left"
            mode blend
            "src alpha" 1
-           "no wrap" 1
-           stretch 1
+           "clamp mode" clamp
+           "stretch mode" stretch_w_h
            filter 1
            nocache 0
           }
@@ -127,8 +127,7 @@ GridSpacerWidgetClass rootFrame {
            image0 "set:dayz_gui image:arrow_right"
            mode blend
            "src alpha" 1
-           "no wrap" 0
-           stretch 1
+           "stretch mode" stretch_w_h
           }
          }
         }
@@ -146,6 +145,7 @@ GridSpacerWidgetClass rootFrame {
      vexactsize 0
      {
       TextWidgetClass HeadlineLabel {
+       visible 0
        clipchildren 0
        ignorepointer 1
        position 0 0
@@ -202,7 +202,7 @@ GridSpacerWidgetClass rootFrame {
      vexactsize 0
      scaled 1
      text "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-     font "gui/fonts/sdf_MetronLight72"
+     font "Colorful-UI/gui/fonts/SquareFont24"
      "text offset" 30 0
      "italic text" 0
      "bold text" 0
@@ -240,7 +240,7 @@ GridSpacerWidgetClass rootFrame {
      fixaspect inside
      mode blend
      "src alpha" 1
-     stretch 1
+     "stretch mode" stretch_w_h
     }
     TextWidgetClass PageInfoLabel {
      visible 0

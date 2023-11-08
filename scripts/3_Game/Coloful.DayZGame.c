@@ -106,6 +106,17 @@ modded class LoadingScreen
 		ProgressAsync.SetUserData(m_ImageBackground);
 	}	
 
+	override void ShowEx(DayZGame game)
+	{
+		if (!m_HintPanel)
+		{
+			m_HintPanel					= new UiHintPanelLoading(m_WidgetRoot.FindAnyWidget("hint_frame"));
+			m_HintPanel.Init(game);
+		}
+
+		Show();
+	}
+
 	override void Show()
 	{
 		Widget lIcon = m_Background;

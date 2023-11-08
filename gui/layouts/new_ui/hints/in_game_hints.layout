@@ -1,4 +1,5 @@
 GridSpacerWidgetClass rootFrame {
+ visible 0
  size 400 400
  halign center_ref
  hexactpos 1
@@ -73,8 +74,8 @@ GridSpacerWidgetClass rootFrame {
            image0 "set:dayz_gui image:arrow_left"
            mode blend
            "src alpha" 1
-           "no wrap" 1
-           stretch 1
+           "clamp mode" clamp
+           "stretch mode" stretch_w_h
            filter 1
            nocache 0
           }
@@ -150,8 +151,7 @@ GridSpacerWidgetClass rootFrame {
            image0 "set:dayz_gui image:arrow_right"
            mode blend
            "src alpha" 1
-           "no wrap" 0
-           stretch 1
+           "stretch mode" stretch_w_h
           }
          }
         }
@@ -190,7 +190,7 @@ GridSpacerWidgetClass rootFrame {
      fixaspect inside
      mode blend
      "src alpha" 1
-     stretch 1
+     "stretch mode" stretch_w_h
     }
     RichTextWidgetClass HintDescLabel {
      visible 1

@@ -24,7 +24,7 @@ FrameWidgetClass LoadingFrame_root {
    imageTexture "{35EECDC167D4D2AA}Colorful-UI/gui/textures/loading_screens/LabLoadScreen_1.edds"
    mode opaque
    "src alpha" 0
-   stretch 1
+   "stretch mode" stretch_w_h
    "Transition width" 1
    Progress 0
   }
@@ -43,7 +43,7 @@ FrameWidgetClass LoadingFrame_root {
    imageTexture "{35EECDC167D4D2AA}Colorful-UI/gui/textures/loading_screens/LabLoadScreen_1.edds"
    mode opaque
    "src alpha" 0
-   stretch 1
+   "stretch mode" stretch_w_h
    "Transition width" 1
    Progress 0
   }
@@ -77,8 +77,8 @@ FrameWidgetClass LoadingFrame_root {
      imageTexture "{E6B3EF816E067499}Gui/textures/inventory_bgvignette.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
      filter 0
      nocache 1
     }
@@ -98,8 +98,8 @@ FrameWidgetClass LoadingFrame_root {
      imageTexture "{942C453B0EBBFCF8}Colorful-UI/gui/textures/globals/LoadingShader.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
     }
    }
   }
@@ -128,8 +128,8 @@ FrameWidgetClass LoadingFrame_root {
      imageTexture "{BB70E7AC4118E41B}Colorful-UI/gui/textures/globals/Logo.Large.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
      filter 1
      nocache 0
     }
@@ -159,8 +159,7 @@ FrameWidgetClass LoadingFrame_root {
        imageTexture "{1D561390FEF61F84}Colorful-UI/gui/textures/globals/Icon.Blub.edds"
        mode blend
        "src alpha" 1
-       "no wrap" 1
-       stretch 0
+       "clamp mode" clamp
        filter 1
       }
       GridSpacerWidgetClass "Header Title" {
@@ -192,8 +191,8 @@ FrameWidgetClass LoadingFrame_root {
          imageTexture "{03B450C67D4FB148}Colorful-UI/gui/textures/globals/LoadingLine.Left.edds"
          mode blend
          "src alpha" 1
-         "no wrap" 1
-         stretch 1
+         "clamp mode" clamp
+         "stretch mode" stretch_w_h
          filter 1
         }
         TextWidgetClass ProTip {
@@ -226,8 +225,8 @@ FrameWidgetClass LoadingFrame_root {
          imageTexture "{F6FF98B08C37E82D}Colorful-UI/gui/textures/globals/LoadingLine.Right.edds"
          mode blend
          "src alpha" 1
-         "no wrap" 1
-         stretch 1
+         "clamp mode" clamp
+         "stretch mode" stretch_w_h
          filter 1
         }
        }
@@ -267,6 +266,19 @@ FrameWidgetClass LoadingFrame_root {
        "text valign" center
       }
      }
+    }
+    FrameWidgetClass hint_frame {
+     visible 1
+     clipchildren 0
+     ignorepointer 1
+     position -0.00674 0.58186
+     size 0.8 0.10155
+     halign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     scaled 1
     }
    }
   }
@@ -463,7 +475,6 @@ FrameWidgetClass LoadingFrame_root {
      image0 "set:dayz_gui image:icon_refresh"
      mode additive
      "src alpha" 1
-     "no wrap" 0
      filter 1
      nocache 0
     }
@@ -480,8 +491,8 @@ FrameWidgetClass LoadingFrame_root {
      image0 "set:dayz_gui image:DayZLogo"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
      filter 1
      nocache 0
     }
