@@ -24,12 +24,12 @@ FrameWidgetClass main_menu_root {
    scaled 1
    fixaspect outside
    image0 ""
-   imageTexture "{06EAA847139760C0}Colorful-UI/gui/textures/loading_screens/StalkerZ_BG_1.edds"
+   imageTexture "{4BFC286839F33A79}Colorful-UI/gui/textures/globals/JKL-MainBG.edds"
    mode opaque
-   "src alpha" 1
+   "src alpha" 0
    "clamp mode" clamp
    "stretch mode" stretch_w_h
-   filter 0
+   filter 1
    "Transition width" 1
    Progress 0
   }
@@ -704,7 +704,6 @@ FrameWidgetClass main_menu_root {
   }
   FrameWidgetClass SafeZone {
    ignorepointer 1
-   position 0 0.90984
    size 0.9 0.9
    halign center_ref
    valign center_ref
@@ -713,25 +712,6 @@ FrameWidgetClass main_menu_root {
    hexactsize 0
    vexactsize 0
    {
-    ImageWidgetClass ColorfulLogo {
-     visible 1
-     clipchildren 0
-     inheritalpha 1
-     size 460 425
-     hexactpos 0
-     vexactpos 0
-     hexactsize 1
-     vexactsize 1
-     fixaspect outside
-     image0 ""
-     imageTexture "{C76821854E4562C1}Colorful-UI/gui/textures/globals/JLK.SERVER.LOGO.edds"
-     mode blend
-     "src alpha" 1
-     "clamp mode" clamp
-     "stretch mode" stretch_w_h
-     filter 1
-     nocache 0
-    }
     FrameWidgetClass settings_panel_root {
      visible 1
      ignorepointer 1
@@ -2030,6 +2010,26 @@ FrameWidgetClass main_menu_root {
        }
       }
      }
+    }
+    ImageWidgetClass ColorfulLogo {
+     visible 1
+     clipchildren 0
+     inheritalpha 1
+     position 0 50
+     size 531 215
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     fixaspect outside
+     image0 ""
+     imageTexture "{B25FEFAB266F2425}Colorful-UI/gui/textures/globals/JLK.LogoWName.edds"
+     mode blend
+     "src alpha" 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
+     filter 1
+     nocache 0
     }
    }
   }

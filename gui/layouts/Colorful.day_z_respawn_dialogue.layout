@@ -236,6 +236,77 @@ WindowWidgetClass WindowWidget {
                "size to text v" 0
                "text halign" right
                "text valign" center
+               {
+                ButtonWidgetClass RedditBtn {
+                 visible 0
+                 color 0 0 0 0
+                 size 293 39
+                 halign right_ref
+                 valign center_ref
+                 hexactpos 1
+                 vexactpos 1
+                 hexactsize 1
+                 vexactsize 1
+                 style Empty
+                 "no focus" 0
+                 "next left" "news_main"
+                 "next right" "news_main"
+                 "next up" "choose_server"
+                 "next down" "play_video"
+                 {
+                  PanelWidgetClass RedditBtn_panel {
+                   ignorepointer 1
+                   color 0 0 0 0
+                   size 293 39
+                   halign right_ref
+                   valign center_ref
+                   hexactpos 0
+                   vexactpos 0
+                   hexactsize 1
+                   vexactsize 1
+                   style DayZDefaultPanel
+                   {
+                    ImageWidgetClass RedditBtn_img {
+                     clipchildren 0
+                     ignorepointer 1
+                     size 47 39
+                     halign right_ref
+                     valign center_ref
+                     hexactpos 1
+                     vexactpos 1
+                     hexactsize 1
+                     vexactsize 1
+                     imageTexture "{042531BECC696FCF}Colorful-UI/gui/textures/main_menu/Colorful.Reddit.edds"
+                     mode blend
+                     "src alpha" 1
+                     "clamp mode" clamp
+                     "stretch mode" stretch_w_h
+                     filter 0
+                    }
+                    TextWidgetClass RedditBtn_label {
+                     clipchildren 0
+                     ignorepointer 1
+                     position 60 0
+                     size 1 1
+                     halign right_ref
+                     valign center_ref
+                     hexactpos 1
+                     vexactpos 1
+                     hexactsize 0
+                     vexactsize 0
+                     text "Reddit"
+                     font "Colorful-UI/gui/fonts/PersonalServices24"
+                     "exact text" 1
+                     "size to text h" 1
+                     "size to text v" 0
+                     "text halign" right
+                     "text valign" center
+                    }
+                   }
+                  }
+                 }
+                }
+               }
               }
              }
             }
@@ -531,75 +602,6 @@ WindowWidgetClass WindowWidget {
             }
            }
           }
-          ButtonWidgetClass RedditBtn {
-           visible 0
-           color 0 0 0 0
-           size 293 39
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 1
-           vexactsize 1
-           style Empty
-           "no focus" 0
-           "next left" "news_main"
-           "next right" "news_main"
-           "next up" "choose_server"
-           "next down" "play_video"
-           {
-            PanelWidgetClass RedditBtn_panel {
-             ignorepointer 1
-             color 0 0 0 0
-             size 293 39
-             halign right_ref
-             valign center_ref
-             hexactpos 0
-             vexactpos 0
-             hexactsize 1
-             vexactsize 1
-             style DayZDefaultPanel
-             {
-              ImageWidgetClass RedditBtn_img {
-               clipchildren 0
-               ignorepointer 1
-               size 47 39
-               halign right_ref
-               valign center_ref
-               hexactpos 1
-               vexactpos 1
-               hexactsize 1
-               vexactsize 1
-               imageTexture "{042531BECC696FCF}Colorful-UI/gui/textures/main_menu/Colorful.Reddit.edds"
-               mode blend
-               "src alpha" 1
-               "clamp mode" clamp
-               "stretch mode" stretch_w_h
-               filter 0
-              }
-              TextWidgetClass RedditBtn_label {
-               clipchildren 0
-               ignorepointer 1
-               position 60 0
-               size 1 1
-               halign right_ref
-               valign center_ref
-               hexactpos 1
-               vexactpos 1
-               hexactsize 0
-               vexactsize 0
-               text "Reddit"
-               font "Colorful-UI/gui/fonts/PersonalServices24"
-               "exact text" 1
-               "size to text h" 1
-               "size to text v" 0
-               "text halign" right
-               "text valign" center
-              }
-             }
-            }
-           }
-          }
           ButtonWidgetClass YoutubeBtn {
            visible 0
            color 0 0 0 0
@@ -812,14 +814,15 @@ WindowWidgetClass WindowWidget {
        visible 1
        clipchildren 0
        inheritalpha 1
-       size 460 425
-       hexactpos 0
-       vexactpos 0
+       position 0 50
+       size 531 215
+       hexactpos 1
+       vexactpos 1
        hexactsize 1
        vexactsize 1
        fixaspect outside
        image0 ""
-       imageTexture "{C76821854E4562C1}Colorful-UI/gui/textures/globals/JLK.SERVER.LOGO.edds"
+       imageTexture "{B25FEFAB266F2425}Colorful-UI/gui/textures/globals/JLK.LogoWName.edds"
        mode blend
        "src alpha" 1
        "clamp mode" clamp

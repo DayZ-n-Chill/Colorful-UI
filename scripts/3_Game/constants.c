@@ -10,6 +10,7 @@ string GetRandomBackground()
         "Colorful-UI/gui/textures/loading_screens/JLK_BG_3.edds",
 		"Colorful-UI/gui/textures/loading_screens/JLK_BG_4.edds",
 		"Colorful-UI/gui/textures/loading_screens/JLK_BG_5.edds",
+		"Colorful-UI/gui/textures/loading_screens/JLK_BG_6.edds",
 		"Colorful-UI/gui/textures/loading_screens/JLK_BG_7.edds",
 		"Colorful-UI/gui/textures/loading_screens/JLK_BG_8.edds"
 	};
@@ -26,7 +27,7 @@ string GetRandomBackground()
  */
 class MenuURLS {
 	// Link for Discord
-	static string urlDiscord  = "https://discord.gg/y8cYYsXrWd";
+	static string urlDiscord  = "https://discord.com/invite/tarvbbFNNw";
 	// Link for Facebook
 	static string urlFacebook = "#";
 	// Link for Twitter
@@ -36,7 +37,7 @@ class MenuURLS {
 	// Link for Youtube
 	static string urlYoutube  = "#";
 	// Link to Website
-	static string urlWebsite  = "https://stalkerz.net"; 
+	static string urlWebsite  = "https://dayzloaded.gg"; 
 	// Link for Prio Q
 	static string urlPriorityQ   = "#";
 	// Can be used anything else
@@ -135,25 +136,25 @@ class colorScheme
 {
 	// Quick Styling --------------------------------------
 	// This color should be Servers/Communities Brand Color
-	static int BrandColor()   { return UIColor.JLK_Red(); };
+	static int BrandColor()   { return UIColor.Blue(); };
 	// This color should be a complimentary color to your brand. 
-	static int AccentColor()  { return UIColor.JLK_Yellow(); };
+	static int AccentColor()  { return UIColor.Indigo(); };
 
 	// Advanced Styling --------------------------------------
 	// You can get more Ganular with the colors by editing the syltes below
 	// Get wild and create your own color functions and use them throughout the mod.
 	// Best to Primary Text as white, but do whatever, Experiment.
 	static int PrimaryText()        { return UIColor.White(); }; 	
-	static int SecondaryText()      { return UIColor.JLK_Orange(); };
-	static int ShaderColor()        { return UIColor.JLK_Orange(); };
-	static int SeparatorColor()     { return UIColor.JLK_Orange(); };
-	static int LoadingbarColor()    { return UIColor.JLK_Yellow_2(); };
+	static int SecondaryText()      { return BrandColor(); };
+	static int ShaderColor()        { return BrandColor(); };
+	static int SeparatorColor()     { return BrandColor(); };
+	static int LoadingbarColor()    { return BrandColor(); };
 	static int MainMenuTrim()       { return BrandColor(); };
-	static int ButtonHoverColor()   { return UIColor.JLK_Yellow_2(); };	
-	static int TabHoverColor()      { return UIColor.JLK_Yellow_2(); };	
-	static int OptionInputColors()  { return UIColor.JLK_Orange(); };
-	static int OptionCaretColors()  { return UIColor.JLK_Orange(); };
-	static int OptionSliderColors() { return UIColor.JLK_Orange(); };
+	static int ButtonHoverColor()   { return BrandColor(); };
+	static int TabHoverColor()      { return BrandColor(); };
+	static int OptionInputColors()  { return BrandColor(); };
+	static int OptionCaretColors()  { return BrandColor(); };
+	static int OptionSliderColors() { return BrandColor(); };
 }
  
 // Dialog Menus (No need to touch)

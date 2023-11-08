@@ -98,7 +98,7 @@ modded class InGameMenu extends UIScriptedMenu
 		}
 		else if (button == MouseState.LEFT && w == m_Website)
 		{
-			GetGame().OpenURL("https://StalkerZ.net");
+			GetGame().OpenURL("https://dayzloaded.gg");
 			return false;
 		}
 

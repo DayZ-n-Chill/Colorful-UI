@@ -1,7 +1,7 @@
 MetaFileClass {
  Name "{202C0532A7A7CA89}Colorful-UI/gui/textures/loading_screens/JLK_BG_1.edds"
  Author "sdf-1"
- ChangeDate -1656557720
+ ChangeDate 1229156200
  Configurations {
   PNGResourceClass PC {
    SourceFile "JLK_BG_1.png"

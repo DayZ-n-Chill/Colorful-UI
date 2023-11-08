@@ -11,8 +11,8 @@ FrameWidgetClass LoadingFrame {
  {
   ImageWidgetClass ImageBackground {
    visible 1
-   position 0 0
-   size 0.16 0.09
+   position 0 -0.01
+   size 0.16 0.06
    halign center_ref
    valign center_ref
    hexactpos 0
@@ -21,7 +21,7 @@ FrameWidgetClass LoadingFrame {
    vexactsize 0
    fixaspect outside
    image0 ""
-   imageTexture "{58028104AC1AEECF}Colorful-UI/gui/textures/loading_screens/StalkerZ_BG_2.edds"
+   imageTexture "{202C0532A7A7CA89}Colorful-UI/gui/textures/loading_screens/JLK_BG_1.edds"
    mode opaque
    "src alpha" 0
    "stretch mode" stretch_w_h
@@ -40,7 +40,7 @@ FrameWidgetClass LoadingFrame {
    vexactsize 0
    fixaspect outside
    image0 ""
-   imageTexture "{58028104AC1AEECF}Colorful-UI/gui/textures/loading_screens/StalkerZ_BG_2.edds"
+   imageTexture "{202C0532A7A7CA89}Colorful-UI/gui/textures/loading_screens/JLK_BG_1.edds"
    mode opaque
    "src alpha" 0
    "stretch mode" stretch_w_h
@@ -86,9 +86,9 @@ FrameWidgetClass LoadingFrame {
      visible 1
      ignorepointer 1
      keepsafezone 0
+     position 0 -19
      size 1 1
      halign center_ref
-     valign center_ref
      hexactpos 1
      vexactpos 1
      hexactsize 0
@@ -131,10 +131,11 @@ FrameWidgetClass LoadingFrame {
    vexactsize 0
    {
     ImageWidgetClass ColorfulLogo {
-     visible 1
+     visible 0
      clipchildren 0
      inheritalpha 1
-     size 460 425
+     position 0 0
+     size 250 200
      hexactpos 0
      vexactpos 0
      hexactsize 1
@@ -637,6 +638,47 @@ FrameWidgetClass LoadingFrame {
        }
       }
      }
+    }
+    ImageWidgetClass ColorfulLogo0 {
+     visible 0
+     clipchildren 0
+     inheritalpha 1
+     position 0.45445 0.77982
+     size 150 100
+     hexactpos 0
+     vexactpos 0
+     hexactsize 1
+     vexactsize 1
+     fixaspect outside
+     image0 ""
+     imageTexture "{C76821854E4562C1}Colorful-UI/gui/textures/globals/JLK.SERVER.LOGO.edds"
+     mode blend
+     "src alpha" 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
+     filter 1
+     nocache 0
+    }
+    ImageWidgetClass ColorfulLogo1 {
+     visible 1
+     clipchildren 0
+     inheritalpha 1
+     position 0 30
+     size 220 80
+     halign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     fixaspect outside
+     image0 ""
+     imageTexture "{B25FEFAB266F2425}Colorful-UI/gui/textures/globals/JLK.LogoWName.edds"
+     mode blend
+     "src alpha" 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
+     filter 1
+     nocache 0
     }
    }
   }

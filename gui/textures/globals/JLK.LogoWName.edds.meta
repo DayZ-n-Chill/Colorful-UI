@@ -1,10 +1,10 @@
 MetaFileClass {
- Name "{7EC42C71182A4486}Colorful-UI/gui/textures/loading_screens/JLK_BG_2.edds"
+ Name "{B25FEFAB266F2425}Colorful-UI/gui/textures/globals/JLK.LogoWName.edds"
  Author "sdf-1"
- ChangeDate 1430482792
+ ChangeDate 1989914472
  Configurations {
   PNGResourceClass PC {
-   SourceFile "JLK_BG_2.png"
+   SourceFile "JLK.LogoWName.png"
   }
   PNGResourceClass XBOX_ONE : PC {
   }

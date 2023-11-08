@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{E5E6F34D39FD5AD1}Colorful-UI/gui/textures/globals/JLK-BG.edds"
+ Author "sdf-1"
+ ChangeDate -1632931992
+ Configurations {
+  JPGResourceClass PC {
+   SourceFile "JLK-BG.jpg"
+  }
+  JPGResourceClass XBOX_ONE : PC {
+  }
+  JPGResourceClass PS4 : PC {
+  }
+  JPGResourceClass LINUX : PC {
+  }
+ }
+}
