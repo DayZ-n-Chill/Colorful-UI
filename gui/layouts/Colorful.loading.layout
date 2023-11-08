@@ -183,7 +183,21 @@ FrameWidgetClass LoadingFrame {
      "text halign" center
      "text valign" center
     }
-    TextWidgetClass Hint_Frame {
+    TextWidgetClass hint_frame {
+     visible 0
+     size 1 0.03
+     halign center_ref
+     valign bottom_ref
+     vexactpos 0
+     text "Your tips text will go here"
+     font "Colorful-ui/gui/fonts/OpenSansV18"
+     "exact text" 1
+     "size to text h" 1
+     "size to text v" 1
+     "text halign" center
+     "text valign" center
+    }
+    TextWidgetClass StatusText {
      visible 1
      size 1 0.03
      halign center_ref
