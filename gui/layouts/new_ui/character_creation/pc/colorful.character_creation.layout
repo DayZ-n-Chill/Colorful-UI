@@ -864,7 +864,7 @@ FrameWidgetClass character_creation_root {
    "text valign" center
   }
   WrapSpacerWidgetClass Licensing {
-   visible 1
+   visible 0
    clipchildren 0
    ignorepointer 1
    position 100 0.062
