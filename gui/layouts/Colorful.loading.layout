@@ -132,7 +132,7 @@ FrameWidgetClass LoadingFrame {
    {
     TextWidgetClass LoadingText {
      visible 1
-     position 0 60
+     position 0 75
      size 0 0
      halign center_ref
      valign bottom_ref

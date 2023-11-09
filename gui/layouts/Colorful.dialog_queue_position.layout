@@ -19,7 +19,6 @@ PanelWidgetClass TextInputDialogRoot {
    vexactpos 1
    hexactsize 0
    vexactsize 0
-   imageTexture ""
    mode blend
    "src alpha" 1
    "clamp mode" clamp
@@ -160,7 +159,7 @@ PanelWidgetClass TextInputDialogRoot {
      }
     }
     TextWidgetClass StatusText {
-     visible 1
+     visible 0
      clipchildren 0
      color 0.2588 0.6863 0.3647 1
      position 0 0.024
@@ -178,7 +177,7 @@ PanelWidgetClass TextInputDialogRoot {
     }
     TextWidgetClass LoadingText {
      visible 1
-     position 0 60
+     position 0 75
      size 0 0
      halign center_ref
      valign bottom_ref
@@ -195,11 +194,12 @@ PanelWidgetClass TextInputDialogRoot {
     FrameWidgetClass QueueFrame {
      clipchildren 0
      ignorepointer 1
+     position 0 45
      size 233 0.02
      halign center_ref
      valign bottom_ref
-     hexactpos 0
-     vexactpos 0
+     hexactpos 1
+     vexactpos 1
      hexactsize 1
      vexactsize 0
      scaled 1
