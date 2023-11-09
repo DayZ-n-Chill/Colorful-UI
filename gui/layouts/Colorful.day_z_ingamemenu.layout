@@ -41,7 +41,7 @@ FrameWidgetClass InGameMenuRoot {
      nocache 1
     }
     ImageWidgetClass Colorful_Shader {
-     visible 1
+     visible 0
      ignorepointer 1
      keepsafezone 0
      size 1 1
@@ -1004,15 +1004,14 @@ FrameWidgetClass InGameMenuRoot {
      visible 1
      clipchildren 0
      inheritalpha 1
-     position 0 50
-     size 531 215
+     size 520 415
      hexactpos 1
      vexactpos 1
      hexactsize 1
      vexactsize 1
      fixaspect outside
      image0 ""
-     imageTexture "{B25FEFAB266F2425}Colorful-UI/gui/textures/globals/JLK.LogoWName.edds"
+     imageTexture "{C76821854E4562C1}Colorful-UI/gui/textures/globals/JLK.SERVER.LOGO.edds"
      mode blend
      "src alpha" 1
      "clamp mode" clamp

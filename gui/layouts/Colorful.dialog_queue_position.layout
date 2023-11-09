@@ -19,7 +19,7 @@ PanelWidgetClass TextInputDialogRoot {
    vexactpos 1
    hexactsize 0
    vexactsize 0
-   imageTexture "{09470E9DECC2D81D}EDEN_UI/gui/textures/loading_screens/loading_screen_2_EDEN.edds"
+   imageTexture ""
    mode blend
    "src alpha" 1
    "clamp mode" clamp
@@ -37,7 +37,7 @@ PanelWidgetClass TextInputDialogRoot {
    vexactsize 0
    fixaspect outside
    image0 ""
-   imageTexture "{AC0AC69CA1C786BB}Colorful-UI/gui/textures/loading_screens/StalkerZ_BG_3.edds"
+   imageTexture "{C3147EF667315898}Colorful-UI/gui/textures/loading_screens/JLK_BG_4.edds"
    mode opaque
    "src alpha" 0
    "stretch mode" stretch_w_h
@@ -80,7 +80,7 @@ PanelWidgetClass TextInputDialogRoot {
      nocache 1
     }
     ImageWidgetClass Colorful_Shader {
-     visible 1
+     visible 0
      ignorepointer 1
      keepsafezone 0
      size 1 1
@@ -178,12 +178,12 @@ PanelWidgetClass TextInputDialogRoot {
     }
     TextWidgetClass LoadingText {
      visible 1
-     position 0 0.08
+     position 0 60
      size 0 0
      halign center_ref
      valign bottom_ref
      hexactpos 1
-     vexactpos 0
+     vexactpos 1
      text "PLEASE WAIT ..."
      font "Colorful-ui/gui/fonts/Gilroy-Black28"
      "exact text" 1
@@ -305,7 +305,7 @@ PanelWidgetClass TextInputDialogRoot {
      nocache 0
     }
     ImageWidgetClass ColorfulLogo1 {
-     visible 1
+     visible 0
      clipchildren 0
      inheritalpha 1
      position 0 30

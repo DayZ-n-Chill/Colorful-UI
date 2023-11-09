@@ -47,7 +47,7 @@ WindowWidgetClass WindowWidget {
      nocache 1
     }
     ImageWidgetClass Colorful_Shader {
-     visible 1
+     visible 0
      ignorepointer 1
      keepsafezone 0
      size 1 1

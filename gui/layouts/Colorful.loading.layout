@@ -83,7 +83,7 @@ FrameWidgetClass LoadingFrame {
      nocache 1
     }
     ImageWidgetClass Colorful_Shader {
-     visible 1
+     visible 0
      ignorepointer 1
      keepsafezone 0
      position 0 -19
@@ -132,12 +132,12 @@ FrameWidgetClass LoadingFrame {
    {
     TextWidgetClass LoadingText {
      visible 1
-     position 0 0.08
+     position 0 60
      size 0 0
      halign center_ref
      valign bottom_ref
      hexactpos 1
-     vexactpos 0
+     vexactpos 1
      text "LOADING GAME..."
      font "Colorful-ui/gui/fonts/Gilroy-Black28"
      "exact text" 1
@@ -147,7 +147,7 @@ FrameWidgetClass LoadingFrame {
      "text valign" center
     }
     TextWidgetClass ProTip {
-     visible 1
+     visible 0
      color 0.2588 0.6863 0.3647 1
      position 0 0.024
      size 1 0.03
@@ -179,7 +179,7 @@ FrameWidgetClass LoadingFrame {
      "text valign" center
     }
     TextWidgetClass StatusText {
-     visible 1
+     visible 0
      size 1 0.03
      halign center_ref
      valign bottom_ref
@@ -193,7 +193,7 @@ FrameWidgetClass LoadingFrame {
      "text valign" center
     }
     ImageWidgetClass ColorfulLogo1 {
-     visible 1
+     visible 0
      clipchildren 0
      inheritalpha 1
      position 0 30
@@ -440,7 +440,6 @@ FrameWidgetClass LoadingFrame {
      vexactsize 1
      fixaspect outside
      image0 ""
-     imageTexture "{F4149B85A4538BED}EDEN_UI/gui/textures/globals/DayZEden.edds"
      mode blend
      "src alpha" 1
      "clamp mode" clamp

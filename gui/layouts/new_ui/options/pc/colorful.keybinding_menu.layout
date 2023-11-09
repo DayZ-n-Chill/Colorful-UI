@@ -38,13 +38,13 @@ FrameWidgetClass keybindings_root {
      imageTexture "{E6B3EF816E067499}Gui/textures/inventory_bgvignette.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
      filter 0
      nocache 1
     }
     ImageWidgetClass Colorful_Shader {
-     visible 1
+     visible 0
      ignorepointer 1
      keepsafezone 0
      size 1 1
@@ -58,8 +58,7 @@ FrameWidgetClass keybindings_root {
      imageTexture "{4BFC093013F74D19}Colorful-UI/gui/textures/globals/UI.Colorful.Shader.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 0
+     "clamp mode" clamp
     }
     ImageWidgetClass HorizShader {
      visible 1
@@ -75,8 +74,8 @@ FrameWidgetClass keybindings_root {
      imageTexture "{A82F487401D497EF}Colorful-UI/gui/textures/globals/Colorful.HorizShaderTip.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
      filter 1
     }
    }
@@ -488,11 +487,11 @@ FrameWidgetClass keybindings_root {
          vexactpos 0
          hexactsize 0
          vexactsize 0
-         imageTexture "{5A89D58DD2276E85}gui/textures/SerratedBlack2.edds"
+         imageTexture "{5A89D58DD2276E85}gui/textures/serratedblack2.edds"
          mode blend
          "src alpha" 1
-         "no wrap" 1
-         stretch 1
+         "clamp mode" clamp
+         "stretch mode" stretch_w_h
         }
         GridSpacerWidgetClass Tab_Control_Container {
          ignorepointer 1
@@ -541,8 +540,7 @@ FrameWidgetClass keybindings_root {
          image0 "set:xbox_buttons image:LB"
          mode blend
          "src alpha" 1
-         "no wrap" 1
-         stretch 0
+         "clamp mode" clamp
         }
         ImageWidgetClass TabRightControl {
          visible 1
@@ -559,8 +557,7 @@ FrameWidgetClass keybindings_root {
          image0 "set:xbox_buttons image:RB"
          mode blend
          "src alpha" 1
-         "no wrap" 1
-         stretch 0
+         "clamp mode" clamp
         }
        }
       }
