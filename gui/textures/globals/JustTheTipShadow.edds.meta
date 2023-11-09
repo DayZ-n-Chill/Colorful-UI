@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{9D2AF9EB8D8EF8F0}Colorful-UI/gui/textures/globals/JustTheTipShadow.edds"
+ Author "sdf-1"
+ ChangeDate 1312649064
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "JustTheTipShadow.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

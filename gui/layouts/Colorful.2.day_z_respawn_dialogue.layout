@@ -12,7 +12,28 @@ WindowWidgetClass WindowWidget {
  style Default
  font "Colorful-UI/gui/fonts/Ethnocentric20"
  {
-  ImageWidgetClass Colorful_Shader0 {
+  ImageWidgetClass Vignette {
+   visible 1
+   ignorepointer 0
+   color 0 0 0 0.7843
+   position 0 0
+   size 1 1
+   halign center_ref
+   valign center_ref
+   hexactpos 1
+   vexactpos 1
+   hexactsize 0
+   vexactsize 0
+   priority 1
+   imageTexture "{72D85032C4F2ED0B}Colorful-UI/gui/textures/globals/Vingette.edds"
+   mode blend
+   "src alpha" 1
+   "clamp mode" clamp
+   "stretch mode" stretch_w_h
+   filter 0
+   nocache 1
+  }
+  ImageWidgetClass Lab_Shader {
    visible 1
    ignorepointer 1
    keepsafezone 0
@@ -25,11 +46,11 @@ WindowWidgetClass WindowWidget {
    hexactsize 0
    vexactsize 0
    scaled 1
-   imageTexture "{942C453B0EBBFCF8}Colorful-UI/gui/textures/globals/LoadingShader.edds"
+   imageTexture "{D7092B868D24199B}Colorful-UI/gui/textures/globals/BottomShader.edds"
    mode blend
    "src alpha" 1
-   "no wrap" 1
-   stretch 0
+   "clamp mode" clamp
+   "stretch mode" stretch_w_h
   }
   FrameWidgetClass SafeZone {
    visible 1
@@ -311,8 +332,8 @@ WindowWidgetClass WindowWidget {
              imageTexture "{4E98404B3EE57BD9}Colorful-UI/gui/textures/main_menu/Colorful.Discord.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              filter 0
             }
             TextWidgetClass DiscordBtn_label {
@@ -380,8 +401,8 @@ WindowWidgetClass WindowWidget {
              imageTexture "{56507986E3807A3B}Colorful-UI/gui/textures/main_menu/Colorful.Twitter.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              filter 0
             }
             TextWidgetClass TwitterBtn_label {
@@ -449,8 +470,8 @@ WindowWidgetClass WindowWidget {
              imageTexture "{042531BECC696FCF}Colorful-UI/gui/textures/main_menu/Colorful.Reddit.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              filter 0
             }
             TextWidgetClass RedditBtn_label {
@@ -518,8 +539,8 @@ WindowWidgetClass WindowWidget {
              imageTexture "{FDBC9A6B3BB8B821}Colorful-UI/gui/textures/main_menu/Colorful.Youtube.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              filter 0
             }
             TextWidgetClass YoutubeBtn_label {
@@ -586,8 +607,8 @@ WindowWidgetClass WindowWidget {
              imageTexture "{25DB8D90C00B0710}Colorful-UI/gui/textures/main_menu/Colorful.Facebook.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              filter 0
             }
             TextWidgetClass FacebookBtn_label {
@@ -654,8 +675,8 @@ WindowWidgetClass WindowWidget {
              imageTexture "{F74D2BABB67517C4}Colorful-UI/gui/textures/main_menu/Colorful.meta.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              filter 0
             }
             TextWidgetClass MetaBtn_label {
@@ -698,8 +719,8 @@ WindowWidgetClass WindowWidget {
      imageTexture "{BB70E7AC4118E41B}Colorful-UI/gui/textures/globals/Logo.Large.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
      filter 1
      nocache 0
     }

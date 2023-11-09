@@ -36,49 +36,32 @@ FrameWidgetClass character_creation_root {
      hexactsize 0
      vexactsize 0
      priority 1
-     imageTexture "{E6B3EF816E067499}Gui/textures/inventory_bgvignette.edds"
+     imageTexture "{72D85032C4F2ED0B}Colorful-UI/gui/textures/globals/Vingette.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
      filter 0
      nocache 1
     }
-    ImageWidgetClass Colorful_Shader {
+    ImageWidgetClass Lab_Shader {
      visible 1
      ignorepointer 1
      keepsafezone 0
-     size 1 0.8
-     halign center_ref
-     hexactpos 1
-     vexactpos 1
-     hexactsize 0
-     vexactsize 0
-     scaled 1
-     imageTexture "{4BFC093013F74D19}Colorful-UI/gui/textures/globals/UI.Colorful.Shader.edds"
-     mode blend
-     "src alpha" 1
-     "no wrap" 1
-     stretch 0
-    }
-    ImageWidgetClass HorizShader {
-     visible 1
-     ignorepointer 1
-     keepsafezone 0
-     color 1 1 1 0.7843
      position 0 0
      size 1 1
+     halign center_ref
+     valign center_ref
      hexactpos 1
      vexactpos 1
      hexactsize 0
      vexactsize 0
      scaled 1
-     imageTexture "{A82F487401D497EF}Colorful-UI/gui/textures/globals/Colorful.HorizShaderTip.edds"
+     imageTexture "{D7092B868D24199B}Colorful-UI/gui/textures/globals/BottomShader.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
-     filter 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
     }
    }
   }
@@ -1010,8 +993,7 @@ FrameWidgetClass character_creation_root {
            image0 "set:xbox_buttons image:A"
            mode blend
            "src alpha" 1
-           "no wrap" 1
-           stretch 0
+           "clamp mode" clamp
            "flip u" 0
            "flip v" 0
            filter 1
@@ -1071,8 +1053,7 @@ FrameWidgetClass character_creation_root {
            image0 "set:xbox_buttons image:X"
            mode blend
            "src alpha" 1
-           "no wrap" 1
-           stretch 0
+           "clamp mode" clamp
            "flip u" 0
            "flip v" 0
            filter 1
@@ -1131,8 +1112,7 @@ FrameWidgetClass character_creation_root {
            image0 "set:xbox_buttons image:Y"
            mode blend
            "src alpha" 1
-           "no wrap" 1
-           stretch 0
+           "clamp mode" clamp
            "flip u" 0
            "flip v" 0
            filter 1
@@ -1189,8 +1169,7 @@ FrameWidgetClass character_creation_root {
            image0 "set:xbox_buttons image:B"
            mode blend
            "src alpha" 1
-           "no wrap" 1
-           stretch 0
+           "clamp mode" clamp
            "flip u" 0
            "flip v" 0
            filter 1
@@ -1236,8 +1215,8 @@ FrameWidgetClass character_creation_root {
      imageTexture "{E6B3EF816E067499}Gui/textures/inventory_bgvignette.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
      filter 0
      nocache 1
     }

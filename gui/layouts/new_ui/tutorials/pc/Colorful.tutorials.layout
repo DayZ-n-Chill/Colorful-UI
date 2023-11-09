@@ -35,18 +35,19 @@ FrameWidgetClass rootFrame {
      hexactsize 0
      vexactsize 0
      priority 1
-     imageTexture "{E6B3EF816E067499}Gui/textures/inventory_bgvignette.edds"
+     imageTexture "{72D85032C4F2ED0B}Colorful-UI/gui/textures/globals/Vingette.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
      filter 0
      nocache 1
     }
-    ImageWidgetClass Colorful_Shader {
+    ImageWidgetClass Lab_Shader {
      visible 1
      ignorepointer 1
      keepsafezone 0
+     position 0 0
      size 1 1
      halign center_ref
      valign center_ref
@@ -55,29 +56,11 @@ FrameWidgetClass rootFrame {
      hexactsize 0
      vexactsize 0
      scaled 1
-     imageTexture "{4BFC093013F74D19}Colorful-UI/gui/textures/globals/UI.Colorful.Shader.edds"
+     imageTexture "{D7092B868D24199B}Colorful-UI/gui/textures/globals/BottomShader.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 0
-    }
-    ImageWidgetClass HorizShader {
-     visible 1
-     ignorepointer 1
-     keepsafezone 0
-     position 0 0
-     size 1 1
-     hexactpos 1
-     vexactpos 1
-     hexactsize 0
-     vexactsize 0
-     scaled 1
-     imageTexture "{A82F487401D497EF}Colorful-UI/gui/textures/globals/Colorful.HorizShaderTip.edds"
-     mode blend
-     "src alpha" 1
-     "no wrap" 1
-     stretch 1
-     filter 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
     }
    }
   }
@@ -1415,11 +1398,11 @@ FrameWidgetClass rootFrame {
          vexactpos 0
          hexactsize 0
          vexactsize 0
-         imageTexture "{5A89D58DD2276E85}gui/textures/SerratedBlack2.edds"
+         imageTexture "{5A89D58DD2276E85}gui/textures/serratedblack2.edds"
          mode blend
          "src alpha" 1
-         "no wrap" 1
-         stretch 1
+         "clamp mode" clamp
+         "stretch mode" stretch_w_h
         }
         GridSpacerWidgetClass Tab_Control_Container {
          ignorepointer 1
@@ -1485,11 +1468,11 @@ FrameWidgetClass rootFrame {
              hexactsize 1
              vexactsize 0
              draggable 0
-             imageTexture "{5A89D58DD2276E85}gui/textures/SerratedBlack2.edds"
+             imageTexture "{5A89D58DD2276E85}gui/textures/serratedblack2.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              "flip u" 0
              "flip v" 0
              filter 1
@@ -1545,11 +1528,11 @@ FrameWidgetClass rootFrame {
              hexactsize 1
              vexactsize 0
              draggable 0
-             imageTexture "{5A89D58DD2276E85}gui/textures/SerratedBlack2.edds"
+             imageTexture "{5A89D58DD2276E85}gui/textures/serratedblack2.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              "flip u" 0
              "flip v" 0
              filter 1
@@ -1605,11 +1588,11 @@ FrameWidgetClass rootFrame {
              hexactsize 1
              vexactsize 0
              draggable 0
-             imageTexture "{5A89D58DD2276E85}gui/textures/SerratedBlack2.edds"
+             imageTexture "{5A89D58DD2276E85}gui/textures/serratedblack2.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              "flip u" 0
              "flip v" 0
              filter 1
@@ -1665,11 +1648,11 @@ FrameWidgetClass rootFrame {
              hexactsize 1
              vexactsize 0
              draggable 0
-             imageTexture "{5A89D58DD2276E85}gui/textures/SerratedBlack2.edds"
+             imageTexture "{5A89D58DD2276E85}gui/textures/serratedblack2.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              "flip u" 0
              "flip v" 0
              filter 1
@@ -1725,11 +1708,11 @@ FrameWidgetClass rootFrame {
              hexactsize 1
              vexactsize 0
              draggable 0
-             imageTexture "{5A89D58DD2276E85}gui/textures/SerratedBlack2.edds"
+             imageTexture "{5A89D58DD2276E85}gui/textures/serratedblack2.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              "flip u" 0
              "flip v" 0
              filter 1
@@ -1785,11 +1768,11 @@ FrameWidgetClass rootFrame {
              hexactsize 1
              vexactsize 0
              draggable 0
-             imageTexture "{5A89D58DD2276E85}gui/textures/SerratedBlack2.edds"
+             imageTexture "{5A89D58DD2276E85}gui/textures/serratedblack2.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              "flip u" 0
              "flip v" 0
              filter 1
@@ -1827,8 +1810,8 @@ FrameWidgetClass rootFrame {
          image0 "set:xbox_buttons image:LB"
          mode blend
          "src alpha" 1
-         "no wrap" 1
-         stretch 1
+         "clamp mode" clamp
+         "stretch mode" stretch_w_h
         }
         ImageWidgetClass TabRightControl {
          visible 1
@@ -1845,8 +1828,8 @@ FrameWidgetClass rootFrame {
          image0 "set:xbox_buttons image:RB"
          mode blend
          "src alpha" 1
-         "no wrap" 1
-         stretch 1
+         "clamp mode" clamp
+         "stretch mode" stretch_w_h
         }
        }
       }
@@ -1874,8 +1857,7 @@ FrameWidgetClass rootFrame {
        hexactsize 1
        vexactsize 1
        imageTexture "{3A40B4F14DF4CA15}gui/textures/tutorials/health.edds"
-       "no wrap" 0
-       stretch 1
+       "stretch mode" stretch_w_h
       }
       CanvasWidgetClass CanvasWidget_0 {
        visible 1
@@ -1949,8 +1931,6 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconHealth0"
              mode blend
              "src alpha" 1
-             "no wrap" 0
-             stretch 0
              "flip u" 0
              "flip v" 0
              filter 1
@@ -1987,8 +1967,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp3"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -2011,8 +1990,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp2"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -2035,8 +2013,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp1"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -2058,8 +2035,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp1"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -2082,8 +2058,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp2"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -2106,8 +2081,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp3"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -2145,8 +2119,6 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconBlood0"
              mode blend
              "src alpha" 1
-             "no wrap" 0
-             stretch 0
              "flip u" 0
              "flip v" 0
              filter 1
@@ -2213,8 +2185,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp3"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -2237,8 +2208,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp2"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -2261,8 +2231,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp1"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -2298,8 +2267,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp1"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -2322,8 +2290,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp2"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -2346,8 +2313,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp3"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -2398,8 +2364,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconTemperature0"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip u" 0
              "flip v" 0
              filter 1
@@ -2436,8 +2401,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp3"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -2460,8 +2424,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp2"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -2484,8 +2447,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp1"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -2507,8 +2469,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp1"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -2531,8 +2492,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp2"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -2555,8 +2515,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp3"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -2594,8 +2553,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconHungry3"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip u" 0
              "flip v" 0
              filter 1
@@ -2632,8 +2590,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp3"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -2656,8 +2613,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp2"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -2680,8 +2636,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp1"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -2703,8 +2658,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp1"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -2727,8 +2681,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp2"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -2750,8 +2703,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp3"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -2820,8 +2772,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconThirsty2"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip u" 0
              "flip v" 0
              filter 1
@@ -2858,8 +2809,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp3"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -2882,8 +2832,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp2"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -2906,8 +2855,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp1"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -2929,8 +2877,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp1"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -2968,8 +2915,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp2"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -2992,8 +2938,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp3"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -3031,8 +2976,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconBacteria"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip u" 0
              "flip v" 0
              filter 1
@@ -3071,8 +3015,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp3"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -3095,8 +3038,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp2"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -3119,8 +3061,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp1"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -3142,8 +3083,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp1"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -3166,8 +3106,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp2"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -3190,8 +3129,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp3"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -3264,8 +3202,6 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconHealth0"
              mode blend
              "src alpha" 1
-             "no wrap" 0
-             stretch 0
              "flip u" 0
              "flip v" 0
              filter 1
@@ -3288,8 +3224,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp3"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -3312,8 +3247,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp2"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -3336,8 +3270,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp1"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -3359,8 +3292,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp1"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -3383,8 +3315,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp2"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -3407,8 +3338,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp3"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -3446,8 +3376,6 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconBlood0"
              mode blend
              "src alpha" 1
-             "no wrap" 0
-             stretch 0
              "flip u" 0
              "flip v" 0
              filter 1
@@ -3502,8 +3430,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp3"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -3526,8 +3453,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp2"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -3550,8 +3476,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp1"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -3573,8 +3498,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp1"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -3597,8 +3521,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp2"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -3621,8 +3544,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp3"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -3672,8 +3594,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconTemperature0"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip u" 0
              "flip v" 0
              filter 1
@@ -3696,8 +3617,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp3"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -3720,8 +3640,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp2"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -3744,8 +3663,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp1"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -3767,8 +3685,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp1"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -3791,8 +3708,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp2"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -3815,8 +3731,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp3"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -3853,8 +3768,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconHungry3"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip u" 0
              "flip v" 0
              filter 1
@@ -3877,8 +3791,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp3"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -3901,8 +3814,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp2"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -3925,8 +3837,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp1"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -3948,8 +3859,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp1"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -3972,8 +3882,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp2"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -3996,8 +3905,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp3"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -4034,8 +3942,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconThirsty2"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip u" 0
              "flip v" 0
              filter 1
@@ -4058,8 +3965,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp3"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -4082,8 +3988,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp2"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -4106,8 +4011,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp1"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -4129,8 +4033,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp1"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -4153,8 +4056,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp2"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -4177,8 +4079,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp3"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -4216,8 +4117,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconBacteria"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip u" 0
              "flip v" 0
              filter 1
@@ -4240,8 +4140,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp3"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -4264,8 +4163,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp2"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -4288,8 +4186,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp1"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 1
              filter 1
              nocache 0
@@ -4311,8 +4208,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp1"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -4335,8 +4231,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp2"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -4359,8 +4254,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:iconArrowUp3"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 0
+             "clamp mode" clamp
              "flip v" 0
              filter 1
              nocache 0
@@ -4411,7 +4305,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:stance_prone"
              mode additive
              "src alpha" 1
-             "no wrap" 1
+             "clamp mode" clamp
              filter 1
              nocache 0
             }
@@ -4429,7 +4323,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:stance_crouch"
              mode additive
              "src alpha" 1
-             "no wrap" 1
+             "clamp mode" clamp
              filter 1
              nocache 0
             }
@@ -4448,7 +4342,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:stance_walk"
              mode additive
              "src alpha" 1
-             "no wrap" 1
+             "clamp mode" clamp
              filter 1
              nocache 0
             }
@@ -4467,7 +4361,7 @@ FrameWidgetClass rootFrame {
              image0 "set:dayz_gui image:stance_car"
              mode additive
              "src alpha" 1
-             "no wrap" 1
+             "clamp mode" clamp
              filter 1
              nocache 0
             }
@@ -4653,8 +4547,7 @@ FrameWidgetClass rootFrame {
        hexactsize 1
        vexactsize 1
        imageTexture "{92EF7001B2ABF5C3}gui/textures/tutorials/melee.edds"
-       "no wrap" 0
-       stretch 1
+       "stretch mode" stretch_w_h
        filter 1
       }
      }
@@ -4761,8 +4654,7 @@ FrameWidgetClass rootFrame {
        hexactsize 1
        vexactsize 1
        imageTexture "{1EAE6D8A6359889C}gui/textures/tutorials/guns.edds"
-       "no wrap" 0
-       stretch 1
+       "stretch mode" stretch_w_h
       }
      }
     }
@@ -4839,8 +4731,7 @@ FrameWidgetClass rootFrame {
        hexactsize 1
        vexactsize 1
        imageTexture "{2E141DDA4A41B752}gui/textures/tutorials/infected.edds"
-       "no wrap" 0
-       stretch 1
+       "stretch mode" stretch_w_h
       }
      }
     }
@@ -4972,8 +4863,7 @@ FrameWidgetClass rootFrame {
        hexactsize 1
        vexactsize 1
        imageTexture "{E04C6B70FBEE704C}gui/textures/tutorials/inventory_pc.edds"
-       "no wrap" 0
-       stretch 1
+       "stretch mode" stretch_w_h
        {
         FrameWidgetClass height_wrapper {
          visible 1
@@ -5201,8 +5091,7 @@ FrameWidgetClass rootFrame {
        hexactsize 1
        vexactsize 1
        imageTexture "{F0E95E39B3D3FE0C}gui/textures/tutorials/loot.edds"
-       "no wrap" 0
-       stretch 1
+       "stretch mode" stretch_w_h
       }
      }
     }
@@ -5223,8 +5112,8 @@ FrameWidgetClass rootFrame {
    imageTexture "{E6B3EF816E067499}Gui/textures/inventory_bgvignette.edds"
    mode blend
    "src alpha" 1
-   "no wrap" 1
-   stretch 1
+   "clamp mode" clamp
+   "stretch mode" stretch_w_h
    filter 0
    nocache 1
   }

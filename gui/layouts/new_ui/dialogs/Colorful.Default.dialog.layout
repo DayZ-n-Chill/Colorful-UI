@@ -29,8 +29,8 @@ FrameWidgetClass DialogRoot {
    imageTexture "{BCDEF8AF12180544}Colorful-UI/gui/textures/loading_screens/Colorful-BG-11.edds"
    mode opaque
    "src alpha" 1
-   "no wrap" 1
-   stretch 1
+   "clamp mode" clamp
+   "stretch mode" stretch_w_h
    filter 0
    "Transition width" 1
    Progress 0
@@ -65,8 +65,8 @@ FrameWidgetClass DialogRoot {
      imageTexture "{E6B3EF816E067499}Gui/textures/inventory_bgvignette.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
      filter 0
      nocache 1
     }
@@ -85,8 +85,7 @@ FrameWidgetClass DialogRoot {
      imageTexture "{4BFC093013F74D19}Colorful-UI/gui/textures/globals/UI.Colorful.Shader.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 0
+     "clamp mode" clamp
     }
     ImageWidgetClass HorizShader {
      visible 0
@@ -102,8 +101,8 @@ FrameWidgetClass DialogRoot {
      imageTexture "{A82F487401D497EF}Colorful-UI/gui/textures/globals/Colorful.HorizShaderTip.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
      filter 1
     }
     ImageWidgetClass Colorful_Shader0 {
@@ -122,8 +121,7 @@ FrameWidgetClass DialogRoot {
      imageTexture "{A78E9ED74CB35BD1}Colorful-UI/gui/textures/globals/Colorful.Shading.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 0
+     "clamp mode" clamp
     }
    }
   }
