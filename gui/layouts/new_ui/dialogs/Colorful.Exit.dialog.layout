@@ -31,7 +31,7 @@ FrameWidgetClass DialogRoot {
    mode opaque
    "src alpha" 1
    "clamp mode" clamp
-   "stretch mode" stretch_w_h
+   "stretch mode" stretch_w_center
    filter 0
    "Transition width" 1
    Progress 0

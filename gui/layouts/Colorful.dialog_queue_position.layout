@@ -22,7 +22,7 @@ PanelWidgetClass TextInputDialogRoot {
    mode blend
    "src alpha" 1
    "clamp mode" clamp
-   "stretch mode" stretch_w_h
+   "stretch mode" stretch_w_center
   }
   ImageWidgetClass BackgroundOverride {
    visible 1
@@ -39,7 +39,8 @@ PanelWidgetClass TextInputDialogRoot {
    imageTexture "{C3147EF667315898}Colorful-UI/gui/textures/loading_screens/JLK_BG_4.edds"
    mode opaque
    "src alpha" 0
-   "stretch mode" stretch_w_h
+   "clamp mode" clamp
+   "stretch mode" stretch_w_center
    "Transition width" 1
    Progress 0
   }

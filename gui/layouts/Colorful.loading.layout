@@ -11,7 +11,6 @@ FrameWidgetClass LoadingFrame {
  {
   ImageWidgetClass ImageBackground {
    visible 1
-   position 0 -0.01
    size 0.16 0.06
    halign center_ref
    valign center_ref
@@ -24,13 +23,13 @@ FrameWidgetClass LoadingFrame {
    imageTexture "{202C0532A7A7CA89}Colorful-UI/gui/textures/loading_screens/JLK_BG_1.edds"
    mode opaque
    "src alpha" 0
+   "clamp mode" clamp
    "stretch mode" stretch_w_h
    "Transition width" 1
    Progress 0
   }
   ImageWidgetClass BackgroundOverride {
    visible 1
-   position 0 0
    size 0.16 0.09
    halign center_ref
    valign center_ref
@@ -43,7 +42,8 @@ FrameWidgetClass LoadingFrame {
    imageTexture "{202C0532A7A7CA89}Colorful-UI/gui/textures/loading_screens/JLK_BG_1.edds"
    mode opaque
    "src alpha" 0
-   "stretch mode" stretch_w_h
+   "clamp mode" clamp
+   "stretch mode" stretch_w_center
    "Transition width" 1
    Progress 0
   }
@@ -65,7 +65,6 @@ FrameWidgetClass LoadingFrame {
      visible 1
      ignorepointer 0
      color 0 0 0 0.7843
-     position 0 0
      size 1 1
      halign center_ref
      valign center_ref
@@ -147,7 +146,7 @@ FrameWidgetClass LoadingFrame {
      "text valign" center
     }
     TextWidgetClass ProTip {
-     visible 0
+     visible 1
      color 0.2588 0.6863 0.3647 1
      position 0 0.024
      size 1 0.03
@@ -179,7 +178,8 @@ FrameWidgetClass LoadingFrame {
      "text valign" center
     }
     TextWidgetClass StatusText {
-     visible 0
+     visible 1
+     position 0 0
      size 1 0.03
      halign center_ref
      valign bottom_ref
