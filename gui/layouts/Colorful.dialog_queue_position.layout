@@ -22,8 +22,8 @@ PanelWidgetClass TextInputDialogRoot {
    imageTexture "{09470E9DECC2D81D}EDEN_UI/gui/textures/loading_screens/loading_screen_2_EDEN.edds"
    mode blend
    "src alpha" 1
-   "no wrap" 1
-   stretch 1
+   "clamp mode" clamp
+   "stretch mode" stretch_w_h
   }
   ImageWidgetClass BackgroundOverride {
    visible 1
@@ -40,7 +40,7 @@ PanelWidgetClass TextInputDialogRoot {
    imageTexture "{A5D8917F066B3FDC}Colorful-UI/gui/textures/loading_screens/Colorful-BG-12.edds"
    mode opaque
    "src alpha" 0
-   stretch 1
+   "stretch mode" stretch_w_h
    "Transition width" 1
    Progress 0
   }
@@ -74,8 +74,8 @@ PanelWidgetClass TextInputDialogRoot {
      imageTexture "{E6B3EF816E067499}Gui/textures/inventory_bgvignette.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
      filter 0
      nocache 1
     }
@@ -94,8 +94,7 @@ PanelWidgetClass TextInputDialogRoot {
      imageTexture "{4BFC093013F74D19}Colorful-UI/gui/textures/globals/UI.Colorful.Shader.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 0
+     "clamp mode" clamp
     }
     ImageWidgetClass HorizShader {
      visible 1
@@ -111,8 +110,8 @@ PanelWidgetClass TextInputDialogRoot {
      imageTexture "{A82F487401D497EF}Colorful-UI/gui/textures/globals/Colorful.HorizShaderTip.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
      filter 1
     }
    }
@@ -127,25 +126,6 @@ PanelWidgetClass TextInputDialogRoot {
    hexactsize 0
    vexactsize 0
    {
-    ImageWidgetClass ColorfulLogo {
-     visible 1
-     clipchildren 0
-     inheritalpha 1
-     size 460 320
-     hexactpos 0
-     vexactpos 0
-     hexactsize 1
-     vexactsize 1
-     fixaspect outside
-     image0 ""
-     imageTexture "{5314D820E495219F}Colorful-UI/gui/textures/globals/Colorful.Logo.edds"
-     mode blend
-     "src alpha" 1
-     "no wrap" 1
-     stretch 1
-     filter 1
-     nocache 0
-    }
     ButtonWidgetClass btnLeave {
      color 1 1 1 0
      size 37 37
@@ -284,6 +264,25 @@ PanelWidgetClass TextInputDialogRoot {
        "text valign" center
       }
      }
+    }
+    ImageWidgetClass ColorfulLogo {
+     visible 1
+     clipchildren 0
+     inheritalpha 1
+     size 400 400
+     hexactpos 0
+     vexactpos 0
+     hexactsize 1
+     vexactsize 1
+     fixaspect outside
+     image0 ""
+     imageTexture "{DB70346F0883BCEA}Colorful-UI/gui/textures/globals/LogoTrimmed.edds"
+     mode blend
+     "src alpha" 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
+     filter 1
+     nocache 0
     }
    }
   }

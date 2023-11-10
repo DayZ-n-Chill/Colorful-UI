@@ -44,8 +44,8 @@ WindowWidgetClass LogoutDialogRoot {
      imageTexture "{E6B3EF816E067499}Gui/textures/inventory_bgvignette.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
      filter 0
      nocache 1
     }
@@ -64,8 +64,7 @@ WindowWidgetClass LogoutDialogRoot {
      imageTexture "{4BFC093013F74D19}Colorful-UI/gui/textures/globals/UI.Colorful.Shader.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 0
+     "clamp mode" clamp
     }
     ImageWidgetClass HorizShader {
      visible 1
@@ -81,8 +80,8 @@ WindowWidgetClass LogoutDialogRoot {
      imageTexture "{A82F487401D497EF}Colorful-UI/gui/textures/globals/Colorful.HorizShaderTip.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
      filter 1
     }
    }
@@ -581,8 +580,8 @@ WindowWidgetClass LogoutDialogRoot {
              imageTexture "{4E98404B3EE57BD9}Colorful-UI/gui/textures/main_menu/Colorful.Discord.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              filter 0
             }
             TextWidgetClass DiscordBtn_label {
@@ -649,8 +648,8 @@ WindowWidgetClass LogoutDialogRoot {
              imageTexture "{56507986E3807A3B}Colorful-UI/gui/textures/main_menu/Colorful.Twitter.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              filter 0
             }
             TextWidgetClass TwitterBtn_label {
@@ -718,8 +717,8 @@ WindowWidgetClass LogoutDialogRoot {
              imageTexture "{042531BECC696FCF}Colorful-UI/gui/textures/main_menu/Colorful.Reddit.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              filter 0
             }
             TextWidgetClass RedditBtn_label {
@@ -787,8 +786,8 @@ WindowWidgetClass LogoutDialogRoot {
              imageTexture "{FDBC9A6B3BB8B821}Colorful-UI/gui/textures/main_menu/Colorful.Youtube.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              filter 0
             }
             TextWidgetClass YoutubeBtn_label {
@@ -855,8 +854,8 @@ WindowWidgetClass LogoutDialogRoot {
              imageTexture "{25DB8D90C00B0710}Colorful-UI/gui/textures/main_menu/Colorful.Facebook.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              filter 0
             }
             TextWidgetClass FacebookBtn_label {
@@ -923,8 +922,8 @@ WindowWidgetClass LogoutDialogRoot {
              imageTexture "{F74D2BABB67517C4}Colorful-UI/gui/textures/main_menu/Colorful.meta.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              filter 0
             }
             TextWidgetClass MetaBtn_label {
@@ -957,18 +956,18 @@ WindowWidgetClass LogoutDialogRoot {
      visible 1
      clipchildren 0
      inheritalpha 1
-     size 460 320
+     size 400 400
      hexactpos 0
      vexactpos 0
      hexactsize 1
      vexactsize 1
      fixaspect outside
      image0 ""
-     imageTexture "{5314D820E495219F}Colorful-UI/gui/textures/globals/Colorful.Logo.edds"
+     imageTexture "{DB70346F0883BCEA}Colorful-UI/gui/textures/globals/LogoTrimmed.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
      filter 1
      nocache 0
     }

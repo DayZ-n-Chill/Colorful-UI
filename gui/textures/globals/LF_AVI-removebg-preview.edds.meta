@@ -1,10 +1,10 @@
 MetaFileClass {
- Name "{51496907148AA9C5}Colorful-UI/gui/textures/inventory/IS-In_use.edds"
- Author "corruscant"
- ChangeDate 1222831366
+ Name "{89E723630F1DEEFD}Colorful-UI/gui/textures/globals/LF_AVI-removebg-preview.edds"
+ Author "sdf-1"
+ ChangeDate -2113573015
  Configurations {
   PNGResourceClass PC {
-   SourceFile "IS-In_use.png"
+   SourceFile "LF_AVI-removebg-preview.png"
   }
   PNGResourceClass XBOX_ONE : PC {
   }

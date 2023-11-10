@@ -1,10 +1,10 @@
 MetaFileClass {
- Name "{57DD1B88497A88B8}Colorful-UI/gui/textures/inventory/NumberSqr.edds"
- Author "corruscant"
- ChangeDate 1323494662
+ Name "{DB70346F0883BCEA}Colorful-UI/gui/textures/globals/LogoTrimmed.edds"
+ Author "sdf-1"
+ ChangeDate -1843040407
  Configurations {
   PNGResourceClass PC {
-   SourceFile "NumberSqr.png"
+   SourceFile "LogoTrimmed.png"
   }
   PNGResourceClass XBOX_ONE : PC {
   }

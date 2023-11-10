@@ -36,17 +36,17 @@ string GetRandomBackground()
  */
 class MenuURLS {
 	// Link for Discord
-	static string urlDiscord  = "https://discord.gg/dayznchill";
+	static string urlDiscord  = "#";
 	// Link for Facebook
-	static string urlFacebook = "https://facebook.com/dayznchill";
+	static string urlFacebook = "#";
 	// Link for Twitter
-	static string urlTwitter  = "https://twitter.com/dayznchill";
+	static string urlTwitter  = "#";
 	// Link for Reddit
-	static string urlReddit   = "https://reddit.com/dayznchill";
+	static string urlReddit   = "#";
 	// Link for Youtube
-	static string urlYoutube  = "https://youtube.com/dayznchill";
+	static string urlYoutube  = "#";
 	// Link to Website
-	static string urlWebsite  = "https://dayznchill.com"; 
+	static string urlWebsite  = "#"; 
 	// Link for Prio Q
 	static string urlPriorityQ   = "#";
 	// Can be used anything else
@@ -132,7 +132,7 @@ class colorScheme
 {
 	// Quick Styling --------------------------------------
 	// This color should be Servers/Communities Brand Color
-	static int BrandColor()   { return UIColor.Teal(); };
+	static int BrandColor()   { return UIColor.DPGPurple(); };
 	// This color should be a complimentary color to your brand. 
 	static int AccentColor()  { return UIColor.Red(); }
 
