@@ -24,7 +24,7 @@ FrameWidgetClass main_menu_root {
    scaled 1
    fixaspect outside
    image0 ""
-   imageTexture "{BCDEF8AF12180544}Colorful-UI/gui/textures/loading_screens/Colorful-BG-11.edds"
+   imageTexture "{DC11A5191D8D0058}Colorful-UI/gui/textures/loading_screens/Colorful-BG-2.edds"
    mode opaque
    "src alpha" 1
    "clamp mode" clamp

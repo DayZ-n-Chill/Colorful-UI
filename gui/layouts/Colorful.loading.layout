@@ -28,25 +28,6 @@ FrameWidgetClass LoadingFrame {
    "Transition width" 1
    Progress 0
   }
-  ImageWidgetClass BackgroundOverride {
-   visible 1
-   position 0 0
-   size 0.16 0.09
-   halign center_ref
-   valign center_ref
-   hexactpos 0
-   vexactpos 0
-   hexactsize 0
-   vexactsize 0
-   fixaspect outside
-   image0 ""
-   imageTexture "{48D6BF371FC56D30}Colorful-UI/gui/textures/loading_screens/Colorful-BG-10.edds"
-   mode opaque
-   "src alpha" 0
-   "stretch mode" stretch_w_h
-   "Transition width" 1
-   Progress 0
-  }
   FrameWidgetClass Shaders {
    visible 1
    clipchildren 0
@@ -864,7 +845,6 @@ FrameWidgetClass LoadingFrame {
      vexactsize 1
      fixaspect outside
      image0 ""
-     imageTexture "{F4149B85A4538BED}EDEN_UI/gui/textures/globals/DayZEden.edds"
      mode blend
      "src alpha" 1
      "clamp mode" clamp
