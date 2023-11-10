@@ -1,7 +1,7 @@
 MetaFileClass {
- Name "{5831A1BA407AE923}Colorful-UI/gui/textures/loading_screens/Colorful-BG-6.edds"
- Author "corruscant"
- ChangeDate -1312002861
+ Name "{CB219945D0C6FA3D}Colorful-UI/gui/textures/loading_screens/Colorful-BG-6.edds"
+ Author "sdf-1"
+ ChangeDate -1697796247
  Configurations {
   PNGResourceClass PC {
    SourceFile "Colorful-BG-6.png"
