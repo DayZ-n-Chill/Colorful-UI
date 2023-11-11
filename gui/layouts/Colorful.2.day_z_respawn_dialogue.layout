@@ -285,8 +285,8 @@ WindowWidgetClass WindowWidget {
              imageTexture "{4E98404B3EE57BD9}Colorful-UI/gui/textures/main_menu/Colorful.Discord.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              filter 0
             }
             TextWidgetClass DiscordBtn_label {
@@ -313,6 +313,7 @@ WindowWidgetClass WindowWidget {
          }
         }
         ButtonWidgetClass TwitterBtn {
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -329,6 +330,7 @@ WindowWidgetClass WindowWidget {
          "next down" "play_video"
          {
           PanelWidgetClass TwitterBtn_panel {
+           visible 0
            ignorepointer 1
            color 0 0 0 0
            size 293 39
@@ -341,6 +343,7 @@ WindowWidgetClass WindowWidget {
            style DayZDefaultPanel
            {
             ImageWidgetClass TwitterBtn_img {
+             visible 0
              clipchildren 0
              ignorepointer 1
              size 47 39
@@ -353,11 +356,12 @@ WindowWidgetClass WindowWidget {
              imageTexture "{56507986E3807A3B}Colorful-UI/gui/textures/main_menu/Colorful.Twitter.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              filter 0
             }
             TextWidgetClass TwitterBtn_label {
+             visible 0
              clipchildren 0
              ignorepointer 1
              position 60 0
@@ -381,7 +385,7 @@ WindowWidgetClass WindowWidget {
          }
         }
         ButtonWidgetClass RedditBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -398,6 +402,7 @@ WindowWidgetClass WindowWidget {
          "next down" "play_video"
          {
           PanelWidgetClass RedditBtn_panel {
+           visible 0
            ignorepointer 1
            color 0 0 0 0
            size 293 39
@@ -410,6 +415,7 @@ WindowWidgetClass WindowWidget {
            style DayZDefaultPanel
            {
             ImageWidgetClass RedditBtn_img {
+             visible 0
              clipchildren 0
              ignorepointer 1
              size 47 39
@@ -422,11 +428,12 @@ WindowWidgetClass WindowWidget {
              imageTexture "{042531BECC696FCF}Colorful-UI/gui/textures/main_menu/Colorful.Reddit.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              filter 0
             }
             TextWidgetClass RedditBtn_label {
+             visible 0
              clipchildren 0
              ignorepointer 1
              position 60 0
@@ -450,7 +457,7 @@ WindowWidgetClass WindowWidget {
          }
         }
         ButtonWidgetClass YoutubeBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -467,6 +474,7 @@ WindowWidgetClass WindowWidget {
          "next down" "play_video"
          {
           PanelWidgetClass YoutubeBtn_panel {
+           visible 0
            ignorepointer 1
            color 0 0 0 0
            size 293 39
@@ -479,6 +487,7 @@ WindowWidgetClass WindowWidget {
            style DayZDefaultPanel
            {
             ImageWidgetClass YoutubeBtn_img {
+             visible 0
              clipchildren 0
              ignorepointer 1
              size 47 39
@@ -491,11 +500,12 @@ WindowWidgetClass WindowWidget {
              imageTexture "{FDBC9A6B3BB8B821}Colorful-UI/gui/textures/main_menu/Colorful.Youtube.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              filter 0
             }
             TextWidgetClass YoutubeBtn_label {
+             visible 0
              clipchildren 0
              ignorepointer 1
              position 60 0
@@ -518,7 +528,7 @@ WindowWidgetClass WindowWidget {
          }
         }
         ButtonWidgetClass FacebookBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -535,6 +545,7 @@ WindowWidgetClass WindowWidget {
          "next down" "play_video"
          {
           PanelWidgetClass FacebookBtn_panel {
+           visible 0
            ignorepointer 1
            color 0 0 0 0
            size 293 39
@@ -547,6 +558,7 @@ WindowWidgetClass WindowWidget {
            style DayZDefaultPanel
            {
             ImageWidgetClass FacebookBtn_img {
+             visible 0
              clipchildren 0
              ignorepointer 1
              size 47 39
@@ -559,11 +571,12 @@ WindowWidgetClass WindowWidget {
              imageTexture "{25DB8D90C00B0710}Colorful-UI/gui/textures/main_menu/Colorful.Facebook.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              filter 0
             }
             TextWidgetClass FacebookBtn_label {
+             visible 0
              clipchildren 0
              ignorepointer 1
              position 60 0
@@ -627,8 +640,8 @@ WindowWidgetClass WindowWidget {
              imageTexture "{F74D2BABB67517C4}Colorful-UI/gui/textures/main_menu/Colorful.meta.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              filter 0
             }
             TextWidgetClass MetaBtn_label {
@@ -661,18 +674,18 @@ WindowWidgetClass WindowWidget {
      visible 1
      clipchildren 0
      inheritalpha 1
-     size 460 320
+     size 512 512
      hexactpos 0
      vexactpos 0
      hexactsize 1
      vexactsize 1
      fixaspect outside
      image0 ""
-     imageTexture "{5314D820E495219F}Colorful-UI/gui/textures/globals/Colorful.Logo.edds"
+     imageTexture "{725A85EDF77BD40D}Colorful-UI/gui/textures/globals/LogoKilo.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
      filter 1
      nocache 0
     }

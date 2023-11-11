@@ -1,10 +1,10 @@
 MetaFileClass {
- Name "{51496907148AA9C5}Colorful-UI/gui/textures/inventory/IS-In_use.edds"
- Author "corruscant"
- ChangeDate 1222831366
+ Name "{725A85EDF77BD40D}Colorful-UI/gui/textures/globals/LogoKilo.edds"
+ Author "sdf-1"
+ ChangeDate 406155114
  Configurations {
   PNGResourceClass PC {
-   SourceFile "IS-In_use.png"
+   SourceFile "LogoKilo.png"
   }
   PNGResourceClass XBOX_ONE : PC {
   }
