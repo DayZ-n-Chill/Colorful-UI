@@ -28,17 +28,17 @@ string GetRandomBackground()
  */
 class MenuURLS {
 	// Link for Discord
-	static string urlDiscord  = "https://discord.gg/dayznchill";
+	static string urlDiscord  = "https://discord.com/invite/d8hbuPNAb5";
 	// Link for Facebook
-	static string urlFacebook = "https://facebook.com/dayznchill";
+	static string urlFacebook = "#";
 	// Link for Twitter
-	static string urlTwitter  = "https://twitter.com/dayznchill";
+	static string urlTwitter  = "https://revolut.me/egzorcysta";
 	// Link for Reddit
-	static string urlReddit   = "https://reddit.com/dayznchill";
+	static string urlReddit   = "#";
 	// Link for Youtube
-	static string urlYoutube  = "https://youtube.com/dayznchill";
+	static string urlYoutube  = "#";
 	// Link to Website
-	static string urlWebsite  = "https://dayznchill.com"; 
+	static string urlWebsite  = "#"; 
 	// Link for Prio Q
 	static string urlPriorityQ   = "#";
 	// Can be used anything else

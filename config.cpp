@@ -70,24 +70,24 @@ class CfgMods
 			fonts[] = {"Colorful-UI/gui/fonts/Roboto-Regular.fnt"};
 		};
 	};
+};
 
-	class CfgSoundSets
+class CfgSoundSets
+{
+	class Main_Music_Menu_SoundSet
 	{
-		class Main_Music_Menu_SoundSet
-		{
-			soundShaders[] = {"Main_Music_Menu_SoundShader"};
-			volumeFactor = 1;
-			frequencyFactor = 1;
-			spatial = 0;
-		};
-	};	
-	class CfgSoundShaders
-	{
-		class Main_Music_Menu_SoundShader
-		{
-			samples[] = {{"\Colorful-UI\gui\sounds\MainMenu.ogg", 1}};
-			volume = 0.5;
-		};
+		soundShaders[] = {"Main_Music_Menu_SoundShader"};
+		volumeFactor = 1;
+		frequencyFactor = 1;
+		spatial = 0;
 	};
+};	
 
+class CfgSoundShaders
+{
+	class Main_Music_Menu_SoundShader
+	{
+		samples[] = {{"\Colorful-UI\gui\sounds\MainMenu.ogg", 1}};
+		volume = 0.5;
+	};
 };

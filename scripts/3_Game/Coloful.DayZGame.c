@@ -8,7 +8,6 @@ modded class LoginQueueBase extends UIScriptedMenu
 	override Widget Init()
 	{		
 		layoutRoot 			   = GetGame().GetWorkspace().CreateWidgets("Colorful-UI/gui/layouts/Colorful.dialog_queue_position.layout");
-		// Print("Colorful Login Queue Loaded!");	
 		m_txtPosition		   = TextWidget.Cast(layoutRoot.FindAnyWidget("txtPosition"));
 		m_txtNote 			   = TextWidget.Cast(layoutRoot.FindAnyWidget("txtNote"));
 		m_btnLeave 			   = ButtonWidget.Cast(layoutRoot.FindAnyWidget("btnLeave"));
@@ -33,7 +32,6 @@ modded class LoginTimeBase extends UIScriptedMenu
 	override Widget Init()
 	{
 		layoutRoot 			   = GetGame().GetWorkspace().CreateWidgets("Colorful-UI/gui/layouts/Colorful.dialog_login_time.layout");
-		// Print("Colorful Login Time Loaded!");	
 		m_TxtHdr			   = TextWidget.Cast(layoutRoot.FindAnyWidget("TxtHdr"));
 		m_txtLabel 			   = TextWidget.Cast(layoutRoot.FindAnyWidget("txtLabel"));
 		m_txtDescription 	   = TextWidget.Cast(layoutRoot.FindAnyWidget("txtDescription"));
@@ -88,17 +86,16 @@ modded class LoadingScreen
 		m_DayZGame   = game;		
 		
 		m_WidgetRoot = game.GetLoadingWorkspace().CreateWidgets("Colorful-UI/gui/layouts/Colorful.loading.layout");
-		// Print("Colorful Loading Screen Loaded!");	
 		Class.CastTo(m_ProTip, m_WidgetRoot.FindAnyWidget("ProTip"));
 		Class.CastTo(m_shader, m_WidgetRoot.FindAnyWidget("Colorful_Shader"));
 		Class.CastTo(m_ImageLogoMid, m_WidgetRoot.FindAnyWidget("ImageLogoMid"));
 		Class.CastTo(m_ImageLogoCorner, m_WidgetRoot.FindAnyWidget("ImageLogoCorner"));	
 		Class.CastTo(m_TextWidgetTitle, m_WidgetRoot.FindAnyWidget("TextWidget"));
 		Class.CastTo(m_TextWidgetStatus, m_WidgetRoot.FindAnyWidget("StatusText"));
-		Class.CastTo(m_ImageWidgetBackground, m_WidgetRoot.FindAnyWidget("BackgroundOverride"));
+		Class.CastTo(m_ImageWidgetBackground, m_WidgetRoot.FindAnyWidget("ImageBackground"));
 		Class.CastTo(m_ImageLoadingIcon, m_WidgetRoot.FindAnyWidget("ImageLoadingIcon"));
 		Class.CastTo(m_ModdedWarning, m_WidgetRoot.FindAnyWidget("ModdedWarning"));
-		m_ImageBackground = ImageWidget.Cast( m_WidgetRoot.FindAnyWidget("BackgroundOverride") );
+		m_ImageBackground = ImageWidget.Cast( m_WidgetRoot.FindAnyWidget("ImageBackground") );
 		m_ProgressLoading = ProgressBarWidget.Cast( m_WidgetRoot.FindAnyWidget("LoadingBar") );
 
 		m_ProgressLoading.SetColor(colorScheme.LoadingbarColor());
@@ -106,15 +103,13 @@ modded class LoadingScreen
 		m_shader.SetColor(colorScheme.ShaderColor());
 		ProgressAsync.SetProgressData(m_ProgressLoading);
 		ProgressAsync.SetUserData(m_ImageBackground);
-		// We can use our own Text for now. 
-		// I will impliment the way they do it in vanilla in Ver 2. 
 		m_TextWidgetStatus.SetText(GetRandomHint());
 	}	
 
 	override void Show()
 	{
 		Widget lIcon = m_Background;
-		ImageWidget m_Background = ImageWidget.Cast( m_WidgetRoot.FindAnyWidget("BackgroundOverride"));		
+		ImageWidget m_Background = ImageWidget.Cast( m_WidgetRoot.FindAnyWidget("ImageBackground"));		
 		m_Background.LoadImageFile(0, GetRandomBackground()); 
 	}
 };

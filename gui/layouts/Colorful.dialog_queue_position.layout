@@ -19,7 +19,6 @@ PanelWidgetClass TextInputDialogRoot {
    vexactpos 1
    hexactsize 0
    vexactsize 0
-   imageTexture "{09470E9DECC2D81D}EDEN_UI/gui/textures/loading_screens/loading_screen_2_EDEN.edds"
    mode blend
    "src alpha" 1
    "clamp mode" clamp
@@ -169,7 +168,7 @@ PanelWidgetClass TextInputDialogRoot {
      valign bottom_ref
      vexactpos 0
      text "You will be able to join when someone leaves the server."
-     font "Colorful-ui/gui/fonts/OpenSansV-Italic18"
+     font "Colorful-ui/gui/fonts/194122"
      "exact text" 1
      "size to text h" 1
      "size to text v" 1
@@ -184,8 +183,8 @@ PanelWidgetClass TextInputDialogRoot {
      valign bottom_ref
      hexactpos 1
      vexactpos 0
-     text "Please wait ..."
-     font "Colorful-ui/gui/fonts/PersonalServices24"
+     text "PLEASE WAIT..."
+     font "Colorful-ui/gui/fonts/194128"
      "exact text" 1
      "size to text h" 1
      "size to text v" 1
@@ -195,7 +194,7 @@ PanelWidgetClass TextInputDialogRoot {
     FrameWidgetClass QueueFrame {
      clipchildren 0
      ignorepointer 1
-     size 233 0.02
+     size 350 0.02
      halign center_ref
      valign bottom_ref
      hexactpos 0
@@ -216,7 +215,7 @@ PanelWidgetClass TextInputDialogRoot {
        vexactsize 0
        style Bold
        text "You are player"
-       font "Colorful-ui/gui/fonts/OpenSansV18"
+       font "Colorful-ui/gui/fonts/194122"
        "exact text" 1
        "size to text h" 1
        "size to text v" 1
@@ -226,8 +225,8 @@ PanelWidgetClass TextInputDialogRoot {
       MultilineTextWidgetClass txtPosition {
        clipchildren 0
        color 1 1 1 1
-       position 121 0
-       size 39 1
+       position 188 0
+       size 57 1
        valign center_ref
        hexactpos 1
        vexactpos 1
@@ -236,7 +235,7 @@ PanelWidgetClass TextInputDialogRoot {
        scaled 1
        style None
        text "123"
-       font "Colorful-ui/gui/fonts/OpenSansV18"
+       font "Colorful-ui/gui/fonts/194122"
        "exact text" 1
        "exact text size" 22
        "size to text h" 1
@@ -256,7 +255,7 @@ PanelWidgetClass TextInputDialogRoot {
        vexactsize 0
        style Bold
        text "in queue"
-       font "Colorful-ui/gui/fonts/OpenSansV18"
+       font "Colorful-ui/gui/fonts/194122"
        "exact text" 1
        "size to text h" 1
        "size to text v" 1

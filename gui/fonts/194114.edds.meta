@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{730E931E8603762D}194114.edds"
+ Author "sdf-1"
+ ChangeDate -1148948630
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "194114.tga"
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}

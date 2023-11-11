@@ -134,7 +134,7 @@ WindowWidgetClass TextInputDialogRoot {
      hexactpos 1
      vexactpos 0
      text "CONNECTING TO SERVER ..."
-     font "Colorful-ui/gui/fonts/PersonalServices24"
+     font "Colorful-ui/gui/fonts/194128"
      "exact text" 1
      "size to text h" 1
      "size to text v" 1
@@ -152,7 +152,7 @@ WindowWidgetClass TextInputDialogRoot {
      vexactpos 0
      style Bold
      text "Will you Survive?"
-     font "Colorful-ui/gui/fonts/OpenSansV-Italic18"
+     font "Colorful-ui/gui/fonts/194122"
      "exact text" 1
      "size to text h" 1
      "size to text v" 1
@@ -170,7 +170,7 @@ WindowWidgetClass TextInputDialogRoot {
      vexactsize 0
      style Bold
      text "placeholder text"
-     font "Colorful-ui/gui/fonts/OpenSansV18"
+     font "Colorful-ui/gui/fonts/194122"
      "exact text" 1
      "size to text h" 1
      "size to text v" 1

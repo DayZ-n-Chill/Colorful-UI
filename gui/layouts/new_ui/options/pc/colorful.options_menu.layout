@@ -93,7 +93,7 @@ FrameWidgetClass settings_menu_root {
    priority 1
    style Normal
    text "#STR_settings_menu_root_SettingsTextWidget0"
-   font "Colorful-UI/gui/fonts/PersonalServices32"
+   font "Colorful-UI/gui/fonts/194128"
    "text color" 0.8157 0.1255 0.7843 1
    "exact text" 0
    "text halign" right
@@ -203,7 +203,7 @@ FrameWidgetClass settings_menu_root {
              vexactsize 0
              priority 250
              text "#STR_settings_menu_root_Tabber_TabControls_TabBar_Tab_Control_Container_Tab_Control_0_Tab_Control_0_Title0"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/194128"
              "text halign" center
              "text valign" center
             }
@@ -260,7 +260,7 @@ FrameWidgetClass settings_menu_root {
              vexactsize 0
              priority 250
              text "#STR_settings_menu_root_Tabber_TabControls_TabBar_Tab_Control_Container_Tab_Control_1_Tab_Control_1_Title0"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/194128"
              "text halign" center
              "text valign" center
             }
@@ -317,7 +317,7 @@ FrameWidgetClass settings_menu_root {
              vexactsize 0
              priority 250
              text "#STR_settings_menu_root_Tabber_TabControls_TabBar_Tab_Control_Container_Tab_Control_2_Tab_Control_2_Title0"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/194128"
              "text halign" center
              "text valign" center
             }
@@ -374,7 +374,7 @@ FrameWidgetClass settings_menu_root {
              vexactsize 0
              priority 250
              text "#STR_settings_menu_root_Tabber_TabControls_TabBar_Tab_Control_Container_Tab_Control_3_Tab_Control_3_Title0"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/194128"
              "text halign" center
              "text valign" center
             }
@@ -554,7 +554,7 @@ FrameWidgetClass settings_menu_root {
        "next down" "apply"
        text "#STR_settings_menu_root_play_panel_root_top_back0"
        text_proportion 0.6
-       font "Colorful-UI/gui/fonts/PersonalServices32"
+       font "Colorful-UI/gui/fonts/194128"
        switch normal
       }
      }
@@ -614,7 +614,7 @@ FrameWidgetClass settings_menu_root {
        "next down" "back"
        text "#STR_settings_menu_root_play_panel_root_bottom_apply0"
        text_proportion 0.55
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/194128"
        switch normal
       }
       ButtonWidgetClass reset {
@@ -638,7 +638,7 @@ FrameWidgetClass settings_menu_root {
        "next down" "back"
        text "#menu_undo_cap"
        text_proportion 0.55
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/194128"
        switch normal
       }
       ButtonWidgetClass defaults {
@@ -661,7 +661,7 @@ FrameWidgetClass settings_menu_root {
        "next down" "reset"
        text "#menu_default_cap"
        text_proportion 0.55
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/194128"
        switch normal
       }
       PanelWidgetClass character {
@@ -748,7 +748,7 @@ FrameWidgetClass settings_menu_root {
        hexactsize 0
        vexactsize 0
        text "This is Sparta"
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/194128"
        text_proportion 0.9
       }
      }

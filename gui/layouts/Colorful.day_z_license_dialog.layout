@@ -22,7 +22,7 @@ WindowWidgetClass LicenseDialogRoot {
    hexactsize 1
    vexactsize 1
    text "#layout_license_dialog_cation"
-   font "Colorful-UI/gui/fonts/PersonalServices32"
+   font "Colorful-UI/gui/fonts/194128"
    "text color" 1 1 1 1
    "exact text" 0
    "text halign" center
@@ -57,7 +57,7 @@ WindowWidgetClass LicenseDialogRoot {
    style EmptyHighlight
    text "#server_browser_agree"
    text_proportion 0.5
-   font "Colorful-UI/gui/fonts/PersonalServices24"
+   font "Colorful-UI/gui/fonts/194128"
   }
   ButtonWidgetClass bDisagree {
    visible 1
@@ -73,7 +73,7 @@ WindowWidgetClass LicenseDialogRoot {
    style EmptyHighlight
    text "#server_browser_disagree"
    text_proportion 0.5
-   font "Colorful-UI/gui/fonts/PersonalServices24"
+   font "Colorful-UI/gui/fonts/194128"
   }
   ButtonWidgetClass bLicense {
    visible 1
@@ -90,7 +90,7 @@ WindowWidgetClass LicenseDialogRoot {
    style EmptyHighlight
    text "#server_browser_license"
    text_proportion 0.5
-   font "Colorful-UI/gui/fonts/PersonalServices24"
+   font "Colorful-UI/gui/fonts/194128"
   }
   PanelWidgetClass SeparatorPanel {
    color 0.7569 0.0941 0.0941 0.7843

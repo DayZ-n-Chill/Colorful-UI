@@ -137,7 +137,7 @@ FrameWidgetClass main_menu_root {
        "no focus" 1
        "next up" "play"
        "next down" "customize_character"
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/194128"
        switch normal
        {
         ImageWidgetClass tutorial_button_image {
@@ -171,7 +171,7 @@ FrameWidgetClass main_menu_root {
        "no focus" 1
        "next up" "play"
        "next down" "customize_character"
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/194128"
        switch normal
        {
         ImageWidgetClass message_button_image {
@@ -208,7 +208,7 @@ FrameWidgetClass main_menu_root {
        "next right" "exit_button"
        "next up" "play"
        "next down" "customize_character"
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/194128"
        switch normal
        {
         ImageWidgetClass settings_button_image {
@@ -242,7 +242,7 @@ FrameWidgetClass main_menu_root {
        "next right" "play"
        "next up" "play"
        "next down" "customize_character"
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/194128"
        switch normal
        {
         ImageWidgetClass exit_button_image {
@@ -336,7 +336,7 @@ FrameWidgetClass main_menu_root {
              vexactsize 0
              scaled 1
              text "PLAY"
-             font "Colorful-UI/gui/fonts/PersonalServices32"
+             font "Colorful-UI/gui/fonts/194128"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -390,7 +390,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 0
              vexactsize 0
              text "Character"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/194128"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -446,7 +446,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 0
              vexactsize 0
              text "Character"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/194128"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -496,7 +496,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 0
              vexactsize 0
              text "Server Browser"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/194128"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -551,7 +551,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 0
              vexactsize 0
              text "Server Information"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/194128"
              "exact text" 1
              "size to text h" 1
              "text halign" right
@@ -562,6 +562,7 @@ FrameWidgetClass main_menu_root {
          }
         }
         ButtonWidgetClass QueueBtn {
+         visible 0
          color 0 0 0 0
          position 0 0
          size 293 42
@@ -602,7 +603,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 0
              vexactsize 0
              text "Priority Queue"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/194128"
              "exact text" 1
              "size to text h" 1
              "text halign" right
@@ -613,6 +614,7 @@ FrameWidgetClass main_menu_root {
          }
         }
         ButtonWidgetClass WebsiteBtn {
+         visible 0
          color 0 0 0 0
          position 0 0
          size 293 42
@@ -630,6 +632,7 @@ FrameWidgetClass main_menu_root {
          "next down" "play_video"
          {
           PanelWidgetClass WebsiteBtn_panel {
+           visible 0
            ignorepointer 1
            color 0 0 0 0
            size 1 1
@@ -653,7 +656,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 0
              vexactsize 0
              text "Website"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/194128"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -711,6 +714,77 @@ FrameWidgetClass main_menu_root {
        Columns 1
        Rows 5
        {
+        ButtonWidgetClass TwitterBtn {
+         visible 1
+         color 0 0 0 0
+         size 293 39
+         halign right_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         style Empty
+         "no focus" 0
+         "next left" "news_main"
+         "next right" "news_main"
+         "next up" "choose_server"
+         "next down" "play_video"
+         {
+          PanelWidgetClass TwitterBtn_panel {
+           visible 1
+           ignorepointer 1
+           color 0 0 0 0
+           size 293 39
+           halign right_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 1
+           vexactsize 1
+           style DayZDefaultPanel
+           {
+            ImageWidgetClass TwitterBtn_img {
+             visible 0
+             clipchildren 0
+             ignorepointer 1
+             size 47 39
+             halign right_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             imageTexture "{56507986E3807A3B}Colorful-UI/gui/textures/main_menu/Colorful.Twitter.edds"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
+             filter 0
+            }
+            TextWidgetClass TwitterBtn_label {
+             visible 1
+             clipchildren 0
+             ignorepointer 1
+             size 1 1
+             halign right_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 0
+             text "Dontate"
+             font "Colorful-UI/gui/fonts/194128"
+             "exact text" 1
+             "size to text h" 1
+             "size to text v" 0
+             "text halign" right
+             "text valign" center
+            }
+           }
+          }
+         }
+        }
         ButtonWidgetClass DiscordBtn {
          color 0 0 0 0
          size 293 39
@@ -768,351 +842,10 @@ FrameWidgetClass main_menu_root {
              hexactsize 0
              vexactsize 0
              text "Discord"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/194128"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
-             "text halign" right
-             "text valign" center
-            }
-           }
-          }
-         }
-        }
-        ButtonWidgetClass TwitterBtn {
-         color 0 0 0 0
-         size 293 39
-         halign right_ref
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         style Empty
-         "no focus" 0
-         "next left" "news_main"
-         "next right" "news_main"
-         "next up" "choose_server"
-         "next down" "play_video"
-         {
-          PanelWidgetClass TwitterBtn_panel {
-           ignorepointer 1
-           color 0 0 0 0
-           size 293 39
-           halign right_ref
-           valign center_ref
-           hexactpos 0
-           vexactpos 0
-           hexactsize 1
-           vexactsize 1
-           style DayZDefaultPanel
-           {
-            ImageWidgetClass TwitterBtn_img {
-             clipchildren 0
-             ignorepointer 1
-             size 47 39
-             halign right_ref
-             valign center_ref
-             hexactpos 1
-             vexactpos 1
-             hexactsize 1
-             vexactsize 1
-             imageTexture "{56507986E3807A3B}Colorful-UI/gui/textures/main_menu/Colorful.Twitter.edds"
-             mode blend
-             "src alpha" 1
-             "clamp mode" clamp
-             "stretch mode" stretch_w_h
-             filter 0
-            }
-            TextWidgetClass TwitterBtn_label {
-             clipchildren 0
-             ignorepointer 1
-             position 60 0
-             size 1 1
-             halign right_ref
-             valign center_ref
-             hexactpos 1
-             vexactpos 1
-             hexactsize 0
-             vexactsize 0
-             text "Twitter"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
-             "exact text" 1
-             "size to text h" 1
-             "size to text v" 0
-             "text halign" right
-             "text valign" center
-            }
-           }
-          }
-         }
-        }
-        ButtonWidgetClass RedditBtn {
-         visible 1
-         color 0 0 0 0
-         size 293 39
-         halign right_ref
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         style Empty
-         "no focus" 0
-         "next left" "news_main"
-         "next right" "news_main"
-         "next up" "choose_server"
-         "next down" "play_video"
-         {
-          PanelWidgetClass RedditBtn_panel {
-           ignorepointer 1
-           color 0 0 0 0
-           size 293 39
-           halign right_ref
-           valign center_ref
-           hexactpos 0
-           vexactpos 0
-           hexactsize 1
-           vexactsize 1
-           style DayZDefaultPanel
-           {
-            ImageWidgetClass RedditBtn_img {
-             clipchildren 0
-             ignorepointer 1
-             size 47 39
-             halign right_ref
-             valign center_ref
-             hexactpos 1
-             vexactpos 1
-             hexactsize 1
-             vexactsize 1
-             imageTexture "{042531BECC696FCF}Colorful-UI/gui/textures/main_menu/Colorful.Reddit.edds"
-             mode blend
-             "src alpha" 1
-             "clamp mode" clamp
-             "stretch mode" stretch_w_h
-             filter 0
-            }
-            TextWidgetClass RedditBtn_label {
-             clipchildren 0
-             ignorepointer 1
-             position 60 0
-             size 1 1
-             halign right_ref
-             valign center_ref
-             hexactpos 1
-             vexactpos 1
-             hexactsize 0
-             vexactsize 0
-             text "Reddit"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
-             "exact text" 1
-             "size to text h" 1
-             "size to text v" 0
-             "text halign" right
-             "text valign" center
-            }
-           }
-          }
-         }
-        }
-        ButtonWidgetClass YoutubeBtn {
-         visible 1
-         color 0 0 0 0
-         size 293 39
-         halign right_ref
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         style Empty
-         "no focus" 0
-         "next left" "news_main"
-         "next right" "news_main"
-         "next up" "choose_server"
-         "next down" "play_video"
-         {
-          PanelWidgetClass YoutubeBtn_panel {
-           ignorepointer 1
-           color 0 0 0 0
-           size 293 39
-           halign right_ref
-           valign center_ref
-           hexactpos 0
-           vexactpos 0
-           hexactsize 1
-           vexactsize 1
-           style DayZDefaultPanel
-           {
-            ImageWidgetClass YoutubeBtn_img {
-             clipchildren 0
-             ignorepointer 1
-             size 47 39
-             halign right_ref
-             valign center_ref
-             hexactpos 1
-             vexactpos 1
-             hexactsize 1
-             vexactsize 1
-             imageTexture "{FDBC9A6B3BB8B821}Colorful-UI/gui/textures/main_menu/Colorful.Youtube.edds"
-             mode blend
-             "src alpha" 1
-             "clamp mode" clamp
-             "stretch mode" stretch_w_h
-             filter 0
-            }
-            TextWidgetClass YoutubeBtn_label {
-             clipchildren 0
-             ignorepointer 1
-             position 60 0
-             size 1 1
-             halign right_ref
-             valign center_ref
-             hexactpos 1
-             vexactpos 1
-             hexactsize 0
-             vexactsize 0
-             text "YouTube"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
-             "exact text" 1
-             "size to text h" 1
-             "text halign" right
-             "text valign" center
-            }
-           }
-          }
-         }
-        }
-        ButtonWidgetClass FacebookBtn {
-         visible 1
-         color 0 0 0 0
-         size 293 39
-         halign right_ref
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         style Empty
-         "no focus" 0
-         "next left" "news_main"
-         "next right" "news_main"
-         "next up" "choose_server"
-         "next down" "play_video"
-         {
-          PanelWidgetClass FacebookBtn_panel {
-           ignorepointer 1
-           color 0 0 0 0
-           size 293 39
-           halign right_ref
-           valign center_ref
-           hexactpos 0
-           vexactpos 0
-           hexactsize 1
-           vexactsize 1
-           style DayZDefaultPanel
-           {
-            ImageWidgetClass FacebookBtn_img {
-             clipchildren 0
-             ignorepointer 1
-             size 47 39
-             halign right_ref
-             valign center_ref
-             hexactpos 1
-             vexactpos 1
-             hexactsize 1
-             vexactsize 1
-             imageTexture "{25DB8D90C00B0710}Colorful-UI/gui/textures/main_menu/Colorful.Facebook.edds"
-             mode blend
-             "src alpha" 1
-             "clamp mode" clamp
-             "stretch mode" stretch_w_h
-             filter 0
-            }
-            TextWidgetClass FacebookBtn_label {
-             clipchildren 0
-             ignorepointer 1
-             position 60 0
-             size 1 1
-             halign right_ref
-             valign center_ref
-             hexactpos 1
-             vexactpos 1
-             hexactsize 0
-             vexactsize 0
-             text "Facebook"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
-             "exact text" 1
-             "size to text h" 1
-             "text halign" right
-             "text valign" center
-            }
-           }
-          }
-         }
-        }
-        ButtonWidgetClass MetaBtn {
-         visible 0
-         color 0 0 0 0
-         size 293 39
-         halign right_ref
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         style Empty
-         "no focus" 0
-         "next left" "news_main"
-         "next right" "news_main"
-         "next up" "choose_server"
-         "next down" "play_video"
-         {
-          PanelWidgetClass MetaBtn_panel {
-           ignorepointer 1
-           color 0 0 0 0
-           size 293 39
-           halign right_ref
-           valign center_ref
-           hexactpos 0
-           vexactpos 0
-           hexactsize 1
-           vexactsize 1
-           style DayZDefaultPanel
-           {
-            ImageWidgetClass MetaBtn_img {
-             clipchildren 0
-             ignorepointer 1
-             size 47 39
-             halign right_ref
-             valign center_ref
-             hexactpos 1
-             vexactpos 1
-             hexactsize 1
-             vexactsize 1
-             imageTexture "{F74D2BABB67517C4}Colorful-UI/gui/textures/main_menu/Colorful.meta.edds"
-             mode blend
-             "src alpha" 1
-             "clamp mode" clamp
-             "stretch mode" stretch_w_h
-             filter 0
-            }
-            TextWidgetClass MetaBtn_label {
-             clipchildren 0
-             ignorepointer 1
-             position 60 0
-             size 1 1
-             halign right_ref
-             valign center_ref
-             hexactpos 1
-             vexactpos 1
-             hexactsize 0
-             vexactsize 0
-             text "Meta"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
-             "exact text" 1
-             "size to text h" 1
              "text halign" right
              "text valign" center
             }
@@ -1139,13 +872,12 @@ FrameWidgetClass main_menu_root {
        ignorepointer 1
        keepsafezone 0
        size 31.2238 79.24
-       halign center_ref
        hexactpos 1
        vexactpos 1
        hexactsize 1
        vexactsize 1
        text "SURIVOR STATS"
-       font "Colorful-UI/gui/fonts/PersonalServices48"
+       font "Colorful-UI/gui/fonts/194128"
        "exact text" 1
        "size to text h" 1
        "size to text v" 1
@@ -1202,7 +934,7 @@ FrameWidgetClass main_menu_root {
            vexactsize 1
            scaled 1
            text "Players Killed"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
+           font "Colorful-UI/gui/fonts/194128"
            "exact text" 1
            "size to text h" 1
            "text valign" center
@@ -1244,7 +976,7 @@ FrameWidgetClass main_menu_root {
            hexactsize 0
            vexactsize 0
            text "Infected Killed"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
+           font "Colorful-UI/gui/fonts/194128"
            "exact text" 1
            "size to text h" 1
            "text valign" center
@@ -1290,7 +1022,7 @@ FrameWidgetClass main_menu_root {
            hexactsize 1
            vexactsize 1
            text "Time Alive"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
+           font "Colorful-UI/gui/fonts/194128"
            "exact text" 1
            "size to text h" 1
            "text valign" center
@@ -1334,7 +1066,7 @@ FrameWidgetClass main_menu_root {
            hexactsize 0
            vexactsize 0
            text "Distance Traveled"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
+           font "Colorful-UI/gui/fonts/194128"
            "exact text" 1
            "size to text h" 1
            "size to text v" 0
@@ -1377,7 +1109,7 @@ FrameWidgetClass main_menu_root {
            hexactsize 1
            vexactsize 1
            text "Longest Player Hit"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
+           font "Colorful-UI/gui/fonts/194128"
            "exact text" 1
            "size to text h" 1
            "text valign" center
@@ -1956,7 +1688,7 @@ FrameWidgetClass main_menu_root {
        priority 1
        style Empty
        "no focus" 0
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/194128"
        {
         ImageWidgetClass prev_character_image {
          inheritalpha 0
@@ -1989,7 +1721,7 @@ FrameWidgetClass main_menu_root {
        priority 1
        style Empty
        "no focus" 0
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/194128"
        {
         ImageWidgetClass next_character_image {
          ignorepointer 1
@@ -2017,7 +1749,7 @@ FrameWidgetClass main_menu_root {
        vexactpos 1
        hexactsize 0
        vexactsize 1
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/194128"
        "exact text" 1
        "size to text h" 1
        "size to text v" 1

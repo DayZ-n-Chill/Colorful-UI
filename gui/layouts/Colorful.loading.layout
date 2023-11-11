@@ -110,25 +110,6 @@ FrameWidgetClass LoadingFrame {
    hexactsize 0
    vexactsize 0
    {
-    ImageWidgetClass ColorfulLogo {
-     visible 1
-     clipchildren 0
-     inheritalpha 1
-     size 340 400
-     hexactpos 0
-     vexactpos 0
-     hexactsize 1
-     vexactsize 1
-     fixaspect inside
-     image0 ""
-     imageTexture "{B22B711506A710DA}Colorful-UI/gui/textures/globals/Logo.edds"
-     mode blend
-     "src alpha" 1
-     "clamp mode" clamp
-     "stretch mode" stretch_w_h
-     filter 1
-     nocache 0
-    }
     TextWidgetClass LoadingText {
      visible 1
      position 0 0.08
@@ -138,7 +119,7 @@ FrameWidgetClass LoadingFrame {
      hexactpos 1
      vexactpos 0
      text "LOADING GAME..."
-     font "Colorful-ui/gui/fonts/PersonalServices24"
+     font "Colorful-ui/gui/fonts/194128"
      "exact text" 1
      "size to text h" 1
      "size to text v" 1
@@ -148,15 +129,15 @@ FrameWidgetClass LoadingFrame {
     TextWidgetClass ProTip {
      visible 1
      color 0.2588 0.6863 0.3647 1
-     position 0 0.024
+     position 0 27
      size 1 0.03
      halign center_ref
      valign bottom_ref
-     hexactpos 0
-     vexactpos 0
+     hexactpos 1
+     vexactpos 1
      style Bold
      text "Pro Tip:"
-     font "Colorful-ui/gui/fonts/OpenSansV-Italic18"
+     font "Colorful-ui/gui/fonts/194122"
      "exact text" 1
      "size to text h" 1
      "size to text v" 1
@@ -170,7 +151,7 @@ FrameWidgetClass LoadingFrame {
      valign bottom_ref
      vexactpos 0
      text "Your tips text will go here"
-     font "Colorful-ui/gui/fonts/OpenSansV18"
+     font "Colorful-ui/gui/fonts/194122"
      "exact text" 1
      "size to text h" 1
      "size to text v" 1
@@ -184,7 +165,7 @@ FrameWidgetClass LoadingFrame {
      valign bottom_ref
      vexactpos 0
      text "Your tips text will go here"
-     font "Colorful-ui/gui/fonts/OpenSansV18"
+     font "Colorful-ui/gui/fonts/194122"
      "exact text" 1
      "size to text h" 1
      "size to text v" 1
@@ -617,6 +598,25 @@ FrameWidgetClass LoadingFrame {
        }
       }
      }
+    }
+    ImageWidgetClass ColorfulLogo {
+     visible 1
+     clipchildren 0
+     inheritalpha 1
+     size 340 400
+     hexactpos 0
+     vexactpos 0
+     hexactsize 1
+     vexactsize 1
+     fixaspect inside
+     image0 ""
+     imageTexture "{B22B711506A710DA}Colorful-UI/gui/textures/globals/Logo.edds"
+     mode blend
+     "src alpha" 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
+     filter 1
+     nocache 0
     }
    }
   }
