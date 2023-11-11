@@ -40,7 +40,7 @@ FrameWidgetClass LoadingFrame {
    vexactsize 0
    fixaspect outside
    image0 ""
-   imageTexture "{A5D8917F066B3FDC}Colorful-UI/gui/textures/loading_screens/Colorful-BG-12.edds"
+   imageTexture "{FBFB7316A19B0C81}Colorful-UI/gui/textures/loading_screens/Loading_Screen_3.edds"
    mode opaque
    "src alpha" 0
    "stretch mode" stretch_w_h
@@ -134,14 +134,14 @@ FrameWidgetClass LoadingFrame {
      visible 1
      clipchildren 0
      inheritalpha 1
-     size 460 320
+     size 622 211
      hexactpos 0
      vexactpos 0
      hexactsize 1
      vexactsize 1
      fixaspect outside
      image0 ""
-     imageTexture "{5314D820E495219F}Colorful-UI/gui/textures/globals/Colorful.Logo.edds"
+     imageTexture "{50E7281F95B74936}Colorful-UI/gui/textures/globals/ServerLogo_gold.edds"
      mode blend
      "src alpha" 1
      "clamp mode" clamp

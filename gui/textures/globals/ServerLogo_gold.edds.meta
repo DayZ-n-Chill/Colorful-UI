@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{50E7281F95B74936}Colorful-UI/gui/textures/globals/ServerLogo_gold.edds"
+ Author "sdf-1"
+ ChangeDate 630026090
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "ServerLogo_gold.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

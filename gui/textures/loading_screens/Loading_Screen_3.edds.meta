@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{FBFB7316A19B0C81}Colorful-UI/gui/textures/loading_screens/Loading_Screen_3.edds"
+ Author "sdf-1"
+ ChangeDate 1399680874
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Loading_Screen_3.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}
