@@ -36,15 +36,15 @@ string GetRandomBackground()
  */
 class MenuURLS {
 	// Link for Discord
-	static string urlDiscord  = "#";
+	static string urlDiscord  = "https://discord.gg/nj3jmGtdMV";
 	// Link for Facebook
 	static string urlFacebook = "#";
 	// Link for Twitter
-	static string urlTwitter  = "#";
+	static string urlTwitter  = "https://x.com/kettzoh";
 	// Link for Reddit
 	static string urlReddit   = "#";
 	// Link for Youtube
-	static string urlYoutube  = "#";
+	static string urlYoutube  = "https://www.youtube.com/@kettzoh";
 	// Link to Website
 	static string urlWebsite  = "#"; 
 	// Link for Prio Q

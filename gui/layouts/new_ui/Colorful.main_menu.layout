@@ -581,6 +581,7 @@ FrameWidgetClass main_menu_root {
          }
         }
         ButtonWidgetClass QueueBtn {
+         visible 0
          color 0 0 0 0
          position 0 0
          size 293 42
@@ -632,6 +633,7 @@ FrameWidgetClass main_menu_root {
          }
         }
         ButtonWidgetClass WebsiteBtn {
+         visible 0
          color 0 0 0 0
          position 0 0
          size 293 42
@@ -649,6 +651,7 @@ FrameWidgetClass main_menu_root {
          "next down" "play_video"
          {
           PanelWidgetClass WebsiteBtn_panel {
+           visible 0
            ignorepointer 1
            color 0 0 0 0
            size 1 1
@@ -867,7 +870,7 @@ FrameWidgetClass main_menu_root {
          }
         }
         ButtonWidgetClass RedditBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -1004,7 +1007,7 @@ FrameWidgetClass main_menu_root {
          }
         }
         ButtonWidgetClass FacebookBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 39
          halign right_ref
