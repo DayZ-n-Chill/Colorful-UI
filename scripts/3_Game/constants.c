@@ -57,26 +57,26 @@ class MenuURLS {
 string GetRandomHint()
 {
 	const string tips[] = {
-		"Death makes you die.",
-		"Broomsticks give you enough resources to make a fire place and cooking stand.",
-		"Keep your car running smoothby using min 4 water bottles to fill the radiator.",
-		"You can craft a bone knife with one bone if you use rocks or boulders to craft it.",
-		"Try to blend in with your enviornment. Do not wear bright colors",
-		"If someone is harrassing you contact a server admin immediately",
-		"Non aggro infected will detect you in 2 seconds when sneaking up on them. Stealth kill them quick",
-		"Craft foot wraps to dampen the sound of your movement.",
-		"Breaking down ghillie parts you find is a faster way to get all the parts you need to make a full one.",
-		"Baking food provides the most nutritional value when cooking.",
-		"The flare gun can not kill anything in the game but yourself.",
-		"Armor Piercing rounds do not do extra damage, they just reduce the durability of armor faster.",
-		"Going unconsious in water will kill you in 20 seconds.",
-		"Having full white stats, or taking multivitamins will allow you to eat raw meat, drink from dirty water sources, and consume with bloody hands.",
-		"Apart from the Famas, all sawed off weapons have twice the ammount of recoil",
-		"Any weapon with a suppressor cannot be heard after 150 meters.",
-		"If you log into a dynamic gas zone you will be teleported out of the area.",
-		"If you are K.O. by a gunman you will always wake up facing the opposite the direction from where you were shot. ",
-		"Spike helmet only spawns at the Castle south of Sitnik on the red trail.",
-		"Remebering Paulie.  Loc. 11930 x 13157 - R.I.P"
+	    "Death makes you die.",
+	    "Broomsticks give you enough resources to make a fireplace and cooking stand.",
+	    "Keep your car running smooth by using min 4 water bottles to fill the radiator.",
+	    "You can craft a bone knife with one bone if you use rocks or boulders to craft it.",
+	    "Try to blend in with your environment. Do not wear bright colors.",
+	    "If someone is harassing you contact a server admin immediately.",
+	    "Non aggro infected will detect you in 2 seconds when sneaking up on them. Stealth kill them quick.",
+	    "Craft foot wraps to dampen the sound of your movement.",
+	    "Breaking down ghillie parts you find is a faster way to get all the parts you need to make a full one.",
+	    "Baking food provides the most nutritional value when cooking.",
+	    "The flare gun can not kill anything in the game but yourself.",
+	    "Armor Piercing rounds do not do extra damage, they just reduce the durability of armor faster.",
+	    "Going unconscious in water will kill you in 20 seconds.",
+	    "Having full white stats, or taking multivitamins will allow you to eat raw meat, drink from dirty water sources, and consume with bloody hands.",
+	    "Apart from the Famas, all sawed off weapons have twice the amount of recoil.",
+	    "Any weapon with a suppressor cannot be heard after 150 meters.",
+	    "If you log into a dynamic gas zone you will be teleported out of the area.",
+	    "If you are K.O. by a gunman you will always wake up facing the opposite direction from where you were shot.",
+	    "Spike helmet only spawns at the Castle south of Sitnik on the red trail.",
+	    "Remembering Paulie. Loc. 11930 x 13157 - R.I.P."
 	};
 	Math.Randomize(-1);
 	int tipIndex = Math.RandomInt(0, 100) % 20;
