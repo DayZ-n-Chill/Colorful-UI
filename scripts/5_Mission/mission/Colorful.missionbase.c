@@ -36,9 +36,10 @@ modded class MissionBase
 			menu = new colorfulConfigureDialog;
 			break;
 
-		// case COLORFUL_DEFAULTS:
-		// 	menu = new colorfulDefaultDialog;
-		// 	break;
+	
+        case VPP_ADMIN_HUD:
+			menu = new VPPAdminHud;
+			break;	
 
 		case MENU_STARTUP:
 			menu = new StartupMenu;
