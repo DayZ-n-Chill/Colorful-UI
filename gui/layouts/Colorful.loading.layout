@@ -30,7 +30,7 @@ FrameWidgetClass LoadingFrame {
   }
   ImageWidgetClass BackgroundOverride {
    visible 1
-   size 0.16 0.08
+   size 0.16 0.09
    halign center_ref
    valign center_ref
    hexactpos 0

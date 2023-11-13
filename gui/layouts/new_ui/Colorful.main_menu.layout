@@ -14,7 +14,7 @@ FrameWidgetClass main_menu_root {
   ImageWidgetClass ImageBackground {
    visible 1
    position 0 0
-   size 0.16 0.08
+   size 0.16 0.09
    halign center_ref
    valign center_ref
    hexactpos 0
@@ -28,7 +28,7 @@ FrameWidgetClass main_menu_root {
    mode opaque
    "src alpha" 0
    "clamp mode" clamp
-   "stretch mode" stretch_w_center
+   "stretch mode" stretch_w_h
    filter 1
    "Transition width" 1
    Progress 0

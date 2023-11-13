@@ -17,7 +17,7 @@ FrameWidgetClass DialogRoot {
   ImageWidgetClass ImageBackground {
    visible 1
    position 0 0
-   size 0.16 0.08
+   size 0.16 0.09
    halign center_ref
    valign center_ref
    hexactpos 0
@@ -31,7 +31,7 @@ FrameWidgetClass DialogRoot {
    mode opaque
    "src alpha" 1
    "clamp mode" clamp
-   "stretch mode" stretch_w_center
+   "stretch mode" stretch_w_h
    filter 0
    "Transition width" 1
    Progress 0
