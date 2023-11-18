@@ -1,7 +1,13 @@
 modded class OptionsMenuSounds extends ScriptedWidgetEventHandler
 {
-	 string GetLayoutName()
+	override string GetLayoutName()
 	{
-		return "Colorful-UI/ui/layouts/new_ui/options/pc/sound_tab.layout";
+		#ifdef PLATFORM_CONSOLE
+		return "gui/layouts/new_ui/options/xbox/sound_tab.layout";
+		#else
+		#ifdef PLATFORM_WINDOWS
+		return "Colorful-UI/gui/layouts/new_ui/options/pc/sound_tab.layout";
+		#endif
+		#endif
 	}
 }
