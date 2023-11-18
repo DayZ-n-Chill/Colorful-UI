@@ -10,7 +10,7 @@ WindowWidgetClass WindowWidget {
  vexactsize 0
  priority 960
  style Default
- font "Colorful-UI/gui/fonts/RobotoSlabBold28"
+ font "Colorful-UI/gui/fonts/RobotoSlabBold22"
  {
   ImageWidgetClass Vignette {
    visible 1
@@ -141,7 +141,7 @@ WindowWidgetClass WindowWidget {
            vexactsize 0
            scaled 1
            text "#main_menu_respawn_custom"
-           font "Colorful-UI/gui/fonts/RobotoSlabBold28"
+           font "Colorful-UI/gui/fonts/RobotoSlabBold22"
            "exact text" 0
            "size to text h" 0
            "size to text v" 0
@@ -190,7 +190,7 @@ WindowWidgetClass WindowWidget {
            vexactsize 0
            scaled 1
            text "#main_menu_respawn_random"
-           font "Colorful-UI/gui/fonts/RobotoSlabBold28"
+           font "Colorful-UI/gui/fonts/RobotoSlabBold22"
            "text halign" right
            "text valign" center
           }
@@ -209,7 +209,7 @@ WindowWidgetClass WindowWidget {
          userID 2
          style Default
          text_proportion 0.75
-         font "Colorful-UI/gui/fonts/RobotoSlabBold28"
+         font "Colorful-UI/gui/fonts/RobotoSlabBold22"
          {
           PanelWidgetClass bCancel_panel {
            visible 1
@@ -235,7 +235,7 @@ WindowWidgetClass WindowWidget {
            vexactsize 0
            scaled 1
            text "#menu_cancel"
-           font "Colorful-UI/gui/fonts/RobotoSlabBold28"
+           font "Colorful-UI/gui/fonts/RobotoSlabBold22"
            "exact text" 0
            "size to text h" 0
            "size to text v" 0
@@ -350,7 +350,7 @@ WindowWidgetClass WindowWidget {
              hexactsize 0
              vexactsize 0
              text "Store"
-             font "Colorful-UI/gui/fonts/RobotoSlabBold28"
+             font "Colorful-UI/gui/fonts/RobotoSlabBold22"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -418,7 +418,7 @@ WindowWidgetClass WindowWidget {
              hexactsize 0
              vexactsize 0
              text "Discord"
-             font "Colorful-UI/gui/fonts/RobotoSlabBold28"
+             font "Colorful-UI/gui/fonts/RobotoSlabBold22"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -487,7 +487,7 @@ WindowWidgetClass WindowWidget {
              hexactsize 0
              vexactsize 0
              text "Reddit"
-             font "Colorful-UI/gui/fonts/RobotoSlabBold28"
+             font "Colorful-UI/gui/fonts/RobotoSlabBold22"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -556,7 +556,7 @@ WindowWidgetClass WindowWidget {
              hexactsize 0
              vexactsize 0
              text "YouTube"
-             font "Colorful-UI/gui/fonts/RobotoSlabBold28"
+             font "Colorful-UI/gui/fonts/RobotoSlabBold22"
              "exact text" 1
              "size to text h" 1
              "text halign" right
@@ -624,7 +624,7 @@ WindowWidgetClass WindowWidget {
              hexactsize 0
              vexactsize 0
              text "Facebook"
-             font "Colorful-UI/gui/fonts/RobotoSlabBold28"
+             font "Colorful-UI/gui/fonts/RobotoSlabBold22"
              "exact text" 1
              "size to text h" 1
              "text halign" right
@@ -692,7 +692,7 @@ WindowWidgetClass WindowWidget {
              hexactsize 0
              vexactsize 0
              text "Meta"
-             font "Colorful-UI/gui/fonts/RobotoSlabBold28"
+             font "Colorful-UI/gui/fonts/RobotoSlabBold22"
              "exact text" 1
              "size to text h" 1
              "text halign" right

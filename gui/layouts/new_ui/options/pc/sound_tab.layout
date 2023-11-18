@@ -55,7 +55,7 @@ FrameWidgetClass sound_tab_root {
          ignorepointer 1
          color 0 0 0 1
          position 0 0
-         size 1 40
+         size 1 50
          hexactpos 1
          vexactpos 1
          hexactsize 0
@@ -74,8 +74,8 @@ FrameWidgetClass sound_tab_root {
            vexactsize 0
            style Normal
            text "#STR_sound_tab_header_sound"
-           font "gui/fonts/sdf_MetronLight72"
-           "text offset" 25 0
+           font "colorful-ui/gui/fonts/RobotoSlabBold22"
+           "text offset" 8 0
            "exact text" 0
            "text valign" center
           }
@@ -156,7 +156,7 @@ FrameWidgetClass sound_tab_root {
                  vexactsize 0
                  text "#STR_sound_tab_master"
                  font "gui/fonts/sdf_MetronLight24"
-                 "text offset" 8 0
+                 "text offset" 15 0
                  "exact text" 0
                  "exact text size" 18
                  "text valign" center
@@ -233,7 +233,7 @@ FrameWidgetClass sound_tab_root {
                  vexactsize 0
                  text "#STR_sound_tab_effects_volume"
                  font "gui/fonts/sdf_MetronLight24"
-                 "text offset" 8 0
+                 "text offset" 15 0
                  "exact text" 0
                  "exact text size" 18
                  "text valign" center
@@ -312,7 +312,7 @@ FrameWidgetClass sound_tab_root {
                  vexactsize 0
                  text "#STR_sound_tab_music_volume"
                  font "gui/fonts/sdf_MetronLight24"
-                 "text offset" 8 0
+                 "text offset" 15 0
                  "exact text" 0
                  "exact text size" 18
                  "text valign" center
@@ -368,7 +368,7 @@ FrameWidgetClass sound_tab_root {
          ignorepointer 1
          color 0 0 0 1
          position 0 0
-         size 1 40
+         size 1 50
          hexactpos 1
          vexactpos 1
          hexactsize 0
@@ -387,8 +387,8 @@ FrameWidgetClass sound_tab_root {
            vexactsize 0
            style Normal
            text "#STR_sound_tab_voice_header"
-           font "gui/fonts/sdf_MetronLight72"
-           "text offset" 25 0
+           font "colorful-ui/gui/fonts/RobotoSlabBold22"
+           "text offset" 8 0
            "exact text" 0
            "text valign" center
           }
@@ -549,7 +549,7 @@ FrameWidgetClass sound_tab_root {
                  vexactsize 0
                  text "#STR_sound_tab_voice_output"
                  font "gui/fonts/sdf_MetronLight24"
-                 "text offset" 8 0
+                 "text offset" 15 0
                  "exact text" 0
                  "exact text size" 18
                  "text valign" center
@@ -706,7 +706,7 @@ FrameWidgetClass sound_tab_root {
                  vexactsize 0
                  text "#STR_sound_tab_voice_mode"
                  font "gui/fonts/sdf_MetronLight24"
-                 "text offset" 8 0
+                 "text offset" 15 0
                  "exact text" 0
                  "exact text size" 18
                  "text valign" center
@@ -783,7 +783,7 @@ FrameWidgetClass sound_tab_root {
                  vexactsize 0
                  text "#STR_sound_tab_voice_threshold"
                  font "gui/fonts/sdf_MetronLight24"
-                 "text offset" 8 0
+                 "text offset" 15 0
                  "exact text" 0
                  "exact text size" 18
                  "text valign" center
