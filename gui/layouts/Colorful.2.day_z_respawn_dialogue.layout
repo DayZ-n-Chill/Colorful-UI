@@ -10,7 +10,7 @@ WindowWidgetClass WindowWidget {
  vexactsize 0
  priority 960
  style Default
- font "Colorful-UI/gui/fonts/Ethnocentric20"
+ font "Colorful-UI/gui/fonts/RobotoSlabBold28"
  {
   ImageWidgetClass Vignette {
    visible 1
@@ -141,7 +141,7 @@ WindowWidgetClass WindowWidget {
            vexactsize 0
            scaled 1
            text "#main_menu_respawn_custom"
-           font "Colorful-UI/gui/fonts/Ethnocentric20"
+           font "Colorful-UI/gui/fonts/RobotoSlabBold28"
            "exact text" 0
            "size to text h" 0
            "size to text v" 0
@@ -190,7 +190,7 @@ WindowWidgetClass WindowWidget {
            vexactsize 0
            scaled 1
            text "#main_menu_respawn_random"
-           font "Colorful-UI/gui/fonts/Ethnocentric20"
+           font "Colorful-UI/gui/fonts/RobotoSlabBold28"
            "text halign" right
            "text valign" center
           }
@@ -209,7 +209,7 @@ WindowWidgetClass WindowWidget {
          userID 2
          style Default
          text_proportion 0.75
-         font "Colorful-UI/gui/fonts/Ethnocentric20"
+         font "Colorful-UI/gui/fonts/RobotoSlabBold28"
          {
           PanelWidgetClass bCancel_panel {
            visible 1
@@ -235,7 +235,7 @@ WindowWidgetClass WindowWidget {
            vexactsize 0
            scaled 1
            text "#menu_cancel"
-           font "Colorful-UI/gui/fonts/Ethnocentric20"
+           font "Colorful-UI/gui/fonts/RobotoSlabBold28"
            "exact text" 0
            "size to text h" 0
            "size to text v" 0
@@ -291,6 +291,76 @@ WindowWidgetClass WindowWidget {
        Columns 1
        Rows 5
        {
+        ButtonWidgetClass TwitterBtn {
+         visible 1
+         color 0 0 0 0
+         size 293 39
+         halign right_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         style Empty
+         "no focus" 0
+         "next left" "news_main"
+         "next right" "news_main"
+         "next up" "choose_server"
+         "next down" "play_video"
+         {
+          PanelWidgetClass TwitterBtn_panel {
+           ignorepointer 1
+           color 0 0 0 0
+           size 293 39
+           halign right_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 1
+           vexactsize 1
+           style DayZDefaultPanel
+           {
+            ImageWidgetClass TwitterBtn_img {
+             clipchildren 0
+             ignorepointer 1
+             position 12 0
+             size 27 24
+             halign right_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             imageTexture "{1EF9969CA41F08E4}Colorful-UI/gui/textures/globals/Shop_Icon.edds"
+             mode blend
+             "src alpha" 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
+             filter 0
+            }
+            TextWidgetClass TwitterBtn_label {
+             clipchildren 0
+             ignorepointer 1
+             position 60 0
+             size 1 1
+             halign right_ref
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 0
+             text "Store"
+             font "Colorful-UI/gui/fonts/RobotoSlabBold28"
+             "exact text" 1
+             "size to text h" 1
+             "size to text v" 0
+             "text halign" right
+             "text valign" center
+            }
+           }
+          }
+         }
+        }
         ButtonWidgetClass DiscordBtn {
          color 0 0 0 0
          size 293 39
@@ -348,76 +418,7 @@ WindowWidgetClass WindowWidget {
              hexactsize 0
              vexactsize 0
              text "Discord"
-             font "Colorful-UI/gui/fonts/Ethnocentric20"
-             "exact text" 1
-             "size to text h" 1
-             "size to text v" 0
-             "text halign" right
-             "text valign" center
-            }
-           }
-          }
-         }
-        }
-        ButtonWidgetClass TwitterBtn {
-         visible 0
-         color 0 0 0 0
-         size 293 39
-         halign right_ref
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         style Empty
-         "no focus" 0
-         "next left" "news_main"
-         "next right" "news_main"
-         "next up" "choose_server"
-         "next down" "play_video"
-         {
-          PanelWidgetClass TwitterBtn_panel {
-           ignorepointer 1
-           color 0 0 0 0
-           size 293 39
-           halign right_ref
-           valign center_ref
-           hexactpos 0
-           vexactpos 0
-           hexactsize 1
-           vexactsize 1
-           style DayZDefaultPanel
-           {
-            ImageWidgetClass TwitterBtn_img {
-             clipchildren 0
-             ignorepointer 1
-             size 47 39
-             halign right_ref
-             valign center_ref
-             hexactpos 1
-             vexactpos 1
-             hexactsize 1
-             vexactsize 1
-             imageTexture "{56507986E3807A3B}Colorful-UI/gui/textures/main_menu/Colorful.Twitter.edds"
-             mode blend
-             "src alpha" 1
-             "clamp mode" clamp
-             "stretch mode" stretch_w_h
-             filter 0
-            }
-            TextWidgetClass TwitterBtn_label {
-             clipchildren 0
-             ignorepointer 1
-             position 60 0
-             size 1 1
-             halign right_ref
-             valign center_ref
-             hexactpos 1
-             vexactpos 1
-             hexactsize 0
-             vexactsize 0
-             text "Twitter"
-             font "Colorful-UI/gui/fonts/Ethnocentric20"
+             font "Colorful-UI/gui/fonts/RobotoSlabBold28"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -486,7 +487,7 @@ WindowWidgetClass WindowWidget {
              hexactsize 0
              vexactsize 0
              text "Reddit"
-             font "Colorful-UI/gui/fonts/Ethnocentric20"
+             font "Colorful-UI/gui/fonts/RobotoSlabBold28"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -555,7 +556,7 @@ WindowWidgetClass WindowWidget {
              hexactsize 0
              vexactsize 0
              text "YouTube"
-             font "Colorful-UI/gui/fonts/Ethnocentric20"
+             font "Colorful-UI/gui/fonts/RobotoSlabBold28"
              "exact text" 1
              "size to text h" 1
              "text halign" right
@@ -623,7 +624,7 @@ WindowWidgetClass WindowWidget {
              hexactsize 0
              vexactsize 0
              text "Facebook"
-             font "Colorful-UI/gui/fonts/Ethnocentric20"
+             font "Colorful-UI/gui/fonts/RobotoSlabBold28"
              "exact text" 1
              "size to text h" 1
              "text halign" right
@@ -691,7 +692,7 @@ WindowWidgetClass WindowWidget {
              hexactsize 0
              vexactsize 0
              text "Meta"
-             font "Colorful-UI/gui/fonts/Ethnocentric20"
+             font "Colorful-UI/gui/fonts/RobotoSlabBold28"
              "exact text" 1
              "size to text h" 1
              "text halign" right

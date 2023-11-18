@@ -120,7 +120,6 @@ WindowWidgetClass TextInputDialog_root {
   }
   FrameWidgetClass SafeZone {
    ignorepointer 1
-   position 0 0
    size 0.9 0.9
    halign center_ref
    valign center_ref
@@ -290,6 +289,7 @@ WindowWidgetClass TextInputDialog_root {
        vexactsize 0
        style Bold
        text "placeholder text"
+       font "Colorful-ui/gui/fonts/RobotoSlabBold22"
        "exact text" 0
        "size to text h" 1
        "size to text v" 1

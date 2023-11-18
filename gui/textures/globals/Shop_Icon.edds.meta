@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{1EF9969CA41F08E4}Colorful-UI/gui/textures/globals/Shop_Icon.edds"
+ Author "sdf-1"
+ ChangeDate -1375539342
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Shop_Icon.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

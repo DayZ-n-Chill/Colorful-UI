@@ -121,7 +121,6 @@ PanelWidgetClass TextInputDialog_root {
   }
   FrameWidgetClass SafeZone {
    ignorepointer 1
-   position 0 0
    size 0.9 0.9
    halign center_ref
    valign center_ref
@@ -332,6 +331,7 @@ PanelWidgetClass TextInputDialog_root {
          vexactsize 0
          style Bold
          text "You are player"
+         font "Colorful-ui/gui/fonts/RobotoSlabBold22"
          "exact text" 1
          "size to text h" 1
          "size to text v" 1
@@ -351,8 +351,9 @@ PanelWidgetClass TextInputDialog_root {
          scaled 1
          style None
          text "123"
+         font "Colorful-ui/gui/fonts/RobotoSlabBold22"
          "exact text" 1
-         "exact text size" 22
+         "exact text size" 28
          "size to text h" 1
          "size to text v" 1
          "text halign" center
@@ -371,6 +372,7 @@ PanelWidgetClass TextInputDialog_root {
          vexactsize 0
          style Bold
          text "in queue"
+         font "Colorful-ui/gui/fonts/RobotoSlabBold22"
          "exact text" 1
          "size to text h" 1
          "size to text v" 1

@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{2B148E316EF133F1}RobotoSlab16.edds"
+ Author "sdf-1"
+ ChangeDate 780529521
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "RobotoSlab16.tga"
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}

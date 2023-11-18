@@ -14,8 +14,6 @@ ImageWidgetClass height_wrapper {
  imageTexture "{1EBDEB3BCB073C08}Colorful-UI/gui/textures/Inventory/Inv.Hdr.Background.edds"
  mode opaque
  "src alpha" 0
- "no wrap" 0
- stretch 0
  {
   PanelWidgetClass collapse_button {
    visible 0
@@ -102,8 +100,8 @@ ImageWidgetClass height_wrapper {
    hexactsize 0
    vexactsize 1
    imageTexture "{C439858A6B95BCA0}Colorful-UI/gui/textures/Inventory/Inv.Hdr.Border.edds"
-   "no wrap" 1
-   stretch 1
+   "clamp mode" clamp
+   "stretch mode" stretch_w_h
   }
   PanelWidgetClass Dropzone {
    ignorepointer 1

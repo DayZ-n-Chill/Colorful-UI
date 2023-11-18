@@ -124,7 +124,6 @@ FrameWidgetClass LoadingFrame_root {
   }
   FrameWidgetClass SafeZone {
    ignorepointer 1
-   position 0 -0.0011
    size 0.9 0.9
    halign center_ref
    valign center_ref
@@ -277,7 +276,7 @@ FrameWidgetClass LoadingFrame_root {
        hexactpos 1
        vexactpos 1
        text "Your tips text will go here"
-       font "Colorful-UI/gui/fonts/SquareFont24"
+       font "Colorful-UI/gui/fonts/RobotoSlabBold22"
        "exact text" 1
        "size to text h" 1
        "size to text v" 1

@@ -1446,7 +1446,7 @@ FrameWidgetClass rootFrame {
              vexactsize 0
              priority 250
              text "#tutorial_title_healthSystem"
-             font "Colorful-UI/gui/fonts/Ethnocentric20"
+             font "Colorful-UI/gui/fonts/RobotoSlabBold28"
              "italic text" 0
              "bold text" 0
              "exact text" 0
@@ -1506,7 +1506,7 @@ FrameWidgetClass rootFrame {
              vexactsize 0
              priority 250
              text "#tutorial_title_melee"
-             font "Colorful-UI/gui/fonts/Ethnocentric20"
+             font "Colorful-UI/gui/fonts/RobotoSlabBold28"
              "italic text" 0
              "bold text" 0
              "exact text" 0
@@ -1566,7 +1566,7 @@ FrameWidgetClass rootFrame {
              vexactsize 0
              priority 250
              text "#tutorial_title_guns"
-             font "Colorful-UI/gui/fonts/Ethnocentric20"
+             font "Colorful-UI/gui/fonts/RobotoSlabBold28"
              "italic text" 0
              "bold text" 0
              "exact text" 0
@@ -1626,7 +1626,7 @@ FrameWidgetClass rootFrame {
              vexactsize 0
              priority 250
              text "#tutorial_title_infected"
-             font "Colorful-UI/gui/fonts/Ethnocentric20"
+             font "Colorful-UI/gui/fonts/RobotoSlabBold28"
              "italic text" 0
              "bold text" 0
              "exact text" 0
@@ -1686,7 +1686,7 @@ FrameWidgetClass rootFrame {
              vexactsize 0
              priority 250
              text "#tutorial_inventory7"
-             font "Colorful-UI/gui/fonts/Ethnocentric20"
+             font "Colorful-UI/gui/fonts/RobotoSlabBold28"
              "italic text" 0
              "bold text" 0
              "exact text" 0
@@ -1746,7 +1746,7 @@ FrameWidgetClass rootFrame {
              vexactsize 0
              priority 250
              text "#tutorial_title_loot"
-             font "Colorful-UI/gui/fonts/Ethnocentric20"
+             font "Colorful-UI/gui/fonts/RobotoSlabBold28"
              "italic text" 0
              "bold text" 0
              "exact text" 0
@@ -5129,7 +5129,7 @@ FrameWidgetClass rootFrame {
    priority 1
    style Normal
    text "#STR_rootFrame_TutorialsTextWidget0"
-   font "Colorful-UI/gui/fonts/Ethnocentric20"
+   font "Colorful-UI/gui/fonts/RobotoSlabBold28"
    "text color" 0.8157 0.1255 0.7843 1
    "exact text" 1
    "size to text h" 1
@@ -5214,7 +5214,7 @@ FrameWidgetClass rootFrame {
            hexactsize 0
            vexactsize 0
            text "#layout_pc_keybinding_play_pannel_back"
-           font "Colorful-UI/gui/fonts/Ethnocentric20"
+           font "Colorful-UI/gui/fonts/RobotoSlabBold28"
            "exact text" 1
            "size to text h" 1
            "size to text v" 1

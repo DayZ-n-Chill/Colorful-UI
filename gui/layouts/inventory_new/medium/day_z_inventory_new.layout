@@ -284,7 +284,7 @@ FrameWidgetClass inventory_root {
          image0 "set:dayz_gui image:icon_needle"
          mode additive
          "src alpha" 1
-         "no wrap" 1
+         "clamp mode" clamp
          "flip u" 0
          "flip v" 0
          filter 1
@@ -303,7 +303,7 @@ FrameWidgetClass inventory_root {
          image0 "set:dayz_gui image:icon_hammer"
          mode additive
          "src alpha" 1
-         "no wrap" 1
+         "clamp mode" clamp
          "flip u" 0
          "flip v" 0
          filter 1
@@ -325,7 +325,7 @@ FrameWidgetClass inventory_root {
          image0 "set:dayz_gui image:icon_bar_specialisation"
          mode additive
          "src alpha" 1
-         "no wrap" 1
+         "clamp mode" clamp
          "flip u" 0
          "flip v" 0
          filter 0
@@ -346,7 +346,7 @@ FrameWidgetClass inventory_root {
            image0 "set:dayz_gui image:specialization_arrow"
            mode additive
            "src alpha" 1
-           "no wrap" 1
+           "clamp mode" clamp
            "flip u" 0
            "flip v" 0
            filter 1
@@ -373,8 +373,8 @@ FrameWidgetClass inventory_root {
    imageTexture "{E6B3EF816E067499}Gui/textures/inventory_bgvignette.edds"
    mode blend
    "src alpha" 1
-   "no wrap" 1
-   stretch 1
+   "clamp mode" clamp
+   "stretch mode" stretch_w_h
    filter 0
    nocache 1
   }
@@ -471,11 +471,11 @@ FrameWidgetClass inventory_root {
    hexactsize 0
    vexactsize 0
    scaled 1
-   imageTexture "{942C453B0EBBFCF8}Colorful-UI/gui/textures/globals/LoadingShader.edds"
+   imageTexture "{D7092B868D24199B}Colorful-UI/gui/textures/globals/BottomShader.edds"
    mode blend
    "src alpha" 1
-   "no wrap" 1
-   stretch 1
+   "clamp mode" clamp
+   "stretch mode" stretch_w_h
   }
  }
 }

@@ -76,7 +76,7 @@ FrameWidgetClass keybindings_root {
    priority 1
    style Normal
    text "#layout_pc_keybinding_desc"
-   font "Colorful-UI/gui/fonts/Ethnocentric20"
+   font "Colorful-UI/gui/fonts/RobotoSlabBold28"
    "text color" 0.8157 0.1255 0.7843 1
    "exact text" 0
    "text halign" right
@@ -139,7 +139,7 @@ FrameWidgetClass keybindings_root {
        "next down" "defaults"
        text "#layout_pc_keybinding_play_pannel_back"
        text_proportion 0.6
-       font "Colorful-UI/gui/fonts/Ethnocentric20"
+       font "Colorful-UI/gui/fonts/RobotoSlabBold28"
        switch normal
       }
      }
@@ -198,7 +198,7 @@ FrameWidgetClass keybindings_root {
        "next down" "back"
        text "#layout_pc_keybinding_apply"
        text_proportion 0.55
-       font "Colorful-UI/gui/fonts/Ethnocentric20"
+       font "Colorful-UI/gui/fonts/RobotoSlabBold28"
        switch normal
       }
       ButtonWidgetClass reset {
@@ -221,7 +221,7 @@ FrameWidgetClass keybindings_root {
        "next down" "apply"
        text "#menu_undo_cap"
        text_proportion 0.55
-       font "Colorful-UI/gui/fonts/Ethnocentric20"
+       font "Colorful-UI/gui/fonts/RobotoSlabBold28"
        switch normal
       }
       ButtonWidgetClass defaults {
@@ -244,7 +244,7 @@ FrameWidgetClass keybindings_root {
        "next down" "reset"
        text "#menu_default_cap"
        text_proportion 0.55
-       font "Colorful-UI/gui/fonts/Ethnocentric20"
+       font "Colorful-UI/gui/fonts/RobotoSlabBold28"
        switch normal
       }
       PanelWidgetClass character {
@@ -271,7 +271,7 @@ FrameWidgetClass keybindings_root {
          vexactpos 1
          hexactsize 0
          vexactsize 0
-         font "Colorful-UI/gui/fonts/Ethnocentric20"
+         font "Colorful-UI/gui/fonts/RobotoSlabBold28"
          "exact text" 0
          "text halign" center
          "text valign" center
@@ -331,7 +331,7 @@ FrameWidgetClass keybindings_root {
          hexactsize 1
          vexactsize 1
          text "#keybinding_profile"
-         font "Colorful-UI/gui/fonts/Ethnocentric20"
+         font "Colorful-UI/gui/fonts/RobotoSlabBold28"
          "text halign" center
          "text valign" center
         }

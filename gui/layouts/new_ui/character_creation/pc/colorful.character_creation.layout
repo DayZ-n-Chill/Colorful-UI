@@ -86,7 +86,7 @@ FrameWidgetClass character_creation_root {
      ignorepointer 1
      color 0 0 0 0.9608
      position 0 0
-     size 480 36
+     size 480 46
      hexactpos 1
      vexactpos 1
      hexactsize 1
@@ -105,12 +105,25 @@ FrameWidgetClass character_creation_root {
        vexactsize 0
        style Normal
        text "#layout_character_creation_character"
-       font "Colorful-UI/gui/fonts/Ethnocentric20"
+       font "Colorful-UI/gui/fonts/RobotoSlabBold28"
+       "text offset" 10 0
        "exact text" 1
        "size to text h" 0
        "size to text v" 1
-       "text halign" center
        "text valign" center
+      }
+      ImageWidgetClass Border {
+       ignorepointer 1
+       size 1 5
+       halign center_ref
+       valign bottom_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       imageTexture "{C439858A6B95BCA0}Colorful-UI/gui/textures/Inventory/Inv.Hdr.Border.edds"
+       "clamp mode" clamp
+       "stretch mode" stretch_w_h
       }
      }
     }
@@ -701,7 +714,7 @@ FrameWidgetClass character_creation_root {
        "next down" "randomize_character"
        text "#layout_character_creation_save"
        text_proportion 0.8
-       font "Colorful-UI/gui/fonts/Ethnocentric20"
+       font "Colorful-UI/gui/fonts/RobotoSlabBold28"
        switch normal
       }
       ButtonWidgetClass apply {
@@ -723,7 +736,7 @@ FrameWidgetClass character_creation_root {
        "next down" "randomize_character"
        text "#layout_character_creation_apply"
        text_proportion 0.8
-       font "Colorful-UI/gui/fonts/Ethnocentric20"
+       font "Colorful-UI/gui/fonts/RobotoSlabBold28"
        switch normal
       }
      }
@@ -782,7 +795,7 @@ FrameWidgetClass character_creation_root {
        "next down" "apply"
        text "#layout_character_creation_back"
        text_proportion 0.55
-       font "Colorful-UI/gui/fonts/Ethnocentric20"
+       font "Colorful-UI/gui/fonts/RobotoSlabBold28"
        switch normal
       }
       ButtonWidgetClass randomize_character {
@@ -803,7 +816,7 @@ FrameWidgetClass character_creation_root {
        "next down" "back"
        text "#layout_character_creation_randomize"
        text_proportion 0.55
-       font "Colorful-UI/gui/fonts/Ethnocentric20"
+       font "Colorful-UI/gui/fonts/RobotoSlabBold28"
        switch normal
       }
       PanelWidgetClass character {
@@ -855,7 +868,7 @@ FrameWidgetClass character_creation_root {
    priority 1
    style Normal
    text "#layout_character_creation_character_creation"
-   font "Colorful-UI/gui/fonts/Ethnocentric20"
+   font "Colorful-UI/gui/fonts/RobotoSlabBold28"
    "text color" 0.8157 0.1255 0.7843 1
    "exact text" 0
    "size to text h" 0

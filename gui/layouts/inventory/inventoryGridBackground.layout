@@ -1,10 +1,11 @@
 PanelWidgetClass GridBck {
- visible 0
+ visible 1
  clipchildren 0
  inheritalpha 0
  ignorepointer 0
- color 0.3137 0.3137 0.3137 0.4706
- size 66 66
+ color 0.0745 0.0706 0.0627 0
+ position 0 0
+ size 54 54
  hexactpos 1
  vexactpos 1
  hexactsize 1
@@ -14,19 +15,21 @@ PanelWidgetClass GridBck {
   PanelWidgetClass LabelTR {
    visible 0
    ignorepointer 1
-   color 0 0 0 1
-   position 1 1
-   size 20 20
+   color 0.0745 0.0706 0.0627 0
+   position -0.21073 0.10537
+   size 54 54
    halign right_ref
    hexactpos 1
    vexactpos 1
    hexactsize 1
    vexactsize 1
    priority 606
-   style rover_sim_colorable
    {
-    PanelWidgetClass LabelTROutline {
+    ImageWidgetClass LabelTROutline {
+     visible 1
      ignorepointer 1
+     color 0.4235 0.4235 0.3843 0
+     position 0 0
      size 1 1
      halign center_ref
      valign center_ref
@@ -35,16 +38,17 @@ PanelWidgetClass GridBck {
      hexactsize 0
      vexactsize 0
      priority 600
-     style Outline
+     imageTexture "{57DD1B88497A88B8}Colorful-UI/gui/textures/QuickSlots/NumberSqr.edds"
+     mode blend
+     "src alpha" 1
+     "clamp mode" clamp
      {
       TextWidgetClass Label1 {
        visible 1
        inheritalpha 0
        ignorepointer 1
-       ignoregloballv 0
-       size 18 18
-       halign center_ref
-       valign center_ref
+       size 15 15
+       halign right_ref
        hexactpos 1
        vexactpos 1
        hexactsize 1
@@ -53,7 +57,7 @@ PanelWidgetClass GridBck {
        priority 500
        style Light
        text "9"
-       font "gui/fonts/sdf_MetronLight30"
+       font "gui/fonts/MetronLight12"
        "exact text" 0
        text_proportion 0.9
        "text halign" center
@@ -66,10 +70,9 @@ PanelWidgetClass GridBck {
   PanelWidgetClass LabelCC {
    visible 1
    ignorepointer 1
-   color 0 0 0 0.3922
-   size 20 20
-   halign center_ref
-   valign center_ref
+   color 0.0745 0.0706 0.0627 0
+   size 15 15
+   halign right_ref
    hexactpos 1
    vexactpos 1
    hexactsize 1
@@ -77,9 +80,11 @@ PanelWidgetClass GridBck {
    priority 606
    style rover_sim_colorable
    {
-    PanelWidgetClass LabelCCOutline {
+    ImageWidgetClass LabelCCOutline {
+     visible 1
      ignorepointer 1
-     color 1 1 1 0.3922
+     color 0.4235 0.4235 0.3843 0
+     position 0 0
      size 1 1
      halign center_ref
      valign center_ref
@@ -88,17 +93,18 @@ PanelWidgetClass GridBck {
      hexactsize 0
      vexactsize 0
      priority 600
-     style Outline
+     imageTexture "{57DD1B88497A88B8}Colorful-UI/gui/textures/QuickSlots/NumberSqr.edds"
+     mode blend
+     "src alpha" 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
      {
       TextWidgetClass Label2 {
        visible 1
        inheritalpha 0
        ignorepointer 1
-       ignoregloballv 1
-       color 1 1 1 0.7843
-       size 18 18
-       halign center_ref
-       valign center_ref
+       size 15 15
+       halign right_ref
        hexactpos 1
        vexactpos 1
        hexactsize 1
@@ -107,7 +113,7 @@ PanelWidgetClass GridBck {
        priority 500
        style Light
        text "9"
-       font "gui/fonts/sdf_MetronLight30"
+       font "gui/fonts/MetronLight12"
        "exact text" 0
        text_proportion 0.9
        "text halign" center
@@ -116,6 +122,22 @@ PanelWidgetClass GridBck {
      }
     }
    }
+  }
+  ImageWidgetClass QuickSlotBG {
+   visible 1
+   ignorepointer 1
+   position 0 0
+   size 1 1
+   hexactpos 1
+   vexactpos 1
+   hexactsize 0
+   vexactsize 0
+   image0 ""
+   imageTexture "{AF3331492AFA1F17}Colorful-UI/gui/textures/QuickSlots/QuickSlotBG.edds"
+   mode blend
+   "src alpha" 1
+   "clamp mode" clamp
+   "stretch mode" stretch_w_h
   }
  }
 }

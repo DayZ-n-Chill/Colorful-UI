@@ -164,7 +164,7 @@ FrameWidgetClass main_menu_root {
        "next right" "exit_button"
        "next up" "play"
        "next down" "customize_character"
-       font "Colorful-UI/gui/fonts/Ethnocentric20"
+       font "Colorful-UI/gui/fonts/RobotoSlabBold28"
        switch normal
        {
         ImageWidgetClass settings_button_image {
@@ -200,7 +200,7 @@ FrameWidgetClass main_menu_root {
        "no focus" 1
        "next up" "play"
        "next down" "customize_character"
-       font "Colorful-UI/gui/fonts/Ethnocentric20"
+       font "Colorful-UI/gui/fonts/RobotoSlabBold28"
        switch normal
        {
         ImageWidgetClass customize_character_image {
@@ -238,7 +238,7 @@ FrameWidgetClass main_menu_root {
        "no focus" 1
        "next up" "play"
        "next down" "customize_character"
-       font "Colorful-UI/gui/fonts/Ethnocentric20"
+       font "Colorful-UI/gui/fonts/RobotoSlabBold28"
        switch normal
        {
         ImageWidgetClass Website_Button_image {
@@ -276,7 +276,7 @@ FrameWidgetClass main_menu_root {
        "next right" "play"
        "next up" "play"
        "next down" "customize_character"
-       font "Colorful-UI/gui/fonts/Ethnocentric20"
+       font "Colorful-UI/gui/fonts/RobotoSlabBold28"
        switch normal
        {
         ImageWidgetClass Discord_button_image {
@@ -337,7 +337,7 @@ FrameWidgetClass main_menu_root {
        "next right" "exit_button"
        "next up" "play"
        "next down" "customize_character"
-       font "Colorful-UI/gui/fonts/Ethnocentric20"
+       font "Colorful-UI/gui/fonts/RobotoSlabBold28"
        switch normal
        {
         ImageWidgetClass PrioQ_button_image {
@@ -375,7 +375,7 @@ FrameWidgetClass main_menu_root {
        "next right" "play"
        "next up" "play"
        "next down" "customize_character"
-       font "Colorful-UI/gui/fonts/Ethnocentric20"
+       font "Colorful-UI/gui/fonts/RobotoSlabBold28"
        switch normal
        {
         ImageWidgetClass exit_button_image {

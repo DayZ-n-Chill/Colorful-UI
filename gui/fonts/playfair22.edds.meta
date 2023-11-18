@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{A2445E83558761B9}playfair22.edds"
+ Author "sdf-1"
+ ChangeDate 1034268529
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "playfair22.tga"
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}
