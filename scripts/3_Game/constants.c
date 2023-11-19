@@ -43,6 +43,7 @@ class MenuURLS {
 	static string urlPriorityQ   = "https://discord.gg/dayzthelab";
 	// Can be used anything else
 	static string urlCustom   = "#";
+	static string urlBattleMetrics   = "https://www.battlemetrics.com/servers/dayz/21537246";
 }
 
 // RANDOM LOADSCREEN TIPS -------------------------------------------------

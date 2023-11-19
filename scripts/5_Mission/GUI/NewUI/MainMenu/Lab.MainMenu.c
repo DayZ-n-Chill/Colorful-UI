@@ -16,9 +16,8 @@ modded class MainMenu extends UIScriptedMenu
 	private	Widget m_shader;
 	private Widget m_ImageBackground;
 	private ImageWidget m_Background;
-	private Widget m_ServerOffline;
 	private Widget m_ComingSoon
-	private Widget m_ServerOnline;
+
 
 	private string US_Background = "Colorful-UI/gui/textures/loading_screens/LabLoadScreen_1.edds";
 	private string EU_Background = "Colorful-UI/gui/textures/loading_screens/LabLoadScreen_2.edds";
@@ -42,6 +41,11 @@ modded class MainMenu extends UIScriptedMenu
 	private	Widget m_USMAINDIS;
 	private	Widget m_EUMAINDIS;
 	private	Widget m_AUMAINDIS;
+	private Widget m_ServerOnline;
+	private Widget m_ServerOffline;
+	private Widget m_ServerOnlineIMG;
+	private Widget m_ServerOfflineIMG;
+	private Widget m_PrioQ;
 
 	private Widget m_Press2Start;
 	bool m_FadingOut = true;
@@ -70,8 +74,13 @@ modded class MainMenu extends UIScriptedMenu
 		m_EUMAINDIS					= layoutRoot.FindAnyWidget( "EUMainDisabled" );
 		m_AUMAINDIS					= layoutRoot.FindAnyWidget( "AUMainDisabled" );
 
+		m_PrioQ						= layoutRoot.FindAnyWidget( "PrioQ_button" );
+		
 		m_ServerOffline				= layoutRoot.FindAnyWidget( "ServerOffline" );
 		m_ServerOnline				= layoutRoot.FindAnyWidget( "ServerOnline" );
+
+		m_ServerOfflineIMG				= layoutRoot.FindAnyWidget( "ServerOffline_Img" );
+		m_ServerOnlineIMG				= layoutRoot.FindAnyWidget( "ServerOnline_Img" );
 		
 		m_CustomizeCharacter		= layoutRoot.FindAnyWidget( "customize_character" );
 		m_PlayVideo					= layoutRoot.FindAnyWidget( "play_video" );
@@ -131,11 +140,11 @@ modded class MainMenu extends UIScriptedMenu
 	    {
 	        m_USMAIN.Show(false);
 	        m_EUMAINDIS.Show(true);
-			// FadeIn(EU_Background);
 			m_Background.LoadImageFile(0, EU_Background);
 			m_ComingSoon.Show(true);
 			m_Press2Start.Show(false);
-			m_ServerOnline.Show(false);
+			m_ServerOnlineIMG.Show(false);
+			m_ServerOfflineIMG.Show(true);
 	        isSelectedUSMAIN = false;
 	        isSelectedEUMAIN = true;
 	    }
@@ -143,11 +152,11 @@ modded class MainMenu extends UIScriptedMenu
 	    {
 	        m_EUMAINDIS.Show(false);
 	        m_AUMAINDIS.Show(true);
-			// FadeIn(AU_Background);
 			m_Background.LoadImageFile(0, AU_Background);
 			m_ComingSoon.Show(true);
 			m_Press2Start.Show(false);
-			m_ServerOnline.Show(false);
+			m_ServerOnlineIMG.Show(false);
+			m_ServerOfflineIMG.Show(true);
 	        isSelectedEUMAIN = false;
 	        isSelectedAUMAIN = true;
 	    }
@@ -155,11 +164,11 @@ modded class MainMenu extends UIScriptedMenu
 	    {
 	        m_AUMAINDIS.Show(false);
 	        m_USMAIN.Show(true);
-			// FadeIn(US_Background);
 			m_Background.LoadImageFile(0, US_Background);
 			m_ComingSoon.Show(false);
 			m_Press2Start.Show(true);
-			m_ServerOnline.Show(true);
+			m_ServerOnlineIMG.Show(true);
+			m_ServerOfflineIMG.Show(false);
 	        isSelectedAUMAIN = false;
 	        isSelectedUSMAIN = true;
 	    }
@@ -171,11 +180,11 @@ modded class MainMenu extends UIScriptedMenu
 	    {
 	        m_AUMAINDIS.Show(false);
 	        m_EUMAINDIS.Show(true);
-			
 			m_Background.LoadImageFile(0, EU_Background);
 			m_ComingSoon.Show(true);
 			m_Press2Start.Show(false);
-			m_ServerOnline.Show(false);
+			m_ServerOnlineIMG.Show(false);
+			m_ServerOfflineIMG.Show(true);
 	        isSelectedAUMAIN = false;
 	        isSelectedEUMAIN = true;
 	    }
@@ -183,11 +192,11 @@ modded class MainMenu extends UIScriptedMenu
 	    {
 	        m_EUMAINDIS.Show(false);
 	        m_USMAIN.Show(true);
-			
 			m_Background.LoadImageFile(0, US_Background);
 			m_ComingSoon.Show(false);
 			m_Press2Start.Show(true);
-			m_ServerOnline.Show(true);
+			m_ServerOnlineIMG.Show(true);
+			m_ServerOfflineIMG.Show(false);
 	        isSelectedEUMAIN = false;
 	        isSelectedUSMAIN = true;
 	    }
@@ -195,11 +204,11 @@ modded class MainMenu extends UIScriptedMenu
 	    {
 	        m_USMAIN.Show(false);
 	        m_AUMAINDIS.Show(true);
-			
 			m_Background.LoadImageFile(0, AU_Background);
 			m_ComingSoon.Show(true);
 			m_Press2Start.Show(false);
-			m_ServerOnline.Show(false);
+			m_ServerOnlineIMG.Show(false);
+			m_ServerOfflineIMG.Show(true);
 	        isSelectedUSMAIN = false;
 	        isSelectedAUMAIN = true;
 	    }
@@ -242,14 +251,14 @@ modded class MainMenu extends UIScriptedMenu
 			GetGame().OpenURL(MenuURLS.urlTwitter);
 			return false;
 		}
-		else if (button == MouseState.LEFT && w == m_Reddit)
+		else if (button == MouseState.LEFT && w == m_ServerOnline)
 		{
-			GetGame().OpenURL(MenuURLS.urlReddit);
+			GetGame().OpenURL(MenuURLS.urlBattleMetrics);
 			return false;
 		}
-		else if (button == MouseState.LEFT && w == m_Youtube)
+		else if (button == MouseState.LEFT && w == m_ServerOffline)
 		{
-			GetGame().OpenURL(MenuURLS.urlYoutube);
+			GetGame().OpenURL(MenuURLS.urlBattleMetrics);
 			return false;
 		}	
 		else if (button == MouseState.LEFT && w == m_Facebook)
