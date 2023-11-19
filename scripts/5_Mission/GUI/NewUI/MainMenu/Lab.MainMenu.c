@@ -74,7 +74,7 @@ modded class MainMenu extends UIScriptedMenu
 		m_EUMAINDIS					= layoutRoot.FindAnyWidget( "EUMainDisabled" );
 		m_AUMAINDIS					= layoutRoot.FindAnyWidget( "AUMainDisabled" );
 
-		m_PrioQ						= layoutRoot.FindAnyWidget( "PrioQ_button" );
+		m_PriorityQueue				= layoutRoot.FindAnyWidget( "PrioQ_button" );
 		
 		m_ServerOffline				= layoutRoot.FindAnyWidget( "ServerOffline" );
 		m_ServerOnline				= layoutRoot.FindAnyWidget( "ServerOnline" );
