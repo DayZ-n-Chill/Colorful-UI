@@ -1150,7 +1150,7 @@ FrameWidgetClass main_menu_root {
      visible 1
      ignorepointer 1
      position 0 0
-     size 415 305
+     size 457 305
      valign bottom_ref
      hexactpos 0
      vexactpos 0
@@ -1160,13 +1160,13 @@ FrameWidgetClass main_menu_root {
       TextWidgetClass character_stats_textImg {
        ignorepointer 1
        keepsafezone 0
-       size 31.2238 79.24
+       size 38.22 79.24
        halign center_ref
        hexactpos 1
        vexactpos 1
        hexactsize 1
        vexactsize 1
-       text "SURIVOR STATS"
+       text "SURVIVOR STATS"
        font "Colorful-UI/gui/fonts/PersonalServices48"
        "exact text" 1
        "size to text h" 1
