@@ -228,17 +228,17 @@ modded class MainMenu extends UIScriptedMenu
     	}
 		if (button == MouseState.LEFT && w == m_USMAIN)
 		{
-			g_Game.ConnectFromServerBrowser( "172.111.51.43", 2302, "" );
+			g_Game.ConnectFromServerBrowser( "168.100.163.22", 2302, "" );
 			return true;
 		}
 		if (button == MouseState.LEFT && w == m_EUMAIN)
 		{
-			// g_Game.ConnectFromServerBrowser( "172.111.51.43", 2302, "" );
+			// g_Game.ConnectFromServerBrowser( "168.100.163.22", 2302, "" );
 			return true;
 		}
 		if (button == MouseState.LEFT && w == m_AUMAIN)
 		{
-			// g_Game.ConnectFromServerBrowser( "172.111.51.43", 2302, "" );
+			// g_Game.ConnectFromServerBrowser( "168.100.163.22", 2302, "" );
 			return true;
 		}
 		if (button == MouseState.LEFT && w == m_Discord)
