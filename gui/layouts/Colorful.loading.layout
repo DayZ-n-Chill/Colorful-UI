@@ -21,9 +21,10 @@ FrameWidgetClass LoadingFrame {
    vexactsize 0
    fixaspect outside
    image0 ""
-   imageTexture "{A5D8917F066B3FDC}Colorful-UI/gui/textures/loading_screens/Colorful-BG-12.edds"
+   imageTexture "{61C1F79E62961C46}Colorful-UI/gui/textures/loading_screens/Colorful-BG-4.edds"
    mode opaque
    "src alpha" 0
+   "clamp mode" clamp
    "stretch mode" stretch_w_h
    "Transition width" 1
    Progress 0
@@ -40,9 +41,10 @@ FrameWidgetClass LoadingFrame {
    vexactsize 0
    fixaspect outside
    image0 ""
-   imageTexture "{A5D8917F066B3FDC}Colorful-UI/gui/textures/loading_screens/Colorful-BG-12.edds"
+   imageTexture "{61C1F79E62961C46}Colorful-UI/gui/textures/loading_screens/Colorful-BG-4.edds"
    mode opaque
    "src alpha" 0
+   "clamp mode" clamp
    "stretch mode" stretch_w_h
    "Transition width" 1
    Progress 0
@@ -158,7 +160,7 @@ FrameWidgetClass LoadingFrame {
      hexactpos 1
      vexactpos 0
      text "LOADING GAME..."
-     font "Colorful-ui/gui/fonts/PersonalServices24"
+     font "Colorful-ui/gui/fonts/VTC28"
      "exact text" 1
      "size to text h" 1
      "size to text v" 1
@@ -284,7 +286,7 @@ FrameWidgetClass LoadingFrame {
            hexactsize 0
            vexactsize 0
            text "Discord"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
+           font "Colorful-UI/gui/fonts/VTC28"
            "exact text" 1
            "size to text h" 1
            "size to text v" 0
@@ -352,7 +354,7 @@ FrameWidgetClass LoadingFrame {
            hexactsize 0
            vexactsize 0
            text "Twitter"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
+           font "Colorful-UI/gui/fonts/VTC28"
            "exact text" 1
            "size to text h" 1
            "size to text v" 0
@@ -421,7 +423,7 @@ FrameWidgetClass LoadingFrame {
            hexactsize 0
            vexactsize 0
            text "Reddit"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
+           font "Colorful-UI/gui/fonts/VTC28"
            "exact text" 1
            "size to text h" 1
            "size to text v" 0
@@ -490,7 +492,7 @@ FrameWidgetClass LoadingFrame {
            hexactsize 0
            vexactsize 0
            text "YouTube"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
+           font "Colorful-UI/gui/fonts/VTC28"
            "exact text" 1
            "size to text h" 1
            "text halign" right
@@ -558,7 +560,7 @@ FrameWidgetClass LoadingFrame {
            hexactsize 0
            vexactsize 0
            text "Facebook"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
+           font "Colorful-UI/gui/fonts/VTC28"
            "exact text" 1
            "size to text h" 1
            "text halign" right
@@ -626,7 +628,7 @@ FrameWidgetClass LoadingFrame {
            hexactsize 0
            vexactsize 0
            text "Meta"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
+           font "Colorful-UI/gui/fonts/VTC28"
            "exact text" 1
            "size to text h" 1
            "text halign" right

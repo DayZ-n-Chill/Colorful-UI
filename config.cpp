@@ -50,24 +50,5 @@ class CfgMods
 			};
 		};
 	};
-	
-	class CfgFontFamilies
-	{
-		class PersonalServices
-		{
-			fonts[] = {"Colorful-UI/gui/fonts/PersonalServices.fnt"};
-		};
-		class OpenSansV
-		{
-			fonts[] = {"Colorful-UI/gui/fonts/OpenSansV.fnt"};
-		};
-		class OpenSansVItalic
-		{
-			fonts[] = {"Colorful-UI/gui/fonts/OpenSansV-Italic.fnt"};
-		};
-		class Roboto
-		{
-			fonts[] = {"Colorful-UI/gui/fonts/Roboto-Regular.fnt"};
-		};
-	};
+
 };

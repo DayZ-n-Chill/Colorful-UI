@@ -19,11 +19,11 @@ PanelWidgetClass TextInputDialogRoot {
    vexactpos 1
    hexactsize 0
    vexactsize 0
-   imageTexture "{09470E9DECC2D81D}EDEN_UI/gui/textures/loading_screens/loading_screen_2_EDEN.edds"
+   imageTexture "{61C1F79E62961C46}Colorful-UI/gui/textures/loading_screens/Colorful-BG-4.edds"
    mode blend
    "src alpha" 1
-   "no wrap" 1
-   stretch 1
+   "clamp mode" clamp
+   "stretch mode" stretch_w_h
   }
   ImageWidgetClass BackgroundOverride {
    visible 1
@@ -37,10 +37,10 @@ PanelWidgetClass TextInputDialogRoot {
    vexactsize 0
    fixaspect outside
    image0 ""
-   imageTexture "{A5D8917F066B3FDC}Colorful-UI/gui/textures/loading_screens/Colorful-BG-12.edds"
+   imageTexture "{61C1F79E62961C46}Colorful-UI/gui/textures/loading_screens/Colorful-BG-4.edds"
    mode opaque
    "src alpha" 0
-   stretch 1
+   "stretch mode" stretch_w_h
    "Transition width" 1
    Progress 0
   }
@@ -74,8 +74,8 @@ PanelWidgetClass TextInputDialogRoot {
      imageTexture "{E6B3EF816E067499}Gui/textures/inventory_bgvignette.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
      filter 0
      nocache 1
     }
@@ -94,8 +94,7 @@ PanelWidgetClass TextInputDialogRoot {
      imageTexture "{4BFC093013F74D19}Colorful-UI/gui/textures/globals/UI.Colorful.Shader.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 0
+     "clamp mode" clamp
     }
     ImageWidgetClass HorizShader {
      visible 1
@@ -111,8 +110,8 @@ PanelWidgetClass TextInputDialogRoot {
      imageTexture "{A82F487401D497EF}Colorful-UI/gui/textures/globals/Colorful.HorizShaderTip.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
      filter 1
     }
    }
@@ -141,8 +140,8 @@ PanelWidgetClass TextInputDialogRoot {
      imageTexture "{5314D820E495219F}Colorful-UI/gui/textures/globals/Colorful.Logo.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
      filter 1
      nocache 0
     }
@@ -205,7 +204,7 @@ PanelWidgetClass TextInputDialogRoot {
      hexactpos 1
      vexactpos 0
      text "Please wait ..."
-     font "Colorful-ui/gui/fonts/PersonalServices24"
+     font "Colorful-ui/gui/fonts/VTC28"
      "exact text" 1
      "size to text h" 1
      "size to text v" 1

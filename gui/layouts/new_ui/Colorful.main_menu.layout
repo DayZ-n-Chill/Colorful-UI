@@ -24,11 +24,11 @@ FrameWidgetClass main_menu_root {
    scaled 1
    fixaspect outside
    image0 ""
-   imageTexture "{BCDEF8AF12180544}Colorful-UI/gui/textures/loading_screens/Colorful-BG-11.edds"
+   imageTexture "{61C1F79E62961C46}Colorful-UI/gui/textures/loading_screens/Colorful-BG-4.edds"
    mode opaque
    "src alpha" 1
-   "no wrap" 1
-   stretch 1
+   "clamp mode" clamp
+   "stretch mode" stretch_w_h
    filter 0
    "Transition width" 1
    Progress 0
@@ -59,8 +59,8 @@ FrameWidgetClass main_menu_root {
      imageTexture "{E6B3EF816E067499}Gui/textures/inventory_bgvignette.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
      filter 0
      nocache 1
     }
@@ -78,8 +78,8 @@ FrameWidgetClass main_menu_root {
      imageTexture "{4BFC093013F74D19}Colorful-UI/gui/textures/globals/UI.Colorful.Shader.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
     }
     ImageWidgetClass HorizShader {
      visible 1
@@ -95,8 +95,8 @@ FrameWidgetClass main_menu_root {
      imageTexture "{A82F487401D497EF}Colorful-UI/gui/textures/globals/Colorful.HorizShaderTip.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
     }
    }
   }
@@ -125,8 +125,8 @@ FrameWidgetClass main_menu_root {
      imageTexture "{5314D820E495219F}Colorful-UI/gui/textures/globals/Colorful.Logo.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
      filter 1
      nocache 0
     }
@@ -156,7 +156,7 @@ FrameWidgetClass main_menu_root {
        "no focus" 1
        "next up" "play"
        "next down" "customize_character"
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/VTC28"
        switch normal
        {
         ImageWidgetClass tutorial_button_image {
@@ -190,7 +190,7 @@ FrameWidgetClass main_menu_root {
        "no focus" 1
        "next up" "play"
        "next down" "customize_character"
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/VTC28"
        switch normal
        {
         ImageWidgetClass message_button_image {
@@ -227,7 +227,7 @@ FrameWidgetClass main_menu_root {
        "next right" "exit_button"
        "next up" "play"
        "next down" "customize_character"
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/VTC28"
        switch normal
        {
         ImageWidgetClass settings_button_image {
@@ -261,7 +261,7 @@ FrameWidgetClass main_menu_root {
        "next right" "play"
        "next up" "play"
        "next down" "customize_character"
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/VTC28"
        switch normal
        {
         ImageWidgetClass exit_button_image {
@@ -355,7 +355,7 @@ FrameWidgetClass main_menu_root {
              vexactsize 0
              scaled 1
              text "PLAY"
-             font "Colorful-UI/gui/fonts/PersonalServices32"
+             font "Colorful-UI/gui/fonts/VTC32"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -409,7 +409,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 0
              vexactsize 0
              text "Character"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/VTC28"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -465,7 +465,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 0
              vexactsize 0
              text "Character"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/VTC28"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -515,7 +515,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 0
              vexactsize 0
              text "Server Browser"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/VTC28"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -570,7 +570,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 0
              vexactsize 0
              text "Server Information"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/VTC28"
              "exact text" 1
              "size to text h" 1
              "text halign" right
@@ -621,7 +621,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 0
              vexactsize 0
              text "Priority Queue"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/VTC28"
              "exact text" 1
              "size to text h" 1
              "text halign" right
@@ -672,7 +672,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 0
              vexactsize 0
              text "Website"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/VTC28"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -771,8 +771,8 @@ FrameWidgetClass main_menu_root {
              imageTexture "{4E98404B3EE57BD9}Colorful-UI/gui/textures/main_menu/Colorful.Discord.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              filter 0
             }
             TextWidgetClass DiscordBtn_label {
@@ -787,7 +787,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 0
              vexactsize 0
              text "Discord"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/VTC28"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -839,8 +839,8 @@ FrameWidgetClass main_menu_root {
              imageTexture "{56507986E3807A3B}Colorful-UI/gui/textures/main_menu/Colorful.Twitter.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              filter 0
             }
             TextWidgetClass TwitterBtn_label {
@@ -855,7 +855,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 0
              vexactsize 0
              text "Twitter"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/VTC28"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -908,8 +908,8 @@ FrameWidgetClass main_menu_root {
              imageTexture "{042531BECC696FCF}Colorful-UI/gui/textures/main_menu/Colorful.Reddit.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              filter 0
             }
             TextWidgetClass RedditBtn_label {
@@ -924,7 +924,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 0
              vexactsize 0
              text "Reddit"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/VTC28"
              "exact text" 1
              "size to text h" 1
              "size to text v" 0
@@ -977,8 +977,8 @@ FrameWidgetClass main_menu_root {
              imageTexture "{FDBC9A6B3BB8B821}Colorful-UI/gui/textures/main_menu/Colorful.Youtube.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              filter 0
             }
             TextWidgetClass YoutubeBtn_label {
@@ -993,7 +993,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 0
              vexactsize 0
              text "YouTube"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/VTC28"
              "exact text" 1
              "size to text h" 1
              "text halign" right
@@ -1045,8 +1045,8 @@ FrameWidgetClass main_menu_root {
              imageTexture "{25DB8D90C00B0710}Colorful-UI/gui/textures/main_menu/Colorful.Facebook.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              filter 0
             }
             TextWidgetClass FacebookBtn_label {
@@ -1061,7 +1061,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 0
              vexactsize 0
              text "Facebook"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/VTC28"
              "exact text" 1
              "size to text h" 1
              "text halign" right
@@ -1113,8 +1113,8 @@ FrameWidgetClass main_menu_root {
              imageTexture "{F74D2BABB67517C4}Colorful-UI/gui/textures/main_menu/Colorful.meta.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              filter 0
             }
             TextWidgetClass MetaBtn_label {
@@ -1129,294 +1129,13 @@ FrameWidgetClass main_menu_root {
              hexactsize 0
              vexactsize 0
              text "Meta"
-             font "Colorful-UI/gui/fonts/PersonalServices24"
+             font "Colorful-UI/gui/fonts/VTC28"
              "exact text" 1
              "size to text h" 1
              "text halign" right
              "text valign" center
             }
            }
-          }
-         }
-        }
-       }
-      }
-     }
-    }
-    FrameWidgetClass character_stats_root {
-     visible 1
-     ignorepointer 1
-     position 0 0
-     size 415 305
-     valign bottom_ref
-     hexactpos 0
-     vexactpos 0
-     hexactsize 1
-     vexactsize 1
-     {
-      TextWidgetClass character_stats_textImg {
-       ignorepointer 1
-       keepsafezone 0
-       size 31.2238 79.24
-       halign center_ref
-       hexactpos 1
-       vexactpos 1
-       hexactsize 1
-       vexactsize 1
-       text "SURIVOR STATS"
-       font "Colorful-UI/gui/fonts/PersonalServices48"
-       "exact text" 1
-       "size to text h" 1
-       "size to text v" 1
-       "text valign" center
-      }
-      PanelWidgetClass separator_1 {
-       color 0.7569 0.0941 0.0941 1
-       position 0 75
-       size 1 2
-       halign center_ref
-       hexactpos 1
-       vexactpos 1
-       hexactsize 0
-       vexactsize 1
-       scaled 1
-       priority 10
-       style DayZDefaultPanel
-       "no focus" 0
-      }
-      GridSpacerWidgetClass character_stats_content {
-       ignorepointer 1
-       color 0 0 0 0
-       size 1 230
-       halign center_ref
-       valign bottom_ref
-       hexactpos 1
-       vexactpos 1
-       hexactsize 0
-       vexactsize 1
-       style DayZDefaultPanelSides
-       Padding 4
-       Margin 6
-       Columns 1
-       Rows 5
-       {
-        FrameWidgetClass PlayersKilled {
-         ignorepointer 1
-         position 0 0
-         size 48 24
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         {
-          TextWidgetClass PlayersKilledLabel {
-           visible 1
-           ignorepointer 1
-           position 0 0
-           size 301 40
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 1
-           vexactsize 1
-           scaled 1
-           text "Players Killed"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
-           "exact text" 1
-           "size to text h" 1
-           "text valign" center
-          }
-          TextWidgetClass PlayersKilledValue {
-           ignorepointer 1
-           size 1 1
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           text "0"
-           font "Colorful-UI/gui/fonts/OpenSansV24"
-           "exact text" 1
-           "size to text h" 1
-           "size to text v" 0
-           "text halign" center
-           "text valign" center
-          }
-         }
-        }
-        FrameWidgetClass InfectedKilled {
-         ignorepointer 1
-         position 0 0
-         size 48 24
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         {
-          TextWidgetClass InfectedKilledLabel {
-           ignorepointer 1
-           size 1 1
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           text "Infected Killed"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
-           "exact text" 1
-           "size to text h" 1
-           "text valign" center
-          }
-          TextWidgetClass InfectedKilledValue {
-           ignorepointer 1
-           size 1 1
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           text "0"
-           font "Colorful-UI/gui/fonts/OpenSansV24"
-           "exact text" 1
-           "size to text h" 1
-           "size to text v" 0
-           "text halign" center
-           "text valign" center
-          }
-         }
-        }
-        FrameWidgetClass TimeSurvived {
-         clipchildren 0
-         ignorepointer 1
-         position 0 0
-         size 443 48
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         {
-          TextWidgetClass TimeSurvivedLabel {
-           clipchildren 0
-           inheritalpha 0
-           ignorepointer 1
-           position 0 0
-           size 301 40
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 1
-           vexactsize 1
-           text "Time Alive"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
-           "exact text" 1
-           "size to text h" 1
-           "text valign" center
-          }
-          TextWidgetClass TimeSurvivedValue {
-           ignorepointer 1
-           size 1 1
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           text "0"
-           font "Colorful-UI/gui/fonts/OpenSansV24"
-           "exact text" 1
-           "size to text h" 1
-           "size to text v" 0
-           "text halign" center
-           "text valign" center
-          }
-         }
-        }
-        FrameWidgetClass DistanceTraveled {
-         ignorepointer 1
-         position 0 0
-         size 48 24
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         {
-          TextWidgetClass DistanceTraveledLabel {
-           clipchildren 0
-           ignorepointer 1
-           position 0 0
-           size 1.0486 1
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           text "Distance Traveled"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
-           "exact text" 1
-           "size to text h" 1
-           "size to text v" 0
-           "text valign" center
-          }
-          TextWidgetClass DistanceTraveledValue {
-           ignorepointer 1
-           size 1 1
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           text "0"
-           font "Colorful-UI/gui/fonts/OpenSansV24"
-           "exact text" 1
-           "size to text h" 1
-           "size to text v" 0
-           "text halign" center
-           "text valign" center
-          }
-         }
-        }
-        FrameWidgetClass LongRangeShot {
-         ignorepointer 1
-         position 0 0
-         size 48 24
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         {
-          TextWidgetClass LongRangeShotLabel {
-           ignorepointer 1
-           size 301 40
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 1
-           vexactsize 1
-           text "Longest Player Hit"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
-           "exact text" 1
-           "size to text h" 1
-           "text valign" center
-          }
-          TextWidgetClass LongRangeShotValue {
-           ignorepointer 1
-           size 1 1
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           text "0"
-           font "Colorful-UI/gui/fonts/OpenSansV24"
-           "exact text" 1
-           "size to text h" 1
-           "size to text v" 0
-           "text halign" center
-           "text valign" center
           }
          }
         }
@@ -1956,7 +1675,7 @@ FrameWidgetClass main_menu_root {
        priority 1
        style Empty
        "no focus" 0
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/VTC28"
        {
         ImageWidgetClass prev_character_image {
          inheritalpha 0
@@ -1971,8 +1690,8 @@ FrameWidgetClass main_menu_root {
          image0 "set:dayz_gui image:arrow_left"
          mode blend
          "src alpha" 1
-         "no wrap" 1
-         stretch 1
+         "clamp mode" clamp
+         "stretch mode" stretch_w_h
         }
        }
       }
@@ -1989,7 +1708,7 @@ FrameWidgetClass main_menu_root {
        priority 1
        style Empty
        "no focus" 0
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/VTC28"
        {
         ImageWidgetClass next_character_image {
          ignorepointer 1
@@ -2002,8 +1721,8 @@ FrameWidgetClass main_menu_root {
          image0 "set:dayz_gui image:arrow_right"
          mode blend
          "src alpha" 1
-         "no wrap" 1
-         stretch 1
+         "clamp mode" clamp
+         "stretch mode" stretch_w_h
         }
        }
       }
@@ -2017,12 +1736,293 @@ FrameWidgetClass main_menu_root {
        vexactpos 1
        hexactsize 0
        vexactsize 1
-       font "Colorful-UI/gui/fonts/PersonalServices24"
+       font "Colorful-UI/gui/fonts/VTC28"
        "exact text" 1
        "size to text h" 1
        "size to text v" 1
        "text halign" center
        "text valign" center
+      }
+     }
+    }
+    FrameWidgetClass character_stats_root {
+     visible 0
+     ignorepointer 1
+     position 0 0
+     size 415 305
+     valign bottom_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 1
+     vexactsize 1
+     {
+      TextWidgetClass character_stats_textImg {
+       ignorepointer 1
+       keepsafezone 0
+       size 31.2238 79.24
+       halign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "SURIVOR STATS"
+       font "Colorful-UI/gui/fonts/PersonalServices48"
+       "exact text" 1
+       "size to text h" 1
+       "size to text v" 1
+       "text valign" center
+      }
+      PanelWidgetClass separator_1 {
+       color 0.7569 0.0941 0.0941 1
+       position 0 75
+       size 1 2
+       halign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       scaled 1
+       priority 10
+       style DayZDefaultPanel
+       "no focus" 0
+      }
+      GridSpacerWidgetClass character_stats_content {
+       ignorepointer 1
+       color 0 0 0 0
+       size 1 230
+       halign center_ref
+       valign bottom_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       style DayZDefaultPanelSides
+       Padding 4
+       Margin 6
+       Columns 1
+       Rows 5
+       {
+        FrameWidgetClass PlayersKilled {
+         ignorepointer 1
+         position 0 0
+         size 48 24
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         {
+          TextWidgetClass PlayersKilledLabel {
+           visible 1
+           ignorepointer 1
+           position 0 0
+           size 301 40
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           scaled 1
+           text "Players Killed"
+           font "Colorful-UI/gui/fonts/VTC28"
+           "exact text" 1
+           "size to text h" 1
+           "text valign" center
+          }
+          TextWidgetClass PlayersKilledValue {
+           ignorepointer 1
+           size 1 1
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "Colorful-UI/gui/fonts/OpenSansV24"
+           "exact text" 1
+           "size to text h" 1
+           "size to text v" 0
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+        FrameWidgetClass InfectedKilled {
+         ignorepointer 1
+         position 0 0
+         size 48 24
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         {
+          TextWidgetClass InfectedKilledLabel {
+           ignorepointer 1
+           size 1 1
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           text "Infected Killed"
+           font "Colorful-UI/gui/fonts/VTC28"
+           "exact text" 1
+           "size to text h" 1
+           "text valign" center
+          }
+          TextWidgetClass InfectedKilledValue {
+           ignorepointer 1
+           size 1 1
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "Colorful-UI/gui/fonts/OpenSansV24"
+           "exact text" 1
+           "size to text h" 1
+           "size to text v" 0
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+        FrameWidgetClass TimeSurvived {
+         clipchildren 0
+         ignorepointer 1
+         position 0 0
+         size 443 48
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         {
+          TextWidgetClass TimeSurvivedLabel {
+           clipchildren 0
+           inheritalpha 0
+           ignorepointer 1
+           position 0 0
+           size 301 40
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           text "Time Alive"
+           font "Colorful-UI/gui/fonts/VTC28"
+           "exact text" 1
+           "size to text h" 1
+           "text valign" center
+          }
+          TextWidgetClass TimeSurvivedValue {
+           ignorepointer 1
+           size 1 1
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "Colorful-UI/gui/fonts/OpenSansV24"
+           "exact text" 1
+           "size to text h" 1
+           "size to text v" 0
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+        FrameWidgetClass DistanceTraveled {
+         ignorepointer 1
+         position 0 0
+         size 48 24
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         {
+          TextWidgetClass DistanceTraveledLabel {
+           clipchildren 0
+           ignorepointer 1
+           position 0 0
+           size 1.0486 1
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           text "Distance Traveled"
+           font "Colorful-UI/gui/fonts/VTC28"
+           "exact text" 1
+           "size to text h" 1
+           "size to text v" 0
+           "text valign" center
+          }
+          TextWidgetClass DistanceTraveledValue {
+           ignorepointer 1
+           size 1 1
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "Colorful-UI/gui/fonts/OpenSansV24"
+           "exact text" 1
+           "size to text h" 1
+           "size to text v" 0
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+        FrameWidgetClass LongRangeShot {
+         ignorepointer 1
+         position 0 0
+         size 48 24
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         {
+          TextWidgetClass LongRangeShotLabel {
+           ignorepointer 1
+           size 301 40
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           text "Longest Player Hit"
+           font "Colorful-UI/gui/fonts/VTC28"
+           "exact text" 1
+           "size to text h" 1
+           "text valign" center
+          }
+          TextWidgetClass LongRangeShotValue {
+           ignorepointer 1
+           size 1 1
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           text "0"
+           font "Colorful-UI/gui/fonts/OpenSansV24"
+           "exact text" 1
+           "size to text h" 1
+           "size to text v" 0
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+       }
       }
      }
     }

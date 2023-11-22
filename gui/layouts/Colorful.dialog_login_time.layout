@@ -154,7 +154,7 @@ WindowWidgetClass TextInputDialogRoot {
      hexactpos 1
      vexactpos 0
      text "CONNECTING TO SERVER ..."
-     font "Colorful-ui/gui/fonts/PersonalServices24"
+     font "Colorful-ui/gui/fonts/VTC28"
      "exact text" 1
      "size to text h" 1
      "size to text v" 1
