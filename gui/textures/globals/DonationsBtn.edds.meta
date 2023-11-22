@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{C72A6B0B667EE4F0}Colorful-UI/gui/textures/globals/DonationsBtn.edds"
+ Author "sdf-1"
+ ChangeDate -621580426
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "DonationsBtn.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

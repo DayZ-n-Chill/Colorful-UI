@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{2674EF26AB988FB9}Colorful-UI/gui/textures/globals/TrapHouse_ShaderWhite.edds"
+ Author "sdf-1"
+ ChangeDate -1896124554
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "TrapHouse_ShaderWhite.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{B918DB6A9F31CE3D}Colorful-UI/gui/textures/globals/TrapHouse_Logo.edds"
+ Author "sdf-1"
+ ChangeDate -286036106
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "TrapHouse_Logo.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

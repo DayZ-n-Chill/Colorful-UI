@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{8305CE798A1EEF9F}Colorful-UI/gui/textures/globals/PlayButtonBG.edds"
+ Author "sdf-1"
+ ChangeDate -1527025802
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "PlayButtonBG.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}
