@@ -224,8 +224,8 @@ modded class MainMenu extends UIScriptedMenu
 			return;	
 			
 		int color_pnl = UIColor.Transparent();
-		int color_lbl = UIColor.twitter();
-		int color_img = UIColor.twitter();	
+		int color_lbl = colorScheme.ButtonHoverColor();
+		int color_img = colorScheme.ButtonHoverColor();	
 
 		ButtonSetColor(w, color_pnl);
 		ButtonSetTextColor(w, color_lbl);
@@ -238,8 +238,8 @@ modded class MainMenu extends UIScriptedMenu
 			return;	
 			
 		int color_pnl = UIColor.Transparent();
-		int color_lbl = UIColor.discord();
-		int color_img = UIColor.discord();	
+		int color_lbl = colorScheme.ButtonHoverColor();
+		int color_img = colorScheme.ButtonHoverColor();	
 
 		ButtonSetColor(w, color_pnl);
 		ButtonSetTextColor(w, color_lbl);
@@ -266,8 +266,8 @@ modded class MainMenu extends UIScriptedMenu
 			return;	
 			
 		int color_pnl = UIColor.Transparent();
-		int color_lbl = UIColor.reddit();
-		int color_img = UIColor.reddit();	
+		int color_lbl = colorScheme.ButtonHoverColor();
+		int color_img = colorScheme.ButtonHoverColor();	
 
 		ButtonSetColor(w, color_pnl);
 		ButtonSetTextColor(w, color_lbl);

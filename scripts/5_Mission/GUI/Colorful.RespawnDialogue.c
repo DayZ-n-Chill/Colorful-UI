@@ -95,7 +95,7 @@ modded class RespawnDialogue extends UIScriptedMenu
 			return;	
 			
 		int color_pnl = UIColor.Transparent();
-		int color_lbl = UIColor.discord();
+		int color_lbl = colorScheme.ButtonHoverColor();
 		ButtonSetColor(w, color_pnl);
 		ButtonSetTextColor(w, color_lbl);
 	}
@@ -106,7 +106,7 @@ modded class RespawnDialogue extends UIScriptedMenu
 			return;	
 			
 		int color_pnl = UIColor.Transparent();
-		int color_lbl = UIColor.youtube();
+		int color_lbl = colorScheme.ButtonHoverColor();
 		ButtonSetColor(w, color_pnl);
 		ButtonSetTextColor(w, color_lbl);
 	}
@@ -117,7 +117,7 @@ modded class RespawnDialogue extends UIScriptedMenu
 			return;	
 			
 		int color_pnl = UIColor.Transparent();
-		int color_lbl = UIColor.reddit();
+		int color_lbl = colorScheme.ButtonHoverColor();
 		ButtonSetColor(w, color_pnl);
 		ButtonSetTextColor(w, color_lbl);
 	}

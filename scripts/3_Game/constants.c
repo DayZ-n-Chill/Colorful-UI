@@ -36,21 +36,21 @@ string GetRandomBackground()
  */
 class MenuURLS {
 	// Link for Discord
-	static string urlDiscord  = "https://discord.gg/dayznchill";
+	static string urlDiscord  = "https://discord.gg/traphousegaming";
 	// Link for Facebook
-	static string urlFacebook = "https://facebook.com/dayznchill";
+	static string urlFacebook = "https://traphousegaming.org/";
 	// Link for Twitter
-	static string urlTwitter  = "https://twitter.com/dayznchill";
+	static string urlTwitter  = "https://traphousegaming.org/leaderboard?server=Chernarus";
 	// Link for Reddit
-	static string urlReddit   = "https://reddit.com/dayznchill";
+	static string urlReddit   = "https://traphousegaming.org/store";
 	// Link for Youtube
-	static string urlYoutube  = "https://youtube.com/dayznchill";
+	static string urlYoutube  = "https://traphousegaming.org/";
 	// Link to Website
-	static string urlWebsite  = "https://dayznchill.com"; 
+	static string urlWebsite  = "https://traphousegaming.org/"; 
 	// Link for Prio Q
-	static string urlPriorityQ   = "#";
+	static string urlPriorityQ   = "https://traphousegaming.org/";
 	// Can be used anything else
-	static string urlCustom   = "#";
+	static string urlCustom   = "https://traphousegaming.org/";
 }
 
 // RANDOM LOADSCREEN TIPS -------------------------------------------------
@@ -115,6 +115,7 @@ class UIColor
 	static int Violet() 			  { return ARGB(255, 204, 51, 204); };
 	
 	// Social Network Colors 
+	static int a63ea3() 			  { return ARGB(255, 166, 62, 163); };
 	static int discord() 			  { return ARGB(255, 88, 101, 242); };
 	static int twitter() 			  { return ARGB(255, 29, 161, 242); };
 	static int youtube() 			  { return ARGB(255, 255, 0, 0); };
@@ -132,9 +133,9 @@ class colorScheme
 {
 	// Quick Styling --------------------------------------
 	// This color should be Servers/Communities Brand Color
-	static int BrandColor()   { return UIColor.Teal(); };
+	static int BrandColor()   { return UIColor.a63ea3(); };
 	// This color should be a complimentary color to your brand. 
-	static int AccentColor()  { return UIColor.Red(); }
+	static int AccentColor()  { return UIColor.DPGPurple(); }
 
 	// Advanced Styling --------------------------------------
 	// You can get more Ganular with the colors by editing the syltes below
@@ -143,7 +144,7 @@ class colorScheme
 	static int PrimaryText()        { return UIColor.White(); }; 	
 	static int SecondaryText()      { return AccentColor(); };
 	static int ShaderColor()        { return BrandColor(); };
-	static int SeparatorColor()     { return BrandColor(); };
+	static int SeparatorColor()     { return AccentColor(); };
 	static int LoadingbarColor()    { return BrandColor(); };
 	static int MainMenuTrim()       { return BrandColor(); };
 	static int ButtonHoverColor()   { return BrandColor(); };	
