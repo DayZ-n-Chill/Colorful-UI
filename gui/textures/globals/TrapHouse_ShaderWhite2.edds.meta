@@ -1,10 +1,10 @@
 MetaFileClass {
- Name "{2819E2811050682C}Colorful-UI/gui/textures/loading_screens/Colorful-BG-3.edds"
+ Name "{1CE6DF9F6727F687}Colorful-UI/gui/textures/globals/TrapHouse_ShaderWhite2.edds"
  Author "sdf-1"
- ChangeDate -1428131978
+ ChangeDate -2022674570
  Configurations {
   PNGResourceClass PC {
-   SourceFile "Colorful-BG-3.png"
+   SourceFile "TrapHouse_ShaderWhite2.png"
   }
   PNGResourceClass XBOX_ONE : PC {
   }

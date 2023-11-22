@@ -71,10 +71,11 @@ WindowWidgetClass WindowWidget {
        hexactsize 0
        vexactsize 0
        scaled 1
-       imageTexture "{4BFC093013F74D19}Colorful-UI/gui/textures/globals/UI.Colorful.Shader.edds"
+       imageTexture "{1CE6DF9F6727F687}Colorful-UI/gui/textures/globals/TrapHouse_ShaderWhite2.edds"
        mode blend
        "src alpha" 1
        "clamp mode" clamp
+       "stretch mode" stretch_w_h
       }
       ImageWidgetClass HorizShader {
        visible 1
@@ -369,6 +370,7 @@ WindowWidgetClass WindowWidget {
              style DayZDefaultPanel
              {
               ImageWidgetClass DiscordBtn_img {
+               visible 0
                clipchildren 0
                ignorepointer 1
                size 47 39
@@ -388,7 +390,6 @@ WindowWidgetClass WindowWidget {
               TextWidgetClass DiscordBtn_label {
                clipchildren 0
                ignorepointer 1
-               position 60 0
                size 1 1
                halign right_ref
                valign center_ref
@@ -437,6 +438,7 @@ WindowWidgetClass WindowWidget {
              style DayZDefaultPanel
              {
               ImageWidgetClass TwitterBtn_img {
+               visible 0
                clipchildren 0
                ignorepointer 1
                size 47 39
@@ -456,7 +458,6 @@ WindowWidgetClass WindowWidget {
               TextWidgetClass TwitterBtn_label {
                clipchildren 0
                ignorepointer 1
-               position 60 0
                size 1 1
                halign right_ref
                valign center_ref
@@ -464,7 +465,7 @@ WindowWidgetClass WindowWidget {
                vexactpos 1
                hexactsize 0
                vexactsize 0
-               text "Twitter"
+               text "Leaderboards"
                font "Colorful-UI/gui/fonts/VTC28"
                "exact text" 1
                "size to text h" 1
@@ -506,6 +507,7 @@ WindowWidgetClass WindowWidget {
              style DayZDefaultPanel
              {
               ImageWidgetClass RedditBtn_img {
+               visible 0
                clipchildren 0
                ignorepointer 1
                size 47 39
@@ -525,7 +527,6 @@ WindowWidgetClass WindowWidget {
               TextWidgetClass RedditBtn_label {
                clipchildren 0
                ignorepointer 1
-               position 60 0
                size 1 1
                halign right_ref
                valign center_ref
@@ -533,7 +534,7 @@ WindowWidgetClass WindowWidget {
                vexactpos 1
                hexactsize 0
                vexactsize 0
-               text "Reddit"
+               text "Donations"
                font "Colorful-UI/gui/fonts/VTC28"
                "exact text" 1
                "size to text h" 1
@@ -546,7 +547,7 @@ WindowWidgetClass WindowWidget {
            }
           }
           ButtonWidgetClass YoutubeBtn {
-           visible 1
+           visible 0
            color 0 0 0 0
            size 293 39
            halign right_ref
@@ -563,6 +564,7 @@ WindowWidgetClass WindowWidget {
            "next down" "play_video"
            {
             PanelWidgetClass YoutubeBtn_panel {
+             visible 0
              ignorepointer 1
              color 0 0 0 0
              size 293 39
@@ -575,6 +577,7 @@ WindowWidgetClass WindowWidget {
              style DayZDefaultPanel
              {
               ImageWidgetClass YoutubeBtn_img {
+               visible 0
                clipchildren 0
                ignorepointer 1
                size 47 39
@@ -592,6 +595,7 @@ WindowWidgetClass WindowWidget {
                filter 0
               }
               TextWidgetClass YoutubeBtn_label {
+               visible 0
                clipchildren 0
                ignorepointer 1
                position 60 0
@@ -614,7 +618,7 @@ WindowWidgetClass WindowWidget {
            }
           }
           ButtonWidgetClass FacebookBtn {
-           visible 1
+           visible 0
            color 0 0 0 0
            size 293 39
            halign right_ref
@@ -682,7 +686,7 @@ WindowWidgetClass WindowWidget {
            }
           }
           ButtonWidgetClass MetaBtn {
-           visible 1
+           visible 0
            color 0 0 0 0
            size 293 39
            halign right_ref

@@ -7,6 +7,8 @@ modded class MainMenu extends UIScriptedMenu
 	private Widget m_Reddit;
 	private Widget m_Facebook;
 	private Widget m_Website;
+	private Widget m_LeaderBoard;
+	private Widget m_Donations;
 	private Widget m_PriorityQueue
 	private Widget m_CharacterBtn;
 	private Widget m_Separator1
@@ -22,7 +24,9 @@ modded class MainMenu extends UIScriptedMenu
 
 		// Custom Buttons  
 		// NOTE: THe "NameBtn" is the name of the widget in the layout file.
-		m_Discord 					= layoutRoot.FindAnyWidget( "DiscordBtn" );
+		m_Discord 					= layoutRoot.FindAnyWidget( "Discord_Btn" );		
+		m_LeaderBoard				= layoutRoot.FindAnyWidget( "LeaderBoard_Btn" );
+		m_Donations				    = layoutRoot.FindAnyWidget( "Donations_Btn" );
 		m_Twitter 					= layoutRoot.FindAnyWidget( "TwitterBtn" );
 		m_Youtube 					= layoutRoot.FindAnyWidget( "YoutubeBtn" );
 		m_Reddit 					= layoutRoot.FindAnyWidget( "RedditBtn" );
@@ -92,14 +96,24 @@ modded class MainMenu extends UIScriptedMenu
 			GetGame().OpenURL(MenuURLS.urlDiscord);
 			return true;
 		}
+		else if (button == MouseState.LEFT && w == m_LeaderBoard)
+		{
+			GetGame().OpenURL(MenuURLS.urlLeaderBoard);
+			return false;
+		}
+		else if (button == MouseState.LEFT && w == m_Donations)
+		{
+			GetGame().OpenURL(MenuURLS.urlDonations);
+			return false;
+		}
 		else if (button == MouseState.LEFT && w == m_Twitter)
 		{
-			GetGame().OpenURL(MenuURLS.urlTwitter);
+			GetGame().OpenURL(MenuURLS.urlLeaderBoard);
 			return false;
 		}
 		else if (button == MouseState.LEFT && w == m_Reddit)
 		{
-			GetGame().OpenURL(MenuURLS.urlReddit);
+			GetGame().OpenURL(MenuURLS.urlDonations);
 			return false;
 		}
 		else if (button == MouseState.LEFT && w == m_Youtube)
@@ -304,6 +318,18 @@ modded class MainMenu extends UIScriptedMenu
 		}
 
 		if( w == m_Discord )
+		{
+			DiscordHighlight( w );
+			return true;
+		}
+
+		if( w == m_LeaderBoard )
+		{
+			DiscordHighlight( w );
+			return true;
+		}
+
+		if( w == m_Donations )
 		{
 			DiscordHighlight( w );
 			return true;

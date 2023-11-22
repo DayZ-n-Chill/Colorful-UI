@@ -10,10 +10,14 @@ string GetRandomBackground()
         "Colorful-UI/gui/textures/loading_screens/Colorful-BG-3.edds",
 		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-4.edds",
 		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-5.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-6.edds"
+		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-6.edds",
+		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-7.edds",
+		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-8.edds",
+		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-9.edds",
+		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-10.edds"
 	};
 	Math.Randomize(-1);
-	int bgIndex = Math.RandomInt(0, 100) % 6;
+	int bgIndex = Math.RandomInt(0, 100) % 10;
 	return images[bgIndex];
 }
 
@@ -29,9 +33,9 @@ class MenuURLS {
 	// Link for Facebook
 	static string urlFacebook = "https://facebook.com/dayznchill";
 	// Link for Twitter
-	static string urlTwitter  = "https://twitter.com/dayznchill";
+	static string urlReddit  = "https://traphousegaming.org/";
 	// Link for Reddit
-	static string urlReddit   = "https://reddit.com/dayznchill";
+	static string urlTwitter  = "https://traphousegaming.org/leaderboard?server=Chernarus";
 	// Link for Youtube
 	static string urlYoutube  = "#";
 	// Link for Youtube
@@ -128,7 +132,7 @@ class colorScheme
 	// This color should be Servers/Communities Brand Color
 	static int BrandColor()   { return UIColor.a63ea3(); };
 	// This color should be a complimentary color to your brand. 
-	static int AccentColor()  { return UIColor.a63ea3(); }
+	static int AccentColor()  { return UIColor.DPGPurple(); }
 
 	// Advanced Styling --------------------------------------
 	// You can get more Ganular with the colors by editing the syltes below
@@ -137,7 +141,7 @@ class colorScheme
 	static int PrimaryText()        { return UIColor.White(); }; 	
 	static int SecondaryText()      { return AccentColor(); };
 	static int ShaderColor()        { return BrandColor(); };
-	static int SeparatorColor()     { return BrandColor(); };
+	static int SeparatorColor()     { return AccentColor(); };
 	static int LoadingbarColor()    { return BrandColor(); };
 	static int MainMenuTrim()       { return BrandColor(); };
 	static int ButtonHoverColor()   { return BrandColor(); };	
