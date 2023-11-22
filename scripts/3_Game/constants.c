@@ -10,21 +10,10 @@ string GetRandomBackground()
         "Colorful-UI/gui/textures/loading_screens/Colorful-BG-3.edds",
 		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-4.edds",
 		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-5.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-6.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-7.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-8.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-9.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-10.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-11.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-12.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-13.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-14.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-15.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-16.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-17.edds"
+		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-6.edds"
 	};
 	Math.Randomize(-1);
-	int bgIndex = Math.RandomInt(0, 100) % 17;
+	int bgIndex = Math.RandomInt(0, 100) % 6;
 	return images[bgIndex];
 }
 
@@ -36,7 +25,7 @@ string GetRandomBackground()
  */
 class MenuURLS {
 	// Link for Discord
-	static string urlDiscord  = "https://discord.gg/dayznchill";
+	static string urlDiscord  = "https://discord.gg/traphousegaming";
 	// Link for Facebook
 	static string urlFacebook = "https://facebook.com/dayznchill";
 	// Link for Twitter
@@ -44,9 +33,13 @@ class MenuURLS {
 	// Link for Reddit
 	static string urlReddit   = "https://reddit.com/dayznchill";
 	// Link for Youtube
-	static string urlYoutube  = "https://youtube.com/dayznchill";
+	static string urlYoutube  = "#";
+	// Link for Youtube
+	static string urlDonations   = "https://traphousegaming.org/";
+	// Link for Youtube
+	static string urlLeaderBoard  = "https://traphousegaming.org/leaderboard?server=Chernarus";
 	// Link to Website
-	static string urlWebsite  = "https://dayznchill.com"; 
+	static string urlWebsite  = "https://traphousegaming.org/"; 
 	// Link for Prio Q
 	static string urlPriorityQ   = "#";
 	// Can be used anything else
@@ -115,6 +108,7 @@ class UIColor
 	static int Violet() 			  { return ARGB(255, 204, 51, 204); };
 	
 	// Social Network Colors 
+	static int a63ea3() 			  { return ARGB(255, 166, 62, 163); };
 	static int discord() 			  { return ARGB(255, 88, 101, 242); };
 	static int twitter() 			  { return ARGB(255, 29, 161, 242); };
 	static int youtube() 			  { return ARGB(255, 255, 0, 0); };
@@ -132,9 +126,9 @@ class colorScheme
 {
 	// Quick Styling --------------------------------------
 	// This color should be Servers/Communities Brand Color
-	static int BrandColor()   { return UIColor.Teal(); };
+	static int BrandColor()   { return UIColor.a63ea3(); };
 	// This color should be a complimentary color to your brand. 
-	static int AccentColor()  { return UIColor.Red(); }
+	static int AccentColor()  { return UIColor.a63ea3(); }
 
 	// Advanced Styling --------------------------------------
 	// You can get more Ganular with the colors by editing the syltes below

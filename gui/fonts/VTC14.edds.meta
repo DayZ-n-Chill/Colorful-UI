@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{3CFF3E13B7C8CD5D}VTC14.edds"
+ Author "sdf-1"
+ ChangeDate 652226422
+ Configurations {
+  TGAResourceClass PC {
+   SourceFile "VTC14.tga"
+  }
+  TGAResourceClass XBOX_ONE : PC {
+  }
+  TGAResourceClass PS4 : PC {
+  }
+  TGAResourceClass LINUX : PC {
+  }
+ }
+}

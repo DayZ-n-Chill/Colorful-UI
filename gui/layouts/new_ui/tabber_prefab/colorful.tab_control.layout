@@ -21,7 +21,7 @@ PanelWidgetClass Tab_Control_x {
    hexactsize 0
    vexactsize 0
    priority 250
-   font "Colorful-UI/gui/fonts/PersonalServices24"
+   font "Colorful-UI/gui/fonts/VTC28"
    "text halign" center
    "text valign" center
   }

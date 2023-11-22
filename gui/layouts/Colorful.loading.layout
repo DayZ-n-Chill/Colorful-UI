@@ -21,7 +21,7 @@ FrameWidgetClass LoadingFrame {
    vexactsize 0
    fixaspect outside
    image0 ""
-   imageTexture "{A5D8917F066B3FDC}Colorful-UI/gui/textures/loading_screens/Colorful-BG-12.edds"
+   imageTexture "{DC11A5191D8D0058}Colorful-UI/gui/textures/loading_screens/Colorful-BG-2.edds"
    mode opaque
    "src alpha" 0
    "stretch mode" stretch_w_h
@@ -40,7 +40,7 @@ FrameWidgetClass LoadingFrame {
    vexactsize 0
    fixaspect outside
    image0 ""
-   imageTexture "{A5D8917F066B3FDC}Colorful-UI/gui/textures/loading_screens/Colorful-BG-12.edds"
+   imageTexture "{2819E2811050682C}Colorful-UI/gui/textures/loading_screens/Colorful-BG-3.edds"
    mode opaque
    "src alpha" 0
    "stretch mode" stretch_w_h
@@ -130,25 +130,6 @@ FrameWidgetClass LoadingFrame {
    hexactsize 0
    vexactsize 0
    {
-    ImageWidgetClass ColorfulLogo {
-     visible 1
-     clipchildren 0
-     inheritalpha 1
-     size 460 320
-     hexactpos 0
-     vexactpos 0
-     hexactsize 1
-     vexactsize 1
-     fixaspect outside
-     image0 ""
-     imageTexture "{5314D820E495219F}Colorful-UI/gui/textures/globals/Colorful.Logo.edds"
-     mode blend
-     "src alpha" 1
-     "clamp mode" clamp
-     "stretch mode" stretch_w_h
-     filter 1
-     nocache 0
-    }
     TextWidgetClass LoadingText {
      visible 1
      position 0 0.08
@@ -158,7 +139,7 @@ FrameWidgetClass LoadingFrame {
      hexactpos 1
      vexactpos 0
      text "LOADING GAME..."
-     font "Colorful-ui/gui/fonts/PersonalServices24"
+     font "Colorful-ui/gui/fonts/VTC28"
      "exact text" 1
      "size to text h" 1
      "size to text v" 1
@@ -284,7 +265,7 @@ FrameWidgetClass LoadingFrame {
            hexactsize 0
            vexactsize 0
            text "Discord"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
+           font "Colorful-UI/gui/fonts/VTC28"
            "exact text" 1
            "size to text h" 1
            "size to text v" 0
@@ -352,7 +333,7 @@ FrameWidgetClass LoadingFrame {
            hexactsize 0
            vexactsize 0
            text "Twitter"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
+           font "Colorful-UI/gui/fonts/VTC28"
            "exact text" 1
            "size to text h" 1
            "size to text v" 0
@@ -421,7 +402,7 @@ FrameWidgetClass LoadingFrame {
            hexactsize 0
            vexactsize 0
            text "Reddit"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
+           font "Colorful-UI/gui/fonts/VTC28"
            "exact text" 1
            "size to text h" 1
            "size to text v" 0
@@ -490,7 +471,7 @@ FrameWidgetClass LoadingFrame {
            hexactsize 0
            vexactsize 0
            text "YouTube"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
+           font "Colorful-UI/gui/fonts/VTC28"
            "exact text" 1
            "size to text h" 1
            "text halign" right
@@ -558,7 +539,7 @@ FrameWidgetClass LoadingFrame {
            hexactsize 0
            vexactsize 0
            text "Facebook"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
+           font "Colorful-UI/gui/fonts/VTC28"
            "exact text" 1
            "size to text h" 1
            "text halign" right
@@ -626,7 +607,7 @@ FrameWidgetClass LoadingFrame {
            hexactsize 0
            vexactsize 0
            text "Meta"
-           font "Colorful-UI/gui/fonts/PersonalServices24"
+           font "Colorful-UI/gui/fonts/VTC28"
            "exact text" 1
            "size to text h" 1
            "text halign" right
@@ -637,6 +618,27 @@ FrameWidgetClass LoadingFrame {
        }
       }
      }
+    }
+    ImageWidgetClass ColorfulLogo {
+     visible 1
+     clipchildren 0
+     inheritalpha 1
+     size 670 650
+     halign center_ref
+     valign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 1
+     vexactsize 1
+     fixaspect outside
+     image0 ""
+     imageTexture "{B918DB6A9F31CE3D}Colorful-UI/gui/textures/globals/TrapHouse_Logo.edds"
+     mode blend
+     "src alpha" 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
+     filter 1
+     nocache 0
     }
    }
   }

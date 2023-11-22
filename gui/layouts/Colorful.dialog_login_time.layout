@@ -18,10 +18,11 @@ WindowWidgetClass TextInputDialogRoot {
    vexactpos 1
    hexactsize 0
    vexactsize 0
+   imageTexture "{95C9B0066F4B7432}Colorful-UI/gui/textures/loading_screens/Colorful-BG-5.edds"
    mode blend
    "src alpha" 1
-   "no wrap" 1
-   stretch 1
+   "clamp mode" clamp
+   "stretch mode" stretch_w_h
   }
   ImageWidgetClass BackgroundOverride {
    visible 1
@@ -35,10 +36,10 @@ WindowWidgetClass TextInputDialogRoot {
    vexactsize 0
    fixaspect outside
    image0 ""
-   imageTexture "{A5D8917F066B3FDC}Colorful-UI/gui/textures/loading_screens/Colorful-BG-12.edds"
+   imageTexture "{95C9B0066F4B7432}Colorful-UI/gui/textures/loading_screens/Colorful-BG-5.edds"
    mode opaque
    "src alpha" 0
-   stretch 1
+   "stretch mode" stretch_w_h
    "Transition width" 1
    Progress 0
   }
@@ -72,8 +73,8 @@ WindowWidgetClass TextInputDialogRoot {
      imageTexture "{E6B3EF816E067499}Gui/textures/inventory_bgvignette.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
      filter 0
      nocache 1
     }
@@ -92,8 +93,7 @@ WindowWidgetClass TextInputDialogRoot {
      imageTexture "{4BFC093013F74D19}Colorful-UI/gui/textures/globals/UI.Colorful.Shader.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 0
+     "clamp mode" clamp
     }
     ImageWidgetClass HorizShader {
      visible 1
@@ -109,8 +109,8 @@ WindowWidgetClass TextInputDialogRoot {
      imageTexture "{A82F487401D497EF}Colorful-UI/gui/textures/globals/Colorful.HorizShaderTip.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
      filter 1
     }
    }
@@ -126,25 +126,6 @@ WindowWidgetClass TextInputDialogRoot {
    hexactsize 0
    vexactsize 0
    {
-    ImageWidgetClass ColorfulLogo {
-     visible 1
-     clipchildren 0
-     inheritalpha 1
-     size 460 320
-     hexactpos 0
-     vexactpos 0
-     hexactsize 1
-     vexactsize 1
-     fixaspect outside
-     image0 ""
-     imageTexture "{5314D820E495219F}Colorful-UI/gui/textures/globals/Colorful.Logo.edds"
-     mode blend
-     "src alpha" 1
-     "no wrap" 1
-     stretch 1
-     filter 1
-     nocache 0
-    }
     TextWidgetClass LoadingText {
      visible 1
      position 5 0.08
@@ -154,7 +135,7 @@ WindowWidgetClass TextInputDialogRoot {
      hexactpos 1
      vexactpos 0
      text "CONNECTING TO SERVER ..."
-     font "Colorful-ui/gui/fonts/PersonalServices24"
+     font "Colorful-ui/gui/fonts/VTC28"
      "exact text" 1
      "size to text h" 1
      "size to text v" 1
@@ -196,6 +177,27 @@ WindowWidgetClass TextInputDialogRoot {
      "size to text v" 1
      "text halign" center
      "text valign" center
+    }
+    ImageWidgetClass ColorfulLogo {
+     visible 1
+     clipchildren 0
+     inheritalpha 1
+     size 670 650
+     halign center_ref
+     valign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 1
+     vexactsize 1
+     fixaspect outside
+     image0 ""
+     imageTexture "{B918DB6A9F31CE3D}Colorful-UI/gui/textures/globals/TrapHouse_Logo.edds"
+     mode blend
+     "src alpha" 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
+     filter 1
+     nocache 0
     }
    }
   }
