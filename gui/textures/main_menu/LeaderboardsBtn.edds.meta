@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{B5837CB4C2D4222A}Colorful-UI/gui/textures/main_menu/LeaderboardsBtn.edds"
+ Author "sdf-1"
+ ChangeDate 400404341
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "LeaderboardsBtn.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

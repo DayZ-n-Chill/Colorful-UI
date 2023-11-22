@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{929FBA0B7E02CBB6}Colorful-UI/gui/textures/main_menu/PlayButton.edds"
+ Author "sdf-1"
+ ChangeDate 1876275061
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "PlayButton.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

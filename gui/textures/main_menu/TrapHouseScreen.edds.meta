@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{E619EDFB2554CF9E}Colorful-UI/gui/textures/main_menu/TrapHouseScreen.edds"
+ Author "sdf-1"
+ ChangeDate 1689120629
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "TrapHouseScreen.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

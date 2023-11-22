@@ -24,11 +24,11 @@ FrameWidgetClass main_menu_root {
    scaled 1
    fixaspect outside
    image0 ""
-   imageTexture "{BCDEF8AF12180544}Colorful-UI/gui/textures/loading_screens/Colorful-BG-11.edds"
+   imageTexture "{E619EDFB2554CF9E}Colorful-UI/gui/textures/main_menu/TrapHouseScreen.edds"
    mode opaque
    "src alpha" 1
-   "no wrap" 1
-   stretch 1
+   "clamp mode" clamp
+   "stretch mode" stretch_w_h
    filter 0
    "Transition width" 1
    Progress 0
@@ -59,8 +59,8 @@ FrameWidgetClass main_menu_root {
      imageTexture "{E6B3EF816E067499}Gui/textures/inventory_bgvignette.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
      filter 0
      nocache 1
     }
@@ -78,8 +78,8 @@ FrameWidgetClass main_menu_root {
      imageTexture "{4BFC093013F74D19}Colorful-UI/gui/textures/globals/UI.Colorful.Shader.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
     }
     ImageWidgetClass HorizShader {
      visible 1
@@ -95,14 +95,14 @@ FrameWidgetClass main_menu_root {
      imageTexture "{A82F487401D497EF}Colorful-UI/gui/textures/globals/Colorful.HorizShaderTip.edds"
      mode blend
      "src alpha" 1
-     "no wrap" 1
-     stretch 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
     }
    }
   }
   FrameWidgetClass SafeZone {
    ignorepointer 1
-   position 0 0.90984
+   position 0 0
    size 0.9 0.9
    halign center_ref
    valign center_ref
@@ -111,25 +111,6 @@ FrameWidgetClass main_menu_root {
    hexactsize 0
    vexactsize 0
    {
-    ImageWidgetClass ColorfulLogo {
-     visible 1
-     clipchildren 0
-     inheritalpha 1
-     size 460 320
-     hexactpos 0
-     vexactpos 0
-     hexactsize 1
-     vexactsize 1
-     fixaspect outside
-     image0 ""
-     imageTexture "{5314D820E495219F}Colorful-UI/gui/textures/globals/Colorful.Logo.edds"
-     mode blend
-     "src alpha" 1
-     "no wrap" 1
-     stretch 1
-     filter 1
-     nocache 0
-    }
     FrameWidgetClass settings_panel_root {
      visible 1
      ignorepointer 1
@@ -281,6 +262,60 @@ FrameWidgetClass main_menu_root {
       }
      }
     }
+    ButtonWidgetClass play {
+     color 0 0 0 0
+     position 0 85
+     size 216 76
+     halign center_ref
+     valign bottom_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     scaled 1
+     style Empty
+     "no focus" 0
+     "next left" "news_main"
+     "next right" "news_main"
+     "next up" "choose_server"
+     "next down" "play_video"
+     text_halign right
+     {
+      PanelWidgetClass play_panel {
+       ignorepointer 1
+       color 0 0 0 0
+       position 0 0
+       size 1 1
+       halign right_ref
+       valign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style DayZDefaultPanel
+       {
+        ImageWidgetClass play_label {
+         clipchildren 0
+         ignorepointer 1
+         position 0 0
+         size 1 1
+         halign right_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         scaled 1
+         imageTexture "{929FBA0B7E02CBB6}Colorful-UI/gui/textures/main_menu/PlayButton.edds"
+         mode blend
+         "src alpha" 1
+         "clamp mode" clamp
+         "stretch mode" stretch_w_h
+        }
+       }
+      }
+     }
+    }
     GridSpacerWidgetClass ActionItems {
      visible 1
      ignorepointer 1
@@ -311,61 +346,6 @@ FrameWidgetClass main_menu_root {
        Columns 1
        Rows 5
        {
-        ButtonWidgetClass play {
-         color 0 0 0 0
-         position 0 0
-         size 293 49
-         halign right_ref
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         style Empty
-         "no focus" 0
-         "next left" "news_main"
-         "next right" "news_main"
-         "next up" "choose_server"
-         "next down" "play_video"
-         text_halign right
-         {
-          PanelWidgetClass play_panel {
-           ignorepointer 1
-           color 0 0 0 0
-           position 0 0
-           size 1 1
-           halign right_ref
-           valign center_ref
-           hexactpos 0
-           vexactpos 0
-           hexactsize 0
-           vexactsize 0
-           style DayZDefaultPanel
-           {
-            TextWidgetClass play_label {
-             clipchildren 0
-             ignorepointer 1
-             position 8 0
-             size 1 1
-             halign right_ref
-             valign center_ref
-             hexactpos 1
-             vexactpos 0
-             hexactsize 0
-             vexactsize 0
-             scaled 1
-             text "PLAY"
-             font "Colorful-UI/gui/fonts/PersonalServices32"
-             "exact text" 1
-             "size to text h" 1
-             "size to text v" 0
-             "text halign" right
-             "text valign" center
-            }
-           }
-          }
-         }
-        }
         ButtonWidgetClass CharacterBtn {
          visible 1
          color 0 0 0 0
@@ -771,8 +751,8 @@ FrameWidgetClass main_menu_root {
              imageTexture "{4E98404B3EE57BD9}Colorful-UI/gui/textures/main_menu/Colorful.Discord.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              filter 0
             }
             TextWidgetClass DiscordBtn_label {
@@ -839,8 +819,8 @@ FrameWidgetClass main_menu_root {
              imageTexture "{56507986E3807A3B}Colorful-UI/gui/textures/main_menu/Colorful.Twitter.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              filter 0
             }
             TextWidgetClass TwitterBtn_label {
@@ -908,8 +888,8 @@ FrameWidgetClass main_menu_root {
              imageTexture "{042531BECC696FCF}Colorful-UI/gui/textures/main_menu/Colorful.Reddit.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              filter 0
             }
             TextWidgetClass RedditBtn_label {
@@ -977,8 +957,8 @@ FrameWidgetClass main_menu_root {
              imageTexture "{FDBC9A6B3BB8B821}Colorful-UI/gui/textures/main_menu/Colorful.Youtube.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              filter 0
             }
             TextWidgetClass YoutubeBtn_label {
@@ -1045,8 +1025,8 @@ FrameWidgetClass main_menu_root {
              imageTexture "{25DB8D90C00B0710}Colorful-UI/gui/textures/main_menu/Colorful.Facebook.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              filter 0
             }
             TextWidgetClass FacebookBtn_label {
@@ -1113,8 +1093,8 @@ FrameWidgetClass main_menu_root {
              imageTexture "{F74D2BABB67517C4}Colorful-UI/gui/textures/main_menu/Colorful.meta.edds"
              mode blend
              "src alpha" 1
-             "no wrap" 1
-             stretch 1
+             "clamp mode" clamp
+             "stretch mode" stretch_w_h
              filter 0
             }
             TextWidgetClass MetaBtn_label {
@@ -1144,7 +1124,7 @@ FrameWidgetClass main_menu_root {
      }
     }
     FrameWidgetClass character_stats_root {
-     visible 1
+     visible 0
      ignorepointer 1
      position 0 0
      size 415 305
@@ -1185,6 +1165,7 @@ FrameWidgetClass main_menu_root {
        "no focus" 0
       }
       GridSpacerWidgetClass character_stats_content {
+       visible 1
        ignorepointer 1
        color 0 0 0 0
        size 1 230
@@ -1415,6 +1396,160 @@ FrameWidgetClass main_menu_root {
            "exact text" 1
            "size to text h" 1
            "size to text v" 0
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+    ImageWidgetClass ColorfulLogo {
+     visible 1
+     clipchildren 0
+     inheritalpha 1
+     size 670 650
+     halign center_ref
+     valign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 1
+     vexactsize 1
+     fixaspect outside
+     image0 ""
+     imageTexture "{B918DB6A9F31CE3D}Colorful-UI/gui/textures/globals/TrapHouse_Logo.edds"
+     mode blend
+     "src alpha" 1
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
+     filter 1
+     nocache 0
+    }
+    GridSpacerWidgetClass GridSpacerWidget {
+     ignorepointer 1
+     size 651.19501 299.478
+     halign center_ref
+     valign bottom_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     Padding 25
+     Margin 0
+     "Size To Content H" 1
+     "Size To Content V" 1
+     Rows 1
+     {
+      ButtonWidgetClass Discord_Btn {
+       position 14.9631 23.3788
+       size 155 48
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       {
+        ImageWidgetClass DiscordBtnBG {
+         ignorepointer 1
+         position 0 0
+         size 1 1
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         imageTexture "{56FF1C66BA9A2A1D}Colorful-UI/gui/textures/main_menu/DiscordBtn.edds"
+         mode blend
+         "src alpha" 1
+         {
+          TextWidgetClass DiscordBtnTxt {
+           ignorepointer 1
+           size 48 48
+           halign center_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           text "Discord"
+           "exact text" 0
+           "size to text h" 1
+           "size to text v" 1
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+       }
+      }
+      ButtonWidgetClass LeaderBoard_Btn {
+       position 14.9631 23.3788
+       size 206 48
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       {
+        ImageWidgetClass LeaderBaordBtnBG {
+         ignorepointer 1
+         position 0 0
+         size 1 1
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         imageTexture "{B5837CB4C2D4222A}Colorful-UI/gui/textures/main_menu/LeaderboardsBtn.edds"
+         {
+          TextWidgetClass LeaderBaordBtnTxt {
+           ignorepointer 1
+           size 48 48
+           halign center_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           text "Leaderboards"
+           "exact text" 0
+           "size to text h" 1
+           "size to text v" 1
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+       }
+      }
+      ButtonWidgetClass Donations_Btn {
+       position 14.9631 23.3788
+       size 181 48
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       {
+        ImageWidgetClass DonationsBtnBG {
+         ignorepointer 1
+         position 0 0
+         size 1 1
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         imageTexture "{F25E15D275DF2269}Colorful-UI/gui/textures/main_menu/DonationsBtn.edds"
+         {
+          TextWidgetClass DonationsBtnTxt {
+           ignorepointer 1
+           size 48 48
+           halign center_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           text "Donations"
+           "exact text" 0
+           "size to text h" 1
+           "size to text v" 1
            "text halign" center
            "text valign" center
           }
@@ -1971,8 +2106,8 @@ FrameWidgetClass main_menu_root {
          image0 "set:dayz_gui image:arrow_left"
          mode blend
          "src alpha" 1
-         "no wrap" 1
-         stretch 1
+         "clamp mode" clamp
+         "stretch mode" stretch_w_h
         }
        }
       }
@@ -2002,8 +2137,8 @@ FrameWidgetClass main_menu_root {
          image0 "set:dayz_gui image:arrow_right"
          mode blend
          "src alpha" 1
-         "no wrap" 1
-         stretch 1
+         "clamp mode" clamp
+         "stretch mode" stretch_w_h
         }
        }
       }

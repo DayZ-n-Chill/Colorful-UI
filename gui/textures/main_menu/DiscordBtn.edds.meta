@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{56FF1C66BA9A2A1D}Colorful-UI/gui/textures/main_menu/DiscordBtn.edds"
+ Author "sdf-1"
+ ChangeDate 232632181
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "DiscordBtn.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{F25E15D275DF2269}Colorful-UI/gui/textures/main_menu/DonationsBtn.edds"
+ Author "sdf-1"
+ ChangeDate 64860021
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "DonationsBtn.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}
