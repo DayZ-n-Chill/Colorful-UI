@@ -1,10 +1,10 @@
 MetaFileClass {
- Name "{84AAE21518C4DC63}Colorful-UI/gui/textures/main_menu/Button.Store.edds"
+ Name "{63C6E4D379902A4E}Colorful-UI/gui/textures/loading_screens/Colorful-UI-BG-6.edds"
  Author "sdf-1"
- ChangeDate 1026240385
+ ChangeDate 830140289
  Configurations {
   PNGResourceClass PC {
-   SourceFile "Button.Store.png"
+   SourceFile "Colorful-UI-BG-6.png"
   }
   PNGResourceClass XBOX_ONE : PC {
   }
