@@ -27,7 +27,7 @@ FrameWidgetClass DialogRoot {
    scaled 1
    fixaspect outside
    image0 ""
-   imageTexture "{35EECDC167D4D2AA}Colorful-UI/gui/textures/loading_screens/LabLoadScreen_1.edds"
+   imageTexture "{2A1EF1CC0B565E24}Colorful-UI/gui/textures/loading_screens/Colorful-UI-BG-1.edds"
    mode opaque
    "src alpha" 1
    "clamp mode" clamp

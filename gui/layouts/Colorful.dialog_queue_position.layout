@@ -19,7 +19,7 @@ PanelWidgetClass TextInputDialog_root {
    vexactpos 1
    hexactsize 0
    vexactsize 0
-   imageTexture "{35EECDC167D4D2AA}Colorful-UI/gui/textures/loading_screens/LabLoadScreen_1.edds"
+   imageTexture "{2A1EF1CC0B565E24}Colorful-UI/gui/textures/loading_screens/Colorful-UI-BG-1.edds"
    mode blend
    "src alpha" 1
    "clamp mode" clamp
@@ -37,7 +37,7 @@ PanelWidgetClass TextInputDialog_root {
    vexactsize 0
    fixaspect outside
    image0 ""
-   imageTexture "{35EECDC167D4D2AA}Colorful-UI/gui/textures/loading_screens/LabLoadScreen_1.edds"
+   imageTexture "{2A1EF1CC0B565E24}Colorful-UI/gui/textures/loading_screens/Colorful-UI-BG-1.edds"
    mode opaque
    "src alpha" 0
    "stretch mode" stretch_w_h
@@ -121,6 +121,7 @@ PanelWidgetClass TextInputDialog_root {
   }
   FrameWidgetClass SafeZone {
    ignorepointer 1
+   position 0 0
    size 0.9 0.9
    halign center_ref
    valign center_ref
@@ -149,7 +150,7 @@ PanelWidgetClass TextInputDialog_root {
      filter 1
      nocache 0
     }
-    ButtonWidgetClass btnLeave {
+    ButtonWidgetClass "btnLeave.old" {
      visible 1
      color 1 1 1 0
      size 37 37
@@ -168,8 +169,8 @@ PanelWidgetClass TextInputDialog_root {
      font "gui/fonts/sdf_MetronLight24"
      switch normal
      {
-      ImageWidgetClass exit_button_image {
-       visible 1
+      ImageWidgetClass "exit_button_image.old" {
+       visible 0
        ignorepointer 1
        size 1 1
        halign center_ref
@@ -378,6 +379,104 @@ PanelWidgetClass TextInputDialog_root {
          "size to text v" 1
          "text halign" center
          "text valign" center
+        }
+       }
+      }
+     }
+    }
+    GridSpacerWidgetClass settings_panel_root {
+     visible 1
+     ignorepointer 1
+     size 260 40
+     halign right_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 1
+     vexactsize 1
+     priority 3
+     Padding 15
+     Margin 0
+     "Size To Content H" 1
+     "Size To Content V" 1
+     content_halign center
+     content_valign center
+     Columns 2
+     Rows 1
+     {
+      ImageWidgetClass PrioQ_button_image {
+       clipchildren 0
+       ignorepointer 1
+       size 138 42
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       image0 ""
+       imageTexture "{7C2E3656C4F92F30}Colorful-UI/gui/textures/loading_screens/Button.VIP.edds"
+       mode blend
+       "src alpha" 1
+       "clamp mode" clamp
+       "stretch mode" stretch_w_h
+       {
+        ButtonWidgetClass PrioQ_button {
+         visible 1
+         keepsafezone 1
+         color 1 1 1 0
+         size 138 42
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         fixaspect inside
+         style Default
+         "no focus" 0
+         "next left" "news_main"
+         "next right" "exit_button"
+         "next up" "play"
+         "next down" "customize_character"
+         font "Colorful-UI/gui/fonts/RobotoSlabBold28"
+         switch normal
+        }
+       }
+      }
+      ButtonWidgetClass btnLeave {
+       color 1 1 1 0
+       size 24 24
+       halign right_ref
+       valign center_ref
+       hexactpos 0
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       fixaspect inside
+       style Empty
+       "no focus" 0
+       "next left" "settings_button"
+       "next right" "play"
+       "next up" "play"
+       "next down" "customize_character"
+       font "Colorful-UI/gui/fonts/RobotoSlabBold28"
+       switch normal
+       {
+        ImageWidgetClass exit_button_image {
+         ignorepointer 1
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         image0 ""
+         imageTexture "{B3900CC7DCE306D7}Colorful-UI/gui/textures/globals/Icon.Logout.edds"
+         mode blend
+         "src alpha" 1
+         "clamp mode" clamp
+         "stretch mode" stretch_w_h
         }
        }
       }

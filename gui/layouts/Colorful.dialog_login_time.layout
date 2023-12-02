@@ -18,7 +18,7 @@ WindowWidgetClass TextInputDialog_root {
    vexactpos 1
    hexactsize 0
    vexactsize 0
-   imageTexture "{35EECDC167D4D2AA}Colorful-UI/gui/textures/loading_screens/LabLoadScreen_1.edds"
+   imageTexture "{2A1EF1CC0B565E24}Colorful-UI/gui/textures/loading_screens/Colorful-UI-BG-1.edds"
    mode blend
    "src alpha" 1
    "clamp mode" clamp
@@ -36,7 +36,7 @@ WindowWidgetClass TextInputDialog_root {
    vexactsize 0
    fixaspect outside
    image0 ""
-   imageTexture "{35EECDC167D4D2AA}Colorful-UI/gui/textures/loading_screens/LabLoadScreen_1.edds"
+   imageTexture "{2A1EF1CC0B565E24}Colorful-UI/gui/textures/loading_screens/Colorful-UI-BG-1.edds"
    mode opaque
    "src alpha" 0
    "stretch mode" stretch_w_h

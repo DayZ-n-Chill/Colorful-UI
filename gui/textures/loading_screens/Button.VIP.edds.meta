@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{7C2E3656C4F92F30}Colorful-UI/gui/textures/loading_screens/Button.VIP.edds"
+ Author "sdf-1"
+ ChangeDate 486780801
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Button.VIP.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

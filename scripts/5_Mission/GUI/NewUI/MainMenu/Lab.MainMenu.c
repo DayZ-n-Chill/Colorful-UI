@@ -14,6 +14,7 @@ modded class MainMenu extends UIScriptedMenu
 	private Widget m_SeparatorPanel;
 	private Widget m_ProgressLoading;
 	private	Widget m_shader;
+	
 	private Widget m_ImageBackground;
 	private ImageWidget m_Background;
 	private Widget m_ComingSoon
@@ -65,6 +66,7 @@ modded class MainMenu extends UIScriptedMenu
 		m_ComingSoon 				= layoutRoot.FindAnyWidget( "Coming Soon" );
 		m_LeftSelect				= layoutRoot.FindAnyWidget( "LeftSelect" );
 		m_Background 				= ImageWidget.Cast(layoutRoot.FindAnyWidget("ImageBackground"));
+		
 
 		m_RightSelect				= layoutRoot.FindAnyWidget( "RightSelect" );
 		m_USMAIN					= layoutRoot.FindAnyWidget( "USMainActive" );
@@ -79,8 +81,8 @@ modded class MainMenu extends UIScriptedMenu
 		m_ServerOffline				= layoutRoot.FindAnyWidget( "ServerOffline" );
 		m_ServerOnline				= layoutRoot.FindAnyWidget( "ServerOnline" );
 
-		m_ServerOfflineIMG				= layoutRoot.FindAnyWidget( "ServerOffline_Img" );
-		m_ServerOnlineIMG				= layoutRoot.FindAnyWidget( "ServerOnline_Img" );
+		m_ServerOfflineIMG			= layoutRoot.FindAnyWidget( "ServerOffline_Img" );
+		m_ServerOnlineIMG			= layoutRoot.FindAnyWidget( "ServerOnline_Img" );
 		
 		m_CustomizeCharacter		= layoutRoot.FindAnyWidget( "customize_character" );
 		m_PlayVideo					= layoutRoot.FindAnyWidget( "play_video" );
@@ -112,7 +114,7 @@ modded class MainMenu extends UIScriptedMenu
 		AnimatePress2StartFade();
 		return layoutRoot;
 	}	
-
+	// Animate the Fade in and out of the Press2Start image
 	void AnimatePress2StartFade() {
     if (m_FadingOut) {
         m_Alpha -= 0.05; 
@@ -127,13 +129,13 @@ modded class MainMenu extends UIScriptedMenu
             m_FadingOut = true;
         }
     }
-
     m_Press2Start.SetAlpha(m_Alpha);
 	m_ComingSoon.SetAlpha(m_Alpha);
 	
     GetGame().GetCallQueue(CALL_CATEGORY_GUI).CallLater(this.AnimatePress2StartFade, 50, false);
 	}
 
+	// Chevron switches between the different servers
 	void SwitchServerRight()
 	{
 	    if (isSelectedUSMAIN)
@@ -214,6 +216,7 @@ modded class MainMenu extends UIScriptedMenu
 	    }
 	}
 
+	// Onclick Functions
 	override bool OnClick(Widget w, int x, int y, int button)
 	{
 	    if (w == m_LeftSelect && button == MouseState.LEFT)
@@ -285,6 +288,7 @@ modded class MainMenu extends UIScriptedMenu
 		return super.OnClick(w, x, y, button);
 	};
 
+	// Hover Effects
 	override void ColorHighlight( Widget w )
 	{
 		if( !w )
@@ -384,6 +388,8 @@ modded class MainMenu extends UIScriptedMenu
 		ImagenSetColor(w, color_img);	
 	}
 	
+	
+	// On Mouse Enter
 	override bool OnMouseEnter( Widget w, int x, int y )
 	{
 		if (w == m_LeftSelect)
@@ -428,6 +434,13 @@ modded class MainMenu extends UIScriptedMenu
 			return true;
 		}
 
+		if (w == m_USMAIN)
+        {
+			m_USMAIN.Show(false);
+			ColorHighlight( w );
+            return true;
+        }
+
 		
 		if( IsFocusable( w ) )
 		{
@@ -436,6 +449,16 @@ modded class MainMenu extends UIScriptedMenu
 		}
 		return false;
 	}
+
+	override bool OnMouseLeave( Widget w, Widget enterW, int x, int y )
+	{
+		if (w == m_USMAIN)
+        {
+			m_USMAIN.Show(true);
+        }
+		return true;
+	}
+
 
 	override void Exit()
 	{
