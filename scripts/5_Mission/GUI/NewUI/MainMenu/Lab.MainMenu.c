@@ -20,12 +20,12 @@ modded class MainMenu extends UIScriptedMenu
 	private	Widget m_USMainDisabled;
 	
 	bool isSelectedEUMAIN = false; 
-	private	Widget m_EUMain;
+	private	Widget m_EUMainBtn;
 	private	Widget m_EUMainHover;
 	private	Widget m_EUMainDisabled;
 	
 	bool isSelectedAUMAIN = false; 
-	private	Widget m_AUMain;
+	private	Widget m_AUMainBtn;
 	private	Widget m_AUMainHover;
 	private	Widget m_AUMainDisabled;
 
@@ -60,10 +60,10 @@ modded class MainMenu extends UIScriptedMenu
 		m_USMainBtn					= layoutRoot.FindAnyWidget( "USMainBtn" );
 		m_USMainDisabled			= layoutRoot.FindAnyWidget( "USMainDisabled" );
 		
-		m_EUMain					= layoutRoot.FindAnyWidget( "EUMainActive" );
+		m_EUMainBtn					= layoutRoot.FindAnyWidget( "EUMainActive" );
 		m_EUMainDisabled			= layoutRoot.FindAnyWidget( "EUMainDisabled" );
 		
-		m_AUMain					= layoutRoot.FindAnyWidget( "AUMainActive" );
+		m_AUMainBtn					= layoutRoot.FindAnyWidget( "AUMainActive" );
 		m_AUMainDisabled			= layoutRoot.FindAnyWidget( "AUMainDisabled" );
 
 		m_ComingSoon 				= layoutRoot.FindAnyWidget( "Coming Soon" );
@@ -122,8 +122,9 @@ modded class MainMenu extends UIScriptedMenu
 	{
 	    if (isSelectedUSMAIN)
 	    {
-	        m_USMainBtn.Show(false);
+			m_EUMainBtn.Show(false);
 	        m_EUMainDisabled.Show(true);
+	        m_USMainBtn.Show(false);
 			m_Background.LoadImageFile(0, EU_Background);
 			m_ComingSoon.Show(true);
 			m_Press2Start.Show(false);
@@ -134,8 +135,9 @@ modded class MainMenu extends UIScriptedMenu
 	    }
 	    else if (isSelectedEUMAIN)
 	    {
-	        m_EUMainDisabled.Show(false);
+			m_AUMainBtn.Show(false);
 	        m_AUMainDisabled.Show(true);
+	        m_EUMainDisabled.Show(false);
 			m_Background.LoadImageFile(0, AU_Background);
 			m_ComingSoon.Show(true);
 			m_Press2Start.Show(false);
@@ -146,8 +148,9 @@ modded class MainMenu extends UIScriptedMenu
 	    }
 	    else if (isSelectedAUMAIN)
 	    {
-	        m_AUMainDisabled.Show(false);
 	        m_USMainBtn.Show(true);
+			m_USMainDisabled.Show(false);
+	        m_AUMainDisabled.Show(false);
 			m_Background.LoadImageFile(0, US_Background);
 			m_ComingSoon.Show(false);
 			m_Press2Start.Show(true);
@@ -162,6 +165,7 @@ modded class MainMenu extends UIScriptedMenu
 	{
 	    if (isSelectedAUMAIN)
 	    {
+			m_EUMainBtn.Show(false);
 	        m_EUMainDisabled.Show(true);
 	        m_AUMainDisabled.Show(false);
 			m_ComingSoon.Show(true);
@@ -175,6 +179,7 @@ modded class MainMenu extends UIScriptedMenu
 	    else if (isSelectedEUMAIN)
 	    {
 	        m_USMainBtn.Show(true);
+			m_USMainDisabled.Show(false);
 	        m_EUMainDisabled.Show(false);
 			m_Background.LoadImageFile(0, US_Background);
 			m_ComingSoon.Show(false);
@@ -186,8 +191,9 @@ modded class MainMenu extends UIScriptedMenu
 	    }
 	    else if (isSelectedUSMAIN)
 	    {
-	        m_USMainBtn.Show(false);
+			m_AUMainBtn.Show(false);
 	        m_AUMainDisabled.Show(true);
+	        m_USMainBtn.Show(false);
 			m_Background.LoadImageFile(0, AU_Background);
 			m_ComingSoon.Show(true);
 			m_Press2Start.Show(false);
@@ -215,12 +221,12 @@ modded class MainMenu extends UIScriptedMenu
 			g_Game.ConnectFromServerBrowser( "168.100.163.22", 2302, "" );
 			return true;
 		}
-		if (button == MouseState.LEFT && w == m_EUMain)
+		if (button == MouseState.LEFT && w == m_EUMainBtn)
 		{
 			// g_Game.ConnectFromServerBrowser( "168.100.163.22", 2302, "" );
 			return true;
 		}
-		if (button == MouseState.LEFT && w == m_AUMain)
+		if (button == MouseState.LEFT && w == m_AUMainBtn)
 		{
 			// g_Game.ConnectFromServerBrowser( "168.100.163.22", 2302, "" );
 			return true;
