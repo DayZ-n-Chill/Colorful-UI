@@ -1,47 +1,43 @@
 modded class MainMenu extends UIScriptedMenu
 {
 	private Widget m_Discord;
-	
 	private Widget m_Website;
 	private Widget m_PriorityQueue;
 	private Widget m_CharacterBtn;
 	private Widget m_ProgressLoading;
-	
-	// private Widget m_ImageBackground;
 	private ImageWidget m_Background;
-	private Widget m_ComingSoon
-
 
 	private string US_Background = "Colorful-UI/gui/textures/loading_screens/LabLoadScreen_1.edds";
 	private string EU_Background = "Colorful-UI/gui/textures/loading_screens/LabLoadScreen_2.edds";
 	private string AU_Background = "Colorful-UI/gui/textures/loading_screens/LabLoadScreen_3.edds";
 
-	// private bool m_FadingInBackground = false;
-	private float m_Alpha = 1.0; 
-
-
 	private ButtonWidget m_LeftSelect;
 	private ButtonWidget m_RightSelect;
-	private ImageWidget m_ChevronLeft;
-	private ImageWidget m_ChevronRight;
+	
 	bool isSelectedUSMAIN = true; 
+	private	Widget m_USMainBtn;
+	private	Widget m_USMainHover;
+	private	Widget m_USMainDisabled;
+	
 	bool isSelectedEUMAIN = false; 
+	private	Widget m_EUMain;
+	private	Widget m_EUMainHover;
+	private	Widget m_EUMainDisabled;
+	
 	bool isSelectedAUMAIN = false; 
+	private	Widget m_AUMain;
+	private	Widget m_AUMainHover;
+	private	Widget m_AUMainDisabled;
 
-	private	Widget m_USMAIN;
-	private	Widget m_EUMAIN;
-	private	Widget m_AUMAIN;
-	private	Widget m_USMAINDIS;
-	private	Widget m_EUMAINDIS;
-	private	Widget m_AUMAINDIS;
 	private Widget m_ServerOnline;
 	private Widget m_ServerOffline;
 	private Widget m_ServerOnlineIMG;
 	private Widget m_ServerOfflineIMG;
-	private Widget m_PrioQ;
 
-	//Animation
 	private Widget m_Press2Start;
+	private Widget m_ComingSoon
+	
+	private float m_Alpha = 1.0; 
 	bool m_FadingOut = true;
 	bool m_FadingIn = true;
 	
@@ -50,6 +46,7 @@ modded class MainMenu extends UIScriptedMenu
 	override Widget Init()
 	{
 		layoutRoot					= GetGame().GetWorkspace().CreateWidgets( "Colorful-UI/gui/layouts/new_ui/colorful.main_menu.layout" );
+		
 		m_Background 				= ImageWidget.Cast(layoutRoot.FindAnyWidget("ImageBackground"));
 
 		m_Play						= layoutRoot.FindAnyWidget( "connectButton" );
@@ -60,13 +57,14 @@ modded class MainMenu extends UIScriptedMenu
 		m_LeftSelect				= layoutRoot.FindAnyWidget( "LeftSelect" );
 		m_RightSelect				= layoutRoot.FindAnyWidget( "RightSelect" );
 		
-		m_USMAIN					= layoutRoot.FindAnyWidget( "USMainActive" );
-		m_EUMAIN					= layoutRoot.FindAnyWidget( "EUMainActive" );
-		m_AUMAIN					= layoutRoot.FindAnyWidget( "AUMainActive" );
-
-		m_USMAINDIS					= layoutRoot.FindAnyWidget( "USMainDisabled" );
-		m_EUMAINDIS					= layoutRoot.FindAnyWidget( "EUMainDisabled" );
-		m_AUMAINDIS					= layoutRoot.FindAnyWidget( "AUMainDisabled" );
+		m_USMainBtn					= layoutRoot.FindAnyWidget( "USMainBtn" );
+		m_USMainDisabled			= layoutRoot.FindAnyWidget( "USMainDisabled" );
+		
+		m_EUMain					= layoutRoot.FindAnyWidget( "EUMainActive" );
+		m_EUMainDisabled			= layoutRoot.FindAnyWidget( "EUMainDisabled" );
+		
+		m_AUMain					= layoutRoot.FindAnyWidget( "AUMainActive" );
+		m_AUMainDisabled			= layoutRoot.FindAnyWidget( "AUMainDisabled" );
 
 		m_ComingSoon 				= layoutRoot.FindAnyWidget( "Coming Soon" );
 		m_Press2Start 				= layoutRoot.FindAnyWidget( "Press2Start" );
@@ -85,9 +83,6 @@ modded class MainMenu extends UIScriptedMenu
 		m_Mission					= MissionMainMenu.Cast( GetGame().GetMission() );
 		m_ScenePC					= m_Mission.GetIntroScenePC();
 
-		// string version;
-		// GetGame().GetVersion( version );
-		// m_Version.SetText( "#main_menu_version" + " " + version );
 		GetGame().GetUIManager().ScreenFadeOut(0);
 		SetFocus( null );
 		Refresh();
@@ -98,13 +93,11 @@ modded class MainMenu extends UIScriptedMenu
 
 		m_ProgressLoading  = ProgressBarWidget.Cast( layoutRoot.FindAnyWidget("LoadingBar") );
 		m_ProgressLoading.SetColor(colorScheme.MainMenuTrim());	
-		
-		AnimatePress2StartFade();
-		
+		FadeInOut();
 		return layoutRoot;
 	}	
 
-	void AnimatePress2StartFade() {
+	void FadeInOut() {
     if (m_FadingOut) {
         m_Alpha -= 0.05; 
         if (m_Alpha <= 0) {
@@ -122,15 +115,15 @@ modded class MainMenu extends UIScriptedMenu
     m_Press2Start.SetAlpha(m_Alpha);
 	m_ComingSoon.SetAlpha(m_Alpha);
 	
-    GetGame().GetCallQueue(CALL_CATEGORY_GUI).CallLater(this.AnimatePress2StartFade, 50, false);
+    GetGame().GetCallQueue(CALL_CATEGORY_GUI).CallLater(this.FadeInOut, 50, false);
 	}
 
 	void SwitchServerRight()
 	{
 	    if (isSelectedUSMAIN)
 	    {
-	        m_USMAIN.Show(false);
-	        m_EUMAINDIS.Show(true);
+	        m_USMainBtn.Show(false);
+	        m_EUMainDisabled.Show(true);
 			m_Background.LoadImageFile(0, EU_Background);
 			m_ComingSoon.Show(true);
 			m_Press2Start.Show(false);
@@ -141,8 +134,8 @@ modded class MainMenu extends UIScriptedMenu
 	    }
 	    else if (isSelectedEUMAIN)
 	    {
-	        m_EUMAINDIS.Show(false);
-	        m_AUMAINDIS.Show(true);
+	        m_EUMainDisabled.Show(false);
+	        m_AUMainDisabled.Show(true);
 			m_Background.LoadImageFile(0, AU_Background);
 			m_ComingSoon.Show(true);
 			m_Press2Start.Show(false);
@@ -153,8 +146,8 @@ modded class MainMenu extends UIScriptedMenu
 	    }
 	    else if (isSelectedAUMAIN)
 	    {
-	        m_AUMAINDIS.Show(false);
-	        m_USMAIN.Show(true);
+	        m_AUMainDisabled.Show(false);
+	        m_USMainBtn.Show(true);
 			m_Background.LoadImageFile(0, US_Background);
 			m_ComingSoon.Show(false);
 			m_Press2Start.Show(true);
@@ -169,20 +162,20 @@ modded class MainMenu extends UIScriptedMenu
 	{
 	    if (isSelectedAUMAIN)
 	    {
-	        m_AUMAINDIS.Show(false);
-	        m_EUMAINDIS.Show(true);
-			m_Background.LoadImageFile(0, EU_Background);
+	        m_EUMainDisabled.Show(true);
+	        m_AUMainDisabled.Show(false);
 			m_ComingSoon.Show(true);
 			m_Press2Start.Show(false);
 			m_ServerOnlineIMG.Show(false);
 			m_ServerOfflineIMG.Show(true);
+			m_Background.LoadImageFile(0, EU_Background);
 	        isSelectedAUMAIN = false;
 	        isSelectedEUMAIN = true;
 	    }
 	    else if (isSelectedEUMAIN)
 	    {
-	        m_EUMAINDIS.Show(false);
-	        m_USMAIN.Show(true);
+	        m_USMainBtn.Show(true);
+	        m_EUMainDisabled.Show(false);
 			m_Background.LoadImageFile(0, US_Background);
 			m_ComingSoon.Show(false);
 			m_Press2Start.Show(true);
@@ -193,8 +186,8 @@ modded class MainMenu extends UIScriptedMenu
 	    }
 	    else if (isSelectedUSMAIN)
 	    {
-	        m_USMAIN.Show(false);
-	        m_AUMAINDIS.Show(true);
+	        m_USMainBtn.Show(false);
+	        m_AUMainDisabled.Show(true);
 			m_Background.LoadImageFile(0, AU_Background);
 			m_ComingSoon.Show(true);
 			m_Press2Start.Show(false);
@@ -217,17 +210,17 @@ modded class MainMenu extends UIScriptedMenu
 			SwitchServerRight()
     	    return true;
     	}
-		if (button == MouseState.LEFT && w == m_USMAIN)
+		if (button == MouseState.LEFT && w == m_USMainBtn)
 		{
 			g_Game.ConnectFromServerBrowser( "168.100.163.22", 2302, "" );
 			return true;
 		}
-		if (button == MouseState.LEFT && w == m_EUMAIN)
+		if (button == MouseState.LEFT && w == m_EUMain)
 		{
 			// g_Game.ConnectFromServerBrowser( "168.100.163.22", 2302, "" );
 			return true;
 		}
-		if (button == MouseState.LEFT && w == m_AUMAIN)
+		if (button == MouseState.LEFT && w == m_AUMain)
 		{
 			// g_Game.ConnectFromServerBrowser( "168.100.163.22", 2302, "" );
 			return true;
@@ -331,7 +324,6 @@ modded class MainMenu extends UIScriptedMenu
 			emptyHighlight( w );
 			return true;
 		}
-
 		
 		if( IsFocusable( w ) )
 		{

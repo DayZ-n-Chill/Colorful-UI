@@ -409,7 +409,7 @@ FrameWidgetClass main_menu_root {
      hexactsize 1
      vexactsize 1
      {
-      ButtonWidgetClass USMainActive {
+      ButtonWidgetClass USMainBtn {
        visible 1
        color 0 0 0 0
        size 315 120
