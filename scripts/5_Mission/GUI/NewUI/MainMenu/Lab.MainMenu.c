@@ -7,10 +7,6 @@ modded class MainMenu extends UIScriptedMenu
 	private Widget m_ProgressLoading;
 	private ImageWidget m_Background;
 
-	private string US_Background = "Colorful-UI/gui/textures/loading_screens/LabLoadScreen_1.edds";
-	private string EU_Background = "Colorful-UI/gui/textures/loading_screens/LabLoadScreen_2.edds";
-	private string AU_Background = "Colorful-UI/gui/textures/loading_screens/LabLoadScreen_3.edds";
-
 	private ButtonWidget m_LeftSelect;
 	private ButtonWidget m_RightSelect;
 	
@@ -19,24 +15,33 @@ modded class MainMenu extends UIScriptedMenu
 	private	Widget m_USMainIMG
 	private	Widget m_USMainHover;
 	private	Widget m_USMainDisabled;
+	private string US_Background = "Colorful-UI/gui/textures/loading_screens/Colorful-UI-BG-1.edds";
+	private string US_BattleMetrics = "https://www.battlemetrics.com/servers/dayz/21537246";
 	
 	bool isSelectedEUMAIN = false; 
 	private	Widget m_EUMainBtn;
 	private	Widget m_EUMainIMG
 	private	Widget m_EUMainHover;
 	private	Widget m_EUMainDisabled;
+	private string EU_Background = "Colorful-UI/gui/textures/loading_screens/Colorful-UI-BG-2.edds";
+	private string EU_BattleMetrics = "https://www.battlemetrics.com/servers/dayz/21537246";
 	
 	bool isSelectedAUMAIN = false; 
 	private	Widget m_AUMainBtn;
 	private	Widget m_AUMainIMG
 	private	Widget m_AUMainHover;
 	private	Widget m_AUMainDisabled;
+	private string AU_Background = "Colorful-UI/gui/textures/loading_screens/Colorful-UI-BG-3.edds";
+	private string AU_BattleMetrics = "https://www.battlemetrics.com/servers/dayz/21537246";
 
-	private Widget m_ServerOnline;
-	private Widget m_ServerOffline;
-	private Widget m_ServerOnlineIMG;
-	private Widget m_ServerOfflineIMG;
+	private Widget m_ServerStatusOn;
+	private Widget m_OnlineImg
+	private Widget m_OnlineHover
 
+	private Widget m_ServerStatusOff;
+	private Widget m_OfflineImg
+	private Widget m_OfflineHover
+	
 	private Widget m_Press2Start;
 	private Widget m_ComingSoon
 	
@@ -77,14 +82,15 @@ modded class MainMenu extends UIScriptedMenu
 		m_ComingSoon 				= layoutRoot.FindAnyWidget( "Coming Soon" );
 		m_Press2Start 				= layoutRoot.FindAnyWidget( "Press2Start" );
 		
-		m_ServerOffline				= layoutRoot.FindAnyWidget( "ServerOffline" );
-		m_ServerOnline				= layoutRoot.FindAnyWidget( "ServerOnline" );
+		m_ServerStatusOn			= layoutRoot.FindAnyWidget( "ServerStatusOn" );
+		m_OnlineImg					= layoutRoot.FindAnyWidget( "OnlineImg" );
+		m_OnlineHover				= layoutRoot.FindAnyWidget( "OnlineHover" );
 
-		m_ServerOfflineIMG			= layoutRoot.FindAnyWidget( "ServerOffline_Img" );
-		m_ServerOnlineIMG			= layoutRoot.FindAnyWidget( "ServerOnline_Img" );
-		
+		m_ServerStatusOff		    = layoutRoot.FindAnyWidget( "ServerStatusOff" );
+		m_OfflineImg				= layoutRoot.FindAnyWidget( "OfflineImg" );
+		m_OfflineHover				= layoutRoot.FindAnyWidget( "OfflineHover" );
+
 		m_CustomizeCharacter		= layoutRoot.FindAnyWidget( "customize_character" );
-
 		m_SettingsButton			= layoutRoot.FindAnyWidget( "settings_button" );
 		m_Exit						= layoutRoot.FindAnyWidget( "exit_button" );
 
@@ -134,8 +140,8 @@ modded class MainMenu extends UIScriptedMenu
 		m_Background.LoadImageFile(0, background);
 		m_ComingSoon.Show(showComingSoon);
 		m_Press2Start.Show(showPress2Start);
-		m_ServerOnlineIMG.Show(showServerOnline);
-		m_ServerOfflineIMG.Show(showServerOffline);
+		m_ServerStatusOn.Show(showServerOnline);
+		m_ServerStatusOff.Show(showServerOffline);
 	}
 
 	void SwitchServerRight()
@@ -186,65 +192,63 @@ modded class MainMenu extends UIScriptedMenu
 
 	override bool OnClick(Widget w, int x, int y, int button)
 	{
-		if (button != MouseState.LEFT)
-			return super.OnClick(w, x, y, button);
-
-		if (w == m_LeftSelect)
+	    if (w == m_LeftSelect && button == MouseState.LEFT)
+    	{
+			SwitchServerLeft()
+    	    return true;
+    	}
+		if (w == m_RightSelect && button == MouseState.LEFT)
+    	{
+			SwitchServerRight()
+    	    return true;
+    	}
+		if (button == MouseState.LEFT && w == m_USMainBtn)
 		{
-			SwitchServerLeft();
+			g_Game.ConnectFromServerBrowser( "168.100.163.22", 2302, "" );
 			return true;
 		}
-		else if (w == m_RightSelect)
+		if (button == MouseState.LEFT && w == m_EUMainBtn)
 		{
-			SwitchServerRight();
+			g_Game.ConnectFromServerBrowser( "0.0.0.0", 2302, "" );
 			return true;
 		}
-		else if (w == m_USMainBtn)
+		if (button == MouseState.LEFT && w == m_AUMainBtn)
 		{
-			g_Game.ConnectFromServerBrowser("168.100.163.22", 2302, "");
+			g_Game.ConnectFromServerBrowser( "168.100.163.22", 2302, "" );
 			return true;
 		}
-		else if (w == m_EUMainBtn)
-		{
-			g_Game.ConnectFromServerBrowser("0.0.0.0", 2302, "");
-			return true;
-		}
-		else if (w == m_AUMainBtn)
-		{
-			g_Game.ConnectFromServerBrowser("168.100.163.22", 2302, "");
-			return true;
-		}
-		else if (w == m_Discord)
+		if (button == MouseState.LEFT && w == m_Discord)
 		{
 			GetGame().OpenURL(MenuURLS.urlDiscord);
 			return true;
 		}
-		else if (w == m_ServerOnline || w == m_ServerOffline || w == m_Website || w == m_PriorityQueue)
+		else if (button == MouseState.LEFT && w == m_ServerStatusOn)
 		{
-			string url = "";
-			if (w == m_ServerOnline || w == m_ServerOffline)
-			{
-				url = MenuURLS.urlBattleMetrics;
-			}
-			else if (w == m_Website)
-			{
-				url = MenuURLS.urlWebsite;
-			}
-			else if (w == m_PriorityQueue)
-			{
-				url = MenuURLS.urlPriorityQ;
-			}
-			GetGame().OpenURL(url);
+			GetGame().OpenURL(MenuURLS.urlBattleMetrics);
 			return false;
 		}
-		else if (w == m_CharacterBtn)
+		else if (button == MouseState.LEFT && w == m_ServerStatusOff)
+		{
+			GetGame().OpenURL(MenuURLS.urlBattleMetrics);
+			return false;
+		}	
+		else if (button == MouseState.LEFT && w == m_Website)
+		{
+			GetGame().OpenURL(MenuURLS.urlWebsite);
+			return false;
+		}
+		else if (button == MouseState.LEFT && w == m_PriorityQueue)
+		{
+			GetGame().OpenURL(MenuURLS.urlPriorityQ);
+			return false;
+		}
+		else if ( w == m_CharacterBtn )
 		{
 			OpenMenuCustomizeCharacter();
 			return true;
 		}
-
 		return super.OnClick(w, x, y, button);
-	}
+	};
 
 	override void ColorHighlight( Widget w )
 	{

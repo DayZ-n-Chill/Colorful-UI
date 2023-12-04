@@ -1,8 +1,5 @@
-// This Constants Page is meant to act as a config file for the UI. 
-// Make adustments as needed to this files to suit your servers needs.
-static bool m_ShowDeathScreen = true;
+static bool m_ShowDeathScreen = false;
 
-// RANDOM BACKGROUND IMAGES -----------------------------------------------
 string GetRandomBackground()
 {
 	const string images[] = {
@@ -20,33 +17,19 @@ string GetRandomBackground()
 	return images[bgIndex];
 }
 
-/*
- * Quick Set URL's for loading menu
- * If you don't use any of the various links, either leave them as they are or keep the string empty. 
- * If you don't want the button showing, you need to modify the layout files.
- *  - *Currently looking to find a way to hide automatically - Dean
- */
 class MenuURLS {
-	// Link for Discord
+
 	static string urlDiscord  = "https://discord.gg/dayzthelab";
-	// Link for Facebook
 	static string urlFacebook = "#";
-	// Link for Twitter
 	static string urlTwitter  = "#";
-	// Link for Reddit
 	static string urlReddit   = "#";
-	// Link for Youtube
 	static string urlYoutube  = "https://www.youtube.com/@Nezar";
-	// Link to Website
 	static string urlWebsite  = "https://discord.gg/dayzthelab"; 
-	// Link for Prio Q
 	static string urlPriorityQ   = "https://discord.gg/dayzthelab";
-	// Can be used anything else
 	static string urlCustom   = "#";
 	static string urlBattleMetrics   = "https://www.battlemetrics.com/servers/dayz/21537246";
 }
 
-// RANDOM LOADSCREEN TIPS -------------------------------------------------
 string GetRandomHint()
 {
 	const string tips[] = {
@@ -106,19 +89,6 @@ string GetRandomHint()
 	return tips[tipIndex];
 }
 
-
-// NOTE: ------------------------------------------------------------------
-// I used two fucntions because I wanted to be able to use colorin both
-// a global way and in possible uniuqe situations. 
-// There is probably a better way to do this, so suggestions are welcome. 
-// Please submit a pull request to the dev branch for suggestions.
-// https://github.com/DayZ-n-Chill/Colorful-UI/tree/dev
-
-
-// COLOR PALETTES ---------------------------------------------------------
-// Use these coloring functions to mix and match the theme of your choice.
-// You can add to it, remove colors from it.  Whatever you like.
-
 class UIColor
 {
 	// GreyScale
@@ -150,20 +120,11 @@ class UIColor
 	static int TLBlue()           	  { return ARGB(255, 17, 146, 211);};
 }
 
-// DEFINE YOUR THEME -------------------------------------------------------
-// You can use the fucntions above to set the theme across the entire app.
 class colorScheme 
 {
-	// Quick Styling --------------------------------------
-	// This color should be Servers/Communities Brand Color
-	static int BrandColor()   { return UIColor.TLBlue();};
-	// This color should be a complimentary color to your brand. 
-	static int AccentColor()  { return ARGB(255, 255, 204, 102);};
 
-	// Advanced Styling --------------------------------------
-	// You can get more Ganular with the colors by editing the syltes below
-	// Get wild and create your own color functions and use them throughout the mod.
-	// Best to Primary Text as white, but do whatever, Experiment.
+	static int BrandColor() 		{ return UIColor.TLBlue();};
+	static int AccentColor()  		{ return ARGB(255, 255, 204, 102);};
 	static int PrimaryText()        { return UIColor.White(); }; 	
 	static int SecondaryText()      { return AccentColor(); };
 	static int ShaderColor()        { return BrandColor(); };
@@ -177,7 +138,6 @@ class colorScheme
 	static int OptionSliderColors() { return BrandColor(); };
 }
  
-// Dialog Menus (No need to touch)
 const int COLORFUL_EXIT				= 666;
 const int COLORFUL_CONFIGURE 		= 667;
 const int COLORFUL_DEFAULTS 		= 668;

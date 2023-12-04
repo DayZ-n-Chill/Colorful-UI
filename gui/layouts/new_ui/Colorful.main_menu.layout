@@ -770,50 +770,6 @@ FrameWidgetClass main_menu_root {
      "text halign" center
      "text valign" center
     }
-    ButtonWidgetClass ServerStatus {
-     size 120 36
-     halign center_ref
-     valign bottom_ref
-     hexactpos 1
-     vexactpos 1
-     hexactsize 1
-     vexactsize 1
-     {
-      ImageWidgetClass ServerOffline_Img {
-       visible 1
-       ignorepointer 0
-       size 120 36
-       halign center_ref
-       valign bottom_ref
-       hexactpos 1
-       vexactpos 1
-       hexactsize 1
-       vexactsize 1
-       imageTexture "{8302015B41E40BCC}Colorful-UI/gui/textures/main_menu/Badge.Offline.edds"
-       mode blend
-       "src alpha" 1
-       "clamp mode" clamp
-       "stretch mode" stretch_w_h
-      }
-      ImageWidgetClass ServerOnline_Img {
-       visible 1
-       clipchildren 0
-       ignorepointer 0
-       size 120 36
-       halign center_ref
-       valign bottom_ref
-       hexactpos 1
-       vexactpos 1
-       hexactsize 1
-       vexactsize 1
-       imageTexture "{CA20F312CE863EF2}Colorful-UI/gui/textures/main_menu/Badge.Online.edds"
-       mode blend
-       "src alpha" 1
-       "clamp mode" clamp
-       "stretch mode" stretch_w_h
-      }
-     }
-    }
     TextWidgetClass "Coming Soon" {
      visible 0
      clipchildren 1
@@ -835,6 +791,95 @@ FrameWidgetClass main_menu_root {
      "size to text v" 1
      "text halign" center
      "text valign" center
+    }
+    ButtonWidgetClass ServerStatusOn {
+     size 120 36
+     halign center_ref
+     valign bottom_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     {
+      ImageWidgetClass OnlineImg {
+       visible 1
+       clipchildren 0
+       ignorepointer 0
+       size 120 36
+       halign center_ref
+       valign bottom_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       imageTexture "{CA20F312CE863EF2}Colorful-UI/gui/textures/main_menu/Badge.Online.edds"
+       mode blend
+       "src alpha" 1
+       "clamp mode" clamp
+       "stretch mode" stretch_w_h
+      }
+      ImageWidgetClass OnlineHover {
+       visible 1
+       clipchildren 0
+       ignorepointer 0
+       size 120 36
+       halign center_ref
+       valign bottom_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       imageTexture "{010F3E3451ED9E9D}Colorful-UI/gui/textures/main_menu/Online.Active.edds"
+       mode blend
+       "src alpha" 1
+       "clamp mode" clamp
+       "stretch mode" stretch_w_h
+      }
+     }
+    }
+    ButtonWidgetClass ServerStatusOff {
+     visible 0
+     size 120 36
+     halign center_ref
+     valign bottom_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     {
+      ImageWidgetClass OfflineImg {
+       visible 1
+       ignorepointer 0
+       size 120 36
+       halign center_ref
+       valign bottom_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       imageTexture "{85F58EE4F1D0119E}Colorful-UI/gui/textures/main_menu/Offline.Active.edds"
+       mode blend
+       "src alpha" 1
+       "clamp mode" clamp
+       "stretch mode" stretch_w_h
+      }
+      ImageWidgetClass OfflineHover {
+       visible 0
+       ignorepointer 0
+       size 120 36
+       halign center_ref
+       valign bottom_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       imageTexture "{8BD90BB6CEDCCAF0}Colorful-UI/gui/textures/main_menu/Offline.Hover.edds"
+       mode blend
+       "src alpha" 1
+       "clamp mode" clamp
+       "stretch mode" stretch_w_h
+      }
+     }
     }
    }
   }
