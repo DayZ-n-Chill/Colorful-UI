@@ -2,18 +2,13 @@ modded class MainMenu extends UIScriptedMenu
 {
 	// Register your variables
 	private Widget m_Discord;
-	private Widget m_Twitter;
-	private Widget m_Youtube;
-	private Widget m_Reddit;
-	private Widget m_Facebook;
+	
 	private Widget m_Website;
 	private Widget m_PriorityQueue;
 	private Widget m_CharacterBtn;
-	private Widget m_Separator1;
-	private Widget m_Separator2;
-	private Widget m_SeparatorPanel;
+	
 	private Widget m_ProgressLoading;
-	private	Widget m_shader;
+	
 	private Widget m_ImageBackground;
 	private ImageWidget m_Background;
 	private Widget m_ComingSoon
@@ -101,12 +96,9 @@ modded class MainMenu extends UIScriptedMenu
 		Refresh();
 		LoadMods();
 		GetDayZGame().GetBacklit().MainMenu_OnShow();
-		Class.CastTo(m_shader, layoutRoot.FindAnyWidget("Colorful_Shader"));
-		m_shader.SetColor(colorScheme.ShaderColor());
+
 		g_Game.SetLoadState( DayZLoadState.MAIN_MENU_CONTROLLER_SELECT );
-		m_Separator1.SetColor(colorScheme.SeparatorColor());
-		m_Separator2.SetColor(colorScheme.SeparatorColor());
-		m_SeparatorPanel.SetColor(colorScheme.SeparatorColor());
+
 		m_ProgressLoading  = ProgressBarWidget.Cast( layoutRoot.FindAnyWidget("LoadingBar") );
 		m_ProgressLoading.SetColor(colorScheme.MainMenuTrim());	
 		AnimatePress2StartFade();
@@ -246,11 +238,7 @@ modded class MainMenu extends UIScriptedMenu
 			GetGame().OpenURL(MenuURLS.urlDiscord);
 			return true;
 		}
-		else if (button == MouseState.LEFT && w == m_Twitter)
-		{
-			GetGame().OpenURL(MenuURLS.urlTwitter);
-			return false;
-		}
+
 		else if (button == MouseState.LEFT && w == m_ServerOnline)
 		{
 			GetGame().OpenURL(MenuURLS.urlBattleMetrics);
@@ -261,11 +249,6 @@ modded class MainMenu extends UIScriptedMenu
 			GetGame().OpenURL(MenuURLS.urlBattleMetrics);
 			return false;
 		}	
-		else if (button == MouseState.LEFT && w == m_Facebook)
-		{
-			GetGame().OpenURL(MenuURLS.urlFacebook);
-			return false;
-		}
 		else if (button == MouseState.LEFT && w == m_Website)
 		{
 			GetGame().OpenURL(MenuURLS.urlWebsite);
@@ -299,35 +282,6 @@ modded class MainMenu extends UIScriptedMenu
 		ImagenSetColor(w, color_img);	
 	}
 
-	override void ColorNormal( Widget w )
-	{
-		if( !w )
-			return;
-		
-		int color_pnl = UIColor.Transparent();
-		int color_lbl = colorScheme.PrimaryText();
-		int color_img = colorScheme.PrimaryText();
-
-		ButtonSetColor(w, color_pnl);
-		ButtonSetTextColor(w, color_lbl);
-		ImagenSetColor(w, color_img);
-	
-	}
-
-	void TwitterHighlight( Widget w )
-	{
-		if( !w )
-			return;	
-			
-		int color_pnl = UIColor.Transparent();
-		int color_lbl = UIColor.twitter();
-		int color_img = UIColor.twitter();	
-
-		ButtonSetColor(w, color_pnl);
-		ButtonSetTextColor(w, color_lbl);
-		ImagenSetColor(w, color_img);	
-	}
-
 	void DiscordHighlight( Widget w )
 	{
 		if( !w )
@@ -336,48 +290,6 @@ modded class MainMenu extends UIScriptedMenu
 		int color_pnl = UIColor.Transparent();
 		int color_lbl = UIColor.discord();
 		int color_img = UIColor.discord();	
-
-		ButtonSetColor(w, color_pnl);
-		ButtonSetTextColor(w, color_lbl);
-		ImagenSetColor(w, color_img);	
-	}
-
-	void YoutubeHighlight( Widget w )
-	{
-		if( !w )
-			return;	
-			
-		int color_pnl = UIColor.Transparent();
-		int color_lbl = UIColor.youtube();
-		int color_img = UIColor.youtube();	
-
-		ButtonSetColor(w, color_pnl);
-		ButtonSetTextColor(w, color_lbl);
-		ImagenSetColor(w, color_img);	
-	}
-
-	void RedditHighlight( Widget w )
-	{
-		if( !w )
-			return;	
-			
-		int color_pnl = UIColor.Transparent();
-		int color_lbl = UIColor.reddit();
-		int color_img = UIColor.reddit();	
-
-		ButtonSetColor(w, color_pnl);
-		ButtonSetTextColor(w, color_lbl);
-		ImagenSetColor(w, color_img);	
-	}
-
-	void MetaHighlight( Widget w )
-	{
-		if( !w )
-			return;	
-			
-		int color_pnl = UIColor.Transparent();
-		int color_lbl = UIColor.meta();
-		int color_img = UIColor.meta();	
 
 		ButtonSetColor(w, color_pnl);
 		ButtonSetTextColor(w, color_lbl);
@@ -398,36 +310,11 @@ modded class MainMenu extends UIScriptedMenu
     	    return true;
     	}
 
-		if( w == m_Twitter )
-		{
-			TwitterHighlight( w );
-			return true;
-		}
-
-		if( w == m_Facebook )
-		{
-			MetaHighlight( w );
-			return true;
-		}
-
 		if( w == m_Discord )
 		{
 			DiscordHighlight( w );
 			return true;
 		}
-
-		if( w == m_Youtube )
-		{
-			YoutubeHighlight( w );
-			return true;
-		}
-
-		if( w == m_Reddit )
-		{
-			RedditHighlight( w );
-			return true;
-		}
-
 		
 		if( IsFocusable( w ) )
 		{
