@@ -74,8 +74,8 @@ modded class MainMenu extends UIScriptedMenu
 		m_ServerOffline				= layoutRoot.FindAnyWidget( "ServerOffline" );
 		m_ServerOnline				= layoutRoot.FindAnyWidget( "ServerOnline" );
 
-		m_ServerOfflineIMG				= layoutRoot.FindAnyWidget( "ServerOffline_Img" );
-		m_ServerOnlineIMG				= layoutRoot.FindAnyWidget( "ServerOnline_Img" );
+		m_ServerOfflineIMG			= layoutRoot.FindAnyWidget( "ServerOffline_Img" );
+		m_ServerOnlineIMG			= layoutRoot.FindAnyWidget( "ServerOnline_Img" );
 		
 		m_CustomizeCharacter		= layoutRoot.FindAnyWidget( "customize_character" );
 		m_PlayVideo					= layoutRoot.FindAnyWidget( "play_video" );
