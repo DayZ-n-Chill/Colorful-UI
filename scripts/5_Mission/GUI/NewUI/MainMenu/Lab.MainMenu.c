@@ -143,7 +143,7 @@ modded class MainMenu extends UIScriptedMenu
 	    }
 	    else if (isSelectedEUMAIN)
 	    {
-			m_AUMainBtn.Show(false);
+			m_AUMainBtn.Show(true);
 	        m_AUMainDisabled.Show(true);
 	        m_EUMainDisabled.Show(false);
 			m_Background.LoadImageFile(0, AU_Background);
@@ -310,16 +310,6 @@ modded class MainMenu extends UIScriptedMenu
 		ButtonSetColor(w, color_pnl);
 		ButtonSetTextColor(w, color_lbl);
 	}
-
-	void UsHover( Widget w )
-	{
-		if( !w )
-			return;	
-			m_USMainIMG.Show(false);
-			m_USMainHover.Show(true);
-	}
-
-
 	
 	override bool OnMouseEnter( Widget w, int x, int y )
 	{
@@ -343,9 +333,22 @@ modded class MainMenu extends UIScriptedMenu
 			emptyHighlight( w );
 			return true;
 		}
-		if (w == m_USMainIMG)
+		if (w == m_USMainBtn)
         {
-			UsHover( w );
+			m_USMainHover.Show(true);
+			m_USMainIMG.Show(false);
+            return true;
+        }
+		if (w == m_AUMainBtn)
+        {
+			m_AUMainHover.Show(true);
+			m_AUMainIMG.Show(false);
+            return true;
+        }
+		if (w == m_EUMainBtn)
+        {
+			m_EUMainHover.Show(true);
+			m_EUMainIMG.Show(false);
             return true;
         }
 		if( IsFocusable( w ) )
@@ -365,7 +368,18 @@ modded class MainMenu extends UIScriptedMenu
 			m_USMainHover.Show(false);
             return true;
         }
-
+		if (w == m_AUMainBtn)
+        {
+			m_AUMainIMG.Show(true);
+			m_AUMainHover.Show(false);
+            return true;
+        }
+		if (w == m_EUMainBtn)
+        {
+			m_EUMainIMG.Show(true);
+			m_EUMainHover.Show(false);
+            return true;
+        }
 		if (IsFocusable(w))
 		{
 			ColorNormal(w);
