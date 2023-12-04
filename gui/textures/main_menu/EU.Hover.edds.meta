@@ -1,10 +1,10 @@
 MetaFileClass {
- Name "{CA20F312CE863EF2}Colorful-UI/gui/textures/main_menu/Badge.Online.edds"
+ Name "{DC2A6111E0269481}Colorful-UI/gui/textures/main_menu/EU.Hover.edds"
  Author "sdf-1"
- ChangeDate 514699105
+ ChangeDate 471707523
  Configurations {
   PNGResourceClass PC {
-   SourceFile "Badge.Online.png"
+   SourceFile "EU.Hover.png"
   }
   PNGResourceClass XBOX_ONE : PC {
   }

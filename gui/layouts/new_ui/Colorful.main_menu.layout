@@ -412,6 +412,7 @@ FrameWidgetClass main_menu_root {
       ButtonWidgetClass USMainBtn {
        visible 1
        color 0 0 0 0
+       position 8 0
        size 315 120
        halign center_ref
        valign center_ref
@@ -430,6 +431,7 @@ FrameWidgetClass main_menu_root {
         ImageWidgetClass USMainIMG {
          visible 1
          ignorepointer 1
+         position 0 0
          size 1 1
          halign center_ref
          valign center_ref
@@ -445,7 +447,7 @@ FrameWidgetClass main_menu_root {
          filter 0
         }
         ImageWidgetClass USMainHover {
-         visible 1
+         visible 0
          ignorepointer 1
          size 1 1
          halign center_ref
@@ -454,7 +456,7 @@ FrameWidgetClass main_menu_root {
          vexactpos 0
          hexactsize 0
          vexactsize 0
-         imageTexture "{D6F18F97F5D1264C}Colorful-UI/gui/textures/main_menu/US.Active.edds"
+         imageTexture "{5F89FE4ED2D136FB}Colorful-UI/gui/textures/main_menu/US.Hover.edds"
          mode blend
          "src alpha" 1
          "clamp mode" clamp
@@ -466,6 +468,7 @@ FrameWidgetClass main_menu_root {
       ButtonWidgetClass EUMainBtn {
        visible 0
        color 0 0 0 0
+       position 8 0
        size 315 120
        halign center_ref
        valign center_ref
@@ -502,6 +505,7 @@ FrameWidgetClass main_menu_root {
       ButtonWidgetClass AUMainBtn {
        visible 0
        color 0 0 0 0
+       position 8 0
        size 315 120
        halign center_ref
        valign center_ref
@@ -650,7 +654,7 @@ FrameWidgetClass main_menu_root {
        }
       }
       ButtonWidgetClass LeftSelect {
-       position 0 17
+       position 0 11
        size 50 60
        hexactpos 1
        vexactpos 1
@@ -676,7 +680,7 @@ FrameWidgetClass main_menu_root {
        }
       }
       ButtonWidgetClass RightSelect {
-       position 0 17
+       position 0 11
        size 50 60
        halign right_ref
        hexactpos 1

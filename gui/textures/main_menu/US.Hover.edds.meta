@@ -1,10 +1,10 @@
 MetaFileClass {
- Name "{E13098CCD0AB04A0}Colorful-UI/gui/textures/main_menu/AU.Active.edds"
+ Name "{5F89FE4ED2D136FB}Colorful-UI/gui/textures/main_menu/US.Hover.edds"
  Author "sdf-1"
- ChangeDate 840806275
+ ChangeDate 1914023811
  Configurations {
   PNGResourceClass PC {
-   SourceFile "AU.Active.png"
+   SourceFile "US.Hover.png"
   }
   PNGResourceClass XBOX_ONE : PC {
   }

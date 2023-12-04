@@ -1,10 +1,10 @@
 MetaFileClass {
- Name "{9A6ED7BA6916BBE4}Colorful-UI/gui/textures/main_menu/AU.Disabled.edds"
+ Name "{EB5D90A0E0BAB2D3}Colorful-UI/gui/textures/main_menu/EU.Disable.edds"
  Author "sdf-1"
- ChangeDate 145600353
+ ChangeDate 639479683
  Configurations {
   PNGResourceClass PC {
-   SourceFile "AU.Disabled.png"
+   SourceFile "EU.Disable.png"
   }
   PNGResourceClass XBOX_ONE : PC {
   }

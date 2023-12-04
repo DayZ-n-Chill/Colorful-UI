@@ -16,16 +16,19 @@ modded class MainMenu extends UIScriptedMenu
 	
 	bool isSelectedUSMAIN = true; 
 	private	Widget m_USMainBtn;
+	private	Widget m_USMainIMG
 	private	Widget m_USMainHover;
 	private	Widget m_USMainDisabled;
 	
 	bool isSelectedEUMAIN = false; 
 	private	Widget m_EUMainBtn;
+	private	Widget m_EUMainIMG
 	private	Widget m_EUMainHover;
 	private	Widget m_EUMainDisabled;
 	
 	bool isSelectedAUMAIN = false; 
 	private	Widget m_AUMainBtn;
+	private	Widget m_AUMainIMG
 	private	Widget m_AUMainHover;
 	private	Widget m_AUMainDisabled;
 
@@ -57,14 +60,17 @@ modded class MainMenu extends UIScriptedMenu
 		m_RightSelect				= layoutRoot.FindAnyWidget( "RightSelect" );
 		
 		m_USMainBtn					= layoutRoot.FindAnyWidget( "USMainBtn" );
+		m_USMainIMG					= layoutRoot.FindAnyWidget( "USMainIMG" );
 		m_USMainHover				= layoutRoot.FindAnyWidget( "USMainHover" );
 		m_USMainDisabled			= layoutRoot.FindAnyWidget( "USMainDisabled" );
 		
 		m_EUMainBtn					= layoutRoot.FindAnyWidget( "EUMainBtn" );
-		m_USMainHover				= layoutRoot.FindAnyWidget( "USMainHover" );
+		m_EUMainIMG					= layoutRoot.FindAnyWidget( "EUMainIMG" );
+		m_EUMainHover				= layoutRoot.FindAnyWidget( "EUMainHover" );
 		m_EUMainDisabled			= layoutRoot.FindAnyWidget( "EUMainDisabled" );
 		
 		m_AUMainBtn					= layoutRoot.FindAnyWidget( "AUMainBtn" );
+		m_AUMainIMG					= layoutRoot.FindAnyWidget( "AUMainIMG" );
 		m_AUMainHover				= layoutRoot.FindAnyWidget( "AUMainHover" );
 		m_AUMainDisabled			= layoutRoot.FindAnyWidget( "AUMainDisabled" );
 
@@ -238,7 +244,6 @@ modded class MainMenu extends UIScriptedMenu
 			GetGame().OpenURL(MenuURLS.urlDiscord);
 			return true;
 		}
-
 		else if (button == MouseState.LEFT && w == m_ServerOnline)
 		{
 			GetGame().OpenURL(MenuURLS.urlBattleMetrics);
@@ -259,7 +264,6 @@ modded class MainMenu extends UIScriptedMenu
 			GetGame().OpenURL(MenuURLS.urlPriorityQ);
 			return false;
 		}
-
 		else if ( w == m_CharacterBtn )
 		{
 			OpenMenuCustomizeCharacter();
@@ -306,6 +310,16 @@ modded class MainMenu extends UIScriptedMenu
 		ButtonSetColor(w, color_pnl);
 		ButtonSetTextColor(w, color_lbl);
 	}
+
+	void UsHover( Widget w )
+	{
+		if( !w )
+			return;	
+			m_USMainIMG.Show(false);
+			m_USMainHover.Show(true);
+	}
+
+
 	
 	override bool OnMouseEnter( Widget w, int x, int y )
 	{
@@ -314,30 +328,49 @@ modded class MainMenu extends UIScriptedMenu
     	    ColorHighlight(w);
     	    return true;
     	}
-
     	if (w == m_RightSelect)
     	{
     	    ColorHighlight(w);
     	    return true;
     	}
-
 		if( w == m_Discord )
 		{
 			DiscordHighlight( w );
 			return true;
 		}
-
 		if( w == m_PriorityQueue )
 		{
 			emptyHighlight( w );
 			return true;
 		}
-		
+		if (w == m_USMainIMG)
+        {
+			UsHover( w );
+            return true;
+        }
 		if( IsFocusable( w ) )
 		{
 			ColorHighlight( w );
 			return true;
 		}
+
+		return false;
+	}
+
+	override bool OnMouseLeave( Widget w, Widget enterW, int x, int y )
+	{
+		if (w == m_USMainBtn)
+        {
+			m_USMainIMG.Show(true);
+			m_USMainHover.Show(false);
+            return true;
+        }
+
+		if (IsFocusable(w))
+		{
+			ColorNormal(w);
+			return true;
+		}	
 		return false;
 	}
 

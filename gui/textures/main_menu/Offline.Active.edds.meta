@@ -1,10 +1,10 @@
 MetaFileClass {
- Name "{8302015B41E40BCC}Colorful-UI/gui/textures/main_menu/Badge.Offline.edds"
+ Name "{85F58EE4F1D0119E}Colorful-UI/gui/textures/main_menu/Offline.Active.edds"
  Author "sdf-1"
- ChangeDate 313372513
+ ChangeDate 1746775939
  Configurations {
   PNGResourceClass PC {
-   SourceFile "Badge.Offline.png"
+   SourceFile "Offline.Active.png"
   }
   PNGResourceClass XBOX_ONE : PC {
   }
