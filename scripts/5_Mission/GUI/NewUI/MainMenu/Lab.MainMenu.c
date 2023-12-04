@@ -126,188 +126,125 @@ modded class MainMenu extends UIScriptedMenu
     GetGame().GetCallQueue(CALL_CATEGORY_GUI).CallLater(this.FadeInOut, 50, false);
 	}
 
+	void UpdateServerUI(bool showUS, bool showEU, bool showAU, string background, bool showComingSoon, bool showPress2Start, bool showServerOnline, bool showServerOffline)
+	{
+		m_USMainBtn.Show(showUS);
+		m_EUMainDisabled.Show(showEU);
+		m_AUMainBtn.Show(showAU);
+		m_Background.LoadImageFile(0, background);
+		m_ComingSoon.Show(showComingSoon);
+		m_Press2Start.Show(showPress2Start);
+		m_ServerOnlineIMG.Show(showServerOnline);
+		m_ServerOfflineIMG.Show(showServerOffline);
+	}
+
 	void SwitchServerRight()
 	{
-	    if (isSelectedUSMAIN)
-	    {
-			// Disable Previos State
-	        isSelectedUSMAIN = false;
-			// Hide Previous Buttons
-			m_USMainBtn.Show(false);
-			// Swap BG Image
-	        m_Background.LoadImageFile(0, EU_Background);
-			// Set Selected State
-	        isSelectedEUMAIN = true;
-			// Show New Button
-	        m_EUMainDisabled.Show(true);
-			// Show Anim Status Text
-			m_ComingSoon.Show(true);
-			m_Press2Start.Show(false);
-			// Show Status Badge
-			m_ServerOnlineIMG.Show(false);
-			m_ServerOfflineIMG.Show(true);
-	    }
-	    else if (isSelectedEUMAIN)
-	    {
-			// Disable Previos State
-	        isSelectedEUMAIN = false;
-			// Hide Previous Buttons
-	        m_EUMainDisabled.Show(false);
-			// Swap BG Image
-			m_Background.LoadImageFile(0, AU_Background);
-			// Set Selected State
-	        isSelectedAUMAIN = true;
-			// Show New Button
-			m_AUMainBtn.Show(true);
-			// Show Anim Status Text
-			m_ComingSoon.Show(false);
-			m_Press2Start.Show(true);
-			// Show Status Badge
-			m_ServerOnlineIMG.Show(false);
-			m_ServerOfflineIMG.Show(true);
-	    }
-	    else if (isSelectedAUMAIN)
-	    {
-			// Disable Previos State
-			isSelectedAUMAIN = false;	        
-	        // Hide Previous Buttons
-			m_AUMainBtn.Show(false);	
-			// Swap BG Image
-			m_Background.LoadImageFile(0, US_Background);
-			// Set Selected State
-	        isSelectedUSMAIN = true;
-			// Show New Button
-	        m_USMainBtn.Show(true);
-			// Show Anim Status Text
-			m_ComingSoon.Show(false);
-			m_Press2Start.Show(true);
-		    // Show Status Badge
-			m_ServerOfflineIMG.Show(false);
-			m_ServerOnlineIMG.Show(true);
-	    }
+		if (isSelectedUSMAIN)
+		{
+			UpdateServerUI(false, true, false, EU_Background, true, false, false, true);
+			isSelectedUSMAIN = false;
+			isSelectedEUMAIN = true;
+		}
+		else if (isSelectedEUMAIN)
+		{
+			UpdateServerUI(false, false, true, AU_Background, true, false, false, true);
+			isSelectedEUMAIN = false;
+			isSelectedAUMAIN = true;
+		}
+		else if (isSelectedAUMAIN)
+		{
+			UpdateServerUI(true, false, false, US_Background, false, true, true, false);
+			isSelectedAUMAIN = false;
+			isSelectedUSMAIN = true;
+		}
 	}
 
 	void SwitchServerLeft()
 	{
 		if (isSelectedAUMAIN)
 		{
-			// Disable Previos State
+			UpdateServerUI(false, true, false, EU_Background, true, false, false, true);
 			isSelectedAUMAIN = false;
-			// Hide Previous Buttons
-			m_AUMainBtn.Show(false);
-			// Swap BG Image
-			m_Background.LoadImageFile(0, EU_Background);
-			// Set Selected State
 			isSelectedEUMAIN = true;
-			// Show New Button
-			m_EUMainDisabled.Show(true);
-			// Show Anim Status Text
-			m_ComingSoon.Show(true);
-			m_Press2Start.Show(false);
-			// Show Status Badge
-			m_ServerOnlineIMG.Show(false);
-			m_ServerOfflineIMG.Show(true);
 		}
 		else if (isSelectedEUMAIN)
 		{
-			// Disable Previos State
+			UpdateServerUI(true, false, false, US_Background, false, true, true, false);
 			isSelectedEUMAIN = false;
-			// Hide Previous Buttons
-			m_EUMainDisabled.Show(false);
-			// Swap BG Image
-			m_Background.LoadImageFile(0, US_Background);
-			// Set Selected State
 			isSelectedUSMAIN = true;
-			// Show New Button
-			m_USMainBtn.Show(true);
-			// Show Anim Status Text
-			m_ComingSoon.Show(false);
-			m_Press2Start.Show(true);
-			// Show Status Badge
-			m_ServerOfflineIMG.Show(false);
-			m_ServerOnlineIMG.Show(true);
 		}
 		else if (isSelectedUSMAIN)
 		{
-			// Disable Previos State
+			UpdateServerUI(false, false, true, AU_Background, true, false, false, true);
 			isSelectedUSMAIN = false;
-			// Hide Previous Buttons
-			m_USMainBtn.Show(false);
-			// Swap BG Image
-			m_Background.LoadImageFile(0, AU_Background);
-			// Set Selected State
 			isSelectedAUMAIN = true;
-			// Show New Button
-			m_AUMainBtn.Show(true);
-			// Show Anim Status Text
-			m_ComingSoon.Show(false);
-			m_Press2Start.Show(true);
-			// Show Status Badge
-			m_ServerOnlineIMG.Show(true);
-			m_ServerOfflineIMG.Show(false);
 		}
 	}
 
 
+
 	override bool OnClick(Widget w, int x, int y, int button)
 	{
-	    if (w == m_LeftSelect && button == MouseState.LEFT)
-    	{
-			SwitchServerLeft()
-    	    return true;
-    	}
-		if (w == m_RightSelect && button == MouseState.LEFT)
-    	{
-			SwitchServerRight()
-    	    return true;
-    	}
-		if (button == MouseState.LEFT && w == m_USMainBtn)
+		if (button != MouseState.LEFT)
+			return super.OnClick(w, x, y, button);
+
+		if (w == m_LeftSelect)
 		{
-			g_Game.ConnectFromServerBrowser( "168.100.163.22", 2302, "" );
+			SwitchServerLeft();
 			return true;
 		}
-		if (button == MouseState.LEFT && w == m_EUMainBtn)
+		else if (w == m_RightSelect)
 		{
-			g_Game.ConnectFromServerBrowser( "0.0.0.0", 2302, "" );
+			SwitchServerRight();
 			return true;
 		}
-		if (button == MouseState.LEFT && w == m_AUMainBtn)
+		else if (w == m_USMainBtn)
 		{
-			g_Game.ConnectFromServerBrowser( "168.100.163.22", 2302, "" );
+			g_Game.ConnectFromServerBrowser("168.100.163.22", 2302, "");
 			return true;
 		}
-		if (button == MouseState.LEFT && w == m_Discord)
+		else if (w == m_EUMainBtn)
+		{
+			g_Game.ConnectFromServerBrowser("0.0.0.0", 2302, "");
+			return true;
+		}
+		else if (w == m_AUMainBtn)
+		{
+			g_Game.ConnectFromServerBrowser("168.100.163.22", 2302, "");
+			return true;
+		}
+		else if (w == m_Discord)
 		{
 			GetGame().OpenURL(MenuURLS.urlDiscord);
 			return true;
 		}
-		else if (button == MouseState.LEFT && w == m_ServerOnline)
+		else if (w == m_ServerOnline || w == m_ServerOffline || w == m_Website || w == m_PriorityQueue)
 		{
-			GetGame().OpenURL(MenuURLS.urlBattleMetrics);
+			string url = "";
+			if (w == m_ServerOnline || w == m_ServerOffline)
+			{
+				url = MenuURLS.urlBattleMetrics;
+			}
+			else if (w == m_Website)
+			{
+				url = MenuURLS.urlWebsite;
+			}
+			else if (w == m_PriorityQueue)
+			{
+				url = MenuURLS.urlPriorityQ;
+			}
+			GetGame().OpenURL(url);
 			return false;
 		}
-		else if (button == MouseState.LEFT && w == m_ServerOffline)
-		{
-			GetGame().OpenURL(MenuURLS.urlBattleMetrics);
-			return false;
-		}	
-		else if (button == MouseState.LEFT && w == m_Website)
-		{
-			GetGame().OpenURL(MenuURLS.urlWebsite);
-			return false;
-		}
-		else if (button == MouseState.LEFT && w == m_PriorityQueue)
-		{
-			GetGame().OpenURL(MenuURLS.urlPriorityQ);
-			return false;
-		}
-		else if ( w == m_CharacterBtn )
+		else if (w == m_CharacterBtn)
 		{
 			OpenMenuCustomizeCharacter();
 			return true;
 		}
+
 		return super.OnClick(w, x, y, button);
-	};
+	}
 
 	override void ColorHighlight( Widget w )
 	{
