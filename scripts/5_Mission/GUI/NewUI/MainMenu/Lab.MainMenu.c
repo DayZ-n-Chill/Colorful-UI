@@ -130,87 +130,124 @@ modded class MainMenu extends UIScriptedMenu
 	{
 	    if (isSelectedUSMAIN)
 	    {
-			m_EUMainBtn.Show(false);
+			// Disable Previos State
+	        isSelectedUSMAIN = false;
+			// Hide Previous Buttons
+			m_USMainBtn.Show(false);
+			// Swap BG Image
+	        m_Background.LoadImageFile(0, EU_Background);
+			// Set Selected State
+	        isSelectedEUMAIN = true;
+			// Show New Button
 	        m_EUMainDisabled.Show(true);
-	        m_USMainBtn.Show(false);
-			m_Background.LoadImageFile(0, EU_Background);
+			// Show Anim Status Text
 			m_ComingSoon.Show(true);
 			m_Press2Start.Show(false);
+			// Show Status Badge
 			m_ServerOnlineIMG.Show(false);
 			m_ServerOfflineIMG.Show(true);
-	        isSelectedUSMAIN = false;
-	        isSelectedEUMAIN = true;
 	    }
 	    else if (isSelectedEUMAIN)
 	    {
-			m_AUMainBtn.Show(true);
-	        m_AUMainDisabled.Show(true);
+			// Disable Previos State
+	        isSelectedEUMAIN = false;
+			// Hide Previous Buttons
 	        m_EUMainDisabled.Show(false);
+			// Swap BG Image
 			m_Background.LoadImageFile(0, AU_Background);
-			m_ComingSoon.Show(true);
-			m_Press2Start.Show(false);
+			// Set Selected State
+	        isSelectedAUMAIN = true;
+			// Show New Button
+			m_AUMainBtn.Show(true);
+			// Show Anim Status Text
+			m_ComingSoon.Show(false);
+			m_Press2Start.Show(true);
+			// Show Status Badge
 			m_ServerOnlineIMG.Show(false);
 			m_ServerOfflineIMG.Show(true);
-	        isSelectedEUMAIN = false;
-	        isSelectedAUMAIN = true;
 	    }
 	    else if (isSelectedAUMAIN)
 	    {
-	        m_USMainBtn.Show(true);
-			m_USMainDisabled.Show(false);
-	        m_AUMainDisabled.Show(false);
+			// Disable Previos State
+			isSelectedAUMAIN = false;	        
+	        // Hide Previous Buttons
+			m_AUMainBtn.Show(false);	
+			// Swap BG Image
 			m_Background.LoadImageFile(0, US_Background);
+			// Set Selected State
+	        isSelectedUSMAIN = true;
+			// Show New Button
+	        m_USMainBtn.Show(true);
+			// Show Anim Status Text
 			m_ComingSoon.Show(false);
 			m_Press2Start.Show(true);
-			m_ServerOnlineIMG.Show(true);
+		    // Show Status Badge
 			m_ServerOfflineIMG.Show(false);
-	        isSelectedAUMAIN = false;
-	        isSelectedUSMAIN = true;
+			m_ServerOnlineIMG.Show(true);
 	    }
 	}
 
 	void SwitchServerLeft()
 	{
-	    if (isSelectedAUMAIN)
-	    {
-			m_EUMainBtn.Show(false);
-	        m_EUMainDisabled.Show(true);
-	        m_AUMainDisabled.Show(false);
+		if (isSelectedAUMAIN)
+		{
+			// Disable Previos State
+			isSelectedAUMAIN = false;
+			// Hide Previous Buttons
+			m_AUMainBtn.Show(false);
+			// Swap BG Image
+			m_Background.LoadImageFile(0, EU_Background);
+			// Set Selected State
+			isSelectedEUMAIN = true;
+			// Show New Button
+			m_EUMainDisabled.Show(true);
+			// Show Anim Status Text
 			m_ComingSoon.Show(true);
 			m_Press2Start.Show(false);
+			// Show Status Badge
 			m_ServerOnlineIMG.Show(false);
 			m_ServerOfflineIMG.Show(true);
-			m_Background.LoadImageFile(0, EU_Background);
-	        isSelectedAUMAIN = false;
-	        isSelectedEUMAIN = true;
-	    }
-	    else if (isSelectedEUMAIN)
-	    {
-	        m_USMainBtn.Show(true);
-			m_USMainDisabled.Show(false);
-	        m_EUMainDisabled.Show(false);
+		}
+		else if (isSelectedEUMAIN)
+		{
+			// Disable Previos State
+			isSelectedEUMAIN = false;
+			// Hide Previous Buttons
+			m_EUMainDisabled.Show(false);
+			// Swap BG Image
 			m_Background.LoadImageFile(0, US_Background);
+			// Set Selected State
+			isSelectedUSMAIN = true;
+			// Show New Button
+			m_USMainBtn.Show(true);
+			// Show Anim Status Text
 			m_ComingSoon.Show(false);
 			m_Press2Start.Show(true);
+			// Show Status Badge
+			m_ServerOfflineIMG.Show(false);
+			m_ServerOnlineIMG.Show(true);
+		}
+		else if (isSelectedUSMAIN)
+		{
+			// Disable Previos State
+			isSelectedUSMAIN = false;
+			// Hide Previous Buttons
+			m_USMainBtn.Show(false);
+			// Swap BG Image
+			m_Background.LoadImageFile(0, AU_Background);
+			// Set Selected State
+			isSelectedAUMAIN = true;
+			// Show New Button
+			m_AUMainBtn.Show(true);
+			// Show Anim Status Text
+			m_ComingSoon.Show(false);
+			m_Press2Start.Show(true);
+			// Show Status Badge
 			m_ServerOnlineIMG.Show(true);
 			m_ServerOfflineIMG.Show(false);
-	        isSelectedEUMAIN = false;
-	        isSelectedUSMAIN = true;
-	    }
-	    else if (isSelectedUSMAIN)
-	    {
-			m_AUMainBtn.Show(false);
-	        m_AUMainDisabled.Show(true);
-	        m_USMainBtn.Show(false);
-			m_Background.LoadImageFile(0, AU_Background);
-			m_ComingSoon.Show(true);
-			m_Press2Start.Show(false);
-			m_ServerOnlineIMG.Show(false);
-			m_ServerOfflineIMG.Show(true);
-	        isSelectedUSMAIN = false;
-	        isSelectedAUMAIN = true;
-	    }
+		}
 	}
+
 
 	override bool OnClick(Widget w, int x, int y, int button)
 	{
@@ -231,12 +268,12 @@ modded class MainMenu extends UIScriptedMenu
 		}
 		if (button == MouseState.LEFT && w == m_EUMainBtn)
 		{
-			// g_Game.ConnectFromServerBrowser( "168.100.163.22", 2302, "" );
+			g_Game.ConnectFromServerBrowser( "0.0.0.0", 2302, "" );
 			return true;
 		}
 		if (button == MouseState.LEFT && w == m_AUMainBtn)
 		{
-			// g_Game.ConnectFromServerBrowser( "168.100.163.22", 2302, "" );
+			g_Game.ConnectFromServerBrowser( "168.100.163.22", 2302, "" );
 			return true;
 		}
 		if (button == MouseState.LEFT && w == m_Discord)
