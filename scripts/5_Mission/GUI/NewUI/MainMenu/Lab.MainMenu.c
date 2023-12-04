@@ -1,15 +1,13 @@
 modded class MainMenu extends UIScriptedMenu
 {
-	// Register your variables
 	private Widget m_Discord;
 	
 	private Widget m_Website;
 	private Widget m_PriorityQueue;
 	private Widget m_CharacterBtn;
-	
 	private Widget m_ProgressLoading;
 	
-	private Widget m_ImageBackground;
+	// private Widget m_ImageBackground;
 	private ImageWidget m_Background;
 	private Widget m_ComingSoon
 
@@ -18,7 +16,7 @@ modded class MainMenu extends UIScriptedMenu
 	private string EU_Background = "Colorful-UI/gui/textures/loading_screens/LabLoadScreen_2.edds";
 	private string AU_Background = "Colorful-UI/gui/textures/loading_screens/LabLoadScreen_3.edds";
 
-	private bool m_FadingInBackground = false;
+	// private bool m_FadingInBackground = false;
 	private float m_Alpha = 1.0; 
 
 
@@ -42,6 +40,7 @@ modded class MainMenu extends UIScriptedMenu
 	private Widget m_ServerOfflineIMG;
 	private Widget m_PrioQ;
 
+	//Animation
 	private Widget m_Press2Start;
 	bool m_FadingOut = true;
 	bool m_FadingIn = true;
@@ -51,25 +50,26 @@ modded class MainMenu extends UIScriptedMenu
 	override Widget Init()
 	{
 		layoutRoot					= GetGame().GetWorkspace().CreateWidgets( "Colorful-UI/gui/layouts/new_ui/colorful.main_menu.layout" );
+		m_Background 				= ImageWidget.Cast(layoutRoot.FindAnyWidget("ImageBackground"));
 
 		m_Play						= layoutRoot.FindAnyWidget( "connectButton" );
 		m_Discord					= layoutRoot.FindAnyWidget( "Discord_button" );
 		m_Website					= layoutRoot.FindAnyWidget( "Website_Button" );
-		
-		m_Press2Start 				= layoutRoot.FindAnyWidget( "Press2Start" );
-		m_ComingSoon 				= layoutRoot.FindAnyWidget( "Coming Soon" );
-		m_LeftSelect				= layoutRoot.FindAnyWidget( "LeftSelect" );
-		m_Background 				= ImageWidget.Cast(layoutRoot.FindAnyWidget("ImageBackground"));
+		m_PriorityQueue				= layoutRoot.FindAnyWidget( "PrioQ_button" );
 
+		m_LeftSelect				= layoutRoot.FindAnyWidget( "LeftSelect" );
 		m_RightSelect				= layoutRoot.FindAnyWidget( "RightSelect" );
+		
 		m_USMAIN					= layoutRoot.FindAnyWidget( "USMainActive" );
 		m_EUMAIN					= layoutRoot.FindAnyWidget( "EUMainActive" );
 		m_AUMAIN					= layoutRoot.FindAnyWidget( "AUMainActive" );
+
 		m_USMAINDIS					= layoutRoot.FindAnyWidget( "USMainDisabled" );
 		m_EUMAINDIS					= layoutRoot.FindAnyWidget( "EUMainDisabled" );
 		m_AUMAINDIS					= layoutRoot.FindAnyWidget( "AUMainDisabled" );
 
-		m_PriorityQueue				= layoutRoot.FindAnyWidget( "PrioQ_button" );
+		m_ComingSoon 				= layoutRoot.FindAnyWidget( "Coming Soon" );
+		m_Press2Start 				= layoutRoot.FindAnyWidget( "Press2Start" );
 		
 		m_ServerOffline				= layoutRoot.FindAnyWidget( "ServerOffline" );
 		m_ServerOnline				= layoutRoot.FindAnyWidget( "ServerOnline" );
@@ -78,19 +78,16 @@ modded class MainMenu extends UIScriptedMenu
 		m_ServerOnlineIMG			= layoutRoot.FindAnyWidget( "ServerOnline_Img" );
 		
 		m_CustomizeCharacter		= layoutRoot.FindAnyWidget( "customize_character" );
-		m_PlayVideo					= layoutRoot.FindAnyWidget( "play_video" );
-		m_Tutorials					= layoutRoot.FindAnyWidget( "tutorials" );
-		m_TutorialButton			= layoutRoot.FindAnyWidget( "tutorial_button" );
-		m_MessageButton				= layoutRoot.FindAnyWidget( "message_button" );
+
 		m_SettingsButton			= layoutRoot.FindAnyWidget( "settings_button" );
 		m_Exit						= layoutRoot.FindAnyWidget( "exit_button" );
-		m_PrevCharacter				= layoutRoot.FindAnyWidget( "prev_character" );
-		m_NextCharacter				= layoutRoot.FindAnyWidget( "next_character" );		
+
 		m_Mission					= MissionMainMenu.Cast( GetGame().GetMission() );
 		m_ScenePC					= m_Mission.GetIntroScenePC();
-		string version;
-		GetGame().GetVersion( version );
-		m_Version.SetText( "#main_menu_version" + " " + version );
+
+		// string version;
+		// GetGame().GetVersion( version );
+		// m_Version.SetText( "#main_menu_version" + " " + version );
 		GetGame().GetUIManager().ScreenFadeOut(0);
 		SetFocus( null );
 		Refresh();
@@ -101,7 +98,9 @@ modded class MainMenu extends UIScriptedMenu
 
 		m_ProgressLoading  = ProgressBarWidget.Cast( layoutRoot.FindAnyWidget("LoadingBar") );
 		m_ProgressLoading.SetColor(colorScheme.MainMenuTrim());	
+		
 		AnimatePress2StartFade();
+		
 		return layoutRoot;
 	}	
 
@@ -295,6 +294,17 @@ modded class MainMenu extends UIScriptedMenu
 		ButtonSetTextColor(w, color_lbl);
 		ImagenSetColor(w, color_img);	
 	}
+
+	void emptyHighlight( Widget w )
+	{
+		if( !w )
+			return;	
+			
+		int color_pnl = UIColor.Transparent();
+		int color_lbl = UIColor.Transparent();
+		ButtonSetColor(w, color_pnl);
+		ButtonSetTextColor(w, color_lbl);
+	}
 	
 	override bool OnMouseEnter( Widget w, int x, int y )
 	{
@@ -315,6 +325,13 @@ modded class MainMenu extends UIScriptedMenu
 			DiscordHighlight( w );
 			return true;
 		}
+
+		if( w == m_PriorityQueue )
+		{
+			emptyHighlight( w );
+			return true;
+		}
+
 		
 		if( IsFocusable( w ) )
 		{
