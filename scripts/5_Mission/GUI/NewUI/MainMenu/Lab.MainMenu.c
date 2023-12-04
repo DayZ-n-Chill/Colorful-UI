@@ -39,8 +39,7 @@ modded class MainMenu extends UIScriptedMenu
 	
 	private float m_Alpha = 1.0; 
 	bool m_FadingOut = true;
-	bool m_FadingIn = true;
-	
+
 	ButtonWidget connectButton;
 	
 	override Widget Init()
@@ -58,12 +57,15 @@ modded class MainMenu extends UIScriptedMenu
 		m_RightSelect				= layoutRoot.FindAnyWidget( "RightSelect" );
 		
 		m_USMainBtn					= layoutRoot.FindAnyWidget( "USMainBtn" );
+		m_USMainHover				= layoutRoot.FindAnyWidget( "USMainHover" );
 		m_USMainDisabled			= layoutRoot.FindAnyWidget( "USMainDisabled" );
 		
-		m_EUMainBtn					= layoutRoot.FindAnyWidget( "EUMainActive" );
+		m_EUMainBtn					= layoutRoot.FindAnyWidget( "EUMainBtn" );
+		m_USMainHover				= layoutRoot.FindAnyWidget( "USMainHover" );
 		m_EUMainDisabled			= layoutRoot.FindAnyWidget( "EUMainDisabled" );
 		
-		m_AUMainBtn					= layoutRoot.FindAnyWidget( "AUMainActive" );
+		m_AUMainBtn					= layoutRoot.FindAnyWidget( "AUMainBtn" );
+		m_AUMainHover				= layoutRoot.FindAnyWidget( "AUMainHover" );
 		m_AUMainDisabled			= layoutRoot.FindAnyWidget( "AUMainDisabled" );
 
 		m_ComingSoon 				= layoutRoot.FindAnyWidget( "Coming Soon" );

@@ -427,7 +427,24 @@ FrameWidgetClass main_menu_root {
        "next down" "play_video"
        text_halign right
        {
-        ImageWidgetClass play_panel {
+        ImageWidgetClass USMainIMG {
+         visible 1
+         ignorepointer 1
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         imageTexture "{D6F18F97F5D1264C}Colorful-UI/gui/textures/main_menu/US.Active.edds"
+         mode blend
+         "src alpha" 1
+         "clamp mode" clamp
+         "stretch mode" stretch_w_h
+         filter 0
+        }
+        ImageWidgetClass USMainHover {
          visible 1
          ignorepointer 1
          size 1 1
@@ -446,7 +463,7 @@ FrameWidgetClass main_menu_root {
         }
        }
       }
-      ButtonWidgetClass EUMainActive {
+      ButtonWidgetClass EUMainBtn {
        visible 0
        color 0 0 0 0
        size 315 120
@@ -482,7 +499,7 @@ FrameWidgetClass main_menu_root {
         }
        }
       }
-      ButtonWidgetClass AUMainActive {
+      ButtonWidgetClass AUMainBtn {
        visible 0
        color 0 0 0 0
        size 315 120
