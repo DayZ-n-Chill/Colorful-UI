@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{55AED9EE23F9C8CC}Colorful-UI/gui/textures/main_menu/Chevron.LHover.edds"
+ Author "sdf-1"
+ ChangeDate -1300418684
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Chevron.LHover.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

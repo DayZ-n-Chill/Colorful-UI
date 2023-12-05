@@ -8,7 +8,12 @@ modded class MainMenu extends UIScriptedMenu
 	private ImageWidget m_Background;
 
 	private ButtonWidget m_LeftSelect;
+	private ButtonWidget m_LeftSelectImg;
+	private ButtonWidget m_LeftSelectHover;
+	
 	private ButtonWidget m_RightSelect;
+	private ButtonWidget m_RightSelectImg;
+	private ButtonWidget m_RightSelectHover;
 	
 	bool isSelectedUSMAIN = true; 
 	private	Widget m_USMainBtn;
@@ -62,7 +67,12 @@ modded class MainMenu extends UIScriptedMenu
 		m_PriorityQueue				= layoutRoot.FindAnyWidget( "PrioQ_button" );
 
 		m_LeftSelect				= layoutRoot.FindAnyWidget( "LeftSelect" );
+		m_LeftSelectImg				= layoutRoot.FindAnyWidget( "LeftSelectImg" );
+		m_LeftSelectHover			= layoutRoot.FindAnyWidget( "LeftSelectHover" );
+
 		m_RightSelect				= layoutRoot.FindAnyWidget( "RightSelect" );
+		m_RightSelectImg			= layoutRoot.FindAnyWidget( "RightSelectImg" );
+		m_RightSelectHover			= layoutRoot.FindAnyWidget( "RightSelectHover" );
 		
 		m_USMainBtn					= layoutRoot.FindAnyWidget( "USMainBtn" );
 		m_USMainIMG					= layoutRoot.FindAnyWidget( "USMainIMG" );
@@ -154,7 +164,7 @@ modded class MainMenu extends UIScriptedMenu
 		}
 		else if (isSelectedEUMAIN)
 		{
-			UpdateServerUI(false, false, true, AU_Background, true, false, false, true);
+			UpdateServerUI(false, false, true, AU_Background, false, true, true, false);
 			isSelectedEUMAIN = false;
 			isSelectedAUMAIN = true;
 		}
@@ -182,13 +192,11 @@ modded class MainMenu extends UIScriptedMenu
 		}
 		else if (isSelectedUSMAIN)
 		{
-			UpdateServerUI(false, false, true, AU_Background, true, false, false, true);
+			UpdateServerUI(false, false, true, AU_Background, false, true, true, false);
 			isSelectedUSMAIN = false;
 			isSelectedAUMAIN = true;
 		}
 	}
-
-
 
 	override bool OnClick(Widget w, int x, int y, int button)
 	{
@@ -222,27 +230,27 @@ modded class MainMenu extends UIScriptedMenu
 			GetGame().OpenURL(MenuURLS.urlDiscord);
 			return true;
 		}
-		else if (button == MouseState.LEFT && w == m_ServerStatusOn)
+		if (button == MouseState.LEFT && w == m_ServerStatusOn)
 		{
-			GetGame().OpenURL(MenuURLS.urlBattleMetrics);
-			return false;
+			GetGame().OpenURL("https://www.battlemetrics.com/servers/dayz/21537246");
+			return true;
 		}
-		else if (button == MouseState.LEFT && w == m_ServerStatusOff)
+		if (button == MouseState.LEFT && w == m_ServerStatusOff)
 		{
-			GetGame().OpenURL(MenuURLS.urlBattleMetrics);
-			return false;
+			GetGame().OpenURL("https://www.battlemetrics.com/servers/dayz/21537246");
+			return true;
 		}	
-		else if (button == MouseState.LEFT && w == m_Website)
+		if (button == MouseState.LEFT && w == m_Website)
 		{
 			GetGame().OpenURL(MenuURLS.urlWebsite);
-			return false;
+			return true;
 		}
-		else if (button == MouseState.LEFT && w == m_PriorityQueue)
+		if (button == MouseState.LEFT && w == m_PriorityQueue)
 		{
 			GetGame().OpenURL(MenuURLS.urlPriorityQ);
-			return false;
+			return true;
 		}
-		else if ( w == m_CharacterBtn )
+		if ( w == m_CharacterBtn )
 		{
 			OpenMenuCustomizeCharacter();
 			return true;
@@ -293,12 +301,12 @@ modded class MainMenu extends UIScriptedMenu
 	{
 		if (w == m_LeftSelect)
     	{
-    	    ColorHighlight(w);
+    	    m_LeftSelectHover.Show(true);
     	    return true;
     	}
     	if (w == m_RightSelect)
     	{
-    	    ColorHighlight(w);
+    	    m_RightSelectHover.Show(true);
     	    return true;
     	}
 		if( w == m_Discord )
@@ -329,6 +337,16 @@ modded class MainMenu extends UIScriptedMenu
 			m_EUMainIMG.Show(false);
             return true;
         }
+		if (w == m_ServerStatusOn)
+        {
+			m_OnlineHover.Show(true);
+            return true;
+        }
+		if (w == m_ServerStatusOff)
+        {
+			m_OfflineHover.Show(true);
+            return true;
+        }
 		if( IsFocusable( w ) )
 		{
 			ColorHighlight( w );
@@ -340,6 +358,26 @@ modded class MainMenu extends UIScriptedMenu
 
 	override bool OnMouseLeave( Widget w, Widget enterW, int x, int y )
 	{
+		if (w == m_LeftSelect)
+    	{
+    	    m_LeftSelectHover.Show(false);
+    	    return true;
+    	}
+		if (w == m_RightSelect)
+    	{
+    	    m_RightSelectHover.Show(false);
+    	    return true;
+    	}
+		if (w == m_ServerStatusOn)
+        {
+			m_OnlineHover.Show(false);
+            return true;
+        }
+		if (w == m_ServerStatusOff)
+        {
+			m_OfflineHover.Show(false);
+            return true;
+        }
 		if (w == m_USMainBtn)
         {
 			m_USMainIMG.Show(true);

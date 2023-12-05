@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{D562688C1376E008}Colorful-UI/gui/textures/main_menu/Button.StoreHover.edds"
+ Author "sdf-1"
+ ChangeDate -897765500
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Button.StoreHover.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

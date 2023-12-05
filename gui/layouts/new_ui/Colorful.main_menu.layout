@@ -340,7 +340,24 @@ FrameWidgetClass main_menu_root {
        font "Colorful-UI/gui/fonts/RobotoSlabBold28"
        switch normal
        {
-        ImageWidgetClass PrioQ_button_image {
+        ImageWidgetClass PrioQ_Image {
+         clipchildren 0
+         ignorepointer 1
+         size 138 42
+         halign center_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         image0 ""
+         imageTexture "{84AAE21518C4DC63}Colorful-UI/gui/textures/main_menu/Button.Store.edds"
+         mode blend
+         "src alpha" 1
+         "clamp mode" clamp
+         "stretch mode" stretch_w_h
+        }
+        ImageWidgetClass PrioQ_Hover {
          clipchildren 0
          ignorepointer 1
          size 138 42
@@ -702,7 +719,7 @@ FrameWidgetClass main_menu_root {
        vexactsize 1
        style Empty
        {
-        ImageWidgetClass ChevronLeft {
+        ImageWidgetClass LeftSelectImg {
          ignorepointer 1
          size 50 60
          halign center_ref
@@ -712,6 +729,23 @@ FrameWidgetClass main_menu_root {
          hexactsize 1
          vexactsize 1
          imageTexture "{405A4980DB86661E}Colorful-UI/gui/textures/main_menu/Chevron.Left.edds"
+         mode blend
+         "src alpha" 1
+         "clamp mode" clamp
+         "stretch mode" stretch_w_h
+        }
+        ImageWidgetClass LeftSelectHover {
+         visible 0
+         ignorepointer 1
+         color 1 1 1 0.6275
+         size 50 60
+         halign center_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         imageTexture "{55AED9EE23F9C8CC}Colorful-UI/gui/textures/main_menu/Chevron.LHover.edds"
          mode blend
          "src alpha" 1
          "clamp mode" clamp
@@ -729,7 +763,7 @@ FrameWidgetClass main_menu_root {
        vexactsize 1
        style Empty
        {
-        ImageWidgetClass ChevronRight {
+        ImageWidgetClass RightSelectImg {
          ignorepointer 1
          size 50 60
          halign center_ref
@@ -739,6 +773,23 @@ FrameWidgetClass main_menu_root {
          hexactsize 1
          vexactsize 1
          imageTexture "{05F2FE3F55B2C4B7}Colorful-UI/gui/textures/main_menu/Chevron.Right.edds"
+         mode blend
+         "src alpha" 1
+         "clamp mode" clamp
+         "stretch mode" stretch_w_h
+        }
+        ImageWidgetClass RightSelectHover {
+         visible 0
+         ignorepointer 1
+         color 1 1 1 0.6275
+         size 50 60
+         halign center_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+         imageTexture "{12374A5DD0BC0379}Colorful-UI/gui/textures/main_menu/Chevron.RHover.edds"
          mode blend
          "src alpha" 1
          "clamp mode" clamp
@@ -812,14 +863,14 @@ FrameWidgetClass main_menu_root {
        vexactpos 1
        hexactsize 1
        vexactsize 1
-       imageTexture "{CA20F312CE863EF2}Colorful-UI/gui/textures/main_menu/Badge.Online.edds"
+       imageTexture "{010F3E3451ED9E9D}Colorful-UI/gui/textures/main_menu/Online.Active.edds"
        mode blend
        "src alpha" 1
        "clamp mode" clamp
        "stretch mode" stretch_w_h
       }
       ImageWidgetClass OnlineHover {
-       visible 1
+       visible 0
        clipchildren 0
        ignorepointer 0
        size 120 36
@@ -829,11 +880,12 @@ FrameWidgetClass main_menu_root {
        vexactpos 1
        hexactsize 1
        vexactsize 1
-       imageTexture "{010F3E3451ED9E9D}Colorful-UI/gui/textures/main_menu/Online.Active.edds"
+       imageTexture "{E6D22BBED00C7556}Colorful-UI/gui/textures/main_menu/Online.Hover.edds"
        mode blend
        "src alpha" 1
        "clamp mode" clamp
        "stretch mode" stretch_w_h
+       "flip u" 0
       }
      }
     }
