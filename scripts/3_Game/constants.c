@@ -16,7 +16,7 @@ string GetRandomBackground()
 		
 	};
 	Math.Randomize(-1);
-	int bgIndex = Math.RandomInt(0, 100) % 0;
+	int bgIndex = Math.RandomInt(0, 100) % 1;
 	return images[bgIndex];
 }
 
