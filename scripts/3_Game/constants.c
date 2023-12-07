@@ -14,17 +14,10 @@ string GetRandomBackground()
 		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-7.edds",
 		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-8.edds",
 		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-9.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-10.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-11.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-12.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-13.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-14.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-15.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-16.edds",
-		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-17.edds"
+		"Colorful-UI/gui/textures/loading_screens/Colorful-BG-10.edds"
 	};
 	Math.Randomize(-1);
-	int bgIndex = Math.RandomInt(0, 100) % 17;
+	int bgIndex = Math.RandomInt(0, 100) % 10;
 	return images[bgIndex];
 }
 
@@ -36,7 +29,7 @@ string GetRandomBackground()
  */
 class MenuURLS {
 	// Link for Discord
-	static string urlDiscord  = "https://discord.gg/dayznchill";
+	static string urlDiscord  = "https://discord.gg/rizendayz";
 	// Link for Facebook
 	static string urlFacebook = "https://facebook.com/dayznchill";
 	// Link for Twitter
@@ -132,9 +125,9 @@ class colorScheme
 {
 	// Quick Styling --------------------------------------
 	// This color should be Servers/Communities Brand Color
-	static int BrandColor()   { return UIColor.Teal(); };
+	static int BrandColor()   { return UIColor.Red(); };
 	// This color should be a complimentary color to your brand. 
-	static int AccentColor()  { return UIColor.Red(); }
+	static int AccentColor()  { return UIColor.Teal(); }
 
 	// Advanced Styling --------------------------------------
 	// You can get more Ganular with the colors by editing the syltes below

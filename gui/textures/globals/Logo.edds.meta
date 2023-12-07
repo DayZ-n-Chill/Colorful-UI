@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{B22B711506A710DA}Colorful-UI/gui/textures/globals/Logo.edds"
+ Author "sdf-1"
+ ChangeDate 417165190
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "Logo.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}
