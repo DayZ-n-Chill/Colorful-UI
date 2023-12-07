@@ -39,7 +39,7 @@ FrameWidgetClass LoadingFrame {
    vexactsize 0
    fixaspect outside
    image0 ""
-   imageTexture "{202C0532A7A7CA89}Colorful-UI/gui/textures/loading_screens/JLK_BG_1.edds"
+   imageTexture "{8236E9FD471B048C}Colorful-UI/gui/textures/loading_screens/Loaded.edds"
    mode opaque
    "src alpha" 0
    "clamp mode" clamp

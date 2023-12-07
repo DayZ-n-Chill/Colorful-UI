@@ -26,7 +26,6 @@ PanelWidgetClass TextInputDialogRoot {
   }
   ImageWidgetClass BackgroundOverride {
    visible 1
-   position 0 0
    size 0.16 0.09
    halign center_ref
    valign center_ref
@@ -36,7 +35,7 @@ PanelWidgetClass TextInputDialogRoot {
    vexactsize 0
    fixaspect outside
    image0 ""
-   imageTexture "{C3147EF667315898}Colorful-UI/gui/textures/loading_screens/JLK_BG_4.edds"
+   imageTexture "{8236E9FD471B048C}Colorful-UI/gui/textures/loading_screens/Loaded.edds"
    mode opaque
    "src alpha" 0
    "clamp mode" clamp

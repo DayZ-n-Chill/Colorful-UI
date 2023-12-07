@@ -5,17 +5,18 @@
 string GetRandomBackground()
 {
 	const string images[] = {
-		"Colorful-UI/gui/textures/loading_screens/JLK_BG_1.edds", 
-		"Colorful-UI/gui/textures/loading_screens/JLK_BG_2.edds",
-        "Colorful-UI/gui/textures/loading_screens/JLK_BG_3.edds",
-		"Colorful-UI/gui/textures/loading_screens/JLK_BG_4.edds",
-		"Colorful-UI/gui/textures/loading_screens/JLK_BG_5.edds",
-		"Colorful-UI/gui/textures/loading_screens/JLK_BG_6.edds",
-		"Colorful-UI/gui/textures/loading_screens/JLK_BG_7.edds",
-		"Colorful-UI/gui/textures/loading_screens/JLK_BG_8.edds"
+		// "Colorful-UI/gui/textures/loading_screens/JLK_BG_1.edds", 
+		// "Colorful-UI/gui/textures/loading_screens/JLK_BG_2.edds",
+        // "Colorful-UI/gui/textures/loading_screens/JLK_BG_3.edds",
+		// "Colorful-UI/gui/textures/loading_screens/JLK_BG_4.edds",
+		// "Colorful-UI/gui/textures/loading_screens/JLK_BG_5.edds",
+		// "Colorful-UI/gui/textures/loading_screens/JLK_BG_6.edds",
+		// "Colorful-UI/gui/textures/loading_screens/JLK_BG_7.edds",
+		"Colorful-UI/gui/textures/loading_screens/Loaded.edds"
+		
 	};
 	Math.Randomize(-1);
-	int bgIndex = Math.RandomInt(0, 100) % 8;
+	int bgIndex = Math.RandomInt(0, 100) % 0;
 	return images[bgIndex];
 }
 
