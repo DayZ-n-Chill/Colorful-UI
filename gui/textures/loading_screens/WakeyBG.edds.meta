@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{79D9FEF383D210B8}Colorful-UI/gui/textures/loading_screens/WakeyBG.edds"
+ Author "sdf-1"
+ ChangeDate 1769811851
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "WakeyBG.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

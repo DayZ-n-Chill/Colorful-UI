@@ -5,14 +5,10 @@
 string GetRandomBackground()
 {
 	const string images[] = {
-		// "Colorful-UI/gui/textures/loading_screens/JLK_BG_1.edds", 
-		// "Colorful-UI/gui/textures/loading_screens/JLK_BG_2.edds",
-        // "Colorful-UI/gui/textures/loading_screens/JLK_BG_3.edds",
-		// "Colorful-UI/gui/textures/loading_screens/JLK_BG_4.edds",
-		// "Colorful-UI/gui/textures/loading_screens/JLK_BG_5.edds",
-		// "Colorful-UI/gui/textures/loading_screens/JLK_BG_6.edds",
-		// "Colorful-UI/gui/textures/loading_screens/JLK_BG_7.edds",
-		"Colorful-UI/gui/textures/loading_screens/Loaded.edds"
+		// "Colorful-UI/gui/textures/loading_screens/Yourscreen_1.edds",
+		// "Colorful-UI/gui/textures/loading_screens/Yourscreen_2.edds",
+		// "Colorful-UI/gui/textures/loading_screens/Yourscreen_3.edds",
+		"Colorful-UI/gui/textures/loading_screens/WakeyBG.edds"
 		
 	};
 	Math.Randomize(-1);
@@ -28,7 +24,7 @@ string GetRandomBackground()
  */
 class MenuURLS {
 	// Link for Discord
-	static string urlDiscord  = "https://discord.com/invite/tarvbbFNNw";
+	static string urlDiscord  = "";
 	// Link for Facebook
 	static string urlFacebook = "#";
 	// Link for Twitter
@@ -38,7 +34,7 @@ class MenuURLS {
 	// Link for Youtube
 	static string urlYoutube  = "#";
 	// Link to Website
-	static string urlWebsite  = "https://dayzloaded.gg"; 
+	static string urlWebsite  = ""; 
 	// Link for Prio Q
 	static string urlPriorityQ   = "#";
 	// Can be used anything else
@@ -137,9 +133,9 @@ class colorScheme
 {
 	// Quick Styling --------------------------------------
 	// This color should be Servers/Communities Brand Color
-	static int BrandColor()   { return UIColor.Red(); };
+	static int BrandColor()   { return UIColor.JLK_Yellow(); };
 	// This color should be a complimentary color to your brand. 
-	static int AccentColor()  { return UIColor.Indigo(); };
+	static int AccentColor()  { return UIColor.JLK_Red(); };
 
 	// Advanced Styling --------------------------------------
 	// You can get more Ganular with the colors by editing the syltes below

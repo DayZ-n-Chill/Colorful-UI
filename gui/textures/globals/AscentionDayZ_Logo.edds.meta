@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{6E0687D6681F8AD1}Colorful-UI/gui/textures/globals/AscentionDayZ_Logo.edds"
+ Author "sdf-1"
+ ChangeDate -372428917
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "AscentionDayZ_Logo.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

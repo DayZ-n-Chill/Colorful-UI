@@ -39,7 +39,7 @@ FrameWidgetClass LoadingFrame {
    vexactsize 0
    fixaspect outside
    image0 ""
-   imageTexture "{8236E9FD471B048C}Colorful-UI/gui/textures/loading_screens/Loaded.edds"
+   imageTexture "{79D9FEF383D210B8}Colorful-UI/gui/textures/loading_screens/WakeyBG.edds"
    mode opaque
    "src alpha" 0
    "clamp mode" clamp
@@ -129,9 +129,41 @@ FrameWidgetClass LoadingFrame {
    hexactsize 0
    vexactsize 0
    {
+    PanelWidgetClass FrameWidget0 {
+     ignorepointer 1
+     color 0 0 0 0.7647
+     position 0 60
+     size 0.9 48
+     halign center_ref
+     valign bottom_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     fixaspect inside
+     style InventoryPanel
+     "no focus" 1
+     {
+      TextWidgetClass LoadingText0 {
+       visible 1
+       size 0 0
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       text "CHERNARUS, 4 MAN GROUPS, CUSTOM GEAR, KEYCARDS, & CUSTOM LOCATIONS"
+       font "Colorful-ui/gui/fonts/Gilroy-Black22"
+       "exact text" 1
+       "size to text h" 1
+       "size to text v" 1
+       "text halign" center
+       "text valign" center
+      }
+     }
+    }
     TextWidgetClass LoadingText {
      visible 1
-     position 0 75
+     position 0 120
      size 0 0
      halign center_ref
      valign bottom_ref
@@ -193,19 +225,17 @@ FrameWidgetClass LoadingFrame {
      "text valign" center
     }
     ImageWidgetClass ColorfulLogo1 {
-     visible 0
+     visible 1
      clipchildren 0
      inheritalpha 1
-     position 0 30
-     size 220 80
-     halign center_ref
+     size 512 512
      hexactpos 1
      vexactpos 1
      hexactsize 1
      vexactsize 1
      fixaspect outside
      image0 ""
-     imageTexture "{B25FEFAB266F2425}Colorful-UI/gui/textures/globals/JLK.LogoWName.edds"
+     imageTexture "{CA63984E00301A3B}Colorful-UI/gui/textures/globals/AscentionDayZ_Logo_RESIZED.edds"
      mode blend
      "src alpha" 1
      "clamp mode" clamp
