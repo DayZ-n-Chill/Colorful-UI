@@ -142,11 +142,11 @@ class colorScheme
 	// Get wild and create your own color functions and use them throughout the mod.
 	// Best to Primary Text as white, but do whatever, Experiment.
 	static int PrimaryText()        { return UIColor.White(); }; 	
-	static int SecondaryText()      { return BrandColor(); };
-	static int ShaderColor()        { return BrandColor(); };
-	static int SeparatorColor()     { return BrandColor(); };
+	static int SecondaryText()      { return UIColor.JLK_Orange(); };
+	static int ShaderColor()        { return UIColor.JLK_Orange(); };
+	static int SeparatorColor()     { return UIColor.JLK_Red(); };
 	static int LoadingbarColor()    { return BrandColor(); };
-	static int MainMenuTrim()       { return BrandColor(); };
+	static int MainMenuTrim()       { return UIColor.JLK_Red(); };
 	static int ButtonHoverColor()   { return BrandColor(); };
 	static int TabHoverColor()      { return BrandColor(); };
 	static int OptionInputColors()  { return BrandColor(); };

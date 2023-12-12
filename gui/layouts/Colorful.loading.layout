@@ -85,6 +85,7 @@ FrameWidgetClass LoadingFrame {
      visible 0
      ignorepointer 1
      keepsafezone 0
+     color 1 1 1 0.6863
      position 0 -19
      size 1 1
      halign center_ref
@@ -129,11 +130,11 @@ FrameWidgetClass LoadingFrame {
    hexactsize 0
    vexactsize 0
    {
-    PanelWidgetClass FrameWidget0 {
+    GridSpacerWidgetClass FrameWidget0 {
      ignorepointer 1
      color 0 0 0 0.7647
      position 0 60
-     size 0.9 48
+     size 0.75 48
      halign center_ref
      valign bottom_ref
      hexactpos 1
@@ -141,8 +142,14 @@ FrameWidgetClass LoadingFrame {
      hexactsize 0
      vexactsize 1
      fixaspect inside
-     style InventoryPanel
+     style Colorable
      "no focus" 1
+     Padding 15
+     Margin 15
+     "Size To Content H" 1
+     "Size To Content V" 1
+     Columns 1
+     Rows 1
      {
       TextWidgetClass LoadingText0 {
        visible 1
@@ -224,11 +231,12 @@ FrameWidgetClass LoadingFrame {
      "text halign" center
      "text valign" center
     }
-    ImageWidgetClass ColorfulLogo1 {
+    ImageWidgetClass ColorfulLogo2 {
      visible 1
      clipchildren 0
      inheritalpha 1
-     size 512 512
+     position -30 0
+     size 350 350
      hexactpos 1
      vexactpos 1
      hexactsize 1
