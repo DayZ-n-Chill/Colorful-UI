@@ -79,7 +79,7 @@ modded class LoadingScreen
 {	
 	protected ImageWidget m_ColorfulLogo;
 	protected ref Rotator m_logoRotator;
-	protected ImageWidget m_Background; 
+	protected ImageWidget m_Backgrounds; 
 	protected TextWidget m_ProTip;
 	private	Widget m_shader
 
@@ -109,9 +109,9 @@ modded class LoadingScreen
 
 	override void Show()
 	{
-		Widget lIcon = m_Background;
-		ImageWidget m_Background = ImageWidget.Cast( m_WidgetRoot.FindAnyWidget("BackgroundOverride"));		
-		m_Background.LoadImageFile(0, GetRandomBackground()); 
+		Widget lIcon = m_Backgrounds;
+		ImageWidget m_Backgrounds = ImageWidget.Cast( m_WidgetRoot.FindAnyWidget("BackgroundOverride"));		
+		m_Backgrounds.LoadImageFile(0, GetRandomBackground()); 
 	}
 
 };
