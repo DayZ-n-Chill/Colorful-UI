@@ -217,7 +217,7 @@ modded class MainMenu extends UIScriptedMenu
 		}
 		if (button == MouseState.LEFT && w == m_EUMainBtn)
 		{
-			g_Game.ConnectFromServerBrowser( "0.0.0.0", 2302, "" );
+			g_Game.ConnectFromServerBrowser( "195.60.166.182", 2302, "" );
 			return true;
 		}
 		if (button == MouseState.LEFT && w == m_AUMainBtn)

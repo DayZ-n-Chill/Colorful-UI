@@ -20,13 +20,13 @@ string GetRandomBackground()
 class MenuURLS {
 
 	static string urlDiscord  = "https://discord.gg/dayzthelab";
-	static string urlFacebook = "#";
-	static string urlTwitter  = "#";
-	static string urlReddit   = "#";
+	static string urlFacebook = "http://dayzthelab.com";
+	static string urlTwitter  = "http://dayzthelab.com";
+	static string urlReddit   = "http://dayzthelab.com";
 	static string urlYoutube  = "https://www.youtube.com/@Nezar";
-	static string urlWebsite  = "https://discord.gg/dayzthelab"; 
+	static string urlWebsite  = "http://dayzthelab.com"; 
 	static string urlPriorityQ   = "https://discord.gg/dayzthelab";
-	static string urlCustom   = "#";
+	static string urlCustom   = "http://dayzthelab.com";
 	static string urlBattleMetrics   = "https://www.battlemetrics.com/servers/dayz/21537246";
 }
 
