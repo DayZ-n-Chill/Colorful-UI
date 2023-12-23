@@ -35,11 +35,11 @@ modded class MissionBase
 		case COLORFUL_CONFIGURE:
 			menu = new colorfulConfigureDialog;
 			break;
-
-		case VPP_ADMIN_HUD:
-			menu = new VPPAdminHud;
-			break;
-
+		#ifdef VPPADMINTOOLS
+			case VPP_ADMIN_HUD:
+				menu = new VPPAdminHud;
+				break;
+		#endif
 		case MENU_STARTUP:
 			menu = new StartupMenu;
 			break;

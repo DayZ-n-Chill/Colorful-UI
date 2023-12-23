@@ -12,9 +12,50 @@ WindowWidgetClass WindowWidget {
  style Default
  font "Colorful-UI/gui/fonts/RobotoSlabBold22"
  {
+  ImageWidgetClass Vignette {
+   visible 1
+   ignorepointer 0
+   color 0 0 0 0.7843
+   position 0 0
+   size 1 1
+   halign center_ref
+   valign center_ref
+   hexactpos 1
+   vexactpos 1
+   hexactsize 0
+   vexactsize 0
+   priority 1
+   imageTexture "{72D85032C4F2ED0B}Colorful-UI/gui/textures/globals/Vingette.edds"
+   mode blend
+   "src alpha" 1
+   "clamp mode" clamp
+   "stretch mode" stretch_w_h
+   filter 0
+   nocache 1
+  }
+  ImageWidgetClass Lab_Shader {
+   visible 1
+   ignorepointer 1
+   keepsafezone 0
+   position 0 0
+   size 1 1
+   halign center_ref
+   valign center_ref
+   hexactpos 1
+   vexactpos 1
+   hexactsize 0
+   vexactsize 0
+   scaled 1
+   imageTexture "{D7092B868D24199B}Colorful-UI/gui/textures/globals/BottomShader.edds"
+   mode blend
+   "src alpha" 1
+   "clamp mode" clamp
+   "stretch mode" stretch_w_h
+  }
   FrameWidgetClass SafeZone {
    visible 1
    ignorepointer 1
+   position 0 0
    size 0.9 0.9
    halign center_ref
    valign center_ref
@@ -25,6 +66,7 @@ WindowWidgetClass WindowWidget {
    {
     GridSpacerWidgetClass ActionItems {
      visible 1
+     clipchildren 0
      ignorepointer 1
      keepsafezone 1
      position 0 0
@@ -39,7 +81,7 @@ WindowWidgetClass WindowWidget {
      Columns 1
      {
       WrapSpacerWidgetClass buttonWrap {
-       clipchildren 1
+       clipchildren 0
        inheritalpha 0
        ignorepointer 1
        keepsafezone 0
@@ -58,6 +100,7 @@ WindowWidgetClass WindowWidget {
        {
         ButtonWidgetClass respawn_button_custom {
          visible 1
+         clipchildren 0
          ignorepointer 0
          color 0 0 0 0
          size 293 42
@@ -72,6 +115,7 @@ WindowWidgetClass WindowWidget {
          {
           PanelWidgetClass respawn_button_custom_panel {
            visible 1
+           clipchildren 0
            ignorepointer 1
            color 0 0 0 0
            position 0 -0.01885
@@ -85,6 +129,7 @@ WindowWidgetClass WindowWidget {
            style DayZDefaultPanel
           }
           TextWidgetClass respawn_button_custom_label {
+           clipchildren 0
            ignorepointer 1
            position 0 0
            size 1 1
@@ -107,6 +152,7 @@ WindowWidgetClass WindowWidget {
         }
         ButtonWidgetClass respawn_button_random {
          visible 1
+         clipchildren 0
          ignorepointer 0
          color 0 0 0 0
          size 293 42
@@ -120,6 +166,7 @@ WindowWidgetClass WindowWidget {
          {
           PanelWidgetClass respawn_button_random_panel {
            visible 1
+           clipchildren 0
            ignorepointer 1
            color 0 0 0 0
            size 1 1
@@ -132,6 +179,7 @@ WindowWidgetClass WindowWidget {
            style DayZDefaultPanel
           }
           TextWidgetClass respawn_button_random_label {
+           clipchildren 0
            ignorepointer 1
            size 1 1
            halign center_ref
@@ -245,6 +293,7 @@ WindowWidgetClass WindowWidget {
        Rows 5
        {
         ButtonWidgetClass TwitterBtn {
+         visible 1
          color 0 0 0 0
          size 293 39
          halign right_ref
@@ -275,7 +324,7 @@ WindowWidgetClass WindowWidget {
             ImageWidgetClass TwitterBtn_img {
              clipchildren 0
              ignorepointer 1
-             position 11 0
+             position 12 0
              size 27 24
              halign right_ref
              valign center_ref
