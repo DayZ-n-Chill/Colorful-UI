@@ -205,7 +205,7 @@ modded class MainMenu extends UIScriptedMenu
 	{
 		if (isSelectedAUMAIN)
 		{
-			UpdateServerUI(false, true, false, EU_Background, true, false, false, true);
+			UpdateServerUI(false, true, false, EU_Background, false, true, true, false);
 			isSelectedAUMAIN = false;
 			isSelectedEUMAIN = true;
 			UpdateBattleMetricsURL();
