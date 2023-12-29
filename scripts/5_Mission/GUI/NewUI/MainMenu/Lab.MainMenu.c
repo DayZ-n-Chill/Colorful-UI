@@ -39,6 +39,9 @@ modded class MainMenu extends UIScriptedMenu
 	private string AU_Background = "Colorful-UI/gui/textures/loading_screens/Colorful-UI-BG-3.edds";
 	private string AU_BattleMetrics = "https://www.battlemetrics.com/servers/dayz/21537246";
 
+
+	private string currentBattleMetricsURL;
+
 	private Widget m_ServerStatusOn;
 	private Widget m_OnlineImg
 	private Widget m_OnlineHover
@@ -55,6 +58,23 @@ modded class MainMenu extends UIScriptedMenu
 
 	ButtonWidget connectButton;
 	
+	private void UpdateBattleMetricsURL()
+	{
+		if (isSelectedUSMAIN)
+		{
+			currentBattleMetricsURL = US_BattleMetrics;
+		}
+		else if (isSelectedEUMAIN)
+		{
+			currentBattleMetricsURL = EU_BattleMetrics;
+		}
+		else if (isSelectedAUMAIN)
+		{
+			currentBattleMetricsURL = AU_BattleMetrics;
+		}
+	}
+
+
 	override Widget Init()
 	{
 		layoutRoot					= GetGame().GetWorkspace().CreateWidgets( "Colorful-UI/gui/layouts/new_ui/colorful.main_menu.layout" );
@@ -118,6 +138,7 @@ modded class MainMenu extends UIScriptedMenu
 		m_ProgressLoading  = ProgressBarWidget.Cast( layoutRoot.FindAnyWidget("LoadingBar") );
 		m_ProgressLoading.SetColor(colorScheme.MainMenuTrim());	
 		FadeInOut();
+		UpdateBattleMetricsURL();
 		return layoutRoot;
 	}	
 
@@ -139,13 +160,14 @@ modded class MainMenu extends UIScriptedMenu
     m_Press2Start.SetAlpha(m_Alpha);
 	m_ComingSoon.SetAlpha(m_Alpha);
 	
+
     GetGame().GetCallQueue(CALL_CATEGORY_GUI).CallLater(this.FadeInOut, 50, false);
 	}
 
 	void UpdateServerUI(bool showUS, bool showEU, bool showAU, string background, bool showComingSoon, bool showPress2Start, bool showServerOnline, bool showServerOffline)
 	{
 		m_USMainBtn.Show(showUS);
-		m_EUMainDisabled.Show(showEU);
+		m_EUMainBtn.Show(showEU);
 		m_AUMainBtn.Show(showAU);
 		m_Background.LoadImageFile(0, background);
 		m_ComingSoon.Show(showComingSoon);
@@ -158,21 +180,24 @@ modded class MainMenu extends UIScriptedMenu
 	{
 		if (isSelectedUSMAIN)
 		{
-			UpdateServerUI(false, true, false, EU_Background, true, false, false, true);
+			UpdateServerUI(false, true, false, EU_Background, false, true, true, false);
 			isSelectedUSMAIN = false;
 			isSelectedEUMAIN = true;
+			UpdateBattleMetricsURL();
 		}
 		else if (isSelectedEUMAIN)
 		{
 			UpdateServerUI(false, false, true, AU_Background, false, true, true, false);
 			isSelectedEUMAIN = false;
 			isSelectedAUMAIN = true;
+			UpdateBattleMetricsURL();
 		}
 		else if (isSelectedAUMAIN)
 		{
 			UpdateServerUI(true, false, false, US_Background, false, true, true, false);
 			isSelectedAUMAIN = false;
 			isSelectedUSMAIN = true;
+			UpdateBattleMetricsURL();
 		}
 	}
 
@@ -183,18 +208,21 @@ modded class MainMenu extends UIScriptedMenu
 			UpdateServerUI(false, true, false, EU_Background, true, false, false, true);
 			isSelectedAUMAIN = false;
 			isSelectedEUMAIN = true;
+			UpdateBattleMetricsURL();
 		}
 		else if (isSelectedEUMAIN)
 		{
 			UpdateServerUI(true, false, false, US_Background, false, true, true, false);
 			isSelectedEUMAIN = false;
 			isSelectedUSMAIN = true;
+			UpdateBattleMetricsURL();
 		}
 		else if (isSelectedUSMAIN)
 		{
 			UpdateServerUI(false, false, true, AU_Background, false, true, true, false);
 			isSelectedUSMAIN = false;
 			isSelectedAUMAIN = true;
+			UpdateBattleMetricsURL();
 		}
 	}
 
@@ -232,12 +260,12 @@ modded class MainMenu extends UIScriptedMenu
 		}
 		if (button == MouseState.LEFT && w == m_ServerStatusOn)
 		{
-			GetGame().OpenURL("https://www.battlemetrics.com/servers/dayz/21537246");
+			GetGame().OpenURL(currentBattleMetricsURL);
 			return true;
 		}
 		if (button == MouseState.LEFT && w == m_ServerStatusOff)
 		{
-			GetGame().OpenURL("https://www.battlemetrics.com/servers/dayz/21537246");
+			GetGame().OpenURL(currentBattleMetricsURL);
 			return true;
 		}	
 		if (button == MouseState.LEFT && w == m_Website)

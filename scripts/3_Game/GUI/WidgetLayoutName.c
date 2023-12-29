@@ -3,9 +3,9 @@ modded class WidgetLayoutName extends WidgetLayoutName
 	#ifdef PLATFORM_CONSOLE
 	const string InventoryXbox					= "gui/layouts/inventory_new/xbox/day_z_inventory_new.layout";
 	#else
-	const string InventoryNarrow				= "Colorful-UI/gui/layouts/inventory_new/narrow/day_z_inventory_new.layout";
-	const string InventoryMedium				= "Colorful-UI/gui/layouts/inventory_new/medium/day_z_inventory_new.layout";
-	const string InventoryWide					= "Colorful-UI/gui/layouts/inventory_new/wide/day_z_inventory_new.layout";
+	const string InventoryNarrow				= "gui/layouts/inventory_new/narrow/day_z_inventory_new.layout";
+	const string InventoryMedium				= "gui/layouts/inventory_new/medium/day_z_inventory_new.layout";
+	const string InventoryWide					= "gui/layouts/inventory_new/wide/day_z_inventory_new.layout";
 	#endif
 	
 	const string HandsPreview					= "gui/layouts/inventory_new/hands_preview.layout";
@@ -30,15 +30,15 @@ modded class WidgetLayoutName extends WidgetLayoutName
 	const string IconWide						= "gui/layouts/inventory_new/wide/icon.layout";
 	const string IconXbox						= "gui/layouts/inventory_new/xbox/icon.layout";
 	
-	const string LeftAreaNarrow					= "Colorful-UI/gui/layouts/inventory_new/narrow/left_area.layout";
-	const string LeftAreaMedium					= "Colorful-UI/gui/layouts/inventory_new/medium/left_area.layout";
-	const string LeftAreaWide					= "Colorful-UI/gui/layouts/inventory_new/wide/left_area.layout";
-	const string LeftAreaXbox					= "Colorful-UI/gui/layouts/inventory_new/xbox/left_area.layout";
+	const string LeftAreaNarrow					= "gui/layouts/inventory_new/narrow/left_area.layout";
+	const string LeftAreaMedium					= "gui/layouts/inventory_new/medium/left_area.layout";
+	const string LeftAreaWide					= "gui/layouts/inventory_new/wide/left_area.layout";
+	const string LeftAreaXbox					= "gui/layouts/inventory_new/xbox/left_area.layout";
 	
-	const string RightAreaNarrow				= "Colorful-UI/gui/layouts/inventory_new/narrow/right_area.layout";
-	const string RightAreaMedium				= "Colorful-UI/gui/layouts/inventory_new/medium/right_area.layout";
-	const string RightAreaWide					= "Colorful-UI/gui/layouts/inventory_new/wide/right_area.layout";
-	const string RightAreaXbox					= "Colorful-UI/gui/layouts/inventory_new/xbox/right_area.layout";
+	const string RightAreaNarrow				= "gui/layouts/inventory_new/narrow/right_area.layout";
+	const string RightAreaMedium				= "gui/layouts/inventory_new/medium/right_area.layout";
+	const string RightAreaWide					= "gui/layouts/inventory_new/wide/right_area.layout";
+	const string RightAreaXbox					= "gui/layouts/inventory_new/xbox/right_area.layout";
 	
 	const string CollapsibleHeader				= "Colorful-UI/gui/layouts/inventory_new/collapsible_header.layout";
 	const string ClosableHeader					= "Colorful-UI/gui/layouts/inventory_new/closable_header.layout";

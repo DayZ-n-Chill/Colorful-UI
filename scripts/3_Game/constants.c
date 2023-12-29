@@ -19,15 +19,14 @@ string GetRandomBackground()
 
 class MenuURLS {
 
-	static string urlDiscord  = "https://discord.gg/dayzthelab";
-	static string urlFacebook = "http://dayzthelab.com";
-	static string urlTwitter  = "http://dayzthelab.com";
-	static string urlReddit   = "http://dayzthelab.com";
-	static string urlYoutube  = "https://www.youtube.com/@Nezar";
-	static string urlWebsite  = "http://dayzthelab.com"; 
-	static string urlPriorityQ   = "https://discord.gg/dayzthelab";
-	static string urlCustom   = "http://dayzthelab.com";
-	static string urlBattleMetrics   = "https://www.battlemetrics.com/servers/dayz/21537246";
+	static string urlDiscord   = "https://discord.gg/dayzthelab";
+	static string urlFacebook  = "http://dayzthelab.com/store";
+	static string urlTwitter   = "http://dayzthelab.com/store";
+	static string urlReddit    = "http://dayzthelab.com/store";
+	static string urlYoutube   = "https://youtu.be/CtMmF15_TPg?si=Gl5_fc5MBAAKiVkB";
+	static string urlWebsite   = "http://dayzthelab.com"; 
+	static string urlPriorityQ = "http://dayzthelab.com/store";
+	static string urlCustom    = "http://dayzthelab.com/store";
 }
 
 string GetRandomHint()
@@ -64,6 +63,7 @@ string GetRandomHint()
 		"Chernarus, a nation transformed, now faces the consequences of ambition.",
 		"As the infected grow in number, survivors face an uphill battle for survival.",
 		"The legacy shapes the struggle for dominance in the wasteland.",
+		"You're not even a good father, Rick.",
 		"In the fog of war, alliances shift and crumble in the fight for resources.",
 		"The infected exhibit terrifying resilience, challenging the survivors' mettle.",
 		"Atlas' underground labs remain as cryptic puzzles waiting to be unraveled.",
